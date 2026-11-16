@@ -1,0 +1,820 @@
+{
+  "kind": "Post-unseal source/stage diagnosis of four NEW4 false negatives and two true-positive gains; no retuning or new inference",
+  "created_at_utc": "2026-10-30T17:43:34.287197+00:00",
+  "inputs": {
+    "corpus": "feasibility/passage-coverage-confirm-corpus-2026-10-30.json",
+    "corpus_sha256": "d4e75f7ac673f537f240fc1ad49c669af74a65215c715afe7f0e04f5980b8627",
+    "results": "feasibility/passage-coverage-confirm-results-2026-10-30.json",
+    "results_sha256": "9b6e6664093ddb329311a6b0b894d463d7cd6c63efd73f83a684b825c1beee77",
+    "gold": "feasibility/passage-coverage-confirm-gold-v1.json",
+    "gold_sha256": "82e2f1f7bab6c8ca1606cf5c9f8330eda7c74b321f1102e1c86be8c43bdff016"
+  },
+  "metrics": {
+    "known_positive": 6,
+    "baseline": {
+      "tp": 0,
+      "fp": 1,
+      "fn": 6,
+      "recall": 0.0
+    },
+    "v9": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 4,
+      "recall": 0.3333333333333333
+    },
+    "new_false_direct_ids": [],
+    "removed_false_direct_ids": [
+      [
+        "h02",
+        "C010"
+      ]
+    ],
+    "unjudged_direct": 0,
+    "unjudged_gold_sources": 56,
+    "recall_delta_query_bootstrap95": [
+      0.0,
+      0.5
+    ]
+  },
+  "stage_counts": {
+    "bounded_read_selection": 1,
+    "coverage_pool_admission_before_read": 1,
+    "literal_gate_before_audit": 2,
+    "observed_extraction_or_fragment_loss": 0,
+    "semantic_audit_rejections_among_remaining_four": 0
+  },
+  "false_negatives": [
+    {
+      "case": "h01",
+      "id": "C003",
+      "query": "Python str.rstrip removesuffix trailing character set exact suffix difference",
+      "source": {
+        "url": "https://docs.python.org/3/builtins/stdtypes.html",
+        "gold_grade": 2,
+        "snapshot": "runs/passage-coverage-confirm-2026-10-30/gold-audit/h01-C003.html",
+        "html_sha256": "e5ef597aecce0dd5b62d4d8c4f97856d6b8e6d9df4cc175b84b06ab4c5b318d3",
+        "canonical_source_sha256": "2840b2948928486bc6fd2e5238f24c549a6a433278173ccdec983af903a91638",
+        "witnesses": [
+          {
+            "quote": "Return a copy of the string with trailing characters removed. The chars argument is a string specifying the set of characters to be removed.",
+            "start": 78442,
+            "end": 78582
+          },
+          {
+            "quote": "The chars argument is not a suffix; rather, all combinations of its values are stripped.",
+            "start": 78656,
+            "end": 78744
+          },
+          {
+            "quote": "See removesuffix() for a method that will remove a single suffix string rather than all of a set of characters.",
+            "start": 78846,
+            "end": 78957
+          },
+          {
+            "quote": "If the string ends with the suffix string and that suffix is not empty, return string[:-len(suffix)] . Otherwise, return a copy of the original string:",
+            "start": 75374,
+            "end": 75525
+          }
+        ]
+      },
+      "first_blocking_stage": "bounded_read_selection",
+      "actual_cause": "Within the ten-source coverage pool at position9, but none of the four read slots reached it. Coverage saw only generic SERP title/snippet; source body, fragment selection and audit for this candidate were unobserved.",
+      "fixed_observation": {
+        "initial_model_label": {
+          "evidence": "",
+          "kind": "background"
+        },
+        "coverage_pool_member": true,
+        "coverage_pool_position_one_based": 9,
+        "read_attempted": false,
+        "read_selection_order": [
+          "C012",
+          "C002",
+          "C017",
+          "C014"
+        ],
+        "runtime_document_extracted": false,
+        "reranker_called": false,
+        "coverage_checks": [
+          {
+            "requirement": "R0",
+            "status": "missing",
+            "quote": "",
+            "in_selected_body": false
+          },
+          {
+            "requirement": "R1",
+            "status": "missing",
+            "quote": "",
+            "in_selected_body": false
+          },
+          {
+            "requirement": "R2",
+            "status": "missing",
+            "quote": "",
+            "in_selected_body": false
+          },
+          {
+            "requirement": "R3",
+            "status": "missing",
+            "quote": "",
+            "in_selected_body": false
+          }
+        ],
+        "literal_gaps": [],
+        "audit_supported": null,
+        "audit_reason": "",
+        "final_rejected_reason": "unverified or uncovered requirements: R0,R1,R2,R3,audit:not accepted",
+        "body_ranges": []
+      },
+      "next_scope": "Improve bounded read priority/reference-slot admission using actual query-operation evidence; keep four-read cap. Reading it is not yet proof that later extraction/selection/audit will pass."
+    },
+    {
+      "case": "h03",
+      "id": "C012",
+      "query": "JavaScript Object.freeze shallow nested object mutation strict mode TypeError",
+      "source": {
+        "url": "https://mathiasbynens.be/notes/es6-const",
+        "gold_grade": 2,
+        "snapshot": "runs/passage-coverage-confirm-2026-10-30/raw-cache/9f588f77927702b3f9bbc2c80168ec2a5c505614d9e28e37fd53a2ce19eb9416.json",
+        "html_sha256": "e88a6ab7b514f82e507dd7c3445868b7341f9fbfca7fcb60d1ccdfa1ef85e907",
+        "canonical_source_sha256": "e9fd1620c279904ea4cdc8b4400b5eeb20db8764a2d0014f67ce5af9cb6ff6e3",
+        "witnesses": [
+          {
+            "quote": "const foo = Object.freeze({ 'bar': 27 }); foo.bar = 42; // throws a TypeError exception in strict mode; // silently fails in sloppy mode console.log(foo.bar); // → 27",
+            "start": 1802,
+            "end": 1970
+          },
+          {
+            "quote": "Note that Object.freeze() is shallow: object values within a frozen object (i.e. nested objects) can still be mutated.",
+            "start": 1971,
+            "end": 2089
+          }
+        ]
+      },
+      "first_blocking_stage": "literal_gate_before_audit",
+      "actual_cause": "Successfully extracted and selected the complete3044-character article. All four source-grounded coverage checks are supported, including shallow nested mutation and strict TypeError. Literal JavaScript is absent from the runtime title/snippet/body context, so the deterministic gate excludes this candidate from audit. This is not a semantic audit rejection or reranker loss.",
+      "fixed_observation": {
+        "initial_model_label": {
+          "evidence": "",
+          "kind": "background"
+        },
+        "coverage_pool_member": true,
+        "coverage_pool_position_one_based": 2,
+        "read_attempted": true,
+        "read_selection_order": [
+          "C001",
+          "C012",
+          "C002",
+          "C020"
+        ],
+        "runtime_document_extracted": true,
+        "reranker_called": true,
+        "coverage_checks": [
+          {
+            "requirement": "R0",
+            "status": "supported",
+            "quote": "To make an object’s values immutable, use Object.freeze().",
+            "in_selected_body": true
+          },
+          {
+            "requirement": "R1",
+            "status": "supported",
+            "quote": "Note that Object.freeze() is shallow: object values within a frozen object (i.e. nested objects) can still be mutated.",
+            "in_selected_body": true
+          },
+          {
+            "requirement": "R2",
+            "status": "supported",
+            "quote": "Note that Object.freeze() is shallow: object values within a frozen object (i.e. nested objects) can still be mutated.",
+            "in_selected_body": true
+          },
+          {
+            "requirement": "R3",
+            "status": "supported",
+            "quote": "foo.bar = 42; // throws a TypeError exception in strict mode; // silently fails in sloppy mode",
+            "in_selected_body": true
+          }
+        ],
+        "literal_gaps": [
+          "JavaScript"
+        ],
+        "audit_supported": null,
+        "audit_reason": "",
+        "final_rejected_reason": "unverified or uncovered requirements: audit:not accepted,literal:JavaScript",
+        "body_ranges": [
+          [
+            1012,
+            2218
+          ],
+          [
+            0,
+            1212
+          ],
+          [
+            2018,
+            3072
+          ]
+        ],
+        "extraction_method": "readability",
+        "extraction_scope": "inferred_article",
+        "extracted_chars": 3044,
+        "extracted_utf8_bytes": 3072,
+        "extracted_document_sha256": "ba571bb07d5ee46667d31a79b1eae292305321b21ade87f9390c2ffb346ed0a1",
+        "normalized_body_sha256": "10a3f32d866382bc2a1909c2b0236b575c74b0d1f3e4614305be105023fa172f",
+        "truncated": false,
+        "selected_body_byte_coverage": 1.0,
+        "full_body_has_JavaScript": false,
+        "full_body_has_FD_CLOEXEC": false,
+        "selector": "query-feature-cover-v2-operation-context",
+        "reranker_selected_ranges": [
+          [
+            1012,
+            2218
+          ],
+          [
+            0,
+            1212
+          ],
+          [
+            2018,
+            3072
+          ]
+        ]
+      },
+      "next_scope": "Distinguish a broad language scope label from a required API/flag literal, preserving exact API witnesses and mandatory-condition audit; validate on a separate cohort rather than globally weakening literals."
+    },
+    {
+      "case": "h04",
+      "id": "C006",
+      "query": "POSIX dup dup2 shared open file description offset FD_CLOEXEC descriptor flag",
+      "source": {
+        "url": "https://man.openbsd.org/dup.2",
+        "gold_grade": 2,
+        "snapshot": "runs/passage-coverage-confirm-2026-10-30/raw-cache/ab2ef652baba6af3e5efbc3e983f24d8c5142a308640222af53bb37aca8b11fb.json",
+        "html_sha256": "3529ff6eeec7c3f3477b033e40870f744d8b132fcbe503dcda80fcdfd6bbe79b",
+        "canonical_source_sha256": "e830ab88ad20ea28f564c896b1941df0dfe16a83869f65cee49e9990c82e9b45",
+        "witnesses": [
+          {
+            "quote": "read(2) , write(2) and lseek(2) calls all move a single pointer into the file, and append mode, non-blocking I/O and asynchronous I/O options are shared between the references.",
+            "start": 2228,
+            "end": 2404
+          },
+          {
+            "quote": "The close-on-exec and close-on-fork flags on the new file descriptor are unset.",
+            "start": 2550,
+            "end": 2629
+          },
+          {
+            "quote": "When newd equals oldd , dup2 () just returns without affecting the close-on-exec or close-on-fork flags.",
+            "start": 2798,
+            "end": 2902
+          }
+        ]
+      },
+      "first_blocking_stage": "literal_gate_before_audit",
+      "actual_cause": "Successfully extracted and selected the complete OpenBSD dup body. All four coverage checks are supported, including shared file pointer and new-descriptor close-on-exec flags unset. Literal FD_CLOEXEC is absent; natural close-on-exec semantics are explicit. The gate excludes it before audit.",
+      "fixed_observation": {
+        "initial_model_label": {
+          "evidence": "",
+          "kind": "background"
+        },
+        "coverage_pool_member": true,
+        "coverage_pool_position_one_based": 2,
+        "read_attempted": true,
+        "read_selection_order": [
+          "C001",
+          "C006",
+          "C004",
+          "C017"
+        ],
+        "runtime_document_extracted": true,
+        "reranker_called": true,
+        "coverage_checks": [
+          {
+            "requirement": "R0",
+            "status": "supported",
+            "quote": "if newd and oldd are duplicate references to an open file, read(2), write(2) and lseek(2) calls all move a single pointer into the file",
+            "in_selected_body": true
+          },
+          {
+            "requirement": "R1",
+            "status": "supported",
+            "quote": "if newd and oldd are duplicate references to an open file, read(2), write(2) and lseek(2) calls all move a single pointer into the file",
+            "in_selected_body": true
+          },
+          {
+            "requirement": "R2",
+            "status": "supported",
+            "quote": "The close-on-exec and close-on-fork flags on the new file descriptor are unset.",
+            "in_selected_body": true
+          },
+          {
+            "requirement": "R3",
+            "status": "supported",
+            "quote": "read(2), write(2) and lseek(2) calls all move a single pointer into the file",
+            "in_selected_body": true
+          }
+        ],
+        "literal_gaps": [
+          "FD_CLOEXEC"
+        ],
+        "audit_supported": null,
+        "audit_reason": "",
+        "final_rejected_reason": "unverified or uncovered requirements: audit:not accepted,literal:FD_CLOEXEC",
+        "body_ranges": [
+          [
+            0,
+            1202
+          ],
+          [
+            1002,
+            2202
+          ],
+          [
+            2002,
+            2973
+          ]
+        ],
+        "extraction_method": "semantic_main",
+        "extraction_scope": "main",
+        "extracted_chars": 2967,
+        "extracted_utf8_bytes": 2973,
+        "extracted_document_sha256": "7a27bcdae87a9a55ab081616adb9584afc688ed02059fcf5a7878ab70575796a",
+        "normalized_body_sha256": "0a24106bff51e9e0a317627e0656f5c93afaea353914bbbb2056c8ac992022c0",
+        "truncated": false,
+        "selected_body_byte_coverage": 1.0,
+        "full_body_has_JavaScript": false,
+        "full_body_has_FD_CLOEXEC": false,
+        "selector": "query-feature-cover-v2-operation-context",
+        "reranker_selected_ranges": [
+          [
+            0,
+            1202
+          ],
+          [
+            1002,
+            2202
+          ],
+          [
+            2002,
+            2973
+          ]
+        ]
+      },
+      "next_scope": "Consider request/operation-scoped, source-grounded symbol-to-natural-name equivalence. Preserve descriptor-local versus open-file-description state, dup2 same-descriptor exception, and O_CLOEXEC/FD_CLOEXEC distinction."
+    },
+    {
+      "case": "h04",
+      "id": "C008",
+      "query": "POSIX dup dup2 shared open file description offset FD_CLOEXEC descriptor flag",
+      "source": {
+        "url": "https://www.man7.org/linux/man-pages/man2/dup.2.html",
+        "gold_grade": 2,
+        "snapshot": "runs/passage-coverage-confirm-2026-10-30/gold-audit/h04-C008.html",
+        "html_sha256": "f0b886340b0471a181d135320ed5b3847de410ab05ca4a29b78780d1aa2aa2ae",
+        "canonical_source_sha256": "23ee3f55efb713f708f80db2c54c98d9eff21d8e16667ec7d287484ade710db4",
+        "witnesses": [
+          {
+            "quote": "Since the two file descriptors refer to the same open file description, they share file offset and file status flags;",
+            "start": 1058,
+            "end": 1175
+          },
+          {
+            "quote": "The two file descriptors do not share file descriptor flags (the close-on-exec flag).",
+            "start": 1328,
+            "end": 1413
+          },
+          {
+            "quote": "The close-on-exec flag ( FD_CLOEXEC ; see fcntl(2) ) for the duplicate descriptor is off.",
+            "start": 1414,
+            "end": 1503
+          },
+          {
+            "quote": "If oldfd is a valid file descriptor, and newfd has the same value as oldfd , then dup2 () does nothing, and returns newfd .",
+            "start": 2564,
+            "end": 2687
+          }
+        ]
+      },
+      "first_blocking_stage": "coverage_pool_admission_before_read",
+      "actual_cause": "Initial model label is direct, but its SERP card lacks POSIX, dup2 and FD_CLOEXEC, which deterministically demotes that label to background. The candidate is absent from the ten-entry coverage pool and is never read. Complete normative source exists only in the retained source-gold audit; it was not supplied as a runtime body.",
+      "fixed_observation": {
+        "initial_model_label": {
+          "evidence": "Since the two file descriptors refer to the same open file description, they share file offset and file",
+          "kind": "direct"
+        },
+        "coverage_pool_member": false,
+        "coverage_pool_position_one_based": null,
+        "read_attempted": false,
+        "read_selection_order": [
+          "C001",
+          "C006",
+          "C004",
+          "C017"
+        ],
+        "runtime_document_extracted": false,
+        "reranker_called": false,
+        "coverage_checks": [],
+        "literal_gaps": null,
+        "audit_supported": null,
+        "audit_reason": null,
+        "final_rejected_reason": null,
+        "body_ranges": []
+      },
+      "next_scope": "Review bounded candidate admission/reference diversity for promising API references after safe SERP demotion; do not restore an unverified card direct or assume body success.",
+      "initial_grounding_card_gaps": [
+        "POSIX",
+        "dup2",
+        "FD_CLOEXEC"
+      ],
+      "grounding_rule": "src/policy.rs labels: missing query literals demote direct to background; source URL does not satisfy literal evidence."
+    }
+  ],
+  "true_positive_gains": [
+    {
+      "case": "h01",
+      "id": "C012",
+      "source": {
+        "url": "https://peps.python.org/pep-0616/",
+        "gold_grade": 2,
+        "snapshot": "runs/passage-coverage-confirm-2026-10-30/raw-cache/0f2a76b68c93d75cebaee88d7ca16474235ee8746adbe0b53bc1e048bdb3b9ab.json",
+        "html_sha256": "b872258bab8dbbbe8c899ecf39beaaf776c54bc9da5ed8e1beac0f039a321e4a",
+        "canonical_source_sha256": "ed736e85a25e9ce36e38e9653d761cb22cce2c93fe7af474573d515ee0633e61",
+        "witnesses": [
+          {
+            "quote": "(l/r)strip : The argument is interpreted as a character set. The characters are repeatedly removed from the appropriate end of the string.",
+            "start": 9608,
+            "end": 9746
+          },
+          {
+            "quote": "remove(prefix/suffix) : The argument is interpreted as an unbroken substring. Only at most one copy of the prefix/suffix is removed.",
+            "start": 9747,
+            "end": 9879
+          },
+          {
+            "quote": "def removesuffix ( self : str , suffix : str , / ) -> str : # suffix='' should not call self[:-0]. if suffix and self . endswith ( suffix ): return self [: - len ( suffix )] else : return self [:]",
+            "start": 2743,
+            "end": 2939
+          }
+        ]
+      },
+      "baseline_observation": {
+        "initial_model_label": {
+          "evidence": "",
+          "kind": "background"
+        },
+        "coverage_pool_member": true,
+        "coverage_pool_position_one_based": 7,
+        "read_attempted": false,
+        "read_selection_order": [
+          "C002",
+          "C017",
+          "C009",
+          "C014"
+        ],
+        "runtime_document_extracted": false,
+        "reranker_called": false,
+        "coverage_checks": [
+          {
+            "requirement": "R0",
+            "status": "missing",
+            "quote": "",
+            "in_selected_body": false
+          },
+          {
+            "requirement": "R1",
+            "status": "missing",
+            "quote": "",
+            "in_selected_body": false
+          },
+          {
+            "requirement": "R2",
+            "status": "missing",
+            "quote": "",
+            "in_selected_body": false
+          },
+          {
+            "requirement": "R3",
+            "status": "supported",
+            "quote": "These methods would remove a prefix or suffix (respectively) from a string, if present",
+            "in_selected_body": false
+          }
+        ],
+        "literal_gaps": [],
+        "audit_supported": null,
+        "audit_reason": "",
+        "final_rejected_reason": "unverified or uncovered requirements: R0,R1,R2,audit:not accepted",
+        "body_ranges": []
+      },
+      "fixed_observation": {
+        "initial_model_label": {
+          "evidence": "These methods would remove a prefix or suffix (respectively) from a string, if present",
+          "kind": "direct"
+        },
+        "coverage_pool_member": true,
+        "coverage_pool_position_one_based": 1,
+        "read_attempted": true,
+        "read_selection_order": [
+          "C012",
+          "C002",
+          "C017",
+          "C014"
+        ],
+        "runtime_document_extracted": true,
+        "reranker_called": true,
+        "coverage_checks": [
+          {
+            "requirement": "R0",
+            "status": "supported",
+            "quote": "(l/r)strip: The argument is interpreted as a character set. The characters are repeatedly removed from the appropriate end of the string.",
+            "in_selected_body": true
+          },
+          {
+            "requirement": "R1",
+            "status": "supported",
+            "quote": "remove(prefix/suffix): The argument is interpreted as an unbroken substring. Only at most one copy of the prefix/suffix is removed.",
+            "in_selected_body": true
+          },
+          {
+            "requirement": "R2",
+            "status": "supported",
+            "quote": "(l/r)strip: The argument is interpreted as a character set. The characters are repeatedly removed from the appropriate end of the string.",
+            "in_selected_body": true
+          },
+          {
+            "requirement": "R3",
+            "status": "supported",
+            "quote": "remove(prefix/suffix): The argument is interpreted as an unbroken substring. Only at most one copy of the prefix/suffix is removed.",
+            "in_selected_body": true
+          }
+        ],
+        "literal_gaps": [],
+        "audit_supported": true,
+        "audit_reason": "",
+        "final_rejected_reason": null,
+        "body_ranges": [
+          [
+            2006,
+            3206
+          ],
+          [
+            9038,
+            9871
+          ],
+          [
+            0,
+            1206
+          ]
+        ],
+        "extraction_method": "semantic_main",
+        "extraction_scope": "main",
+        "extracted_chars": 9833,
+        "extracted_utf8_bytes": 9871,
+        "extracted_document_sha256": "37ce19b76efaed12aac52b983c3f828b5944824cb5e33e7269aebe41b83053af",
+        "normalized_body_sha256": "9bc72efcb90a29c2ae2112495d1f9535dd722fa0038d99fc01c31f59ba858d5e",
+        "truncated": false,
+        "selected_body_byte_coverage": 0.3281329145983183,
+        "full_body_has_JavaScript": true,
+        "full_body_has_FD_CLOEXEC": false,
+        "selector": "query-feature-cover-v2-operation-context",
+        "reranker_selected_ranges": [
+          [
+            2006,
+            3206
+          ],
+          [
+            9038,
+            9871
+          ],
+          [
+            0,
+            1206
+          ]
+        ]
+      },
+      "observed_stage_change": "Initial label background→direct changes priority; candidate moves from unread pool position7 to first read. Fetched Final-status PEP body then explicitly compares character-set strip with exact substring removal, and coverage/audit accept.",
+      "causal_limit": "Initial classifier model, prompt and none/4096 profile were unchanged. This initial-label flip and resulting read allocation are full-pipeline nondeterminism, not an isolated proof of a V9 fragment or extraction fix."
+    },
+    {
+      "case": "h03",
+      "id": "C001",
+      "source": {
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze",
+        "gold_grade": 2,
+        "snapshot": "runs/passage-coverage-confirm-2026-10-30/raw-cache/f41a45096ae37ce755a97536ba9d5b124f21b1b1a21ad6759b5b805e5eecd9be.json",
+        "html_sha256": "c68aad936f3aa346e897c4f9280224526aa1c726a62e94679c50b29fd0a59148",
+        "canonical_source_sha256": "d85e49a898df1b99dd4ba47644572916aa298d5080f058f4e596c697d46bd56a",
+        "witnesses": [
+          {
+            "quote": "Freezing an object prevents extensions and makes existing properties non-writable and non-configurable.",
+            "start": 2128,
+            "end": 2231
+          },
+          {
+            "quote": "function fail() { \"use strict\"; obj.foo = \"sparky\"; // throws a TypeError",
+            "start": 6131,
+            "end": 6204
+          },
+          {
+            "quote": "If the value of those properties are objects themselves, those objects are not frozen and may be the target of property addition, removal or value re-assignment operations.",
+            "start": 7917,
+            "end": 8089
+          }
+        ]
+      },
+      "baseline_observation": {
+        "initial_model_label": {
+          "evidence": "",
+          "kind": "background"
+        },
+        "coverage_pool_member": true,
+        "coverage_pool_position_one_based": 1,
+        "read_attempted": true,
+        "read_selection_order": [
+          "C001",
+          "C012",
+          "C002",
+          "C020"
+        ],
+        "runtime_document_extracted": true,
+        "reranker_called": true,
+        "coverage_checks": [
+          {
+            "requirement": "R0",
+            "status": "supported",
+            "quote": "The following example shows that a frozen object is not constant (freeze is shallow).",
+            "in_selected_body": true
+          },
+          {
+            "requirement": "R1",
+            "status": "supported",
+            "quote": "The following example shows that a frozen object is not constant (freeze is shallow).",
+            "in_selected_body": true
+          },
+          {
+            "requirement": "R2",
+            "status": "supported",
+            "quote": "The following example shows that a frozen object is not constant (freeze is shallow).",
+            "in_selected_body": true
+          },
+          {
+            "requirement": "R3",
+            "status": "supported",
+            "quote": "employee.address.city = \"Noida\"; // attributes of child object can be modified",
+            "in_selected_body": true
+          }
+        ],
+        "literal_gaps": [],
+        "audit_supported": false,
+        "audit_reason": "No evidence that mutating a nested object of a frozen object throws a TypeError in strict mode; the supplied example shows nested mutation succeeding (employee.address.city = \"Noida\").",
+        "final_rejected_reason": "unverified or uncovered requirements: audit:No evidence that mutating a nested object of a frozen object throws a TypeError in strict mode; the supplied example shows nested mutation succeeding (employee.address.city = \"Noida\").",
+        "body_ranges": [
+          [
+            5006,
+            6206
+          ],
+          [
+            6006,
+            7206
+          ],
+          [
+            0,
+            1204
+          ]
+        ],
+        "extraction_method": "semantic_main",
+        "extraction_scope": "main",
+        "extracted_chars": 8195,
+        "extracted_utf8_bytes": 8204,
+        "extracted_document_sha256": "4238cae858de7b27f0f706bc702ba30d42854ed734cb116f9a622220d511ebdd",
+        "normalized_body_sha256": "e3f23d19f6fb394da37b1aa096ce178bd5a77f80c7132ad9d0f0594d9d848fb8",
+        "truncated": false,
+        "selected_body_byte_coverage": 0.41491955143832276,
+        "full_body_has_JavaScript": true,
+        "full_body_has_FD_CLOEXEC": false,
+        "selector": "legacy_top3",
+        "reranker_selected_ranges": [
+          [
+            5006,
+            6206
+          ],
+          [
+            6006,
+            7206
+          ],
+          [
+            0,
+            1204
+          ]
+        ]
+      },
+      "fixed_observation": {
+        "initial_model_label": {
+          "evidence": "",
+          "kind": "background"
+        },
+        "coverage_pool_member": true,
+        "coverage_pool_position_one_based": 1,
+        "read_attempted": true,
+        "read_selection_order": [
+          "C001",
+          "C012",
+          "C002",
+          "C020"
+        ],
+        "runtime_document_extracted": true,
+        "reranker_called": true,
+        "coverage_checks": [
+          {
+            "requirement": "R0",
+            "status": "supported",
+            "quote": "The following example shows that a frozen object is not constant (freeze is shallow).",
+            "in_selected_body": true
+          },
+          {
+            "requirement": "R1",
+            "status": "supported",
+            "quote": "The following example shows that a frozen object is not constant (freeze is shallow).",
+            "in_selected_body": true
+          },
+          {
+            "requirement": "R2",
+            "status": "supported",
+            "quote": "employee.address.city = \"Noida\"; // attributes of child object can be modified",
+            "in_selected_body": true
+          },
+          {
+            "requirement": "R3",
+            "status": "supported",
+            "quote": "obj.prop = 33; // Throws an error in strict mode",
+            "in_selected_body": true
+          }
+        ],
+        "literal_gaps": [],
+        "audit_supported": true,
+        "audit_reason": "",
+        "final_rejected_reason": null,
+        "body_ranges": [
+          [
+            5006,
+            6206
+          ],
+          [
+            0,
+            1204
+          ],
+          [
+            6006,
+            7206
+          ]
+        ],
+        "extraction_method": "semantic_main",
+        "extraction_scope": "main",
+        "extracted_chars": 8195,
+        "extracted_utf8_bytes": 8204,
+        "extracted_document_sha256": "4238cae858de7b27f0f706bc702ba30d42854ed734cb116f9a622220d511ebdd",
+        "normalized_body_sha256": "e3f23d19f6fb394da37b1aa096ce178bd5a77f80c7132ad9d0f0594d9d848fb8",
+        "truncated": false,
+        "selected_body_byte_coverage": 0.41491955143832276,
+        "full_body_has_JavaScript": true,
+        "full_body_has_FD_CLOEXEC": false,
+        "selector": "query-feature-cover-v2-operation-context",
+        "reranker_selected_ranges": [
+          [
+            5006,
+            6206
+          ],
+          [
+            0,
+            1204
+          ],
+          [
+            6006,
+            7206
+          ]
+        ]
+      },
+      "observed_stage_change": "Same extracted document and same selected range set; only range order and coverage/audit decisions differ. Baseline audit invents a requirement that nested mutation throw TypeError, while the frozen query/source distinguish shallow nested mutability from prohibited own-property mutation. V9 audit accepts that scoped relationship.",
+      "causal_limit": "Consistent with improved semantic audit/quote forwarding/profile, but no single-factor ablation isolates prompt, reasoning budget, quote input, ordering or model variability. This TP is not evidence of recovering previously missing source text."
+    }
+  ],
+  "remaining_scope_summary": [
+    "Two remaining sources never reached runtime body reading; their downstream extraction/reranking/audit behavior is unobserved.",
+    "Two sources have all relevant evidence in selected body and supported coverage, but exact literal gating prevents semantic audit: JavaScript language label and FD_CLOEXEC versus close-on-exec descriptor flag.",
+    "Next work should separate typed query literals from language-scope labels and source-grounded API property aliases, plus bounded read admission. Preserve full mandatory-condition/source/status/conflict checks and four-read budget."
+  ],
+  "causal_limits": [
+    "This is an observed whole-pipeline A/B with independently generated initial classifications, sequential cache/provider state and changed source selection; it is not a same-initial-label or single-factor ablation.",
+    "Four queries and six positive sources are a bounded confirmation sample. Bootstrap interval includes zero improvement; no overall qualification or general recall guarantee.",
+    "Strict literal gaps are actual runtime diagnostics, not semantic audit model verdicts; generic audit:not accepted must not be misreported as an audit rejection."
+  ],
+  "actions": {
+    "code_edits": 0,
+    "gold_edits": 0,
+    "model_calls": 0,
+    "network_calls": 0,
+    "new_queries": 0
+  }
+}

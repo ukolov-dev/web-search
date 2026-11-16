@@ -1,0 +1,214 @@
+{
+  "task_id": "TASK-20261103-144423-001",
+  "created_utc": "2026-11-03T12:25:43.726065+00:00",
+  "runtime_version": "request-evidence-v12-coverage",
+  "implementation": "coverage fix proven; fresh direct recall improvement NOT observed",
+  "primary_execution": {
+    "status": "completed",
+    "calls": 16,
+    "paired_queries": 8,
+    "initial_classifiers_valid": 16,
+    "exit_codes": {
+      "baseline": 0,
+      "fixed": 0
+    }
+  },
+  "primary_returned_union": {
+    "known_positive": 3,
+    "baseline": {
+      "tp": 3,
+      "fn": 0,
+      "recall": 1.0,
+      "fp": 0,
+      "unknown_direct": 0
+    },
+    "fixed": {
+      "tp": 3,
+      "fn": 0,
+      "recall": 1.0,
+      "fp": 0,
+      "unknown_direct": 0
+    }
+  },
+  "exploratory_read_returned_union": {
+    "known_positive": 5,
+    "baseline": {
+      "tp": 3,
+      "fn": 2,
+      "recall": 0.6
+    },
+    "fixed": {
+      "tp": 3,
+      "fn": 2,
+      "recall": 0.6
+    },
+    "remaining_cause": "full own publication microdata not recognized before coverage"
+  },
+  "quality_gate": {
+    "evaluated": true,
+    "all16_captures": true,
+    "gold_annotation_missing_ids": [],
+    "unused_gold_ids": [],
+    "new_known_news_false_direct_rows": [],
+    "candidate_news_direct_policy_violations": [],
+    "candidate_known_app_download_news_direct_rows": [],
+    "candidate_unknown_news_direct_rows": [],
+    "model_profile_violations": [],
+    "budget_violations": [],
+    "passed": true
+  },
+  "gold_counts": {
+    "0": 26,
+    "1": 42,
+    "2": 3,
+    "unknown": 5
+  },
+  "source_validation": {
+    "http_requests": 24,
+    "http200": 24,
+    "extracted_texts": 24,
+    "failed": 0,
+    "no_known_blocked_host_requests": true,
+    "limits": "Separate later captures, not byte-identical primary model inputs."
+  },
+  "primary_budgets": {
+    "baseline": {
+      "logical_search_calls": 16,
+      "classification_calls": 10,
+      "document_reads": 32,
+      "reranker_calls": 3,
+      "reranker_pairs": 7
+    },
+    "fixed": {
+      "logical_search_calls": 16,
+      "classification_calls": 10,
+      "document_reads": 32,
+      "reranker_calls": 3,
+      "reranker_pairs": 7
+    }
+  },
+  "old_two_stage_replay": {
+    "stage_only": true,
+    "historical_model_raw_unavailable": true,
+    "source_hashes_all_match": true,
+    "attempts": [
+      {
+        "path": "old-replay-fixed",
+        "version": "request-evidence-v12-coverage",
+        "new_model_calls": 1,
+        "error": "evidence unused requirement",
+        "kinds": {
+          "C022": 1,
+          "C023": 1
+        },
+        "type_date_gates_rechecked": null
+      },
+      {
+        "path": "old-replay-body-tail-audit",
+        "version": "request-evidence-v12-coverage",
+        "new_model_calls": 1,
+        "error": null,
+        "kinds": {
+          "C022": 1,
+          "C023": 0
+        },
+        "type_date_gates_rechecked": true
+      },
+      {
+        "path": "old-replay-guided",
+        "version": "request-evidence-v12-coverage",
+        "new_model_calls": 2,
+        "error": null,
+        "kinds": {
+          "C022": 0,
+          "C023": 0
+        },
+        "type_date_gates_rechecked": true
+      },
+      {
+        "path": "old-replay-baseline-same-response",
+        "version": "request-evidence-v11-news",
+        "new_model_calls": 0,
+        "error": "evidence unused requirement",
+        "kinds": {
+          "C022": 1,
+          "C023": 1
+        },
+        "type_date_gates_rechecked": true
+      },
+      {
+        "path": "old-replay-baseline-guided-response",
+        "version": "request-evidence-v11-news",
+        "new_model_calls": 0,
+        "error": null,
+        "kinds": {
+          "C022": 0,
+          "C023": 0
+        },
+        "type_date_gates_rechecked": true
+      }
+    ],
+    "limits": [
+      "same-response replay isolates parser; guidedgenerationchangespromptandhasmodelvariability",
+      "not fullretrieval",
+      "oldactualQwenrangesreused; newQwen0"
+    ]
+  },
+  "native": {
+    "ordinary_unit": 106,
+    "ordinary_stdio": 5,
+    "fmt": "passed",
+    "clippy": "passed",
+    "release_build": "passed",
+    "release_stdio": 5
+  },
+  "integrity": {
+    "all_source_test_cargo_original20_B17_unchanged": true,
+    "changed_files": [],
+    "binaries_unchanged": true,
+    "changed_binaries": [],
+    "primary_captures": 16
+  },
+  "fresh_normalization_branch_exercised": false,
+  "context_status": {
+    "verification_id": "VERIFY-20261103-152635-001",
+    "research_revision": 23,
+    "finalization": "FINALIZED",
+    "completion": "partial",
+    "taskStatus": "in_progress",
+    "requiresHumanReview": false,
+    "lint": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "index_fresh": true,
+    "planning_stdio": {
+      "status": "passed",
+      "tools": 34,
+      "scoped_packs": 3
+    },
+    "doctor": {
+      "ok": 15,
+      "warn": 5,
+      "fail": 0
+    },
+    "limits": "No formal independent ready_to_merge acceptance; fresh empirical uplift not observed."
+  },
+  "artifacts_sha256": {
+    "feasibility/news-coverage-cases-v1.json": "d2311d6f8a0924f1ce70a9cb7ec7acd130df8e0ed538d9068b0703690203f137",
+    "feasibility/news-coverage-plan-v1.json": "6c4ee1d5cecaec123e6f9a539bb98ac57b583ef154ddc83a131cef294af25665",
+    "feasibility/news-coverage-results-2026-11-03.json": "f692ade700f1c0c4c12c30f7628bf0ccbb24aae5ee3dd7825efe9cd0cce85f3c",
+    "feasibility/news-coverage-gold-2026-11-03.json": "0b03817e0b701defa9b7b119017057890381519bacea0aba816ced4fc87cec73",
+    "feasibility/news-coverage-read-misses-2026-11-03.json": "0bc8f57d9d5031038bc4ed62a5e56d4ffe3e0bc6b012f881102be8eb08c47442",
+    "runs/news-coverage-2026-11-03/benchmark/independent-metrics-review.json": "1bc97d5971bd7ec9831058eb1f045b750712a40bd46666e59933530af9449b00",
+    "runs/news-coverage-2026-11-03/benchmark/native-source-freeze.json": "c6695f4d64f21c24a0c1746eea91c601d144961cb551b61381fa2a77ddf87f13"
+  },
+  "limits": [
+    "Primary conditional returned-union not full-web recall.",
+    "Additional read+returned denominator post-hoc exploratory; unknown full-date sources unresolved.",
+    "Stage-only old replay not full old search; actual old Qwen ranges reused.",
+    "No fresh unused-slot failures occurred, so primary does not prove normalization gain.",
+    "Only two cities/publisher groups supply known positives.",
+    "Default legacy retained; no global zero-FP claim, day2/VPS/load/formal acceptance not performed."
+  ]
+}

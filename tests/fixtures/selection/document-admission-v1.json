@@ -1,0 +1,426 @@
+{
+  "kind": "frozen-document-admission-regression",
+  "note": "Retained retrieval and initial model responses only; no gold or body evidence is supplied to selection.",
+  "cases": [
+    {
+      "case": {
+        "forms": [
+          "Python str.rstrip removesuffix trailing character set exact suffix difference"
+        ],
+        "id": "h01",
+        "query": "Python str.rstrip removesuffix trailing character set exact suffix difference"
+      },
+      "candidates": [
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C001",
+          "snippet": "Příklad: https://www.w3schools.com/python/trypython.asp?filename=demo_ref_string_rstrip2",
+          "title": "rstrip() odstraňuje více než by mělo v Pythonu",
+          "url": "https://cs.python-3.com/?p=369183"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C002",
+          "snippet": "In Python 3.9 and later, you can use str.removeprefix and str.removesuffix to remove an exact prefix or suffix from a string, respectively, which should be preferred when possible.",
+          "title": "bad-str-strip-call (PLE1310) | Ruff",
+          "url": "https://docs.astral.sh/ruff/rules/bad-str-strip-call/"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C003",
+          "snippet": "Textual data in Python is handled with str objects, or strings. Strings are immutable sequences of Unicode code points. String literals are written in a variety of ways:",
+          "title": "Built-in Types — Python 3.15.1 documentation",
+          "url": "https://docs.python.org/3/builtins/stdtypes.html"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C004",
+          "snippet": "Support for the PostgreSQL database. The following table summarizes current support levels for database release versions. The following dialect/DBAPI options are available. Please refer to individual DBAPI sections for connect information.새 창 열림",
+          "title": "Support for the PostgreSQL database. The following table summarizes current support levels for database release versions",
+          "url": "http://docs.sqlalchemy.org/en/latest/dialects/postgresql.html"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C005",
+          "snippet": "PYTHON MASTERY - Specialization | 81 Course Series | 59 Mock Tests 363 of HD Videos | 81 Courses | Verifiable Certificate of Completion | Lifetime Access새 창 열림",
+          "title": "PYTHON MASTERY - Specialization | 81 Course Series | 59 Mock Tests 363 of HD Videos | 81 Courses | Verifiable Certificat",
+          "url": "https://www.educba.com/python-rstrip/"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C006",
+          "snippet": "Looking For Python_String_Built-in_Function? Read Python_String_Built-in_Function from cms bba here. Check all flipbooks from cms bba. Cms bba's Python_String_Built-in_Function looks good?",
+          "title": "Python_String_Built-in_Function - Flipbook by cms bba…",
+          "url": "https://fliphtml5.com/hsjls/baxk/Python_String_Built-in_Function/"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C007",
+          "snippet": "The rstrip() method removes trailing whitespace characters from a string. We can also specify custom characters to remove from end of string. Let's take an example to remove whitespace from the ends of a string. If we have a string with various characters that we want to remove from end of the strin",
+          "title": "The rstrip() method removes trailing whitespace characters from a string. We can also specify custom characters to remov",
+          "url": "https://www.geeksforgeeks.org/python/python-string-rstrip/"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C008",
+          "snippet": "FURB100: Categories: pathlib A common operation is changing the extension of a file. If you have an existing Path object, you don't need to convert it to a string, slice it, and append a new extension. Instead, use the with_suffix() method: Bad: Categories: pathlib When you just want to save the con",
+          "title": "FURB100: Categories: pathlib A common operation is changing the extension of a file. If you have an existing Path object",
+          "url": "https://github.com/dosisod/refurb/blob/master/docs/checks.md"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C009",
+          "snippet": "Python Notes from Beginner to intermediate. Contribute to outcastdreamer/Python_Notes development by creating an account on GitHub.",
+          "title": "GitHub - outcastdreamer/Python_Notes: Python Notes from…",
+          "url": "https://github.com/outcastdreamer/Python_Notes"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C010",
+          "snippet": "네이버 메이트 바로가기새 창 열림",
+          "title": "네이버 메이트 바로가기새 창 열림",
+          "url": "https://mate.naver.com/#partners"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C011",
+          "snippet": "There are two ways to store text data in pandas:We recommend using StringDtype to store text data.Prior to pandas 1.0, object dtype was the only option. This was unfortunate for many reasons:새 창 열림",
+          "title": "There are two ways to store text data in pandas:We recommend using StringDtype to store text data.Prior to pandas 1.0, o",
+          "url": "https://pandas.pydata.org/pandas-docs/version/2.2.1/user_guide/text.html"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C012",
+          "snippet": "Abstract ; This is a proposal to add two new methods, removeprefix() and removesuffix(), to the APIs of Python’s various string objects. These methods would remove a prefix or suffix (respectively) from a string, if present, and would be added to Unicode str objects, binary bytes and bytearray objec",
+          "title": "Abstract ; This is a proposal to add two new methods, removeprefix() and removesuffix(), to the APIs of Python’s various",
+          "url": "https://peps.python.org/pep-0616/"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C013",
+          "snippet": "Practice Python string exercises with solutions to improve your skills in string manipulation, slicing, and built-in functions. Includes 38 coding problems for beginners and intermediate learners.",
+          "title": "35+ Python String Coding Exercises with Solutions – PYnative",
+          "url": "https://pynative.com/python-string-exercise/"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C014",
+          "snippet": "strip ; Description : Returns a copy of the string with the leading and trailing characters removed. Return Value : str, Time Complexity : #TODO, Example 2 : >>> 'www.example.com'.strip('cmowz.') # this example extracts web address · 'example', See Also : lstrip() and rstrip()새 창 열림",
+          "title": "strip ; Description : Returns a copy of the string with the leading and trailing characters removed. Return Value : str,",
+          "url": "https://python-reference.readthedocs.io/en/latest/docs/str/strip.html"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C015",
+          "snippet": "Learn Python Tutorial for beginners and professional with various python topics such as loops, strings, lists, dictionary, tuples, date, time, files, functions, modules, methods, exceptions etc.",
+          "title": "Python String rstrip() - python tutorials",
+          "url": "https://python-tutorials.in/python-string-rstrip/"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C016",
+          "snippet": "Remove line endings from Python list items with rstrip, splitlines, or a targeted cleanup while preserving meaningful spaces.",
+          "title": "Remove Newlines From a Python List Without Losing Spaces",
+          "url": "https://www.pythonpool.com/python-remove-newline-from-list/"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C017",
+          "snippet": "Learn how to trim Python strings with strip(), lstrip(), and rstrip(), including whitespace, custom characters, and common mistakes.",
+          "title": "Python Trim Strings with strip(), lstrip(), and rstrip()",
+          "url": "https://www.pythonpool.com/python-trim/"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C018",
+          "snippet": "Remove one or many characters from a Python string with replace(), translate(), a generator expression, or regex, with practical examples.",
+          "title": "Remove Characters from a Python String",
+          "url": "https://www.pythonpool.com/remove-character-from-string-python/"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C019",
+          "snippet": "Short video tutorial on this post: Python Regex Cheat Sheet with Examples In python you have several ways to search for regular example by using module re: This example show the difference between the 3 methods and the simple usage of regular expressions in python. You can see that return informatio",
+          "title": "Short video tutorial on this post: Python Regex Cheat Sheet with Examples In python you have several ways to search for ",
+          "url": "https://softhints.com/python-regex-cheat-sheet-with-examples/"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C020",
+          "snippet": "Explore Categories · Find the perfect tutorial for your learning journey ; Python TechnologiesDatabasesComputer ProgrammingWeb DevelopmentJava TechnologiesComputer ScienceMobile DevelopmentBig Data & AnalyticsMicrosoft TechnologiesDevOpsLatest TechnologiesMachine LearningDigital MarketingSoftware Qu",
+          "title": "Explore Categories · Find the perfect tutorial for your learning journey ; Python TechnologiesDatabasesComputer Programm",
+          "url": "https://www.tutorialspoint.com/python/string_rstrip.htm"
+        }
+      ],
+      "rank": {
+        "cs.python-3.com/?p=369183": 4,
+        "docs.astral.sh/ruff/rules/bad-str-strip-call": 14,
+        "docs.python.org/3/builtins/stdtypes.html": 8,
+        "docs.sqlalchemy.org/en/latest/dialects/postgresql.html": 16,
+        "educba.com/python-rstrip": 2,
+        "fliphtml5.com/hsjls/baxk/Python_String_Built-in_Function": 12,
+        "geeksforgeeks.org/python/python-string-rstrip": 5,
+        "github.com/dosisod/refurb/blob/master/docs/checks.md": 15,
+        "github.com/outcastdreamer/Python_Notes": 3,
+        "mate.naver.com/": 0,
+        "pandas.pydata.org/pandas-docs/version/2.2.1/user_guide/text.html": 13,
+        "peps.python.org/pep-0616": 6,
+        "pynative.com/python-string-exercise": 18,
+        "python-reference.readthedocs.io/en/latest/docs/str/strip.html": 10,
+        "python-tutorials.in/python-string-rstrip": 11,
+        "pythonpool.com/python-remove-newline-from-list": 7,
+        "pythonpool.com/python-trim": 1,
+        "pythonpool.com/remove-character-from-string-python": 17,
+        "softhints.com/python-regex-cheat-sheet-with-examples": 19,
+        "tutorialspoint.com/python/string_rstrip.htm": 9
+      },
+      "initial_response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "message": {
+              "content": "{\"labels\": {\"C001\": {\"evidence\": \"\", \"kind\": \"background\"}, \"C002\": {\"evidence\": \"you can use str.removeprefix and str.removesuffix to remove an exact prefix or suffix from a string\", \"kind\": \"direct\"}, \"C003\": {\"evidence\": \"\", \"kind\": \"background\"}, \"C004\": {\"evidence\": \"\", \"kind\": \"irrelevant\"}, \"C005\": {\"evidence\": \"\", \"kind\": \"irrelevant\"}, \"C006\": {\"evidence\": \"\", \"kind\": \"background\"}, \"C007\": {\"evidence\": \"\", \"kind\": \"background\"}, \"C008\": {\"evidence\": \"\", \"kind\": \"irrelevant\"}, \"C009\": {\"evidence\": \"\", \"kind\": \"background\"}, \"C010\": {\"evidence\": \"\", \"kind\": \"irrelevant\"}, \"C011\": {\"evidence\": \"\", \"kind\": \"irrelevant\"}, \"C012\": {\"evidence\": \"These methods would remove a prefix or suffix (respectively) from a string, if present\", \"kind\": \"direct\"}, \"C013\": {\"evidence\": \"\", \"kind\": \"background\"}, \"C014\": {\"evidence\": \"\", \"kind\": \"background\"}, \"C015\": {\"evidence\": \"\", \"kind\": \"background\"}, \"C016\": {\"evidence\": \"\", \"kind\": \"background\"}, \"C017\": {\"evidence\": \"\", \"kind\": \"background\"}, \"C018\": {\"evidence\": \"\", \"kind\": \"background\"}, \"C019\": {\"evidence\": \"\", \"kind\": \"irrelevant\"}, \"C020\": {\"evidence\": \"\", \"kind\": \"irrelevant\"}}}"
+            }
+          }
+        ]
+      },
+      "expected_read": "C003",
+      "origin": {
+        "corpus": "runs/passage-coverage-confirm-2026-10-30/retrieval/corpus.json",
+        "corpus_sha256": "9fc1db1b15be971704080da1d2223507994bae2d0ab3a95261c4c2fea32389b9",
+        "initial_response": "runs/passage-coverage-confirm-2026-10-30/fixed/h01-call00.json",
+        "initial_response_sha256": "ff71fb2efb71e5cedd39fa10f937b3516aab8ac160d1fb9d8b2e77047f1eba6e"
+      }
+    },
+    {
+      "case": {
+        "forms": [
+          "POSIX dup dup2 shared open file description offset FD_CLOEXEC descriptor flag"
+        ],
+        "id": "h04",
+        "query": "POSIX dup dup2 shared open file description offset FD_CLOEXEC descriptor flag"
+      },
+      "candidates": [
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C001",
+          "snippet": "F_SETFD Set the close-on-exec flag to the value specified by the FD_CLOEXEC bit of arg. The file status flags A file descriptor has certain associated flags, initialized by open(2) and possibly modified by fcntl(2). The flags are shared between copies (made with dup(2), fork(2), etc.) of the same fi",
+          "title": "F_SETFD Set the close-on-exec flag to the value specified by the FD_CLOEXEC bit of arg. The file status flags A file des",
+          "url": "https://ccrma.stanford.edu/planetccrma/man/man2/fcntl.2.html"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C002",
+          "snippet": "Both file descriptors in a dup() system call refer to the same open file description which means they share file offset and file status flags; Similar but not identical to the logic used in pointers, shallow or deep copying or references…",
+          "title": "dup (system call) - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Dup_(system_call)"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C003",
+          "snippet": "An open-source C++ library developed and used at Facebook. - folly/folly/Subprocess.h at main · facebook/folly",
+          "title": "folly/folly/Subprocess.h at main · facebook/folly · GitHub",
+          "url": "https://github.com/facebook/folly/blob/main/folly/Subprocess.h"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C004",
+          "snippet": "h> /* Obtain O_* constant definitions */#include < unistd.h> int dup3(int oldfd, int newfd, int flags); dup() uses the lowest-numbered unused descriptor for the new descriptor. dup2() makes newfd be the copy of oldfd, closing newfd first if necessary, but note the following: After a successful retur",
+          "title": "Synopsis ; #include <unistd.h> int dup(int oldfd);int dup2(int oldfd, int newfd); #define _GNU_SOURCE /* See feature_tes",
+          "url": "https://linux.die.net/man/2/dup"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C005",
+          "snippet": "DUP(2) Netbsd System Calls Manual DUP(2) NAME dup, dup2, dup3 -- duplicate an existing file descriptor Library Standard C Library (libc, -lc) Synopsis #include <unistd.h> int dup(int oldfd); int dup2(int oldfd, int newfd); #include <fcntl.h…",
+          "title": "dup(2) - Netbsd Manual Pages",
+          "url": "https://man.netbsd.org/dup.2"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C006",
+          "snippet": "In dup2 (), the value of the new descriptor newd is specified. If this descriptor is already in use, it is first deallocated as if a close(2) call had been done first.",
+          "title": "dup(2) - OpenBSD manual pages",
+          "url": "https://man.openbsd.org/dup.2"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C007",
+          "snippet": "Posix.1-2008. (To get this definition, define _Posix_C_Source with the value 200809L or greater, or _Xopen_Source with the value 700 or greater.)",
+          "title": "F_Dupfd(2const) - Linux manual page",
+          "url": "https://man7.org/linux/man-pages/man2/F_DUPFD.2const.html"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C008",
+          "snippet": "Since the two file descriptors refer to the same open file description, they share file offset and file... new file descriptor by specifying O_CLOEXEC in flags. See the description of the same flag in open(2) for reasons why this may be useful. • If oldfd equals newfd, then dup3() fails with the err",
+          "title": "Since the two file descriptors refer to the same open file description, they share file offset and file... new file desc",
+          "url": "https://www.man7.org/linux/man-pages/man2/dup.2.html"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C009",
+          "snippet": "DESCRIPTION ; fcntl() performs one of the operations described below on the open file descriptor fd. The operation is determined by cmd . fcntl () can take an optional third argument. Whether or not this argument is required is determined by cmd. The required argument type is indicated in parenthese",
+          "title": "DESCRIPTION ; fcntl() performs one of the operations described below on the open file descriptor fd. The operation is de",
+          "url": "https://manpages.ubuntu.com/manpages/focal/man2/fcntl.2.html"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C010",
+          "snippet": "fcntl() performs one of the operations described below on the open file descriptor fd. The operation is determined by op. fcntl() can take an optional third argument. Whether or not this argument is required is determined by op. The required argument type is indicated in parentheses after each op na",
+          "title": "fcntl() performs one of the operations described below on the open file descriptor fd. The operation is determined by op",
+          "url": "https://manual.cs50.io/2/fcntl"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C011",
+          "snippet": "Mimedefang.c (envfrom): Fixed bug whereby a file descriptor was leaked for each message if -C flag given.",
+          "title": "MIMEDefang - Changelog",
+          "url": "https://mimedefang.org/documentation/Changelog.html"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C012",
+          "snippet": "This chapter discusses unbuffered I/O, which are not part of ISO C but are part of POSIX.1 and the Single UNIX Specification. oflag argument is formed by ORing one or more of the following constants from <fcntl.h> [p62]: openat, for example, provides a way to avoid time-of-check-to-time-of-use (TOCT",
+          "title": "This chapter discusses unbuffered I/O, which are not part of ISO C but are part of POSIX.1 and the Single UNIX Specifica",
+          "url": "https://notes.shichao.io/apue/ch3/"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C013",
+          "snippet": "This is identical to Perl's builtin chmod() function, allowing one to change file and directory permissions -- see \"chmod\" in perlfunc -- with the exception that Posix::chmod() can only change one file at a time (rather than a list of files…",
+          "title": "Posix - Perl interface to IEEE Std 1003.1 - Perldoc Browser",
+          "url": "https://perldoc.perl.org/POSIX"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C014",
+          "snippet": "Raw bindings for most POSIX APIs.Targets glibc and musl compatibility.APIs that have been left out are due to not being useful, being fully replaced (and better) by other Odin packages, or when one of the targets hasn't implemented the API or option.새 창 열림",
+          "title": "Raw bindings for most POSIX APIs.Targets glibc and musl compatibility.APIs that have been left out are due to not being ",
+          "url": "https://pkg.odin-lang.org/core/sys/posix/"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C015",
+          "snippet": "It creates an open file description that refers to the shared memory object and a file descriptor that refers to that open file description.",
+          "title": "shm_open",
+          "url": "https://pubs.opengroup.org/onlinepubs/007908799/xsh/shm_open.html"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C016",
+          "snippet": "The open() function shall establish the connection between a file and a file descriptor. It shall create an open file description that refers to a file and a file descriptor that refers to that open file description. The file descriptor is used by other I/O functions to refer to that file. The path ",
+          "title": "The open() function shall establish the connection between a file and a file descriptor. It shall create an open file de",
+          "url": "https://pubs.opengroup.org/onlinepubs/9699919799/functions/open.html"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C017",
+          "snippet": "This version of this document is no longer maintained. For the latest documentation, see새 창 열림",
+          "title": "This version of this document is no longer maintained. For the latest documentation, see새 창 열림",
+          "url": "https://www.qnx.com/developers/docs/6.4.1/neutrino/lib_ref/p/posix_typed_mem_open.html"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C018",
+          "snippet": "",
+          "title": "Manuálová stránka dup2.2.gz - Root.cz",
+          "url": "https://www.root.cz/man/2/dup2-2-gz/"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C019",
+          "snippet": "So I'm refactoring some socket code, and between getting the socket and connec()ing to the remote server they use F_Setfd to add the FD_Cloexec flag to the socket's FD.",
+          "title": "c - What does the FD_Cloexec fcntl() flag do? - Stack Overflow",
+          "url": "https://stackoverflow.com/questions/6125068/what-does-the-fd-cloexec-fcntl-flag-do"
+        },
+        {
+          "document_http_status": null,
+          "fetch_method": "unknown",
+          "id": "C020",
+          "snippet": "Explore Categories · Find the perfect tutorial for your learning journey ; Python TechnologiesDatabasesComputer ProgrammingWeb DevelopmentJava TechnologiesComputer ScienceMobile DevelopmentBig Data & AnalyticsMicrosoft TechnologiesDevOpsLatest TechnologiesMachine LearningDigital MarketingSoftware Qu",
+          "title": "Explore Categories · Find the perfect tutorial for your learning journey ; Python TechnologiesDatabasesComputer Programm",
+          "url": "https://www.tutorialspoint.com/unix_system_calls/dup.htm"
+        }
+      ],
+      "rank": {
+        "ccrma.stanford.edu/planetccrma/man/man2/fcntl.2.html": 0,
+        "en.wikipedia.org/wiki/Dup_(system_call)": 4,
+        "github.com/facebook/folly/blob/main/folly/Subprocess.h": 10,
+        "linux.die.net/man/2/dup": 2,
+        "man.netbsd.org/dup.2": 14,
+        "man.openbsd.org/dup.2": 1,
+        "man7.org/linux/man-pages/man2/F_DUPFD.2const.html": 12,
+        "man7.org/linux/man-pages/man2/dup.2.html": 16,
+        "manpages.ubuntu.com/manpages/focal/man2/fcntl.2.html": 8,
+        "manual.cs50.io/2/fcntl": 15,
+        "mimedefang.org/documentation/Changelog.html": 17,
+        "notes.shichao.io/apue/ch3": 11,
+        "perldoc.perl.org/POSIX": 18,
+        "pkg.odin-lang.org/core/sys/posix": 19,
+        "pubs.opengroup.org/onlinepubs/007908799/xsh/shm_open.html": 9,
+        "pubs.opengroup.org/onlinepubs/9699919799/functions/open.html": 6,
+        "qnx.com/developers/docs/6.4.1/neutrino/lib_ref/p/posix_typed_mem_open.html": 5,
+        "root.cz/man/2/dup2-2-gz": 3,
+        "stackoverflow.com/questions/6125068/what-does-the-fd-cloexec-fcntl-flag-do": 7,
+        "tutorialspoint.com/unix_system_calls/dup.htm": 13
+      },
+      "initial_response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "message": {
+              "content": "{\"labels\":{\"C001\":{\"evidence\":\"The flags are shared between copies (made with dup(2), fork(2), etc.) of the same fi\",\"kind\":\"direct\"},\"C002\":{\"evidence\":\"Both file descriptors in a dup() system call refer to the same open file description which means they share file offset and file status flags\",\"kind\":\"direct\"},\"C003\":{\"evidence\":\"\",\"kind\":\"irrelevant\"},\"C004\":{\"evidence\":\"\",\"kind\":\"background\"},\"C005\":{\"evidence\":\"\",\"kind\":\"background\"},\"C006\":{\"evidence\":\"\",\"kind\":\"background\"},\"C007\":{\"evidence\":\"\",\"kind\":\"background\"},\"C008\":{\"evidence\":\"Since the two file descriptors refer to the same open file description, they share file offset and file\",\"kind\":\"direct\"},\"C009\":{\"evidence\":\"\",\"kind\":\"background\"},\"C010\":{\"evidence\":\"\",\"kind\":\"background\"},\"C011\":{\"evidence\":\"\",\"kind\":\"irrelevant\"},\"C012\":{\"evidence\":\"\",\"kind\":\"background\"},\"C013\":{\"evidence\":\"\",\"kind\":\"irrelevant\"},\"C014\":{\"evidence\":\"\",\"kind\":\"background\"},\"C015\":{\"evidence\":\"\",\"kind\":\"background\"},\"C016\":{\"evidence\":\"\",\"kind\":\"background\"},\"C017\":{\"evidence\":\"\",\"kind\":\"irrelevant\"},\"C018\":{\"evidence\":\"\",\"kind\":\"background\"},\"C019\":{\"evidence\":\"\",\"kind\":\"background\"},\"C020\":{\"evidence\":\"\",\"kind\":\"irrelevant\"}}}"
+            }
+          }
+        ]
+      },
+      "expected_read": "C008",
+      "origin": {
+        "corpus": "runs/passage-coverage-confirm-2026-10-30/retrieval/corpus.json",
+        "corpus_sha256": "9fc1db1b15be971704080da1d2223507994bae2d0ab3a95261c4c2fea32389b9",
+        "initial_response": "runs/passage-coverage-confirm-2026-10-30/fixed/h04-call00.json",
+        "initial_response_sha256": "02853f86d1ea34589ba7e9972c8bd2b6917efa653082a59433a538c39acbd7b6"
+      }
+    }
+  ]
+}

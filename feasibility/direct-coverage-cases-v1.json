@@ -1,0 +1,68 @@
+{
+  "protocol": {
+    "date": "2026-10-30",
+    "baseline": "v5reference-read,currentinitial4",
+    "fixed": "v6context-audit,sameinitial4,Qwen,rawacquisition",
+    "before_inference": true,
+    "no_holdout_tuning": true,
+    "gold": "source-only blinded before labels;unknowns separate;not independent acceptance"
+  },
+  "cases": [
+    {
+      "id": "c01",
+      "query": "git cherry-pick --no-commit multiple commits initial index state",
+      "forms": [
+        "git cherry-pick --no-commit multiple commits initial index state"
+      ]
+    },
+    {
+      "id": "c02",
+      "query": "Python dataclasses asdict recursive deepcopy nested objects",
+      "forms": [
+        "Python dataclasses asdict recursive deepcopy nested objects"
+      ]
+    },
+    {
+      "id": "c03",
+      "query": "Rust Rc Weak upgrade strong count dropped allocation",
+      "forms": [
+        "Rust Rc Weak upgrade strong count dropped allocation"
+      ]
+    },
+    {
+      "id": "c04",
+      "query": "PostgreSQL NOT IN NULL NOT EXISTS three valued logic",
+      "forms": [
+        "PostgreSQL NOT IN NULL NOT EXISTS three valued logic"
+      ]
+    },
+    {
+      "id": "c05",
+      "query": "SQLite ALTER TABLE ADD COLUMN NOT NULL default existing rows",
+      "forms": [
+        "SQLite ALTER TABLE ADD COLUMN NOT NULL default existing rows"
+      ]
+    },
+    {
+      "id": "c06",
+      "query": "Docker build ARG ENV scope multi-stage inheritance persistence",
+      "forms": [
+        "Docker build ARG ENV scope multi-stage inheritance persistence"
+      ]
+    },
+    {
+      "id": "c07",
+      "query": "CSS flex order visual order keyboard tab order accessibility",
+      "forms": [
+        "CSS flex order visual order keyboard tab order accessibility"
+      ]
+    },
+    {
+      "id": "c08",
+      "query": "HTTP 421 Misdirected Request retry different connection non-idempotent",
+      "forms": [
+        "HTTP 421 Misdirected Request retry different connection non-idempotent"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2201 @@
+{
+  "date": "2026-10-29",
+  "timezone": "Europe/Moscow",
+  "mode": "fresh native same-day diagnostic; not day2; calibrated fixture, not holdout",
+  "task_id": "TASK-20261029-192811-001",
+  "policy": "B17-frozen-2026-10-29",
+  "live_binary_sha256": "33fc0ae59b0cfbcbd0dbb8ec592ade1bef19f0151864d07d3459125e39456d1c",
+  "fixture_sha256": "b67e3269830ae0e976aa9b4c5dc2f6b9c3e922ad1adda35738289d6b1b8325d6",
+  "policy_file_sha256": "1e83c13aa670b1a656262542eb5c34b21f559aca8fd0da179ab704097dcc995e",
+  "prediction_commit": {
+    "committed_at": "2026-10-29T19:43:06.144780+03:00",
+    "results_sha256": "fe2af0e4fa9fac44dd0614dd1cea11c37debfb6ac3618fc6235f610970e33dea",
+    "review_input_sha256": "176bb04c6730abc8031fcb2a2f6c5f5e0b7e58b09f92e8236b87429f647ac8d1",
+    "note": "Native predictions frozen before current manual assessment. Author agent saw progress and B17 background; not independent or blinded human review."
+  },
+  "assessment": {
+    "assessor": "Implementation author agent, own preliminary SERP review; not independent, not blinded human review",
+    "rubric": "doc/search-quality-rubric-v1.md",
+    "success_rule": "At least 3 unique grade-2 pages among returned top10; scores from SERP only",
+    "cases_passed": 16,
+    "total_cases": 20,
+    "grade_counts": {
+      "2": 85,
+      "1": 97,
+      "0": 18
+    },
+    "predicted_direct_top10_comparison": {
+      "predicted_direct_top10": 149,
+      "manually_direct_top10": 81
+    },
+    "sensitivity": "en02 has exactly three direct cards, including HN SQLite WAL synchronous setting. Downgrading that borderline card yields 15/20, not 16/20.",
+    "no_posthoc_tuning": true
+  },
+  "transport": {
+    "unique_source_attempts": 62,
+    "successful_http_responses": 62,
+    "known_http_gets_including_redirects": 62,
+    "logical_source_calls": 76,
+    "status_counts": {
+      "200": 62
+    },
+    "parser_errors": [
+      {
+        "file": "S034.json",
+        "engine": "naver",
+        "query": "последняя стабильная версия Rust октябрь 2026",
+        "error": "parser_changed"
+      }
+    ],
+    "blocked_sources": {},
+    "model_metadata_requests": 1,
+    "classification_calls": 33,
+    "all_id_valid_cases": 20,
+    "max_context_chars": 12081,
+    "model_warnings": [],
+    "case_elapsed_ms_median": 16283.5,
+    "case_elapsed_ms_max": 42286
+  },
+  "target_reads": [
+    {
+      "case_id": "ru06",
+      "id": "C004",
+      "url": "https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html",
+      "started_at": "2026-10-29T19:43:42.951388+03:00",
+      "exit_code": 0,
+      "stderr": "",
+      "output_file": "runs/full-policy-2026-10-29/live-native-a/target-reads/ru06-C004.json",
+      "title": "What is Ownership? - The Rust Programming Language",
+      "chars": 24995,
+      "blocks": 107,
+      "truncated": false,
+      "final_url": "https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html",
+      "text_hash": "9cf01d5852ed3ef187a688e72b531e529efe0e436c63b4136db7d6a27b076fe6",
+      "elapsed_ms": 284,
+      "file_sha256": "0e0aee6c6b19515d7f9882cf7e641604e2676fb2c0807259981c04f119f4e5d7",
+      "http_status": 200,
+      "content_review": "Main ownership explanation and rules present"
+    },
+    {
+      "case_id": "ru02",
+      "id": "C030",
+      "url": "https://www.sqlite.org/wal.html",
+      "started_at": "2026-10-29T19:43:43.255299+03:00",
+      "exit_code": 0,
+      "stderr": "",
+      "output_file": "runs/full-policy-2026-10-29/live-native-a/target-reads/ru02-C030.json",
+      "title": "Write-Ahead Logging",
+      "chars": 36725,
+      "blocks": 122,
+      "truncated": false,
+      "final_url": "https://www.sqlite.org/wal.html",
+      "text_hash": "0dd2c9c4e589d6fa4caf095ede35d790cdd15f7fe5c896742be12044896d5c39",
+      "elapsed_ms": 2988,
+      "file_sha256": "561dd7b97810461dc991aad76299dfd34abcaefb0e380805c090873696e96d3f",
+      "http_status": 200,
+      "content_review": "WAL overview, concurrency and checkpoints present"
+    },
+    {
+      "case_id": "ru03",
+      "id": "C008",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/304",
+      "started_at": "2026-10-29T19:43:46.251916+03:00",
+      "exit_code": 0,
+      "stderr": "",
+      "output_file": "runs/full-policy-2026-10-29/live-native-a/target-reads/ru03-C008.json",
+      "title": "304 Not Modified - HTTP | MDN",
+      "chars": 3389,
+      "blocks": 37,
+      "truncated": false,
+      "final_url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/304",
+      "text_hash": "a84aca5bfffee87c9ca18b11db3b651dc8c3977a2af4d06ff4ac608e2621e494",
+      "elapsed_ms": 237,
+      "file_sha256": "c34580136fa6a0098836b47f4fbc623004dfc73ed57a8df31e57db2179f216d3",
+      "http_status": 200,
+      "content_review": "304 and conditional header semantics present"
+    },
+    {
+      "case_id": "ru07",
+      "id": "C010",
+      "url": "https://fastcrw.com/blog/rust-vs-python-scraping",
+      "started_at": "2026-10-29T19:43:46.496825+03:00",
+      "exit_code": 1,
+      "stderr": "Error: fetch_timeout\n\nCaused by:\n    deadline has elapsed",
+      "output_file": null,
+      "http_status": null,
+      "content_review": "No document: fetch_timeout; no retry"
+    },
+    {
+      "case_id": "ru05",
+      "id": "C034",
+      "url": "https://www.jcar.or.kr/articles/article/bXDR/",
+      "started_at": "2026-10-29T19:44:01.516102+03:00",
+      "exit_code": 0,
+      "stderr": "",
+      "output_file": "runs/full-policy-2026-10-29/live-native-a/target-reads/ru05-C034.json",
+      "title": "굴삭기 사이클 타임 추정을 위한 시뮬레이션 자동화 사례 연구",
+      "chars": 7567,
+      "blocks": 66,
+      "truncated": false,
+      "final_url": "https://www.jcar.or.kr/articles/article/bXDR/",
+      "text_hash": "84a41b91f46983b42a643ef8f138c07d53884fbfa980cced4e75ddca92b6339e",
+      "elapsed_ms": 1999,
+      "file_sha256": "c91cea3f21cf6a4e7de0ca4b5019cbfaed64b63c17d998bc11897a9e02862182",
+      "http_status": 200,
+      "content_review": "Extraction dominated by references; main article/abstract coverage not established"
+    },
+    {
+      "case_id": "ru10",
+      "id": "C015",
+      "url": "https://docs.n8n.io/deploy/host-n8n/configure-n8n/security/enable-ssrf-protection",
+      "started_at": "2026-10-29T19:44:03.545964+03:00",
+      "exit_code": 0,
+      "stderr": "",
+      "output_file": "runs/full-policy-2026-10-29/live-native-a/target-reads/ru10-C015.json",
+      "title": "Enable SSRF protection | Deploy | n8n Docs",
+      "chars": 1797,
+      "blocks": 24,
+      "truncated": false,
+      "final_url": "https://docs.n8n.io/deploy/host-n8n/configure-n8n/security/enable-ssrf-protection",
+      "text_hash": "cd2a088db1fe2af6534f0168ed9f64a669cbfdb7b04f8b92c0b4dc23b3e61434",
+      "elapsed_ms": 550,
+      "file_sha256": "fc6922d7e5163408abc3b413e3770c435a63a27fae65d7fe780bd5b37524b484",
+      "http_status": 200,
+      "content_review": "SSRF feature/limitations and introduction present; detailed DNS/IPv6 configuration not in extracted blocks"
+    }
+  ],
+  "cases": [
+    {
+      "id": "ru01",
+      "query": "Rust владение borrowing документация",
+      "status": "ok",
+      "candidate_count": 30,
+      "model_direct_pool": 16,
+      "manual_direct_top10": 6,
+      "success_serp": true,
+      "elapsed_ms": 28192,
+      "budget": {
+        "classification_calls": 2,
+        "document_reads": 0,
+        "logical_search_calls": 4,
+        "source_context_max": 7006
+      },
+      "classifier_valid": true,
+      "errors": [],
+      "discarded_by_site": 0,
+      "grades": [
+        {
+          "id": "C022",
+          "url": "https://www.openmymind.net/Rust-Ownership-Move-and-Borrow-part-1/",
+          "grade": 2,
+          "reason": "Объяснение ownership и borrowing",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C016",
+          "url": "https://github.com/rust-lang/book/pull/4251",
+          "grade": 2,
+          "reason": "PR поясняет владение и заимствование срезов",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C020",
+          "url": "https://my-js.org/docs/guide/rust",
+          "grade": 1,
+          "reason": "Общее руководство без видимого раздела о владении",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C027",
+          "url": "https://www.ruststepbystep.com/mastering-rust-ownership-borrowing-references-a-beginners-guide/",
+          "grade": 2,
+          "reason": "Практическое руководство ownership/borrowing",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C007",
+          "url": "https://doc.rust-lang.org/1.8.0/book/references-and-borrowing.html",
+          "grade": 1,
+          "reason": "Старая документация 1.8, бедная карточка",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C018",
+          "url": "https://www.knihydobrovsky.cz/kniha/the-rust-programming-language-2nd-edition-803055744",
+          "grade": 1,
+          "reason": "Магазин книги, нужное содержание не видно",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C028",
+          "url": "https://stackoverflow.com/questions/30450399/does-println-borrow-or-own-the-variable",
+          "grade": 2,
+          "reason": "Конкретный вопрос о borrow/own и примере кода",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C008",
+          "url": "https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html",
+          "grade": 2,
+          "reason": "Глава явно покрывает ownership, borrowing, slices",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C001",
+          "url": "https://aincorporation.com/aincybersecurity",
+          "grade": 1,
+          "reason": "Название cybersecurity не подтверждает тематический сниппет",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C026",
+          "url": "https://rustplatform.com/ownership-and-borrowing",
+          "grade": 2,
+          "reason": "Примеры передачи владения и ссылок",
+          "predicted_kind": "direct"
+        }
+      ]
+    },
+    {
+      "id": "ru02",
+      "query": "SQLite транзакции WAL документация",
+      "status": "ok",
+      "candidate_count": 31,
+      "model_direct_pool": 9,
+      "manual_direct_top10": 4,
+      "success_serp": true,
+      "elapsed_ms": 17159,
+      "budget": {
+        "classification_calls": 2,
+        "document_reads": 0,
+        "logical_search_calls": 4,
+        "source_context_max": 7225
+      },
+      "classifier_valid": true,
+      "errors": [],
+      "discarded_by_site": 0,
+      "grades": [
+        {
+          "id": "C029",
+          "url": "https://www.sqlite.org/lang_transaction.html",
+          "grade": 1,
+          "reason": "Транзакции видны, WAL в карточке отсутствует",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C030",
+          "url": "https://www.sqlite.org/wal.html",
+          "grade": 2,
+          "reason": "Официальное руководство WAL с checkpoint",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C031",
+          "url": "https://sqlite.org/walformat.html",
+          "grade": 2,
+          "reason": "Прямо описан WAL для committed transactions",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C025",
+          "url": "https://www.sqlite.org/c3ref/wal_checkpoint.html",
+          "grade": 1,
+          "reason": "Только краткое соответствие checkpoint API",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C028",
+          "url": "https://www.sqlite.org/fileformat2.html",
+          "grade": 2,
+          "reason": "Прямо связаны транзакции SQLite и WAL",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C014",
+          "url": "https://news.ycombinator.com/item?id=45005071",
+          "grade": 2,
+          "reason": "Конкретная настройка synchronous для SQLite WAL; пограничная прямая помощь",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C024",
+          "url": "https://www.sqlite.org/c3ref/snapshot_recover.html",
+          "grade": 1,
+          "reason": "Сохранение и восстановление WAL, семантика транзакций не показана",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C026",
+          "url": "https://www.sqlite.org/c3ref/wal_checkpoint_v2.html",
+          "grade": 1,
+          "reason": "Подпись API checkpoint без содержательного объяснения",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C005",
+          "url": "https://docs.sqlitecloud.io/docs/sqlite/lang_transaction",
+          "grade": 1,
+          "reason": "Транзакции SQLite, но без WAL",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C007",
+          "url": "https://en.wikipedia.org/wiki/SQLite",
+          "grade": 1,
+          "reason": "Общая SQLite",
+          "predicted_kind": "background"
+        }
+      ]
+    },
+    {
+      "id": "ru03",
+      "query": "HTTP статус 304 Last-Modified ETag",
+      "status": "ok",
+      "candidate_count": 31,
+      "model_direct_pool": 22,
+      "manual_direct_top10": 5,
+      "success_serp": true,
+      "elapsed_ms": 16157,
+      "budget": {
+        "classification_calls": 2,
+        "document_reads": 0,
+        "logical_search_calls": 4,
+        "source_context_max": 6966
+      },
+      "classifier_valid": true,
+      "errors": [],
+      "discarded_by_site": 0,
+      "grades": [
+        {
+          "id": "C008",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/304",
+          "grade": 1,
+          "reason": "304 описан, валидаторы в этой карточке отсутствуют",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C030",
+          "url": "https://velog.io/@jjungyu12/HTTP-HTTP-Header%EC%BA%90%EC%8B%9C-%EC%8B%9C%EA%B0%84-%EC%B4%88%EA%B3%BC-%EA%B2%80%EC%A6%9D-%ED%97%A4%EB%8D%94-%EC%A1%B0%EA%B1%B4%EB%B6%80-%EC%9A%94%EC%B2%AD",
+          "grade": 2,
+          "reason": "Last-Modified/ETag, условие и ответ 304",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C006",
+          "url": "https://blog.nvim.me/network/deep-dive/etag-and-conditional-requests/",
+          "grade": 2,
+          "reason": "Вместе перечислены валидаторы, условные заголовки и 304",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C004",
+          "url": "https://blog.naver.com/kin412/224170725945",
+          "grade": 2,
+          "reason": "Показаны неизменность данных, 304 и ETag/Last-Modified",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C005",
+          "url": "https://blog.naver.com/writer0713/224033300148",
+          "grade": 2,
+          "reason": "If-Modified-Since сравнивается с Last-Modified для 304",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C022",
+          "url": "https://www.keycdn.com/support/304-not-modified",
+          "grade": 1,
+          "reason": "Только общая связь 304 с кэшем",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C016",
+          "url": "https://httpguides.com/status/304-not-modified",
+          "grade": 1,
+          "reason": "Общее значение 304",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C001",
+          "url": "https://annevankesteren.nl/2005/05/http-304",
+          "grade": 2,
+          "reason": "Фрагмент кода связывает ETag/Last-Modified и HTTP 304",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C007",
+          "url": "https://www.cssportal.com/http-status-codes/304.php",
+          "grade": 1,
+          "reason": "Общая карточка статуса без валидаторов",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C017",
+          "url": "https://httpstatus.com/304/",
+          "grade": 1,
+          "reason": "Только сохранение кэшированной версии",
+          "predicted_kind": "direct"
+        }
+      ]
+    },
+    {
+      "id": "ru04",
+      "query": "Tokio асинхронный Rust руководство",
+      "status": "ok",
+      "candidate_count": 30,
+      "model_direct_pool": 14,
+      "manual_direct_top10": 5,
+      "success_serp": true,
+      "elapsed_ms": 16410,
+      "budget": {
+        "classification_calls": 2,
+        "document_reads": 0,
+        "logical_search_calls": 4,
+        "source_context_max": 6582
+      },
+      "classifier_valid": true,
+      "errors": [],
+      "discarded_by_site": 0,
+      "grades": [
+        {
+          "id": "C028",
+          "url": "https://tokio.rs/tokio/tutorial/async",
+          "grade": 2,
+          "reason": "Официальная глава о модели async Rust/Tokio",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C002",
+          "url": "https://biriukov.dev/docs/async-rust-tokio-io/1-async-rust-with-tokio-io-streams-backpressure-concurrency-and-ergonomics/",
+          "grade": 2,
+          "reason": "Практическое руководство I/O, backpressure и cancellation",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C004",
+          "url": "https://blog.naver.com/sssang97/224052716178",
+          "grade": 1,
+          "reason": "Список ссылок о mutex без ясного руководства",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C020",
+          "url": "https://nanotechinsight.com/post/rust-async-tokio-practical-guide-2026",
+          "grade": 2,
+          "reason": "Практические задачи, channels и streams Tokio",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C001",
+          "url": "https://altimetrikpoland.medium.com/how-to-use-tokio-with-rust-f42a56cbd720",
+          "grade": 2,
+          "reason": "Практическое руководство Tokio/Rust",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C003",
+          "url": "https://blog.logrocket.com/a-practical-guide-to-async-in-rust/",
+          "grade": 1,
+          "reason": "Сниппет содержит биографию автора",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C010",
+          "url": "https://docs.rs/tokio/latest/tokio/io/trait.AsyncRead.html",
+          "grade": 1,
+          "reason": "Справка одного trait без руководства",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C018",
+          "url": "https://lib.rs/crates/tokio",
+          "grade": 1,
+          "reason": "Карточка runtime, краткий пример обрезан",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C025",
+          "url": "https://tokio.rs/",
+          "grade": 1,
+          "reason": "Общее описание runtime",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C007",
+          "url": "https://buildwithrust.com/async-rust-with-tokio-building-p2p-blockchain-networking",
+          "grade": 2,
+          "reason": "Прикладной пример P2P networking на Tokio",
+          "predicted_kind": "direct"
+        }
+      ]
+    },
+    {
+      "id": "ru05",
+      "query": "экскаватор рабочий цикл перемещение грунта",
+      "status": "ok",
+      "candidate_count": 64,
+      "model_direct_pool": 7,
+      "manual_direct_top10": 4,
+      "success_serp": true,
+      "elapsed_ms": 42286,
+      "budget": {
+        "classification_calls": 3,
+        "document_reads": 0,
+        "logical_search_calls": 8,
+        "source_context_max": 12081
+      },
+      "classifier_valid": true,
+      "errors": [],
+      "discarded_by_site": 0,
+      "grades": [
+        {
+          "id": "C043",
+          "url": "https://sanyperkasa.com/cycle-time-excavator-adalah/",
+          "grade": 2,
+          "reason": "Определение cycle time и этапы рабочего цикла",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C038",
+          "url": "https://physicalailab.io/en/excavator-physical-ai-soil-hydraulics-telemetry-world-model-en/",
+          "grade": 1,
+          "reason": "Общее устройство AI-экскаватора",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C046",
+          "url": "https://simplewoody.com/en/utility/excavator-heavy-equipment-workload.html",
+          "grade": 2,
+          "reason": "Явная последовательность dig-swing-dump-return",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C034",
+          "url": "https://www.jcar.or.kr/articles/article/bXDR/",
+          "grade": 2,
+          "reason": "Исследование оценки cycle time; оценка только SERP",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C029",
+          "url": "https://highways.today/2026/10/17/the-economics-of-moving-earth/",
+          "grade": 1,
+          "reason": "Общая производительность без видимого рабочего цикла",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C053",
+          "url": "https://trailerrental.ru/",
+          "grade": 0,
+          "reason": "Аренда и услуги перемещения грунта",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C040",
+          "url": "https://ranktube.co.kr/video/rUmTDXrSZow",
+          "grade": 1,
+          "reason": "Видео планировки без описания цикла",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C044",
+          "url": "https://www.scribd.com/doc/36574413/Hydraulic-Excavators-Classnote-2",
+          "grade": 1,
+          "reason": "В карточке только copyright",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C045",
+          "url": "https://www.sdchinamachine.com/blog/working-condition-analysis-of-hydraulic-small-excavator",
+          "grade": 2,
+          "reason": "Описаны digging/lifting/swinging/walking и условия работы",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C062",
+          "url": "https://www.youtube.com/shorts/pdvWMGrAmDs",
+          "grade": 1,
+          "reason": "Карточка спецковша без этапов цикла",
+          "predicted_kind": "background"
+        }
+      ]
+    },
+    {
+      "id": "ru06",
+      "query": "site:doc.rust-lang.org владение ownership",
+      "status": "ok",
+      "candidate_count": 18,
+      "model_direct_pool": 6,
+      "manual_direct_top10": 7,
+      "success_serp": true,
+      "elapsed_ms": 20692,
+      "budget": {
+        "classification_calls": 1,
+        "document_reads": 0,
+        "logical_search_calls": 4,
+        "source_context_max": 7997
+      },
+      "classifier_valid": true,
+      "errors": [],
+      "discarded_by_site": 0,
+      "grades": [
+        {
+          "id": "C004",
+          "url": "https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html",
+          "grade": 2,
+          "reason": "Что такое ownership на заданном домене",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C010",
+          "url": "https://doc.rust-lang.org/nomicon/ownership.html",
+          "grade": 2,
+          "reason": "Ownership/lifetimes на заданном домене",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C003",
+          "url": "https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html",
+          "grade": 2,
+          "reason": "Глава о владении и заимствовании",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C012",
+          "url": "https://doc.rust-lang.org/rust-by-example/scope/borrow.html",
+          "grade": 2,
+          "reason": "Borrowing без передачи ownership",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C013",
+          "url": "https://doc.rust-lang.org/rust-by-example/std/rc.html",
+          "grade": 2,
+          "reason": "Несколько владельцев через Rc",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C005",
+          "url": "https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html",
+          "grade": 2,
+          "reason": "Ссылка не владеет данными и не освобождает их",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C001",
+          "url": "https://doc.rust-lang.org/1.8.0/book/references-and-borrowing.html",
+          "grade": 1,
+          "reason": "Старая версия и бедный сниппет",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C006",
+          "url": "https://doc.rust-lang.org/book/ch08-02-strings.html",
+          "grade": 1,
+          "reason": "Строки/UTF-8 без явной помощи ownership",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C002",
+          "url": "https://doc.rust-lang.org/alloc/rc/struct.Weak.html",
+          "grade": 2,
+          "reason": "Non-owning Weak и время жизни allocation",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C017",
+          "url": "https://doc.rust-lang.org/std/os/fd/struct.OwnedFd.html",
+          "grade": 1,
+          "reason": "Одно упоминание передачи файлового дескриптора",
+          "predicted_kind": "background"
+        }
+      ]
+    },
+    {
+      "id": "ru07",
+      "query": "Rust Python обработка HTML сравнение",
+      "status": "ok",
+      "candidate_count": 39,
+      "model_direct_pool": 5,
+      "manual_direct_top10": 1,
+      "success_serp": false,
+      "elapsed_ms": 19066,
+      "budget": {
+        "classification_calls": 2,
+        "document_reads": 0,
+        "logical_search_calls": 4,
+        "source_context_max": 8473
+      },
+      "classifier_valid": true,
+      "errors": [],
+      "discarded_by_site": 0,
+      "grades": [
+        {
+          "id": "C010",
+          "url": "https://fastcrw.com/blog/rust-vs-python-scraping",
+          "grade": 2,
+          "reason": "Явное сравнение Rust/Python scraping и библиотек",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C012",
+          "url": "https://github.com/RustPython/RustPython",
+          "grade": 0,
+          "reason": "Интерпретатор Python, не сравнение HTML extraction",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C019",
+          "url": "https://www.libhunt.com/l/python/topic/html",
+          "grade": 1,
+          "reason": "Список HTML-проектов только Python",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C013",
+          "url": "https://github.com/bug-ops/scrape-rs",
+          "grade": 1,
+          "reason": "Rust-парсер с Python bindings, сравнения не видно",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C018",
+          "url": "https://informatecdigital.com/cs/Jak-spustit-Python-a-HTML-v-prohl%C3%AD%C5%BEe%C4%8Di/",
+          "grade": 0,
+          "reason": "Запуск Python в браузере",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C029",
+          "url": "https://rustplatform.com/",
+          "grade": 1,
+          "reason": "Обучение Rust для Python-разработчиков",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C024",
+          "url": "https://otus.ru/lessons/rust-developer/",
+          "grade": 0,
+          "reason": "Общий курс без HTML-сравнения",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C025",
+          "url": "https://pypi.org/project/rust-data-processing/",
+          "grade": 0,
+          "reason": "CSV/JSON/Parquet/Excel ingestion",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C008",
+          "url": "https://developers.redhat.com/blog/2017/11/16/speed-python-using-rust",
+          "grade": 1,
+          "reason": "URL ускорения Python/Rust, содержательный сниппет повреждён",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C017",
+          "url": "https://indosaram.github.io/rust-python-book/ch10-04.html",
+          "grade": 1,
+          "reason": "Rust/Python код без HTML-сравнения",
+          "predicted_kind": "background"
+        }
+      ]
+    },
+    {
+      "id": "ru08",
+      "query": "последняя стабильная версия Rust октябрь 2026",
+      "status": "partial",
+      "candidate_count": 30,
+      "model_direct_pool": 3,
+      "manual_direct_top10": 0,
+      "success_serp": false,
+      "elapsed_ms": 17696,
+      "budget": {
+        "classification_calls": 2,
+        "document_reads": 0,
+        "logical_search_calls": 4,
+        "source_context_max": 6174
+      },
+      "classifier_valid": true,
+      "errors": [
+        "naver: parser_changed"
+      ],
+      "discarded_by_site": 0,
+      "grades": [
+        {
+          "id": "C019",
+          "url": "https://releases.rs/",
+          "grade": 1,
+          "reason": "Stable указан, но октябрьская дата состояния не подтверждена; relative countdown не принимается",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C008",
+          "url": "https://endoflife.date/rust",
+          "grade": 1,
+          "reason": "Общее описание Rust без датированной версии",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C010",
+          "url": "https://www.filehorse.com/download-rust/",
+          "grade": 1,
+          "reason": "Страница загрузки без версии/даты",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C023",
+          "url": "https://rustvsgo.com/",
+          "grade": 0,
+          "reason": "Сравнение Rust/Go",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C025",
+          "url": "https://snapcraft.io/install/rustconn/debian",
+          "grade": 0,
+          "reason": "Другой продукт rustconn",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C012",
+          "url": "https://github.com/rustfs/rustfs/blob/main/build-rustfs.sh",
+          "grade": 0,
+          "reason": "Build script другого продукта",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C002",
+          "url": "https://blog.naver.com/sssang97/224207244370",
+          "grade": 1,
+          "reason": "Мартовский релиз, не октябрьский latest",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C013",
+          "url": "https://github.com/warricksothr/RustBuild",
+          "grade": 1,
+          "reason": "Скрипты latest, конкретного релиза нет",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C026",
+          "url": "https://source.android.com/docs/setup/build/rust/building-rust-modules/overview",
+          "grade": 0,
+          "reason": "Rust в Android без нужной версии",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C011",
+          "url": "https://firefox-source-docs.mozilla.org/writing-rust-code/update-policy.html",
+          "grade": 1,
+          "reason": "Политика обновления Firefox без октябрьского релиза",
+          "predicted_kind": "background"
+        }
+      ]
+    },
+    {
+      "id": "ru09",
+      "query": "Unicode графема кодовая точка разница",
+      "status": "ok",
+      "candidate_count": 31,
+      "model_direct_pool": 6,
+      "manual_direct_top10": 4,
+      "success_serp": true,
+      "elapsed_ms": 18083,
+      "budget": {
+        "classification_calls": 2,
+        "document_reads": 0,
+        "logical_search_calls": 4,
+        "source_context_max": 6649
+      },
+      "classifier_valid": true,
+      "errors": [],
+      "discarded_by_site": 0,
+      "grades": [
+        {
+          "id": "C006",
+          "url": "https://emojifyi.com/ru/glossary/grapheme-cluster/",
+          "grade": 2,
+          "reason": "Явное различие видимого символа и нескольких code points",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C020",
+          "url": "https://www.regular-expressions.info/unicodechars.html",
+          "grade": 2,
+          "reason": "Графема из одной или нескольких code points",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C022",
+          "url": "https://stackoverflow.com/questions/27331819/whats-the-difference-between-a-character-a-code-point-a-glyph-and-a-grapheme",
+          "grade": 2,
+          "reason": "Вопрос прямо сравнивает нужные понятия",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C027",
+          "url": "https://www.unicode.org/standard/principles.html",
+          "grade": 1,
+          "reason": "Отрисовка и code point, графемы не видны",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C009",
+          "url": "https://en.wiktionary.org/wiki/code_point",
+          "grade": 1,
+          "reason": "Определение code point без графемы",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C005",
+          "url": "https://docs.google.com/document/d/1wuzzMOvKOJw93SWZAqoim1VUl9mloUxE0W6Ki_G23tw/edit",
+          "grade": 2,
+          "reason": "Сопоставлены grapheme-cluster и code-point модели",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C007",
+          "url": "https://en.wikipedia.org/wiki/Unicode",
+          "grade": 1,
+          "reason": "Общая Unicode",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C002",
+          "url": "https://aztools.app/en/guides/unicode-normalization-and-invisible-characters/",
+          "grade": 1,
+          "reason": "Визуальная эквивалентность, сравнение терминов неполно",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C003",
+          "url": "https://cs.wikipedia.org/wiki/Unicode",
+          "grade": 1,
+          "reason": "Общая Unicode",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C031",
+          "url": "https://wiki.tcl-lang.org/page/Unicode",
+          "grade": 1,
+          "reason": "Неполные символы, термин grapheme не показан",
+          "predicted_kind": "background"
+        }
+      ]
+    },
+    {
+      "id": "ru10",
+      "query": "DNS rebinding SSRF IPv6 защита",
+      "status": "ok",
+      "candidate_count": 57,
+      "model_direct_pool": 19,
+      "manual_direct_top10": 5,
+      "success_serp": true,
+      "elapsed_ms": 32512,
+      "budget": {
+        "classification_calls": 3,
+        "document_reads": 0,
+        "logical_search_calls": 8,
+        "source_context_max": 8965
+      },
+      "classifier_valid": true,
+      "errors": [],
+      "discarded_by_site": 0,
+      "grades": [
+        {
+          "id": "C056",
+          "url": "https://www.wiz.io/academy/application-security/server-side-request-forgery",
+          "grade": 2,
+          "reason": "SSRF, DNS rebinding и IPv6 local/ULA",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C016",
+          "url": "https://docs.netgate.com/pfsense/en/latest/services/dns/rebinding.html",
+          "grade": 1,
+          "reason": "DNS rebinding, контекст IPv6/SSRF неполон",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C017",
+          "url": "https://docs.nitrokey.com/nextbox/remote/dns-rebind",
+          "grade": 1,
+          "reason": "IPv4/v6 rebinding protection без явного SSRF",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C050",
+          "url": "https://skillaudit.dev/blog/mcp-server-ssrf-advanced-patterns/",
+          "grade": 2,
+          "reason": "DNS/IPv6/TOCTOU обходы allowlist в SSRF",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C033",
+          "url": "https://govynai.com/blog/ssrf-injection-defense-ai-proxy/",
+          "grade": 2,
+          "reason": "Явно IPv6 SSRF protection и rebinding defense",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C032",
+          "url": "https://github.com/tommypj/ssrf-safe-fetch",
+          "grade": 1,
+          "reason": "Rebinding protection, IPv6 не показан",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C002",
+          "url": "https://appsec.fyi/ssrf.html",
+          "grade": 1,
+          "reason": "Перечень обходов, защита в карточке не раскрыта",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C015",
+          "url": "https://docs.n8n.io/deploy/host-n8n/configure-n8n/security/enable-ssrf-protection",
+          "grade": 2,
+          "reason": "DNS/redirect validation и блокируемые IPv6 диапазоны",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C031",
+          "url": "https://github.com/securized/laravel-ssrf",
+          "grade": 1,
+          "reason": "Общая библиотека SSRF без DNS/IPv6",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C026",
+          "url": "https://github.com/chrj/ssrf/blob/main/README.md",
+          "grade": 2,
+          "reason": "Rebinding-safe dialer и IPv4/IPv6 режимы",
+          "predicted_kind": "direct"
+        }
+      ]
+    },
+    {
+      "id": "en01",
+      "query": "Rust ownership borrowing documentation",
+      "status": "ok",
+      "candidate_count": 19,
+      "model_direct_pool": 11,
+      "manual_direct_top10": 7,
+      "success_serp": true,
+      "elapsed_ms": 5519,
+      "budget": {
+        "classification_calls": 1,
+        "document_reads": 0,
+        "logical_search_calls": 2,
+        "source_context_max": 8747
+      },
+      "classifier_valid": true,
+      "errors": [],
+      "discarded_by_site": 0,
+      "grades": [
+        {
+          "id": "C013",
+          "url": "https://www.openmymind.net/Rust-Ownership-Move-and-Borrow-part-1/",
+          "grade": 2,
+          "reason": "Ownership, borrowing и references",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C017",
+          "url": "https://www.ruststepbystep.com/mastering-rust-ownership-borrowing-references-a-beginners-guide/",
+          "grade": 2,
+          "reason": "Практическое руководство ownership/borrowing",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C004",
+          "url": "https://doc.rust-lang.org/1.8.0/book/references-and-borrowing.html",
+          "grade": 1,
+          "reason": "Устаревшая 1.8 и короткая карточка",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C018",
+          "url": "https://stackoverflow.com/questions/30450399/does-println-borrow-or-own-the-variable",
+          "grade": 2,
+          "reason": "Вопрос borrow/own с кодом",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C005",
+          "url": "https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html",
+          "grade": 2,
+          "reason": "Глава ownership, borrowing, slices",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C016",
+          "url": "https://rustplatform.com/ownership-and-borrowing",
+          "grade": 2,
+          "reason": "Примеры владения и заимствования",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C019",
+          "url": "https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/book/first-edition/references-and-borrowing.html",
+          "grade": 1,
+          "reason": "Архив first edition 1.25, устаревшая копия",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C014",
+          "url": "https://prabhat.dev/understanding-references-and-borrowing-in-rust/",
+          "grade": 2,
+          "reason": "Объяснение references без передачи владения",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C002",
+          "url": "https://coddy.tech/landing/rust",
+          "grade": 1,
+          "reason": "Реклама курса вместо документации",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C010",
+          "url": "https://www.k4nul.com/en/rust/ownership-borrowing-and-lifetimes/",
+          "grade": 2,
+          "reason": "Руководство ownership/borrowing/lifetimes с примерами",
+          "predicted_kind": "direct"
+        }
+      ]
+    },
+    {
+      "id": "en02",
+      "query": "SQLite WAL transactions documentation",
+      "status": "ok",
+      "candidate_count": 19,
+      "model_direct_pool": 5,
+      "manual_direct_top10": 3,
+      "success_serp": true,
+      "elapsed_ms": 8371,
+      "budget": {
+        "classification_calls": 1,
+        "document_reads": 0,
+        "logical_search_calls": 2,
+        "source_context_max": 8713
+      },
+      "classifier_valid": true,
+      "errors": [],
+      "discarded_by_site": 0,
+      "grades": [
+        {
+          "id": "C017",
+          "url": "https://www.sqlite.org/wal.html",
+          "grade": 2,
+          "reason": "Официальное WAL, atomic commit и rollback",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C014",
+          "url": "https://www.sqlite.org/c3ref/wal_checkpoint.html",
+          "grade": 1,
+          "reason": "Краткое соответствие checkpoint API",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C018",
+          "url": "https://sqlite.org/walformat.html",
+          "grade": 2,
+          "reason": "WAL хранит committed transactions",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C013",
+          "url": "https://www.sqlite.org/c3ref/snapshot_recover.html",
+          "grade": 1,
+          "reason": "Восстановление WAL после закрытия connections",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C015",
+          "url": "https://www.sqlite.org/c3ref/wal_checkpoint_v2.html",
+          "grade": 1,
+          "reason": "Сигнатура API без объяснения",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C004",
+          "url": "https://en.wikipedia.org/wiki/Database_consistency",
+          "grade": 0,
+          "reason": "MongoDB/ACID, не SQLite WAL",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C012",
+          "url": "https://sequelize.org/docs/v6/other-topics/transactions/",
+          "grade": 1,
+          "reason": "Транзакции без видимого WAL",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C009",
+          "url": "https://news.ycombinator.com/item?id=45005071",
+          "grade": 2,
+          "reason": "SQLite WAL synchronous setting; пограничная прямая помощь",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C001",
+          "url": "https://developer.android.com/reference/kotlin/android/database/sqlite/SQLiteDatabase",
+          "grade": 1,
+          "reason": "Общая SQLite API без WAL",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C005",
+          "url": "https://github.com/ericksonlopezf/dotnet-transaction",
+          "grade": 1,
+          "reason": "WAL concurrency classifier, объяснение транзакций не видно",
+          "predicted_kind": "background"
+        }
+      ]
+    },
+    {
+      "id": "en03",
+      "query": "HTTP 304 ETag Last-Modified conditional requests",
+      "status": "ok",
+      "candidate_count": 19,
+      "model_direct_pool": 19,
+      "manual_direct_top10": 7,
+      "success_serp": true,
+      "elapsed_ms": 8368,
+      "budget": {
+        "classification_calls": 1,
+        "document_reads": 0,
+        "logical_search_calls": 2,
+        "source_context_max": 8791
+      },
+      "classifier_valid": true,
+      "errors": [],
+      "discarded_by_site": 0,
+      "grades": [
+        {
+          "id": "C005",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/304",
+          "grade": 2,
+          "reason": "304 для conditional GET/HEAD и двух валидаторов",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C001",
+          "url": "https://ahrefs.com/seo/glossary/304-not-modified",
+          "grade": 1,
+          "reason": "Общее объяснение 304/cache",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C015",
+          "url": "https://specification.website/spec/performance/conditional-requests/",
+          "grade": 2,
+          "reason": "ETag/Last-Modified, conditional headers и 304",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C007",
+          "url": "https://github.com/DevelopersCoffee/airo/issues/775",
+          "grade": 1,
+          "reason": "Issue о conditional requests, готовое объяснение не видно",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C010",
+          "url": "https://httpstatus.com/304/",
+          "grade": 1,
+          "reason": "Общая карточка 304",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C002",
+          "url": "https://blog.naver.com/kin412/224170725945",
+          "grade": 2,
+          "reason": "304, ETag/Last-Modified и неизменность данных",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C006",
+          "url": "https://en.wikipedia.org/wiki/HTTP_ETag",
+          "grade": 2,
+          "reason": "ETag как механизм conditional cache validation",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C004",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Conditional_requests",
+          "grade": 2,
+          "reason": "Практическое руководство conditional requests/validator",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C018",
+          "url": "https://unpoly.com/conditional-requests",
+          "grade": 2,
+          "reason": "Modification time/hash и empty response при unchanged",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C009",
+          "url": "https://http.dev/conditional-requests",
+          "grade": 2,
+          "reason": "Validator и ответ 304/412, cache validation",
+          "predicted_kind": "direct"
+        }
+      ]
+    },
+    {
+      "id": "en04",
+      "query": "Tokio Rust asynchronous programming tutorial",
+      "status": "ok",
+      "candidate_count": 19,
+      "model_direct_pool": 10,
+      "manual_direct_top10": 5,
+      "success_serp": true,
+      "elapsed_ms": 9770,
+      "budget": {
+        "classification_calls": 1,
+        "document_reads": 0,
+        "logical_search_calls": 2,
+        "source_context_max": 8376
+      },
+      "classifier_valid": true,
+      "errors": [],
+      "discarded_by_site": 0,
+      "grades": [
+        {
+          "id": "C017",
+          "url": "https://tokio.rs/tokio/tutorial",
+          "grade": 2,
+          "reason": "Официальный tutorial Tokio",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C019",
+          "url": "https://tokio.rs/tokio/tutorial/setup",
+          "grade": 2,
+          "reason": "Практическая глава Setup официального tutorial",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C018",
+          "url": "https://tokio.rs/tokio/tutorial/hello-tokio",
+          "grade": 2,
+          "reason": "Глава Hello Tokio официального tutorial",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C009",
+          "url": "https://hackernoon.com/parsing-html-with-rust-a-simple-tutorial-using-tokio-reqwest-and-scraper",
+          "grade": 2,
+          "reason": "Прикладной tutorial Tokio/reqwest/scraper",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C002",
+          "url": "https://atlex00.com/rust/concurrency/",
+          "grade": 1,
+          "reason": "Draft notes с кратким определением",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C001",
+          "url": "https://altimetrikpoland.medium.com/how-to-use-tokio-with-rust-f42a56cbd720",
+          "grade": 2,
+          "reason": "Практический Tokio guide",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C016",
+          "url": "https://rust-lang.guide/guide/learn-async-rust/index.html",
+          "grade": 1,
+          "reason": "Общий async Rust, Tokio в карточке не указан",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C004",
+          "url": "https://cafbit.com/post/tokio_internals/",
+          "grade": 1,
+          "reason": "Internals runtime, практическое руководство не показано",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C003",
+          "url": "https://blog.logrocket.com/a-practical-guide-to-async-in-rust/",
+          "grade": 1,
+          "reason": "Async guide без явного Tokio",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C015",
+          "url": "https://rust-lang.github.io/async-book/",
+          "grade": 1,
+          "reason": "Общая async book без явного Tokio",
+          "predicted_kind": "direct"
+        }
+      ]
+    },
+    {
+      "id": "en05",
+      "query": "excavator working cycle digging loading travel",
+      "status": "ok",
+      "candidate_count": 43,
+      "model_direct_pool": 8,
+      "manual_direct_top10": 4,
+      "success_serp": true,
+      "elapsed_ms": 20028,
+      "budget": {
+        "classification_calls": 2,
+        "document_reads": 0,
+        "logical_search_calls": 6,
+        "source_context_max": 10178
+      },
+      "classifier_valid": true,
+      "errors": [],
+      "discarded_by_site": 0,
+      "grades": [
+        {
+          "id": "C041",
+          "url": "https://www.youtube.com/watch?v=KTVEQRIGujI",
+          "grade": 1,
+          "reason": "Видео digging/loading без полного цикла",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C025",
+          "url": "https://sanyperkasa.com/cycle-time-excavator-adalah/",
+          "grade": 2,
+          "reason": "Cycle time и этапы рабочего цикла",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C027",
+          "url": "https://www.sdchinamachine.com/blog/working-condition-analysis-of-hydraulic-small-excavator",
+          "grade": 2,
+          "reason": "Digging/lifting/swinging/walking и гидравлические действия",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C040",
+          "url": "https://www.youtube.com/shorts/pdvWMGrAmDs",
+          "grade": 1,
+          "reason": "Карточка спецковша без цикла",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C028",
+          "url": "https://simplewoody.com/en/utility/excavator-heavy-equipment-workload.html",
+          "grade": 2,
+          "reason": "Полная dig-swing-dump-return последовательность",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C039",
+          "url": "https://www.youtube.com/shorts/dEmJggCpfio",
+          "grade": 1,
+          "reason": "Демонстрация loading без разбора цикла",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C042",
+          "url": "https://www.youtube.com/watch?v=Sdjz-IVrWyo",
+          "grade": 1,
+          "reason": "Распаковка/тест машины",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C033",
+          "url": "https://www.volvoce.com/en-ca/discover/guides-and-advice/2018/excavator-operator-tips-for-trenching-and-loading/",
+          "grade": 2,
+          "reason": "Практические советы trenching/loading",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C026",
+          "url": "https://www.scribd.com/doc/36574413/Hydraulic-Excavators-Classnote-2",
+          "grade": 1,
+          "reason": "Только copyright",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C002",
+          "url": "https://academic.naver.com/article.naver?doc_id=991603682",
+          "grade": 1,
+          "reason": "Производительность без видимого рабочего цикла",
+          "predicted_kind": "background"
+        }
+      ]
+    },
+    {
+      "id": "en06",
+      "query": "site:doc.rust-lang.org ownership",
+      "status": "ok",
+      "candidate_count": 16,
+      "model_direct_pool": 5,
+      "manual_direct_top10": 6,
+      "success_serp": true,
+      "elapsed_ms": 5960,
+      "budget": {
+        "classification_calls": 1,
+        "document_reads": 0,
+        "logical_search_calls": 2,
+        "source_context_max": 6792
+      },
+      "classifier_valid": true,
+      "errors": [],
+      "discarded_by_site": 0,
+      "grades": [
+        {
+          "id": "C004",
+          "url": "https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html",
+          "grade": 2,
+          "reason": "Ownership как управление памятью",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C003",
+          "url": "https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html",
+          "grade": 2,
+          "reason": "Глава ownership и borrowing",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C010",
+          "url": "https://doc.rust-lang.org/rust-by-example/scope/borrow.html",
+          "grade": 2,
+          "reason": "Borrowing вместо передачи ownership",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C011",
+          "url": "https://doc.rust-lang.org/rust-by-example/std/rc.html",
+          "grade": 2,
+          "reason": "Множественное владение Rc",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C005",
+          "url": "https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html",
+          "grade": 2,
+          "reason": "Borrowing не владеет данными",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C001",
+          "url": "https://doc.rust-lang.org/1.8.0/book/references-and-borrowing.html",
+          "grade": 1,
+          "reason": "Старая 1.8 и короткий сниппет",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C002",
+          "url": "https://doc.rust-lang.org/alloc/rc/struct.Weak.html",
+          "grade": 2,
+          "reason": "Non-owning Weak и allocation lifetime",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C015",
+          "url": "https://doc.rust-lang.org/std/os/fd/struct.OwnedFd.html",
+          "grade": 1,
+          "reason": "Единичная операция владения fd",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C012",
+          "url": "https://doc.rust-lang.org/src/std/os/fd/owned.rs.html",
+          "grade": 1,
+          "reason": "Исходники fd, концепция не объяснена",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C009",
+          "url": "https://doc.rust-lang.org/rust-by-example/generics/gen_fn.html",
+          "grade": 0,
+          "reason": "Generics, не ownership",
+          "predicted_kind": "background"
+        }
+      ]
+    },
+    {
+      "id": "en07",
+      "query": "Rust Python HTML extraction comparison",
+      "status": "ok",
+      "candidate_count": 20,
+      "model_direct_pool": 4,
+      "manual_direct_top10": 1,
+      "success_serp": false,
+      "elapsed_ms": 9049,
+      "budget": {
+        "classification_calls": 1,
+        "document_reads": 0,
+        "logical_search_calls": 2,
+        "source_context_max": 8160
+      },
+      "classifier_valid": true,
+      "errors": [],
+      "discarded_by_site": 0,
+      "grades": [
+        {
+          "id": "C018",
+          "url": "https://pypi.org/project/xhtml/",
+          "grade": 1,
+          "reason": "Rust-core/Python HTML, сравнения нет",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C007",
+          "url": "https://fastcrw.com/blog/rust-vs-python-scraping",
+          "grade": 2,
+          "reason": "Явное сравнительное scraping исследование",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C010",
+          "url": "https://github.com/kkollsga/distillpdf",
+          "grade": 0,
+          "reason": "PDF extraction в HTML, другой вопрос",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C017",
+          "url": "https://www.npmjs.com/package/html-to-markdown-node",
+          "grade": 1,
+          "reason": "Bindings общего Rust engine, сравнения нет",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C011",
+          "url": "https://github.com/topics/extraction",
+          "grade": 1,
+          "reason": "Общий extraction каталог",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C001",
+          "url": "https://camelot-py.readthedocs.io/en/latest/user/comparison.html",
+          "grade": 0,
+          "reason": "Сравнение PDF table-extraction библиотек",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C014",
+          "url": "https://github.com/topics/web-data-extraction",
+          "grade": 1,
+          "reason": "Каталог web-data-extraction",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C009",
+          "url": "https://github.com/graphicle-ai/graphicle",
+          "grade": 0,
+          "reason": "Code graph/memory для агентов",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C013",
+          "url": "https://github.com/topics/text-extraction",
+          "grade": 1,
+          "reason": "Каталог text-extraction",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C015",
+          "url": "https://leewr9.github.io/post/crawling/Data-Extraction/",
+          "grade": 1,
+          "reason": "Только Python BeautifulSoup",
+          "predicted_kind": "background"
+        }
+      ]
+    },
+    {
+      "id": "en08",
+      "query": "latest stable Rust release October 2026",
+      "status": "ok",
+      "candidate_count": 19,
+      "model_direct_pool": 1,
+      "manual_direct_top10": 0,
+      "success_serp": false,
+      "elapsed_ms": 8726,
+      "budget": {
+        "classification_calls": 1,
+        "document_reads": 0,
+        "logical_search_calls": 2,
+        "source_context_max": 8183
+      },
+      "classifier_valid": true,
+      "errors": [],
+      "discarded_by_site": 0,
+      "grades": [
+        {
+          "id": "C013",
+          "url": "https://releases.rs/",
+          "grade": 1,
+          "reason": "Stable без проверяемой октябрьской даты; relative countdown не принимается",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C015",
+          "url": "https://rustvsgo.com/",
+          "grade": 0,
+          "reason": "Rust/Go comparison",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C007",
+          "url": "https://endoflife.date/rust",
+          "grade": 1,
+          "reason": "Общее описание языка",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C012",
+          "url": "https://releasebot.io/updates/shopify",
+          "grade": 0,
+          "reason": "Shopify release notes",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C009",
+          "url": "https://github.com/warricksothr/RustBuild",
+          "grade": 1,
+          "reason": "Build scripts, не версия октября",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C003",
+          "url": "https://blog.rust-lang.org/2026/05/28/Rust-1.96.0/",
+          "grade": 1,
+          "reason": "Майский релиз не подтверждает latest октября",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C016",
+          "url": "https://snapcraft.io/rustconn",
+          "grade": 0,
+          "reason": "Другой продукт rustconn",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C002",
+          "url": "https://astral.sh/blog",
+          "grade": 0,
+          "reason": "Python tooling Astral",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C005",
+          "url": "https://doc.rust-lang.org/stable/releases.html",
+          "grade": 1,
+          "reason": "Release notes без версии/даты в карточке",
+          "predicted_kind": "background"
+        },
+        {
+          "id": "C008",
+          "url": "https://firefox-source-docs.mozilla.org/writing-rust-code/update-policy.html",
+          "grade": 1,
+          "reason": "Политика обновления Firefox",
+          "predicted_kind": "background"
+        }
+      ]
+    },
+    {
+      "id": "en09",
+      "query": "Unicode grapheme cluster code point difference",
+      "status": "ok",
+      "candidate_count": 20,
+      "model_direct_pool": 11,
+      "manual_direct_top10": 7,
+      "success_serp": true,
+      "elapsed_ms": 8884,
+      "budget": {
+        "classification_calls": 1,
+        "document_reads": 0,
+        "logical_search_calls": 2,
+        "source_context_max": 8714
+      },
+      "classifier_valid": true,
+      "errors": [],
+      "discarded_by_site": 0,
+      "grades": [
+        {
+          "id": "C001",
+          "url": "https://blog.naver.com/kjh0529k2/224015752753",
+          "grade": 2,
+          "reason": "Графема воспринимается как одна, состоит из code points",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C010",
+          "url": "https://www.regular-expressions.info/unicodechars.html",
+          "grade": 2,
+          "reason": "Графема и несколько combining code points",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C008",
+          "url": "https://news.ycombinator.com/item?id=37735801",
+          "grade": 1,
+          "reason": "Дискуссия о неоднозначности character, различие обрезано",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C013",
+          "url": "https://standards.iteh.ai/catalog/standards/iso/9af47b26-08ab-465f-b00b-e6c5614a67fd/iso-iec-19757-7-2020",
+          "grade": 1,
+          "reason": "CREPDL/control, нужное различие не объяснено",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C020",
+          "url": "https://wiki.php.net/rfc/grapheme_strrev",
+          "grade": 2,
+          "reason": "Code-point reversal против multi-code-point grapheme",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C003",
+          "url": "https://emojifyi.com/id/glossary/grapheme-cluster/",
+          "grade": 2,
+          "reason": "Прямое определение grapheme из code points",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C009",
+          "url": "https://r12a.github.io/scripts/apps/graphemes/index.html",
+          "grade": 2,
+          "reason": "Правила кластеров применяются к code point sequence",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C002",
+          "url": "https://docs.google.com/document/d/1wuzzMOvKOJw93SWZAqoim1VUl9mloUxE0W6Ki_G23tw/edit",
+          "grade": 2,
+          "reason": "Сравнение grapheme-cluster/code-point моделей",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C005",
+          "url": "https://github.com/SeleniumHQ/selenium/blob/trunk/cpp/iedriverserver/CHANGELOG",
+          "grade": 1,
+          "reason": "Changelog с фразой без объяснения",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C012",
+          "url": "https://stackoverflow.com/questions/27331819/whats-the-difference-between-a-character-a-code-point-a-glyph-and-a-grapheme",
+          "grade": 2,
+          "reason": "Вопрос прямо сравнивает нужные понятия",
+          "predicted_kind": "direct"
+        }
+      ]
+    },
+    {
+      "id": "en10",
+      "query": "DNS rebinding SSRF IPv6 protection",
+      "status": "ok",
+      "candidate_count": 43,
+      "model_direct_pool": 21,
+      "manual_direct_top10": 4,
+      "success_serp": true,
+      "elapsed_ms": 12895,
+      "budget": {
+        "classification_calls": 2,
+        "document_reads": 0,
+        "logical_search_calls": 6,
+        "source_context_max": 9919
+      },
+      "classifier_valid": true,
+      "errors": [],
+      "discarded_by_site": 0,
+      "grades": [
+        {
+          "id": "C042",
+          "url": "https://www.wiz.io/academy/application-security/server-side-request-forgery",
+          "grade": 2,
+          "reason": "SSRF, DNS rebinding и IPv6 local/ULA",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C011",
+          "url": "https://docs.netgate.com/pfsense/en/latest/services/dns/rebinding.html",
+          "grade": 1,
+          "reason": "Rebinding без полного IPv6/SSRF контекста",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C041",
+          "url": "https://www.vulncheck.com/blog/monsta-ftp-ssrf-ipv6-blocklist-bypass",
+          "grade": 1,
+          "reason": "IPv6 SSRF bypass, rebinding/защита не видны",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C002",
+          "url": "https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html",
+          "grade": 1,
+          "reason": "Общая SSRF prevention, DNS/IPv6 не видны в карточке",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C026",
+          "url": "https://govynai.com/blog/ssrf-injection-defense-ai-proxy/",
+          "grade": 2,
+          "reason": "IPv6 SSRF protection и rebinding defense",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C012",
+          "url": "https://docs.nitrokey.com/nextbox/remote/dns-rebind",
+          "grade": 1,
+          "reason": "IPv4/v6 DNS rebinding без явного SSRF",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C038",
+          "url": "https://skillaudit.dev/blog/mcp-server-ssrf-advanced-patterns/",
+          "grade": 2,
+          "reason": "DNS rebinding/IPv6/TOCTOU обходы SSRF",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C010",
+          "url": "https://docs.n8n.io/deploy/host-n8n/configure-n8n/security/enable-ssrf-protection",
+          "grade": 2,
+          "reason": "DNS/redirect validation, IPv6 ranges",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C015",
+          "url": "https://en.wikipedia.org/wiki/Server-side_request_forgery",
+          "grade": 1,
+          "reason": "Общий SSRF",
+          "predicted_kind": "direct"
+        },
+        {
+          "id": "C025",
+          "url": "https://github.com/tommypj/ssrf-safe-fetch",
+          "grade": 1,
+          "reason": "IP pinning/rebinding, IPv6 не виден",
+          "predicted_kind": "direct"
+        }
+      ]
+    }
+  ],
+  "raw_directory": "runs/full-policy-2026-10-29/live-native-a",
+  "raw_source_hashes": {
+    "S001.html": "0eb17c70d48e9e22a306925c28492b627dbbea1d28cc3dae0ba17d2cdc3dbc28",
+    "S001.json": "c3ae5d911a2505ce8794a9d9ab9a1a1938e9f92bfef43dd3dafce3b22c87c4e2",
+    "S002.html": "0f1f6945518454c8316f5bec0b5783c8f7ca644d53b714a46793cc8d4538ac62",
+    "S002.json": "96b552e55fad6f9cba80670f4582e3c1528b7e0721e88910933e16ccab7d7844",
+    "S003.html": "9d93e7d4a5e9dae61e2a237f61cc56fb10469510eab91be9513475e503771702",
+    "S003.json": "ffd18575a9ccecdcb34196263d34f9a1da4def2fea0009373684f291c2b38248",
+    "S004.html": "fd5f1d22b72765070417c150422f573241289d2ae59f3491b157a709dbdea691",
+    "S004.json": "70ad9144adf04cc6ed5e22e6c8d54ab899d2841dfa3feafdfc3a809e3d9d894b",
+    "S005.html": "1991a40805055cd3465206e04aa16093eab71044e1cc50ecce327adfa49450f3",
+    "S005.json": "e9cf62457fadcdabd1721bbc7bf930816a1b2f0507cb6e02910cd944725bc9d1",
+    "S006.html": "1685fe38440f0d26e28cd2a423e7f96cddb85727ac036b252740bac602e097bf",
+    "S006.json": "0319bfbb3511410079365b04bdd8706e85bcc7b52e49c040784da2bce666272c",
+    "S007.html": "599be484bb3f8ef8e09f89ea09e9ee96aa197539b852e5de169b889aa9079abb",
+    "S007.json": "46e60221a169bc970f0086eb5b9cba002f77c710cad9cbc3b7a21a9a3561ce92",
+    "S008.html": "fd4596795ec99a350a60eb9d6f53d117837f2d91317d5b8a45754cdbbf0fc092",
+    "S008.json": "ac8aff68d8ed5bed9e99948e5d6f8b7ad25960fef2068e6a7edbd836fe9a1312",
+    "S009.html": "cb68e5287f96425882d0f1a1f38afaa75ae80146fe59661a9b0243bf0550a585",
+    "S009.json": "005373d9f2683e923e258328d08e5142b5b2b89b1e17f86b00b27bc684692fcc",
+    "S010.html": "8f7a4d3102a6f92ecc6e8aa1b36e2d30129bf682c40a2d4e61522e63c6fec9ac",
+    "S010.json": "9beb63ebaf4fc0ed2c7b6328fa258f5244eca80e4e8ac9158e99ac0237a9342d",
+    "S011.html": "e195b3ece44ba5ed7029d51712932b3574f2f23c9afe1cbdab089ea248b93744",
+    "S011.json": "f54dd2bebf1d54bd52dab8fc2c0f20fe3b358d457bb692527989772dfc7dafd5",
+    "S012.html": "7725bfc6fe101320dde7971e0395fbea00f464ee01a8e44f248f76694a91fcac",
+    "S012.json": "98199a0ae50e12eb875abef21fec8ec617ffc23b05f8d5945bf18fd8feab6159",
+    "S013.html": "c999fa1543e06ea513a9c3db4c81e60678dc8818f8323eeea20ec512a5629372",
+    "S013.json": "abb9a8782e64e9538754ffa7c2ece53f4987ee8dc167d00f88c6e97ef2cf970a",
+    "S014.html": "bc8cb3349187b9306c5256234e5ad2acb0a53b8900c10fe2179c76667f53429d",
+    "S014.json": "bf0ad76ff761ae426fe556b2fac40834bad4aaf46b685273aaabe064841eef6d",
+    "S015.html": "2fd8b25ee860b663279a80768b4f9a828b8c94336bdd364b337551783d5efa21",
+    "S015.json": "ebd1ad87e1f298615c784c1edce69da7d99c20d4dc8113f63ab06d5f8b45825f",
+    "S016.html": "d5318cd4f13b088c7bf28cbdfac41f474a0fe31a1c6773e2aaf6facfb8585512",
+    "S016.json": "d46d4c6284042e3cecef73015ca931643b8f72b76b8419132d07a325e754c8a7",
+    "S017.html": "4d6503b7d29e985e0937d5b130fdf2c68f58d34552e78d4aae77322499d95e94",
+    "S017.json": "db036703a310c1e557f059badca5f20e5a64bdf9ef56bdcae79df022ab036a9d",
+    "S018.html": "af110c6af1515e931bb8c3c955410e38af1ddb42a2ebc216aa49bc8e8b8280c3",
+    "S018.json": "a4680a62a7ee0da4faffcc41d29c00ee526f8dfc4e61b5e3f0f6485523d83f38",
+    "S019.html": "87def914a60a177bc2028ff182b175c54c8d2c8a0ecf06b99dbfd5b9ab064fea",
+    "S019.json": "1404b13ff1ea60be8b26d6a0d2c51346ef80a23d691c14d9a2d07afda4abfa38",
+    "S020.html": "7163b6496e92f881157ba36ac321a238b5c3513c53bc45630f5abcd497041a8e",
+    "S020.json": "2ab101913bed9dea04b281e108143478298c61caf3167722f0d7652aeda60134",
+    "S021.html": "c1ee7c5c07da360845a40bcd45a4e7a27d1fb08e4972ddffb817c826a5dd40d7",
+    "S021.json": "69bcc2e11220250ce6030b14d7324f2ee4297a4ac7a7f08162f4299073b23d10",
+    "S022.html": "4406a275f563c5ec85d494f9ba6c91456accd911f145118a69c76e40924495c4",
+    "S022.json": "0d947c2ab130322a3c96c01161f4e88eeb06dd2793470bdabe3db6ae45da5323",
+    "S023.html": "13de2df582fbb50065f8fd519e6cb9901f70ba559a866aee27e494295ff01ece",
+    "S023.json": "7b782376fadf87ddde9ff589337d4a604c947f3710007bfa80fa164f75870e91",
+    "S024.html": "aef09aefa6358e201829c99871ce5e6a1f722bf3399f5a5f5b40b940b5c07ff6",
+    "S024.json": "e609a9293b9e3b57d710a13f4b7d6f1c521aef39671f3c1e18eee694403aa845",
+    "S025.html": "76d81f761a31f6c2f432529868cb195cfa739a314dc45e6252bbf86fedd4c4f4",
+    "S025.json": "57b24cd8b3de9d18652f03803fc2618a3035fbfb170701f213a30cb0d34a471d",
+    "S026.html": "a633aa6a589e6a59af4903e1b1142e4254e407b54a934bf1cfd3b6d9f8d89ab8",
+    "S026.json": "f7a6b2b6889585e735f9d60f6e4d3c7442bd02634ff795a4ecfae6701793b858",
+    "S027.html": "d9f7a7f47bb26e9f6f03738df5aa3c0465ceac041531d8370a0b37bcdd9cda22",
+    "S027.json": "240ff5e6ba40238f1f336cc3f6296c0a1c890023ea6e40b4d2186e21335ee8c7",
+    "S028.html": "f217966f2265be5ed6ebeae65e6d6e3badb5cd84509eb6058511cb31328d1973",
+    "S028.json": "f0613a50b1b2bee3f5299da21ea84fc43bf3cd2a1fb7641fcd9f71de935f916a",
+    "S029.html": "8bbe1487a923467cccf34308583a6c1f744720bfd9b10b10a65c0b61755d7117",
+    "S029.json": "edce6aebf4ba4d25fb2ff27eb3482c63b255535224074ff0e4de9cc609aa1e49",
+    "S030.html": "26eb136b114e7c9f62cfe9fa516e69637aae465380ea5083beb1d04c5524826f",
+    "S030.json": "2b5a163053f8afcf1671db85535c1cec0979d95f5b60c7c86a569914b67d0ce0",
+    "S031.html": "a8ce8afe57ff177e926d074cfcaee1d4c10bc2cc441277bd308f4fc2971caa23",
+    "S031.json": "30002e4ffa61b889159f540da18127b60d6b5854a256837c1820bec49706309f",
+    "S032.html": "645ba11a0d72122c7c5e3916b4bb074ccff074bea1ff6520b9e4bae35fabedca",
+    "S032.json": "a9f53669c968df46426dba7e6c3f04997a0e3f3a361459ddc59d29a2f35f9bef",
+    "S033.html": "5e1e0b73a088f16e4084eae114d768534fb2463289098aea2f7a83eebe8f6ec5",
+    "S033.json": "ae04a6b00e081d5e0e998274c99509569b454c6b9734a11f812832ff76ebb32b",
+    "S034.html": "7d0266b280c98ab78237ba68f650f146bd33ddaed84b5c00032f392af6fe2674",
+    "S034.json": "de30209688c3d28e46865d45eac51361cee19ced552446a93a6c49346dfcfe1a",
+    "S035.html": "6afe34eff8c01dfaa7a91f8ce9daa072884d66b2566e13879df975df5cb719f1",
+    "S035.json": "8e0e28863216dee644509e516c6b1de3731cb011dd597eff13696a7b72d267c6",
+    "S036.html": "b3ddf07252de5e217c4ef9b2eea6e2df1cbfa00b8ae51eba1e7e51e5c5728f05",
+    "S036.json": "7d2c2ed4e201c43d5152effb213ec20f3749638d3a729404ec8e15a9079fbb62",
+    "S037.html": "1b15269f26f6ef0cd19d5d0081cf19c9aba42c36bb43145956279b523e62f0e6",
+    "S037.json": "061b2c446bb72408c898074cbfadd591779ef74a1b21b2191f5049ff1aa15ab1",
+    "S038.html": "9cfae7b87c7cbdde6fe02eff7f91d831c3fef27eb08be91c3822b6b218f0657c",
+    "S038.json": "fb8293c326ff3b58815133086c6145cb1c7db67a4a8c3d5b35679eb36d6a649e",
+    "S039.html": "adc3a1a4347b11e367ba328513968cc9a21b1581c991a8da3b42fe4506579507",
+    "S039.json": "c82a2dea94a35350895f4cb6361ab6a3d65f13737076883aef71567e70386e3e",
+    "S040.html": "661150e9b1a8c47a946ea8b891cd03f198cf761a7dd307f56843a408df8a2617",
+    "S040.json": "28eca6305bc5c5f0765974d79f9a46d31bdc6be66c13c31f46c9e986ec8d86fc",
+    "S041.html": "daaff9f760b234f2c0a6b078fd649698b2ed38b11e8c89ef44b00e3096b108aa",
+    "S041.json": "eb0fa334630a7e064562ae1ad74730fecd4c5399b16e7e62ee31422dfecf5d92",
+    "S042.html": "b3df689ed70204d2098ed5bb3ee80c1d1a9c77e1f90b89f9eada30cb83293150",
+    "S042.json": "fa99cf7f7c6e8ad3f70b84a648bceb07315ebc830b09261c4ba410086eb34498",
+    "S043.html": "3b090957f673bbf3bfe1e2b5509e6950cbe5cb5dfb43edde9a92bb671180b86e",
+    "S043.json": "7bb87cdaedc0e9c1bb22fd413e723b3c9b225741c2b9d8f1cd8fa5b99a2c5b1d",
+    "S044.html": "57b2bd6dd57a0668f1ffd8ce5604b33142be8f4707eaab2e910e705300312c2f",
+    "S044.json": "d9c630a17c3cf3fec73e5a1b3039804bfa7bb9bc4f151d4d6748021279ab2a53",
+    "S045.html": "cedd9652d2f8800cfc92d01c2dfd16434c758fd1134e3b784cf99760b904437d",
+    "S045.json": "6e43f32f256eb436626052acd8a042425427202c157795c104c0a3df03aa02ec",
+    "S046.html": "a87721fd85b9eff7731ee470295ccf4d09e8bb33ff6064f70af4b2023c4462a5",
+    "S046.json": "059a04dd2e55280f4c59ac6c78e0eddedea696fa92cde107d2b06b96e1c79e6b",
+    "S047.html": "e0d5be07f918d1e9bddd1257b49c3777edfa12bedaca6cc2a5b92b035c52b209",
+    "S047.json": "3ffa583c720bb6379b5c4d5c6e2cedeeb52dfea5d8f3d371010506acd97ba93d",
+    "S048.html": "29ef42238578a20c6a7e3db54ff57c72c49f15a0a9610019c70ccf99f4e570bc",
+    "S048.json": "8e71ed5706136f03abda9f4832d59ca283c66fd68708860ac9ef85c3a59ea7ce",
+    "S049.html": "7047cd64ea0c0e991244f8db4e9f8355ef2ab5f6789799bd1864974fb7d2bb9f",
+    "S049.json": "e5dd383b95201c0402134b2586f78fade94d2b252ef6fcff5b4edd3d1d5c1083",
+    "S050.html": "80886f16b5e98cf202ccec7db47b600f85d37a7c90b6ad3a797831c14b13f7bf",
+    "S050.json": "f82505b5a0b4437aae5570b7161fb4a9113042783c33910087121920725f7ff1",
+    "S051.html": "e6660087a3c270c5df8912d5259d89d9640b750a48bd2951cc55d7e328a1dd5c",
+    "S051.json": "b2fe36e2801d3eb9948a198f4efdf64d95e6d1aa9e0082999c30263622ff9311",
+    "S052.html": "7e5539dff6bc32ba53bfcd34cee8ebf8602f4ce01992ea2689be6a6834371ada",
+    "S052.json": "557ec97368da2dc10fe6c6f431cdeded0b7d8489db41fe3ad724056733b70761",
+    "S053.html": "c367916bd8ad0ad2c54d30aa7056702da5b52b566bb2ff6e49c4b307b8079085",
+    "S053.json": "a3d7f16aa8778a325f9b84de7f44ed20498541e139be2bd7bcfc529942ade56d",
+    "S054.html": "607601266544df6cbcaf1d7f268cb2850260bef1302581fdc5ca1eaf6e935b0f",
+    "S054.json": "58acc1566882ed21aaa3830a64363a48ae800daf2244e95e78765bab68930274",
+    "S055.html": "1c67be840a27814538174152442e813d439aa14a663c6eba5b05a339cacaf870",
+    "S055.json": "f0edab4b8dd0d61f085ae7ce9a85e4fdaa4407b64ce14bf11a2c6d9b62ac308b",
+    "S056.html": "f7eace3b74602c380e209b373d20240a34c2faef76c7ca575f3c7c2147b0bda6",
+    "S056.json": "fc7aba03907902c0ddaf6f67513b81fbf9d3303105f5baea3d0cd2bf7c69264c",
+    "S057.html": "92358497c8e353ee749d8ea495e25b78427e72abfa75b5dc5544d8f38c6da2d5",
+    "S057.json": "de800302d07128641728c79d535da532a08d43f5012dd00244cb3bb0c456051d",
+    "S058.html": "3c2772897417e21c9ccfa1374b8fb0c18eb037175f12508812f75bb82f9a7b08",
+    "S058.json": "8011f9fa2828859de7d564001fab3b5fb03448d2666f65087ec6fbdff2f668e1",
+    "S059.html": "96c75b04827d332a1ae3e3312b8562563af49c314a605200445d611bfe637001",
+    "S059.json": "9440528d30f9430664249fb6353d3109f6afe4b6173167cac5e729da57819f63",
+    "S060.html": "79a0df9da4d26e56ab235c6e34bfe640407ae57e09c6f6656a0861876e3755bc",
+    "S060.json": "0d7366cd2372a14dc7d3a269e780a92496a71f1a1a8fc0a217e98199c71c8a55",
+    "S061.html": "1b0cd99dd754f00393092415f9e514bb54d52d22838defd5c0af74f8f577970b",
+    "S061.json": "ed28ae174fc213ee9559c032bbff7a11610d37449de9af7ad48ebc1a5fbdf57a",
+    "S062.html": "24121fc644551012d6788462b1306e934e01317b5e59d8503de75a3898c836c2",
+    "S062.json": "7d08af0991af4aeba56c5d5ec9b75d7692a68417aabcec9b1366b06ab2184d9c"
+  },
+  "results_file_sha256": "fe2af0e4fa9fac44dd0614dd1cea11c37debfb6ac3618fc6235f610970e33dea",
+  "parity_file_sha256": "d5ab67d3f67a3338a8133ba1f4eec66582c75c86e78d9fb97e82674236bf35d4",
+  "limitations": [
+    "Same-day calibrated fixture; no day2 or holdout",
+    "SERP manual grading by implementation author; no independent acceptance",
+    "No full factual answer/citation support gate",
+    "Source HTTP 200 does not prove selected target availability or extraction completeness",
+    "Detailed captures only in local runs; compact report cannot reconstruct removed HTML"
+  ],
+  "verification": {
+    "ordinary_tests": {
+      "passed": 22,
+      "failed": 0,
+      "ignored": 14,
+      "network": false
+    },
+    "offline_parity": {
+      "passed": true,
+      "cases": 20,
+      "candidate_pool": true,
+      "rrf_ranks": true,
+      "exact_model_contexts_and_prompt": true
+    },
+    "fmt": "passed",
+    "clippy": "passed",
+    "release_build": "passed",
+    "release_stdio_tests": {
+      "passed": 3,
+      "tools": 4
+    },
+    "project_context": {
+      "lint": "OK",
+      "index_fresh": true,
+      "stdio_smoke": "passed",
+      "router_tools": 34
+    },
+    "independent_acceptance": false,
+    "git_diff_review": "unavailable: not a Git repository; Router heuristic returned empty files and is not semantic review",
+    "final_binary_sha256": "e092f57d579f0da66f805277a283d2b5669b03908ffcb0d9eb00726e42aeeaef",
+    "final_runtime_source_sha256": {
+      "src/policy.rs": "a342a7ac718b84f6ba196599d2cda71fd2a4daa498ae2cfdcc18b1dbb48567f5",
+      "src/net.rs": "0d50f463d9f5c017c87e8420352fc4034ca1be13bb3d13218df8958665ad7139",
+      "src/discover.rs": "3dd98313a4bf003d217a21a6640d99797615e397d926b159155fcf3a3f5d2b68",
+      "src/main.rs": "aa238eb44a84a0a3f4d4c9bbfe3e266634206ba156609f70ac5c3250e172923c",
+      "src/search.rs": "4c63edc469473cec1a8a5196232d9cfb6a4d531e9aa77ada729c810c1460efb0",
+      "src/browser.rs": "4bf08cddf944b6a1f7640b7350d69e88a5d9f93772099ea64f759dceb4ec807b",
+      "src/model.rs": "502536c1dd94e8af28e981639f4b9ccf0e0b015bb9fb8c44bd80b476563e92b9",
+      "src/evidence_probe.rs": "4be45e9118fc627b53c9a2d819b3a5258cdf97e483eb777789e803ff2d6a7c4c",
+      "src/mcp.rs": "2b08aea2cde4e3059541f562658e575b1dabe89aea6159d0ce294afaae4283c1",
+      "tests/mcp_stdio.rs": "ce7046c9f085e0a85f696912525a4713bb7a5aabd73a1668ae9bc0781a965848",
+      "feasibility/b17-policy.json": "1e83c13aa670b1a656262542eb5c34b21f559aca8fd0da179ab704097dcc995e"
+    },
+    "live_build_difference": "Main suite used the preceding release recorded in manifest. Subsequent runtime edits support explicitly configured IPv6 loopback and clarify model preflight in tool description; retrieval forms/algorithms and results unchanged. Additional tests/comments/docs added."
+  },
+  "configured_mcp_smoke": {
+    "query": "SQLite WAL checkpoint reader writer concurrency",
+    "case_id": "custom",
+    "status": "ok",
+    "forms": [
+      "SQLite WAL checkpoint reader writer concurrency"
+    ],
+    "budget": {
+      "classification_calls": 1,
+      "document_reads": 0,
+      "logical_search_calls": 2,
+      "source_context_max": 8431
+    },
+    "returned_results": 3,
+    "classifier_valid": true,
+    "elapsed_ms": 11966,
+    "errors": [],
+    "output_sha256": "711cb51dcc979a4212969091338948b36887a68f2b4b624b374d1d72f9f7c829",
+    "input_not_part_of_original20": true,
+    "raw_serp_not_captured_in_mcp": true
+  },
+  "additional_attempt_accounting": {
+    "main_source_attempts": 62,
+    "target_extract_attempts": 6,
+    "configured_mcp_source_attempts": 2,
+    "external_load_attempts_total": 70,
+    "local_generation_calls_total": 34,
+    "note": "Main suite timing/classification figures exclude separate target reads and configured MCP smoke. A local metadata readiness probe preceded the suite; suite and MCP each also checked model metadata. No retries."
+  }
+}

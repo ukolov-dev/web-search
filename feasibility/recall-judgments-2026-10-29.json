@@ -1,0 +1,1056 @@
+{
+  "rubric": "doc/search-quality-rubric-v1.md, 0/1/2; case-specific API/version/platform constraints retained; direct help is not final-answer completeness or factual truth",
+  "assessment": "implementation author, retrospective and not blind; pooled SERP evidence plus all successfully read rescue documents. Unread full pages remain unverified. This is observed-pool relevance recall, not exhaustive page/web recall.",
+  "cases": [
+    {
+      "id": "f01",
+      "query": "HTTP 301 302 307 308 redirects request method preservation difference",
+      "note": "All four status codes and method-preservation relationship required. Read C006 table, C018 takeaways and C016 concrete pair summaries directly support this; isolated 301/308 or 302/307 only is background.",
+      "judgments": [
+        {
+          "id": "C001",
+          "url": "https://aioseo.com/seo-glossary/308-permanent-redirect/",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C002",
+          "url": "https://alleo.wiki/en/301-redirect",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C003",
+          "url": "https://aztools.app/en/t/http-status-codes/",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C004",
+          "url": "https://backlinks-monitor.com/http-status-codes/",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C005",
+          "url": "https://blog.postman.com/what-are-http-status-codes/",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C006",
+          "url": "https://cutt.ly/resources/encyclopedia/redirect-301-302-307-308/",
+          "grade": 2,
+          "basis": "fetched_text",
+          "borderline": false
+        },
+        {
+          "id": "C007",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/308",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C008",
+          "url": "https://www.dotcom-monitor.com/blog/the-10-most-common-http-status-codes/",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C009",
+          "url": "https://www.ega-archive.org/datasets/",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C010",
+          "url": "https://en.wikipedia.org/wiki/URL_redirection",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C011",
+          "url": "https://www.infidigit.com/blog/308-permanent-redirect/",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C012",
+          "url": "https://www.lawrencehitches.com/url-redirection/",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C013",
+          "url": "https://www.nexevo.in/blog/http-redirection-status-codes-301-302-307-308-explained",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C014",
+          "url": "https://www.parkwayindependent.com/newspage.htm",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C015",
+          "url": "https://www.perfmasters.com/glossary/307-redirect",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C016",
+          "url": "https://protocolcodes.com/compare/",
+          "grade": 2,
+          "basis": "fetched_text",
+          "borderline": false
+        },
+        {
+          "id": "C017",
+          "url": "https://red2digital.com/insight/post/301-vs-302-redirects-guide",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C018",
+          "url": "https://redirect.pizza/resources/redirects/http-redirect-status-codes",
+          "grade": 2,
+          "basis": "fetched_text",
+          "borderline": false
+        },
+        {
+          "id": "C019",
+          "url": "https://seomator.com/url-redirect-checker",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C020",
+          "url": "https://websitechecker.tech/blog/http-308-status-code/",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        }
+      ]
+    },
+    {
+      "id": "f02",
+      "query": "PostgreSQL CTE MATERIALIZED NOT MATERIALIZED optimization fence documentation",
+      "note": "C002 SERP explicitly contrasts pre-12 materialization and 12+ MATERIALIZED versus NOT MATERIALIZED inlining. C010 describes the pre-12 fence; C014 describes 17 changes without NOT MATERIALIZED contrast.",
+      "judgments": [
+        {
+          "id": "C001",
+          "url": "https://www.axentra-global.com/postgresql-for-advanced-data-modeling",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C002",
+          "url": "https://blog.naver.com/smileman___/224055572107",
+          "grade": 2,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C003",
+          "url": "https://boringsql.com/posts/good-cte-bad-cte/",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C004",
+          "url": "https://www.datavail.com/solutions/database-administration/tuning/",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C005",
+          "url": "https://dba.stackexchange.com/questions/86724/how-to-create-a-temporary-table-using-values-in-postgresql",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C006",
+          "url": "https://www.depesz.com/2019/02/19/waiting-for-postgresql-12-allow-user-control-of-cte-materialization-and-change-the-default-behavior/",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C007",
+          "url": "https://www.epsio.io/blog/postgres-materialized-views-basics-tutorial-and-optimization-tips",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C008",
+          "url": "https://github.com/dimagi/django-cte/issues/31",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C009",
+          "url": "https://github.com/postgres",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C010",
+          "url": "https://hakibenita.com/be-careful-with-cte-in-postgre-sql",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C011",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C012",
+          "url": "https://www.megabooks.cz/p/7439860/postgresql-development-essentials",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C013",
+          "url": "https://pganalyze.com/blog/5mins-postgres-17-materialized-cte-scans",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C014",
+          "url": "https://www.pgedge.com/blog/postgresql-17-a-major-step-forward-in-performance-logical-replication-and-more",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C015",
+          "url": "https://www.postgresql.org/docs/current/sql-select.html",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C016",
+          "url": "https://www.sqlite.org/lang_with.html",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C017",
+          "url": "https://thoughtbot.com/blog/advanced-postgres-performance-tips?utm_id=BD%20blog%202022",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C018",
+          "url": "https://www.tigerdata.com/learn/postgresql-materialized-views-and-where-to-find-them",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        }
+      ]
+    },
+    {
+      "id": "f03",
+      "query": "Python asyncio.TaskGroup ExceptionGroup cancellation documentation",
+      "note": "C015 explicitly identifies asyncio.TaskGroup, automatic cancellation and ExceptionGroup. C016 body is a Python 3.11 alpha preview explicitly warning behavior is still being discussed; others lack the requested error/cancellation relationship in available evidence.",
+      "judgments": [
+        {
+          "id": "C001",
+          "url": "https://anyio.readthedocs.io/en/stable/tasks.html",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C002",
+          "url": "https://anyio.readthedocs.io/en/stable/versionhistory.html",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C003",
+          "url": "https://av.tib.eu/media/68642",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C004",
+          "url": "https://www.backend.ai/blog/engineering/2022-03-PersistentTaskGroup",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C005",
+          "url": "https://blog.naver.com/wlsgk6855/224290896141",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C006",
+          "url": "https://bugs.python.org/issue46752",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C007",
+          "url": "https://docs.python.org/3/library/asyncio-task.html",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C008",
+          "url": "https://github.com/psycopg/psycopg/issues/543",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C009",
+          "url": "https://github.com/python/cpython/issues/116720",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C010",
+          "url": "https://github.com/python/cpython/issues/90908",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C011",
+          "url": "https://korteshub.com/study/async-python-asyncio-await-and-why-your-scraper-is-still-slow",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C012",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C013",
+          "url": "https://peps.python.org/pep-0789/",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C014",
+          "url": "https://posthog.com/docs/libraries/python",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C015",
+          "url": "https://pythonhowtoprogram.com/python-asyncio-taskgroup-tutorial/",
+          "grade": 2,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C016",
+          "url": "https://realpython.com/python311-exception-groups/",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C017",
+          "url": "https://www.ryuslog.com/blog/python-taskgroup-structured-concurrency",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C018",
+          "url": "https://sooyoung.pages.dev/Resources/python/version-%EB%B3%80%EA%B2%BD-%EC%82%AC%ED%95%AD/Python-3.11",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C019",
+          "url": "https://velog.io/@l_cloud/Ptyhon-3.11-New-Feature-ExceptionGroup-TaskGroup",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        }
+      ]
+    },
+    {
+      "id": "f04",
+      "query": "CSS box-sizing border-box content-box padding border difference",
+      "note": "C005 SERP states content-only versus inclusion of padding/border. C001/C009 identify the exact comparison and affected dimensions. Read C011/C014 explain both sizing modes. C004 broad chapter fragment does not demonstrate the comparison.",
+      "judgments": [
+        {
+          "id": "C001",
+          "url": "https://binvisions.com/articles/box-sizing-property-difference-content-border/",
+          "grade": 2,
+          "basis": "SERP",
+          "borderline": true
+        },
+        {
+          "id": "C002",
+          "url": "https://blog.naver.com/dangnee_/224368077338",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C003",
+          "url": "https://blog.naver.com/haiya003/224355460660",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C004",
+          "url": "https://blog.naver.com/jjm1411/224367262403",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C005",
+          "url": "https://blog.naver.com/lk7938/223889154108",
+          "grade": 2,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C006",
+          "url": "https://blog.naver.com/welcode/223958378550",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C007",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Box_sizing",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C008",
+          "url": "https://www.freecodecamp.org/news/css-box-model-explained-with-examples/",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C009",
+          "url": "https://www.geeksforgeeks.org/css/how-is-border-box-different-from-content-box/",
+          "grade": 2,
+          "basis": "SERP",
+          "borderline": true
+        },
+        {
+          "id": "C010",
+          "url": "https://github.com/w3c/csswg-drafts/blob/main/css-inline-3/Overview.bs",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C011",
+          "url": "https://www.jakpsatweb.cz/css/box-sizing.html",
+          "grade": 2,
+          "basis": "fetched_text",
+          "borderline": false
+        },
+        {
+          "id": "C012",
+          "url": "https://www.linkedin.com/learning/css-for-developers-24925920/it-starts-with-the-css-box-model",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C013",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C014",
+          "url": "https://quirksmode.org/css/user-interface/boxsizing.html",
+          "grade": 2,
+          "basis": "fetched_text",
+          "borderline": false
+        },
+        {
+          "id": "C015",
+          "url": "https://www.testmuai.com/blog/css-box-model/",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C016",
+          "url": "https://thesassway.com/css-box-model/",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C017",
+          "url": "https://tw-elements.com/docs/standard/extended/box-sizing/",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C018",
+          "url": "https://velog.io/@potter/CSS-box-sizing-border-box",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C019",
+          "url": "https://www.vzhurudolu.cz/prirucka/css3-box-sizing",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C020",
+          "url": "https://www.w3.org/TR/2014/WD-css-flexbox-1-20140325/",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        }
+      ]
+    },
+    {
+      "id": "f05",
+      "query": "site:docs.python.org tempfile NamedTemporaryFile delete_on_close Windows documentation",
+      "note": "Only read C007 documents NamedTemporaryFile, delete_on_close and Windows reopen/PermissionError behavior. C008 mentions a new parameter without the Windows relationship; unrelated changelogs cannot supply it.",
+      "judgments": [
+        {
+          "id": "C001",
+          "url": "https://docs.python.org/3.11/whatsnew/changelog.html",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C002",
+          "url": "https://docs.python.org/3.12/whatsnew/changelog.html",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C003",
+          "url": "https://docs.python.org/3.16/whatsnew/3.16.html",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C004",
+          "url": "https://docs.python.org/3/howto/urllib2.html",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C005",
+          "url": "https://docs.python.org/3/library/email.examples.html",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C006",
+          "url": "https://docs.python.org/3/library/os.html",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C007",
+          "url": "https://docs.python.org/3/library/tempfile.html",
+          "grade": 2,
+          "basis": "fetched_text",
+          "borderline": false
+        },
+        {
+          "id": "C008",
+          "url": "https://docs.python.org/3/whatsnew/3.12.html",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C009",
+          "url": "https://docs.python.org/de/3/whatsnew/3.14.html",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C010",
+          "url": "https://docs.python.org/zh-cn/3/whatsnew/3.14.html",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C011",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        }
+      ]
+    },
+    {
+      "id": "f06",
+      "query": "Rust std::sync::Mutex poison PoisonError recovery documentation",
+      "note": "C006/C011 SERP explicitly show poisoned std mutex recovery through PoisonError::into_inner. Read C007 includes recovery example. Definitions of poisoning, non-poisoning substitutes or general syntax alone are background.",
+      "judgments": [
+        {
+          "id": "C001",
+          "url": "https://blog.naver.com/sssang97/224052716178",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C002",
+          "url": "https://blog.rust-lang.org/2020/12/11/lock-poisoning-survey/",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C003",
+          "url": "https://daleseo.com/rust-mutex/",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C004",
+          "url": "https://doc.rust-lang.org/stable/std/sync/atomic/",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C005",
+          "url": "https://doc.rust-lang.org/std/sync/",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C006",
+          "url": "https://doc.rust-lang.org/std/sync/struct.LazyLock.html",
+          "grade": 2,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C007",
+          "url": "https://doc.rust-lang.org/std/sync/struct.PoisonError.html",
+          "grade": 2,
+          "basis": "fetched_text",
+          "borderline": false
+        },
+        {
+          "id": "C008",
+          "url": "https://doc.rust-lang.org/std/sync/struct.RwLock.html",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C009",
+          "url": "https://docs.rs/critical-section/latest/critical_section/struct.Mutex.html",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C010",
+          "url": "https://en.wikipedia.org/wiki/Rust_syntax",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C011",
+          "url": "https://github.com/Sohex/musefs/issues/194",
+          "grade": 2,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C012",
+          "url": "https://github.com/dtolnay/rust-faq",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C013",
+          "url": "https://goodspace.ai/interview-questions/rust",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C014",
+          "url": "https://groups.google.com/a/chromium.org/g/chromium-reviews/c/UggygLpvB4w",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C015",
+          "url": "https://keens.github.io/blog/2020/12/25/rustnomutexnopoisoning/",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C016",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C017",
+          "url": "https://pub.dev/packages/nts/versions/6.0.0/changelog",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C018",
+          "url": "https://tikv.github.io/doc/antidote/index.html",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C019",
+          "url": "https://velog.io/@migorithm/Fluent-Rust-Mutex-Poisoning",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        }
+      ]
+    },
+    {
+      "id": "f07",
+      "query": "Go 1.23 release August 2024 range over functions iteration",
+      "note": "Read C005 is dated 20 August 2024 and explicitly explains the Go 1.23 range-function feature. Read C009 has the feature but no requested period evidence; different Go versions/products are not direct.",
+      "judgments": [
+        {
+          "id": "C001",
+          "url": "https://blog.gitea.com/release-of-1.23.0/",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C002",
+          "url": "https://docs.blender.org/manual/en/latest/getting_started/about/history.html",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C003",
+          "url": "https://www.finesoftware.eu/geotechnical-software/versions/",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C004",
+          "url": "https://gitlab.com/groups/gitlab-org/-/work_items/15848",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C005",
+          "url": "https://go.dev/blog/range-functions",
+          "grade": 2,
+          "basis": "fetched_text",
+          "borderline": false
+        },
+        {
+          "id": "C006",
+          "url": "https://go.dev/doc/devel/release",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C007",
+          "url": "https://go.dev/doc/go1",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C008",
+          "url": "https://go.dev/doc/go1.22",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C009",
+          "url": "https://go.dev/doc/go1.23",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C010",
+          "url": "https://go.dev/doc/go1.24",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C011",
+          "url": "https://golangdocs.com/new-features-in-go-1-22",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C012",
+          "url": "https://groups.google.com/g/golang-announce/c/8gcPInd8SQE",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C013",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C014",
+          "url": "https://news.ycombinator.com/item?id=41223902",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C015",
+          "url": "https://pkg.go.dev/go/types",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C016",
+          "url": "https://www.trend-worldwide.com/news/recent-news/news_2019",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        }
+      ]
+    },
+    {
+      "id": "f08",
+      "query": "git reset --soft --mixed --hard HEAD index working tree differences",
+      "note": "Read C001/C012 map all three modes to HEAD/index/working tree. C004/C016/C017 SERP identifies the exact three-mode comparison and affected Git state; these are weaker SERP-only positives. C009 only lists modes and tells reader to research them.",
+      "judgments": [
+        {
+          "id": "C001",
+          "url": "https://42jerrykim.github.io/post/git/git-reset-command-soft-mixed-hard/",
+          "grade": 2,
+          "basis": "fetched_text",
+          "borderline": false
+        },
+        {
+          "id": "C002",
+          "url": "https://www.analyticsvidhya.com/blog/2024/06/git-reset-vs-revert/",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C003",
+          "url": "https://www.atlassian.com/git/tutorials/undoing-changes/git-reset",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C004",
+          "url": "https://coddy.tech/git-commands/git-reset",
+          "grade": 2,
+          "basis": "SERP",
+          "borderline": true
+        },
+        {
+          "id": "C005",
+          "url": "https://www.datacamp.com/tutorial/git-reset-soft-complete-guide",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C006",
+          "url": "https://docs.github.com/en/desktop/managing-commits/resetting-to-a-commit-in-github-desktop",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C007",
+          "url": "https://www.geeksforgeeks.org/git/whats-the-difference-between-git-reset-mixed-soft-and-hard/",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C008",
+          "url": "https://git-scm.com/docs/git-reset",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C009",
+          "url": "https://github.com/git-guides/git-commit",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C010",
+          "url": "https://github.com/git/git/blob/master/Documentation/CodingGuidelines",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C011",
+          "url": "https://github.com/orgs/community/discussions/68224",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C012",
+          "url": "https://gitkraken.com/learn/git/git-reset",
+          "grade": 2,
+          "basis": "fetched_text",
+          "borderline": false
+        },
+        {
+          "id": "C013",
+          "url": "https://gitlab.com/git-vcs/htmldocs/-/blob/gh-pages/git-reset.txt?ref_type=heads",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C014",
+          "url": "https://www.kernel.org/pub/software/scm/git/docs/git-reset.html",
+          "grade": 1,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C015",
+          "url": "https://www.linkedin.com/top-content/project-management/mastering-git-fundamentals/how-to-use-git-for-version-control/",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C016",
+          "url": "https://linux.die.net/man/1/git-reset",
+          "grade": 2,
+          "basis": "SERP",
+          "borderline": true
+        },
+        {
+          "id": "C017",
+          "url": "https://opentutorials.org/module/4032/24533",
+          "grade": 2,
+          "basis": "SERP",
+          "borderline": true
+        },
+        {
+          "id": "C018",
+          "url": "https://stackoverflow.com/questions/tagged/git",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        },
+        {
+          "id": "C019",
+          "url": "https://www.youtube.com/shorts/tEjXP1m6gJM",
+          "grade": 0,
+          "basis": "SERP",
+          "borderline": false
+        }
+      ]
+    }
+  ]
+}

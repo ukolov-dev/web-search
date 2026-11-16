@@ -1,0 +1,233 @@
+{
+  "kind": "Frozen actual v9 source contexts and coverage checks; no gold or final audit verdicts",
+  "cases": [
+    {
+      "case": "h03",
+      "query": "JavaScript Object.freeze shallow nested object mutation strict mode TypeError",
+      "subject": "Object.freeze",
+      "anchors": [
+        "Object.freeze",
+        "shallow",
+        "nested"
+      ],
+      "expected_old_gap": "JavaScript",
+      "entry": {
+        "checks": [
+          {
+            "passages": [
+              "B1"
+            ],
+            "quote": "To make an object’s values immutable, use Object.freeze().",
+            "status": "supported"
+          },
+          {
+            "passages": [
+              "B1"
+            ],
+            "quote": "Note that Object.freeze() is shallow: object values within a frozen object (i.e. nested objects) can still be mutated.",
+            "status": "supported"
+          },
+          {
+            "passages": [
+              "B1"
+            ],
+            "quote": "Note that Object.freeze() is shallow: object values within a frozen object (i.e. nested objects) can still be mutated.",
+            "status": "supported"
+          },
+          {
+            "passages": [
+              "B1"
+            ],
+            "quote": "foo.bar = 42; // throws a TypeError exception in strict mode; // silently fails in sloppy mode",
+            "status": "supported"
+          }
+        ],
+        "id": "C012",
+        "passages": [
+          {
+            "end": 122,
+            "field": "title",
+            "id": "T",
+            "normalized_text_hash": "ad511c2dcfe0c1c01df352c382388bdc5d377f8821640eaf9671c51b691435c1",
+            "source_url": "https://mathiasbynens.be/notes/es6-const",
+            "start": 0,
+            "text_hash": "ad511c2dcfe0c1c01df352c382388bdc5d377f8821640eaf9671c51b691435c1",
+            "text": "This seems to be a very common misconception that just won’t die. I keep running into it in blog posts, Twitter discussi"
+          },
+          {
+            "end": 307,
+            "field": "snippet",
+            "id": "S",
+            "normalized_text_hash": "433e079e6a3b2dcc476f2d66dbb203a527d4e506dd074637ed1c83ebcf1440bc",
+            "source_url": "https://mathiasbynens.be/notes/es6-const",
+            "start": 0,
+            "text_hash": "433e079e6a3b2dcc476f2d66dbb203a527d4e506dd074637ed1c83ebcf1440bc",
+            "text": "This seems to be a very common misconception that just won’t die. I keep running into it in blog posts, Twitter discussions, and even books. Here’s my attempt at setting things straight. ES2015 const does not indicate that a value is ‘constant’ or immutable. A const value can definitely change. The"
+          },
+          {
+            "end": 2218,
+            "field": "body",
+            "id": "B1",
+            "normalized_text_hash": "10a3f32d866382bc2a1909c2b0236b575c74b0d1f3e4614305be105023fa172f",
+            "source_url": "https://mathiasbynens.be/notes/es6-const",
+            "start": 1012,
+            "text_hash": "ba571bb07d5ee46667d31a79b1eae292305321b21ade87f9390c2ffb346ed0a1",
+            "text": "oo |= 0b101010; // Unary `--` and `++`: --foo; ++foo; // Postfix `--` and `++`: foo--; foo++; ES2015 const has nothing to do with immutability of values. So, how to make a value immutable? Primitive values, i.e. numbers, strings, booleans, symbols, null, or undefined, are always immutable. var foo = 27; foo.bar = 42; console.log(foo.bar); // → `undefined` To make an object’s values immutable, use Object.freeze(). It has been around since ES5 and is widely available nowadays. const foo = Object.freeze({ 'bar': 27 }); foo.bar = 42; // throws a TypeError exception in strict mode; // silently fails in sloppy mode console.log(foo.bar); // → 27 Note that Object.freeze() is shallow: object values within a frozen object (i.e. nested objects) can still be mutated. The MDN entry on Object.freeze() provides an example deepFreeze() implementation that can be used to make object values fully immutable. Still, Object.freeze() only works on property-value pairs. There is currently no way to make other objects such as Dates, Maps, or Sets fully immutable. There is a proposal to add immutable data structures to a future version of ECMAScript. const vs. let The only difference between const and let "
+          },
+          {
+            "end": 1212,
+            "field": "body",
+            "id": "B2",
+            "normalized_text_hash": "10a3f32d866382bc2a1909c2b0236b575c74b0d1f3e4614305be105023fa172f",
+            "source_url": "https://mathiasbynens.be/notes/es6-const",
+            "start": 0,
+            "text_hash": "ba571bb07d5ee46667d31a79b1eae292305321b21ade87f9390c2ffb346ed0a1",
+            "text": "This seems to be a very common misconception that just won’t die. I keep running into it in blog posts, Twitter discussions, and even books. Here’s my attempt at setting things straight. const creates an immutable binding ES2015 const does not indicate that a value is ‘constant’ or immutable. A const value can definitely change. The following is perfectly valid ES2015 code that does not throw an exception: const foo = {}; foo.bar = 42; console.log(foo.bar); // → 42 The only thing that’s immutable here is the binding. const assigns a value ({}) to a variable name (foo), and guarantees that no rebinding will happen. Using an assignment operator or a unary or postfix -- or ++ operator on a const variable throws a TypeError exception: const foo = 27; // Any of the following uncommented lines throws an exception. // Assignment operators: foo = 42; foo *= 42; foo /= 42; foo %= 42; foo += 42; foo -= 42; foo <<= 0b101010; foo >>= 0b101010; foo >>>= 0b101010; foo &= 0b101010; foo ^= 0b101010; foo |= 0b101010; // Unary `--` and `++`: --foo; ++foo; // Postfix `--` and `++`: foo--; foo++; ES2015 const has nothing to do with immutability of values. So, how to make a value immutable? Primitive v"
+          },
+          {
+            "end": 3072,
+            "field": "body",
+            "id": "B3",
+            "normalized_text_hash": "10a3f32d866382bc2a1909c2b0236b575c74b0d1f3e4614305be105023fa172f",
+            "source_url": "https://mathiasbynens.be/notes/es6-const",
+            "start": 2018,
+            "text_hash": "ba571bb07d5ee46667d31a79b1eae292305321b21ade87f9390c2ffb346ed0a1",
+            "text": "r objects such as Dates, Maps, or Sets fully immutable. There is a proposal to add immutable data structures to a future version of ECMAScript. const vs. let The only difference between const and let is that const makes the contract that no rebinding will happen. Everything I wrote here so far are facts. What follows is entirely subjective, but bear with me. Given the above, const makes code easier to read: within its scope, a const variable always refers to the same object. With let there is no such guarantee. As a result, it makes sense to use let and const as follows in your ES2015 code: use const by default only use let if rebinding is needed (var shouldn’t be used in ES2015) Do you agree? Why (not)? I’m especially interested in hearing from developers who prefer let over const (i.e. even for variables that are never rebound). If you’re using let without rebinding, why are you using let in the first place? Is it because of the “const is for constants” misunderstanding, or is there another reason? Let me know in the comments!"
+          },
+          {
+            "end": 56,
+            "field": "page_title",
+            "id": "H",
+            "normalized_text_hash": "5da444a30b24db3743dc064046bb8db859051237b1325809f719222f65b1f96e",
+            "source_url": "https://mathiasbynens.be/notes/es6-const",
+            "start": 0,
+            "text_hash": "5da444a30b24db3743dc064046bb8db859051237b1325809f719222f65b1f96e",
+            "text": "ES2015 const is not about immutability · Mathias Bynens"
+          }
+        ],
+        "read_attempted": true
+      },
+      "provenance": {
+        "coverage_record": "runs/passage-coverage-confirm-2026-10-30/fixed/h03-evidence-round1.json",
+        "coverage_record_sha256": "38a9fac1bc756a751018bcea4bb887fc64d8ec1a15bb9127b4213eb7d4459a4a",
+        "result_record": "runs/passage-coverage-confirm-2026-10-30/fixed/h03-result.json",
+        "result_record_sha256": "1f1a7165fe287ba93ef14a9cb52bab54fc00a61165f90b2b4ecb9787402eb630",
+        "source_document": "runs/passage-coverage-confirm-2026-10-30/fixed/h03-C012-document.json"
+      }
+    },
+    {
+      "case": "h04",
+      "query": "POSIX dup dup2 shared open file description offset FD_CLOEXEC descriptor flag",
+      "subject": "dup2",
+      "anchors": [
+        "dup2",
+        "FD_CLOEXEC",
+        "offset"
+      ],
+      "expected_old_gap": "FD_CLOEXEC",
+      "entry": {
+        "checks": [
+          {
+            "passages": [
+              "B1"
+            ],
+            "quote": "if newd and oldd are duplicate references to an open file, read(2), write(2) and lseek(2) calls all move a single pointer into the file",
+            "status": "supported"
+          },
+          {
+            "passages": [
+              "B1"
+            ],
+            "quote": "if newd and oldd are duplicate references to an open file, read(2), write(2) and lseek(2) calls all move a single pointer into the file",
+            "status": "supported"
+          },
+          {
+            "passages": [
+              "B1"
+            ],
+            "quote": "The close-on-exec and close-on-fork flags on the new file descriptor are unset.",
+            "status": "supported"
+          },
+          {
+            "passages": [
+              "B1"
+            ],
+            "quote": "read(2), write(2) and lseek(2) calls all move a single pointer into the file",
+            "status": "supported"
+          }
+        ],
+        "id": "C006",
+        "passages": [
+          {
+            "end": 29,
+            "field": "title",
+            "id": "T",
+            "normalized_text_hash": "e39c278dbd979d1b361f2a2683922dd292bc811fa7ce9541d344a6ac382c78a4",
+            "source_url": "https://man.openbsd.org/dup.2",
+            "start": 0,
+            "text_hash": "e39c278dbd979d1b361f2a2683922dd292bc811fa7ce9541d344a6ac382c78a4",
+            "text": "dup(2) - OpenBSD manual pages"
+          },
+          {
+            "end": 167,
+            "field": "snippet",
+            "id": "S",
+            "normalized_text_hash": "0de27c393b190f7a9ac3bcdbf92c7ab558227ff8d4ef9adeb8487310d7d0cd0b",
+            "source_url": "https://man.openbsd.org/dup.2",
+            "start": 0,
+            "text_hash": "0de27c393b190f7a9ac3bcdbf92c7ab558227ff8d4ef9adeb8487310d7d0cd0b",
+            "text": "In dup2 (), the value of the new descriptor newd is specified. If this descriptor is already in use, it is first deallocated as if a close(2) call had been done first."
+          },
+          {
+            "end": 1202,
+            "field": "body",
+            "id": "B1",
+            "normalized_text_hash": "0a24106bff51e9e0a317627e0656f5c93afaea353914bbbb2056c8ac992022c0",
+            "source_url": "https://man.openbsd.org/dup.2",
+            "start": 0,
+            "text_hash": "7a27bcdae87a9a55ab081616adb9584afc688ed02059fcf5a7878ab70575796a",
+            "text": "NAME dup, dup2, dup3 — duplicate an existing file descriptor SYNOPSIS #include <unistd.h> int dup(int oldd); int dup2(int oldd, int newd); #include <fcntl.h> #include <unistd.h> int dup3(int oldd, int newd, int flags); DESCRIPTION dup() duplicates an existing object descriptor and returns its value to the calling process (newd = dup(oldd)). The argument oldd is a small non-negative integer index in the per-process descriptor table. The value must be less than the size of the table, which is returned by getdtablesize(3). The new descriptor returned by the call is the lowest numbered descriptor currently not in use by the process. The object referenced by the descriptor does not distinguish between oldd and newd in any way. Thus if newd and oldd are duplicate references to an open file, read(2), write(2) and lseek(2) calls all move a single pointer into the file, and append mode, non-blocking I/O and asynchronous I/O options are shared between the references. If a separate pointer into the file is desired, a different object reference to the file must be obtained by issuing an additional open(2) call. The close-on-exec and close-on-fork flags on the new file descriptor are unset. In "
+          },
+          {
+            "end": 2202,
+            "field": "body",
+            "id": "B2",
+            "normalized_text_hash": "0a24106bff51e9e0a317627e0656f5c93afaea353914bbbb2056c8ac992022c0",
+            "source_url": "https://man.openbsd.org/dup.2",
+            "start": 1002,
+            "text_hash": "7a27bcdae87a9a55ab081616adb9584afc688ed02059fcf5a7878ab70575796a",
+            "text": "he file is desired, a different object reference to the file must be obtained by issuing an additional open(2) call. The close-on-exec and close-on-fork flags on the new file descriptor are unset. In dup2(), the value of the new descriptor newd is specified. If this descriptor is already in use, it is first deallocated as if a close(2) call had been done first. When newd equals oldd, dup2() just returns without affecting the close-on-exec or close-on-fork flags. In dup3(), the value of the new descriptor and the close-on-exec and close-on-fork flags on the new file descriptor are all specified: newd specifies the value and the O_CLOEXEC and O_CLOFORK bits in flags specify the close-on-exec and close-on-forks flag, respectively. Unlike dup2(), if oldd and newd are equal then dup3() fails. Otherwise, if flags is zero then dup3() is identical to a call to dup2(). RETURN VALUES Upon successful completion, the value of the new descriptor is returned. The value -1 is returned if an error occurs in either call. The external variable errno indicates the cause of the error. ERRORS dup() will fail if: [EBADF] oldd is not a valid active descriptor. [EMFILE] Too many descriptors are active. du"
+          },
+          {
+            "end": 2973,
+            "field": "body",
+            "id": "B3",
+            "normalized_text_hash": "0a24106bff51e9e0a317627e0656f5c93afaea353914bbbb2056c8ac992022c0",
+            "source_url": "https://man.openbsd.org/dup.2",
+            "start": 2002,
+            "text_hash": "7a27bcdae87a9a55ab081616adb9584afc688ed02059fcf5a7878ab70575796a",
+            "text": "urs in either call. The external variable errno indicates the cause of the error. ERRORS dup() will fail if: [EBADF] oldd is not a valid active descriptor. [EMFILE] Too many descriptors are active. dup2() and dup3() will fail if: [EBADF] oldd is not a valid active descriptor or newd is negative or greater than or equal to the process's RLIMIT_NOFILE limit. [EBUSY] A race condition with accept(2) or open(2) has been detected. [EINTR] An interrupt was received. [EIO] An I/O error occurred while writing to the file system. In addition, dup3() will return the following error: [EINVAL] oldd is equal to newd or flags is invalid. SEE ALSO accept(2), close(2), fcntl(2), getrlimit(2), open(2), pipe(2), socket(2), socketpair(2), getdtablesize(3) STANDARDS The dup(), dup2(), and dup3() functions conform to IEEE Std 1003.1-2024 (“POSIX.1”). HISTORY The dup() system call first appeared in Version 3 AT&T UNIX, dup2() in Version 7 AT&T UNIX, and dup3() in OpenBSD 5.7."
+          },
+          {
+            "end": 29,
+            "field": "page_title",
+            "id": "H",
+            "normalized_text_hash": "e39c278dbd979d1b361f2a2683922dd292bc811fa7ce9541d344a6ac382c78a4",
+            "source_url": "https://man.openbsd.org/dup.2",
+            "start": 0,
+            "text_hash": "e39c278dbd979d1b361f2a2683922dd292bc811fa7ce9541d344a6ac382c78a4",
+            "text": "dup(2) - OpenBSD manual pages"
+          }
+        ],
+        "read_attempted": true
+      },
+      "provenance": {
+        "coverage_record": "runs/passage-coverage-confirm-2026-10-30/fixed/h04-evidence-round1.json",
+        "coverage_record_sha256": "30ddc9a6279aed3c999d2e8c1046733af0049db84d7960352a9d7e10a84d34e6",
+        "result_record": "runs/passage-coverage-confirm-2026-10-30/fixed/h04-result.json",
+        "result_record_sha256": "ceabe6ce1cf2bc85526d3549b3f8fe324b19c14a4207a8a875ee78557c296ae0",
+        "source_document": "runs/passage-coverage-confirm-2026-10-30/fixed/h04-C006-document.json"
+      }
+    }
+  ]
+}

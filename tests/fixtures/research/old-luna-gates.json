@@ -1,0 +1,574 @@
+{
+  "R01": {
+    "context": {
+      "budget": {
+        "limits": {
+          "browser": 0,
+          "documents": 4,
+          "forms": 2,
+          "generations": 6,
+          "output_bytes": 32768,
+          "qwen": 4,
+          "seconds": 180,
+          "serp": 4,
+          "source_context_chars": 24000
+        },
+        "remaining": {
+          "documents": 0,
+          "forms": 0,
+          "generations": 4,
+          "milliseconds": 130662,
+          "qwen": 1,
+          "serp": 2
+        },
+        "used": {
+          "documents": 4,
+          "forms": 2,
+          "generations": 2,
+          "qwen": 3,
+          "serp": 2
+        }
+      },
+      "chunks": [
+        {
+          "document_version": "b35abf649101db570a8ad5f26246f9248160f8c3a4238ccde5e9293889a8d56f",
+          "end": 7200,
+          "field": "text",
+          "id": "S1P1",
+          "source_id": "S1",
+          "start": 6000,
+          "text": "dering herd.\nWatch RateLimit headers. Use RateLimit-Remaining and RateLimit-Reset to slow down before hitting 429, rather than reacting after.\nBound retries. Cap attempts and total wait time; after the cap, surface the failure instead of hammering the endpoint.\nCoordinate across a fleet. Share a limiter (token bucket) across distributed workers so the whole system stays under the quota, not each worker individually.\nAI agents: treat 429 as a signal to pace tool calls and queue work — retry loops that ignore it burn quota and budget. See also 503 for server-side unavailability.\n\n\nFrequently Asked Questions\n\nIs Retry-After required on a 429 response?\n\nRFC 6585 says servers SHOULD include Retry-After but does not make it mandatory. In practice, many APIs include it because without it, clients have no way to know when to retry and may use aggressive exponential backoff or simply fail. Always include Retry-After for a usable API.\n\nWhat is the difference between 429 and 503?\n\n429 is about client behavior: the specific client has sent too many requests. 503 is about server state: the server is temporarily unable to handle any requests due to overload or maintenance. A 429 is targeted at o"
+        },
+        {
+          "document_version": "b35abf649101db570a8ad5f26246f9248160f8c3a4238ccde5e9293889a8d56f",
+          "end": 1200,
+          "field": "text",
+          "id": "S1P2",
+          "source_id": "S1",
+          "start": 0,
+          "text": "How to Fix HTTP 429 Too Many Requests\n\nThe client has sent too many requests in a given time window and must wait before retrying.\n\nQuick Reference\n\nCategory 4xx Client Error\nRFC RFC 6585, Section 4\nCacheable No\nRetryable Yes — after waiting for the Retry-After period\nKey header Retry-After indicating when to retry\n\n\nWhat 429 Too Many Requests Means\n\nHTTP 429 Too Many Requests (RFC 6585) tells the client it has exceeded a rate limit. The server is refusing to process the request not because it is malformed or unauthorized, but because the client has sent too many requests in too short a time. The implicit message is: slow down and try again later.\n\n429 is the standardized replacement for a variety of proprietary approaches that APIs used before the code was defined in 2012 — Twitter’s “420 Enhance Your Calm,” various 503s with custom retry headers, and 403 responses with rate limit error codes in the body.\n\nThe response typically includes a Retry-After header specifying either a number of seconds to wait or an HTTP-date after which the client can retry. Rate limit informational headers (X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset) are not standardized but widely use"
+        },
+        {
+          "document_version": "b35abf649101db570a8ad5f26246f9248160f8c3a4238ccde5e9293889a8d56f",
+          "end": 5200,
+          "field": "text",
+          "id": "S1P3",
+          "source_id": "S1",
+          "start": 4000,
+          "text": " burst=20 nodelay;\n            limit_req_status 429;\n            proxy_pass http://backend;\n        }\n    }\n}\n\nPython with slowapi (FastAPI/Starlette)\n\nfrom slowapi import Limiter\nfrom slowapi.util import get_remote_address\n\nlimiter = Limiter(key_func=get_remote_address)\n\n@app.get(\"/api/data\")\n@limiter.limit(\"100/minute\")\nasync def get_data(request: Request):\n    return {\"data\": \"...\"}\n\nClient-Side Retry Logic\n\nA well-behaved API client handles 429 by reading the Retry-After header and waiting before retrying. Naive immediate retry loops make rate limiting worse by hammering the server with more requests during the cooldown period:\n\nasync function fetchWithRetry(url, options, maxRetries = 3) {\n  for (let attempt = 0; attempt < maxRetries; attempt++) {\n    const res = await fetch(url, options);\n\n    if (res.status !== 429) return res;\n\n    const retryAfter = res.headers.get('Retry-After');\n    const waitMs = retryAfter\n      ? (isNaN(retryAfter) ? new Date(retryAfter) - Date.now() : retryAfter * 1000)\n      : (2 ** attempt) * 1000; // exponential backoff if no header\n\n    console.log(`Rate limited. Waiting ${waitMs}ms before retry ${attempt + 1}`);\n    await new Promise(resolve => s"
+        },
+        {
+          "document_version": "59cdb177486e521513268e3a4760349798fc57bac6ba0414cc1355c87d2823cf",
+          "end": 3200,
+          "field": "text",
+          "id": "S2P1",
+          "source_id": "S2",
+          "start": 2000,
+          "text": "tations that violate a MUST are non-conformant.\nSHOULD / SHOULD NOT: recommended, but there may be valid reasons to deviate. You need to understand the implications.\nMAY: genuinely optional. Implementations can include or omit this.\n\n\nWhen you are reading a spec to understand what your code needs to do, focus on the MUST statements first. Those are the non-negotiable behaviors. SHOULD statements are important for correctness but allow flexibility. MAY statements describe features you might implement later.\n\nRFCs Every Web Developer Should Know\n\nYou do not need to memorize these, but knowing they exist (and where to look things up) is valuable:\n\nRFC Subject Why It Matters\n9110 HTTP Semantics Defines HTTP methods, status codes, headers\n9111 HTTP Caching The complete caching specification\n9112 HTTP/1.1 Wire format for HTTP/1.1\n9113 HTTP/2 Binary framing, multiplexing, server push\n9114 HTTP/3 HTTP over QUIC\n7519 JWT JSON Web Tokens\n6749 OAuth 2.0 Authorization framework\n8446 TLS 1.3 Current TLS standard\n3986 URI Syntax How URLs are parsed\n5322 Email Format Internet message format\n\n\nThe HTTP RFCs were recently reorganized (the old 7230–7235 series was replaced by 9110–9114 in 2022). If "
+        },
+        {
+          "document_version": "59cdb177486e521513268e3a4760349798fc57bac6ba0414cc1355c87d2823cf",
+          "end": 2200,
+          "field": "text",
+          "id": "S2P2",
+          "source_id": "S2",
+          "start": 1000,
+          "text": "s.\n\nThe RFC series is maintained by the RFC Editor. You can browse and search the complete collection at rfc-editor.org.\n\nHow RFCs Are Structured\n\nMost RFCs follow a common structure:\n\nAbstract: 1–2 paragraphs summarizing what the document specifies. Read this first.\nIntroduction: context, motivation, scope. Often includes a “Terminology” subsection.\nConventions: defines how keywords like MUST, SHOULD, and MAY are used (per RFC 2119).\nCore specification: the meat. Protocol details, message formats, state machines, algorithms.\nSecurity Considerations: required section covering threat model and mitigations.\nIANA Considerations: any registries or assigned numbers.\nReferences: normative (required reading) and informative (additional context).\n\n\nNot every RFC follows this exactly, but the pattern is consistent enough that you can navigate an unfamiliar RFC quickly.\n\nThe Keyword Convention\n\nRFC 2119 defines the meaning of requirement keywords:\n\nMUST / MUST NOT: absolute requirement. Implementations that violate a MUST are non-conformant.\nSHOULD / SHOULD NOT: recommended, but there may be valid reasons to deviate. You need to understand the implications.\nMAY: genuinely optional. Implement"
+        },
+        {
+          "document_version": "59cdb177486e521513268e3a4760349798fc57bac6ba0414cc1355c87d2823cf",
+          "end": 4200,
+          "field": "text",
+          "id": "S2P3",
+          "source_id": "S2",
+          "start": 3000,
+          "text": "t TLS standard\n3986 URI Syntax How URLs are parsed\n5322 Email Format Internet message format\n\n\nThe HTTP RFCs were recently reorganized (the old 7230–7235 series was replaced by 9110–9114 in 2022). If you find yourself reading RFC 2616, stop — it is obsoleted.\n\nHow to Read an RFC Efficiently\n\nDon’t read front-to-back like a novel. Instead:\n\nRead the Abstract to confirm it covers what you need\nSkim the Table of Contents to find the relevant section\nRead that section, paying attention to MUST/SHOULD/MAY keywords\nCheck the examples if provided (not all RFCs have them, but many do)\nFollow normative references only if you need deeper understanding of a referenced mechanism\n\n\nMost of the time, you need one or two sections out of a 100-page RFC. The rest is context you can ignore unless you are building a protocol implementation from scratch.\n\nDrafts vs. Published RFCs\n\nBefore an RFC is published, it goes through an Internet-Draft phase. Drafts are working documents — they expire, they change, they might never become RFCs. If you find an draft-ietf-* document, check whether a final RFC was published before relying on it.\n\nThe lifecycle: Individual Draft → Working Group Draft → Last Call → "
+        },
+        {
+          "document_version": "c56eb9d18a3e7a0bf1d5ce6c6bb6eddd394f67fee381223ddef67e1fdc881c5e",
+          "end": 3200,
+          "field": "text",
+          "id": "S3P1",
+          "source_id": "S3",
+          "start": 2000,
+          "text": "\n4. SHOULD NOT   This phrase, or the phrase \"NOT RECOMMENDED\" mean that\n   there may exist valid reasons in particular circumstances when the\n   particular behavior is acceptable or even useful, but the full\n   implications should be understood and the case carefully weighed\n   before implementing any behavior described with this label.\n\n\n\n\n\nBradner                  Best Current Practice                  [Page 1]\n\n\nRFC 2119                     RFC Key Words                    March 1997\n\n\n5. MAY   This word, or the adjective \"OPTIONAL\", mean that an item is\n   truly optional.  One vendor may choose to include the item because a\n   particular marketplace requires it or because the vendor feels that\n   it enhances the product while another vendor may omit the same item.\n   An implementation which does not include a particular option MUST be\n   prepared to interoperate with another implementation which does\n   include the option, though perhaps with reduced functionality. In the\n   same vein an implementation which does include a particular option\n   MUST be prepared to interoperate with another implementation which\n   does not include the option (except, of course, for the feature th"
+        },
+        {
+          "document_version": "c56eb9d18a3e7a0bf1d5ce6c6bb6eddd394f67fee381223ddef67e1fdc881c5e",
+          "end": 2200,
+          "field": "text",
+          "id": "S3P2",
+          "source_id": "S3",
+          "start": 1000,
+          "text": " in IETF documents.  Authors who follow these guidelines\n   should incorporate this phrase near the beginning of their document:\n\n      The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL\n      NOT\", \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\",  \"MAY\", and\n      \"OPTIONAL\" in this document are to be interpreted as described in\n      RFC 2119.\n\n   Note that the force of these words is modified by the requirement\n   level of the document in which they are used.\n\n1. MUST   This word, or the terms \"REQUIRED\" or \"SHALL\", mean that the\n   definition is an absolute requirement of the specification.\n\n2. MUST NOT   This phrase, or the phrase \"SHALL NOT\", mean that the\n   definition is an absolute prohibition of the specification.\n\n3. SHOULD   This word, or the adjective \"RECOMMENDED\", mean that there\n   may exist valid reasons in particular circumstances to ignore a\n   particular item, but the full implications must be understood and\n   carefully weighed before choosing a different course.\n\n4. SHOULD NOT   This phrase, or the phrase \"NOT RECOMMENDED\" mean that\n   there may exist valid reasons in particular circumstances when the\n   particular behavior is acceptable or even useful, but t"
+        },
+        {
+          "document_version": "c56eb9d18a3e7a0bf1d5ce6c6bb6eddd394f67fee381223ddef67e1fdc881c5e",
+          "end": 1200,
+          "field": "text",
+          "id": "S3P3",
+          "source_id": "S3",
+          "start": 0,
+          "text": "View as: \nPlain Text,\nCompact HTML\n\n\nRFC 2119: BCP 14: Key words for use in RFCs to Indicate Requirement Levels\n\nterminology\n\n\nS. Bradner\n\n\nBest Current Practice\n\n20 subscribed\n\nAdded to 31 Sets\n\nThis RFC was updated, see \nRFC 8174.\n\n\nNetwork Working Group                                         S. Bradner\nRequest for Comments: 2119                            Harvard University\nBCP: 14                                                       March 1997\nCategory: Best Current Practice\n\n\n        Key words for use in RFCs to Indicate Requirement Levels\n\nStatus of this Memo\n\n   This document specifies an Internet Best Current Practices for the\n   Internet Community, and requests discussion and suggestions for\n   improvements.  Distribution of this memo is unlimited.\n\nAbstract\n\n   In many standards track documents several words are used to signify\n   the requirements in the specification.  These words are often\n   capitalized.  This document defines these words as they should be\n   interpreted in IETF documents.  Authors who follow these guidelines\n   should incorporate this phrase near the beginning of their document:\n\n      The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL\n  "
+        }
+      ],
+      "claims": [],
+      "facets": [
+        "Обязан ли сервер всегда присылать заголовок Retry-After вместе с ответом HTTP 429?",
+        "Различие нормативной силы MAY и MUST в спецификации HTTP (RFC 9110/6585)."
+      ],
+      "language": "ru",
+      "missing": [
+        0,
+        1
+      ],
+      "news_window": null,
+      "question": "Обязан ли сервер всегда присылать Retry-After вместе с HTTP 429? Подтверди различие MAY и MUST.",
+      "sources": [
+        {
+          "eligible": true,
+          "id": "S1",
+          "publication": {
+            "date_status": "missing",
+            "kind": "article",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "title": "How to Fix HTTP 429 Too Many Requests",
+          "url_preview": "https://errorlookup.com/guides/429-too-many-requests/"
+        },
+        {
+          "eligible": true,
+          "id": "S2",
+          "publication": {
+            "date_status": "valid",
+            "kind": "article",
+            "published_date": "2024-10-18",
+            "witness_count": 2,
+            "witnesses": [
+              {
+                "date": "2024-10-18",
+                "raw": "2024-10-18T00:00:00Z",
+                "source": "jsonld.datePublished",
+                "timestamp": "2024-10-18T00:00:00+00:00"
+              },
+              {
+                "date": "2024-10-18",
+                "raw": "2024-10-18",
+                "source": "article.datePublished",
+                "timestamp": null
+              }
+            ],
+            "witnesses_limited": false
+          },
+          "title": "RFC Basics for Developers",
+          "url_preview": "https://blobstreaming.org/notes/rfc-basics-for-devs/"
+        },
+        {
+          "eligible": true,
+          "id": "S3",
+          "publication": {
+            "date_status": "missing",
+            "kind": "article",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "title": "RFC 2119: BCP 14: Key words for use in RFCs to Indicate Requirement Levels",
+          "url_preview": "https://www.rfc-editor.org/info/rfc2119/"
+        }
+      ],
+      "unresolved_conflicts": []
+    },
+    "draft": {
+      "claims": [
+        {
+          "evidence": [
+            {
+              "chunk_id": "S1P1",
+              "quote": "RFC 6585 says servers SHOULD include Retry-After but does not make it mandatory."
+            }
+          ],
+          "facets": [
+            0
+          ],
+          "kind": "fact",
+          "rationale": "",
+          "text": "RFC 6585 предписывает серверам SHOULD включать Retry-After, но не делает это обязательным."
+        },
+        {
+          "evidence": [
+            {
+              "chunk_id": "S3P2",
+              "quote": "1. MUST   This word, or the terms \"REQUIRED\" or \"SHALL\", mean that the\n   definition is an absolute requirement of the specification."
+            }
+          ],
+          "facets": [
+            1
+          ],
+          "kind": "fact",
+          "rationale": "",
+          "text": "MUST (или REQUIRED, SHALL) означает абсолютное требование спецификации."
+        },
+        {
+          "evidence": [
+            {
+              "chunk_id": "S3P1",
+              "quote": "5. MAY   This word, or the adjective \"OPTIONAL\", mean that an item is\n   truly optional."
+            }
+          ],
+          "facets": [
+            1
+          ],
+          "kind": "fact",
+          "rationale": "",
+          "text": "MAY (или OPTIONAL) означает, что элемент действительно необязателен."
+        },
+        {
+          "evidence": [
+            {
+              "chunk_id": "S3P2",
+              "quote": "3. SHOULD   This word, or the adjective \"RECOMMENDED\", mean that there\n   may exist valid reasons in particular circumstances to ignore a\n   particular item"
+            }
+          ],
+          "facets": [
+            1
+          ],
+          "kind": "fact",
+          "rationale": "",
+          "text": "SHOULD (или RECOMMENDED) допускает обоснованные причины игнорировать требование в отдельных обстоятельствах."
+        }
+      ],
+      "next": {
+        "facet": 0,
+        "query": ""
+      }
+    },
+    "capture_sha256": "9ad0a2f683925413617e6b7b3571957d61c11856853bece4446c06fd4c8ad8ec",
+    "audit": {
+      "checks": [
+        {
+          "id": "A1",
+          "reason": "S1 цитирует RFC 6585: SHOULD, не обязательно; но это вторичный источник, не текст RFC.",
+          "verdict": "supported"
+        },
+        {
+          "id": "A2",
+          "reason": "S3 (RFC 2119) прямо определяет MUST/REQUIRED/SHALL как абсолютное требование.",
+          "verdict": "supported"
+        },
+        {
+          "id": "A3",
+          "reason": "S3 (RFC 2119) прямо определяет MAY/OPTIONAL как действительно необязательное.",
+          "verdict": "supported"
+        },
+        {
+          "id": "A4",
+          "reason": "S3 (RFC 2119) прямо указывает возможные обоснованные причины игнорировать SHOULD.",
+          "verdict": "supported"
+        }
+      ],
+      "conflicts": [],
+      "missing": [
+        0
+      ],
+      "next": {
+        "facet": 0,
+        "query": "RFC 6585 Section 4 429 Retry-After SHOULD"
+      },
+      "sufficient": false
+    }
+  },
+  "R03": {
+    "context": {
+      "budget": {
+        "limits": {
+          "browser": 0,
+          "documents": 4,
+          "forms": 2,
+          "generations": 6,
+          "output_bytes": 32768,
+          "qwen": 4,
+          "seconds": 180,
+          "serp": 4,
+          "source_context_chars": 24000
+        },
+        "remaining": {
+          "documents": 0,
+          "forms": 0,
+          "generations": 4,
+          "milliseconds": 165239,
+          "qwen": 0,
+          "serp": 2
+        },
+        "used": {
+          "documents": 4,
+          "forms": 2,
+          "generations": 2,
+          "qwen": 4,
+          "serp": 2
+        }
+      },
+      "chunks": [
+        {
+          "document_version": "63c09060e82f3e346d2979b42d136b7a779653738acf3464dcae9ed012eb3966",
+          "end": 38200,
+          "field": "text",
+          "id": "S1P1",
+          "source_id": "S1",
+          "start": 37000,
+          "text": " this closure on each element of the iterator, and yield elements while it returns true.\n\nAfter false is returned, take_while()’s job is over, and the rest of the elements are ignored.\n\n§Examples\n\nBasic usage:\n\nlet a = [-1i32, 0, 1];\n\nlet mut iter = a.into_iter().take_while(|x| x.is_negative());\n\nassert_eq!(iter.next(), Some(-1));\nassert_eq!(iter.next(), None);\n\nBecause the closure passed to take_while() takes a reference, and many iterators iterate over references, this leads to a possibly confusing situation, where the type of the closure is a double reference:\n\nlet s = &[-1, 0, 1];\n\nlet mut iter = s.iter().take_while(|x| **x < 0); // need two *s!\n\nassert_eq!(iter.next(), Some(&-1));\nassert_eq!(iter.next(), None);\n\nStopping after an initial false:\n\nlet a = [-1, 0, 1, -2];\n\nlet mut iter = a.into_iter().take_while(|&x| x < 0);\n\nassert_eq!(iter.next(), Some(-1));\n\n// We have more elements that are less than zero, but since we already\n// got a false, take_while() ignores the remaining elements.\nassert_eq!(iter.next(), None);\n\nBecause take_while() needs to look at the value in order to see if it should be included or not, consuming iterators will see that it is removed:\n\nlet a = [1, 2"
+        },
+        {
+          "document_version": "63c09060e82f3e346d2979b42d136b7a779653738acf3464dcae9ed012eb3966",
+          "end": 39200,
+          "field": "text",
+          "id": "S1P2",
+          "source_id": "S1",
+          "start": 38000,
+          "text": "ements.\nassert_eq!(iter.next(), None);\n\nBecause take_while() needs to look at the value in order to see if it should be included or not, consuming iterators will see that it is removed:\n\nlet a = [1, 2, 3, 4];\nlet mut iter = a.into_iter();\n\nlet result: Vec<i32> = iter.by_ref().take_while(|&n| n != 3).collect();\n\nassert_eq!(result, [1, 2]);\n\nlet result: Vec<i32> = iter.collect();\n\nassert_eq!(result, [4]);\n\nThe 3 is no longer there, because it was consumed in order to see if the iteration should stop, but wasn’t placed back into the iterator.\n\n1.57.0 (const: unstable) · Source\nfn map_while<B, P>(self, predicate: P) -> MapWhile<Self, P> ⓘ\nwhere Self: Sized, P: FnMut(Self::Item) -> Option<B>,\n\nCreates an iterator that both yields elements based on a predicate and maps.\n\nmap_while() takes a closure as an argument. It will call this closure on each element of the iterator, and yield elements while it returns Some(_).\n\n§Examples\n\nBasic usage:\n\nlet a = [-1i32, 4, 0, 1];\n\nlet mut iter = a.into_iter().map_while(|x| 16i32.checked_div(x));\n\nassert_eq!(iter.next(), Some(-16));\nassert_eq!(iter.next(), Some(4));\nassert_eq!(iter.next(), None);\n\nHere’s the same example, but with take_while and map:\n"
+        },
+        {
+          "document_version": "63c09060e82f3e346d2979b42d136b7a779653738acf3464dcae9ed012eb3966",
+          "end": 37200,
+          "field": "text",
+          "id": "S1P3",
+          "source_id": "S1",
+          "start": 36000,
+          "text": "ed to skip_while() takes a reference, and many iterators iterate over references, this leads to a possibly confusing situation, where the type of the closure argument is a double reference:\n\nlet s = &[-1, 0, 1];\n\nlet mut iter = s.iter().skip_while(|x| **x < 0); // need two *s!\n\nassert_eq!(iter.next(), Some(&0));\nassert_eq!(iter.next(), Some(&1));\nassert_eq!(iter.next(), None);\n\nStopping after an initial false:\n\nlet a = [-1, 0, 1, -2];\n\nlet mut iter = a.into_iter().skip_while(|&x| x < 0);\n\nassert_eq!(iter.next(), Some(0));\nassert_eq!(iter.next(), Some(1));\n\n// while this would have been false, since we already got a false,\n// skip_while() isn't used any more\nassert_eq!(iter.next(), Some(-2));\n\nassert_eq!(iter.next(), None);\n\n1.0.0 (const: unstable) · Source\nfn take_while<P>(self, predicate: P) -> TakeWhile<Self, P> ⓘ\nwhere Self: Sized, P: FnMut(&Self::Item) -> bool,\n\nCreates an iterator that yields elements based on a predicate.\n\ntake_while() takes a closure as an argument. It will call this closure on each element of the iterator, and yield elements while it returns true.\n\nAfter false is returned, take_while()’s job is over, and the rest of the elements are ignored.\n\n§Examples\n\nBas"
+        },
+        {
+          "document_version": "d9d8f4fd01b43ee11860fb0386704be5263b55af65fad61479b9473f33be2ec0",
+          "end": 3200,
+          "field": "text",
+          "id": "S2P1",
+          "source_id": "S2",
+          "start": 2000,
+          "text": "(), Some(&mut &1));\nassert_eq!(iter.peek_mut(), Some(&mut &1));\nassert_eq!(iter.next(), Some(&1));\n\n// Peek into the iterator and set the value behind the mutable reference.\nif let Some(p) = iter.peek_mut() {\n    assert_eq!(*p, &2);\n    *p = &5;\n}\n\n// The value we put in reappears as the iterator continues.\nassert_eq!(iter.collect::<Vec<_>>(), vec![&5, &3]);\n\n1.51.0 · Source\npub fn next_if( &mut self, func: impl FnOnce(&I::Item) -> bool, ) -> Option<I::Item>\n\nConsume and return the next value of this iterator if a condition is true.\n\nIf func returns true for the next value of this iterator, consume and return it. Otherwise, return None.\n\n§Examples\n\nConsume a number if it’s equal to 0.\n\nlet mut iter = (0..5).peekable();\n// The first item of the iterator is 0; consume it.\nassert_eq!(iter.next_if(|&x| x == 0), Some(0));\n// The next item returned is now 1, so `next_if` will return `None`.\nassert_eq!(iter.next_if(|&x| x == 0), None);\n// `next_if` retains the next item if the predicate evaluates to `false` for it.\nassert_eq!(iter.next(), Some(1));\n\nConsume any number less than 10.\n\nlet mut iter = (1..20).peekable();\n// Consume all numbers less than 10\nwhile iter.next_if(|&x| x < 10).is_s"
+        },
+        {
+          "document_version": "d9d8f4fd01b43ee11860fb0386704be5263b55af65fad61479b9473f33be2ec0",
+          "end": 15200,
+          "field": "text",
+          "id": "S2P2",
+          "source_id": "S2",
+          "start": 14000,
+          "text": "\n1.0.0 (const: unstable) · Source§\nfn take_while<P>(self, predicate: P) -> TakeWhile<Self, P> ⓘ\nwhere Self: Sized, P: FnMut(&Self::Item) -> bool,\n\nCreates an iterator that yields elements based on a predicate. Read more\n\n1.57.0 (const: unstable) · Source§\nfn map_while<B, P>(self, predicate: P) -> MapWhile<Self, P> ⓘ\nwhere Self: Sized, P: FnMut(Self::Item) -> Option<B>,\n\nCreates an iterator that both yields elements based on a predicate and maps. Read more\n\n1.0.0 (const: unstable) · Source§\nfn skip(self, n: usize) -> Skip<Self> ⓘ\nwhere Self: Sized,\n\nCreates an iterator that skips the first n elements. Read more\n\n1.0.0 (const: unstable) · Source§\nfn take(self, n: usize) -> Take<Self> ⓘ\nwhere Self: Sized,\n\nCreates an iterator that yields the first n elements, or fewer if the underlying iterator ends sooner. Read more\n\n1.0.0 (const: unstable) · Source§\nfn scan<St, B, F>(self, initial_state: St, f: F) -> Scan<Self, St, F> ⓘ\nwhere Self: Sized, F: FnMut(&mut St, Self::Item) -> Option<B>,\n\nAn iterator adapter which, like fold, holds internal state, but unlike fold, produces a new iterator. Read more\n\n1.0.0 (const: unstable) · Source§\nfn flat_map<U, F>(self, f: F) -> FlatMap<Self, U, F> ⓘ\nw"
+        },
+        {
+          "document_version": "d9d8f4fd01b43ee11860fb0386704be5263b55af65fad61479b9473f33be2ec0",
+          "end": 14200,
+          "field": "text",
+          "id": "S2P3",
+          "source_id": "S2",
+          "start": 13000,
+          "text": "> bool,\n\nCreates an iterator which uses a closure to determine if an element should be yielded. Read more\n\n1.0.0 (const: unstable) · Source§\nfn filter_map<B, F>(self, f: F) -> FilterMap<Self, F> ⓘ\nwhere Self: Sized, F: FnMut(Self::Item) -> Option<B>,\n\nCreates an iterator that both filters and maps. Read more\n\n1.0.0 (const: unstable) · Source§\nfn enumerate(self) -> Enumerate<Self> ⓘ\nwhere Self: Sized,\n\nCreates an iterator which gives the current iteration count as well as the next value. Read more\n\n1.0.0 (const: unstable) · Source§\nfn peekable(self) -> Peekable<Self> ⓘ\nwhere Self: Sized,\n\nCreates an iterator which can use the peek and peek_mut methods to look at the next element of the iterator without consuming it. See their documentation for more information. Read more\n\n1.0.0 (const: unstable) · Source§\nfn skip_while<P>(self, predicate: P) -> SkipWhile<Self, P> ⓘ\nwhere Self: Sized, P: FnMut(&Self::Item) -> bool,\n\nCreates an iterator that skips elements based on a predicate. Read more\n\n1.0.0 (const: unstable) · Source§\nfn take_while<P>(self, predicate: P) -> TakeWhile<Self, P> ⓘ\nwhere Self: Sized, P: FnMut(&Self::Item) -> bool,\n\nCreates an iterator that yields elements based on a p"
+        },
+        {
+          "document_version": "ff202b6de94dc6350ef16a488004cabf31ff19c23fdc125d7574a5212f10ed62",
+          "end": 47200,
+          "field": "text",
+          "id": "S3P1",
+          "source_id": "S3",
+          "start": 46000,
+          "text": "  ///\n1244    /// assert_eq!(iter.next(), Some(-1));\n1245    ///\n1246    /// // We have more elements that are less than zero, but since we already\n1247    /// // got a false, take_while() ignores the remaining elements.\n1248    /// assert_eq!(iter.next(), None);\n1249    /// ```\n1250    ///\n1251    /// Because `take_while()` needs to look at the value in order to see if it\n1252    /// should be included or not, consuming iterators will see that it is\n1253    /// removed:\n1254    ///\n1255    /// ```\n1256    /// let a = [1, 2, 3, 4];\n1257    /// let mut iter = a.into_iter();\n1258    ///\n1259    /// let result: Vec<i32> = iter.by_ref().take_while(|&n| n != 3).collect();\n1260    ///\n1261    /// assert_eq!(result, [1, 2]);\n1262    ///\n1263    /// let result: Vec<i32> = iter.collect();\n1264    ///\n1265    /// assert_eq!(result, [4]);\n1266    /// ```\n1267    ///\n1268    /// The `3` is no longer there, because it was consumed in order to see if\n1269    /// the iteration should stop, but wasn't placed back into the iterator.\n1270    #[inline]\n1271    #[stable(feature = \"rust1\", since = \"1.0.0\")]\n1272    fn take_while<P>(self, predicate: P) -> TakeWhile<Self, P>\n1273    where\n1274        Sel"
+        },
+        {
+          "document_version": "ff202b6de94dc6350ef16a488004cabf31ff19c23fdc125d7574a5212f10ed62",
+          "end": 45200,
+          "field": "text",
+          "id": "S3P2",
+          "source_id": "S3",
+          "start": 44000,
+          "text": "since we already got a false,\n1186    /// // skip_while() isn't used any more\n1187    /// assert_eq!(iter.next(), Some(-2));\n1188    ///\n1189    /// assert_eq!(iter.next(), None);\n1190    /// ```\n1191    #[inline]\n1192    #[doc(alias = \"drop_while\")]\n1193    #[stable(feature = \"rust1\", since = \"1.0.0\")]\n1194    fn skip_while<P>(self, predicate: P) -> SkipWhile<Self, P>\n1195    where\n1196        Self: Sized,\n1197        P: FnMut(&Self::Item) -> bool,\n1198    {\n1199        SkipWhile::new(self, predicate)\n1200    }\n1201\n1202    /// Creates an iterator that yields elements based on a predicate.\n1203    ///\n1204    /// `take_while()` takes a closure as an argument. It will call this\n1205    /// closure on each element of the iterator, and yield elements\n1206    /// while it returns `true`.\n1207    ///\n1208    /// After `false` is returned, `take_while()`'s job is over, and the\n1209    /// rest of the elements are ignored.\n1210    ///\n1211    /// # Examples\n1212    ///\n1213    /// Basic usage:\n1214    ///\n1215    /// ```\n1216    /// let a = [-1i32, 0, 1];\n1217    ///\n1218    /// let mut iter = a.into_iter().take_while(|x| x.is_negative());\n1219    ///\n1220    /// assert_eq!(iter.next(), "
+        },
+        {
+          "document_version": "ff202b6de94dc6350ef16a488004cabf31ff19c23fdc125d7574a5212f10ed62",
+          "end": 46200,
+          "field": "text",
+          "id": "S3P3",
+          "source_id": "S3",
+          "start": 45000,
+          "text": "e:\n1214    ///\n1215    /// ```\n1216    /// let a = [-1i32, 0, 1];\n1217    ///\n1218    /// let mut iter = a.into_iter().take_while(|x| x.is_negative());\n1219    ///\n1220    /// assert_eq!(iter.next(), Some(-1));\n1221    /// assert_eq!(iter.next(), None);\n1222    /// ```\n1223    ///\n1224    /// Because the closure passed to `take_while()` takes a reference, and many\n1225    /// iterators iterate over references, this leads to a possibly confusing\n1226    /// situation, where the type of the closure is a double reference:\n1227    ///\n1228    /// ```\n1229    /// let s = &[-1, 0, 1];\n1230    ///\n1231    /// let mut iter = s.iter().take_while(|x| **x < 0); // need two *s!\n1232    ///\n1233    /// assert_eq!(iter.next(), Some(&-1));\n1234    /// assert_eq!(iter.next(), None);\n1235    /// ```\n1236    ///\n1237    /// Stopping after an initial `false`:\n1238    ///\n1239    /// ```\n1240    /// let a = [-1, 0, 1, -2];\n1241    ///\n1242    /// let mut iter = a.into_iter().take_while(|&x| x < 0);\n1243    ///\n1244    /// assert_eq!(iter.next(), Some(-1));\n1245    ///\n1246    /// // We have more elements that are less than zero, but since we already\n1247    /// // got a false, take_while() ignores the"
+        },
+        {
+          "document_version": "2ca9be276f97210bd61a13faa62cc0cb07421426e15cc0927dfac684cb05f87b",
+          "end": 35200,
+          "field": "text",
+          "id": "S4P1",
+          "source_id": "S4",
+          "start": 34000,
+          "text": "ax for the basic iterating method each, the following three examples are equivalent:\n\n(0...42).each do |n|\n  puts n\nend\n\n\n...and...\n\nfor n in 0...42\n  puts n\nend\n\n\nor even shorter\n\n42.times do |n|\n  puts n\nend\n\n\nRuby can also iterate over fixed lists by using Enumerators and either calling their #next method or doing a for each on them, as above.\n\nRust\n\n[edit]\n\nRust makes use of external iterators throughout the standard library, including in its for loop, which implicitly calls the next() method of an iterator until it is consumed. The most basic for loop for example iterates over a std::ops::Range<Idx> type:\n\nfor i in 0..42 {\n    println!(\"{}\", i);\n}\n// Prints the numbers 0 to 41\n\n\nSpecifically, the for loop will call a value's into_iter() method, which returns an iterator that in turn yields the elements to the loop. The for loop (or indeed, any method that consumes the iterator), proceeds until the next() method returns a None value (iterations yielding elements return a Some(T) value, where T is the element type).\n\nAll collections provided by the standard library implement the std::iter::IntoIterator trait (meaning they define the into_iter() method). Iterators themselves impl"
+        },
+        {
+          "document_version": "2ca9be276f97210bd61a13faa62cc0cb07421426e15cc0927dfac684cb05f87b",
+          "end": 10200,
+          "field": "text",
+          "id": "S4P2",
+          "source_id": "S4",
+          "start": 9000,
+          "text": "dit]\n\nIterators can be categorised according to their functionality. Here is a (non-exhaustive) list of iterator categories:[10][11]\n\nCategory Languages\nBidirectional iterator C++, Rust[12]\nForward iterator C++\nInput iterator C++\nOutput iterator C++\nRandom access iterator C++\nTrivial iterator C++ (old STL)[13]\n\n\nTypes\n\n[edit]\n\nDifferent languages or libraries used with these languages define iterator types. Some of them are[14]\n\nType Languages\nArray iterator PHP, R[15]\nCaching iterator PHP\nConstant iterator C++,[16] PHP\nDirectory iterator PHP, Python\nFilter iterator PHP, R\nLimit iterator PHP\nList iterator C#, Java,[7] R\nRecursive array iterator PHP\nXML iterator PHP\n\n\nIn different programming languages\n\n[edit]\n\n.NET\n\n[edit]\n\nIterators in the .NET Framework (i.e. C#) are called \"enumerators\" and represented by the System.Collections.IEnumerator interface.[17]: 189–190, 344 [18]: 53–54 System.Collections.IEnumerator provides a MoveNext() method, which advances to the next element and indicates whether the end of the collection has been reached;[17]: 344 [18]: 55–56 [19]: 89 a Current property, to obtain the value of the element currently being pointed at;[17]: 344 [18]: 56 [19]: 89 an"
+        },
+        {
+          "document_version": "2ca9be276f97210bd61a13faa62cc0cb07421426e15cc0927dfac684cb05f87b",
+          "end": 1200,
+          "field": "text",
+          "id": "S4P3",
+          "source_id": "S4",
+          "start": 0,
+          "text": "Iterator\n\nالعربية\nCatalà\nČeština\nDeutsch\nEspañol\nفارسی\nFrançais\nעברית\nItaliano\n日本語\n한국어\nМакедонски\nNederlands\nPolski\nPortuguês\nРусский\nSrpskohrvatski / српскохрватски\nСрпски / srpski\nSvenska\nУкраїнська\n中文\n\n\nEdit links\n\nFrom Wikipedia, the free encyclopedia\n\nObject that enables processing collection items in order\n\nThis article needs more citations. Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed.\nFind sources: \"Iterator\" – news · newspapers · books · scholar · JSTOR (June 2010) (Learn how and when to remove this message)\n\nIn computer programming, an iterator is an object that progressively provides access to each item of a collection, in order.[1][2][3]\n\nA collection may provide multiple iterators via its interface that provide items in different orders, such as forwards and backwards.\n\nAn iterator is often implemented in terms of the structure underlying a collection implementation and is often tightly coupled to the collection to enable the operational semantics of the iterator.\n\nAn iterator is behaviorally similar to a database cursor.\n\nIterators date to the CLU programming language in 1974.[4]\n\nPattern\n\n["
+        }
+      ],
+      "claims": [],
+      "facets": [
+        "Сохраняет ли Rust Iterator::take_while элемент, на котором предикат вернул false, для последующего чтения того же итератора?",
+        "Проверить официальную документацию Rust по Iterator::take_while: поведение с первым false-элементом",
+        "Уточнить, потребляется ли false-элемент итератором take_while или остаётся доступным"
+      ],
+      "language": "ru",
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "news_window": null,
+      "question": "Сохраняет ли Rust Iterator::take_while первый элемент, на котором предикат вернул false, для последующего чтения того же итератора?",
+      "sources": [
+        {
+          "eligible": true,
+          "id": "S1",
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "title": "Trait Iterator Copy item path",
+          "url_preview": "https://doc.rust-lang.org/std/iter/trait.Iterator.html"
+        },
+        {
+          "eligible": true,
+          "id": "S2",
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "title": "Struct Peekable Copy item path",
+          "url_preview": "https://doc.rust-lang.org/nightly/core/iter/struct.Peekable.html"
+        },
+        {
+          "eligible": true,
+          "id": "S3",
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "title": "core/iter/traits/iterator.rs",
+          "url_preview": "https://doc.rust-lang.org/nightly/src/core/iter/traits/iterator.rs.html"
+        },
+        {
+          "eligible": true,
+          "id": "S4",
+          "publication": {
+            "date_status": "valid",
+            "kind": "article",
+            "published_date": "2003-01-22",
+            "witness_count": 1,
+            "witnesses": [
+              {
+                "date": "2003-01-22",
+                "raw": "2003-01-22T11:49:18Z",
+                "source": "jsonld.datePublished",
+                "timestamp": "2003-01-22T11:49:18+00:00"
+              }
+            ],
+            "witnesses_limited": false
+          },
+          "title": "Iterator",
+          "url_preview": "https://en.wikipedia.org/wiki/Iterator"
+        }
+      ],
+      "unresolved_conflicts": []
+    },
+    "draft": {
+      "claims": [
+        {
+          "evidence": [
+            {
+              "chunk_id": "S1P1",
+              "quote": "After false is returned, take_while()’s job is over, and the rest of the elements are ignored."
+            },
+            {
+              "chunk_id": "S3P2",
+              "quote": "After `false` is returned, `take_while()`'s job is over, and the\n    /// rest of the elements are ignored."
+            }
+          ],
+          "facets": [
+            0,
+            1,
+            2
+          ],
+          "kind": "fact",
+          "rationale": "",
+          "text": "После того как предикат take_while вернул false, работа take_while завершается, а остальные элементы игнорируются."
+        },
+        {
+          "evidence": [
+            {
+              "chunk_id": "S1P2",
+              "quote": "The 3 is no longer there, because it was consumed in order to see if the iteration should stop, but wasn’t placed back into the iterator."
+            },
+            {
+              "chunk_id": "S3P1",
+              "quote": "The `3` is no longer there, because it was consumed in order to see if\n    /// the iteration should stop, but wasn't placed back into the iterator."
+            }
+          ],
+          "facets": [
+            0,
+            2
+          ],
+          "kind": "fact",
+          "rationale": "",
+          "text": "Элемент, на котором предикат вернул false, потребляется для проверки и не возвращается обратно в итератор."
+        },
+        {
+          "evidence": [
+            {
+              "chunk_id": "S1P2",
+              "quote": "let result: Vec<i32> = iter.collect();\n\nassert_eq!(result, [4]);"
+            },
+            {
+              "chunk_id": "S3P1",
+              "quote": "assert_eq!(result, [4]);"
+            }
+          ],
+          "facets": [
+            0,
+            2
+          ],
+          "kind": "fact",
+          "rationale": "",
+          "text": "В примере с [1, 2, 3, 4] после take_while(|&n| n != 3) последующий collect по тому же итератору даёт [4], то есть 3 недоступен."
+        }
+      ],
+      "next": {
+        "facet": 0,
+        "query": ""
+      }
+    },
+    "capture_sha256": "af5e372c2903faf0fd4663742405988ba3458ce53c7a6b9d629ae15f05e3892d"
+  }
+}

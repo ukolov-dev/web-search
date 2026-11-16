@@ -1,0 +1,898 @@
+{
+  "queries": 12,
+  "candidates": 201,
+  "serp_positive": 12,
+  "body_positive": 18,
+  "paired_initial_valid_ids": [
+    "n02",
+    "n03",
+    "n04",
+    "n05",
+    "n07",
+    "n10",
+    "n11",
+    "n12"
+  ],
+  "invalid_initial_ids": [
+    "n01",
+    "n06",
+    "n08",
+    "n09"
+  ],
+  "groups": {
+    "all12_availability_adjusted": {
+      "SERP": {
+        "baseline": {
+          "queries": 12,
+          "tp": 1,
+          "fp": 0,
+          "fn": 11,
+          "tn": 189,
+          "precision": 1.0,
+          "recall": 0.08333333333333333,
+          "fpr": 0.0,
+          "macro_recall_positive_queries": 0.16666666666666666,
+          "returned_direct_fp": 0,
+          "known_relevant_top10": 11
+        },
+        "layer": {
+          "queries": 12,
+          "tp": 1,
+          "fp": 0,
+          "fn": 11,
+          "tn": 189,
+          "precision": 1.0,
+          "recall": 0.08333333333333333,
+          "fpr": 0.0,
+          "macro_recall_positive_queries": 0.16666666666666666,
+          "returned_direct_fp": 0,
+          "known_relevant_top10": 11
+        }
+      },
+      "BODY": {
+        "baseline": {
+          "queries": 12,
+          "tp": 5,
+          "fp": 0,
+          "fn": 13,
+          "tn": 183,
+          "precision": 1.0,
+          "recall": 0.2777777777777778,
+          "fpr": 0.0,
+          "macro_recall_positive_queries": 0.21875,
+          "returned_direct_fp": 0,
+          "known_relevant_top10": 17
+        },
+        "layer": {
+          "queries": 12,
+          "tp": 3,
+          "fp": 0,
+          "fn": 15,
+          "tn": 183,
+          "precision": 1.0,
+          "recall": 0.16666666666666666,
+          "fpr": 0.0,
+          "macro_recall_positive_queries": 0.1875,
+          "returned_direct_fp": 0,
+          "known_relevant_top10": 17
+        }
+      },
+      "BODY_strict_sensitivity": {
+        "baseline": {
+          "queries": 12,
+          "tp": 5,
+          "fp": 0,
+          "fn": 6,
+          "tn": 190,
+          "precision": 1.0,
+          "recall": 0.45454545454545453,
+          "fpr": 0.0,
+          "macro_recall_positive_queries": 0.30952380952380953,
+          "returned_direct_fp": 0,
+          "known_relevant_top10": 11
+        },
+        "layer": {
+          "queries": 12,
+          "tp": 3,
+          "fp": 0,
+          "fn": 8,
+          "tn": 190,
+          "precision": 1.0,
+          "recall": 0.2727272727272727,
+          "fpr": 0.0,
+          "macro_recall_positive_queries": 0.21428571428571427,
+          "returned_direct_fp": 0,
+          "known_relevant_top10": 11
+        }
+      },
+      "BODY_delta_bootstrap_ci95": {
+        "recall_delta": [
+          -0.2,
+          0.0
+        ],
+        "precision_delta": [
+          0.0,
+          0.0
+        ],
+        "fp_delta": [
+          0,
+          0
+        ]
+      }
+    },
+    "paired_initial_valid": {
+      "SERP": {
+        "baseline": {
+          "queries": 8,
+          "tp": 1,
+          "fp": 0,
+          "fn": 6,
+          "tn": 121,
+          "precision": 1.0,
+          "recall": 0.14285714285714285,
+          "fpr": 0.0,
+          "macro_recall_positive_queries": 0.5,
+          "returned_direct_fp": 0,
+          "known_relevant_top10": 6
+        },
+        "layer": {
+          "queries": 8,
+          "tp": 1,
+          "fp": 0,
+          "fn": 6,
+          "tn": 121,
+          "precision": 1.0,
+          "recall": 0.14285714285714285,
+          "fpr": 0.0,
+          "macro_recall_positive_queries": 0.5,
+          "returned_direct_fp": 0,
+          "known_relevant_top10": 6
+        }
+      },
+      "BODY": {
+        "baseline": {
+          "queries": 8,
+          "tp": 5,
+          "fp": 0,
+          "fn": 8,
+          "tn": 115,
+          "precision": 1.0,
+          "recall": 0.38461538461538464,
+          "fpr": 0.0,
+          "macro_recall_positive_queries": 0.4375,
+          "returned_direct_fp": 0,
+          "known_relevant_top10": 12
+        },
+        "layer": {
+          "queries": 8,
+          "tp": 3,
+          "fp": 0,
+          "fn": 10,
+          "tn": 115,
+          "precision": 1.0,
+          "recall": 0.23076923076923078,
+          "fpr": 0.0,
+          "macro_recall_positive_queries": 0.375,
+          "returned_direct_fp": 0,
+          "known_relevant_top10": 12
+        }
+      },
+      "BODY_strict_sensitivity": {
+        "baseline": {
+          "queries": 8,
+          "tp": 5,
+          "fp": 0,
+          "fn": 3,
+          "tn": 120,
+          "precision": 1.0,
+          "recall": 0.625,
+          "fpr": 0.0,
+          "macro_recall_positive_queries": 0.5416666666666666,
+          "returned_direct_fp": 0,
+          "known_relevant_top10": 8
+        },
+        "layer": {
+          "queries": 8,
+          "tp": 3,
+          "fp": 0,
+          "fn": 5,
+          "tn": 120,
+          "precision": 1.0,
+          "recall": 0.375,
+          "fpr": 0.0,
+          "macro_recall_positive_queries": 0.375,
+          "returned_direct_fp": 0,
+          "known_relevant_top10": 8
+        }
+      },
+      "BODY_delta_bootstrap_ci95": {
+        "recall_delta": [
+          -0.23529411764705882,
+          0.0
+        ],
+        "precision_delta": [
+          0.0,
+          0.0
+        ],
+        "fp_delta": [
+          0,
+          0
+        ]
+      }
+    }
+  },
+  "per_case": [
+    {
+      "id": "n01",
+      "query": "SQLite BEGIN DEFERRED BEGIN IMMEDIATE SQLITE_BUSY различие транзакций",
+      "initial_valid": false,
+      "first_evidence_valid": false,
+      "baseline": {
+        "queries": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "tn": 14,
+        "precision": null,
+        "recall": 0.0,
+        "fpr": 0.0,
+        "macro_recall_positive_queries": 0.0,
+        "returned_direct_fp": 0,
+        "known_relevant_top10": 1
+      },
+      "layer": {
+        "queries": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "tn": 14,
+        "precision": null,
+        "recall": 0.0,
+        "fpr": 0.0,
+        "macro_recall_positive_queries": 0.0,
+        "returned_direct_fp": 0,
+        "known_relevant_top10": 1
+      },
+      "errors": [],
+      "rejected": {},
+      "shared_initial_ms": 21776,
+      "baseline_model_ms": 21776,
+      "layer_logical_model_ms": 21776,
+      "layer_physical_ms": 0,
+      "cached_reads": 0,
+      "network_reads": 0
+    },
+    {
+      "id": "n02",
+      "query": "Rust Pin Unpin самоссылочные структуры перемещение документация",
+      "initial_valid": true,
+      "first_evidence_valid": true,
+      "baseline": {
+        "queries": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "tn": 8,
+        "precision": 1.0,
+        "recall": 0.5,
+        "fpr": 0.0,
+        "macro_recall_positive_queries": 0.5,
+        "returned_direct_fp": 0,
+        "known_relevant_top10": 2
+      },
+      "layer": {
+        "queries": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "tn": 8,
+        "precision": 1.0,
+        "recall": 0.5,
+        "fpr": 0.0,
+        "macro_recall_positive_queries": 0.5,
+        "returned_direct_fp": 0,
+        "known_relevant_top10": 2
+      },
+      "errors": [],
+      "rejected": {
+        "C006": "unverified or uncovered requirements: R3",
+        "C007": "unverified or uncovered requirements: R3"
+      },
+      "shared_initial_ms": 7819,
+      "baseline_model_ms": 21767,
+      "layer_logical_model_ms": 11475,
+      "layer_physical_ms": 3879,
+      "cached_reads": 3,
+      "network_reads": 0
+    },
+    {
+      "id": "n03",
+      "query": "Python asyncio shield wait_for отмена задачи при timeout",
+      "initial_valid": true,
+      "first_evidence_valid": true,
+      "baseline": {
+        "queries": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 13,
+        "precision": null,
+        "recall": null,
+        "fpr": 0.0,
+        "macro_recall_positive_queries": null,
+        "returned_direct_fp": 0,
+        "known_relevant_top10": 0
+      },
+      "layer": {
+        "queries": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 13,
+        "precision": null,
+        "recall": null,
+        "fpr": 0.0,
+        "macro_recall_positive_queries": null,
+        "returned_direct_fp": 0,
+        "known_relevant_top10": 0
+      },
+      "errors": [
+        "C012: host_disabled"
+      ],
+      "rejected": {
+        "C001": "unverified or uncovered requirements: R0,R1,R3,literal:wait_for",
+        "C003": "unverified or uncovered requirements: R0,R1,R2,R3,literal:wait_for",
+        "C004": "unverified or uncovered requirements: R2,R3,literal:wait_for",
+        "C005": "unverified or uncovered requirements: R0,R1,R2,R3,literal:wait_for",
+        "C007": "unverified or uncovered requirements: R3",
+        "C008": "unverified or uncovered requirements: R1",
+        "C010": "unverified or uncovered requirements: R0,R1,R2,R3,literal:wait_for",
+        "C011": "unverified or uncovered requirements: R0,R1,R2,R3,literal:wait_for",
+        "C012": "unverified or uncovered requirements: R2,R3,literal:wait_for",
+        "C013": "unverified or uncovered requirements: R0,R1,R2,R3,literal:wait_for"
+      },
+      "shared_initial_ms": 10814,
+      "baseline_model_ms": 15197,
+      "layer_logical_model_ms": 15461,
+      "layer_physical_ms": 4713,
+      "cached_reads": 3,
+      "network_reads": 0
+    },
+    {
+      "id": "n04",
+      "query": "PostgreSQL INSERT ON CONFLICT DO UPDATE WHERE excluded условие обновления",
+      "initial_valid": true,
+      "first_evidence_valid": true,
+      "baseline": {
+        "queries": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 18,
+        "precision": null,
+        "recall": null,
+        "fpr": 0.0,
+        "macro_recall_positive_queries": null,
+        "returned_direct_fp": 0,
+        "known_relevant_top10": 0
+      },
+      "layer": {
+        "queries": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 18,
+        "precision": null,
+        "recall": null,
+        "fpr": 0.0,
+        "macro_recall_positive_queries": null,
+        "returned_direct_fp": 0,
+        "known_relevant_top10": 0
+      },
+      "errors": [],
+      "rejected": {
+        "C002": "unverified or uncovered requirements: R3,literal:WHERE",
+        "C004": "unverified or uncovered requirements: R0,R2,R3,literal:WHERE",
+        "C008": "unverified or uncovered requirements: R0,R1,R2,R3,literal:CONFLICT,literal:DO,literal:INSERT,literal:ON,literal:PostgreSQL,literal:UPDATE,literal:WHERE",
+        "C009": "unverified or uncovered requirements: R3,literal:WHERE",
+        "C010": "unverified or uncovered requirements: R0,R1,R2,R3,literal:CONFLICT,literal:DO,literal:INSERT,literal:ON,literal:PostgreSQL,literal:UPDATE,literal:WHERE",
+        "C011": "unverified or uncovered requirements: R3,literal:PostgreSQL",
+        "C012": "unverified or uncovered requirements: R0,R1,R2,R3,literal:CONFLICT,literal:DO,literal:INSERT,literal:ON,literal:PostgreSQL,literal:UPDATE,literal:WHERE",
+        "C015": "unverified or uncovered requirements: R3",
+        "C017": "unverified or uncovered requirements: R0,R1,R2,R3,literal:CONFLICT,literal:DO,literal:INSERT,literal:ON,literal:PostgreSQL,literal:UPDATE,literal:WHERE",
+        "C018": "unverified or uncovered requirements: R3,literal:WHERE"
+      },
+      "shared_initial_ms": 20003,
+      "baseline_model_ms": 31821,
+      "layer_logical_model_ms": 25219,
+      "layer_physical_ms": 5518,
+      "cached_reads": 4,
+      "network_reads": 0
+    },
+    {
+      "id": "n05",
+      "query": "Docker Compose depends_on service_healthy порядок запуска и перезапуск зависимостей",
+      "initial_valid": true,
+      "first_evidence_valid": false,
+      "baseline": {
+        "queries": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "tn": 11,
+        "precision": null,
+        "recall": 0.0,
+        "fpr": 0.0,
+        "macro_recall_positive_queries": 0.0,
+        "returned_direct_fp": 0,
+        "known_relevant_top10": 1
+      },
+      "layer": {
+        "queries": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "tn": 11,
+        "precision": null,
+        "recall": 0.0,
+        "fpr": 0.0,
+        "macro_recall_positive_queries": 0.0,
+        "returned_direct_fp": 0,
+        "known_relevant_top10": 1
+      },
+      "errors": [
+        "evidence status/provenance mismatch"
+      ],
+      "rejected": {
+        "C001": "unverified or uncovered requirements: literal:depends_on,literal:service_healthy",
+        "C002": "unverified or uncovered requirements: literal:depends_on,literal:service_healthy",
+        "C003": "unverified or uncovered requirements: literal:depends_on,literal:service_healthy",
+        "C005": "unverified or uncovered requirements: literal:depends_on,literal:service_healthy",
+        "C008": "unverified or uncovered requirements: literal:depends_on,literal:service_healthy",
+        "C009": "unverified or uncovered requirements: literal:depends_on,literal:service_healthy",
+        "C010": "unverified or uncovered requirements: literal:depends_on,literal:service_healthy",
+        "C011": "unverified or uncovered requirements: literal:depends_on,literal:service_healthy",
+        "C012": "unverified or uncovered requirements: literal:depends_on,literal:service_healthy"
+      },
+      "shared_initial_ms": 6277,
+      "baseline_model_ms": 23591,
+      "layer_logical_model_ms": 9097,
+      "layer_physical_ms": 2824,
+      "cached_reads": 0,
+      "network_reads": 0
+    },
+    {
+      "id": "n06",
+      "query": "CSS position sticky overflow hidden scroll ancestor поведение",
+      "initial_valid": false,
+      "first_evidence_valid": false,
+      "baseline": {
+        "queries": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "tn": 18,
+        "precision": null,
+        "recall": 0.0,
+        "fpr": 0.0,
+        "macro_recall_positive_queries": 0.0,
+        "returned_direct_fp": 0,
+        "known_relevant_top10": 2
+      },
+      "layer": {
+        "queries": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "tn": 18,
+        "precision": null,
+        "recall": 0.0,
+        "fpr": 0.0,
+        "macro_recall_positive_queries": 0.0,
+        "returned_direct_fp": 0,
+        "known_relevant_top10": 2
+      },
+      "errors": [],
+      "rejected": {},
+      "shared_initial_ms": 21110,
+      "baseline_model_ms": 21110,
+      "layer_logical_model_ms": 21110,
+      "layer_physical_ms": 0,
+      "cached_reads": 0,
+      "network_reads": 0
+    },
+    {
+      "id": "n07",
+      "query": "git pull --rebase --autostash conflicts documentation",
+      "initial_valid": true,
+      "first_evidence_valid": false,
+      "baseline": {
+        "queries": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 20,
+        "precision": null,
+        "recall": null,
+        "fpr": 0.0,
+        "macro_recall_positive_queries": null,
+        "returned_direct_fp": 0,
+        "known_relevant_top10": 0
+      },
+      "layer": {
+        "queries": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 20,
+        "precision": null,
+        "recall": null,
+        "fpr": 0.0,
+        "macro_recall_positive_queries": null,
+        "returned_direct_fp": 0,
+        "known_relevant_top10": 0
+      },
+      "errors": [
+        "evidence status/provenance mismatch"
+      ],
+      "rejected": {
+        "C001": "unverified or uncovered requirements: literal:--autostash,literal:--rebase",
+        "C002": "unverified or uncovered requirements: literal:--autostash,literal:--rebase",
+        "C003": "unverified or uncovered requirements: literal:--autostash,literal:--rebase",
+        "C004": "unverified or uncovered requirements: literal:--autostash,literal:--rebase",
+        "C006": "unverified or uncovered requirements: literal:--autostash,literal:--rebase",
+        "C007": "unverified or uncovered requirements: literal:--autostash,literal:--rebase",
+        "C009": "unverified or uncovered requirements: literal:--autostash,literal:--rebase",
+        "C011": "unverified or uncovered requirements: literal:--autostash,literal:--rebase",
+        "C012": "unverified or uncovered requirements: literal:--autostash,literal:--rebase",
+        "C013": "unverified or uncovered requirements: literal:--autostash,literal:--rebase"
+      },
+      "shared_initial_ms": 15014,
+      "baseline_model_ms": 15014,
+      "layer_logical_model_ms": 21440,
+      "layer_physical_ms": 6431,
+      "cached_reads": 0,
+      "network_reads": 0
+    },
+    {
+      "id": "n08",
+      "query": "HTTP Retry-After 429 503 seconds HTTP-date behavior",
+      "initial_valid": false,
+      "first_evidence_valid": false,
+      "baseline": {
+        "queries": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "tn": 19,
+        "precision": null,
+        "recall": 0.0,
+        "fpr": 0.0,
+        "macro_recall_positive_queries": 0.0,
+        "returned_direct_fp": 0,
+        "known_relevant_top10": 1
+      },
+      "layer": {
+        "queries": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "tn": 19,
+        "precision": null,
+        "recall": 0.0,
+        "fpr": 0.0,
+        "macro_recall_positive_queries": 0.0,
+        "returned_direct_fp": 0,
+        "known_relevant_top10": 1
+      },
+      "errors": [],
+      "rejected": {},
+      "shared_initial_ms": 18485,
+      "baseline_model_ms": 18485,
+      "layer_logical_model_ms": 18485,
+      "layer_physical_ms": 0,
+      "cached_reads": 0,
+      "network_reads": 0
+    },
+    {
+      "id": "n09",
+      "query": "Tokio select cancellation safety read_exact recv documentation",
+      "initial_valid": false,
+      "first_evidence_valid": false,
+      "baseline": {
+        "queries": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "tn": 17,
+        "precision": null,
+        "recall": 0.0,
+        "fpr": 0.0,
+        "macro_recall_positive_queries": 0.0,
+        "returned_direct_fp": 0,
+        "known_relevant_top10": 1
+      },
+      "layer": {
+        "queries": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "tn": 17,
+        "precision": null,
+        "recall": 0.0,
+        "fpr": 0.0,
+        "macro_recall_positive_queries": 0.0,
+        "returned_direct_fp": 0,
+        "known_relevant_top10": 1
+      },
+      "errors": [],
+      "rejected": {},
+      "shared_initial_ms": 14691,
+      "baseline_model_ms": 14691,
+      "layer_logical_model_ms": 14691,
+      "layer_physical_ms": 0,
+      "cached_reads": 0,
+      "network_reads": 0
+    },
+    {
+      "id": "n10",
+      "query": "JavaScript Array sort toSorted mutation ES2023 difference",
+      "initial_valid": true,
+      "first_evidence_valid": true,
+      "baseline": {
+        "queries": 1,
+        "tp": 2,
+        "fp": 0,
+        "fn": 6,
+        "tn": 10,
+        "precision": 1.0,
+        "recall": 0.25,
+        "fpr": 0.0,
+        "macro_recall_positive_queries": 0.25,
+        "returned_direct_fp": 0,
+        "known_relevant_top10": 7
+      },
+      "layer": {
+        "queries": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 8,
+        "tn": 10,
+        "precision": null,
+        "recall": 0.0,
+        "fpr": 0.0,
+        "macro_recall_positive_queries": 0.0,
+        "returned_direct_fp": 0,
+        "known_relevant_top10": 7
+      },
+      "errors": [
+        "evidence status/provenance mismatch"
+      ],
+      "rejected": {
+        "C001": "unverified or uncovered requirements: R2,R3,literal:ES2023,literal:JavaScript",
+        "C004": "unverified or uncovered requirements: R0,R1,R2,R3,literal:ES2023,literal:JavaScript,literal:toSorted",
+        "C005": "unverified or uncovered requirements: R0,R1,R2,R3,literal:ES2023,literal:JavaScript,literal:toSorted",
+        "C006": "unverified or uncovered requirements: R2,R3,literal:ES2023,literal:JavaScript",
+        "C007": "unverified or uncovered requirements: R3,literal:ES2023,literal:JavaScript",
+        "C014": "unverified or uncovered requirements: literal:ES2023,literal:JavaScript",
+        "C015": "unverified or uncovered requirements: R2,R3,literal:ES2023",
+        "C016": "unverified or uncovered requirements: R3,literal:ES2023,literal:JavaScript",
+        "C017": "unverified or uncovered requirements: R0,R1,R2,R3,literal:ES2023,literal:JavaScript,literal:toSorted",
+        "C018": "unverified or uncovered requirements: R0,R1,R2,R3,literal:ES2023,literal:JavaScript,literal:toSorted"
+      },
+      "shared_initial_ms": 19096,
+      "baseline_model_ms": 27007,
+      "layer_logical_model_ms": 25551,
+      "layer_physical_ms": 6573,
+      "cached_reads": 4,
+      "network_reads": 0
+    },
+    {
+      "id": "n11",
+      "query": "Redis SET NX PX GET return value existing key documentation",
+      "initial_valid": true,
+      "first_evidence_valid": true,
+      "baseline": {
+        "queries": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 19,
+        "precision": null,
+        "recall": null,
+        "fpr": 0.0,
+        "macro_recall_positive_queries": null,
+        "returned_direct_fp": 0,
+        "known_relevant_top10": 0
+      },
+      "layer": {
+        "queries": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 19,
+        "precision": null,
+        "recall": null,
+        "fpr": 0.0,
+        "macro_recall_positive_queries": null,
+        "returned_direct_fp": 0,
+        "known_relevant_top10": 0
+      },
+      "errors": [
+        "C016: host_disabled",
+        "C019: extraction_failed: DOM element limit",
+        "C012: host_disabled",
+        "evidence status/provenance mismatch"
+      ],
+      "rejected": {
+        "C001": "unverified or uncovered requirements: R2,literal:PX",
+        "C005": "unverified or uncovered requirements: R0,R1,R2,R3,literal:GET,literal:NX,literal:PX,literal:SET",
+        "C006": "unverified or uncovered requirements: R0,R1,R2,R3,literal:GET,literal:NX,literal:PX,literal:SET",
+        "C008": "unverified or uncovered requirements: R0,R1,R2,R3,literal:GET,literal:NX,literal:PX,literal:SET",
+        "C009": "unverified or uncovered requirements: R0,R1,R2,R3,literal:GET,literal:NX,literal:PX,literal:SET",
+        "C011": "unverified or uncovered requirements: R0,R1,R2,R3,literal:GET,literal:NX,literal:PX,literal:SET",
+        "C012": "unverified or uncovered requirements: R0,R1,R2,R3,literal:GET,literal:NX,literal:PX,literal:SET",
+        "C015": "unverified or uncovered requirements: R0,R1,R2,R3,literal:GET,literal:NX,literal:PX,literal:SET",
+        "C016": "unverified or uncovered requirements: R2,R3",
+        "C019": "unverified or uncovered requirements: R0,R1,R2,R3,literal:GET,literal:NX,literal:PX,literal:SET"
+      },
+      "shared_initial_ms": 13022,
+      "baseline_model_ms": 15825,
+      "layer_logical_model_ms": 19793,
+      "layer_physical_ms": 7760,
+      "cached_reads": 1,
+      "network_reads": 1
+    },
+    {
+      "id": "n12",
+      "query": "curl --resolve --connect-to Host TLS SNI difference",
+      "initial_valid": true,
+      "first_evidence_valid": true,
+      "baseline": {
+        "queries": 1,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "tn": 16,
+        "precision": 1.0,
+        "recall": 1.0,
+        "fpr": 0.0,
+        "macro_recall_positive_queries": 1.0,
+        "returned_direct_fp": 0,
+        "known_relevant_top10": 2
+      },
+      "layer": {
+        "queries": 1,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "tn": 16,
+        "precision": 1.0,
+        "recall": 1.0,
+        "fpr": 0.0,
+        "macro_recall_positive_queries": 1.0,
+        "returned_direct_fp": 0,
+        "known_relevant_top10": 2
+      },
+      "errors": [
+        "C005: fetch_timeout",
+        "C002: host_disabled",
+        "C018: host_disabled"
+      ],
+      "rejected": {
+        "C002": "unverified or uncovered requirements: R0,R1,R2,R3,literal:--connect-to,literal:--resolve,literal:SNI,literal:TLS",
+        "C005": "unverified or uncovered requirements: R0,R1,literal:--connect-to,literal:--resolve",
+        "C006": "unverified or uncovered requirements: R0,R1,R2,literal:--connect-to,literal:--resolve",
+        "C009": "unverified or uncovered requirements: R0,R1,R2,R3,literal:--connect-to,literal:--resolve,literal:SNI,literal:TLS",
+        "C011": "unverified or uncovered requirements: R0,R1,R2,literal:--connect-to,literal:--resolve",
+        "C015": "unverified or uncovered requirements: R0,R1,R2,R3,literal:--connect-to,literal:--resolve,literal:SNI,literal:TLS",
+        "C016": "unverified or uncovered requirements: R0,R1,R2,R3,literal:--connect-to,literal:--resolve,literal:SNI,literal:TLS",
+        "C018": "unverified or uncovered requirements: R2,literal:--connect-to"
+      },
+      "shared_initial_ms": 14829,
+      "baseline_model_ms": 24744,
+      "layer_logical_model_ms": 18950,
+      "layer_physical_ms": 19186,
+      "cached_reads": 1,
+      "network_reads": 1
+    }
+  ],
+  "physical_usage": {
+    "baseline": {
+      "calls": 23,
+      "known_cost_usd": 0.008429222,
+      "unknown_cost_calls": 0,
+      "completion_tokens": 25370,
+      "reasoning_tokens": 23692,
+      "call_latency_median_ms": 10814,
+      "providers": {
+        "Morph": 23
+      },
+      "finishes": {
+        "length": 6,
+        "stop": 17
+      }
+    },
+    "layer-live": {
+      "calls": 9,
+      "known_cost_usd": 0.008293932,
+      "unknown_cost_calls": 0,
+      "completion_tokens": 28376,
+      "reasoning_tokens": 27661,
+      "call_latency_median_ms": 33851,
+      "providers": {
+        "Morph": 9
+      },
+      "finishes": {
+        "length": 7,
+        "stop": 2
+      }
+    },
+    "layer-final": {
+      "calls": 11,
+      "known_cost_usd": 0.009526464,
+      "unknown_cost_calls": 0,
+      "completion_tokens": 32523,
+      "reasoning_tokens": 30563,
+      "call_latency_median_ms": 30233,
+      "providers": {
+        "Morph": 11
+      },
+      "finishes": {
+        "stop": 5,
+        "length": 6
+      }
+    },
+    "layer-production": {
+      "calls": 14,
+      "known_cost_usd": 0.002355461,
+      "unknown_cost_calls": 0,
+      "completion_tokens": 4925,
+      "reasoning_tokens": 0,
+      "call_latency_median_ms": 2591.5,
+      "providers": {
+        "Morph": 14
+      },
+      "finishes": {
+        "stop": 14
+      }
+    }
+  },
+  "logical_baseline_cost_usd": 0.008429222,
+  "logical_layer_cost_usd": 0.008937015,
+  "total_known_experiment_cost_usd": 0.028605079000000002,
+  "shared_initial_usage": {
+    "calls": 12,
+    "known_cost_usd": 0.006581554,
+    "unknown_cost_calls": 0,
+    "completion_tokens": 20452,
+    "reasoning_tokens": 18949,
+    "call_latency_median_ms": 14921.5,
+    "providers": {
+      "Morph": 12
+    },
+    "finishes": {
+      "length": 4,
+      "stop": 8
+    }
+  },
+  "verification": {
+    "passed": true,
+    "paired_pools": true,
+    "identical_shared_initial_calls": true,
+    "source_range_proofs": 5,
+    "no_unverified_direct": true,
+    "max3_calls_max4_reads": true,
+    "max24000_context_chars": true,
+    "serp_gold_frozen_before_layer": true,
+    "body_gold_frozen_before_metrics": true
+  },
+  "notes": [
+    "New12 queries, single author judgments, not independent acceptance.",
+    "SERP gold fixed before layer inference; body-aware gold before prediction-quality inspection.",
+    "Repeated technical high/low trials retained; final none reviewer, initial classifier unchanged.",
+    "Body snapshots selected mainly by old baseline; same cached bytes on shared reads.",
+    "No full-web recall claim. Availability-adjusted invalid initial cases produce no direct.",
+    "Reported cost excludes unreported cost of separate release MCP smoke."
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "schema": "news-coverage-restored-v2",
+  "source": {
+    "call_path": "runs/news-coverage-2026-11-03/old-replay-fixed/old-nn03-evidence-round1.json",
+    "sha256": "cb9d66ebf7dfb443236790c5977091313ec85865349bf2f94be202e5b2c6826b",
+    "origin": "Actual new stage-only coverage reply on hash-restored old NN03 sources. It is not the unavailable historical NN03 model reply.",
+    "source_integrity": {
+      "status": "all_source_fields_and_ranges_verified",
+      "primary": "runs/news-navigation-2026-11-03/benchmark/fixed/nn03.json",
+      "originals": "runs/news-navigation-2026-11-03/benchmark/blind/source-native-documents.json",
+      "source_ids": [
+        "C022",
+        "C023"
+      ],
+      "fields": [
+        {
+          "id": "C022",
+          "passage": "T",
+          "field": "title",
+          "full_field_hash_verified": true,
+          "normalized_full_field_hash_verified": true,
+          "range_utf8_verified": true,
+          "restored_passage_sha256": "2b561f247a7e567bad49b531805ddf0543d086fb3c4e35ab253afc39bd81cb8d"
+        },
+        {
+          "id": "C022",
+          "passage": "S",
+          "field": "snippet",
+          "full_field_hash_verified": true,
+          "normalized_full_field_hash_verified": true,
+          "range_utf8_verified": true,
+          "restored_passage_sha256": "fb83eabe6f6ab786b9d5dce47d9a3b43203d06b1e05af75be856eb4e29168ff8"
+        },
+        {
+          "id": "C022",
+          "passage": "B1",
+          "field": "body",
+          "full_field_hash_verified": true,
+          "normalized_full_field_hash_verified": true,
+          "range_utf8_verified": true,
+          "restored_passage_sha256": "be8e5f7dff048f4485a4a87e2e6781ca75035d585e62bb5d8355a3f1ac4eff4f"
+        },
+        {
+          "id": "C022",
+          "passage": "D1",
+          "field": "publication_date",
+          "full_field_hash_verified": true,
+          "normalized_full_field_hash_verified": true,
+          "range_utf8_verified": true,
+          "restored_passage_sha256": "8ff849ca691ee4898a3af235f228e8e87e97f7afb966a7b1fc78c33b25747a8f"
+        },
+        {
+          "id": "C022",
+          "passage": "H",
+          "field": "page_title",
+          "full_field_hash_verified": true,
+          "normalized_full_field_hash_verified": true,
+          "range_utf8_verified": true,
+          "restored_passage_sha256": "2b561f247a7e567bad49b531805ddf0543d086fb3c4e35ab253afc39bd81cb8d"
+        },
+        {
+          "id": "C023",
+          "passage": "T",
+          "field": "title",
+          "full_field_hash_verified": true,
+          "normalized_full_field_hash_verified": true,
+          "range_utf8_verified": true,
+          "restored_passage_sha256": "13c546f0e1995f84e2a0bcfa0eafd15a465b59d0f7574aa6da9c4e1a4fb58bc0"
+        },
+        {
+          "id": "C023",
+          "passage": "S",
+          "field": "snippet",
+          "full_field_hash_verified": true,
+          "normalized_full_field_hash_verified": true,
+          "range_utf8_verified": true,
+          "restored_passage_sha256": "8a21130d705ab5878e35f673552d71f5b70f47db3e9f0e75b2b86474fbd283e0"
+        },
+        {
+          "id": "C023",
+          "passage": "B1",
+          "field": "body",
+          "full_field_hash_verified": true,
+          "normalized_full_field_hash_verified": true,
+          "range_utf8_verified": true,
+          "restored_passage_sha256": "9262637b048c7a3a9cb724c927f248e4343cf966eadaa96aa6163c977d3bcb23"
+        },
+        {
+          "id": "C023",
+          "passage": "B2",
+          "field": "body",
+          "full_field_hash_verified": true,
+          "normalized_full_field_hash_verified": true,
+          "range_utf8_verified": true,
+          "restored_passage_sha256": "3ba99ad54e6505dcf506de753c87cd345de671b4fbb4aacc28e7eb832876027d"
+        },
+        {
+          "id": "C023",
+          "passage": "D1",
+          "field": "publication_date",
+          "full_field_hash_verified": true,
+          "normalized_full_field_hash_verified": true,
+          "range_utf8_verified": true,
+          "restored_passage_sha256": "13dbde1c64aab8e764e8f26347db1ba9c8a05eff9ce006a6b6d506390000d5a0"
+        },
+        {
+          "id": "C023",
+          "passage": "H",
+          "field": "page_title",
+          "full_field_hash_verified": true,
+          "normalized_full_field_hash_verified": true,
+          "range_utf8_verified": true,
+          "restored_passage_sha256": "13c546f0e1995f84e2a0bcfa0eafd15a465b59d0f7574aa6da9c4e1a4fb58bc0"
+        }
+      ],
+      "context_sha256_sorted_compact_json": "b877b73e3eaf0e738a2f0fde1e26977f1478a86a172aadb944f0028b53913b47",
+      "limits": [
+        "The historical model response was not published by production MCP and cannot be restored.",
+        "Exact source texts/ranges/hashes and trusted clock are restored. This is a coverage-stage source replay, not a new retrieval benchmark.",
+        "Originals were fetched later, but both raw body hashes and every normalized field hash equal the original public provenance."
+      ]
+    }
+  },
+  "context": {
+    "candidates": [
+      {
+        "id": "C022",
+        "passages": [
+          {
+            "id": "T",
+            "text": "Аэропорт Нижнего Новгорода закрывали из-за угрозы атаки БПЛА 3 ноября",
+            "end": 127,
+            "field": "title",
+            "normalized_text_hash": "2b561f247a7e567bad49b531805ddf0543d086fb3c4e35ab253afc39bd81cb8d",
+            "source_url": "https://www.vgoroden.ru/novosti/aeroport-nizhnego-novgoroda-zakryvali-iz-za-ugrozy-ataki-bpla-3-noyabrya-id439461",
+            "start": 0,
+            "text_hash": "2b561f247a7e567bad49b531805ddf0543d086fb3c4e35ab253afc39bd81cb8d"
+          },
+          {
+            "id": "S",
+            "text": "Аэропорт Нижнего Новгорода закрывали из-за угрозы атаки БПЛА 3 ноября Общество 18+ 07:21, 3 ноября 2026 Аэропорт Нижнего Новгорода закрывали из-за угрозы атаки БПЛА. Об этом сообщили в Росавиации. Ограничения на использование воздушного пространства в этом районе ввели около 05:09. Причиной стало обеспечение безопасности гражданских судов. Однако уже почти через 20 минут, в 05:23, воздушная гавань возобновила работу в штатном режиме. Ранее мы сообщали о том, что самолеты Superjet 100 начали обслуживать в аэропорту Нижнего Новгорода. Самые интересные и срочные новости читайте у нас в Telegram и MAX Автор: Екатерина Морозова Любое использование материалов допускается только при наличии активной ссылки на vgoroden.ru Теги Добавить В городе N в Нашли ошибку? Напишите нам об этом Сейчас читают Новый поезд между Москвой и Казанью будет ходить через Нижний Новгород час назад Массовое ДТП случилось в Нижегородской области: пострадала женщина день назад «По четыре авто на колонку»: что происходит на АЗС в Нижнем Новгороде 3 ноября 4 часа назад Статья 3 дня назад Скидка на проезд и продление м",
+            "end": 1956,
+            "field": "snippet",
+            "normalized_text_hash": "fb83eabe6f6ab786b9d5dce47d9a3b43203d06b1e05af75be856eb4e29168ff8",
+            "source_url": "https://www.vgoroden.ru/novosti/aeroport-nizhnego-novgoroda-zakryvali-iz-za-ugrozy-ataki-bpla-3-noyabrya-id439461",
+            "start": 0,
+            "text_hash": "fb83eabe6f6ab786b9d5dce47d9a3b43203d06b1e05af75be856eb4e29168ff8"
+          },
+          {
+            "id": "B1",
+            "text": "Аэропорт Нижнего Новгорода закрывали из-за угрозы атаки БПЛА 3 ноября Общество 18+ 07:21, 3 ноября 2026 Аэропорт Нижнего Новгорода закрывали из-за угрозы атаки БПЛА. Об этом сообщили в Росавиации. Ограничения на использование воздушного пространства в этом районе ввели около 05:09. Причиной стало обеспечение безопасности гражданских судов. Однако уже почти через 20 минут, в 05:23, воздушная гавань возобновила работу в штатном режиме. Ранее мы сообщали о том, что самолеты Superjet 100 начали обслуживать в аэропорту Нижнего Новгорода. Самые интересные и срочные новости читайте у нас в Telegram и MAX Автор: Екатерина Морозова Любое использование материалов допускается только при наличии активной ссылки на vgoroden.ru Теги Добавить В городе N в Нашли ошибку? Напишите нам об этом Сейчас читают Новый поезд между Москвой и Казанью будет ходить через Нижний Новгород час назад Массовое ДТП случилось в Нижегородской области: пострадала женщина день назад «По четыре авто на колонку»: что происходит на АЗС в Нижнем Новгороде 3 ноября 4 часа назад Статья 3 дня назад Скидка на проезд и продление маршрутов: какие транспортные изменения ждут нижегородцев в ноябре Статья 11 дней назад «Дунькина фаб",
+            "end": 2140,
+            "field": "body",
+            "normalized_text_hash": "1190e8332c8011f3d29a5c4b54129beaec2379a582f5c7ae7e333db8e8f536b4",
+            "source_url": "https://www.vgoroden.ru/novosti/aeroport-nizhnego-novgoroda-zakryvali-iz-za-ugrozy-ataki-bpla-3-noyabrya-id439461",
+            "start": 0,
+            "text_hash": "ab83e298c9bede3ea57b38b9a6c97bf202fc51a43268bfb7e9b52dbf47c38626"
+          },
+          {
+            "id": "D1",
+            "text": "2026-11-03T07:21:00+03:00",
+            "end": 25,
+            "field": "publication_date",
+            "normalized_text_hash": "8ff849ca691ee4898a3af235f228e8e87e97f7afb966a7b1fc78c33b25747a8f",
+            "source_url": "https://www.vgoroden.ru/novosti/aeroport-nizhnego-novgoroda-zakryvali-iz-za-ugrozy-ataki-bpla-3-noyabrya-id439461",
+            "start": 0,
+            "text_hash": "8ff849ca691ee4898a3af235f228e8e87e97f7afb966a7b1fc78c33b25747a8f"
+          },
+          {
+            "id": "H",
+            "text": "Аэропорт Нижнего Новгорода закрывали из-за угрозы атаки БПЛА 3 ноября",
+            "end": 127,
+            "field": "page_title",
+            "normalized_text_hash": "2b561f247a7e567bad49b531805ddf0543d086fb3c4e35ab253afc39bd81cb8d",
+            "source_url": "https://www.vgoroden.ru/novosti/aeroport-nizhnego-novgoroda-zakryvali-iz-za-ugrozy-ataki-bpla-3-noyabrya-id439461",
+            "start": 0,
+            "text_hash": "2b561f247a7e567bad49b531805ddf0543d086fb3c4e35ab253afc39bd81cb8d"
+          }
+        ]
+      },
+      {
+        "id": "C023",
+        "passages": [
+          {
+            "id": "T",
+            "text": "Три рейса в Москву задержаны в аэропорту Нижнего Новгорода 3 ноября",
+            "end": 123,
+            "field": "title",
+            "normalized_text_hash": "13c546f0e1995f84e2a0bcfa0eafd15a465b59d0f7574aa6da9c4e1a4fb58bc0",
+            "source_url": "https://www.vgoroden.ru/novosti/tri-reysa-v-moskvu-zaderzhany-v-nizhegorodskom-aeroportu-3-noyabrya-id439464",
+            "start": 0,
+            "text_hash": "13c546f0e1995f84e2a0bcfa0eafd15a465b59d0f7574aa6da9c4e1a4fb58bc0"
+          },
+          {
+            "id": "S",
+            "text": "Три рейса в Москву задержаны в аэропорту Нижнего Новгорода 3 ноября Авто и транспорт 18+ 08:45, 3 ноября 2026 Три авиарейса в Москву задержали в аэропорту Нижнего Новгорода утром 3 ноября. Такая информация появилась на онлайн-табло воздушной гавани. Речь идет о рейсах RT-204, A4-7138 и А4-7030. Первый вылетел в столицу из Тобольска в 22:25, а второй — из Пскова в 21:30. Однако оба приземлились в Нижнем Новгороде. Их отправление по маршруту назначено на 08:40 и 09:00. Третий рейс изначально был запланирован к вылету на 01:45. Сейчас стало известно, что воздушное судно покинет столицу Приволжья не раньше 09:00. Ранее мы сообщали о том, что в ранним утром 3 ноября в аэропорту Нижнего Новгорода вводили ограничения на вылет и посадку самолетов. Самые интересные и срочные новости читайте у нас в Telegram и MAX Автор: Екатерина Морозова Любое использование материалов допускается только при наличии активной ссылки на vgoroden.ru Теги Добавить В городе N в Нашли ошибку? Напишите нам об этом Сейчас читают Новый поезд между Москвой и Казанью будет ходить через Нижний Новгород час назад Массовое",
+            "end": 1924,
+            "field": "snippet",
+            "normalized_text_hash": "8a21130d705ab5878e35f673552d71f5b70f47db3e9f0e75b2b86474fbd283e0",
+            "source_url": "https://www.vgoroden.ru/novosti/tri-reysa-v-moskvu-zaderzhany-v-nizhegorodskom-aeroportu-3-noyabrya-id439464",
+            "start": 0,
+            "text_hash": "8a21130d705ab5878e35f673552d71f5b70f47db3e9f0e75b2b86474fbd283e0"
+          },
+          {
+            "id": "B1",
+            "text": "Три рейса в Москву задержаны в аэропорту Нижнего Новгорода 3 ноября Авто и транспорт 18+ 08:45, 3 ноября 2026 Три авиарейса в Москву задержали в аэропорту Нижнего Новгорода утром 3 ноября. Такая информация появилась на онлайн-табло воздушной гавани. Речь идет о рейсах RT-204, A4-7138 и А4-7030. Первый вылетел в столицу из Тобольска в 22:25, а второй — из Пскова в 21:30. Однако оба приземлились в Нижнем Новгороде. Их отправление по маршруту назначено на 08:40 и 09:00. Третий рейс изначально был запланирован к вылету на 01:45. Сейчас стало известно, что воздушное судно покинет столицу Приволжья не раньше 09:00. Ранее мы сообщали о том, что в ранним утром 3 ноября в аэропорту Нижнего Новгорода вводили ограничения на вылет и посадку самолетов. Самые интересные и срочные новости читайте у нас в Telegram и MAX Автор: Екатерина Морозова Любое использование материалов допускается только при наличии активной ссылки на vgoroden.ru Теги Добавить В городе N в Нашли ошибку? Напишите нам об этом Сейчас читают Новый поезд между Москвой и Казанью будет ходить через Нижний Новгород час назад Массовое ДТП случилось в Нижегородской области: пострадала женщина день назад «По четыре авто на колонку»: ч",
+            "end": 2107,
+            "field": "body",
+            "normalized_text_hash": "3845132164ba3d7b3d86a64fab887ba236151dc06f190abbadde78aec1972492",
+            "source_url": "https://www.vgoroden.ru/novosti/tri-reysa-v-moskvu-zaderzhany-v-nizhegorodskom-aeroportu-3-noyabrya-id439464",
+            "start": 0,
+            "text_hash": "8fee1c1b48c04fc373052fc10b0958ac0cd91d12d671fa5c8226bc00635d898c"
+          },
+          {
+            "id": "B2",
+            "text": "час читают Новый поезд между Москвой и Казанью будет ходить через Нижний Новгород час назад Массовое ДТП случилось в Нижегородской области: пострадала женщина день назад «По четыре авто на колонку»: что происходит на АЗС в Нижнем Новгороде 3 ноября 4 часа назад Статья 3 дня назад Скидка на проезд и продление маршрутов: какие транспортные изменения ждут нижегородцев в ноябре Статья 11 дней назад «Дунькина фабрика» и столетняя подстанция: чем интересна Молитовка в Нижнем Новгороде — фоторепортаж",
+            "end": 2652,
+            "field": "body",
+            "normalized_text_hash": "3845132164ba3d7b3d86a64fab887ba236151dc06f190abbadde78aec1972492",
+            "source_url": "https://www.vgoroden.ru/novosti/tri-reysa-v-moskvu-zaderzhany-v-nizhegorodskom-aeroportu-3-noyabrya-id439464",
+            "start": 1739,
+            "text_hash": "8fee1c1b48c04fc373052fc10b0958ac0cd91d12d671fa5c8226bc00635d898c"
+          },
+          {
+            "id": "D1",
+            "text": "2026-11-03T08:45:00+03:00",
+            "end": 25,
+            "field": "publication_date",
+            "normalized_text_hash": "13dbde1c64aab8e764e8f26347db1ba9c8a05eff9ce006a6b6d506390000d5a0",
+            "source_url": "https://www.vgoroden.ru/novosti/tri-reysa-v-moskvu-zaderzhany-v-nizhegorodskom-aeroportu-3-noyabrya-id439464",
+            "start": 0,
+            "text_hash": "13dbde1c64aab8e764e8f26347db1ba9c8a05eff9ce006a6b6d506390000d5a0"
+          },
+          {
+            "id": "H",
+            "text": "Три рейса в Москву задержаны в аэропорту Нижнего Новгорода 3 ноября",
+            "end": 123,
+            "field": "page_title",
+            "normalized_text_hash": "13c546f0e1995f84e2a0bcfa0eafd15a465b59d0f7574aa6da9c4e1a4fb58bc0",
+            "source_url": "https://www.vgoroden.ru/novosti/tri-reysa-v-moskvu-zaderzhany-v-nizhegorodskom-aeroportu-3-noyabrya-id439464",
+            "start": 0,
+            "text_hash": "13c546f0e1995f84e2a0bcfa0eafd15a465b59d0f7574aa6da9c4e1a4fb58bc0"
+          }
+        ]
+      }
+    ],
+    "fixed_anchors": null,
+    "fixed_subject": null,
+    "query": "новости Нижнего Новгорода сегодня",
+    "trusted_request_window": {
+      "as_of": "2026-11-03",
+      "as_of_timestamp": "2026-11-03T11:17:36.480011+00:00",
+      "basis": "explicit",
+      "end": "2026-11-03",
+      "start": "2026-11-03",
+      "status": "valid",
+      "timezone": "Europe/Moscow"
+    }
+  },
+  "candidates": [
+    {
+      "id": "C022",
+      "url": "https://www.vgoroden.ru/novosti/aeroport-nizhnego-novgoroda-zakryvali-iz-za-ugrozy-ataki-bpla-3-noyabrya-id439461",
+      "title": "Аэропорт Нижнего Новгорода закрывали из-за угрозы атаки БПЛА 3 ноября",
+      "snippet": "Аэропорт Нижнего Новгорода закрывали из-за угрозы атаки БПЛА 3 ноября Общество 18+ 07:21, 3 ноября 2026 Аэропорт Нижнего Новгорода закрывали из-за угрозы атаки БПЛА. Об этом сообщили в Росавиации. Ограничения на использование воздушного пространства в этом районе ввели около 05:09. Причиной стало обеспечение безопасности гражданских судов. Однако уже почти через 20 минут, в 05:23, воздушная гавань возобновила работу в штатном режиме. Ранее мы сообщали о том, что самолеты Superjet 100 начали обслуживать в аэропорту Нижнего Новгорода. Самые интересные и срочные новости читайте у нас в Telegram и MAX Автор: Екатерина Морозова Любое использование материалов допускается только при наличии активной ссылки на vgoroden.ru Теги Добавить В городе N в Нашли ошибку? Напишите нам об этом Сейчас читают Новый поезд между Москвой и Казанью будет ходить через Нижний Новгород час назад Массовое ДТП случилось в Нижегородской области: пострадала женщина день назад «По четыре авто на колонку»: что происходит на АЗС в Нижнем Новгороде 3 ноября 4 часа назад Статья 3 дня назад Скидка на проезд и продление м",
+      "document_http_status": 200,
+      "fetch_method": "http_extract"
+    },
+    {
+      "id": "C023",
+      "url": "https://www.vgoroden.ru/novosti/tri-reysa-v-moskvu-zaderzhany-v-nizhegorodskom-aeroportu-3-noyabrya-id439464",
+      "title": "Три рейса в Москву задержаны в аэропорту Нижнего Новгорода 3 ноября",
+      "snippet": "Три рейса в Москву задержаны в аэропорту Нижнего Новгорода 3 ноября Авто и транспорт 18+ 08:45, 3 ноября 2026 Три авиарейса в Москву задержали в аэропорту Нижнего Новгорода утром 3 ноября. Такая информация появилась на онлайн-табло воздушной гавани. Речь идет о рейсах RT-204, A4-7138 и А4-7030. Первый вылетел в столицу из Тобольска в 22:25, а второй — из Пскова в 21:30. Однако оба приземлились в Нижнем Новгороде. Их отправление по маршруту назначено на 08:40 и 09:00. Третий рейс изначально был запланирован к вылету на 01:45. Сейчас стало известно, что воздушное судно покинет столицу Приволжья не раньше 09:00. Ранее мы сообщали о том, что в ранним утром 3 ноября в аэропорту Нижнего Новгорода вводили ограничения на вылет и посадку самолетов. Самые интересные и срочные новости читайте у нас в Telegram и MAX Автор: Екатерина Морозова Любое использование материалов допускается только при наличии активной ссылки на vgoroden.ru Теги Добавить В городе N в Нашли ошибку? Напишите нам об этом Сейчас читают Новый поезд между Москвой и Казанью будет ходить через Нижний Новгород час назад Массовое",
+      "document_http_status": 200,
+      "fetch_method": "http_extract"
+    }
+  ],
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "{\"anchors\":[\"сегодня\"],\"labels\":{\"C022\":{\"checks\":[{\"passages\":[\"S\",\"B1\"],\"quote\":\"Аэропорт Нижнего Новгорода закрывали из-за угрозы атаки БПЛА 3 ноября\",\"status\":\"supported\"},{\"passages\":[\"S\",\"B1\"],\"quote\":\"Ограничения на использование воздушного пространства в этом районе ввели около 05:09.\",\"status\":\"supported\"},{\"passages\":[\"S\",\"B1\"],\"quote\":\"Однако уже почти через 20 минут, в 05:23, воздушная гавань возобновила работу в штатном режиме.\",\"status\":\"supported\"},{\"passages\":[\"S\",\"B1\",\"D1\"],\"quote\":\"07:21, 3 ноября 2026\",\"status\":\"supported\"}]},\"C023\":{\"checks\":[{\"passages\":[\"S\",\"B1\"],\"quote\":\"Три авиарейса в Москву задержали в аэропорту Нижнего Новгорода утром 3 ноября.\",\"status\":\"supported\"},{\"passages\":[\"S\",\"B1\"],\"quote\":\"Речь идет о рейсах RT-204, A4-7138 и А4-7030.\",\"status\":\"supported\"},{\"passages\":[\"S\",\"B1\"],\"quote\":\"Их отправление по маршруту назначено на 08:40 и 09:00.\",\"status\":\"supported\"},{\"passages\":[\"S\",\"B1\",\"D1\"],\"quote\":\"08:45, 3 ноября 2026\",\"status\":\"supported\"}]}},\"subject\":\"новости Нижнего Новгорода\"}",
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant"
+        },
+        "native_finish_reason": "stop"
+      }
+    ]
+  }
+}

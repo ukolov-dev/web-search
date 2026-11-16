@@ -1,0 +1,2586 @@
+{
+  "scope": "Frozen source-only64 caseURL gold for separate adaptive NEW6; no predictions read before merge; own fullpubdate/story relevance, not facttruth.",
+  "created_utc": "2026-11-03T14:32:58.528520+00:00",
+  "protocol": "feasibility/news-dates-confirm-plan-v1.json",
+  "source_bundle_sha256": "069ab47033b847fce6c04105b0e19ef4b24e9abb8e42f02f58d2d0bb5cb3bd22",
+  "source_cards_sha256": "26605f464a4e5a51470f5c557486e69f3f16f48db9f7dc639aae9f525fc8ab68",
+  "parts": {
+    "runs/news-dates-2026-11-03/confirm/blind/gold-ca01-ca03.json": "3f243860d66a2138c8f42712c969cf0f6af5b9bfb771ec3a71f41e575ba9bdfc",
+    "runs/news-dates-2026-11-03/confirm/blind/gold-ca04-ca06.json": "a6505b464d41a9ddd809984c43ff036a4267262c23f7e6c9b8b5ddcf04e48c96"
+  },
+  "source_only_crossreviews": {
+    "runs/news-dates-2026-11-03/confirm/blind/peer-source-ca01-ca03-positives.json": "1b17217736945d0b6c9637bb49885397db859ee41e5f6c2709537ab71702e57e",
+    "runs/news-dates-2026-11-03/confirm/blind/peer-source-ca04-ca06-positives.json": "e5cdb82cceb057ad358a0f347d7aeacee96d2cb1e3a804fbf9c43178a40693bf"
+  },
+  "counts": {
+    "1": 27,
+    "None": 7,
+    "0": 17,
+    "2": 13
+  },
+  "limits": [
+    "Same-team source-blind grading/peer agreement13/13, not formal independent acceptance.",
+    "Seven unread ambiguous profile/article cards remain unknown; no extra source HTTP.",
+    "Domain/city/URL overlap with development; query-heldout adaptive mechanism-sensitive confirmation.",
+    "Omsk flight article own publication fields agreeNov3; bodyevent weekday/date inconsistency remains a source facttruth limit, not repaired."
+  ],
+  "rows": [
+    {
+      "blind_id": "129c52d4172179c1",
+      "case_id": "ca01",
+      "url": "https://uralpress.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Главная страница/раздел/тематическая лента, не отдельная проверенная датированная публикация. Только карточка; навигационная граница предварительная, даты анонсов не датируют ленту.",
+      "evidence": [
+        "Самые главные новости Челябинска и Челябинской области! «Урал-пресс-информ» ежедневно публикует свежие новости информиру"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/source-cards.json",
+          "json_pointer": "/rows/4/source_cards/0",
+          "url": "https://uralpress.ru/"
+        }
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "uralpress.ru",
+      "annotation_boundary": "card_only_provisional",
+      "material_variant_conflict": false,
+      "variant_reviews": []
+    },
+    {
+      "blind_id": "129ce94de6307e4e",
+      "case_id": "ca01",
+      "url": "https://rankchart.org/site/74.ru/",
+      "grade": null,
+      "kind": "unknown",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Оригинал отсутствует. Карточка стороннего профиля сайта копирует описание городского портала; собственные тип, дата и тело именно этой URL не подтверждены. Описание чужого портала не переносится на страницу.",
+      "evidence": [
+        "Последние свежие новости Челябинска и Челябинской области за сегодня - онлайн на сайте 74.ru새 창 열림"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/source-cards.json",
+          "json_pointer": "/rows/5/source_cards/0",
+          "url": "https://rankchart.org/site/74.ru/"
+        }
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "rankchart.org",
+      "annotation_boundary": "unknown_original_unavailable",
+      "material_variant_conflict": false,
+      "variant_reviews": []
+    },
+    {
+      "blind_id": "439113440496e4be",
+      "case_id": "ca01",
+      "url": "https://news.sportbox.ru/Vidy_sporta/Hokkej/KHL/traktor",
+      "grade": 1,
+      "kind": "other",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка представляет профиль команды или городской информационный портал/афишу: полезная навигация, но не конкретная датированная новость. Оригинал отсутствует; граница предварительная.",
+      "evidence": [
+        "Трактор / Traktor Chelyabinsk ; 454003, г. Челябинск, ул. 250 лет Челябинска, д. 38새 창 열림"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/source-cards.json",
+          "json_pointer": "/rows/14/source_cards/0",
+          "url": "https://news.sportbox.ru/Vidy_sporta/Hokkej/KHL/traktor"
+        }
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "news.sportbox.ru",
+      "annotation_boundary": "card_only_provisional",
+      "material_variant_conflict": false,
+      "variant_reviews": []
+    },
+    {
+      "blind_id": "4abb23ef1c5f1d02",
+      "case_id": "ca01",
+      "url": "https://www.slunecnice.cz/android/sw/ura-ru-novosti-moskvy-ekaterinburga-celabinska/",
+      "grade": 0,
+      "kind": "application",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка Google Play/каталога программ явно описывает новостное приложение и/или download, не собственную новостную статью. Оригинал не предоставлен; граница предварительная.",
+      "evidence": [
+        "Ура.ру - новости Москвы, Екатеринбурга, Челябинска - Slunečnice…"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/source-cards.json",
+          "json_pointer": "/rows/17/source_cards/0",
+          "url": "https://www.slunecnice.cz/android/sw/ura-ru-novosti-moskvy-ekaterinburga-celabinska/"
+        }
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "slunecnice.cz",
+      "annotation_boundary": "card_only_provisional",
+      "material_variant_conflict": false,
+      "variant_reviews": []
+    },
+    {
+      "blind_id": "583d8f1b8ad0c526",
+      "case_id": "ca01",
+      "url": "https://74.ru/text/business/2026/11/02/76729550/",
+      "grade": 2,
+      "kind": "article",
+      "published_date": "2026-11-02",
+      "source_reviewed": true,
+      "date_verified": true,
+      "reason": "Собственный репортаж о сток-магазинах Челябинска: фактический headline локализует те же посещённые магазины, body описывает ассортимент, цены и схему продаж, прямо называет челябинские магазины. Own Article/datePublished 02.11.2026 внутри окна.",
+      "evidence": [
+        "Второй такой челябинский магазин работает по другой схеме",
+        "2026-11-02T05:45:00+03:00"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/source-cards.json",
+          "json_pointer": "/rows/21/source_cards/0",
+          "url": "https://74.ru/text/business/2026/11/02/76729550/"
+        },
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-191c001011c6f24a4bdbb5fdd706ea709a20a806742204bd940d64c4d6b6f787.html",
+          "url": "https://74.ru/text/business/2026/11/02/76729550/",
+          "variant_id": "44179112f110c8430e28130934819f349136c4ca37ad59652bdccf40521ab950",
+          "sha256": "191c001011c6f24a4bdbb5fdd706ea709a20a806742204bd940d64c4d6b6f787"
+        },
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-5f7bb63b25a5bf2f034ea0158d3fccbe8257a633edec5b7b51ee493435ebdb7b.html",
+          "url": "https://74.ru/text/business/2026/11/02/76729550/",
+          "variant_id": "17703ea11f609662f2e5753b7f6e736ec13bad340138bbcb355cdb0b8aa55bf0",
+          "sha256": "5f7bb63b25a5bf2f034ea0158d3fccbe8257a633edec5b7b51ee493435ebdb7b"
+        }
+      ],
+      "event_cluster": "chelyabinsk-offprice-stock-shops-report-2026-11-02",
+      "publisher_cluster": "74.ru",
+      "annotation_boundary": "all_relevant_complete_primary_variants",
+      "material_variant_conflict": false,
+      "variant_reviews": [
+        {
+          "variant_id": "44179112f110c8430e28130934819f349136c4ca37ad59652bdccf40521ab950",
+          "case_ids": [
+            "ca01"
+          ],
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-191c001011c6f24a4bdbb5fdd706ea709a20a806742204bd940d64c4d6b6f787.html",
+          "html_sha256": "191c001011c6f24a4bdbb5fdd706ea709a20a806742204bd940d64c4d6b6f787",
+          "source_reviewed": true,
+          "captured_extract_truncated": false,
+          "publication_evidence": [
+            {
+              "field": "own Article.datePublished",
+              "raw": "2026-11-02T05:45:00+03:00",
+              "published_date_moscow": "2026-11-02",
+              "own_url": "https://74.ru/text/business/2026/11/02/76729550/",
+              "headline": "Valentino за 2000 рублей и Lego за полцены: смотрим, что продают в сток-магазинах Челябинска",
+              "jsonld_pointer": "/0/@graph/0/datePublished"
+            }
+          ],
+          "suitability_grade": 2,
+          "material_conflict": false,
+          "own_scope": {
+            "tag": "article",
+            "attributes": {
+              "class": "article_gSlSK pb-6"
+            },
+            "start_char": 240349,
+            "end_char": 422067,
+            "normalized_own_text_sha256": "91bef7a11131be8448818b408e494e4d1aab6fab60ece2f739ad9944dcf140ca"
+          },
+          "full_own_body_reviewed": true,
+          "own_body_quote": "Второй такой челябинский магазин работает по другой схеме",
+          "own_factual_main_headline": [
+            "Valentino за 2000 рублей и Lego за полцены: смотрим, что продают в сток-магазинах Челябинска"
+          ]
+        },
+        {
+          "variant_id": "17703ea11f609662f2e5753b7f6e736ec13bad340138bbcb355cdb0b8aa55bf0",
+          "case_ids": [
+            "ca01"
+          ],
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-5f7bb63b25a5bf2f034ea0158d3fccbe8257a633edec5b7b51ee493435ebdb7b.html",
+          "html_sha256": "5f7bb63b25a5bf2f034ea0158d3fccbe8257a633edec5b7b51ee493435ebdb7b",
+          "source_reviewed": true,
+          "captured_extract_truncated": false,
+          "publication_evidence": [
+            {
+              "field": "own Article.datePublished",
+              "raw": "2026-11-02T05:45:00+03:00",
+              "published_date_moscow": "2026-11-02",
+              "own_url": "https://74.ru/text/business/2026/11/02/76729550/",
+              "headline": "Valentino за 2000 рублей и Lego за полцены: смотрим, что продают в сток-магазинах Челябинска",
+              "jsonld_pointer": "/0/@graph/0/datePublished"
+            }
+          ],
+          "suitability_grade": 2,
+          "material_conflict": false,
+          "own_scope": {
+            "tag": "article",
+            "attributes": {
+              "class": "article_gSlSK pb-6"
+            },
+            "start_char": 240230,
+            "end_char": 421948,
+            "normalized_own_text_sha256": "31a591395f6670b6885595d2a678efa483e8344f664acec503ca6176e6969850"
+          },
+          "full_own_body_reviewed": true,
+          "own_body_quote": "Второй такой челябинский магазин работает по другой схеме",
+          "own_factual_main_headline": [
+            "Valentino за 2000 рублей и Lego за полцены: смотрим, что продают в сток-магазинах Челябинска"
+          ]
+        }
+      ],
+      "variant_comparison": "All supplied complete own bodies and publication dates agree in suitability. Only view/comment counters differ where observed."
+    },
+    {
+      "blind_id": "611638550fdcf9a7",
+      "case_id": "ca01",
+      "url": "https://play.google.com/store/apps/details?id=ru.rugion.android.news.r74&hl=cs",
+      "grade": 0,
+      "kind": "application",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка Google Play/каталога программ явно описывает новостное приложение и/или download, не собственную новостную статью. Оригинал не предоставлен; граница предварительная.",
+      "evidence": [
+        "74.ru – Новости Челябинска – Aplikace na Google Play"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/source-cards.json",
+          "json_pointer": "/rows/24/source_cards/0",
+          "url": "https://play.google.com/store/apps/details?id=ru.rugion.android.news.r74&hl=cs"
+        }
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "play.google.com",
+      "annotation_boundary": "card_only_provisional",
+      "material_variant_conflict": false,
+      "variant_reviews": []
+    },
+    {
+      "blind_id": "65bcaf6d8ee80268",
+      "case_id": "ca01",
+      "url": "https://74.ru/text/transport/2026/11/03/76741550/",
+      "grade": 2,
+      "kind": "article",
+      "published_date": "2026-11-03",
+      "source_reviewed": true,
+      "date_verified": true,
+      "reason": "Полная собственная новость о прямом маршруте с отправлением из Челябинска. Связь города установлена конкретным маршрутом в own body; собственная дата NewsArticle/datePublished 03.11.2026. Даты будущих рейсов не подменяют дату публикации.",
+      "evidence": [
+        "С 4 декабря из Челябинска в Ташкент запустят регулярные прямые авиарейсы.",
+        "2026-11-03T11:37:27+03:00"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/source-cards.json",
+          "json_pointer": "/rows/27/source_cards/0",
+          "url": "https://74.ru/text/transport/2026/11/03/76741550/"
+        },
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-566385443c8111f3be26a8bcc74bf02c075c9a293d2efe2d7b353a0d2fe88347.html",
+          "url": "https://74.ru/text/transport/2026/11/03/76741550/",
+          "variant_id": "b8214b4e32ab9796fcd616c63af9a1375461000532c9dd4deea98b0e8c3f40ce",
+          "sha256": "566385443c8111f3be26a8bcc74bf02c075c9a293d2efe2d7b353a0d2fe88347"
+        },
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-9d91c21f0e62aad79a08a91075faf587713320c063ff8627be7c0fd052f0b09c.html",
+          "url": "https://74.ru/text/transport/2026/11/03/76741550/",
+          "variant_id": "e5363067ae5137f1b9f054a59da066e1beff99b734ed9db4a0bcccbd446906f3",
+          "sha256": "9d91c21f0e62aad79a08a91075faf587713320c063ff8627be7c0fd052f0b09c"
+        }
+      ],
+      "event_cluster": "chelyabinsk-tashkent-flight-announcement-2026-11-03",
+      "publisher_cluster": "74.ru",
+      "annotation_boundary": "all_relevant_complete_primary_variants",
+      "material_variant_conflict": false,
+      "variant_reviews": [
+        {
+          "variant_id": "b8214b4e32ab9796fcd616c63af9a1375461000532c9dd4deea98b0e8c3f40ce",
+          "case_ids": [
+            "ca01"
+          ],
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-566385443c8111f3be26a8bcc74bf02c075c9a293d2efe2d7b353a0d2fe88347.html",
+          "html_sha256": "566385443c8111f3be26a8bcc74bf02c075c9a293d2efe2d7b353a0d2fe88347",
+          "source_reviewed": true,
+          "captured_extract_truncated": false,
+          "publication_evidence": [
+            {
+              "field": "own NewsArticle.datePublished",
+              "raw": "2026-11-03T11:37:27+03:00",
+              "published_date_moscow": "2026-11-03",
+              "own_url": "https://74.ru/text/transport/2026/11/03/76741550/",
+              "headline": "Из Челябинска запустят прямые авиарейсы в Ташкент",
+              "jsonld_pointer": "/0/@graph/0/datePublished"
+            }
+          ],
+          "suitability_grade": 2,
+          "material_conflict": false,
+          "own_scope": {
+            "tag": "article",
+            "attributes": {
+              "class": "article_gSlSK pb-6"
+            },
+            "start_char": 234925,
+            "end_char": 260864,
+            "normalized_own_text_sha256": "1544722211380a1ba8503a0ae9dcdd83af824d15c119cc9294516755ff21f072"
+          },
+          "full_own_body_reviewed": true,
+          "own_body_quote": "С 4 декабря из Челябинска в Ташкент запустят регулярные прямые авиарейсы.",
+          "own_factual_main_headline": [
+            "Из Челябинска запустят прямые авиарейсы в Ташкент"
+          ]
+        },
+        {
+          "variant_id": "e5363067ae5137f1b9f054a59da066e1beff99b734ed9db4a0bcccbd446906f3",
+          "case_ids": [
+            "ca01"
+          ],
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-9d91c21f0e62aad79a08a91075faf587713320c063ff8627be7c0fd052f0b09c.html",
+          "html_sha256": "9d91c21f0e62aad79a08a91075faf587713320c063ff8627be7c0fd052f0b09c",
+          "source_reviewed": true,
+          "captured_extract_truncated": false,
+          "publication_evidence": [
+            {
+              "field": "own NewsArticle.datePublished",
+              "raw": "2026-11-03T11:37:27+03:00",
+              "published_date_moscow": "2026-11-03",
+              "own_url": "https://74.ru/text/transport/2026/11/03/76741550/",
+              "headline": "Из Челябинска запустят прямые авиарейсы в Ташкент",
+              "jsonld_pointer": "/0/@graph/0/datePublished"
+            }
+          ],
+          "suitability_grade": 2,
+          "material_conflict": false,
+          "own_scope": {
+            "tag": "article",
+            "attributes": {
+              "class": "article_gSlSK pb-6"
+            },
+            "start_char": 240752,
+            "end_char": 266691,
+            "normalized_own_text_sha256": "5c79d832f5adaaed1a18a05cf817e5914aa611077a44026b64ff7ba3657c1756"
+          },
+          "full_own_body_reviewed": true,
+          "own_body_quote": "С 4 декабря из Челябинска в Ташкент запустят регулярные прямые авиарейсы.",
+          "own_factual_main_headline": [
+            "Из Челябинска запустят прямые авиарейсы в Ташкент"
+          ]
+        }
+      ],
+      "variant_comparison": "All supplied complete own bodies and publication dates agree in suitability. Only view/comment counters differ where observed.",
+      "source_consistency_note": "Даты/дни недели будущих рейсов в body не использовались как publication date и не исправлялись из календарной памяти. Grade2 — релевантность источника; внешняя истинность расписания отдельно не проверялась."
+    },
+    {
+      "blind_id": "6bb5c640b14b9858",
+      "case_id": "ca01",
+      "url": "https://mir74.ru/news/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Главная страница/раздел/тематическая лента, не отдельная проверенная датированная публикация. Только карточка; навигационная граница предварительная, даты анонсов не датируют ленту.",
+      "evidence": [
+        "Последние новости Челябинска и Челябинской области: актуальные события, происшествия, политика, экономика и культура. Бу"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/source-cards.json",
+          "json_pointer": "/rows/30/source_cards/0",
+          "url": "https://mir74.ru/news/"
+        }
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "mir74.ru",
+      "annotation_boundary": "card_only_provisional",
+      "material_variant_conflict": false,
+      "variant_reviews": []
+    },
+    {
+      "blind_id": "893b8d233875d06f",
+      "case_id": "ca01",
+      "url": "https://74.ru/text/auto/2026/11/03/76741445/",
+      "grade": 2,
+      "kind": "article",
+      "published_date": "2026-11-03",
+      "source_reviewed": true,
+      "date_verified": true,
+      "reason": "Собственный фактический главный headline помещает тот же перекрёсток в Челябинск, а body даёт конкретное действие, улицы и обстоятельства удаления знаков. Это привязка одного события, не publisher/аудитория. Own NewsArticle/datePublished 03.11.2026.",
+      "evidence": [
+        "После публикации 74.RU на пересечении Копейского шоссе и улицы Машиностроителей убрали знаки «Круговое движение», которые противоречили разметке.",
+        "2026-11-03T09:57:36+03:00"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/source-cards.json",
+          "json_pointer": "/rows/39/source_cards/0",
+          "url": "https://74.ru/text/auto/2026/11/03/76741445/"
+        },
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-456fa01c5f6d3523b87ddd8267e4992ae6e67d28adc2a4d9090ad9c09715bed6.html",
+          "url": "https://74.ru/text/auto/2026/11/03/76741445/",
+          "variant_id": "f4c2a1a8f85147f53ca8c66261d8bad5715ca4d3f7ef0c45e582b1e19611cf27",
+          "sha256": "456fa01c5f6d3523b87ddd8267e4992ae6e67d28adc2a4d9090ad9c09715bed6"
+        },
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-a452ad05469cd16a9a000686494f7b6c047e6bc7751097da6728c2ec7853b328.html",
+          "url": "https://74.ru/text/auto/2026/11/03/76741445/",
+          "variant_id": "274c6ea185d864ba7ad20b3b3d719db3714202b263ab8f1e3f231e71231b3736",
+          "sha256": "a452ad05469cd16a9a000686494f7b6c047e6bc7751097da6728c2ec7853b328"
+        }
+      ],
+      "event_cluster": "chelyabinsk-kopeyskoe-mashinostroiteley-sign-removal-2026-11-03",
+      "publisher_cluster": "74.ru",
+      "annotation_boundary": "all_relevant_complete_primary_variants",
+      "material_variant_conflict": false,
+      "variant_reviews": [
+        {
+          "variant_id": "f4c2a1a8f85147f53ca8c66261d8bad5715ca4d3f7ef0c45e582b1e19611cf27",
+          "case_ids": [
+            "ca01"
+          ],
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-456fa01c5f6d3523b87ddd8267e4992ae6e67d28adc2a4d9090ad9c09715bed6.html",
+          "html_sha256": "456fa01c5f6d3523b87ddd8267e4992ae6e67d28adc2a4d9090ad9c09715bed6",
+          "source_reviewed": true,
+          "captured_extract_truncated": false,
+          "publication_evidence": [
+            {
+              "field": "own NewsArticle.datePublished",
+              "raw": "2026-11-03T09:57:36+03:00",
+              "published_date_moscow": "2026-11-03",
+              "own_url": "https://74.ru/text/auto/2026/11/03/76741445/",
+              "headline": "Раскольцевали дорогу. На популярном перекрестке Челябинска убрали спорные знаки",
+              "jsonld_pointer": "/0/@graph/0/datePublished"
+            }
+          ],
+          "suitability_grade": 2,
+          "material_conflict": false,
+          "own_scope": {
+            "tag": "article",
+            "attributes": {
+              "class": "article_gSlSK pb-6"
+            },
+            "start_char": 240111,
+            "end_char": 275536,
+            "normalized_own_text_sha256": "1d644efee3e02f24d85ca42129947a4c4901203b7edc5fade34c55be17ef27b4"
+          },
+          "full_own_body_reviewed": true,
+          "own_body_quote": "После публикации 74.RU на пересечении Копейского шоссе и улицы Машиностроителей убрали знаки «Круговое движение», которые противоречили разметке.",
+          "own_factual_main_headline": [
+            "Раскольцевали дорогу. На популярном перекрестке Челябинска убрали спорные знаки"
+          ]
+        },
+        {
+          "variant_id": "274c6ea185d864ba7ad20b3b3d719db3714202b263ab8f1e3f231e71231b3736",
+          "case_ids": [
+            "ca01"
+          ],
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-a452ad05469cd16a9a000686494f7b6c047e6bc7751097da6728c2ec7853b328.html",
+          "html_sha256": "a452ad05469cd16a9a000686494f7b6c047e6bc7751097da6728c2ec7853b328",
+          "source_reviewed": true,
+          "captured_extract_truncated": false,
+          "publication_evidence": [
+            {
+              "field": "own NewsArticle.datePublished",
+              "raw": "2026-11-03T09:57:36+03:00",
+              "published_date_moscow": "2026-11-03",
+              "own_url": "https://74.ru/text/auto/2026/11/03/76741445/",
+              "headline": "Раскольцевали дорогу. На популярном перекрестке Челябинска убрали спорные знаки",
+              "jsonld_pointer": "/0/@graph/0/datePublished"
+            }
+          ],
+          "suitability_grade": 2,
+          "material_conflict": false,
+          "own_scope": {
+            "tag": "article",
+            "attributes": {
+              "class": "article_gSlSK pb-6"
+            },
+            "start_char": 234403,
+            "end_char": 269828,
+            "normalized_own_text_sha256": "84d795f069f866a744f0c94d680af8289c391b3b62d65e50f78e00b5442cfbbc"
+          },
+          "full_own_body_reviewed": true,
+          "own_body_quote": "После публикации 74.RU на пересечении Копейского шоссе и улицы Машиностроителей убрали знаки «Круговое движение», которые противоречили разметке.",
+          "own_factual_main_headline": [
+            "Раскольцевали дорогу. На популярном перекрестке Челябинска убрали спорные знаки"
+          ]
+        }
+      ],
+      "variant_comparison": "All supplied complete own bodies and publication dates agree in suitability. Only view/comment counters differ where observed."
+    },
+    {
+      "blind_id": "dfc77a6a3dcd59ae",
+      "case_id": "ca01",
+      "url": "https://74.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": true,
+      "date_verified": false,
+      "reason": "Все собственные варианты показывают набор самостоятельных новостных анонсов/ссылок; это лента, не единственная статья с собственной publication date. Даты/места анонсов не переносились на ленту.",
+      "evidence": [
+        "Последние свежие новости Челябинска и Челябинской области за сегодня. Все новости региона на сайте 74.ру: происшествия, "
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/source-cards.json",
+          "json_pointer": "/rows/55/source_cards/0",
+          "url": "https://74.ru/"
+        },
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-829fa8b2724f6025cd1ddf03b4c67e7b7d950a2a001d03196fa4adf58e8f7d12.html",
+          "url": "https://74.ru/",
+          "variant_id": "420c46208a732cfbfd70c3b4eaa83aad1ba456b9f9e61994ce8802f271a9df12",
+          "sha256": "829fa8b2724f6025cd1ddf03b4c67e7b7d950a2a001d03196fa4adf58e8f7d12"
+        },
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-24bd796a12bc48fc14be18c5476dce53e3a762b3bb2ecb2c9294b1854be6e94c.html",
+          "url": "https://74.ru/",
+          "variant_id": "2362dcb0d2a9e94905a71af807cfc7f1d459f43e85e3998e05042c735500cf2d",
+          "sha256": "24bd796a12bc48fc14be18c5476dce53e3a762b3bb2ecb2c9294b1854be6e94c"
+        }
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "74.ru",
+      "annotation_boundary": "all_relevant_complete_primary_variants",
+      "material_variant_conflict": false,
+      "variant_reviews": [
+        {
+          "variant_id": "420c46208a732cfbfd70c3b4eaa83aad1ba456b9f9e61994ce8802f271a9df12",
+          "case_ids": [
+            "ca01"
+          ],
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-829fa8b2724f6025cd1ddf03b4c67e7b7d950a2a001d03196fa4adf58e8f7d12.html",
+          "html_sha256": "829fa8b2724f6025cd1ddf03b4c67e7b7d950a2a001d03196fa4adf58e8f7d12",
+          "source_reviewed": true,
+          "captured_extract_truncated": false,
+          "publication_evidence": [],
+          "suitability_grade": 1,
+          "material_conflict": false,
+          "own_scope": null
+        },
+        {
+          "variant_id": "2362dcb0d2a9e94905a71af807cfc7f1d459f43e85e3998e05042c735500cf2d",
+          "case_ids": [
+            "ca01"
+          ],
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-24bd796a12bc48fc14be18c5476dce53e3a762b3bb2ecb2c9294b1854be6e94c.html",
+          "html_sha256": "24bd796a12bc48fc14be18c5476dce53e3a762b3bb2ecb2c9294b1854be6e94c",
+          "source_reviewed": true,
+          "captured_extract_truncated": false,
+          "publication_evidence": [],
+          "suitability_grade": 1,
+          "material_conflict": false,
+          "own_scope": null
+        }
+      ]
+    },
+    {
+      "blind_id": "305527f60462711f",
+      "case_id": "ca02",
+      "url": "https://www.slunecnice.cz/ios/sw/59-ru/",
+      "grade": 0,
+      "kind": "application",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка Google Play/каталога программ явно описывает новостное приложение и/или download, не собственную новостную статью. Оригинал не предоставлен; граница предварительная.",
+      "evidence": [
+        "59.ru – Новости Перми - Slunečnice.cz"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/source-cards.json",
+          "json_pointer": "/rows/8/source_cards/0",
+          "url": "https://www.slunecnice.cz/ios/sw/59-ru/"
+        }
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "slunecnice.cz",
+      "annotation_boundary": "card_only_provisional",
+      "material_variant_conflict": false,
+      "variant_reviews": []
+    },
+    {
+      "blind_id": "329a723bf6e0b229",
+      "case_id": "ca02",
+      "url": "https://59.ru/text/gorod/2026/11/03/76741257/",
+      "grade": 2,
+      "kind": "article",
+      "published_date": "2026-11-03",
+      "source_reviewed": true,
+      "date_verified": true,
+      "reason": "Собственная полная новость прямо сообщает о благоустройстве сквера в Перми; NewsArticle/datePublished с точным URL задаёт 03.11.2026. Будущий срок завершения работ не считается датой публикации.",
+      "evidence": [
+        "В Орджоникидзевском районе Перми продолжают благоустраивать сквер на улице Трясолобова.",
+        "2026-11-03T10:02:41+03:00"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/source-cards.json",
+          "json_pointer": "/rows/9/source_cards/0",
+          "url": "https://59.ru/text/gorod/2026/11/03/76741257/"
+        },
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-248b41b63d5a020c7729a1bebd7b913b54c4ff0d3090913a1d39a65ac3d1672c.html",
+          "url": "https://59.ru/text/gorod/2026/11/03/76741257/",
+          "variant_id": "75b5a4c3ee8756e7155c2a2d45956406fda8d4e9a353bb60ccb81f2adbfe3acc",
+          "sha256": "248b41b63d5a020c7729a1bebd7b913b54c4ff0d3090913a1d39a65ac3d1672c"
+        },
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-785302ff445d6f69f4357a6e5d59d41edc5569340ed84885ec8ffdbf004ce95e.html",
+          "url": "https://59.ru/text/gorod/2026/11/03/76741257/",
+          "variant_id": "cb47bcbfa41bcba8f91f1bd52cd0098e7032d3e5d75860806dfe89eed3e439c2",
+          "sha256": "785302ff445d6f69f4357a6e5d59d41edc5569340ed84885ec8ffdbf004ce95e"
+        }
+      ],
+      "event_cluster": "perm-tryasolobova-square-upgrade-2026-11-03",
+      "publisher_cluster": "59.ru",
+      "annotation_boundary": "all_relevant_complete_primary_variants",
+      "material_variant_conflict": false,
+      "variant_reviews": [
+        {
+          "variant_id": "75b5a4c3ee8756e7155c2a2d45956406fda8d4e9a353bb60ccb81f2adbfe3acc",
+          "case_ids": [
+            "ca02"
+          ],
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-248b41b63d5a020c7729a1bebd7b913b54c4ff0d3090913a1d39a65ac3d1672c.html",
+          "html_sha256": "248b41b63d5a020c7729a1bebd7b913b54c4ff0d3090913a1d39a65ac3d1672c",
+          "source_reviewed": true,
+          "captured_extract_truncated": false,
+          "publication_evidence": [
+            {
+              "field": "own NewsArticle.datePublished",
+              "raw": "2026-11-03T10:02:41+03:00",
+              "published_date_moscow": "2026-11-03",
+              "own_url": "https://59.ru/text/gorod/2026/11/03/76741257/",
+              "headline": "В Перми продолжают благоустраивать сквер на улице Трясолобова",
+              "jsonld_pointer": "/0/@graph/0/datePublished"
+            }
+          ],
+          "suitability_grade": 2,
+          "material_conflict": false,
+          "own_scope": {
+            "tag": "article",
+            "attributes": {
+              "class": "article_gSlSK pb-6"
+            },
+            "start_char": 222610,
+            "end_char": 235466,
+            "normalized_own_text_sha256": "5cf45f8acb74e562bd74fab82d36e34e885c313b17781ed7a51fd260cad9a806"
+          },
+          "full_own_body_reviewed": true,
+          "own_body_quote": "В Орджоникидзевском районе Перми продолжают благоустраивать сквер на улице Трясолобова.",
+          "own_factual_main_headline": [
+            "В Перми продолжают благоустраивать сквер на улице Трясолобова"
+          ]
+        },
+        {
+          "variant_id": "cb47bcbfa41bcba8f91f1bd52cd0098e7032d3e5d75860806dfe89eed3e439c2",
+          "case_ids": [
+            "ca02"
+          ],
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-785302ff445d6f69f4357a6e5d59d41edc5569340ed84885ec8ffdbf004ce95e.html",
+          "html_sha256": "785302ff445d6f69f4357a6e5d59d41edc5569340ed84885ec8ffdbf004ce95e",
+          "source_reviewed": true,
+          "captured_extract_truncated": false,
+          "publication_evidence": [
+            {
+              "field": "own NewsArticle.datePublished",
+              "raw": "2026-11-03T10:02:41+03:00",
+              "published_date_moscow": "2026-11-03",
+              "own_url": "https://59.ru/text/gorod/2026/11/03/76741257/",
+              "headline": "В Перми продолжают благоустраивать сквер на улице Трясолобова",
+              "jsonld_pointer": "/0/@graph/0/datePublished"
+            }
+          ],
+          "suitability_grade": 2,
+          "material_conflict": false,
+          "own_scope": {
+            "tag": "article",
+            "attributes": {
+              "class": "article_gSlSK pb-6"
+            },
+            "start_char": 222610,
+            "end_char": 235466,
+            "normalized_own_text_sha256": "81b6ae1032ae2fa1685f748dc24cc8cfb7562c98452be9948bca55b7baa7fa6b"
+          },
+          "full_own_body_reviewed": true,
+          "own_body_quote": "В Орджоникидзевском районе Перми продолжают благоустраивать сквер на улице Трясолобова.",
+          "own_factual_main_headline": [
+            "В Перми продолжают благоустраивать сквер на улице Трясолобова"
+          ]
+        }
+      ],
+      "variant_comparison": "All supplied complete own bodies and publication dates agree in suitability. Only view/comment counters differ where observed."
+    },
+    {
+      "blind_id": "36dfd58c0b399407",
+      "case_id": "ca02",
+      "url": "https://59.ru/text/longread/2026/05/21/76426099/",
+      "grade": 0,
+      "kind": "article",
+      "published_date": "2026-05-21",
+      "source_reviewed": true,
+      "date_verified": true,
+      "reason": "Собственный промышленный спецпроект/лонгрид датирован 21.05.2026 в own title и собственном publisher analytics/article payload; вне окна 01–03.11.2026. Дата не выводилась из URL или serverDate.",
+      "evidence": [
+        "Год промышленности в Перми: как инвестиции перезапускают регион, а династии и роботы строят будущее",
+        "2026-05-21T14:21:00Z"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/source-cards.json",
+          "json_pointer": "/rows/11/source_cards/0",
+          "url": "https://59.ru/text/longread/2026/05/21/76426099/"
+        },
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-777f3e3d2303d3df000f2664d12c5ffe47a45dce9e6f6dc6d7472618cceab2a4.html",
+          "url": "https://59.ru/text/longread/2026/05/21/76426099/",
+          "variant_id": "53df37ebb31baf7ea0c033f377ce492a67c97c36d698edb50d27a08a69a14abf",
+          "sha256": "777f3e3d2303d3df000f2664d12c5ffe47a45dce9e6f6dc6d7472618cceab2a4"
+        },
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-d87807e291cc95bc783a1c185bb0757f8303995fb02614745f7edad77fe4c155.html",
+          "url": "https://59.ru/text/longread/2026/05/21/76426099/",
+          "variant_id": "9c35d645dc5ff934bfc4091b170d76952d2eeed8b73d649312aa31ce83795bc7",
+          "sha256": "d87807e291cc95bc783a1c185bb0757f8303995fb02614745f7edad77fe4c155"
+        }
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "59.ru",
+      "annotation_boundary": "all_relevant_complete_primary_variants",
+      "material_variant_conflict": false,
+      "variant_reviews": [
+        {
+          "variant_id": "53df37ebb31baf7ea0c033f377ce492a67c97c36d698edb50d27a08a69a14abf",
+          "case_ids": [
+            "ca02"
+          ],
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-777f3e3d2303d3df000f2664d12c5ffe47a45dce9e6f6dc6d7472618cceab2a4.html",
+          "html_sha256": "777f3e3d2303d3df000f2664d12c5ffe47a45dce9e6f6dc6d7472618cceab2a4",
+          "source_reviewed": true,
+          "captured_extract_truncated": false,
+          "publication_evidence": [
+            {
+              "field": "own page title + own publisher analytics.article.publishedAt",
+              "raw": "2026-05-21T14:21:00Z",
+              "published_date_moscow": "2026-05-21",
+              "own_url": "https://59.ru/text/longread/2026/05/21/76426099/",
+              "visible_title_date": "21 мая 2026"
+            }
+          ],
+          "suitability_grade": 0,
+          "material_conflict": false,
+          "own_scope": null
+        },
+        {
+          "variant_id": "9c35d645dc5ff934bfc4091b170d76952d2eeed8b73d649312aa31ce83795bc7",
+          "case_ids": [
+            "ca02"
+          ],
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-d87807e291cc95bc783a1c185bb0757f8303995fb02614745f7edad77fe4c155.html",
+          "html_sha256": "d87807e291cc95bc783a1c185bb0757f8303995fb02614745f7edad77fe4c155",
+          "source_reviewed": true,
+          "captured_extract_truncated": false,
+          "publication_evidence": [
+            {
+              "field": "own page title + own publisher analytics.article.publishedAt",
+              "raw": "2026-05-21T14:21:00Z",
+              "published_date_moscow": "2026-05-21",
+              "own_url": "https://59.ru/text/longread/2026/05/21/76426099/",
+              "visible_title_date": "21 мая 2026"
+            }
+          ],
+          "suitability_grade": 0,
+          "material_conflict": false,
+          "own_scope": null
+        }
+      ]
+    },
+    {
+      "blind_id": "52785204d7798dcb",
+      "case_id": "ca02",
+      "url": "https://echoperm.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Главная страница/раздел/тематическая лента, не отдельная проверенная датированная публикация. Только карточка; навигационная граница предварительная, даты анонсов не датируют ленту.",
+      "evidence": [
+        "Свежие новости Перми и Пермского края на ЭХО Москвы в Перми. Читайте у нас на сайте: все новости, интервью, мнения на ак"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/source-cards.json",
+          "json_pointer": "/rows/19/source_cards/0",
+          "url": "https://echoperm.ru/"
+        }
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "echoperm.ru",
+      "annotation_boundary": "card_only_provisional",
+      "material_variant_conflict": false,
+      "variant_reviews": []
+    },
+    {
+      "blind_id": "66f8073c90ba6614",
+      "case_id": "ca02",
+      "url": "https://perm.rbc.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Главная страница/раздел/тематическая лента, не отдельная проверенная датированная публикация. Только карточка; навигационная граница предварительная, даты анонсов не датируют ленту.",
+      "evidence": [
+        "✅Новости Перми и Пермского края ⚡Свежие события и происшествия на РБК새 창 열림"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/source-cards.json",
+          "json_pointer": "/rows/28/source_cards/0",
+          "url": "https://perm.rbc.ru/"
+        }
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "perm.rbc.ru",
+      "annotation_boundary": "card_only_provisional",
+      "material_variant_conflict": false,
+      "variant_reviews": []
+    },
+    {
+      "blind_id": "6f1cdc65dc88c747",
+      "case_id": "ca02",
+      "url": "https://vesti-perm.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Главная страница/раздел/тематическая лента, не отдельная проверенная датированная публикация. Только карточка; навигационная граница предварительная, даты анонсов не датируют ленту.",
+      "evidence": [
+        "\"Экоход\", \"Восход\" и \"Колва\": как в Прикамье развивают речной транспорт새 창 열림"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/source-cards.json",
+          "json_pointer": "/rows/32/source_cards/0",
+          "url": "https://vesti-perm.ru/"
+        }
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "vesti-perm.ru",
+      "annotation_boundary": "card_only_provisional",
+      "material_variant_conflict": false,
+      "variant_reviews": []
+    },
+    {
+      "blind_id": "6f47db987010e6f2",
+      "case_id": "ca02",
+      "url": "https://59.ru/text/criminal/2026/11/03/76741420/",
+      "grade": 2,
+      "kind": "article",
+      "published_date": "2026-11-03",
+      "source_reviewed": true,
+      "date_verified": true,
+      "reason": "Собственная городская новость о приговоре в Перми; NewsArticle/datePublished 03.11.2026 внутри окна. 2019–2020 и март 2025 — даты преступлений/этапов дела, не публикации.",
+      "evidence": [
+        "В Перми суд приговорил мошенницу к пяти годам колонии.",
+        "2026-11-03T11:15:03+03:00"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/source-cards.json",
+          "json_pointer": "/rows/33/source_cards/0",
+          "url": "https://59.ru/text/criminal/2026/11/03/76741420/"
+        },
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-9a429223ed390eadc2fd118ff4d932618d10206bc56603569ba9c112401a87f3.html",
+          "url": "https://59.ru/text/criminal/2026/11/03/76741420/",
+          "variant_id": "a8871352b9883acb64db18b4b335cd76c3f82a3a9abbdf202b8e5abfe9ac5ec4",
+          "sha256": "9a429223ed390eadc2fd118ff4d932618d10206bc56603569ba9c112401a87f3"
+        },
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-5d69fcbcbe40c8c82bec92a50d03f9d21c93135c08236be2a8621da3f6fd7035.html",
+          "url": "https://59.ru/text/criminal/2026/11/03/76741420/",
+          "variant_id": "fc6ec08b432f3ae04aedd32dfde11c4b03a6fac47d6c4ea3d8486497b17cc3a6",
+          "sha256": "5d69fcbcbe40c8c82bec92a50d03f9d21c93135c08236be2a8621da3f6fd7035"
+        }
+      ],
+      "event_cluster": "perm-pseudolawyer-verdict-2026-11-03",
+      "publisher_cluster": "59.ru",
+      "annotation_boundary": "all_relevant_complete_primary_variants",
+      "material_variant_conflict": false,
+      "variant_reviews": [
+        {
+          "variant_id": "a8871352b9883acb64db18b4b335cd76c3f82a3a9abbdf202b8e5abfe9ac5ec4",
+          "case_ids": [
+            "ca02"
+          ],
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-9a429223ed390eadc2fd118ff4d932618d10206bc56603569ba9c112401a87f3.html",
+          "html_sha256": "9a429223ed390eadc2fd118ff4d932618d10206bc56603569ba9c112401a87f3",
+          "source_reviewed": true,
+          "captured_extract_truncated": false,
+          "publication_evidence": [
+            {
+              "field": "own NewsArticle.datePublished",
+              "raw": "2026-11-03T11:15:03+03:00",
+              "published_date_moscow": "2026-11-03",
+              "own_url": "https://59.ru/text/criminal/2026/11/03/76741420/",
+              "headline": "В Перми псевдоюристку, обещавшую списать долги и увеличить пенсии, приговорили к пяти годам колонии ",
+              "jsonld_pointer": "/0/@graph/0/datePublished"
+            }
+          ],
+          "suitability_grade": 2,
+          "material_conflict": false,
+          "own_scope": {
+            "tag": "article",
+            "attributes": {
+              "class": "article_gSlSK pb-6"
+            },
+            "start_char": 229745,
+            "end_char": 257610,
+            "normalized_own_text_sha256": "8a180c1071bb0858f525ba54a5792eb3a670badf0cd77959a5ece79ca8bb44f9"
+          },
+          "full_own_body_reviewed": true,
+          "own_body_quote": "В Перми суд приговорил мошенницу к пяти годам колонии.",
+          "own_factual_main_headline": [
+            "В Перми псевдоюристку, обещавшую списать долги и увеличить пенсии, приговорили к пяти годам колонии"
+          ]
+        },
+        {
+          "variant_id": "fc6ec08b432f3ae04aedd32dfde11c4b03a6fac47d6c4ea3d8486497b17cc3a6",
+          "case_ids": [
+            "ca02"
+          ],
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-5d69fcbcbe40c8c82bec92a50d03f9d21c93135c08236be2a8621da3f6fd7035.html",
+          "html_sha256": "5d69fcbcbe40c8c82bec92a50d03f9d21c93135c08236be2a8621da3f6fd7035",
+          "source_reviewed": true,
+          "captured_extract_truncated": false,
+          "publication_evidence": [
+            {
+              "field": "own NewsArticle.datePublished",
+              "raw": "2026-11-03T11:15:03+03:00",
+              "published_date_moscow": "2026-11-03",
+              "own_url": "https://59.ru/text/criminal/2026/11/03/76741420/",
+              "headline": "В Перми псевдоюристку, обещавшую списать долги и увеличить пенсии, приговорили к пяти годам колонии ",
+              "jsonld_pointer": "/0/@graph/0/datePublished"
+            }
+          ],
+          "suitability_grade": 2,
+          "material_conflict": false,
+          "own_scope": {
+            "tag": "article",
+            "attributes": {
+              "class": "article_gSlSK pb-6"
+            },
+            "start_char": 229745,
+            "end_char": 257610,
+            "normalized_own_text_sha256": "5e2bf7357dca4603606d76fc45539884551848414d88d1d5848f3800a3220073"
+          },
+          "full_own_body_reviewed": true,
+          "own_body_quote": "В Перми суд приговорил мошенницу к пяти годам колонии.",
+          "own_factual_main_headline": [
+            "В Перми псевдоюристку, обещавшую списать долги и увеличить пенсии, приговорили к пяти годам колонии"
+          ]
+        }
+      ],
+      "variant_comparison": "All supplied complete own bodies and publication dates agree in suitability. Only view/comment counters differ where observed."
+    },
+    {
+      "blind_id": "7bb69ec9026595c7",
+      "case_id": "ca02",
+      "url": "https://ria.ru/location_Perm/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Главная страница/раздел/тематическая лента, не отдельная проверенная датированная публикация. Только карточка; навигационная граница предварительная, даты анонсов не датируют ленту.",
+      "evidence": [
+        "Пермь. Читайте последние новости на тему в ленте новостей на сайте РИА Новости. Временные ограничения на прием и выпуск "
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/source-cards.json",
+          "json_pointer": "/rows/36/source_cards/0",
+          "url": "https://ria.ru/location_Perm/"
+        }
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "ria.ru",
+      "annotation_boundary": "card_only_provisional",
+      "material_variant_conflict": false,
+      "variant_reviews": []
+    },
+    {
+      "blind_id": "80ce2929ff7488a0",
+      "case_id": "ca02",
+      "url": "https://rankchart.org/site/59.ru/",
+      "grade": null,
+      "kind": "unknown",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Оригинал отсутствует. Карточка стороннего профиля сайта копирует описание городского портала; собственные тип, дата и тело именно этой URL не подтверждены. Описание чужого портала не переносится на страницу.",
+      "evidence": [
+        "59.ru Новости Перми - главные новости сегодня | 59.ru - новости Перми Последние свежие новости Перми и Пермского края за"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/source-cards.json",
+          "json_pointer": "/rows/38/source_cards/0",
+          "url": "https://rankchart.org/site/59.ru/"
+        }
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "rankchart.org",
+      "annotation_boundary": "unknown_original_unavailable",
+      "material_variant_conflict": false,
+      "variant_reviews": []
+    },
+    {
+      "blind_id": "ee67a1353f8920ae",
+      "case_id": "ca02",
+      "url": "https://59.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": true,
+      "date_verified": false,
+      "reason": "Все собственные варианты показывают набор самостоятельных новостных анонсов/ссылок; это лента, не единственная статья с собственной publication date. Даты/места анонсов не переносились на ленту.",
+      "evidence": [
+        "Новости Перми и Пермского края | 59.ру"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/source-cards.json",
+          "json_pointer": "/rows/58/source_cards/0",
+          "url": "https://59.ru/"
+        },
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-96299d6adbd7990e1ad9ab6cfc66220a86cb7132c02bed06afb3e1f890f8f059.html",
+          "url": "https://59.ru/",
+          "variant_id": "9f6783bc1cdcf14a0cfaead2ceace3421ee0fde4ee1b30e9bcee80c8135d5f60",
+          "sha256": "96299d6adbd7990e1ad9ab6cfc66220a86cb7132c02bed06afb3e1f890f8f059"
+        },
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-a10225727f7f3853cb2f0c475cb6c71f43837c20a072d19602973fb8ae8d0fcd.html",
+          "url": "https://59.ru/",
+          "variant_id": "057e03841b03b7769b822aebbd5fbc30f12d782dc4f1039ff977f8ea5953728d",
+          "sha256": "a10225727f7f3853cb2f0c475cb6c71f43837c20a072d19602973fb8ae8d0fcd"
+        }
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "59.ru",
+      "annotation_boundary": "all_relevant_complete_primary_variants",
+      "material_variant_conflict": false,
+      "variant_reviews": [
+        {
+          "variant_id": "9f6783bc1cdcf14a0cfaead2ceace3421ee0fde4ee1b30e9bcee80c8135d5f60",
+          "case_ids": [
+            "ca02"
+          ],
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-96299d6adbd7990e1ad9ab6cfc66220a86cb7132c02bed06afb3e1f890f8f059.html",
+          "html_sha256": "96299d6adbd7990e1ad9ab6cfc66220a86cb7132c02bed06afb3e1f890f8f059",
+          "source_reviewed": true,
+          "captured_extract_truncated": false,
+          "publication_evidence": [],
+          "suitability_grade": 1,
+          "material_conflict": false,
+          "own_scope": null
+        },
+        {
+          "variant_id": "057e03841b03b7769b822aebbd5fbc30f12d782dc4f1039ff977f8ea5953728d",
+          "case_ids": [
+            "ca02"
+          ],
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-a10225727f7f3853cb2f0c475cb6c71f43837c20a072d19602973fb8ae8d0fcd.html",
+          "html_sha256": "a10225727f7f3853cb2f0c475cb6c71f43837c20a072d19602973fb8ae8d0fcd",
+          "source_reviewed": true,
+          "captured_extract_truncated": false,
+          "publication_evidence": [],
+          "suitability_grade": 1,
+          "material_conflict": false,
+          "own_scope": null
+        }
+      ]
+    },
+    {
+      "blind_id": "fa29ec642171c0c1",
+      "case_id": "ca02",
+      "url": "https://www.kommersant.ru/regions/59",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Главная страница/раздел/тематическая лента, не отдельная проверенная датированная публикация. Только карточка; навигационная граница предварительная, даты анонсов не датируют ленту.",
+      "evidence": [
+        "Освободившееся место в заксобрании займет Айна Якупова от «Новых людей»새 창 열림"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/source-cards.json",
+          "json_pointer": "/rows/61/source_cards/0",
+          "url": "https://www.kommersant.ru/regions/59"
+        }
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "kommersant.ru",
+      "annotation_boundary": "card_only_provisional",
+      "material_variant_conflict": false,
+      "variant_reviews": []
+    },
+    {
+      "blind_id": "477b44f375c0201a",
+      "case_id": "ca03",
+      "url": "https://ufa.rbc.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Главная страница/раздел/тематическая лента, не отдельная проверенная датированная публикация. Только карточка; навигационная граница предварительная, даты анонсов не датируют ленту.",
+      "evidence": [
+        "✅Новости Уфы и Башкортостана ⚡Свежие события и происшествия Башкирии на РБК새 창 열림"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/source-cards.json",
+          "json_pointer": "/rows/15/source_cards/0",
+          "url": "https://ufa.rbc.ru/"
+        }
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "ufa.rbc.ru",
+      "annotation_boundary": "card_only_provisional",
+      "material_variant_conflict": false,
+      "variant_reviews": []
+    },
+    {
+      "blind_id": "4971a75a90bd6d01",
+      "case_id": "ca03",
+      "url": "https://ufa-room.ru/",
+      "grade": 1,
+      "kind": "other",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка представляет профиль команды или городской информационный портал/афишу: полезная навигация, но не конкретная датированная новость. Оригинал отсутствует; граница предварительная.",
+      "evidence": [
+        "Уфа сегодня: мероприятия в Уфе, вакансии в Уфе, куда сходить отдохнуть в Уфе, работа в Уфе - Сайт The Ufa-Room представл"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/source-cards.json",
+          "json_pointer": "/rows/16/source_cards/0",
+          "url": "https://ufa-room.ru/"
+        }
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "ufa-room.ru",
+      "annotation_boundary": "card_only_provisional",
+      "material_variant_conflict": false,
+      "variant_reviews": []
+    },
+    {
+      "blind_id": "63461f76d083f45b",
+      "case_id": "ca03",
+      "url": "https://sterlegrad.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Главная страница/раздел/тематическая лента, не отдельная проверенная датированная публикация. Только карточка; навигационная граница предварительная, даты анонсов не датируют ленту.",
+      "evidence": [
+        "Стерлеград - новости Стерлитамака, Уфы, Республики Башкортостан…"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/source-cards.json",
+          "json_pointer": "/rows/25/source_cards/0",
+          "url": "https://sterlegrad.ru/"
+        }
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "sterlegrad.ru",
+      "annotation_boundary": "card_only_provisional",
+      "material_variant_conflict": false,
+      "variant_reviews": []
+    },
+    {
+      "blind_id": "6b262026a1d8b70f",
+      "case_id": "ca03",
+      "url": "https://glavufa.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Главная страница/раздел/тематическая лента, не отдельная проверенная датированная публикация. Только карточка; навигационная граница предварительная, даты анонсов не датируют ленту.",
+      "evidence": [
+        "Читайте сейчас последние новости Уфы на страницах интернет-газеты ГлавУфа. Будьте в курсе последних происшествий, случив"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/source-cards.json",
+          "json_pointer": "/rows/29/source_cards/0",
+          "url": "https://glavufa.ru/"
+        }
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "glavufa.ru",
+      "annotation_boundary": "card_only_provisional",
+      "material_variant_conflict": false,
+      "variant_reviews": []
+    },
+    {
+      "blind_id": "701014be884b05c8",
+      "case_id": "ca03",
+      "url": "https://ufa1.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": true,
+      "date_verified": false,
+      "reason": "Все собственные варианты показывают набор самостоятельных новостных анонсов/ссылок; это лента, не единственная статья с собственной publication date. Даты/места анонсов не переносились на ленту.",
+      "evidence": [
+        "Последние свежие новости Уфы и Башкортостана за сегодня. Все новости региона на сайте Уфа1.ру: происшествия, последние с"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/source-cards.json",
+          "json_pointer": "/rows/34/source_cards/0",
+          "url": "https://ufa1.ru/"
+        },
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-ba556e3767ac7b0100bc3c8dc8282fb2b75d1883e19601c1bce24f365edad22d.html",
+          "url": "https://ufa1.ru/",
+          "variant_id": "a1a53b6133978a3109eb23fe4029741f9ccf1df5e17f8e32287ed91ed34c17f7",
+          "sha256": "ba556e3767ac7b0100bc3c8dc8282fb2b75d1883e19601c1bce24f365edad22d"
+        },
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-dfcefd175a6f639e62904fdcd953f22ef809d4b6f8012dff2643013f5d056c3d.html",
+          "url": "https://ufa1.ru/",
+          "variant_id": "23654f7502b91e313100572c91f97ec00bd046ad035f4dabd8d8367f2176fb48",
+          "sha256": "dfcefd175a6f639e62904fdcd953f22ef809d4b6f8012dff2643013f5d056c3d"
+        }
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "ufa1.ru",
+      "annotation_boundary": "all_relevant_complete_primary_variants",
+      "material_variant_conflict": false,
+      "variant_reviews": [
+        {
+          "variant_id": "a1a53b6133978a3109eb23fe4029741f9ccf1df5e17f8e32287ed91ed34c17f7",
+          "case_ids": [
+            "ca03"
+          ],
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-ba556e3767ac7b0100bc3c8dc8282fb2b75d1883e19601c1bce24f365edad22d.html",
+          "html_sha256": "ba556e3767ac7b0100bc3c8dc8282fb2b75d1883e19601c1bce24f365edad22d",
+          "source_reviewed": true,
+          "captured_extract_truncated": false,
+          "publication_evidence": [],
+          "suitability_grade": 1,
+          "material_conflict": false,
+          "own_scope": null
+        },
+        {
+          "variant_id": "23654f7502b91e313100572c91f97ec00bd046ad035f4dabd8d8367f2176fb48",
+          "case_ids": [
+            "ca03"
+          ],
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-dfcefd175a6f639e62904fdcd953f22ef809d4b6f8012dff2643013f5d056c3d.html",
+          "html_sha256": "dfcefd175a6f639e62904fdcd953f22ef809d4b6f8012dff2643013f5d056c3d",
+          "source_reviewed": true,
+          "captured_extract_truncated": false,
+          "publication_evidence": [],
+          "suitability_grade": 1,
+          "material_conflict": false,
+          "own_scope": null
+        }
+      ]
+    },
+    {
+      "blind_id": "8d6e3f3b467b1cdc",
+      "case_id": "ca03",
+      "url": "https://ufa1.ru/text/business/2026/11/03/76740975/",
+      "grade": 2,
+      "kind": "article",
+      "published_date": "2026-11-03",
+      "source_reviewed": true,
+      "date_verified": true,
+      "reason": "Полная собственная новость о закрытии торговых ларьков в Уфе; город, рынок и конфликт установлены own body. Own NewsArticle/datePublished 03.11.2026 внутри окна.",
+      "evidence": [
+        "Торговцы очередного «народного рынка» в Уфе жалуются на его закрытие.",
+        "2026-11-03T07:00:03+03:00"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/source-cards.json",
+          "json_pointer": "/rows/41/source_cards/0",
+          "url": "https://ufa1.ru/text/business/2026/11/03/76740975/"
+        },
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-4e716ff49648b5515c050be376d287f37f1dd1d2ee410b80b5c157e1370085f5.html",
+          "url": "https://ufa1.ru/text/business/2026/11/03/76740975/",
+          "variant_id": "4920a0dcf540d5f280f1195c5400b112e5ff60d68585d1a095c19ca0faa64e99",
+          "sha256": "4e716ff49648b5515c050be376d287f37f1dd1d2ee410b80b5c157e1370085f5"
+        },
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-ed91eaa586cd144eb97659a5d142f9ae37d02388e0854781e146227b9a316a68.html",
+          "url": "https://ufa1.ru/text/business/2026/11/03/76740975/",
+          "variant_id": "802f06724fb783a6b242d36553ee0b4df500ad7c181732aae52a56c4a65d5fd2",
+          "sha256": "ed91eaa586cd144eb97659a5d142f9ae37d02388e0854781e146227b9a316a68"
+        }
+      ],
+      "event_cluster": "ufa-kolkhoz-market-stall-demolition-2026-11-03",
+      "publisher_cluster": "ufa1.ru",
+      "annotation_boundary": "all_relevant_complete_primary_variants",
+      "material_variant_conflict": false,
+      "variant_reviews": [
+        {
+          "variant_id": "4920a0dcf540d5f280f1195c5400b112e5ff60d68585d1a095c19ca0faa64e99",
+          "case_ids": [
+            "ca03"
+          ],
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-4e716ff49648b5515c050be376d287f37f1dd1d2ee410b80b5c157e1370085f5.html",
+          "html_sha256": "4e716ff49648b5515c050be376d287f37f1dd1d2ee410b80b5c157e1370085f5",
+          "source_reviewed": true,
+          "captured_extract_truncated": false,
+          "publication_evidence": [
+            {
+              "field": "own NewsArticle.datePublished",
+              "raw": "2026-11-03T07:00:03+03:00",
+              "published_date_moscow": "2026-11-03",
+              "own_url": "https://ufa1.ru/text/business/2026/11/03/76740975/",
+              "headline": "Возле Колхозного рынка Уфы решили снести ларьки — продавцы против",
+              "jsonld_pointer": "/0/@graph/0/datePublished"
+            }
+          ],
+          "suitability_grade": 2,
+          "material_conflict": false,
+          "own_scope": {
+            "tag": "article",
+            "attributes": {
+              "class": "article_gSlSK pb-6"
+            },
+            "start_char": 236483,
+            "end_char": 262178,
+            "normalized_own_text_sha256": "b12a0ad9c45efc15293246e34e164b29ebf0b1c9ee3db3f7f8c789939aa65607"
+          },
+          "full_own_body_reviewed": true,
+          "own_body_quote": "Торговцы очередного «народного рынка» в Уфе жалуются на его закрытие.",
+          "own_factual_main_headline": [
+            "Возле Колхозного рынка Уфы решили снести ларьки — продавцы против"
+          ]
+        },
+        {
+          "variant_id": "802f06724fb783a6b242d36553ee0b4df500ad7c181732aae52a56c4a65d5fd2",
+          "case_ids": [
+            "ca03"
+          ],
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-ed91eaa586cd144eb97659a5d142f9ae37d02388e0854781e146227b9a316a68.html",
+          "html_sha256": "ed91eaa586cd144eb97659a5d142f9ae37d02388e0854781e146227b9a316a68",
+          "source_reviewed": true,
+          "captured_extract_truncated": false,
+          "publication_evidence": [
+            {
+              "field": "own NewsArticle.datePublished",
+              "raw": "2026-11-03T07:00:03+03:00",
+              "published_date_moscow": "2026-11-03",
+              "own_url": "https://ufa1.ru/text/business/2026/11/03/76740975/",
+              "headline": "Возле Колхозного рынка Уфы решили снести ларьки — продавцы против",
+              "jsonld_pointer": "/0/@graph/0/datePublished"
+            }
+          ],
+          "suitability_grade": 2,
+          "material_conflict": false,
+          "own_scope": {
+            "tag": "article",
+            "attributes": {
+              "class": "article_gSlSK pb-6"
+            },
+            "start_char": 236483,
+            "end_char": 262178,
+            "normalized_own_text_sha256": "b12a0ad9c45efc15293246e34e164b29ebf0b1c9ee3db3f7f8c789939aa65607"
+          },
+          "full_own_body_reviewed": true,
+          "own_body_quote": "Торговцы очередного «народного рынка» в Уфе жалуются на его закрытие.",
+          "own_factual_main_headline": [
+            "Возле Колхозного рынка Уфы решили снести ларьки — продавцы против"
+          ]
+        }
+      ],
+      "variant_comparison": "All supplied complete own bodies and publication dates agree in suitability. Only view/comment counters differ where observed."
+    },
+    {
+      "blind_id": "ab906f3d88637693",
+      "case_id": "ca03",
+      "url": "https://rb-str.ru/drugie-novosti/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Главная страница/раздел/тематическая лента, не отдельная проверенная датированная публикация. Только карточка; навигационная граница предварительная, даты анонсов не датируют ленту.",
+      "evidence": [
+        "Новости Башкортостана Уфа Стерлитамак Новостной портал Башкирии Уфы Стерлитамака새 창 열림"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/source-cards.json",
+          "json_pointer": "/rows/45/source_cards/0",
+          "url": "https://rb-str.ru/drugie-novosti/"
+        }
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "rb-str.ru",
+      "annotation_boundary": "card_only_provisional",
+      "material_variant_conflict": false,
+      "variant_reviews": []
+    },
+    {
+      "blind_id": "b6675fe1c2f3b227",
+      "case_id": "ca03",
+      "url": "https://ufa1.ru/text/world/2026/11/02/76740698/",
+      "grade": 0,
+      "kind": "article",
+      "published_date": "2026-11-02",
+      "source_reviewed": true,
+      "date_verified": true,
+      "reason": "Полный own digest посвящён федеральным/международным событиям, Архангельской области и списку регионов с Башкортостаном; собственного события/факта в Уфе нет. Publisher УФА1.ру и регион не заменяют связь с городом. Own datePublished 02.11.2026 верна, но city relation отсутствует.",
+      "evidence": [
+        "Мужчина ожил прямо в морге в Архангельской области: что произошло - 2 ноября 2026 | УФА1.ру",
+        "2026-11-02T20:00:00+03:00"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/source-cards.json",
+          "json_pointer": "/rows/48/source_cards/0",
+          "url": "https://ufa1.ru/text/world/2026/11/02/76740698/"
+        },
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-38b0462fead6d573eb9a86db374f9cbc6ef3a6c05b255dc285a1997ddd90b5f1.html",
+          "url": "https://ufa1.ru/text/world/2026/11/02/76740698/",
+          "variant_id": "39528eb2572355d94ddd0e0a39e239b02177574f811255648aa1517870760774",
+          "sha256": "38b0462fead6d573eb9a86db374f9cbc6ef3a6c05b255dc285a1997ddd90b5f1"
+        },
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-5a7aa16dd4b284ef1055cf62d1db0355efdb5e72002756373e24ea6026af1b44.html",
+          "url": "https://ufa1.ru/text/world/2026/11/02/76740698/",
+          "variant_id": "0ee54e461e4d333d48368ab07cc6d978a98618bd493ef671570e01553bdda6f7",
+          "sha256": "5a7aa16dd4b284ef1055cf62d1db0355efdb5e72002756373e24ea6026af1b44"
+        }
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "ufa1.ru",
+      "annotation_boundary": "all_relevant_complete_primary_variants",
+      "material_variant_conflict": false,
+      "variant_reviews": [
+        {
+          "variant_id": "39528eb2572355d94ddd0e0a39e239b02177574f811255648aa1517870760774",
+          "case_ids": [
+            "ca03"
+          ],
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-38b0462fead6d573eb9a86db374f9cbc6ef3a6c05b255dc285a1997ddd90b5f1.html",
+          "html_sha256": "38b0462fead6d573eb9a86db374f9cbc6ef3a6c05b255dc285a1997ddd90b5f1",
+          "source_reviewed": true,
+          "captured_extract_truncated": false,
+          "publication_evidence": [
+            {
+              "field": "own NewsArticle.datePublished",
+              "raw": "2026-11-02T20:00:00+03:00",
+              "published_date_moscow": "2026-11-02",
+              "own_url": "https://ufa1.ru/text/world/2026/11/02/76740698/",
+              "headline": "Мужчина ожил прямо в морге — он умер от инфаркта: новости 2 ноября ",
+              "jsonld_pointer": "/0/@graph/0/datePublished"
+            }
+          ],
+          "suitability_grade": 0,
+          "material_conflict": false,
+          "own_scope": {
+            "tag": "article",
+            "attributes": {
+              "class": "article_gSlSK pb-6"
+            },
+            "start_char": 231921,
+            "end_char": 271903,
+            "normalized_own_text_sha256": "dbba3d16c386567d700ba02a8cae0afaf0f1f354a6214916085133b9985e152f"
+          },
+          "full_own_body_reviewed": true,
+          "source_topics": [
+            "Federal pensions/utilities and national IT events",
+            "Arkhangelsk region morgue incident",
+            "MChS fake messages across regions including Bashkortostan; no Ufa-specific fact"
+          ]
+        },
+        {
+          "variant_id": "0ee54e461e4d333d48368ab07cc6d978a98618bd493ef671570e01553bdda6f7",
+          "case_ids": [
+            "ca03"
+          ],
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-5a7aa16dd4b284ef1055cf62d1db0355efdb5e72002756373e24ea6026af1b44.html",
+          "html_sha256": "5a7aa16dd4b284ef1055cf62d1db0355efdb5e72002756373e24ea6026af1b44",
+          "source_reviewed": true,
+          "captured_extract_truncated": false,
+          "publication_evidence": [
+            {
+              "field": "own NewsArticle.datePublished",
+              "raw": "2026-11-02T20:00:00+03:00",
+              "published_date_moscow": "2026-11-02",
+              "own_url": "https://ufa1.ru/text/world/2026/11/02/76740698/",
+              "headline": "Мужчина ожил прямо в морге — он умер от инфаркта: новости 2 ноября ",
+              "jsonld_pointer": "/0/@graph/0/datePublished"
+            }
+          ],
+          "suitability_grade": 0,
+          "material_conflict": false,
+          "own_scope": {
+            "tag": "article",
+            "attributes": {
+              "class": "article_gSlSK pb-6"
+            },
+            "start_char": 231921,
+            "end_char": 271903,
+            "normalized_own_text_sha256": "c5c3279958af1a8a46380f530f4528c2ac25c927471b4522cb752cc84bc9bb0f"
+          },
+          "full_own_body_reviewed": true,
+          "source_topics": [
+            "Federal pensions/utilities and national IT events",
+            "Arkhangelsk region morgue incident",
+            "MChS fake messages across regions including Bashkortostan; no Ufa-specific fact"
+          ]
+        }
+      ]
+    },
+    {
+      "blind_id": "e3100ee7a442338f",
+      "case_id": "ca03",
+      "url": "https://webrate.org/site/ufa1.ru/",
+      "grade": null,
+      "kind": "unknown",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Оригинал отсутствует. Карточка стороннего профиля сайта копирует описание городского портала; собственные тип, дата и тело именно этой URL не подтверждены. Описание чужого портала не переносится на страницу.",
+      "evidence": [
+        "Последние свежие новости Уфы и Башкортостана за сегодня - онлайн на сайте ufa1.ru새 창 열림"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/source-cards.json",
+          "json_pointer": "/rows/57/source_cards/0",
+          "url": "https://webrate.org/site/ufa1.ru/"
+        }
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "webrate.org",
+      "annotation_boundary": "unknown_original_unavailable",
+      "material_variant_conflict": false,
+      "variant_reviews": []
+    },
+    {
+      "blind_id": "f0b6054132d84433",
+      "case_id": "ca03",
+      "url": "https://ufa1.ru/text/gorod/2026/11/02/76720417/",
+      "grade": 2,
+      "kind": "article",
+      "published_date": "2026-11-02",
+      "source_reviewed": true,
+      "date_verified": true,
+      "reason": "Полный собственный городской обзор действующих депутатов и строительного блока Горсовета Уфы, с конкретными городскими проектами и действиями. Own Article/datePublished 02.11.2026 входит в новое окно 01–03.11.2026; исторические декларации/биографии не датируют публикацию.",
+      "evidence": [
+        "Сейчас он заместитель председателя Горсовета Уфы (избран 2 октября 2026 года)",
+        "2026-11-02T05:20:00+03:00"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/source-cards.json",
+          "json_pointer": "/rows/59/source_cards/0",
+          "url": "https://ufa1.ru/text/gorod/2026/11/02/76720417/"
+        },
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-6ad4854fc2af68c177966af305f088dbaa5cdafb090e9fe1d6dd8e6aa8f51730.html",
+          "url": "https://ufa1.ru/text/gorod/2026/11/02/76720417/",
+          "variant_id": "7c19e1f9918b3fcb340212c68a1aaa26a619bb1993a5443a282034ba1ffa660e",
+          "sha256": "6ad4854fc2af68c177966af305f088dbaa5cdafb090e9fe1d6dd8e6aa8f51730"
+        },
+        {
+          "path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-bf7c6ccd4bb9e7156b7048e5357241174fac5eb9a41f38eae3df2e4d848981d7.html",
+          "url": "https://ufa1.ru/text/gorod/2026/11/02/76720417/",
+          "variant_id": "7918d412e928f0cd13c401b690b5afcfd2e8dced79c8d868bb7a2d645a70d843",
+          "sha256": "bf7c6ccd4bb9e7156b7048e5357241174fac5eb9a41f38eae3df2e4d848981d7"
+        }
+      ],
+      "event_cluster": "ufa-city-council-developers-overview-2026-11-02",
+      "publisher_cluster": "ufa1.ru",
+      "annotation_boundary": "all_relevant_complete_primary_variants",
+      "material_variant_conflict": false,
+      "variant_reviews": [
+        {
+          "variant_id": "7c19e1f9918b3fcb340212c68a1aaa26a619bb1993a5443a282034ba1ffa660e",
+          "case_ids": [
+            "ca03"
+          ],
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-6ad4854fc2af68c177966af305f088dbaa5cdafb090e9fe1d6dd8e6aa8f51730.html",
+          "html_sha256": "6ad4854fc2af68c177966af305f088dbaa5cdafb090e9fe1d6dd8e6aa8f51730",
+          "source_reviewed": true,
+          "captured_extract_truncated": false,
+          "publication_evidence": [
+            {
+              "field": "own Article.datePublished",
+              "raw": "2026-11-02T05:20:00+03:00",
+              "published_date_moscow": "2026-11-02",
+              "own_url": "https://ufa1.ru/text/gorod/2026/11/02/76720417/",
+              "headline": "Застройщики и бизнес в горсовете Уфы: едут в будущее на элитных авто и управляют городом",
+              "jsonld_pointer": "/0/@graph/0/datePublished"
+            }
+          ],
+          "suitability_grade": 2,
+          "material_conflict": false,
+          "own_scope": {
+            "tag": "article",
+            "attributes": {
+              "class": "article_gSlSK pb-6"
+            },
+            "start_char": 232027,
+            "end_char": 310111,
+            "normalized_own_text_sha256": "51f0998455f97caa86b676dd41bb7a407cfe99a6a99018de18276464dc9cd76d"
+          },
+          "full_own_body_reviewed": true,
+          "own_body_quote": "Сейчас он заместитель председателя Горсовета Уфы (избран 2 октября 2026 года)",
+          "own_factual_main_headline": [
+            "Застройщики и бизнес в горсовете Уфы: едут в будущее на элитных авто и управляют городом"
+          ]
+        },
+        {
+          "variant_id": "7918d412e928f0cd13c401b690b5afcfd2e8dced79c8d868bb7a2d645a70d843",
+          "case_ids": [
+            "ca03"
+          ],
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-bf7c6ccd4bb9e7156b7048e5357241174fac5eb9a41f38eae3df2e4d848981d7.html",
+          "html_sha256": "bf7c6ccd4bb9e7156b7048e5357241174fac5eb9a41f38eae3df2e4d848981d7",
+          "source_reviewed": true,
+          "captured_extract_truncated": false,
+          "publication_evidence": [
+            {
+              "field": "own Article.datePublished",
+              "raw": "2026-11-02T05:20:00+03:00",
+              "published_date_moscow": "2026-11-02",
+              "own_url": "https://ufa1.ru/text/gorod/2026/11/02/76720417/",
+              "headline": "Застройщики и бизнес в горсовете Уфы: едут в будущее на элитных авто и управляют городом",
+              "jsonld_pointer": "/0/@graph/0/datePublished"
+            }
+          ],
+          "suitability_grade": 2,
+          "material_conflict": false,
+          "own_scope": {
+            "tag": "article",
+            "attributes": {
+              "class": "article_gSlSK pb-6"
+            },
+            "start_char": 232027,
+            "end_char": 310111,
+            "normalized_own_text_sha256": "0de1f9d26afa9f5c9e77a41f2a848d4e80eb12e4d2ce9b8760ad8216fdbdef33"
+          },
+          "full_own_body_reviewed": true,
+          "own_body_quote": "Сейчас он заместитель председателя Горсовета Уфы (избран 2 октября 2026 года)",
+          "own_factual_main_headline": [
+            "Застройщики и бизнес в горсовете Уфы: едут в будущее на элитных авто и управляют городом"
+          ]
+        }
+      ],
+      "variant_comparison": "All supplied complete own bodies and publication dates agree in suitability. Only view/comment counters differ where observed."
+    },
+    {
+      "blind_id": "0374dc9c8a98131a",
+      "case_id": "ca04",
+      "url": "https://www.e1.ru/text/incidents/2026/11/03/76741416/",
+      "grade": 2,
+      "kind": "article",
+      "published_date": "2026-11-03",
+      "source_reviewed": true,
+      "date_verified": true,
+      "reason": "Полное собственное тело о конкретном ДТП на улице Малышева. Own factual h1 «аварии в центре Екатеринбурга» локализует то же событие, описанное substantive body; не требуется повтор города в каждом предложении. Own publication03.11.2026, оба полных variants согласованы.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/confirm/blind/originals/source-a0143ec9e83f7d39b91f9d176bc0211a23dd92d64d003496ac203a13afa9309f.html: own h1 «Пытался проскочить на красный: видео момента аварии в центре Екатеринбурга»; own body/publication context «Появилось видео момента утреннего ДТП, произошедшего у кольца на улице Малышева.»; NewsArticle.url=https://www.e1.ru/text/incidents/2026/11/03/76741416/, @id=https://www.e1.ru/text/incidents/2026/11/03/76741416/#articleBody, datePublished=2026-11-03T09:27:49+03:00, Moscow date 2026-11-03",
+        "runs/news-dates-2026-11-03/confirm/blind/originals/source-9659997ec550d52593bb1469bca189e6a7ee80d9a9b3fc66fec202c28a1ed0b1.html: own h1 «Пытался проскочить на красный: видео момента аварии в центре Екатеринбурга»; own body/publication context «Появилось видео момента утреннего ДТП, произошедшего у кольца на улице Малышева.»; NewsArticle.url=https://www.e1.ru/text/incidents/2026/11/03/76741416/, @id=https://www.e1.ru/text/incidents/2026/11/03/76741416/#articleBody, datePublished=2026-11-03T09:27:49+03:00, Moscow date 2026-11-03"
+      ],
+      "event_cluster": "ekaterinburg-malysheva-collision-video",
+      "publisher_cluster": "e1.ru",
+      "source_variants": [
+        {
+          "variant_id": "aee369a9c8ecc4c1f397de4cd17dedc55e34f80ccc2b6036efaa1544f1ef33f3",
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-a0143ec9e83f7d39b91f9d176bc0211a23dd92d64d003496ac203a13afa9309f.html",
+          "html_hash": "a0143ec9e83f7d39b91f9d176bc0211a23dd92d64d003496ac203a13afa9309f",
+          "source_reviewed": true,
+          "grade": 2,
+          "material_suitability_conflict": false,
+          "truncated": false,
+          "own_article_id": "https://www.e1.ru/text/incidents/2026/11/03/76741416/#articleBody",
+          "own_headline": "Пытался проскочить на красный: видео момента аварии в центре Екатеринбурга",
+          "own_jsonld_datePublished": "2026-11-03T09:27:49+03:00",
+          "publication_moscow_date": "2026-11-03",
+          "own_article_body_sha256": "4689996f5e52697aac9e45414e2fbe013b03687be3264e46356fd87c3696fa22",
+          "own_visible_header_time": "2026-11-03T11:27:49+05:00",
+          "own_scope": "unique article/h1 and #articleBody, neighbouring comments/recommendations excluded"
+        },
+        {
+          "variant_id": "012887a355b9c8f4664e9eac9ef07548d8ab6564d105aeeaa28e9864ddcb02d0",
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-9659997ec550d52593bb1469bca189e6a7ee80d9a9b3fc66fec202c28a1ed0b1.html",
+          "html_hash": "9659997ec550d52593bb1469bca189e6a7ee80d9a9b3fc66fec202c28a1ed0b1",
+          "source_reviewed": true,
+          "grade": 2,
+          "material_suitability_conflict": false,
+          "truncated": false,
+          "own_article_id": "https://www.e1.ru/text/incidents/2026/11/03/76741416/#articleBody",
+          "own_headline": "Пытался проскочить на красный: видео момента аварии в центре Екатеринбурга",
+          "own_jsonld_datePublished": "2026-11-03T09:27:49+03:00",
+          "publication_moscow_date": "2026-11-03",
+          "own_article_body_sha256": "4689996f5e52697aac9e45414e2fbe013b03687be3264e46356fd87c3696fa22",
+          "own_visible_header_time": "2026-11-03T11:27:49+05:00",
+          "own_scope": "unique article/h1 and #articleBody, neighbouring comments/recommendations excluded"
+        }
+      ],
+      "review_boundary": "exact_primary_raw_own_scope",
+      "all_variants_same_own_article_body": true,
+      "all_variants_same_own_publication": true
+    },
+    {
+      "blind_id": "0527b73bd87ee41c",
+      "case_id": "ca04",
+      "url": "https://www.e1.ru/text/incidents/2026/11/02/76740200/",
+      "grade": 2,
+      "kind": "article",
+      "published_date": "2026-11-02",
+      "source_reviewed": true,
+      "date_verified": true,
+      "reason": "Own body явно описывает автобус108 между Екатеринбургом и Верхней Пышмой: конкретная городская маршрутная связь, а не лишь publisher/соседний город. Собственная публикация02.11.2026 в окне01–03.11; событие01.11 не подменяет publication date. Оба variants согласованы.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/confirm/blind/originals/source-98967687bea20435b67164198af87629d36a74ba8175ac11c270d675e1afd079.html: own h1 «На окраине Екатеринбурга в рейсовый автобус запустили булыжник. Возмутительное видео»; own body/publication context «В автобусе № 108, который ходит между Екатеринбургом и Верхней Пышмой, группа молодых людей устроила скандал.»; NewsArticle.url=https://www.e1.ru/text/incidents/2026/11/02/76740200/, @id=https://www.e1.ru/text/incidents/2026/11/02/76740200/#articleBody, datePublished=2026-11-02T18:35:00+03:00, Moscow date 2026-11-02",
+        "runs/news-dates-2026-11-03/confirm/blind/originals/source-3a1911fb8db97cb88290cbcb33a2f7bcdee44264a60fe7e75ecbaf23f72e5609.html: own h1 «На окраине Екатеринбурга в рейсовый автобус запустили булыжник. Возмутительное видео»; own body/publication context «В автобусе № 108, который ходит между Екатеринбургом и Верхней Пышмой, группа молодых людей устроила скандал.»; NewsArticle.url=https://www.e1.ru/text/incidents/2026/11/02/76740200/, @id=https://www.e1.ru/text/incidents/2026/11/02/76740200/#articleBody, datePublished=2026-11-02T18:35:00+03:00, Moscow date 2026-11-02"
+      ],
+      "event_cluster": "ekaterinburg-verkhnyaya-pyshma-route108-stone-attack",
+      "publisher_cluster": "e1.ru",
+      "source_variants": [
+        {
+          "variant_id": "b302c291d89025d7bc719c5cf32704ed135f9194d807c6f0018e287cef01c8ff",
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-98967687bea20435b67164198af87629d36a74ba8175ac11c270d675e1afd079.html",
+          "html_hash": "98967687bea20435b67164198af87629d36a74ba8175ac11c270d675e1afd079",
+          "source_reviewed": true,
+          "grade": 2,
+          "material_suitability_conflict": false,
+          "truncated": false,
+          "own_article_id": "https://www.e1.ru/text/incidents/2026/11/02/76740200/#articleBody",
+          "own_headline": "На окраине Екатеринбурга в рейсовый автобус запустили булыжник. Возмутительное видео",
+          "own_jsonld_datePublished": "2026-11-02T18:35:00+03:00",
+          "publication_moscow_date": "2026-11-02",
+          "own_article_body_sha256": "3d42c3a2f7f5ddb7839f894b5ea1f347ad7918bb50493995708809c90a92ea12",
+          "own_visible_header_time": "2026-11-02T20:35:00+05:00",
+          "own_scope": "unique article/h1 and #articleBody, neighbouring comments/recommendations excluded"
+        },
+        {
+          "variant_id": "284ad9798000c5a79a8880d9995b4f485c15808f94403152ce5764bfa91c6723",
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-3a1911fb8db97cb88290cbcb33a2f7bcdee44264a60fe7e75ecbaf23f72e5609.html",
+          "html_hash": "3a1911fb8db97cb88290cbcb33a2f7bcdee44264a60fe7e75ecbaf23f72e5609",
+          "source_reviewed": true,
+          "grade": 2,
+          "material_suitability_conflict": false,
+          "truncated": false,
+          "own_article_id": "https://www.e1.ru/text/incidents/2026/11/02/76740200/#articleBody",
+          "own_headline": "На окраине Екатеринбурга в рейсовый автобус запустили булыжник. Возмутительное видео",
+          "own_jsonld_datePublished": "2026-11-02T18:35:00+03:00",
+          "publication_moscow_date": "2026-11-02",
+          "own_article_body_sha256": "3d42c3a2f7f5ddb7839f894b5ea1f347ad7918bb50493995708809c90a92ea12",
+          "own_visible_header_time": "2026-11-02T20:35:00+05:00",
+          "own_scope": "unique article/h1 and #articleBody, neighbouring comments/recommendations excluded"
+        }
+      ],
+      "review_boundary": "exact_primary_raw_own_scope",
+      "all_variants_same_own_article_body": true,
+      "all_variants_same_own_publication": true
+    },
+    {
+      "blind_id": "33bc519184402a89",
+      "case_id": "ca04",
+      "url": "https://www.e1.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": true,
+      "date_verified": false,
+      "reason": "Оба native originals — главная новостная лента с множеством самостоятельных анонсов. Даты/факты соседних карточек не являются собственной публикацией root URL.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/confirm/blind/originals/source-5fad47c120a3ece73d468106de8a6f216e28c5326445b8f4cddee57f6abca289.html root/section title/navigation: «Новости Екатеринбурга и Свердловской области»; no individual own publication is claimed",
+        "runs/news-dates-2026-11-03/confirm/blind/originals/source-97c34e200cf93983cae1508b1f88ecedaf679f3259969d9e23c4727b09d86409.html root/section title/navigation: «Новости Екатеринбурга и Свердловской области»; no individual own publication is claimed"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "e1.ru",
+      "source_variants": [
+        {
+          "variant_id": "6f606c90f0f453479ada1480fea632b50879570ae90411f3925233313fb5ccd2",
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-5fad47c120a3ece73d468106de8a6f216e28c5326445b8f4cddee57f6abca289.html",
+          "html_hash": "5fad47c120a3ece73d468106de8a6f216e28c5326445b8f4cddee57f6abca289",
+          "source_reviewed": true,
+          "grade": 1,
+          "material_suitability_conflict": false,
+          "truncated": false,
+          "own_scope": "root/section navigation with multiple independent stories; no individual Article date claimed"
+        },
+        {
+          "variant_id": "2a2f58d5753fbf0e2e955a94d8cd0422eda3d0b8ea7cf984811383032f8a0e91",
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-97c34e200cf93983cae1508b1f88ecedaf679f3259969d9e23c4727b09d86409.html",
+          "html_hash": "97c34e200cf93983cae1508b1f88ecedaf679f3259969d9e23c4727b09d86409",
+          "source_reviewed": true,
+          "grade": 1,
+          "material_suitability_conflict": false,
+          "truncated": false,
+          "own_scope": "root/section navigation with multiple independent stories; no individual Article date claimed"
+        }
+      ],
+      "review_boundary": "exact_primary_raw_own_scope"
+    },
+    {
+      "blind_id": "53611a900566696b",
+      "case_id": "ca04",
+      "url": "https://novostic.ru/category/novosti-ekaterinburga/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "По карточке явная городская категория/лента разных новостей, не отдельная проверенная публикация. Карточная оценка предварительна.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/confirm/blind/source-cards.json rows[blind_id=53611a900566696b].source_cards (https://novostic.ru/category/novosti-ekaterinburga/): «Последние новости города Екатеринбурга»"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "novostic.ru",
+      "source_variants": [],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "5eabad88c35da129",
+      "case_id": "ca04",
+      "url": "https://egd.ru/about/news/704/",
+      "grade": null,
+      "kind": "article",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Оригинала нет: title «Лента новостей», но URL с индивидуальным ID и snippet об объезде городской Думы могут принадлежать конкретной статье. Полное own body и publication date не проверены; не превращаю потенциальную статью в известную ленту/отрицательную.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/confirm/blind/source-cards.json rows[blind_id=5eabad88c35da129].source_cards (https://egd.ru/about/news/704/): «Участие в объезде приняли»"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "egd.ru",
+      "source_variants": [],
+      "review_boundary": "missing_original_unknown_not_negative"
+    },
+    {
+      "blind_id": "6e4db20b921cbb69",
+      "case_id": "ca04",
+      "url": "https://novosvyat.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка главной общей ленты России/городов. Это навигация, не отдельная проверенная городская публикация.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/confirm/blind/source-cards.json rows[blind_id=6e4db20b921cbb69].source_cards (https://novosvyat.ru/): «Последние новости России и мира»"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "novosvyat.ru",
+      "source_variants": [],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "802faf0819d61c0b",
+      "case_id": "ca04",
+      "url": "https://apps.apple.com/kr/app/e1-ru-%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8-%D0%B5%D0%BA%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%B1%D1%83%D1%80%D0%B3%D0%B0/id917630579",
+      "grade": 0,
+      "kind": "application",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка App Store рекламирует скачивание приложения E1.RU. Это не собственная новостная статья. Оценка по явно указанному типу карточки предварительна.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/confirm/blind/source-cards.json rows[blind_id=802faf0819d61c0b].source_cards (https://apps.apple.com/kr/app/e1-ru-%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8-%D0%B5%D0%BA%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%B1%D1%83%D1%80%D0%B3%D0%B0/id917630579): «App Store»"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "apps.apple.com",
+      "source_variants": [],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "98538db0f2197b04",
+      "case_id": "ca04",
+      "url": "https://newshead.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка главной агрегирующей новостной ленты, не отдельная статья с полной собственной датой.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/confirm/blind/source-cards.json rows[blind_id=98538db0f2197b04].source_cards (https://newshead.ru/): «Актуальная новостная лента событий»"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "newshead.ru",
+      "source_variants": [],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "e236c4bb07ba8977",
+      "case_id": "ca04",
+      "url": "https://podcasts.apple.com/ru/podcast/%D0%BC%D0%B5%D1%81%D1%82%D0%BD%D1%8B%D0%B5/id1550641240?l=en-GB",
+      "grade": 1,
+      "kind": "other",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка серии подкаста о местных инициативах — навигация по выпускам. Отдельный выпуск/новостная публикация с полной датой01–03.11 не установлен.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/confirm/blind/source-cards.json rows[blind_id=e236c4bb07ba8977].source_cards (https://podcasts.apple.com/ru/podcast/%D0%BC%D0%B5%D1%81%D1%82%D0%BD%D1%8B%D0%B5/id1550641240?l=en-GB): «Второй сезон подкаста посвящен инициативам жителей Екатеринбурга»"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "podcasts.apple.com",
+      "source_variants": [],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "ff1052ab828d4b9f",
+      "case_id": "ca04",
+      "url": "https://www.e1.ru/text/realty/2026/11/03/76741060/",
+      "grade": 2,
+      "kind": "article",
+      "published_date": "2026-11-03",
+      "source_reviewed": true,
+      "date_verified": true,
+      "reason": "Полное собственное тело о торгах домом усадьбы Елизарьева в Екатеринбурге, с адресом и условиями лота. Own publication03.11.2026 внутри окна; исторический возраст здания/предыдущие торги не публикационная дата. Оба variants согласованы.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/confirm/blind/originals/source-9dd272f96bb8fe9c8c54827c2a93cd6fdf3e780fbaf3bbce1162c789d123718a.html: own h1 «В центре Екатеринбурга выставили на продажу дом из старинной усадьбы»; own body/publication context «Госкорпорация «Дом.рф» выставила на торги еще один памятник в Екатеринбурге.»; NewsArticle.url=https://www.e1.ru/text/realty/2026/11/03/76741060/, @id=https://www.e1.ru/text/realty/2026/11/03/76741060/#articleBody, datePublished=2026-11-03T06:06:00+03:00, Moscow date 2026-11-03",
+        "runs/news-dates-2026-11-03/confirm/blind/originals/source-7b13165cc668b1b354a1c2d377b72b3890a8f54a577f0703ed03b06fa5000072.html: own h1 «В центре Екатеринбурга выставили на продажу дом из старинной усадьбы»; own body/publication context «Госкорпорация «Дом.рф» выставила на торги еще один памятник в Екатеринбурге.»; NewsArticle.url=https://www.e1.ru/text/realty/2026/11/03/76741060/, @id=https://www.e1.ru/text/realty/2026/11/03/76741060/#articleBody, datePublished=2026-11-03T06:06:00+03:00, Moscow date 2026-11-03"
+      ],
+      "event_cluster": "ekaterinburg-elizaryev-estate-auction",
+      "publisher_cluster": "e1.ru",
+      "source_variants": [
+        {
+          "variant_id": "63e619aa958bee2e4ed7014f5d54f061012bfc4c49eed844823334d7ce991b8b",
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-9dd272f96bb8fe9c8c54827c2a93cd6fdf3e780fbaf3bbce1162c789d123718a.html",
+          "html_hash": "9dd272f96bb8fe9c8c54827c2a93cd6fdf3e780fbaf3bbce1162c789d123718a",
+          "source_reviewed": true,
+          "grade": 2,
+          "material_suitability_conflict": false,
+          "truncated": false,
+          "own_article_id": "https://www.e1.ru/text/realty/2026/11/03/76741060/#articleBody",
+          "own_headline": "В центре Екатеринбурга выставили на продажу дом из старинной усадьбы",
+          "own_jsonld_datePublished": "2026-11-03T06:06:00+03:00",
+          "publication_moscow_date": "2026-11-03",
+          "own_article_body_sha256": "109e2a27b93d6b7b8a10d03c4ebd110a0e5a96807418b57532f6b2a837d40dd4",
+          "own_visible_header_time": "2026-11-03T08:06:00+05:00",
+          "own_scope": "unique article/h1 and #articleBody, neighbouring comments/recommendations excluded"
+        },
+        {
+          "variant_id": "f5da8d974b4e0fa6a2879df63291fe8e7ba31e0198eb8612063fe778341b33df",
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-7b13165cc668b1b354a1c2d377b72b3890a8f54a577f0703ed03b06fa5000072.html",
+          "html_hash": "7b13165cc668b1b354a1c2d377b72b3890a8f54a577f0703ed03b06fa5000072",
+          "source_reviewed": true,
+          "grade": 2,
+          "material_suitability_conflict": false,
+          "truncated": false,
+          "own_article_id": "https://www.e1.ru/text/realty/2026/11/03/76741060/#articleBody",
+          "own_headline": "В центре Екатеринбурга выставили на продажу дом из старинной усадьбы",
+          "own_jsonld_datePublished": "2026-11-03T06:06:00+03:00",
+          "publication_moscow_date": "2026-11-03",
+          "own_article_body_sha256": "109e2a27b93d6b7b8a10d03c4ebd110a0e5a96807418b57532f6b2a837d40dd4",
+          "own_visible_header_time": "2026-11-03T08:06:00+05:00",
+          "own_scope": "unique article/h1 and #articleBody, neighbouring comments/recommendations excluded"
+        }
+      ],
+      "review_boundary": "exact_primary_raw_own_scope",
+      "all_variants_same_own_article_body": true,
+      "all_variants_same_own_publication": true
+    },
+    {
+      "blind_id": "0904377c2b2c3d4e",
+      "case_id": "ca05",
+      "url": "https://admomsk.ru/web/guest/progress",
+      "grade": 1,
+      "kind": "other",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка официального архива/страницы итогов развития города — справочная навигация. Нельзя присвоить полную дату конкретной статьи по словам «итоги года».",
+      "evidence": [
+        "runs/news-dates-2026-11-03/confirm/blind/source-cards.json rows[blind_id=0904377c2b2c3d4e].source_cards (https://admomsk.ru/web/guest/progress): «Архив официального портала»"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "admomsk.ru",
+      "source_variants": [],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "3c01a8435d1b2b08",
+      "case_id": "ca05",
+      "url": "https://superomsk.ru/news/167842-v_omske_rastet_chislo_ofitsialnykh_teatrov/",
+      "grade": 2,
+      "kind": "article",
+      "published_date": "2026-11-03",
+      "source_reviewed": true,
+      "date_verified": true,
+      "reason": "Полное собственное тело о регистрации омского театра «Алита» и местных театральных организациях; связь с Омском фактическая. Own NewsArticle + head published_time + видимая строка согласованы на03.11.2026+06. Регистрация30.10/старые театры и встроенный анонс02.11 не подменяют публикацию.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/confirm/blind/originals/source-1e41f9f1891aefc0606750be3aa9e3f5e296d10dc8e5a839395ee7a9e9d46845.html: own h1 «У старых омских театров появились новые конкуренты»; own body/publication context «Примечательно, что официальное юридическое лицо театр обрел в год, когда Омск стал культурной столицей страны.»; NewsArticle.url=https://superomsk.ru/news/167842-v_omske_rastet_chislo_ofitsialnykh_teatrov/, @id=https://superomsk.ru/news/167842-v_omske_rastet_chislo_ofitsialnykh_teatrov/#article, datePublished=2026-11-03T20:00:00+06:00, Moscow date 2026-11-03; concordant head article:published_time=2026-11-03T20:00:00+06:00"
+      ],
+      "event_cluster": "omsk-alita-theatre-legal-registration",
+      "publisher_cluster": "superomsk.ru",
+      "source_variants": [
+        {
+          "variant_id": "fa3221e78bb5b709b45c4f89abb81b6237431564267d025336f5a65d95badde6",
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-1e41f9f1891aefc0606750be3aa9e3f5e296d10dc8e5a839395ee7a9e9d46845.html",
+          "html_hash": "1e41f9f1891aefc0606750be3aa9e3f5e296d10dc8e5a839395ee7a9e9d46845",
+          "source_reviewed": true,
+          "grade": 2,
+          "material_suitability_conflict": false,
+          "truncated": false,
+          "own_article_id": "https://superomsk.ru/news/167842-v_omske_rastet_chislo_ofitsialnykh_teatrov/#article",
+          "own_headline": "У старых омских театров появились новые конкуренты",
+          "own_jsonld_datePublished": "2026-11-03T20:00:00+06:00",
+          "publication_moscow_date": "2026-11-03",
+          "own_visible_publication_line": "20:00, 03 ноября 2026 Новости культуры 0",
+          "own_scope": "article.works-4 containing unique h1; own narrative paragraphs, excluding news-embed-card/Читайте также/footer"
+        }
+      ],
+      "review_boundary": "exact_primary_raw_own_scope",
+      "all_variants_same_own_publication": true
+    },
+    {
+      "blind_id": "4f51be938955e5e2",
+      "case_id": "ca05",
+      "url": "https://superomsk.ru/news/167820-nazvany_daty_reisov_iz_omska_v_krasnodar_na_zimnie_kanikuly/",
+      "grade": 2,
+      "kind": "article",
+      "published_date": "2026-11-03",
+      "source_reviewed": true,
+      "date_verified": true,
+      "reason": "Полная own новость о дополнительных рейсах Омского аэропорта/Омск–Краснодар/Норильск. Own publication03.11.2026+06 согласована в JSON-LD, head metadata и видимой строке. Body упоминает анонс4ноября — это внутренняя событийная несогласованность, не competing publication witness; даты декабрь/январь — рейсы, не публикация.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/confirm/blind/originals/source-1c0e6e8180aaf34d30cb0935f0dc2328b8a6e555b2bb12d7978a0f0113ec00d3.html: own h1 «Названы даты рейсов из Омска в Краснодар на зимние каникулы»; own body/publication context «Как отмечают в аэропорту, дополнительные рейсы дают возможность провести праздники с близкими в Омске»; NewsArticle.url=https://superomsk.ru/news/167820-nazvany_daty_reisov_iz_omska_v_krasnodar_na_zimnie_kanikuly/, @id=https://superomsk.ru/news/167820-nazvany_daty_reisov_iz_omska_v_krasnodar_na_zimnie_kanikuly/#article, datePublished=2026-11-03T11:44:00+06:00, Moscow date 2026-11-03; concordant head article:published_time=2026-11-03T11:44:00+06:00"
+      ],
+      "event_cluster": "omsk-krasnodar-norilsk-extra-winter-flights",
+      "publisher_cluster": "superomsk.ru",
+      "source_variants": [
+        {
+          "variant_id": "5a749aa78d97dd25316c3961bc9d0ec130663e04e276c9bad56a7a4d82aeccb3",
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-1c0e6e8180aaf34d30cb0935f0dc2328b8a6e555b2bb12d7978a0f0113ec00d3.html",
+          "html_hash": "1c0e6e8180aaf34d30cb0935f0dc2328b8a6e555b2bb12d7978a0f0113ec00d3",
+          "source_reviewed": true,
+          "grade": 2,
+          "material_suitability_conflict": false,
+          "truncated": false,
+          "own_article_id": "https://superomsk.ru/news/167820-nazvany_daty_reisov_iz_omska_v_krasnodar_na_zimnie_kanikuly/#article",
+          "own_headline": "Названы даты рейсов из Омска в Краснодар на зимние каникулы",
+          "own_jsonld_datePublished": "2026-11-03T11:44:00+06:00",
+          "publication_moscow_date": "2026-11-03",
+          "own_visible_publication_line": "11:44, 03 ноября 2026 Общество 695",
+          "own_scope": "article.works-4 containing unique h1; own narrative paragraphs, excluding news-embed-card/Читайте также/footer"
+        }
+      ],
+      "review_boundary": "exact_primary_raw_own_scope",
+      "all_variants_same_own_publication": true,
+      "source_consistency_note": "Own publication03.11.2026 is consistent across metadata/header; own narrative says airport announced on4Nov2026, an internal event/calendar inconsistency. Kept explicit; not substituted as publication date and no truth-verification claim."
+    },
+    {
+      "blind_id": "5f12f3866609bad1",
+      "case_id": "ca05",
+      "url": "https://superomsk.ru/news/167825-v_tsentre_omska_prodolzhat_snosit_chastnyi_sektor_radi_zhk_severnoe_siianie/",
+      "grade": 2,
+      "kind": "article",
+      "published_date": "2026-11-03",
+      "source_reviewed": true,
+      "date_verified": true,
+      "reason": "Полное own сообщение о продолжении ЖК «Северное сияние» и сносе конкретного частного квартала в центре Омска. Own publication03.11.2026+06 подтверждена несколькими собственными publication witnesses. Дата экспертизы30.10 и встроенная связанная статья20.10 не публикация текущего материала.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/confirm/blind/originals/source-fcab5edb8298817b0a547319281a1b32fb2165100338f0667281e16f351c9914.html: own h1 «В центре Омска продолжат сносить частный сектор ради ЖК «Северное сияние»»; own body/publication context «В центре Омска продолжат сносить частные дома ради строительства нового жилого комплекса.»; NewsArticle.url=https://superomsk.ru/news/167825-v_tsentre_omska_prodolzhat_snosit_chastnyi_sektor_radi_zhk_severnoe_siianie/, @id=https://superomsk.ru/news/167825-v_tsentre_omska_prodolzhat_snosit_chastnyi_sektor_radi_zhk_severnoe_siianie/#article, datePublished=2026-11-03T13:07:00+06:00, Moscow date 2026-11-03; concordant head article:published_time=2026-11-03T13:07:00+06:00"
+      ],
+      "event_cluster": "omsk-severnoe-siyanie-next-construction-stage",
+      "publisher_cluster": "superomsk.ru",
+      "source_variants": [
+        {
+          "variant_id": "6522a1e780425af65f12d98f3588590de4082552376efc2b116424734ee4846e",
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-fcab5edb8298817b0a547319281a1b32fb2165100338f0667281e16f351c9914.html",
+          "html_hash": "fcab5edb8298817b0a547319281a1b32fb2165100338f0667281e16f351c9914",
+          "source_reviewed": true,
+          "grade": 2,
+          "material_suitability_conflict": false,
+          "truncated": false,
+          "own_article_id": "https://superomsk.ru/news/167825-v_tsentre_omska_prodolzhat_snosit_chastnyi_sektor_radi_zhk_severnoe_siianie/#article",
+          "own_headline": "В центре Омска продолжат сносить частный сектор ради ЖК «Северное сияние»",
+          "own_jsonld_datePublished": "2026-11-03T13:07:00+06:00",
+          "publication_moscow_date": "2026-11-03",
+          "own_visible_publication_line": "13:07, 03 ноября 2026 Новости недвижимости 686",
+          "own_scope": "article.works-4 containing unique h1; own narrative paragraphs, excluding news-embed-card/Читайте также/footer"
+        }
+      ],
+      "review_boundary": "exact_primary_raw_own_scope",
+      "all_variants_same_own_publication": true
+    },
+    {
+      "blind_id": "65b85806a4131420",
+      "case_id": "ca05",
+      "url": "https://novostic.ru/category/novosti-ekaterinburga/",
+      "grade": 0,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка явно о категории новостей Екатеринбурга вместо Омска. Явное несоответствие места, предварительно по карточке; дату не устанавливаю.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/confirm/blind/source-cards.json rows[blind_id=65b85806a4131420].source_cards (https://novostic.ru/category/novosti-ekaterinburga/): «Последние новости города Екатеринбурга»"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "novostic.ru",
+      "source_variants": [],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "8ddbd49f73f54fc5",
+      "case_id": "ca05",
+      "url": "https://shkulevholding.ru/",
+      "grade": 0,
+      "kind": "other",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка корпоративной главной медиахолдинга, а не самостоятельной городской новости Омска. Издательская деятельность не является фактической городской темой статьи.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/confirm/blind/source-cards.json rows[blind_id=8ddbd49f73f54fc5].source_cards (https://shkulevholding.ru/): «Шкулёв Холдинг - ведущий медиахолдинг России»"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "shkulevholding.ru",
+      "source_variants": [],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "ac49db5727448128",
+      "case_id": "ca05",
+      "url": "https://superomsk.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": true,
+      "date_verified": false,
+      "reason": "Native root — лента новостей с множеством самостоятельных публикаций; не отдельная статья и не собственная дата root URL.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/confirm/blind/originals/source-79136b5285ea5efe67d3b77709cb12f57ab763e3daee8fe43ce1e8c3311f76f3.html root/section title/navigation: «Последние новости Омска и Омской области»; no individual own publication is claimed"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "superomsk.ru",
+      "source_variants": [
+        {
+          "variant_id": "42de6113e061f49c8b2cea3a37c2a1ea3b2ac4ebd99ffb6385a9bc5a3196ce94",
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-79136b5285ea5efe67d3b77709cb12f57ab763e3daee8fe43ce1e8c3311f76f3.html",
+          "html_hash": "79136b5285ea5efe67d3b77709cb12f57ab763e3daee8fe43ce1e8c3311f76f3",
+          "source_reviewed": true,
+          "grade": 1,
+          "material_suitability_conflict": false,
+          "truncated": false,
+          "own_scope": "root/section navigation with multiple independent stories; no individual Article date claimed"
+        }
+      ],
+      "review_boundary": "exact_primary_raw_own_scope"
+    },
+    {
+      "blind_id": "c687cb0a6b43bb07",
+      "case_id": "ca05",
+      "url": "https://www.linkedin.com/posts/jonathan-raymond-ohayon-4aa90824b_%D7%94%D7%99%D7%95%D7%9D-%D7%A1%D7%99%D7%99%D7%9E%D7%AA%D7%99-%D7%90%D7%AA-%D7%94%D7%91%D7%97%D7%99%D7%A0%D7%94-%D7%94%D7%90%D7%97%D7%A8%D7%95%D7%A0%D7%94-%D7%91%D7%AA%D7%95%D7%90%D7%A8-%D7%99%D7%A6%D7%90%D7%AA%D7%99-activity-7487779198477144064-8vI5",
+      "grade": 0,
+      "kind": "other",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка личного социального поста о завершении учёбы/экзамена по computer science, а не городских новостей Омска. Тема явно иная; карточная оценка предварительна.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/confirm/blind/source-cards.json rows[blind_id=c687cb0a6b43bb07].source_cards (https://www.linkedin.com/posts/jonathan-raymond-ohayon-4aa90824b_%D7%94%D7%99%D7%95%D7%9D-%D7%A1%D7%99%D7%99%D7%9E%D7%AA%D7%99-%D7%90%D7%AA-%D7%94%D7%91%D7%97%D7%99%D7%A0%D7%94-%D7%94%D7%90%D7%97%D7%A8%D7%95%D7%A0%D7%94-%D7%91%D7%AA%D7%95%D7%90%D7%A8-%D7%99%D7%A6%D7%90%D7%AA%D7%99-activity-7487779198477144064-8vI5): «היום סיימתי את הבחינה האחרונה בתואר.»"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "linkedin.com",
+      "source_variants": [],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "ce9c4f54a4ccba29",
+      "case_id": "ca05",
+      "url": "https://www.linkedin.com/posts/bar-ilan-university_%D7%94%D7%99%D7%A9%D7%92-%D7%A0%D7%A4%D7%9C%D7%90-%D7%9C%D7%A0%D7%91%D7%97%D7%A8%D7%AA-%D7%94%D7%A0%D7%A2%D7%A8%D7%95%D7%AA-%D7%A9%D7%9C%D7%A0%D7%95-%D7%91%D7%90%D7%95%D7%9C%D7%99%D7%9E%D7%A4%D7%99%D7%90%D7%93%D7%94-activity-7462836741972975617-0wEm",
+      "grade": 0,
+      "kind": "other",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка социального сообщения об олимпиаде по информатике в Италии, а не городских новостей Омска. Не выводится публикационная дата из относительного текста/URL.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/confirm/blind/source-cards.json rows[blind_id=ce9c4f54a4ccba29].source_cards (https://www.linkedin.com/posts/bar-ilan-university_%D7%94%D7%99%D7%A9%D7%92-%D7%A0%D7%A4%D7%9C%D7%90-%D7%9C%D7%A0%D7%91%D7%97%D7%A8%D7%AA-%D7%94%D7%A0%D7%A2%D7%A8%D7%95%D7%AA-%D7%A9%D7%9C%D7%A0%D7%95-%D7%91%D7%90%D7%95%D7%9C%D7%99%D7%9E%D7%A4%D7%99%D7%90%D7%93%D7%94-activity-7462836741972975617-0wEm): «באולימפיאדה האירופית במדעי המחשב»"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "linkedin.com",
+      "source_variants": [],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "f7fee5cb1ff7112a",
+      "case_id": "ca05",
+      "url": "https://www.bbc.com/russian/features-54204627",
+      "grade": 0,
+      "kind": "article",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка политического интервью с Марией Певчих — явно иной предмет, без городской темы Омска. Original/date отсутствуют, отрицательное решение о теме предварительно по карточке.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/confirm/blind/source-cards.json rows[blind_id=f7fee5cb1ff7112a].source_cards (https://www.bbc.com/russian/features-54204627): «Интервью с Марией Певчих»"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "bbc.com",
+      "source_variants": [],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "0cf8451b8138595a",
+      "case_id": "ca06",
+      "url": "https://msk1.ru/",
+      "grade": 0,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка явно называет новостную ленту Москвы/области, а не Челябинска. Карточная оценка места предварительна.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/confirm/blind/source-cards.json rows[blind_id=0cf8451b8138595a].source_cards (https://msk1.ru/): «Новости Москвы и Московской области»"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "msk1.ru",
+      "source_variants": [],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "22a2c20caaf2cfdf",
+      "case_id": "ca06",
+      "url": "https://74.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка главной Челябинской ленты, не отдельная собственная публикация за03.11.2030. Case-related original отсутствует; чужие case variants того же root не подставляются.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/confirm/blind/source-cards.json rows[blind_id=22a2c20caaf2cfdf].source_cards (https://74.ru/): «Новости Челябинска и Челябинской области»"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "74.ru",
+      "source_variants": [],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "2508d0e5fbb9e099",
+      "case_id": "ca06",
+      "url": "https://www1.ru/articles/2026/11/03/ii-razognal-rovery-iandeksa-na-43-kak-ustroeny-roboty-dostavshhiki-i-kto-reguliruet-ix-dvizenie.html",
+      "grade": 0,
+      "kind": "article",
+      "published_date": "2026-11-03",
+      "source_reviewed": true,
+      "date_verified": true,
+      "reason": "Own Article.url/headline и публикационные JSON-LD/meta согласованы на03.11.2026. Это заведомо вне обязательного03.11.2030; год взят из собственной publication metadata, не URL или срока технологии.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/confirm/blind/originals/source-7c8864eee3f1070732449085815f29d37ba166f9ecf53206332f68666c152b84.html: own h1 «ИИ разогнал роверы «Яндекса» на 43%: как устроены роботы-доставщики и кто регулирует их движение»; own body/publication context «ИИ разогнал роверы «Яндекса» на 43%»; Article.url=https://www1.ru/articles/2026/11/03/ii-razognal-rovery-iandeksa-na-43-kak-ustroeny-roboty-dostavshhiki-i-kto-reguliruet-ix-dvizenie.html, @id=https://www1.ru/articles/2026/11/03/ii-razognal-rovery-iandeksa-na-43-kak-ustroeny-roboty-dostavshhiki-i-kto-reguliruet-ix-dvizenie.html#publication-839258, datePublished=2026-11-03T17:06:00+03:00, Moscow date 2026-11-03; concordant head article:published_time=2026-11-03T17:06:00+03:00"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "www1.ru",
+      "source_variants": [
+        {
+          "variant_id": "d40e0d891b286d6e563c21e7ac00cd8a6f3a44983af20377d337b17bece35d5b",
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-7c8864eee3f1070732449085815f29d37ba166f9ecf53206332f68666c152b84.html",
+          "html_hash": "7c8864eee3f1070732449085815f29d37ba166f9ecf53206332f68666c152b84",
+          "source_reviewed": true,
+          "grade": 0,
+          "material_suitability_conflict": false,
+          "truncated": false,
+          "own_article_id": "https://www1.ru/articles/2026/11/03/ii-razognal-rovery-iandeksa-na-43-kak-ustroeny-roboty-dostavshhiki-i-kto-reguliruet-ix-dvizenie.html#publication-839258",
+          "own_headline": "ИИ разогнал роверы «Яндекса» на 43%: как устроены роботы-доставщики и кто регулирует их движение",
+          "own_jsonld_datePublished": "2026-11-03T17:06:00+03:00",
+          "publication_moscow_date": "2026-11-03",
+          "own_scope": "own Article URL/@id/headline and concordant head publication meta; no foreign teaser date used"
+        }
+      ],
+      "review_boundary": "exact_primary_raw_own_scope",
+      "all_variants_same_own_publication": true
+    },
+    {
+      "blind_id": "41fbee9ddddac897",
+      "case_id": "ca06",
+      "url": "https://74.ru/text/auto/2025/10/30/76096663/",
+      "grade": null,
+      "kind": "article",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Оригинал потенциальной статьи отсутствует. Карточка смешивает знаменитостей, челябинскую полицию и другие анонсы; own предмет/тело/полная publication date не установлены. Автодорожный URL и его год не заменяют оригинал; не считаю mixed teaser карточку надёжным отрицательным source verdict.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/confirm/blind/source-cards.json rows[blind_id=41fbee9ddddac897].source_cards (https://74.ru/text/auto/2025/10/30/76096663/): «сестры Аверины впервые раскрыли правду»"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "74.ru",
+      "source_variants": [],
+      "review_boundary": "missing_original_unknown_not_negative"
+    },
+    {
+      "blind_id": "73a6f0df76f710f0",
+      "case_id": "ca06",
+      "url": "https://www1.ru/articles/2026/11/03/tri-rubeza-oborony-ot-100-metrov-do-11-kilometrov-kak-kalasnikov-sobiraetsia-sbivat-bespilotniki.html",
+      "grade": 0,
+      "kind": "article",
+      "published_date": "2026-11-03",
+      "source_reviewed": true,
+      "date_verified": true,
+      "reason": "Own Article.url/headline, JSON-LD и head publication meta связаны и дают03.11.2026, вне2030-11-03. Дальности вооружения/будущие планы не являются publication date.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/confirm/blind/originals/source-4504a5c668b84c3f15d62b75d8479aed209d85630bcba26b99ae6c561e79d688.html: own h1 «Три рубежа обороны от 100 метров до 11 километров: как «Калашников» собирается сбивать беспилотники»; own body/publication context «Три рубежа обороны от 100 метров до 11 километров»; Article.url=https://www1.ru/articles/2026/11/03/tri-rubeza-oborony-ot-100-metrov-do-11-kilometrov-kak-kalasnikov-sobiraetsia-sbivat-bespilotniki.html, @id=https://www1.ru/articles/2026/11/03/tri-rubeza-oborony-ot-100-metrov-do-11-kilometrov-kak-kalasnikov-sobiraetsia-sbivat-bespilotniki.html#publication-839214, datePublished=2026-11-03T15:52:00+03:00, Moscow date 2026-11-03; concordant head article:published_time=2026-11-03T15:52:00+03:00"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "www1.ru",
+      "source_variants": [
+        {
+          "variant_id": "bca58a064db72586b8c5154a37e09145ae3dad35dbf9dbdcef57abb54f81b088",
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-4504a5c668b84c3f15d62b75d8479aed209d85630bcba26b99ae6c561e79d688.html",
+          "html_hash": "4504a5c668b84c3f15d62b75d8479aed209d85630bcba26b99ae6c561e79d688",
+          "source_reviewed": true,
+          "grade": 0,
+          "material_suitability_conflict": false,
+          "truncated": false,
+          "own_article_id": "https://www1.ru/articles/2026/11/03/tri-rubeza-oborony-ot-100-metrov-do-11-kilometrov-kak-kalasnikov-sobiraetsia-sbivat-bespilotniki.html#publication-839214",
+          "own_headline": "Три рубежа обороны от 100 метров до 11 километров: как «Калашников» собирается сбивать беспилотники",
+          "own_jsonld_datePublished": "2026-11-03T15:52:00+03:00",
+          "publication_moscow_date": "2026-11-03",
+          "own_scope": "own Article URL/@id/headline and concordant head publication meta; no foreign teaser date used"
+        }
+      ],
+      "review_boundary": "exact_primary_raw_own_scope",
+      "all_variants_same_own_publication": true
+    },
+    {
+      "blind_id": "8958508bf35f3f98",
+      "case_id": "ca06",
+      "url": "https://prooman.ru/economy.html",
+      "grade": 0,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка прямо о новостях экономики Омана, не Челябинска. Явное другое место/тема, оценка по карточке предварительна.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/confirm/blind/source-cards.json rows[blind_id=8958508bf35f3f98].source_cards (https://prooman.ru/economy.html): «Свежие новости в категории Экономика из Омана»"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "prooman.ru",
+      "source_variants": [],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "92b030ad6cc78d5a",
+      "case_id": "ca06",
+      "url": "https://74.ru/text/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка прямо называет ленту новостей Челябинска за сутки. Это навигация, не отдельная будущая публикация.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/confirm/blind/source-cards.json rows[blind_id=92b030ad6cc78d5a].source_cards (https://74.ru/text/): «Лента новостей и событий Челябинска»"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "74.ru",
+      "source_variants": [],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "b0b4da1db722faaf",
+      "case_id": "ca06",
+      "url": "https://chelschool1.ru/",
+      "grade": 1,
+      "kind": "other",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка главной школы с историей, традициями и разделами — справочная навигация, не отдельная датированная новость о транспорте.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/confirm/blind/source-cards.json rows[blind_id=b0b4da1db722faaf].source_cards (https://chelschool1.ru/): «Главная - Гимназия No1 г. Челябинска»"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "chelschool1.ru",
+      "source_variants": [],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "c56b60386fa8f1b7",
+      "case_id": "ca06",
+      "url": "https://rosupack.com/ru/",
+      "grade": 0,
+      "kind": "other",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка коммерческой выставочной/отраслевой упаковочной платформы. Это не городская новостная статья о транспорте Челябинска.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/confirm/blind/source-cards.json rows[blind_id=c56b60386fa8f1b7].source_cards (https://rosupack.com/ru/): «экосистема упаковочной индустрии»"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "rosupack.com",
+      "source_variants": [],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "cd5488df1b7779fa",
+      "case_id": "ca06",
+      "url": "https://www.e1.ru/text/politics/2022/11/07/71797310/",
+      "grade": null,
+      "kind": "article",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Оригинала нет; карточка соединяет перекрытия Екатеринбурга, сибирский дом и VoLTE/другие истории. Нельзя отделить own article от чужих тизеров и установить полную publication date. Год URL не используется.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/confirm/blind/source-cards.json rows[blind_id=cd5488df1b7779fa].source_cards (https://www.e1.ru/text/politics/2022/11/07/71797310/): «В Екатеринбурге перекрыли центральные улицы»"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "e1.ru",
+      "source_variants": [],
+      "review_boundary": "missing_original_unknown_not_negative"
+    },
+    {
+      "blind_id": "d6325752b32e2317",
+      "case_id": "ca06",
+      "url": "http://government.ru/news/43914/",
+      "grade": null,
+      "kind": "article",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Потенциальная правительственная новость не имеет case-related original. Дата самой публикации, полное тело и связь с Челябинском не установлены;2035 — горизонт стратегии, не publication year. Будущая публикация2030 не подтверждена.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/confirm/blind/source-cards.json rows[blind_id=d6325752b32e2317].source_cards (http://government.ru/news/43914/): «о проекте Транспортной стратегии до 2035 года»"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "government.ru",
+      "source_variants": [],
+      "review_boundary": "missing_original_unknown_not_negative"
+    },
+    {
+      "blind_id": "d8078ad14e71c2d0",
+      "case_id": "ca06",
+      "url": "https://www1.ru/news",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": true,
+      "date_verified": false,
+      "reason": "Оба exact originals — раздел новостей с множеством публикаций. Не датирую сам раздел датами анонсов; это навигация, не отдельная проверенная будущая статья.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/confirm/blind/originals/source-64f30ca386ac948258deb460f9c6627d932471033f315bea2d6aa8dcc0cdf5f1.html root/section title/navigation: «Свежие новости отечественной науки и техники»; no individual own publication is claimed",
+        "runs/news-dates-2026-11-03/confirm/blind/originals/source-45d0933a9d269cf8fd9cd4291eb06e898840b050c1a64913708ffa00c5a90776.html root/section title/navigation: «Свежие новости отечественной науки и техники»; no individual own publication is claimed"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "www1.ru",
+      "source_variants": [
+        {
+          "variant_id": "c6e56d2c9ccf8d92b6d3834f10348f6ab279c2437cfa059823175a6133e92cbe",
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-64f30ca386ac948258deb460f9c6627d932471033f315bea2d6aa8dcc0cdf5f1.html",
+          "html_hash": "64f30ca386ac948258deb460f9c6627d932471033f315bea2d6aa8dcc0cdf5f1",
+          "source_reviewed": true,
+          "grade": 1,
+          "material_suitability_conflict": false,
+          "truncated": false,
+          "own_scope": "root/section navigation with multiple independent stories; no individual Article date claimed"
+        },
+        {
+          "variant_id": "d3c4c5fa6001a78b0795f32e1046cc3c2f5c1a0ca51b8ddd6780eda2f3d7c0bb",
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-45d0933a9d269cf8fd9cd4291eb06e898840b050c1a64913708ffa00c5a90776.html",
+          "html_hash": "45d0933a9d269cf8fd9cd4291eb06e898840b050c1a64913708ffa00c5a90776",
+          "source_reviewed": true,
+          "grade": 1,
+          "material_suitability_conflict": false,
+          "truncated": false,
+          "own_scope": "root/section navigation with multiple independent stories; no individual Article date claimed"
+        }
+      ],
+      "review_boundary": "exact_primary_raw_own_scope"
+    },
+    {
+      "blind_id": "ff919952b277a1b9",
+      "case_id": "ca06",
+      "url": "https://www1.ru/articles/2026/11/03/125-mm-puska-teplovizor-i-1130-l-s-cem-udivliaet-sovremennyi-t-72b3m.html",
+      "grade": 0,
+      "kind": "article",
+      "published_date": "2026-11-03",
+      "source_reviewed": true,
+      "date_verified": true,
+      "reason": "Оба own Article варианта имеют одинаковую publication date03.11.2026, связанную с тем же URL/главным заголовком, вне03.11.2030. Числа в названии танка не даты публикации.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/confirm/blind/originals/source-9d14bdea1995ffe9e626c1dace0b558211537398a433a8946e983f769a0623dc.html: own h1 «125-мм пушка, тепловизор и 1130 л. с.: чем удивляет современный Т-72Б3М»; own body/publication context «125-мм пушка, тепловизор и 1130 л. с.»; Article.url=https://www1.ru/articles/2026/11/03/125-mm-puska-teplovizor-i-1130-l-s-cem-udivliaet-sovremennyi-t-72b3m.html, @id=https://www1.ru/articles/2026/11/03/125-mm-puska-teplovizor-i-1130-l-s-cem-udivliaet-sovremennyi-t-72b3m.html#publication-839143, datePublished=2026-11-03T10:46:00+03:00, Moscow date 2026-11-03; concordant head article:published_time=2026-11-03T10:46:00+03:00",
+        "runs/news-dates-2026-11-03/confirm/blind/originals/source-c87c5f3e755c6723e33eb36b76c5b173d14cb48901bfd216c3de61dde3e65314.html: own h1 «125-мм пушка, тепловизор и 1130 л. с.: чем удивляет современный Т-72Б3М»; own body/publication context «125-мм пушка, тепловизор и 1130 л. с.»; Article.url=https://www1.ru/articles/2026/11/03/125-mm-puska-teplovizor-i-1130-l-s-cem-udivliaet-sovremennyi-t-72b3m.html, @id=https://www1.ru/articles/2026/11/03/125-mm-puska-teplovizor-i-1130-l-s-cem-udivliaet-sovremennyi-t-72b3m.html#publication-839143, datePublished=2026-11-03T10:46:00+03:00, Moscow date 2026-11-03; concordant head article:published_time=2026-11-03T10:46:00+03:00"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "www1.ru",
+      "source_variants": [
+        {
+          "variant_id": "3c65cd91041ec72278d97e2061ab78c45611c85e9ff2059c34cef9407ae7251a",
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-9d14bdea1995ffe9e626c1dace0b558211537398a433a8946e983f769a0623dc.html",
+          "html_hash": "9d14bdea1995ffe9e626c1dace0b558211537398a433a8946e983f769a0623dc",
+          "source_reviewed": true,
+          "grade": 0,
+          "material_suitability_conflict": false,
+          "truncated": false,
+          "own_article_id": "https://www1.ru/articles/2026/11/03/125-mm-puska-teplovizor-i-1130-l-s-cem-udivliaet-sovremennyi-t-72b3m.html#publication-839143",
+          "own_headline": "125-мм пушка, тепловизор и 1130 л. с.: чем удивляет современный Т-72Б3М",
+          "own_jsonld_datePublished": "2026-11-03T10:46:00+03:00",
+          "publication_moscow_date": "2026-11-03",
+          "own_scope": "own Article URL/@id/headline and concordant head publication meta; no foreign teaser date used"
+        },
+        {
+          "variant_id": "1234560556ff7f2f1cb06087287c01d98b3a4ea2817e1a19c1d18f65cc1bc2d3",
+          "raw_html_path": "runs/news-dates-2026-11-03/confirm/blind/originals/source-c87c5f3e755c6723e33eb36b76c5b173d14cb48901bfd216c3de61dde3e65314.html",
+          "html_hash": "c87c5f3e755c6723e33eb36b76c5b173d14cb48901bfd216c3de61dde3e65314",
+          "source_reviewed": true,
+          "grade": 0,
+          "material_suitability_conflict": false,
+          "truncated": false,
+          "own_article_id": "https://www1.ru/articles/2026/11/03/125-mm-puska-teplovizor-i-1130-l-s-cem-udivliaet-sovremennyi-t-72b3m.html#publication-839143",
+          "own_headline": "125-мм пушка, тепловизор и 1130 л. с.: чем удивляет современный Т-72Б3М",
+          "own_jsonld_datePublished": "2026-11-03T10:46:00+03:00",
+          "publication_moscow_date": "2026-11-03",
+          "own_scope": "own Article URL/@id/headline and concordant head publication meta; no foreign teaser date used"
+        }
+      ],
+      "review_boundary": "exact_primary_raw_own_scope",
+      "all_variants_same_own_publication": true
+    }
+  ]
+}

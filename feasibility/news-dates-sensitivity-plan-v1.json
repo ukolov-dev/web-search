@@ -1,0 +1,124 @@
+{
+  "version": "news-dates-sensitivity-plan-v1",
+  "reason_before_inference": "Primary NEW12 targeted nd08 returned0/parser_changed and did not test recovered microdata branch in full live retrieval; root explicitly requests exactly2supplemental queries before any supplemental inference.",
+  "case_file": "feasibility/news-dates-sensitivity-cases-v1.json",
+  "stage": "Post-NEW12 bounded source-aware sensitivity, NOT replacement primary, NOT independent qualification; preserve bad/empty/blocked outcomes.",
+  "main_NEW12_score": "Frozen3TP/4knownpositive=75->75%,0FP/unknown-direct; this result remains unchanged and is never pooled with sensitivity.",
+  "as_of": "2026-11-03",
+  "timezone": "Europe/Moscow",
+  "groups": {
+    "known_city_source_overlap_ds01": [
+      "ds01"
+    ],
+    "new_city_sensitivity_ds02": [
+      "ds02"
+    ],
+    "all_sensitivity_ds01_ds02": [
+      "ds01",
+      "ds02"
+    ]
+  },
+  "maximum_ranked_search_calls": 4,
+  "one_attempt_each_arm_case": true,
+  "arm_order": [
+    [
+      "ds01",
+      "baseline"
+    ],
+    [
+      "ds01",
+      "fixed"
+    ],
+    [
+      "ds02",
+      "fixed"
+    ],
+    [
+      "ds02",
+      "baseline"
+    ]
+  ],
+  "transport": "Same existing native CLI freshSession/process percase/arm using frozen NEW12 runner.native_call via runtime RUN/CASES overrides; no product/oldscript changes.",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "reranker": "Qwen3-Reranker-0.6B-4bit",
+  "evidence_versions": {
+    "baseline": "request-evidence-v12-coverage",
+    "fixed": "request-evidence-v13-news-dates"
+  },
+  "per_query_max": {
+    "logical_search_calls": 2,
+    "classification_calls": 3,
+    "document_reads": 4,
+    "reranker_calls": 4,
+    "runtime_seconds": 180,
+    "source_context_chars_per_model_call": 24000
+  },
+  "source_policy": "Original query only, existing Seznam/Naver; no extra search/scraping API. No app/download queries; andro.io/subdomains blocked and never eligible for validation. Model/key/Qwen settings trusted startup only.",
+  "stop": "Any sourceblock, forbiddenhost, transporterror or integrityfailure stops all remaining cohortpaths; no retries/restarts/substitutions, maximum4ranked calls regardless outcome. No extra original HTTP reads.",
+  "source_gold_rubric": {
+    "reference": "feasibility/news-dates-plan-v1.json",
+    "sha256": "f12fc065f2ac68ab9b7a0f847b01c60bee160cf01ff3969ecb50780418ccdebe",
+    "annotation": {
+      "schema": {
+        "rows": [
+          {
+            "blind_id": "sha256(case_id+newline+canonical_url)[:16]",
+            "case_id": "ds01|ds02",
+            "url": "observed URL matching blind_id",
+            "grade": "0|1|2|null",
+            "kind": "article|feed|application|other|unknown",
+            "published_date": "YYYY-MM-DD|null",
+            "source_reviewed": "boolean",
+            "date_verified": "boolean",
+            "reason": "nonempty string",
+            "evidence": [
+              "short exact source quote with path/URL"
+            ],
+            "event_cluster": "optional stable story cluster",
+            "publisher_cluster": "optional publisher/domain cluster"
+          }
+        ]
+      },
+      "grade2": "Specific full original article matches requested city/topic/site and full own publication date in window, no date after as_of. Runtime kind/eligible/direct is never source gold.",
+      "grade1": "Feed/navigation or useful clearly incomplete material, never an eligible full news article. Missing original or unresolved essential date is unknown unless independently clear wrong place/topic/period.",
+      "grade0": "Source clearly wrong place/topic/site/period or app advertisement for news-reading intent; card-only 0/1 marked provisional. Controls may produce positive sources if actually suitable; no expected score is imposed.",
+      "unknown": "Original absent/inaccessible, source insufficient, own full publication date unresolved, or validation cap exhausted; excluded from known-positive denominator and separate from FP.",
+      "date_rules": [
+        "Full own Article/NewsArticle publication date bound to article identity; never query/URL/copyright/clock/adjacent teaser/year inference.",
+        "Modified/event/other-entity dates are not publication; nested/foreign dates not accepted as own.",
+        "Date/time offsets consistently converted to Moscow calendar.",
+        "Both sensitivity cases use default last3Moscow calendar days2026-11-01..2026-11-03; only full own publication dates, no inferred year/future date."
+      ],
+      "dedup": "Per-case canonical URL; repeated source across queries counts case/URL, with separate event/publisher cluster disclosures.",
+      "gold_freeze": "Blind source-only annotators inspect all primary captured variants for a URL. Freeze labels before prediction join; no arm/model/runtime verdicts. If variants disagree materially on suitability, mark unknown and disclose; primary grade2 requires all supplied complete variants suitable (unavailable variants remain missing, not invented negatives)."
+    },
+    "note": "Same full own-article city/topic/date and all relevant primary variant rules. All observed case/URL tokens retained; missing/unread originals unknown unless source conclusively unsuitable."
+  },
+  "recall": {
+    "primary": "paired_read_returned_union_gold_direct_recall",
+    "denominator": "Every known-grade2 case/URL in successful READ union plus returned union of BOTH arms, only cases executed successfully by BOTH arms. Same denominator per arm.",
+    "numerator": "Denominator URLs actually returned as direct by this arm in top10.",
+    "fn": "Denominator minus numerator, including read-but-not-returned and URLs only observed by opposite arm.",
+    "secondary": "paired_returned_union_gold_direct_recall, same prior definition, separately labelled and not substituted for primary.",
+    "undefined": "null before gold, without paired cases, or zero known positives; never made-up0/100.",
+    "unknowns": "All observed/unknown union counts plus per-arm missing originals; unknown direct separate from known FP. Known-positive-only denominator can still understate opportunities when cap/unknown sources remain.",
+    "limits": "Conditional known-positive observed READ+returned corpus, not candidate-pool/full-web recall. Live source variants can differ; disagreements become unknown and are disclosed. Shared CLI/MCP run/public_result is code-backed, not proof of deployment/transport equivalence under all conditions."
+  },
+  "measurements": [
+    "Per-case and separate pooled sensitivity READ+returned known-positive direct recall; returned-only secondary remains labelled.",
+    "ExactTP/FP/FN/newfalseIDs/unknown; observedunknown coverage; source/model/error/budget data.",
+    "Event/publisher-domain clusters; exactURL/knownsource overlap with development/NEW12 disclosed.",
+    "No pooling with NEW12, no score selection, no post-inference code tuning."
+  ],
+  "quality_gates": [
+    "All4validstructured captures and complete allobserved token annotation; null gate if partial.",
+    "No new known unsuitable direct IDs; candidate unknown direct0; prior article/date/literal/audit/city safeguards remain.",
+    "Same source/binaries/dependencies as frozen NEW12 and all perquery caps; block preservation/no retries."
+  ],
+  "source_capture": "Exact native primary rawHTML/fulltext/rawmodel calls; blind originals by hash with allcase-relevant variants; reuse frozen sourcehelper.build with runtime CASES/RUN override.0additionalHTTP/model/extraction to prepare gold.",
+  "baseline_binary": "runs/news-dates-2026-11-03/baseline-web-search",
+  "fixed_binary": "target/release/web-search",
+  "same_source_as_NEW12_code_freeze": "runs/news-dates-2026-11-03/benchmark/code-freeze.json",
+  "no_runtime_tuning_after_NEW12": true,
+  "deployment": "None"
+}

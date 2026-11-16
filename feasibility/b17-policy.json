@@ -1,0 +1,163 @@
+{
+  "name": "B17-frozen-2026-10-29",
+  "cases": [
+    {
+      "id": "ru01",
+      "query": "Rust владение borrowing документация",
+      "forms": [
+        "Rust владение borrowing документация",
+        "Rust ownership borrowing documentation"
+      ]
+    },
+    {
+      "id": "ru02",
+      "query": "SQLite транзакции WAL документация",
+      "forms": [
+        "SQLite транзакции WAL документация",
+        "SQLite transactions WAL documentation"
+      ]
+    },
+    {
+      "id": "ru03",
+      "query": "HTTP статус 304 Last-Modified ETag",
+      "forms": [
+        "HTTP статус 304 Last-Modified ETag",
+        "HTTP status 304 Last-Modified ETag"
+      ]
+    },
+    {
+      "id": "ru04",
+      "query": "Tokio асинхронный Rust руководство",
+      "forms": [
+        "Tokio асинхронный Rust руководство",
+        "Tokio async Rust guide"
+      ]
+    },
+    {
+      "id": "ru05",
+      "query": "экскаватор рабочий цикл перемещение грунта",
+      "forms": [
+        "экскаватор рабочий цикл перемещение грунта",
+        "excavator working cycle soil movement",
+        "excavator working cycle digging swing dumping return",
+        "excavator cycle time stages digging swinging dumping return"
+      ]
+    },
+    {
+      "id": "ru06",
+      "query": "site:doc.rust-lang.org владение ownership",
+      "forms": [
+        "site:doc.rust-lang.org владение ownership",
+        "site:doc.rust-lang.org ownership"
+      ]
+    },
+    {
+      "id": "ru07",
+      "query": "Rust Python обработка HTML сравнение",
+      "forms": [
+        "Rust Python обработка HTML сравнение",
+        "Rust Python HTML processing comparison"
+      ]
+    },
+    {
+      "id": "ru08",
+      "query": "последняя стабильная версия Rust октябрь 2026",
+      "forms": [
+        "последняя стабильная версия Rust октябрь 2026",
+        "latest stable Rust version October 2026"
+      ]
+    },
+    {
+      "id": "ru09",
+      "query": "Unicode графема кодовая точка разница",
+      "forms": [
+        "Unicode графема кодовая точка разница",
+        "Unicode grapheme code point difference"
+      ]
+    },
+    {
+      "id": "ru10",
+      "query": "DNS rebinding SSRF IPv6 защита",
+      "forms": [
+        "DNS rebinding SSRF IPv6 защита",
+        "DNS rebinding SSRF IPv6 protection",
+        "SSRF DNS rebinding IPv6 prevention",
+        "OWASP CheatSheetSeries SSRF IPv6 allowlist validation GitHub"
+      ]
+    },
+    {
+      "id": "en01",
+      "query": "Rust ownership borrowing documentation",
+      "forms": [
+        "Rust ownership borrowing documentation"
+      ]
+    },
+    {
+      "id": "en02",
+      "query": "SQLite WAL transactions documentation",
+      "forms": [
+        "SQLite WAL transactions documentation"
+      ]
+    },
+    {
+      "id": "en03",
+      "query": "HTTP 304 ETag Last-Modified conditional requests",
+      "forms": [
+        "HTTP 304 ETag Last-Modified conditional requests"
+      ]
+    },
+    {
+      "id": "en04",
+      "query": "Tokio Rust asynchronous programming tutorial",
+      "forms": [
+        "Tokio Rust asynchronous programming tutorial"
+      ]
+    },
+    {
+      "id": "en05",
+      "query": "excavator working cycle digging loading travel",
+      "forms": [
+        "excavator working cycle digging loading travel",
+        "excavator working cycle digging swing dumping return",
+        "excavator cycle time stages digging swinging dumping return"
+      ]
+    },
+    {
+      "id": "en06",
+      "query": "site:doc.rust-lang.org ownership",
+      "forms": [
+        "site:doc.rust-lang.org ownership"
+      ]
+    },
+    {
+      "id": "en07",
+      "query": "Rust Python HTML extraction comparison",
+      "forms": [
+        "Rust Python HTML extraction comparison"
+      ]
+    },
+    {
+      "id": "en08",
+      "query": "latest stable Rust release October 2026",
+      "forms": [
+        "latest stable Rust release October 2026"
+      ]
+    },
+    {
+      "id": "en09",
+      "query": "Unicode grapheme cluster code point difference",
+      "forms": [
+        "Unicode grapheme cluster code point difference"
+      ]
+    },
+    {
+      "id": "en10",
+      "query": "DNS rebinding SSRF IPv6 protection",
+      "forms": [
+        "DNS rebinding SSRF IPv6 protection",
+        "SSRF DNS rebinding IPv6 prevention",
+        "OWASP CheatSheetSeries SSRF IPv6 allowlist validation GitHub"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "provenance": "J01 original question/claim/evidence from frozen round2 candidate model-02; additional cases explicit counterfactual/transfer fixtures, not live retrieval.",
+  "cases": [
+    {
+      "id": "J01_original",
+      "question": "По документации Rust Option::unwrap_or: что вернёт Some(7) при default=9 и что вернёт None при default=9?",
+      "claim": "Для Some(7) при default=9 unwrap_or вернёт 7; для None при default=9 вернёт 9.",
+      "evidence": [
+        "assert_eq!(Some(\"car\").unwrap_or(\"bike\"), \"car\");",
+        "assert_eq!(None.unwrap_or(\"bike\"), \"bike\");"
+      ],
+      "expected_supported": false
+    },
+    {
+      "id": "J01_rule_restored",
+      "question": "По документации Rust Option::unwrap_or: что вернёт Some(7) при default=9 и что вернёт None при default=9?",
+      "claim": "Для Some(7) при default=9 unwrap_or вернёт 7; для None при default=9 вернёт 9.",
+      "evidence": [
+        "assert_eq!(Some(\"car\").unwrap_or(\"bike\"), \"car\");",
+        "assert_eq!(None.unwrap_or(\"bike\"), \"bike\");",
+        "Returns the contained Some value or a provided default."
+      ],
+      "expected_supported": true
+    },
+    {
+      "id": "J01_rule_removed",
+      "question": "По документации Rust Option::unwrap_or: что вернёт Some(7) при default=9 и что вернёт None при default=9?",
+      "claim": "Для Some(7) при default=9 unwrap_or вернёт 7; для None при default=9 вернёт 9.",
+      "evidence": [
+        "assert_eq!(Some(\"car\").unwrap_or(\"bike\"), \"car\");",
+        "assert_eq!(None.unwrap_or(\"bike\"), \"bike\");"
+      ],
+      "expected_supported": false
+    },
+    {
+      "id": "J01_number",
+      "question": "По документации Rust Option::unwrap_or: что вернёт Some(7) при default=9 и что вернёт None при default=9?",
+      "claim": "Для Some(7) при default=9 unwrap_or вернёт 8; для None при default=9 вернёт 9.",
+      "evidence": [
+        "assert_eq!(Some(\"car\").unwrap_or(\"bike\"), \"car\");",
+        "assert_eq!(None.unwrap_or(\"bike\"), \"bike\");",
+        "Returns the contained Some value or a provided default."
+      ],
+      "expected_supported": false
+    },
+    {
+      "id": "J01_entity",
+      "question": "По документации Rust Option::unwrap_or: что вернёт Some(7) при default=9 и что вернёт None при default=9?",
+      "claim": "Для Some(7) при default=9 unwrap_or_default вернёт 7; для None при default=9 вернёт 9.",
+      "evidence": [
+        "assert_eq!(Some(\"car\").unwrap_or(\"bike\"), \"car\");",
+        "assert_eq!(None.unwrap_or(\"bike\"), \"bike\");",
+        "Returns the contained Some value or a provided default."
+      ],
+      "expected_supported": false
+    },
+    {
+      "id": "J01_negation",
+      "question": "По документации Rust Option::unwrap_or: что вернёт Some(7) при default=9 и что вернёт None при default=9?",
+      "claim": "Для Some(7) при default=9 unwrap_or не вернёт 7; для None при default=9 вернёт 9.",
+      "evidence": [
+        "assert_eq!(Some(\"car\").unwrap_or(\"bike\"), \"car\");",
+        "assert_eq!(None.unwrap_or(\"bike\"), \"bike\");",
+        "Returns the contained Some value or a provided default."
+      ],
+      "expected_supported": false
+    },
+    {
+      "id": "J01_version",
+      "question": "По документации Rust Option::unwrap_or: что вернёт Some(7) при default=9 и что вернёт None при default=9? Ответ нужен для версии Rust 0.1.",
+      "claim": "Для Some(7) при default=9 unwrap_or вернёт 7; для None при default=9 вернёт 9.",
+      "evidence": [
+        "assert_eq!(Some(\"car\").unwrap_or(\"bike\"), \"car\");",
+        "assert_eq!(None.unwrap_or(\"bike\"), \"bike\");",
+        "Returns the contained Some value or a provided default."
+      ],
+      "expected_supported": false
+    },
+    {
+      "id": "pop_transfer",
+      "question": "For Rust Vec::pop on vec![1,2,3], what is returned and what remains?",
+      "claim": "Returns Some(3) and leaves [1,2].",
+      "evidence": [
+        "Removes the last element from a vector and returns it, or None if it is empty."
+      ],
+      "expected_supported": true
+    },
+    {
+      "id": "pop_no_rule",
+      "question": "For Rust Vec::pop on vec![1,2,3], what is returned and what remains?",
+      "claim": "Returns Some(3) and leaves [1,2].",
+      "evidence": [
+        "assert_eq!(vec.pop(), Some(3));"
+      ],
+      "expected_supported": false
+    },
+    {
+      "id": "pop_wrong_input",
+      "question": "For Rust Vec::pop on vec![1,2,4], what is returned and what remains?",
+      "claim": "Returns Some(3) and leaves [1,2].",
+      "evidence": [
+        "Removes the last element from a vector and returns it, or None if it is empty."
+      ],
+      "expected_supported": false
+    }
+  ]
+}

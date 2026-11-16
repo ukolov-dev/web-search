@@ -1,0 +1,22 @@
+[
+ {"id":"html01","url":"https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html","markers":["ownership","memory"]},
+ {"id":"html02","url":"https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html","markers":["references","borrowing"]},
+ {"id":"html03","url":"https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html","markers":["lifetime","references"]},
+ {"id":"html04","url":"https://doc.rust-lang.org/book/ch16-01-threads.html","markers":["threads","spawn"]},
+ {"id":"html05","url":"https://www.sqlite.org/wal.html","markers":["write-ahead","checkpoint"]},
+ {"id":"html06","url":"https://www.sqlite.org/lang_transaction.html","markers":["transaction","commit"]},
+ {"id":"html07","url":"https://www.sqlite.org/fts5.html","markers":["fts5","full-text"]},
+ {"id":"html08","url":"https://docs.python.org/3/library/asyncio.html","markers":["asyncio","async/await"]},
+ {"id":"html09","url":"https://docs.python.org/3/library/sqlite3.html","markers":["sqlite3","database"]},
+ {"id":"html10","url":"https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/304","markers":["304","not modified"]},
+ {"id":"html11","url":"https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/ETag","markers":["etag","conditional"]},
+ {"id":"html12","url":"https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching","markers":["cache","response"]},
+ {"id":"html13","url":"https://ru.wikipedia.org/wiki/Экскаватор","markers":["экскаватор","грунт"]},
+ {"id":"html14","url":"https://ru.wikipedia.org/wiki/SQLite","markers":["sqlite","данных"]},
+ {"id":"html15","url":"https://ru.wikipedia.org/wiki/Юникод","markers":["юникод","символ"]},
+ {"id":"html16","url":"https://ru.wikipedia.org/wiki/HTTP","markers":["http","протокол"]},
+ {"id":"html17","url":"https://en.wikipedia.org/wiki/Excavator","markers":["excavator","digging"]},
+ {"id":"html18","url":"https://en.wikipedia.org/wiki/Unicode","markers":["unicode","character"]},
+ {"id":"html19","url":"https://tokio.rs/tokio/tutorial","markers":["tokio","asynchronous"]},
+ {"id":"html20","url":"https://tokio.rs/tokio/tutorial/spawning","markers":["spawn","task"]}
+]

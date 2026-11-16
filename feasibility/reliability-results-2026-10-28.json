@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-28",
+  "binary": {
+    "path": "target/release/web-search",
+    "sha256": "2009fe6a2163b273c6659ab038fbc02dc30eb68080435b597cc6a9fea5d9b7a0"
+  },
+  "checks": {
+    "release_build": "passed",
+    "fmt": "passed",
+    "clippy": "passed",
+    "ordinary_tests": {
+      "passed": 14,
+      "ignored": 7
+    },
+    "site_regression": "FIX_PROVEN",
+    "raw_html_replay": "passed",
+    "agent": {
+      "required_facts_supported": 3,
+      "discarded_foreign_results": 9,
+      "fallback_exercised": false
+    }
+  },
+  "mwmbl_diagnostic": {
+    "cases": 20,
+    "passed": 2,
+    "empty": 11,
+    "links_scored": 33,
+    "qualified_source_pair": false,
+    "new_case_vs_bing_baseline": [
+      "en04"
+    ]
+  },
+  "qualified_source_pair": false,
+  "html_diagnostics": "runs/reliability-2026-10-28/diagnostics.json",
+  "code_and_evidence_sha256": {
+    "Cargo.toml": "a412701626ddb64f41b6252ce73621b53cf274313eed3b1b6629da01ff228db4",
+    "Cargo.lock": "807351f5b582ec57b22aa8f02dfcc86349e0e382d0091d5e17769beb54a997a5",
+    "src/search.rs": "3a4fbc758310be741600f583cee089aaf0f7bf1f8f2838baee1d3a23459493dd",
+    "src/main.rs": "8be2ff9e94ef6298332b23b4bf016c215d72fd96c49aaceef70d029633a8ffeb",
+    "src/mcp.rs": "807bd75500d68e76ed259d4602ecc148739aa6224fe97aa90e1112bb696ccd39",
+    "src/net.rs": "0d50f463d9f5c017c87e8420352fc4034ca1be13bb3d13218df8958665ad7139",
+    "tests/mcp_stdio.rs": "401d2c8ba8a0893f3f85faf2b5a1f15de2a00a083576375044e3b38c5e5a96bc",
+    "feasibility/reliability-agent-case.json": "815f36a2e5b47ea3fc19c27321ec799d115d1e1e257ac8a19fdc6abe02df6334",
+    "feasibility/reliability-agent-results-2026-10-28.json": "11e18e873d769ad61379d9ab7ea31c453effb23256c63519d10c6cd5bf8c436c",
+    "feasibility/reliability-mwmbl-evaluation-2026-10-28.json": "df4d67af0090036075db56401ec36e65cb1a238c8e871347a3b53161f413274c",
+    "outputs/reliability-site-red.json": "4b7adcbea32a1ea66815cba40a78e7e8a9c108769ca99565d089d9c79ea3c30e",
+    "outputs/reliability-site-green-final.json": "80d0343673571102750c7fda94df009329956a6cdb982945084e8f916303fca4",
+    "outputs/reliability-full-suite.json": "36f67234d3e6995cafb697744ea054d8b527477b4731bc6612933d1191a06cc7",
+    "outputs/reliability-clippy.json": "48aba7db6788819a782f8f3a58dff7089e157349af33453a7ba39f4f1b269b4c",
+    "outputs/reliability-bug-reproducer-evidence.json": "d4c171f39db1b30ecff0a33f885074db287bf2a104b6f371788ef2605ae70b1d",
+    "outputs/reliability-bug-reproducer-report.md": "349bcf62fa66ed7356e09b4876c8975a9b51fc593a7c6cda2e92889b5e80bc4d",
+    "doc/search-reliability-2026-10-28.md": "65155e551e64578149c2e59c5d7d35d796bb4080f369611cb2460332f9e5ef58",
+    "doc/local-mcp.md": "6b0269df6f2fee961d5164b898affae3880988eeb11bed128999863525325959",
+    "README.md": "7990f2c53356969e0f3c69b825b5cd4d1f98f82967738c6c6c0adc9cc4852ae3"
+  }
+}

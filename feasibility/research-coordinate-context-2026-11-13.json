@@ -1,0 +1,32 @@
+{
+  "base": "9582402",
+  "scope": "document-vs-chunk coordinate ambiguity, component implementation only",
+  "checks": [
+    {
+      "command": "CARGO_HOME=\"$PWD/.cache/cargo\" cargo test --locked --offline generative_chunks_omit_document_offsets_but_witnesses_keep_them",
+      "baseline": "failed with extra global fields",
+      "candidate": "passed in full suite"
+    },
+    {
+      "command": "CARGO_HOME=\"$PWD/.cache/cargo\" cargo test --locked --offline",
+      "status": "passed",
+      "results": [
+        "test result: ok. 159 passed; 0 failed; 37 ignored; 0 measured; 0 filtered out; finished in 1.85s",
+        "test result: ok. 6 passed; 0 failed; 10 ignored; 0 measured; 0 filtered out; finished in 0.61s"
+      ]
+    },
+    {
+      "command": "cargo fmt --check",
+      "status": "passed"
+    },
+    {
+      "command": "CARGO_HOME=\"$PWD/.cache/cargo\" cargo clippy --locked --offline --all-targets -- -D warnings",
+      "status": "passed"
+    }
+  ],
+  "unverified": [
+    "model draft coordinate selection effect",
+    "semantic sufficiency/independent acceptance",
+    "fresh retrieval and release"
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "version": "news-coverage-plan-v1",
+  "question": "Does the scoped coverage unused-slot fix recover suitable news direct labels without new known false or unknown directs, under the same DeepSeek/Qwen budgets?",
+  "case_file": "feasibility/news-coverage-cases-v1.json",
+  "baseline": "preserved opt-in v11 release",
+  "candidate": "new opt-in v12 coverage validation; same retrieval/news/date/app/source/audit protections",
+  "stage": "limited development/live comparison, not general qualification",
+  "as_of": "2026-11-03",
+  "timezone": "Europe/Moscow",
+  "groups": {
+    "current_news_nc01_nc06": [
+      "nc01",
+      "nc02",
+      "nc03",
+      "nc04",
+      "nc05",
+      "nc06"
+    ],
+    "archive_control_nc07": [
+      "nc07"
+    ],
+    "future_control_nc08": [
+      "nc08"
+    ],
+    "all_news_nc01_nc08": [
+      "nc01",
+      "nc02",
+      "nc03",
+      "nc04",
+      "nc05",
+      "nc06",
+      "nc07",
+      "nc08"
+    ]
+  },
+  "fixed_before_live": [
+    "queries",
+    "publication and topical criteria",
+    "budgets",
+    "arm order",
+    "gold schema",
+    "recall denominator and unknown handling",
+    "safety and usefulness gates"
+  ],
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "reranker": "Qwen3-Reranker-0.6B-4bit",
+  "per_query_max": {
+    "logical_search_calls": 2,
+    "classification_calls": 3,
+    "document_reads": 4,
+    "reranker_calls": 4,
+    "runtime_seconds": 180,
+    "source_context_chars_per_model_call": 24000
+  },
+  "source_policy": "Original query only, Seznam/Naver; persistent two MCP processes, alternate casewise arm order, no retry/reset after blocks. App/download queries deliberately absent; known blocked andro.io must not be contacted or used for original validation.",
+  "inputs": "live paired sources/HTML, not frozen identical inputs; current source/title/body drift retained",
+  "arm_order": "baseline,fixed for odd ordinal; fixed,baseline for even ordinal; calls sequential to avoid shared Qwen contention",
+  "stop": "Complete16 primary calls if no block; any actual source/host block stops both remaining primary paths because a safe shared trusted block mask is unavailable. Remaining case/arms recorded not_run, no restart/retry.",
+  "annotation": {
+    "blind": "source-only returned URL union, no arm/model label/audit; partial and inaccessible originals retained",
+    "schema": {
+      "rows": [
+        {
+          "blind_id": "sha256(case_id+newline+canonical_url)[:16]",
+          "case_id": "nc01..nc08",
+          "grade": "0|1|2|null",
+          "kind": "article|feed|application|other|unknown",
+          "published_date": "YYYY-MM-DD|null",
+          "source_reviewed": "boolean",
+          "date_verified": "boolean",
+          "reason": "nonempty string",
+          "evidence": [
+            "short exact source quotes with paths/URLs"
+          ]
+        }
+      ]
+    },
+    "grade2": "Specific source article matching requested city/topic/site and publication window, read original/full body and full own publication date; neither model direct nor runtime eligibility is gold.",
+    "grade1": "Navigation/feed or useful incomplete material, not a specific verified eligible publication; boundaries remain explicit.",
+    "grade0": "Clear wrong place/topic/period or app advertisement for news-reading intent; card-only conclusions marked provisional.",
+    "unknown": "Original unavailable or insufficient/ambiguous source to judge; unknown is not negative and never FP.",
+    "date_rules": [
+      "Own publication full date, no year inferred from URL/query/copyright",
+      "Ignore modified/event/adjacent teaser dates for article publication",
+      "Future publication may not be verified as current",
+      "Historical query uses its explicit month",
+      "Source date/time offsets converted consistently to Moscow calendar"
+    ],
+    "dedup": "Canonical URL per case; same event/publisher cluster reported separately, not independent confirmation"
+  },
+  "recall": {
+    "primary": "paired_returned_union_gold_direct_recall",
+    "denominator": "Every grade2 known-positive case/URL in the returned union of BOTH arms for cases executed in BOTH arms; each arm uses the same denominator",
+    "numerator": "Known-positive union URLs returned as direct by this arm within those paired cases",
+    "fn": "Known-positive union denominator minus this arm numerator, including a known-positive URL only returned by the other arm",
+    "undefined": "null with zero known positives or before gold; no made-up0/100 score",
+    "unknowns": "Unknown originals excluded from known-positive denominator and reported by union/arm; unknown direct separate from FP",
+    "limits": "Conditional on observed returned union, not unseen candidate pool or full-web recall; live input inequality prevents isolated causal attribution"
+  },
+  "measurements": [
+    "all16 case/arm status, failures and empty results",
+    "qualified pages@10 and known TP/FP/FN/unknown direct IDs",
+    "paired conditional direct recall for current news and all news",
+    "old2source recovery separate, not fresh set",
+    "coverage unused requirement errors and recorded repairs",
+    "observed parent/article lineage, type/date states",
+    "source/generative/read/Qwen budgets and wall time; no money guess from public MCP"
+  ],
+  "quality_gates": [
+    "all16 primary captures and complete source annotation coverage",
+    "no new known unsuitable direct IDs versus same-query baseline",
+    "candidate unknown news directs0",
+    "candidate direct article/date/witness/audit/app protections preserved",
+    "all per-query budgets respected",
+    "public OpenRouter model, Qwen name and v11/v12 evidence versions match the intended profile"
+  ],
+  "usefulness_gate": "Positive paired direct-recall gain with nonzero known-positive union, separately from guard safety; no general acceptance from a tiny set",
+  "extra_validation": {
+    "max_unique_urls": 24,
+    "tool": "existing unchanged Rust net.rs fetch_guarded standalone reader, root orchestrates",
+    "rule": "Direct URLs first, then successful observed child links regardless runtime kind, then other returned URLs if cap remains; no exact URL repeated in validation, no source already failed retried, andro.io and newly blocked hosts excluded; strict original origin before every hop",
+    "budget": "separate from primary4reads, report actual HTTP attempts, failures, original/body readability",
+    "method_limit": "Source originals after primary inference before blind-gold join; primary raw HTML/model inputs unavailable in public MCP. Not byte-identical source replay."
+  },
+  "old_regression_scope": "Known two Nizhny Novgorod sources and exact prior failure evidence are development/component checks; never pooled into fresh holdout scores",
+  "deployment": "none; no VPS/global settings/hooks/APIs/LLMs changed",
+  "evidence_versions": {
+    "baseline": "request-evidence-v11-news",
+    "fixed": "request-evidence-v12-coverage"
+  }
+}

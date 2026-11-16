@@ -1,0 +1,73 @@
+{
+  "version": "news-dates-confirm-six-v1",
+  "as_of": "2026-11-03",
+  "timezone": "Europe/Moscow",
+  "cases": [
+    {
+      "id": "ca01",
+      "query": "свежие новости Челябинска",
+      "intent": "adaptive_confirmation_news",
+      "place": "Челябинск",
+      "topic": "городские новости",
+      "published_from": "2026-11-01",
+      "published_to": "2026-11-03",
+      "date_rule": "default last3Moscow calendar days asof2026-11-03"
+    },
+    {
+      "id": "ca02",
+      "query": "последние новости Перми",
+      "intent": "adaptive_confirmation_news",
+      "place": "Пермь",
+      "topic": "городские новости",
+      "published_from": "2026-11-01",
+      "published_to": "2026-11-03",
+      "date_rule": "default last3Moscow calendar days asof2026-11-03"
+    },
+    {
+      "id": "ca03",
+      "query": "свежие новости Уфы",
+      "intent": "adaptive_confirmation_news",
+      "place": "Уфа",
+      "topic": "городские новости",
+      "published_from": "2026-11-01",
+      "published_to": "2026-11-03",
+      "date_rule": "default last3Moscow calendar days asof2026-11-03"
+    },
+    {
+      "id": "ca04",
+      "query": "последние городские новости Екатеринбурга",
+      "intent": "adaptive_confirmation_news",
+      "place": "Екатеринбург",
+      "topic": "городские новости",
+      "published_from": "2026-11-01",
+      "published_to": "2026-11-03",
+      "date_rule": "default last3Moscow calendar days asof2026-11-03"
+    },
+    {
+      "id": "ca05",
+      "query": "свежие городские новости Омска",
+      "intent": "adaptive_confirmation_news",
+      "place": "Омск",
+      "topic": "городские новости",
+      "published_from": "2026-11-01",
+      "published_to": "2026-11-03",
+      "date_rule": "default last3Moscow calendar days asof2026-11-03"
+    },
+    {
+      "id": "ca06",
+      "query": "новости Челябинска транспорт 3 ноября 2030",
+      "intent": "future_control",
+      "place": "Челябинск",
+      "topic": "общественный транспорт",
+      "published_from": "2030-11-03",
+      "published_to": "2030-11-03",
+      "date_rule": "future publication not verifiable asof2026-11-03"
+    }
+  ],
+  "limits": [
+    "Adaptive confirmation after observed NEW12/supplement gaps, not independent qualification.",
+    "Exactqueries new vs231prior normalizedqueries; known cities/domains/URLs can overlap, four of firstfive cities previously observed; Omsk new in this news series.",
+    "Allcohorts remain separate; preserve v13no-gains and anybad/empty/newfalse outcomes here.",
+    "Pre-inference mechanism-sensitive refinement replaces5initialunexecuted wordings withfresh/last/city-news descriptors; ca06 unchanged. No confirmationresults existed forinitial6."
+  ]
+}

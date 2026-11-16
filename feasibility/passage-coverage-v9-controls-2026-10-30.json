@@ -1,0 +1,67 @@
+{
+  "phase": "old development/known FP controls, not new holdout",
+  "cases": [
+    {
+      "id": "n01",
+      "direct": [],
+      "tp": 0,
+      "fp": [],
+      "unjudged": [],
+      "errors": [],
+      "grounded_pairs": 1
+    },
+    {
+      "id": "n07",
+      "direct": [
+        "C007"
+      ],
+      "tp": 1,
+      "fp": [],
+      "unjudged": [],
+      "errors": [
+        "evidence_verification: C001: fetch_timeout"
+      ],
+      "grounded_pairs": 0
+    },
+    {
+      "id": "p06",
+      "direct": [
+        "C005"
+      ],
+      "tp": 1,
+      "fp": [],
+      "unjudged": [],
+      "errors": [
+        "evidence_verification: C001: failed to grab the article",
+        "evidence_verification: C004: failed to grab the article"
+      ],
+      "grounded_pairs": 0
+    },
+    {
+      "id": "p11",
+      "direct": [],
+      "tp": 0,
+      "fp": [],
+      "unjudged": [],
+      "errors": [
+        "evidence_verification: C001: failed to grab the article",
+        "unsupported_direct_evidence_or_constraints: 2 downgraded"
+      ],
+      "grounded_pairs": 0
+    },
+    {
+      "id": "f04",
+      "direct": [
+        "C003"
+      ],
+      "tp": 1,
+      "fp": [],
+      "unjudged": [],
+      "errors": [],
+      "grounded_pairs": 0
+    }
+  ],
+  "total_tp": 3,
+  "total_fp": 0,
+  "total_unjudged_direct": 0
+}

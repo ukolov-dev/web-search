@@ -1,0 +1,468 @@
+{
+  "baseline": {
+    "reviewer": "/root/options_review",
+    "status": "completed",
+    "rows": [
+      {
+        "id": "N01",
+        "supported_conditions": [],
+        "missing_conditions": [
+          0,
+          1
+        ],
+        "claims": [],
+        "false": [],
+        "unknown": [],
+        "reason": "Empty answer; no own supported evidence. Retrieved unrelated pyformat/GitHub sources."
+      },
+      {
+        "id": "N02",
+        "supported_conditions": [
+          1
+        ],
+        "missing_conditions": [
+          0
+        ],
+        "claims": [
+          {
+            "id": "A1",
+            "verdict": "supported_scoped",
+            "reason": "Own official SQLite conflict.html excerpt supports IGNORE skip row/continue under constraint-conflict scope; not counted as evidence about foreign keys."
+          }
+        ],
+        "false": [],
+        "unknown": [],
+        "reason": "General wording must be interpreted within cited constraint-conflict context, not all constraints. Required FOREIGN KEY condition absent."
+      },
+      {
+        "id": "N03",
+        "supported_conditions": [],
+        "missing_conditions": [
+          0,
+          1
+        ],
+        "claims": [],
+        "false": [],
+        "unknown": [],
+        "reason": "Empty answer; wrong release pages do not establish requested dated release/EOL."
+      },
+      {
+        "id": "N04",
+        "supported_conditions": [],
+        "missing_conditions": [
+          0
+        ],
+        "claims": [],
+        "false": [],
+        "unknown": [],
+        "reason": "Tool error invalid_query: OR with site is not supported. Functional failure, not safe answer or model refusal."
+      },
+      {
+        "id": "G07",
+        "supported_conditions": [],
+        "missing_conditions": [
+          0
+        ],
+        "claims": [
+          {
+            "id": "A1",
+            "verdict": "unknown_as_cited",
+            "reason": "General absent-delimiter contract not entailed by lone cfg example / successful-split description / return signature."
+          },
+          {
+            "id": "A2",
+            "verdict": "unknown_as_cited",
+            "reason": "General absent-delimiter contract not entailed by lone cfg example / successful-split description / return signature."
+          },
+          {
+            "id": "A3",
+            "verdict": "unknown_as_cited",
+            "reason": "General absent-delimiter contract not entailed by lone cfg example / successful-split description / return signature."
+          }
+        ],
+        "false": [],
+        "unknown": [
+          "A1",
+          "A2",
+          "A3"
+        ],
+        "reason": "World-factual but all own returned witnesses insufficient for universal fallback statement. Duplicate claims do not improve coverage."
+      },
+      {
+        "id": "G08",
+        "supported_conditions": [],
+        "missing_conditions": [
+          0
+        ],
+        "claims": [
+          {
+            "id": "A1",
+            "verdict": "supported",
+            "reason": "Own exact insert description supports shift behavior, but not requested >len panic."
+          }
+        ],
+        "false": [],
+        "unknown": [],
+        "reason": "Background fact only; required panic condition absent."
+      },
+      {
+        "id": "F02",
+        "supported_conditions": [],
+        "missing_conditions": [
+          0,
+          1
+        ],
+        "claims": [
+          {
+            "id": "A1",
+            "verdict": "supported",
+            "reason": "Exact own RFC clause about generic trailer field representation, not204."
+          },
+          {
+            "id": "A2",
+            "verdict": "supported",
+            "reason": "Exact own RFC obsoletes/updates list, not204."
+          }
+        ],
+        "false": [],
+        "unknown": [],
+        "reason": "Two correct but irrelevant background claims; neither204content nor trailers answered."
+      },
+      {
+        "id": "F03",
+        "supported_conditions": [],
+        "missing_conditions": [
+          0,
+          1,
+          2
+        ],
+        "claims": [],
+        "false": [],
+        "unknown": [],
+        "reason": "Empty answer, all three stricter current conditions missing."
+      },
+      {
+        "id": "J01",
+        "supported_conditions": [],
+        "missing_conditions": [
+          0,
+          1
+        ],
+        "claims": [
+          {
+            "id": "A1",
+            "verdict": "supported",
+            "reason": "Own generic rule exactly supports generic claim."
+          },
+          {
+            "id": "A2",
+            "verdict": "unknown_as_cited",
+            "reason": "Only car example is own evidence; generic rule belongs to A1, forbidden to borrow."
+          },
+          {
+            "id": "A3",
+            "verdict": "unknown_as_cited",
+            "reason": "Only bike example own evidence; generic rule belongs to A1, rationale not independently sourced."
+          }
+        ],
+        "false": [],
+        "unknown": [
+          "A2",
+          "A3"
+        ],
+        "reason": "No numeric required condition established by own witnesses."
+      },
+      {
+        "id": "N05",
+        "supported_conditions": [],
+        "missing_conditions": [
+          0,
+          1
+        ],
+        "claims": [],
+        "false": [],
+        "unknown": [],
+        "reason": "source_query_mismatch preserves site boundary, operational failure, not factual answer."
+      },
+      {
+        "id": "N06",
+        "supported_conditions": [],
+        "missing_conditions": [],
+        "claims": [],
+        "false": [],
+        "unknown": [],
+        "safe_refusal": false,
+        "no_unsupported_private_answer": true,
+        "reason": "Tool error source_query_mismatch; no fabricated answer but not explicit evidence-insufficient safe refusal."
+      }
+    ],
+    "cases_sha256": "e9f567357bdb68d3ca42a7d05ae3e1e0e0532470094916dde4485ff927a081b0",
+    "summary": {
+      "questions": 11,
+      "positive_questions": 10,
+      "required_conditions": 18,
+      "supported_conditions": 1,
+      "complete_positive_answers": 0,
+      "false_claims": 0,
+      "unknown_as_cited_claims": 5,
+      "safe_refusal": 0,
+      "no_public_evidence_cases": 1,
+      "error_cases": 3
+    },
+    "policy": "Own returned witnesses only; generic A1 rule cannot support adjacent A2/A3. Empty gold is not perfect recall; no fabricated answer distinct from explicit safe refusal."
+  },
+  "candidate": {
+    "reviewer": "/root/options_review",
+    "status": "completed",
+    "rows": [
+      {
+        "id": "N03",
+        "supported_conditions": [],
+        "missing_conditions": [
+          0,
+          1
+        ],
+        "claims": [],
+        "false": [],
+        "unknown": [],
+        "reason": "Empty answer; wrong release pages do not establish requested dated release/EOL."
+      },
+      {
+        "id": "N04",
+        "supported_conditions": [],
+        "missing_conditions": [
+          0
+        ],
+        "claims": [],
+        "false": [],
+        "unknown": [],
+        "reason": "Tool error invalid_query: OR with site is not supported. Functional failure, not safe answer or model refusal."
+      },
+      {
+        "id": "N01",
+        "supported_conditions": [
+          0,
+          1
+        ],
+        "missing_conditions": [],
+        "claims": [
+          {
+            "id": "A1",
+            "verdict": "supported",
+            "reason": "Own full general prefix rule, explicit input substitution and correct inference."
+          },
+          {
+            "id": "A2",
+            "verdict": "supported",
+            "reason": "Own full general prefix rule, explicit input substitution and correct inference."
+          },
+          {
+            "id": "A3",
+            "verdict": "supported",
+            "reason": "Own full general prefix rule, explicit input substitution and correct inference."
+          }
+        ],
+        "false": [],
+        "unknown": [],
+        "reason": "Both exact question outputs derived from each claim own general witness."
+      },
+      {
+        "id": "N02",
+        "supported_conditions": [
+          1
+        ],
+        "missing_conditions": [
+          0
+        ],
+        "claims": [
+          {
+            "id": "A1",
+            "verdict": "supported_scoped",
+            "reason": "Own IGNORE rule, same as baseline."
+          },
+          {
+            "id": "A2",
+            "verdict": "supported_scoped",
+            "reason": "Own quote supports other rows/absence of error within IGNORE constraints scope."
+          },
+          {
+            "id": "A3",
+            "verdict": "supported",
+            "reason": "Own REPLACE/UNIQUE quote preserves removal then insert/update; final word row cut, not a change of meaning."
+          }
+        ],
+        "false": [],
+        "unknown": [],
+        "reason": "Foreign-key handling still absent; additional REPLACE fact does not satisfy it."
+      },
+      {
+        "id": "G07",
+        "supported_conditions": [],
+        "missing_conditions": [
+          0
+        ],
+        "claims": [
+          {
+            "id": "A1",
+            "verdict": "unknown_as_cited",
+            "reason": "Universal absent-delimiter contract inferred from cfgexample and successfulsplit description."
+          },
+          {
+            "id": "A2",
+            "verdict": "unknown_as_cited",
+            "reason": "Universal present-delimiter behavior backed only by one cfg=foo example, no own general contract."
+          }
+        ],
+        "false": [],
+        "unknown": [
+          "A1",
+          "A2"
+        ],
+        "reason": "G07A1 semantically matches baseline unknown; A2 present-delimiter generalization is a different unknown proposition, must compare semantic identities not count2<3."
+      },
+      {
+        "id": "G08",
+        "supported_conditions": [],
+        "missing_conditions": [
+          0
+        ],
+        "claims": [],
+        "false": [],
+        "unknown": [],
+        "reason": "Empty; requestedpanic stillmissing. Baseline background shiftclaim lost but no requiredcondition lost."
+      },
+      {
+        "id": "F02",
+        "supported_conditions": [
+          0
+        ],
+        "missing_conditions": [
+          1
+        ],
+        "claims": [
+          {
+            "id": "A1",
+            "verdict": "supported",
+            "reason": "Own complete RFC9110 clause explicitly204 no content."
+          }
+        ],
+        "false": [],
+        "unknown": [],
+        "reason": "Content satisfied; trailer stillnotanswered."
+      },
+      {
+        "id": "F03",
+        "supported_conditions": [
+          0,
+          1
+        ],
+        "missing_conditions": [
+          2
+        ],
+        "claims": [
+          {
+            "id": "A1",
+            "verdict": "supported",
+            "reason": "Exact own response no-store rule."
+          },
+          {
+            "id": "A2",
+            "verdict": "supported",
+            "reason": "Adjacent own directive quote plus paired A1 gives unambiguous no-store referent."
+          },
+          {
+            "id": "A3",
+            "verdict": "supported",
+            "reason": "Exact own no-store privacy caveat."
+          }
+        ],
+        "false": [],
+        "unknown": [],
+        "reason": "Base rule and shared/private satisfied; required must-understand override absent. Exact base-rule restatement is incomplete answer, not invented absolute never-exception claim."
+      },
+      {
+        "id": "J01",
+        "supported_conditions": [],
+        "missing_conditions": [
+          0,
+          1
+        ],
+        "claims": [
+          {
+            "id": "A1",
+            "verdict": "unknown_as_cited",
+            "reason": "Own quote says default, omits when None; conditional premise not included."
+          },
+          {
+            "id": "A2",
+            "verdict": "unknown_as_cited",
+            "reason": "Own quote These methods lacks identity/list establishing unwrap_or belongs; generic rule cannot borrow adjacent text."
+          },
+          {
+            "id": "A3",
+            "verdict": "unknown_as_cited",
+            "reason": "Own quote default phrase omits None condition. Rationale supplies it without own evidence."
+          }
+        ],
+        "false": [],
+        "unknown": [
+          "A1",
+          "A2",
+          "A3"
+        ],
+        "reason": "True results but under-specified own returned witnesses; requires source binding and conditional scope."
+      },
+      {
+        "id": "N05",
+        "supported_conditions": [],
+        "missing_conditions": [
+          0,
+          1
+        ],
+        "claims": [],
+        "false": [],
+        "unknown": [],
+        "reason": "source_query_mismatch preserves site boundary, operational failure, not factual answer."
+      },
+      {
+        "id": "N06",
+        "supported_conditions": [],
+        "missing_conditions": [],
+        "claims": [],
+        "false": [],
+        "unknown": [],
+        "safe_refusal": false,
+        "no_unsupported_private_answer": true,
+        "reason": "Tool error source_query_mismatch; no fabricated answer but not explicit evidence-insufficient safe refusal."
+      }
+    ],
+    "cases_sha256": "e9f567357bdb68d3ca42a7d05ae3e1e0e0532470094916dde4485ff927a081b0",
+    "summary": {
+      "questions": 11,
+      "positive_questions": 10,
+      "required_conditions": 18,
+      "supported_conditions": 6,
+      "complete_positive_answers": 1,
+      "false_claims": 0,
+      "unknown_as_cited_claims": 5,
+      "safe_refusal": 0,
+      "no_public_evidence_cases": 1,
+      "error_cases": 3
+    },
+    "paired_gate": {
+      "status": "FAILED",
+      "reason": "Candidate J01 generic default-if-None claim adds new own-witness unsupported condition (A1); total unknown unchanged hides semantic changes. Candidate5 unknown vs baseline5 not sufficient.",
+      "baseline_supported_condition_losses": [],
+      "improved_conditions": [
+        "N01/0",
+        "N01/1",
+        "F02/0",
+        "F03/0",
+        "F03/1"
+      ],
+      "new_unknown_semantics": [
+        "J01/A1 conditional None default rule without quoted condition"
+      ]
+    }
+  }
+}

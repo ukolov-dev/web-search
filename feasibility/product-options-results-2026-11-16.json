@@ -1,0 +1,4936 @@
+{
+  "schema": "research-p1-results-v1",
+  "protocol": {
+    "schema": "product-options-protocol-v1",
+    "frozen_before_inference": true,
+    "baseline_binary_sha256": "9b5eb024fe61f20777e8045aed15c9f9ede7afdfc4ba339e3a1efaca064139d8",
+    "cases_sha256": "e9f567357bdb68d3ca42a7d05ae3e1e0e0532470094916dde4485ff927a081b0",
+    "gold_preflight_sha256": "1db79e2015d54023d816f8d8e98c4a00cb9215414eac65a9796f0ea211ef7a76",
+    "startup_sha256": "4e7691f198e3fa9d6f2f955f89ffff66c675cf6b1df5fd452c50e0587cf03f48",
+    "cohorts": {
+      "fresh_questions": 6,
+      "known_controls": 5
+    },
+    "scope": "planner-only candidate da750a0 vs runtime46f8953; section/inference test-only; no Harness in this cohort",
+    "evaluation": "no new false/unknown and no supported-condition loss; N06 evaluated as safe-refusal, excluded from positive recall; F03 stricter than old cohort; no pooling",
+    "stop": "preserve cumulative refusals; no retry; separate initially empty caches",
+    "ordering": "baseline all11, candidate all11; no source reset",
+    "note": "N06safe-refusal separate, no pooling"
+  },
+  "baseline": {
+    "code_commit": "46f8953",
+    "binary_sha256": "9b5eb024fe61f20777e8045aed15c9f9ede7afdfc4ba339e3a1efaca064139d8"
+  },
+  "candidate": {
+    "code_commit": "da750a0",
+    "binary_sha256": "cc72e646f808821bebe9dadbbe9ae66e8b0be536ddd49b2061599e2b026f56f1",
+    "source_sha256": {
+      "src/research.rs": "9b90c34421c1509d8e5f9e82fc5901a2be5fb87091fa7d55e4ef356a50ac8605",
+      "src/main.rs": "490f864466443cca86a7b1fc80534366f628ca92a98833365bd35691c25d4495",
+      "src/model.rs": "38083f9a1999aff9fca6e969da2dc75fdc02beaa996e1292f2dd3b5e780a0c61"
+    }
+  },
+  "episodes": [
+    {
+      "arm": "baseline",
+      "group": "cases",
+      "id": "F02",
+      "status": "completed",
+      "tool_status": "partial",
+      "stop_reason": "budget_exhausted",
+      "claims": [
+        {
+          "answer_end": 182,
+          "answer_start": 0,
+          "evidence": [
+            {
+              "document_version": "05c172b579f2bc9aa2ce3842ac6e235a5376a0fbb722efa23482e2de1fe2abeb",
+              "end": 87289,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "At the end of a message, a recipient MAY treat the set of received trailer fields as a data structure of name/value pairs, similar to (but separate from) the header fields.",
+              "source_id": "S1",
+              "start": 87117
+            }
+          ],
+          "facets": [
+            1
+          ],
+          "id": "A1",
+          "kind": "fact",
+          "rationale": "",
+          "text": "RFC 9110: At the end of a message, a recipient MAY treat the set of received trailer fields as a data structure of name/value pairs, similar to (but separate from) the header fields."
+        },
+        {
+          "answer_end": 364,
+          "answer_start": 235,
+          "evidence": [
+            {
+              "document_version": "05c172b579f2bc9aa2ce3842ac6e235a5376a0fbb722efa23482e2de1fe2abeb",
+              "end": 978,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "This document updates RFC 3864 and obsoletes RFCs 2818, 7231, 7232, 7233, 7235, 7538, 7615, 7694, and portions of 7230.",
+              "source_id": "S1",
+              "start": 859
+            }
+          ],
+          "facets": [
+            2
+          ],
+          "id": "A2",
+          "kind": "fact",
+          "rationale": "",
+          "text": "RFC 9110: This document updates RFC 3864 and obsoletes RFCs 2818, 7231, 7232, 7233, 7235, 7538, 7615, 7694, and portions of 7230."
+        }
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "sources": [
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794816835,
+            "etag": "\"0d9f5fb8eb38d3c08b055f9b0671d68b\"",
+            "expires_at": 1794903235,
+            "fetched_at": 1794816835,
+            "hit": false,
+            "last_modified": null,
+            "request_url": "https://www.rfc-editor.org/rfc/rfc9110.html"
+          },
+          "document_version": "05c172b579f2bc9aa2ce3842ac6e235a5376a0fbb722efa23482e2de1fe2abeb",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "declared_rfc_body",
+            "scope": "rfc_body",
+            "truncated": true
+          },
+          "id": "S1",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "6f20214cfccc318385b390ea9ae9f72ce0b63ad18382b53a774eeef2f2bd2615",
+          "title": "RFC 9110: HTTP Semantics",
+          "url": "https://www.rfc-editor.org/rfc/rfc9110.html"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794816867,
+            "etag": "\"f77ed398f12a09b6dbf927ae2d764a95\"",
+            "expires_at": 1794903267,
+            "fetched_at": 1794816867,
+            "hit": false,
+            "last_modified": null,
+            "request_url": "https://www.rfc-editor.org/rfc/rfc9112.html"
+          },
+          "document_version": "a4b25608201d19237cb710569e997cd918746aae1b5bc6ad11b56df5fb6c0ce4",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "declared_rfc_body",
+            "scope": "rfc_body",
+            "truncated": false
+          },
+          "id": "S2",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "25b9893fd8a00127ad87ea917361a32d344aacce4c62f36e3949c69332364a69",
+          "title": "RFC 9112: HTTP/1.1",
+          "url": "https://www.rfc-editor.org/rfc/rfc9112.html"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794816878,
+            "etag": "\"7b5ae2e6c33ebfdea95696dffb61446d\"",
+            "expires_at": 1794903278,
+            "fetched_at": 1794816878,
+            "hit": false,
+            "last_modified": null,
+            "request_url": "https://www.rfc-editor.org/rfc/rfc9292.html"
+          },
+          "document_version": "072fb93fa64ccc8ee9609df855e66a7fb82af8992c67cece01bcfa8db4ef957c",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "declared_rfc_body",
+            "scope": "rfc_body",
+            "truncated": false
+          },
+          "id": "S3",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "3eaebec1ed672a2463c619bfb5a4cfc6cd8902bde544244fcad54e34a0693299",
+          "title": "RFC 9292: Binary Representation of HTTP Messages",
+          "url": "https://www.rfc-editor.org/rfc/rfc9292.html"
+        }
+      ],
+      "actions": [
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 1,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 1,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 1,
+          "eligible": true,
+          "source_id": "S1"
+        },
+        {
+          "action": "qwen",
+          "source_id": "S1",
+          "status": "failed_lexical_fallback"
+        },
+        {
+          "action": "read",
+          "attempt": 2,
+          "eligible": true,
+          "source_id": "S2"
+        },
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 2,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 2,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 3,
+          "eligible": true,
+          "source_id": "S3"
+        },
+        {
+          "action": "read",
+          "attempt": 4,
+          "error": "unsupported_content",
+          "url": "https://www.rfc-editor.org/rfc/rfc9110.pdf"
+        },
+        {
+          "action": "withhold_claim",
+          "draft_claim": "A1",
+          "generation": 3,
+          "reason": "RFC attribution needs a complete literal clause from the matching primary document"
+        },
+        {
+          "action": "withhold_claim",
+          "draft_claim": "A2",
+          "generation": 3,
+          "reason": "invalid/duplicate answer text"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A3",
+          "generation": 3
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A2",
+          "draft_claim": "A4",
+          "generation": 3
+        }
+      ],
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 3,
+        "hits": 0,
+        "http_reads": 6,
+        "misses": 10,
+        "qwen_calls": 1,
+        "refresh": false,
+        "writes": 8
+      },
+      "budget": {
+        "documents": 4,
+        "forms": 2,
+        "generations": 4,
+        "qwen": 1,
+        "serp": 2
+      },
+      "elapsed_ms": 57834,
+      "witnesses_checked": 2,
+      "known_inner_cost_usd": 0.000868404,
+      "known_outer_cost_usd": 0,
+      "unknown_cost_calls": 0,
+      "max_context_chars": 22173,
+      "tool_payload_equal": [],
+      "result_sha256": "023c77b3ccc0655f0f9d274d4ee6b714d4e4f7e768db73b3437c68c0cd0557b7",
+      "raw_prefix": "baseline/cases/F02"
+    },
+    {
+      "arm": "baseline",
+      "group": "cases",
+      "id": "F03",
+      "status": "completed",
+      "tool_status": "partial",
+      "stop_reason": "budget_exhausted",
+      "claims": [],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "sources": [
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794816895,
+            "etag": "\"67c426a73321f73db9ffdf2508376ec5\"",
+            "expires_at": 1794903295,
+            "fetched_at": 1794816895,
+            "hit": false,
+            "last_modified": null,
+            "request_url": "https://www.rfc-editor.org/rfc/rfc9111.html"
+          },
+          "document_version": "22c7cd8947ffa8c67486ce7c6060f03aa6eee5cbb7415413e8d97c8290786ab2",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "declared_rfc_body",
+            "scope": "rfc_body",
+            "truncated": false
+          },
+          "id": "S1",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "de91e3bd2c4173199dbd698053d7fa0e14a73b71a31275492b325dc91b09579d",
+          "title": "RFC 9111: HTTP Caching",
+          "url": "https://www.rfc-editor.org/rfc/rfc9111.html"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794816867,
+            "etag": "\"f77ed398f12a09b6dbf927ae2d764a95\"",
+            "expires_at": 1794903267,
+            "fetched_at": 1794816867,
+            "hit": true,
+            "last_modified": null,
+            "request_url": "https://www.rfc-editor.org/rfc/rfc9112.html"
+          },
+          "document_version": "a4b25608201d19237cb710569e997cd918746aae1b5bc6ad11b56df5fb6c0ce4",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "declared_rfc_body",
+            "scope": "rfc_body",
+            "truncated": false
+          },
+          "id": "S2",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "25b9893fd8a00127ad87ea917361a32d344aacce4c62f36e3949c69332364a69",
+          "title": "RFC 9112: HTTP/1.1",
+          "url": "https://www.rfc-editor.org/rfc/rfc9112.html"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794816929,
+            "etag": "\"1f6e8b9e5785a71cbb0d541fdf7920dd\"",
+            "expires_at": 1794903329,
+            "fetched_at": 1794816929,
+            "hit": false,
+            "last_modified": null,
+            "request_url": "https://www.rfc-editor.org/rfc/rfc9458.html"
+          },
+          "document_version": "d49a19da6ec937e7788089833e2f9c2742751e807549ce496576db815deac91b",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "declared_rfc_body",
+            "scope": "rfc_body",
+            "truncated": false
+          },
+          "id": "S3",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "10fa66f441219b196e4af286830b7c057b657a46e78bd11ece9368716d0a0d31",
+          "title": "RFC 9458: Oblivious HTTP",
+          "url": "https://www.rfc-editor.org/rfc/rfc9458.html"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794816931,
+            "etag": "\"9e79990d0d3128c16c2d1f970afa3335\"",
+            "expires_at": 1794903331,
+            "fetched_at": 1794816931,
+            "hit": false,
+            "last_modified": null,
+            "request_url": "https://www.rfc-editor.org/rfc/rfc2068.html"
+          },
+          "document_version": "dcd6b230ce25b22332f71a2f03ee19f1ebc241f8637d01f207114692ee979745",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "readability",
+            "scope": "inferred_article",
+            "truncated": true
+          },
+          "id": "S4",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "66c62a8a5e38196597abafa079a895b81b16cba48a76775161e35542e6059d54",
+          "title": "",
+          "url": "https://www.rfc-editor.org/rfc/rfc2068.html"
+        }
+      ],
+      "actions": [
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 1,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 1,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 1,
+          "eligible": true,
+          "source_id": "S1"
+        },
+        {
+          "action": "qwen",
+          "source_id": "S1",
+          "status": "failed_lexical_fallback"
+        },
+        {
+          "action": "read",
+          "attempt": 2,
+          "eligible": true,
+          "source_id": "S2"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A1",
+          "generation": 2
+        },
+        {
+          "action": "withhold_claim",
+          "draft_claim": "A2",
+          "generation": 2,
+          "reason": "inference rationale required"
+        },
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 2,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 2,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 3,
+          "eligible": true,
+          "source_id": "S3"
+        },
+        {
+          "action": "read",
+          "attempt": 4,
+          "eligible": true,
+          "source_id": "S4"
+        },
+        {
+          "action": "withhold_claim",
+          "draft_claim": "A1",
+          "generation": 4,
+          "reason": "invalid/duplicate answer text"
+        }
+      ],
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 3,
+        "hits": 2,
+        "http_reads": 5,
+        "misses": 9,
+        "qwen_calls": 1,
+        "refresh": false,
+        "writes": 8
+      },
+      "budget": {
+        "documents": 4,
+        "forms": 2,
+        "generations": 4,
+        "qwen": 1,
+        "serp": 2
+      },
+      "elapsed_ms": 42959,
+      "witnesses_checked": 0,
+      "known_inner_cost_usd": 0.000810196,
+      "known_outer_cost_usd": 0,
+      "unknown_cost_calls": 0,
+      "max_context_chars": 23702,
+      "tool_payload_equal": [],
+      "result_sha256": "b99e0f13fac572e7feb14770b6e235af75c655f14bc07f94465d18218ac069ee",
+      "raw_prefix": "baseline/cases/F03"
+    },
+    {
+      "arm": "baseline",
+      "group": "cases",
+      "id": "G07",
+      "status": "completed",
+      "tool_status": "partial",
+      "stop_reason": "no_new_evidence",
+      "claims": [
+        {
+          "answer_end": 115,
+          "answer_start": 0,
+          "evidence": [
+            {
+              "document_version": "e1d9896d6ce4732c2790594e616beadefa874d27a876c8d2472c5c399e5c82dd",
+              "end": 39316,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "Splits the string on the first occurrence of the specified delimiter and returns prefix before delimiter and suffix after delimiter.",
+              "source_id": "S1",
+              "start": 39184
+            },
+            {
+              "document_version": "e1d9896d6ce4732c2790594e616beadefa874d27a876c8d2472c5c399e5c82dd",
+              "end": 39369,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "assert_eq!(\"cfg\".split_once('='), None);",
+              "source_id": "S1",
+              "start": 39329
+            }
+          ],
+          "facets": [
+            0
+          ],
+          "id": "A1",
+          "kind": "fact",
+          "rationale": "",
+          "text": "Если разделитель не найден, str::split_once возвращает None (пример: split_once('=') для строки без '=' даёт None)."
+        },
+        {
+          "answer_end": 302,
+          "answer_start": 182,
+          "evidence": [
+            {
+              "document_version": "e1d9896d6ce4732c2790594e616beadefa874d27a876c8d2472c5c399e5c82dd",
+              "end": 39316,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "Splits the string on the first occurrence of the specified delimiter and returns prefix before delimiter and suffix after delimiter.",
+              "source_id": "S1",
+              "start": 39184
+            },
+            {
+              "document_version": "e1d9896d6ce4732c2790594e616beadefa874d27a876c8d2472c5c399e5c82dd",
+              "end": 39369,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "assert_eq!(\"cfg\".split_once('='), None);",
+              "source_id": "S1",
+              "start": 39329
+            }
+          ],
+          "facets": [
+            0
+          ],
+          "id": "A2",
+          "kind": "fact",
+          "rationale": "",
+          "text": "Если разделитель в строке не найден, str::split_once возвращает None (пример: split_once('=') для строки cfg даёт None)."
+        },
+        {
+          "answer_end": 495,
+          "answer_start": 369,
+          "evidence": [
+            {
+              "document_version": "e1d9896d6ce4732c2790594e616beadefa874d27a876c8d2472c5c399e5c82dd",
+              "end": 39182,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "pub fn split_once<P: Pattern>(&self, delimiter: P) -> Option<(&str, &str)>",
+              "source_id": "S1",
+              "start": 39108
+            }
+          ],
+          "facets": [
+            1
+          ],
+          "id": "A3",
+          "kind": "fact",
+          "rationale": "",
+          "text": "str::split_once возвращает Option с парой строковых срезов: при найденном разделителе Some из префикса и суффикса, иначе None."
+        }
+      ],
+      "missing": [],
+      "sources": [
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794816735,
+            "etag": "W/\"29534bc123beb73c5df035671e315235\"",
+            "expires_at": 1794903135,
+            "fetched_at": 1794816735,
+            "hit": false,
+            "last_modified": "Mon, 16 Nov 2026 01:12:48 GMT",
+            "request_url": "https://doc.rust-lang.org/nightly/core/primitive.str.html"
+          },
+          "document_version": "e1d9896d6ce4732c2790594e616beadefa874d27a876c8d2472c5c399e5c82dd",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          },
+          "id": "S1",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "750aaf069306a62d7a6fa35617d5fb7363adbd7cf1e4d4c9b97ede3625f18771",
+          "title": "Primitive Type str Copy item path",
+          "url": "https://doc.rust-lang.org/nightly/core/primitive.str.html"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794816765,
+            "etag": "W/\"f50a9fe9f20d8a1bd2d8039b5908cc71\"",
+            "expires_at": 1794903165,
+            "fetched_at": 1794816765,
+            "hit": false,
+            "last_modified": "Thu, 12 Nov 2026 18:15:44 GMT",
+            "request_url": "https://doc.rust-lang.org/std/string/struct.String.html"
+          },
+          "document_version": "110a56debeec92e960d8295cfff71acc58abb8bb63ec710c421eecf4c8cba12c",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": true
+          },
+          "id": "S2",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "54af084d975f3f6fb2ce628977345aa8183558b1ef23b30dad7edbf130ecef87",
+          "title": "Struct String Copy item path",
+          "url": "https://doc.rust-lang.org/std/string/struct.String.html"
+        }
+      ],
+      "actions": [
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 1,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 1,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 1,
+          "eligible": true,
+          "source_id": "S1"
+        },
+        {
+          "action": "qwen",
+          "source_id": "S1",
+          "status": "failed_lexical_fallback"
+        },
+        {
+          "action": "read",
+          "attempt": 2,
+          "eligible": true,
+          "source_id": "S2"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A1",
+          "generation": 2
+        },
+        {
+          "action": "withhold_claim",
+          "draft_claim": "A2",
+          "generation": 2,
+          "reason": "invalid/duplicate answer text"
+        },
+        {
+          "action": "repair_claim_text",
+          "generation": 2
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A1",
+          "generation": 3
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A2",
+          "draft_claim": "A2",
+          "generation": 3
+        }
+      ],
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 2,
+        "hits": 0,
+        "http_reads": 3,
+        "misses": 6,
+        "qwen_calls": 1,
+        "refresh": false,
+        "writes": 5
+      },
+      "budget": {
+        "documents": 2,
+        "forms": 1,
+        "generations": 4,
+        "qwen": 1,
+        "serp": 1
+      },
+      "elapsed_ms": 38870,
+      "witnesses_checked": 5,
+      "known_inner_cost_usd": 0.000827596,
+      "known_outer_cost_usd": 0,
+      "unknown_cost_calls": 0,
+      "max_context_chars": 12167,
+      "tool_payload_equal": [],
+      "result_sha256": "88d09a570a5559d5da2531b82bc7a07b751d57762df5e4a75a9273896d6709d9",
+      "raw_prefix": "baseline/cases/G07"
+    },
+    {
+      "arm": "baseline",
+      "group": "cases",
+      "id": "G08",
+      "status": "completed",
+      "tool_status": "partial",
+      "stop_reason": "budget_exhausted",
+      "claims": [
+        {
+          "answer_end": 85,
+          "answer_start": 0,
+          "evidence": [
+            {
+              "document_version": "5131f8c02f4b7940d90aea5dfb229c14da93179e6bfe3558825dfcf1deb78abb",
+              "end": 45840,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "Inserts an element at position index within the vector, shifting all elements after it to the right.",
+              "source_id": "S1",
+              "start": 45740
+            }
+          ],
+          "facets": [
+            0
+          ],
+          "id": "A1",
+          "kind": "fact",
+          "rationale": "",
+          "text": "Vec::insert вставляет элемент в позицию index, сдвигая все элементы после неё вправо."
+        }
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "sources": [
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794816776,
+            "etag": "W/\"2fb473868cafb9395e000fac8589eca3\"",
+            "expires_at": 1794903176,
+            "fetched_at": 1794816776,
+            "hit": false,
+            "last_modified": "Thu, 12 Nov 2026 18:15:44 GMT",
+            "request_url": "https://doc.rust-lang.org/std/vec/struct.Vec.html"
+          },
+          "document_version": "5131f8c02f4b7940d90aea5dfb229c14da93179e6bfe3558825dfcf1deb78abb",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": true
+          },
+          "id": "S1",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "b62511815ec00792ff9d11ec5751a01ad1b883ffeee7b0e700321200d2895bf9",
+          "title": "Struct Vec Copy item path",
+          "url": "https://doc.rust-lang.org/std/vec/struct.Vec.html"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794816807,
+            "etag": null,
+            "expires_at": 1794816807,
+            "fetched_at": 1794816807,
+            "hit": false,
+            "last_modified": null,
+            "request_url": "http://cheat-sheets.org/"
+          },
+          "document_version": "a9e9c2ffe56d30e0b9666472f6d4ef454fc0d1de752736d38a3cbcac0abcc878",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_article",
+            "scope": "article",
+            "truncated": false
+          },
+          "id": "S2",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "feed",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "70f0b25197d8f8008a203b96b502cc15ff05f5624303c760148ebef9098e0d38",
+          "title": "Cheat-Sheets.org",
+          "url": "http://cheat-sheets.org/"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794816813,
+            "etag": "W/\"a40f424c63588a24aa82ea3a03feaad8\"",
+            "expires_at": 1794903213,
+            "fetched_at": 1794816813,
+            "hit": false,
+            "last_modified": "Thu, 12 Nov 2026 18:15:39 GMT",
+            "request_url": "https://doc.rust-lang.org/src/alloc/vec/mod.rs.html"
+          },
+          "document_version": "f21ac2b14f849ec58afc200a9fe27e7e8db8d64be2797301c8f37cb252f58867",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": true
+          },
+          "id": "S3",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "7568f6221bfbf2973b9eadaa082e314942d89071403fc95944993014114c4cf5",
+          "title": "alloc/vec/mod.rs",
+          "url": "https://doc.rust-lang.org/src/alloc/vec/mod.rs.html"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794816815,
+            "etag": "W/\"8276fcdd0e013086043910377ba800af\"",
+            "expires_at": 1794817115,
+            "fetched_at": 1794816815,
+            "hit": false,
+            "last_modified": "Mon, 16 Nov 2026 01:14:53 GMT",
+            "request_url": "https://doc.rust-lang.org/nightly/src/alloc/collections/vec_deque/mod.rs.html"
+          },
+          "document_version": "d18abeccb58ae4a643e540f3bc5285b1877ece871eeb86383bf93ea4b11f2be6",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": true
+          },
+          "id": "S4",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "feed",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "600d387b06e0b1654e316d7d288f7ac78e6bd090735f49d7a6f7cae72be6aec5",
+          "title": "alloc/collections/vec_deque/mod.rs",
+          "url": "https://doc.rust-lang.org/nightly/src/alloc/collections/vec_deque/mod.rs.html"
+        }
+      ],
+      "actions": [
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 1,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 1,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 1,
+          "eligible": true,
+          "source_id": "S1"
+        },
+        {
+          "action": "qwen",
+          "source_id": "S1",
+          "status": "failed_lexical_fallback"
+        },
+        {
+          "action": "read",
+          "attempt": 2,
+          "eligible": true,
+          "source_id": "S2"
+        },
+        {
+          "action": "withhold_quote",
+          "chunk_id": "S1P1",
+          "draft_claim": "A1",
+          "generation": 2,
+          "reason": "ambiguous repeated quote needs a unique source slice or an explicit range"
+        },
+        {
+          "action": "withhold_claim",
+          "draft_claim": "A1",
+          "generation": 2,
+          "reason": "invalid/duplicate answer text"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A2",
+          "generation": 2
+        },
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 2,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 2,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 3,
+          "eligible": true,
+          "source_id": "S3"
+        },
+        {
+          "action": "read",
+          "attempt": 4,
+          "eligible": true,
+          "source_id": "S4"
+        },
+        {
+          "action": "withhold_quote",
+          "chunk_id": "S1P1",
+          "draft_claim": "A1",
+          "generation": 4,
+          "reason": "ambiguous repeated quote needs a unique source slice or an explicit range"
+        },
+        {
+          "action": "withhold_claim",
+          "draft_claim": "A1",
+          "generation": 4,
+          "reason": "invalid/duplicate answer text"
+        },
+        {
+          "action": "withhold_claim",
+          "draft_claim": "A2",
+          "generation": 4,
+          "reason": "invalid/duplicate answer text"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A3",
+          "generation": 4
+        },
+        {
+          "action": "repair_claim_text",
+          "generation": 4
+        },
+        {
+          "action": "withhold_quote",
+          "chunk_id": "S1P1",
+          "draft_claim": "A1",
+          "generation": 5,
+          "reason": "ambiguous repeated quote needs a unique source slice or an explicit range"
+        },
+        {
+          "action": "withhold_claim",
+          "draft_claim": "A1",
+          "generation": 5,
+          "reason": "invalid/duplicate answer text"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A2",
+          "generation": 5
+        },
+        {
+          "action": "withhold_quote",
+          "chunk_id": "S1P1",
+          "draft_claim": "A3",
+          "generation": 5,
+          "reason": "ambiguous repeated quote needs a unique source slice or an explicit range"
+        },
+        {
+          "action": "withhold_claim",
+          "draft_claim": "A3",
+          "generation": 5,
+          "reason": "claim needs 1..2 exact witnesses"
+        }
+      ],
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 4,
+        "hits": 0,
+        "http_reads": 6,
+        "misses": 11,
+        "qwen_calls": 1,
+        "refresh": false,
+        "writes": 10
+      },
+      "budget": {
+        "documents": 4,
+        "forms": 2,
+        "generations": 6,
+        "qwen": 1,
+        "serp": 2
+      },
+      "elapsed_ms": 54470,
+      "witnesses_checked": 1,
+      "known_inner_cost_usd": 0.0015316639999999999,
+      "known_outer_cost_usd": 0,
+      "unknown_cost_calls": 0,
+      "max_context_chars": 19738,
+      "tool_payload_equal": [],
+      "result_sha256": "b79b5f553f5c6d6d14f6720115864b60ed46a9ca987d1daa74651ca7ebef5f8b",
+      "raw_prefix": "baseline/cases/G08"
+    },
+    {
+      "arm": "baseline",
+      "group": "cases",
+      "id": "J01",
+      "status": "completed",
+      "tool_status": "partial",
+      "stop_reason": "no_new_evidence",
+      "claims": [
+        {
+          "answer_end": 99,
+          "answer_start": 0,
+          "evidence": [
+            {
+              "document_version": "dcd7906f9eb9c07131b236f52ecc4e442ee43ef82e2cc2a3ffb1de72f6e2878d",
+              "end": 6451,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "Returns the contained Some value or a provided default.",
+              "source_id": "S2",
+              "start": 6396
+            }
+          ],
+          "facets": [
+            2
+          ],
+          "id": "A1",
+          "kind": "fact",
+          "rationale": "",
+          "text": "Option::unwrap_or возвращает содержащееся значение Some либо предоставленное значение по умолчанию."
+        },
+        {
+          "answer_end": 247,
+          "answer_start": 162,
+          "evidence": [
+            {
+              "document_version": "dcd7906f9eb9c07131b236f52ecc4e442ee43ef82e2cc2a3ffb1de72f6e2878d",
+              "end": 6685,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "assert_eq!(Some(\"car\").unwrap_or(\"bike\"), \"car\");",
+              "source_id": "S2",
+              "start": 6636
+            }
+          ],
+          "facets": [
+            0
+          ],
+          "id": "A2",
+          "kind": "inference",
+          "rationale": "Общее правило: unwrap_or возвращает содержащееся значение Some; подставляем Some(7) и default=9, получаем 7.",
+          "text": "Some(7).unwrap_or(9) вернёт 7, так как вариант Some возвращает содержащееся значение."
+        },
+        {
+          "answer_end": 406,
+          "answer_start": 310,
+          "evidence": [
+            {
+              "document_version": "dcd7906f9eb9c07131b236f52ecc4e442ee43ef82e2cc2a3ffb1de72f6e2878d",
+              "end": 6729,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "assert_eq!(None.unwrap_or(\"bike\"), \"bike\");",
+              "source_id": "S2",
+              "start": 6686
+            }
+          ],
+          "facets": [
+            1
+          ],
+          "id": "A3",
+          "kind": "inference",
+          "rationale": "Общее правило: unwrap_or возвращает предоставленное значение по умолчанию для None; подставляем default=9, получаем 9.",
+          "text": "None.unwrap_or(9) вернёт 9, так как для None возвращается предоставленное значение по умолчанию."
+        }
+      ],
+      "missing": [],
+      "sources": [
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794816939,
+            "etag": "W/\"6aaab5738bebbf6d92d663b9218c822e\"",
+            "expires_at": 1794903339,
+            "fetched_at": 1794816939,
+            "hit": false,
+            "last_modified": "Thu, 12 Nov 2026 18:15:43 GMT",
+            "request_url": "https://doc.rust-lang.org/std/option/"
+          },
+          "document_version": "12a38c8d838c541e11ff144f67c8aabe83800c2888d208e839ca98be88dc5a07",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          },
+          "id": "S1",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "2666dda46fc88d3ccd6c7532958016ecb903c978eb136d125a56f95da35b4143",
+          "title": "Module option Copy item path",
+          "url": "https://doc.rust-lang.org/std/option/"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794816972,
+            "etag": "W/\"d2f2545da6f14a665d4b159878dcb0ea\"",
+            "expires_at": 1794903372,
+            "fetched_at": 1794816972,
+            "hit": false,
+            "last_modified": "Thu, 12 Nov 2026 18:15:43 GMT",
+            "request_url": "https://doc.rust-lang.org/std/option/enum.Option.html"
+          },
+          "document_version": "dcd7906f9eb9c07131b236f52ecc4e442ee43ef82e2cc2a3ffb1de72f6e2878d",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          },
+          "id": "S2",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "e0930611bfc382d31279acc42f17d189b43388ccb12b1d45b6ee2d2431a9a7c2",
+          "title": "Enum Option Copy item path",
+          "url": "https://doc.rust-lang.org/std/option/enum.Option.html"
+        }
+      ],
+      "actions": [
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 1,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 1,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 1,
+          "eligible": true,
+          "source_id": "S1"
+        },
+        {
+          "action": "qwen",
+          "source_id": "S1",
+          "status": "failed_lexical_fallback"
+        },
+        {
+          "action": "read",
+          "attempt": 2,
+          "eligible": true,
+          "source_id": "S2"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A1",
+          "generation": 2
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A2",
+          "draft_claim": "A2",
+          "generation": 2
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A3",
+          "draft_claim": "A3",
+          "generation": 2
+        }
+      ],
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 2,
+        "hits": 0,
+        "http_reads": 3,
+        "misses": 6,
+        "qwen_calls": 1,
+        "refresh": false,
+        "writes": 5
+      },
+      "budget": {
+        "documents": 2,
+        "forms": 1,
+        "generations": 3,
+        "qwen": 1,
+        "serp": 1
+      },
+      "elapsed_ms": 42104,
+      "witnesses_checked": 3,
+      "known_inner_cost_usd": 0.000536924,
+      "known_outer_cost_usd": 0,
+      "unknown_cost_calls": 0,
+      "max_context_chars": 11312,
+      "tool_payload_equal": [],
+      "result_sha256": "870ef5a8ef871ec6056365b04f307e2a894c0a49073e1886515b9bccba9fe14b",
+      "raw_prefix": "baseline/cases/J01"
+    },
+    {
+      "arm": "baseline",
+      "group": "cases",
+      "id": "N01",
+      "status": "completed",
+      "tool_status": "partial",
+      "stop_reason": "budget_exhausted",
+      "claims": [],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "sources": [
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794816669,
+            "etag": "W/\"5906324a-f958\"",
+            "expires_at": 1794816969,
+            "fetched_at": 1794816669,
+            "hit": false,
+            "last_modified": "Sun, 30 Apr 2017 18:51:54 GMT",
+            "request_url": "https://pyformat.info/"
+          },
+          "document_version": "fc191876b5d0c2b31770df1da09fca82352f3b82b77b693c93fcbbd4995daf27",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "readability",
+            "scope": "inferred_article",
+            "truncated": false
+          },
+          "id": "S1",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "feed",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "91c7c09c5a904209ab1efa63759fe5fed8a06c902998350e8c80440217c8fc8b",
+          "title": "PyFormat Using % and .format() for great good!",
+          "url": "https://pyformat.info/"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794816673,
+            "etag": "W/\"580c0afbaae8086e9a12fb3742188a37\"",
+            "expires_at": 1794816673,
+            "fetched_at": 1794816673,
+            "hit": false,
+            "last_modified": null,
+            "request_url": "https://github.com/python/cpython/issues/84120"
+          },
+          "document_version": "caece81b271b1e5f819098fb097b9dc65b68ed7b1499e8d9a7e74e22c1f86bef",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          },
+          "id": "S2",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "feed",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "68eabfc8a420bf3e582cbde47ed9f4ff91e086862eacc9fb651e50bb9f32ffa3",
+          "title": "PEP 616: Add str.removeprefix and str.removesuffix methods #84120",
+          "url": "https://github.com/python/cpython/issues/84120"
+        }
+      ],
+      "actions": [
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 1,
+          "results": 3
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 1,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 1,
+          "error": "fetch_timeout",
+          "url": "https://docs.python.org/3/builtins/stdtypes.html"
+        },
+        {
+          "action": "read",
+          "attempt": 2,
+          "error": "fetch_timeout",
+          "url": "https://docs.python.org/3/whatsnew/3.9.html"
+        },
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 2,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 2,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 3,
+          "eligible": true,
+          "source_id": "S1"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S1",
+          "status": "ok"
+        },
+        {
+          "action": "read",
+          "attempt": 4,
+          "eligible": true,
+          "source_id": "S2"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S2",
+          "status": "ok"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A1",
+          "generation": 3
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A2",
+          "draft_claim": "A2",
+          "generation": 3
+        }
+      ],
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 2,
+        "hits": 0,
+        "http_reads": 6,
+        "misses": 10,
+        "qwen_calls": 2,
+        "refresh": false,
+        "writes": 8
+      },
+      "budget": {
+        "documents": 4,
+        "forms": 2,
+        "generations": 4,
+        "qwen": 2,
+        "serp": 2
+      },
+      "elapsed_ms": 42908,
+      "witnesses_checked": 0,
+      "known_inner_cost_usd": 0.0006288719999999999,
+      "known_outer_cost_usd": 0,
+      "unknown_cost_calls": 0,
+      "max_context_chars": 11305,
+      "tool_payload_equal": [],
+      "result_sha256": "63a32d5789d5b2be73004a39f11d435053dd921396f660ffa2fb4607379aaef9",
+      "raw_prefix": "baseline/cases/N01"
+    },
+    {
+      "arm": "baseline",
+      "group": "cases",
+      "id": "N02",
+      "status": "completed",
+      "tool_status": "partial",
+      "stop_reason": "budget_exhausted",
+      "claims": [
+        {
+          "answer_end": 129,
+          "answer_start": 0,
+          "evidence": [
+            {
+              "document_version": "88d8cdae39cb09e046bf4bd05751533fc10ec516b7b854ef95801ed46f89fb27",
+              "end": 1889,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "IGNORE \nWhen a constraint violation occurs, the one row that contains the constraint violation is not inserted or changed. But the command continues executing normally.",
+              "source_id": "S1",
+              "start": 1721
+            }
+          ],
+          "facets": [
+            1
+          ],
+          "id": "A1",
+          "kind": "fact",
+          "rationale": "",
+          "text": "При алгоритме IGNORE строка, нарушающая ограничение, не вставляется и не изменяется, но команда продолжает выполняться нормально."
+        }
+      ],
+      "missing": [
+        0
+      ],
+      "sources": [
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794816684,
+            "etag": "\"m6af72ef6s184d\"",
+            "expires_at": 1794816804,
+            "fetched_at": 1794816684,
+            "hit": false,
+            "last_modified": "Fri, 13 Nov 2026 15:38:30 GMT",
+            "request_url": "https://sqlite.org/conflict.html"
+          },
+          "document_version": "88d8cdae39cb09e046bf4bd05751533fc10ec516b7b854ef95801ed46f89fb27",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "readability",
+            "scope": "inferred_article",
+            "truncated": false
+          },
+          "id": "S1",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "dba3c2c02ed2545bb37e9002f328a42e2e8c95b2d23b7daebebf290e9bbb432d",
+          "title": "Constraint Conflict Resolution in SQLite",
+          "url": "https://sqlite.org/conflict.html"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794816685,
+            "etag": "W/\"798eea97c3a08aaecb2ef81b86363165\"",
+            "expires_at": 1794816685,
+            "fetched_at": 1794816685,
+            "hit": false,
+            "last_modified": null,
+            "request_url": "https://github.com/noeta-lang/para-db"
+          },
+          "document_version": "28faa63087e96f17d246870603bcc10958d744604944acc60972308736f6bc52",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          },
+          "id": "S2",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "feed",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "c08f305c74375ff9d5e697ff8286efdbc26d9b3e128c075cf663c1c0370fed6c",
+          "title": "para/db",
+          "url": "https://github.com/noeta-lang/para-db"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794816709,
+            "etag": null,
+            "expires_at": 1794816709,
+            "fetched_at": 1794816709,
+            "hit": false,
+            "last_modified": null,
+            "request_url": "https://github.com/cloudflare/workerd/issues/7439"
+          },
+          "document_version": "bdfd830bea47eb1a8d9696361b9fe06d6eb27666deec058af09e5a970ebb58a2",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          },
+          "id": "S3",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "feed",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "dd383d080df78eb8f372461e1e42a581fe17f3bdb8d74b4f20059309a5774928",
+          "title": "Whole-database quick_check fails with SQLITE_NOMEM as an empty schema grows · Issue #7439 · cloudflare/workerd · GitHub",
+          "url": "https://github.com/cloudflare/workerd/issues/7439"
+        }
+      ],
+      "actions": [
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 1,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 1,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 1,
+          "eligible": true,
+          "source_id": "S1"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S1",
+          "status": "ok"
+        },
+        {
+          "action": "read",
+          "attempt": 2,
+          "eligible": true,
+          "source_id": "S2"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S2",
+          "status": "ok"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A1",
+          "generation": 2
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A2",
+          "draft_claim": "A2",
+          "generation": 2
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A3",
+          "draft_claim": "A3",
+          "generation": 2
+        },
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 2,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 2,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 3,
+          "error": "fetch_timeout",
+          "url": "https://www.sqlitetutorial.net/sqlite-foreign-key/"
+        },
+        {
+          "action": "read",
+          "attempt": 4,
+          "eligible": true,
+          "source_id": "S3"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S3",
+          "status": "ok"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A1",
+          "generation": 4
+        }
+      ],
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 3,
+        "hits": 0,
+        "http_reads": 6,
+        "misses": 12,
+        "qwen_calls": 3,
+        "refresh": false,
+        "writes": 11
+      },
+      "budget": {
+        "documents": 4,
+        "forms": 2,
+        "generations": 5,
+        "qwen": 3,
+        "serp": 2
+      },
+      "elapsed_ms": 33247,
+      "witnesses_checked": 1,
+      "known_inner_cost_usd": 0.000885584,
+      "known_outer_cost_usd": 0,
+      "unknown_cost_calls": 0,
+      "max_context_chars": 13829,
+      "tool_payload_equal": [],
+      "result_sha256": "fc7f8897f2b99a4fbb07fae137f26df577ba2e8175a77b44c7f37a0b971000f9",
+      "raw_prefix": "baseline/cases/N02"
+    },
+    {
+      "arm": "baseline",
+      "group": "cases",
+      "id": "N03",
+      "status": "completed",
+      "tool_status": "partial",
+      "stop_reason": "budget_exhausted",
+      "claims": [],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "sources": [
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794816718,
+            "etag": null,
+            "expires_at": 1794817018,
+            "fetched_at": 1794816718,
+            "hit": false,
+            "last_modified": null,
+            "request_url": "https://www.postgresql.org/docs/release/11.15/"
+          },
+          "document_version": "f1665280aca63418ee6072c3c0c2f4dc404b95d278cab8961a4c9be24d4a0647",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "readability",
+            "scope": "inferred_article",
+            "truncated": false
+          },
+          "id": "S1",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "feed",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "e4f867c18b85f40cf8f6874a0939e1ce3b8fcdb290b16f4cf083570497bfcea2",
+          "title": "Release Notes",
+          "url": "https://www.postgresql.org/docs/release/11.15/"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794816720,
+            "etag": null,
+            "expires_at": 1794903120,
+            "fetched_at": 1794816720,
+            "hit": false,
+            "last_modified": null,
+            "request_url": "https://www.postgresql.org/docs/release/7.4.3/"
+          },
+          "document_version": "1f942d97ff81abb4503863730ddb515ee353479201e136b9ccc52e02d8750c1e",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "readability",
+            "scope": "inferred_article",
+            "truncated": false
+          },
+          "id": "S2",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "32e6c8db735a8002735a0681b9da525a2abd31b40ab26d5a17e714a436ab160a",
+          "title": "PostgreSQL: Release Notes",
+          "url": "https://www.postgresql.org/docs/release/7.4.3/"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794816722,
+            "etag": null,
+            "expires_at": 1794903122,
+            "fetched_at": 1794816722,
+            "hit": false,
+            "last_modified": null,
+            "request_url": "https://www.postgresql.org/docs/release/9.4.7/"
+          },
+          "document_version": "0a17b897c81876e6061695be7a35aec0beea2a73f2d12e97919886017bc8a2e3",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "readability",
+            "scope": "inferred_article",
+            "truncated": false
+          },
+          "id": "S3",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "e7ec5a670fd9544261bd2a356893f58d26feeaba128993a2eaaa5f19df94f0ff",
+          "title": "PostgreSQL: Release Notes",
+          "url": "https://www.postgresql.org/docs/release/9.4.7/"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794816724,
+            "etag": null,
+            "expires_at": 1794817024,
+            "fetched_at": 1794816724,
+            "hit": false,
+            "last_modified": null,
+            "request_url": "https://www.postgresql.org/docs/release/11.20/"
+          },
+          "document_version": "3ce0b224f553d64a026d5400e591b375a00531b21728553399d7da2a7bd9f786",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "readability",
+            "scope": "inferred_article",
+            "truncated": false
+          },
+          "id": "S4",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "feed",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "44ba7e990d54603694182dce8d72d9f599261311cc71d1b35dc3c5d6901464ec",
+          "title": "Release Notes",
+          "url": "https://www.postgresql.org/docs/release/11.20/"
+        }
+      ],
+      "actions": [
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 1,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 1,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 1,
+          "eligible": true,
+          "source_id": "S1"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S1",
+          "status": "ok"
+        },
+        {
+          "action": "read",
+          "attempt": 2,
+          "eligible": true,
+          "source_id": "S2"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S2",
+          "status": "ok"
+        },
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 2,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 2,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 3,
+          "eligible": true,
+          "source_id": "S3"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S3",
+          "status": "ok"
+        },
+        {
+          "action": "read",
+          "attempt": 4,
+          "eligible": true,
+          "source_id": "S4"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S4",
+          "status": "ok"
+        }
+      ],
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 4,
+        "hits": 0,
+        "http_reads": 6,
+        "misses": 14,
+        "qwen_calls": 4,
+        "refresh": false,
+        "writes": 14
+      },
+      "budget": {
+        "documents": 4,
+        "forms": 2,
+        "generations": 3,
+        "qwen": 4,
+        "serp": 2
+      },
+      "elapsed_ms": 10705,
+      "witnesses_checked": 0,
+      "known_inner_cost_usd": 0.0003359,
+      "known_outer_cost_usd": 0,
+      "unknown_cost_calls": 0,
+      "max_context_chars": 15783,
+      "tool_payload_equal": [],
+      "result_sha256": "2063f8c06f6f4ba2713263b4ddb53e3458790fa5af61cd83d7c1d0d42f48deff",
+      "raw_prefix": "baseline/cases/N03"
+    },
+    {
+      "arm": "baseline",
+      "group": "cases",
+      "id": "N04",
+      "status": "completed",
+      "tool_status": "error",
+      "stop_reason": "model_error",
+      "claims": [],
+      "missing": [],
+      "sources": [],
+      "actions": [],
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 0,
+        "hits": 0,
+        "http_reads": 0,
+        "misses": 0,
+        "qwen_calls": 0,
+        "refresh": false,
+        "writes": 0
+      },
+      "budget": {
+        "documents": 0,
+        "forms": 0,
+        "generations": 1,
+        "qwen": 0,
+        "serp": 0
+      },
+      "elapsed_ms": 1536,
+      "witnesses_checked": 0,
+      "known_inner_cost_usd": 5.316e-05,
+      "known_outer_cost_usd": 0,
+      "unknown_cost_calls": 0,
+      "max_context_chars": 668,
+      "tool_payload_equal": [],
+      "result_sha256": "6f0b034d924547e81e7f8666b8c97867e54c6e8251ea4635973741983f632549",
+      "raw_prefix": "baseline/cases/N04"
+    },
+    {
+      "arm": "baseline",
+      "group": "cases",
+      "id": "N05",
+      "status": "completed",
+      "tool_status": "error",
+      "stop_reason": "model_error",
+      "claims": [],
+      "missing": [
+        0,
+        1
+      ],
+      "sources": [],
+      "actions": [
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 1,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 1,
+          "status": "source_disabled"
+        }
+      ],
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 0,
+        "hits": 0,
+        "http_reads": 1,
+        "misses": 1,
+        "qwen_calls": 0,
+        "refresh": false,
+        "writes": 1
+      },
+      "budget": {
+        "documents": 0,
+        "forms": 1,
+        "generations": 1,
+        "qwen": 0,
+        "serp": 1
+      },
+      "elapsed_ms": 2349,
+      "witnesses_checked": 0,
+      "known_inner_cost_usd": 4.298e-05,
+      "known_outer_cost_usd": 0,
+      "unknown_cost_calls": 0,
+      "max_context_chars": 649,
+      "tool_payload_equal": [],
+      "result_sha256": "51daeea28f543ae6f761cae839a395a12a043ad4e4481aa9e0c6b97b3eec0e4a",
+      "raw_prefix": "baseline/cases/N05"
+    },
+    {
+      "arm": "baseline",
+      "group": "cases",
+      "id": "N06",
+      "status": "completed",
+      "tool_status": "error",
+      "stop_reason": "model_error",
+      "claims": [],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "sources": [],
+      "actions": [
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 1,
+          "results": 4
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 1,
+          "status": "source_disabled"
+        }
+      ],
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 0,
+        "hits": 0,
+        "http_reads": 1,
+        "misses": 1,
+        "qwen_calls": 0,
+        "refresh": false,
+        "writes": 1
+      },
+      "budget": {
+        "documents": 0,
+        "forms": 1,
+        "generations": 1,
+        "qwen": 0,
+        "serp": 1
+      },
+      "elapsed_ms": 5028,
+      "witnesses_checked": 0,
+      "known_inner_cost_usd": 6.5736e-05,
+      "known_outer_cost_usd": 0,
+      "unknown_cost_calls": 0,
+      "max_context_chars": 687,
+      "tool_payload_equal": [],
+      "result_sha256": "2c4de95f6c0ab8524bc0962f79693a0be0c0f949a5a8eb7d9f9d209560762003",
+      "raw_prefix": "baseline/cases/N06"
+    },
+    {
+      "arm": "candidate",
+      "group": "cases",
+      "id": "F02",
+      "status": "completed",
+      "tool_status": "partial",
+      "stop_reason": "budget_exhausted",
+      "claims": [
+        {
+          "answer_end": 109,
+          "answer_start": 0,
+          "evidence": [
+            {
+              "document_version": "05c172b579f2bc9aa2ce3842ac6e235a5376a0fbb722efa23482e2de1fe2abeb",
+              "end": 80857,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "All 1xx (Informational), 204 (No Content), and 304 (Not Modified) responses do not include content.",
+              "source_id": "S1",
+              "start": 80758
+            }
+          ],
+          "facets": [
+            0,
+            2
+          ],
+          "id": "A1",
+          "kind": "fact",
+          "rationale": "",
+          "text": "RFC 9110: All 1xx (Informational), 204 (No Content), and 304 (Not Modified) responses do not include content."
+        }
+      ],
+      "missing": [
+        1
+      ],
+      "sources": [
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794817165,
+            "etag": "\"0d9f5fb8eb38d3c08b055f9b0671d68b\"",
+            "expires_at": 1794903565,
+            "fetched_at": 1794817165,
+            "hit": false,
+            "last_modified": null,
+            "request_url": "https://www.rfc-editor.org/rfc/rfc9110.html"
+          },
+          "document_version": "05c172b579f2bc9aa2ce3842ac6e235a5376a0fbb722efa23482e2de1fe2abeb",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "declared_rfc_body",
+            "scope": "rfc_body",
+            "truncated": true
+          },
+          "id": "S1",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "6f20214cfccc318385b390ea9ae9f72ce0b63ad18382b53a774eeef2f2bd2615",
+          "title": "RFC 9110: HTTP Semantics",
+          "url": "https://www.rfc-editor.org/rfc/rfc9110.html"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794817170,
+            "etag": "\"f77ed398f12a09b6dbf927ae2d764a95\"",
+            "expires_at": 1794903570,
+            "fetched_at": 1794817170,
+            "hit": false,
+            "last_modified": null,
+            "request_url": "https://www.rfc-editor.org/rfc/rfc9112.html"
+          },
+          "document_version": "a4b25608201d19237cb710569e997cd918746aae1b5bc6ad11b56df5fb6c0ce4",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "declared_rfc_body",
+            "scope": "rfc_body",
+            "truncated": false
+          },
+          "id": "S2",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "25b9893fd8a00127ad87ea917361a32d344aacce4c62f36e3949c69332364a69",
+          "title": "RFC 9112: HTTP/1.1",
+          "url": "https://www.rfc-editor.org/rfc/rfc9112.html"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794817181,
+            "etag": null,
+            "expires_at": 1794831581,
+            "fetched_at": 1794817181,
+            "hit": false,
+            "last_modified": null,
+            "request_url": "https://datatracker.ietf.org/doc/html/rfc9472"
+          },
+          "document_version": "ba345652b1a8e59c6ff22bf2755d738a77958beb64903c91851818e6f1fab137",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "readability",
+            "scope": "inferred_article",
+            "truncated": false
+          },
+          "id": "S3",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "90f52da8f5b4cfe2659999da8705c813122fd0cd4ad077c1fcf8f5ae380452a1",
+          "title": "RFC 9472 - A YANG Data Model for Reporting Software Bills of Materials (SBOMs) and Vulnerability Information",
+          "url": "https://datatracker.ietf.org/doc/html/rfc9472"
+        }
+      ],
+      "actions": [
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 1,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 1,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 1,
+          "eligible": true,
+          "source_id": "S1"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S1",
+          "status": "ok"
+        },
+        {
+          "action": "read",
+          "attempt": 2,
+          "eligible": true,
+          "source_id": "S2"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S2",
+          "status": "ok"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A1",
+          "generation": 2
+        },
+        {
+          "action": "withhold_claim",
+          "draft_claim": "A2",
+          "generation": 2,
+          "reason": "RFC attribution needs a complete literal clause from the matching primary document"
+        },
+        {
+          "action": "withhold_claim",
+          "draft_claim": "A3",
+          "generation": 2,
+          "reason": "RFC attribution needs a complete literal clause from the matching primary document"
+        },
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 2,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 2,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 3,
+          "eligible": true,
+          "source_id": "S3"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S3",
+          "status": "ok"
+        },
+        {
+          "action": "read",
+          "attempt": 4,
+          "error": "unsupported_content",
+          "url": "https://www.rfc-editor.org/rfc/rfc9110.pdf"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A1",
+          "generation": 4
+        },
+        {
+          "action": "withhold_claim",
+          "draft_claim": "A2",
+          "generation": 4,
+          "reason": "RFC attribution needs a complete literal clause from the matching primary document"
+        },
+        {
+          "action": "withhold_claim",
+          "draft_claim": "A3",
+          "generation": 4,
+          "reason": "RFC attribution needs a complete literal clause from the matching primary document"
+        }
+      ],
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 3,
+        "hits": 0,
+        "http_reads": 6,
+        "misses": 12,
+        "qwen_calls": 3,
+        "refresh": false,
+        "writes": 11
+      },
+      "budget": {
+        "documents": 4,
+        "forms": 2,
+        "generations": 5,
+        "qwen": 3,
+        "serp": 2
+      },
+      "elapsed_ms": 27498,
+      "witnesses_checked": 1,
+      "known_inner_cost_usd": 0.001110876,
+      "known_outer_cost_usd": 0,
+      "unknown_cost_calls": 0,
+      "max_context_chars": 20566,
+      "tool_payload_equal": [],
+      "result_sha256": "5558ddf5ec11828266b5226062ee28c31e30d6aedc1dd322740cc8fe3a18829f",
+      "raw_prefix": "candidate/cases/F02"
+    },
+    {
+      "arm": "candidate",
+      "group": "cases",
+      "id": "F03",
+      "status": "completed",
+      "tool_status": "partial",
+      "stop_reason": "budget_exhausted",
+      "claims": [
+        {
+          "answer_end": 196,
+          "answer_start": 0,
+          "evidence": [
+            {
+              "document_version": "22c7cd8947ffa8c67486ce7c6060f03aa6eee5cbb7415413e8d97c8290786ab2",
+              "end": 51848,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "The no-store response directive indicates that a cache MUST NOT store any part of either the immediate request or the response and MUST NOT use the response to satisfy any other request.",
+              "source_id": "S1",
+              "start": 51662
+            }
+          ],
+          "facets": [
+            0,
+            1
+          ],
+          "id": "A1",
+          "kind": "fact",
+          "rationale": "",
+          "text": "RFC 9111: The no-store response directive indicates that a cache MUST NOT store any part of either the immediate request or the response and MUST NOT use the response to satisfy any other request."
+        },
+        {
+          "answer_end": 316,
+          "answer_start": 249,
+          "evidence": [
+            {
+              "document_version": "22c7cd8947ffa8c67486ce7c6060f03aa6eee5cbb7415413e8d97c8290786ab2",
+              "end": 51908,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "This directive applies to both private and shared caches.",
+              "source_id": "S1",
+              "start": 51851
+            }
+          ],
+          "facets": [
+            0,
+            1,
+            2
+          ],
+          "id": "A2",
+          "kind": "fact",
+          "rationale": "",
+          "text": "RFC 9111: This directive applies to both private and shared caches."
+        },
+        {
+          "answer_end": 457,
+          "answer_start": 369,
+          "evidence": [
+            {
+              "document_version": "22c7cd8947ffa8c67486ce7c6060f03aa6eee5cbb7415413e8d97c8290786ab2",
+              "end": 52241,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "This directive is not a reliable or sufficient mechanism for ensuring privacy.",
+              "source_id": "S1",
+              "start": 52163
+            }
+          ],
+          "facets": [
+            0,
+            1
+          ],
+          "id": "A3",
+          "kind": "fact",
+          "rationale": "",
+          "text": "RFC 9111: This directive is not a reliable or sufficient mechanism for ensuring privacy."
+        }
+      ],
+      "missing": [],
+      "sources": [
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794817196,
+            "etag": "\"67c426a73321f73db9ffdf2508376ec5\"",
+            "expires_at": 1794903596,
+            "fetched_at": 1794817196,
+            "hit": false,
+            "last_modified": null,
+            "request_url": "https://www.rfc-editor.org/rfc/rfc9111.html"
+          },
+          "document_version": "22c7cd8947ffa8c67486ce7c6060f03aa6eee5cbb7415413e8d97c8290786ab2",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "declared_rfc_body",
+            "scope": "rfc_body",
+            "truncated": false
+          },
+          "id": "S1",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "de91e3bd2c4173199dbd698053d7fa0e14a73b71a31275492b325dc91b09579d",
+          "title": "RFC 9111: HTTP Caching",
+          "url": "https://www.rfc-editor.org/rfc/rfc9111.html"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794817170,
+            "etag": "\"f77ed398f12a09b6dbf927ae2d764a95\"",
+            "expires_at": 1794903570,
+            "fetched_at": 1794817170,
+            "hit": true,
+            "last_modified": null,
+            "request_url": "https://www.rfc-editor.org/rfc/rfc9112.html"
+          },
+          "document_version": "a4b25608201d19237cb710569e997cd918746aae1b5bc6ad11b56df5fb6c0ce4",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "declared_rfc_body",
+            "scope": "rfc_body",
+            "truncated": false
+          },
+          "id": "S2",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "25b9893fd8a00127ad87ea917361a32d344aacce4c62f36e3949c69332364a69",
+          "title": "RFC 9112: HTTP/1.1",
+          "url": "https://www.rfc-editor.org/rfc/rfc9112.html"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794817212,
+            "etag": "\"1f6e8b9e5785a71cbb0d541fdf7920dd\"",
+            "expires_at": 1794903612,
+            "fetched_at": 1794817212,
+            "hit": false,
+            "last_modified": null,
+            "request_url": "https://www.rfc-editor.org/rfc/rfc9458.html"
+          },
+          "document_version": "d49a19da6ec937e7788089833e2f9c2742751e807549ce496576db815deac91b",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "declared_rfc_body",
+            "scope": "rfc_body",
+            "truncated": false
+          },
+          "id": "S3",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "10fa66f441219b196e4af286830b7c057b657a46e78bd11ece9368716d0a0d31",
+          "title": "RFC 9458: Oblivious HTTP",
+          "url": "https://www.rfc-editor.org/rfc/rfc9458.html"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794817217,
+            "etag": "W/\"ef1dd08020f56eeb492d8141956e51ff\"",
+            "expires_at": 1794817217,
+            "fetched_at": 1794817217,
+            "hit": false,
+            "last_modified": null,
+            "request_url": "https://github.com/expo/best-before"
+          },
+          "document_version": "2a31ebb7056c961ca8b94e4b78ca41786d2f384de3df7395ef39bbd5bef940a9",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          },
+          "id": "S4",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "feed",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "bdcc37d63311b93b7eddba0f080545f805505ae0ead9ed7e512e10a01709d950",
+          "title": "best-before",
+          "url": "https://github.com/expo/best-before"
+        }
+      ],
+      "actions": [
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 1,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 1,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 1,
+          "eligible": true,
+          "source_id": "S1"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S1",
+          "status": "ok"
+        },
+        {
+          "action": "read",
+          "attempt": 2,
+          "eligible": true,
+          "source_id": "S2"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S2",
+          "status": "ok"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A1",
+          "generation": 2
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A2",
+          "draft_claim": "A2",
+          "generation": 2
+        },
+        {
+          "action": "withhold_claim",
+          "draft_claim": "A3",
+          "generation": 2,
+          "reason": "invalid/duplicate answer text"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A3",
+          "draft_claim": "A4",
+          "generation": 2
+        },
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 2,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 2,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 3,
+          "eligible": true,
+          "source_id": "S3"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S3",
+          "status": "ok"
+        },
+        {
+          "action": "read",
+          "attempt": 4,
+          "eligible": true,
+          "source_id": "S4"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S4",
+          "status": "ok"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A1",
+          "generation": 4
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A2",
+          "draft_claim": "A2",
+          "generation": 4
+        },
+        {
+          "action": "withhold_claim",
+          "draft_claim": "A3",
+          "generation": 4,
+          "reason": "invalid/duplicate answer text"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A3",
+          "draft_claim": "A4",
+          "generation": 4
+        }
+      ],
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 3,
+        "hits": 2,
+        "http_reads": 5,
+        "misses": 12,
+        "qwen_calls": 4,
+        "refresh": false,
+        "writes": 12
+      },
+      "budget": {
+        "documents": 4,
+        "forms": 2,
+        "generations": 5,
+        "qwen": 4,
+        "serp": 2
+      },
+      "elapsed_ms": 28942,
+      "witnesses_checked": 3,
+      "known_inner_cost_usd": 0.001256088,
+      "known_outer_cost_usd": 0,
+      "unknown_cost_calls": 0,
+      "max_context_chars": 23782,
+      "tool_payload_equal": [],
+      "result_sha256": "252bdf9c1adef24264540ea1a68ebac25bce898ebf5994755d380f24fe0576bb",
+      "raw_prefix": "candidate/cases/F03"
+    },
+    {
+      "arm": "candidate",
+      "group": "cases",
+      "id": "G07",
+      "status": "completed",
+      "tool_status": "partial",
+      "stop_reason": "budget_exhausted",
+      "claims": [
+        {
+          "answer_end": 133,
+          "answer_start": 0,
+          "evidence": [
+            {
+              "document_version": "07dd00026a58f4e52756b249de7fe506ecc8fafc07a9cd1f34d91b048d268069",
+              "end": 39593,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "Splits the string on the first occurrence of the specified delimiter and returns prefix before delimiter and suffix after delimiter.",
+              "source_id": "S1",
+              "start": 39461
+            },
+            {
+              "document_version": "07dd00026a58f4e52756b249de7fe506ecc8fafc07a9cd1f34d91b048d268069",
+              "end": 39646,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "assert_eq!(\"cfg\".split_once('='), None);",
+              "source_id": "S1",
+              "start": 39606
+            }
+          ],
+          "facets": [
+            0,
+            1
+          ],
+          "id": "A1",
+          "kind": "fact",
+          "rationale": "",
+          "text": "str::split_once возвращает Option: при отсутствии разделителя в строке результат — None (пример: split_once('=') для строки без '=')."
+        },
+        {
+          "answer_end": 315,
+          "answer_start": 199,
+          "evidence": [
+            {
+              "document_version": "07dd00026a58f4e52756b249de7fe506ecc8fafc07a9cd1f34d91b048d268069",
+              "end": 39762,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "assert_eq!(\"cfg=foo\".split_once('='), Some((\"cfg\", \"foo\")));",
+              "source_id": "S1",
+              "start": 39702
+            }
+          ],
+          "facets": [
+            0,
+            1
+          ],
+          "id": "A2",
+          "kind": "fact",
+          "rationale": "",
+          "text": "При наличии разделителя str::split_once возвращает Some с парой срезов: префикс до разделителя и суффикс после него."
+        }
+      ],
+      "missing": [],
+      "sources": [
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794817107,
+            "etag": "W/\"c61cea451d43b01b6388ed816ce26df8\"",
+            "expires_at": 1794903507,
+            "fetched_at": 1794817107,
+            "hit": false,
+            "last_modified": "Mon, 16 Nov 2026 01:14:59 GMT",
+            "request_url": "https://doc.rust-lang.org/nightly/std/primitive.str.html"
+          },
+          "document_version": "07dd00026a58f4e52756b249de7fe506ecc8fafc07a9cd1f34d91b048d268069",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": true
+          },
+          "id": "S1",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "afb2124b3e93908d9d2d19ef40324b6b9a56af6862ef7d6497b7074d8c0adf12",
+          "title": "Primitive Type str Copy item path",
+          "url": "https://doc.rust-lang.org/nightly/std/primitive.str.html"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794817112,
+            "etag": "W/\"dcf43560ed137f226a99f2443e20116e\"",
+            "expires_at": 1794903512,
+            "fetched_at": 1794817112,
+            "hit": false,
+            "last_modified": "Mon, 16 Nov 2026 01:12:49 GMT",
+            "request_url": "https://doc.rust-lang.org/nightly/core/str/trait.FromStr.html"
+          },
+          "document_version": "1e620c130a5d630324362e96a7a14b195496abc7177576833c9724f600864e1a",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          },
+          "id": "S2",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "0159941ac589aa63b617117f70fbe406e85d9ff7f29a9d0a8d4d3114f91f7c85",
+          "title": "Trait FromStr Copy item path",
+          "url": "https://doc.rust-lang.org/nightly/core/str/trait.FromStr.html"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794817119,
+            "etag": "W/\"37c5add24844914f7f9fabfa57808b37\"",
+            "expires_at": 1794903519,
+            "fetched_at": 1794817119,
+            "hit": false,
+            "last_modified": "Mon, 16 Nov 2026 08:18:39 GMT",
+            "request_url": "http://actionapps.org/expressions"
+          },
+          "document_version": "77b39b79b632d55df102345f50f661d75cf65f770c1b8c71fdc708b076713cc0",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": true
+          },
+          "id": "S3",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "810c85ed2c3f3949d29ef2a5e45486a59ddfb1f53568dfdb79a3f4174d8ec99e",
+          "title": "AA Expression Reference",
+          "url": "http://actionapps.org/expressions"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794817122,
+            "etag": null,
+            "expires_at": 1794817422,
+            "fetched_at": 1794817122,
+            "hit": false,
+            "last_modified": "Mon, 16 Nov 2026 08:08:20 GMT",
+            "request_url": "https://www.php.net/manual/en/function.mb-str-split.php"
+          },
+          "document_version": "144702308efbce655c2c2c5f58af8a5a8a60f5afe5eb8a7b7a04d64f2680f7d3",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "readability",
+            "scope": "inferred_article",
+            "truncated": false
+          },
+          "id": "S4",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "feed",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "16c822669b81936193fb8cf94a902ba8d07a8893ddc262073b5605ee4416500d",
+          "title": "mb_str_split",
+          "url": "https://www.php.net/manual/en/function.mb-str-split.php"
+        }
+      ],
+      "actions": [
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 1,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 1,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 1,
+          "eligible": true,
+          "source_id": "S1"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S1",
+          "status": "ok"
+        },
+        {
+          "action": "read",
+          "attempt": 2,
+          "eligible": true,
+          "source_id": "S2"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S2",
+          "status": "ok"
+        },
+        {
+          "action": "withhold_claim",
+          "draft_claim": "A1",
+          "generation": 2,
+          "reason": "invalid/duplicate answer text"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A2",
+          "generation": 2
+        },
+        {
+          "action": "repair_claim_text",
+          "generation": 2
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A1",
+          "generation": 3
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A2",
+          "draft_claim": "A2",
+          "generation": 3
+        },
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 2,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 2,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 3,
+          "eligible": true,
+          "source_id": "S3"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S3",
+          "status": "ok"
+        },
+        {
+          "action": "read",
+          "attempt": 4,
+          "eligible": true,
+          "source_id": "S4"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S4",
+          "status": "ok"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A1",
+          "generation": 5
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A2",
+          "draft_claim": "A2",
+          "generation": 5
+        }
+      ],
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 4,
+        "hits": 0,
+        "http_reads": 6,
+        "misses": 14,
+        "qwen_calls": 4,
+        "refresh": false,
+        "writes": 14
+      },
+      "budget": {
+        "documents": 4,
+        "forms": 2,
+        "generations": 6,
+        "qwen": 4,
+        "serp": 2
+      },
+      "elapsed_ms": 21470,
+      "witnesses_checked": 3,
+      "known_inner_cost_usd": 0.00137258,
+      "known_outer_cost_usd": 0,
+      "unknown_cost_calls": 0,
+      "max_context_chars": 19412,
+      "tool_payload_equal": [],
+      "result_sha256": "09c3841fbee1799c85707bbe83d2602644694a629ce6a105c4f2f7c1c08e41e6",
+      "raw_prefix": "candidate/cases/G07"
+    },
+    {
+      "arm": "candidate",
+      "group": "cases",
+      "id": "G08",
+      "status": "completed",
+      "tool_status": "partial",
+      "stop_reason": "budget_exhausted",
+      "claims": [],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "sources": [
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794817130,
+            "etag": "W/\"2fb473868cafb9395e000fac8589eca3\"",
+            "expires_at": 1794903530,
+            "fetched_at": 1794817130,
+            "hit": false,
+            "last_modified": "Thu, 12 Nov 2026 18:15:44 GMT",
+            "request_url": "https://doc.rust-lang.org/std/vec/struct.Vec.html"
+          },
+          "document_version": "5131f8c02f4b7940d90aea5dfb229c14da93179e6bfe3558825dfcf1deb78abb",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": true
+          },
+          "id": "S1",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "b62511815ec00792ff9d11ec5751a01ad1b883ffeee7b0e700321200d2895bf9",
+          "title": "Struct Vec Copy item path",
+          "url": "https://doc.rust-lang.org/std/vec/struct.Vec.html"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794817134,
+            "etag": "W/\"1718ae6b088db9c9abc2beb6db78ef31\"",
+            "expires_at": 1794903534,
+            "fetched_at": 1794817134,
+            "hit": false,
+            "last_modified": "Thu, 12 Nov 2026 18:15:40 GMT",
+            "request_url": "https://doc.rust-lang.org/std/collections/struct.VecDeque.html"
+          },
+          "document_version": "8a304e93abb0c45e58198d83f7b30de9104f413cb4aabb0247df35601e1b93ce",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          },
+          "id": "S2",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "6e15ae1e954fb79a9df813a6b464f5068f76025f65cc94f3c527e72487070455",
+          "title": "Struct VecDeque Copy item path",
+          "url": "https://doc.rust-lang.org/std/collections/struct.VecDeque.html"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794817143,
+            "etag": "W/\"a40f424c63588a24aa82ea3a03feaad8\"",
+            "expires_at": 1794903543,
+            "fetched_at": 1794817143,
+            "hit": false,
+            "last_modified": "Thu, 12 Nov 2026 18:15:39 GMT",
+            "request_url": "https://doc.rust-lang.org/src/alloc/vec/mod.rs.html"
+          },
+          "document_version": "f21ac2b14f849ec58afc200a9fe27e7e8db8d64be2797301c8f37cb252f58867",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": true
+          },
+          "id": "S3",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "7568f6221bfbf2973b9eadaa082e314942d89071403fc95944993014114c4cf5",
+          "title": "alloc/vec/mod.rs",
+          "url": "https://doc.rust-lang.org/src/alloc/vec/mod.rs.html"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794817147,
+            "etag": "W/\"8276fcdd0e013086043910377ba800af\"",
+            "expires_at": 1794817447,
+            "fetched_at": 1794817147,
+            "hit": false,
+            "last_modified": "Mon, 16 Nov 2026 01:14:53 GMT",
+            "request_url": "https://doc.rust-lang.org/nightly/src/alloc/collections/vec_deque/mod.rs.html"
+          },
+          "document_version": "d18abeccb58ae4a643e540f3bc5285b1877ece871eeb86383bf93ea4b11f2be6",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": true
+          },
+          "id": "S4",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "feed",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "600d387b06e0b1654e316d7d288f7ac78e6bd090735f49d7a6f7cae72be6aec5",
+          "title": "alloc/collections/vec_deque/mod.rs",
+          "url": "https://doc.rust-lang.org/nightly/src/alloc/collections/vec_deque/mod.rs.html"
+        }
+      ],
+      "actions": [
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 1,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 1,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 1,
+          "eligible": true,
+          "source_id": "S1"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S1",
+          "status": "ok"
+        },
+        {
+          "action": "read",
+          "attempt": 2,
+          "eligible": true,
+          "source_id": "S2"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S2",
+          "status": "ok"
+        },
+        {
+          "action": "withhold_claim",
+          "draft_claim": "A1",
+          "generation": 2,
+          "reason": "invalid/duplicate answer text"
+        },
+        {
+          "action": "withhold_claim",
+          "draft_claim": "A2",
+          "generation": 2,
+          "reason": "invalid/duplicate answer text"
+        },
+        {
+          "action": "repair_claim_text",
+          "generation": 2
+        },
+        {
+          "action": "withhold_claim",
+          "draft_claim": "A1",
+          "generation": 3,
+          "reason": "invalid/duplicate answer text"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A2",
+          "generation": 3
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A2",
+          "draft_claim": "A3",
+          "generation": 3
+        },
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 2,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 2,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 3,
+          "eligible": true,
+          "source_id": "S3"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S3",
+          "status": "ok"
+        },
+        {
+          "action": "read",
+          "attempt": 4,
+          "eligible": true,
+          "source_id": "S4"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S4",
+          "status": "ok"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A1",
+          "generation": 5
+        },
+        {
+          "action": "withhold_claim",
+          "draft_claim": "A2",
+          "generation": 5,
+          "reason": "invalid/duplicate answer text"
+        }
+      ],
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 4,
+        "hits": 0,
+        "http_reads": 6,
+        "misses": 14,
+        "qwen_calls": 4,
+        "refresh": false,
+        "writes": 14
+      },
+      "budget": {
+        "documents": 4,
+        "forms": 2,
+        "generations": 6,
+        "qwen": 4,
+        "serp": 2
+      },
+      "elapsed_ms": 32778,
+      "witnesses_checked": 0,
+      "known_inner_cost_usd": 0.001398392,
+      "known_outer_cost_usd": 0,
+      "unknown_cost_calls": 0,
+      "max_context_chars": 18941,
+      "tool_payload_equal": [],
+      "result_sha256": "9f749db20ba2de0f4cfa5b0484a4cda6f154fb3bb2b516d052cb9878c4bd9584",
+      "raw_prefix": "candidate/cases/G08"
+    },
+    {
+      "arm": "candidate",
+      "group": "cases",
+      "id": "J01",
+      "status": "completed",
+      "tool_status": "partial",
+      "stop_reason": "budget_exhausted",
+      "claims": [
+        {
+          "answer_end": 91,
+          "answer_start": 0,
+          "evidence": [
+            {
+              "document_version": "12a38c8d838c541e11ff144f67c8aabe83800c2888d208e839ca98be88dc5a07",
+              "end": 5577,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "unwrap_or returns the provided default value",
+              "source_id": "S1",
+              "start": 5533
+            }
+          ],
+          "facets": [
+            1
+          ],
+          "id": "A1",
+          "kind": "fact",
+          "rationale": "",
+          "text": "Option::unwrap_or возвращает предоставленное значение по умолчанию, если Option равен None."
+        },
+        {
+          "answer_end": 191,
+          "answer_start": 138,
+          "evidence": [
+            {
+              "document_version": "12a38c8d838c541e11ff144f67c8aabe83800c2888d208e839ca98be88dc5a07",
+              "end": 5426,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "These methods extract the contained value in an Option<T> when it is the Some variant.",
+              "source_id": "S1",
+              "start": 5340
+            }
+          ],
+          "facets": [
+            0
+          ],
+          "id": "A2",
+          "kind": "inference",
+          "rationale": "Общее правило: методы извлекают содержащееся значение при Some; подстановка Some(7) даёт 7, default=9 не используется.",
+          "text": "Для Some(7) при default=9 Option::unwrap_or вернёт 7."
+        },
+        {
+          "answer_end": 288,
+          "answer_start": 238,
+          "evidence": [
+            {
+              "document_version": "12a38c8d838c541e11ff144f67c8aabe83800c2888d208e839ca98be88dc5a07",
+              "end": 5577,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "unwrap_or returns the provided default value",
+              "source_id": "S1",
+              "start": 5533
+            }
+          ],
+          "facets": [
+            1
+          ],
+          "id": "A3",
+          "kind": "inference",
+          "rationale": "Правило: при None unwrap_or возвращает default; подстановка default=9 даёт 9.",
+          "text": "Для None при default=9 Option::unwrap_or вернёт 9."
+        }
+      ],
+      "missing": [],
+      "sources": [
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794817225,
+            "etag": "W/\"6aaab5738bebbf6d92d663b9218c822e\"",
+            "expires_at": 1794903625,
+            "fetched_at": 1794817225,
+            "hit": false,
+            "last_modified": "Thu, 12 Nov 2026 18:15:43 GMT",
+            "request_url": "https://doc.rust-lang.org/std/option/"
+          },
+          "document_version": "12a38c8d838c541e11ff144f67c8aabe83800c2888d208e839ca98be88dc5a07",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          },
+          "id": "S1",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "2666dda46fc88d3ccd6c7532958016ecb903c978eb136d125a56f95da35b4143",
+          "title": "Module option Copy item path",
+          "url": "https://doc.rust-lang.org/std/option/"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794817226,
+            "etag": "W/\"6ae8437a-10dda\"",
+            "expires_at": 1794817526,
+            "fetched_at": 1794817226,
+            "hit": false,
+            "last_modified": "Mon, 02 Nov 2026 08:02:02 GMT",
+            "request_url": "https://corrode.dev/blog/rust-option-handling-best-practices/"
+          },
+          "document_version": "4b05542c3317b4f704ce60364e4908fc9c16113f1e86c0b46370796ed1c58b99",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          },
+          "id": "S2",
+          "parent_url": null,
+          "publication": {
+            "date_status": "valid",
+            "kind": "article",
+            "published_date": "2024-08-29",
+            "witness_count": 2,
+            "witnesses": [
+              {
+                "date": "2024-08-29",
+                "raw": "2024-08-29",
+                "source": "jsonld.datePublished",
+                "timestamp": null
+              },
+              {
+                "date": "2024-08-29",
+                "raw": "2024-08-29",
+                "source": "meta.article:published_time",
+                "timestamp": null
+              }
+            ],
+            "witnesses_limited": false
+          },
+          "text_hash": "590d0736e750e2ba15238c4337b77a17d64b9765074765b644e19a0e37e6a3f5",
+          "title": "Don't Unwrap Options: There Are Better Ways",
+          "url": "https://corrode.dev/blog/rust-option-handling-best-practices/"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794817245,
+            "etag": null,
+            "expires_at": 1794817245,
+            "fetched_at": 1794817245,
+            "hit": false,
+            "last_modified": "Tue, 10 Nov 2026 12:33:57 GMT",
+            "request_url": "https://en.wikipedia.org/wiki/Rust_syntax"
+          },
+          "document_version": "7d023ece53fa05e7c23d95536737752f90e244779f75d82a0f86a51a4a85fdd4",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          },
+          "id": "S3",
+          "parent_url": null,
+          "publication": {
+            "date_status": "valid",
+            "kind": "article",
+            "published_date": "2021-01-15",
+            "witness_count": 1,
+            "witnesses": [
+              {
+                "date": "2021-01-15",
+                "raw": "2021-01-15T16:08:35Z",
+                "source": "jsonld.datePublished",
+                "timestamp": "2021-01-15T16:08:35+00:00"
+              }
+            ],
+            "witnesses_limited": false
+          },
+          "text_hash": "7c6a462511f56049831de5d0d1f4785571c455353990c72c176e9f739e2c8fe7",
+          "title": "Rust syntax",
+          "url": "https://en.wikipedia.org/wiki/Rust_syntax"
+        }
+      ],
+      "actions": [
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 1,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 1,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 1,
+          "eligible": true,
+          "source_id": "S1"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S1",
+          "status": "ok"
+        },
+        {
+          "action": "read",
+          "attempt": 2,
+          "eligible": true,
+          "source_id": "S2"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S2",
+          "status": "ok"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A1",
+          "generation": 2
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A2",
+          "draft_claim": "A2",
+          "generation": 2
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A3",
+          "draft_claim": "A3",
+          "generation": 2
+        },
+        {
+          "action": "read",
+          "attempt": 3,
+          "error": "fetch_timeout",
+          "url": "https://burntsushi.net/unwrap/"
+        },
+        {
+          "action": "read",
+          "attempt": 4,
+          "eligible": true,
+          "source_id": "S3"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S3",
+          "status": "ok"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A1",
+          "generation": 4
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A2",
+          "draft_claim": "A2",
+          "generation": 4
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A3",
+          "draft_claim": "A3",
+          "generation": 4
+        }
+      ],
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 3,
+        "hits": 0,
+        "http_reads": 5,
+        "misses": 11,
+        "qwen_calls": 3,
+        "refresh": false,
+        "writes": 10
+      },
+      "budget": {
+        "documents": 4,
+        "forms": 1,
+        "generations": 5,
+        "qwen": 3,
+        "serp": 1
+      },
+      "elapsed_ms": 28398,
+      "witnesses_checked": 3,
+      "known_inner_cost_usd": 0.001049868,
+      "known_outer_cost_usd": 0,
+      "unknown_cost_calls": 0,
+      "max_context_chars": 15954,
+      "tool_payload_equal": [],
+      "result_sha256": "e8e0abf3558527a621632e3e1a72f1d7d5d71c9d038f42f46f124038667588fa",
+      "raw_prefix": "candidate/cases/J01"
+    },
+    {
+      "arm": "candidate",
+      "group": "cases",
+      "id": "N01",
+      "status": "completed",
+      "tool_status": "partial",
+      "stop_reason": "budget_exhausted",
+      "claims": [
+        {
+          "answer_end": 101,
+          "answer_start": 0,
+          "evidence": [
+            {
+              "document_version": "361ce7e793112a1ba5182c7b4b605d8a292da44ef3eece009f91a06616b84511",
+              "end": 72633,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "If the string starts with the prefix string, return string[len(prefix):]. Otherwise, return a copy of the original string:",
+              "source_id": "S1",
+              "start": 72511
+            }
+          ],
+          "facets": [
+            0
+          ],
+          "id": "A1",
+          "kind": "fact",
+          "rationale": "",
+          "text": "removeprefix возвращает строку без префикса, если она начинается с него, иначе копию исходной строки."
+        },
+        {
+          "answer_end": 218,
+          "answer_start": 159,
+          "evidence": [
+            {
+              "document_version": "361ce7e793112a1ba5182c7b4b605d8a292da44ef3eece009f91a06616b84511",
+              "end": 72633,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "If the string starts with the prefix string, return string[len(prefix):]. Otherwise, return a copy of the original string:",
+              "source_id": "S1",
+              "start": 72511
+            }
+          ],
+          "facets": [
+            1
+          ],
+          "id": "A2",
+          "kind": "inference",
+          "rationale": "Общее правило removeprefix: при совпадении префикса возвращается string[len(prefix):]; подстановка string=\"xyxyabc\", prefix=\"xy\" даёт \"xyabc\" (удаляется только один префикс).",
+          "text": "Для входа string = xyxyabc и prefix = xy результат — xyabc."
+        },
+        {
+          "answer_end": 329,
+          "answer_start": 276,
+          "evidence": [
+            {
+              "document_version": "361ce7e793112a1ba5182c7b4b605d8a292da44ef3eece009f91a06616b84511",
+              "end": 72633,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "If the string starts with the prefix string, return string[len(prefix):]. Otherwise, return a copy of the original string:",
+              "source_id": "S1",
+              "start": 72511
+            }
+          ],
+          "facets": [
+            2
+          ],
+          "id": "A3",
+          "kind": "inference",
+          "rationale": "Общее правило removeprefix: если строка не начинается с префикса, возвращается копия исходной строки; подстановка string=\"abc\", prefix=\"xy\" даёт \"abc\".",
+          "text": "Для входа string = abc и prefix = xy результат — abc."
+        }
+      ],
+      "missing": [],
+      "sources": [
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794817016,
+            "etag": "\"6afa95cd-c7302\"",
+            "expires_at": 1794817316,
+            "fetched_at": 1794817016,
+            "hit": false,
+            "last_modified": "Mon, 16 Nov 2026 05:34:05 GMT",
+            "request_url": "https://docs.python.org/3/builtins/stdtypes.html"
+          },
+          "document_version": "361ce7e793112a1ba5182c7b4b605d8a292da44ef3eece009f91a06616b84511",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": true
+          },
+          "id": "S1",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "feed",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "82c3dd7a886f806cd86678e4f2f78f3478ab97d69d1e06f7ed35b80b12d18343",
+          "title": "Built-in Types¶",
+          "url": "https://docs.python.org/3/builtins/stdtypes.html"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794817024,
+            "etag": "\"6af83ef4-236ee\"",
+            "expires_at": 1794817324,
+            "fetched_at": 1794817024,
+            "hit": false,
+            "last_modified": "Sat, 14 Nov 2026 10:59:00 GMT",
+            "request_url": "https://docs.python.org/zh-tw/3/deprecations/index.html"
+          },
+          "document_version": "deb7deaab40f957a8b29ecbc8c2ae69ffe68cf48aa3c7ecc0d3461f108a47202",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          },
+          "id": "S2",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "feed",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "fd2a9cc83f2a411b0bcc51d31c6531fbc3c038fffac12eb1eb96b5529a5792e0",
+          "title": "已棄用項目¶",
+          "url": "https://docs.python.org/zh-tw/3/deprecations/index.html"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794817039,
+            "etag": "\"6afa95cd-cffe\"",
+            "expires_at": 1794817339,
+            "fetched_at": 1794817039,
+            "hit": false,
+            "last_modified": "Mon, 16 Nov 2026 05:34:05 GMT",
+            "request_url": "https://docs.python.org/3/library/textwrap.html"
+          },
+          "document_version": "52359a7a7f08c4684c326246755feb772091c07381f9c9e020cb31e31e75c188",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          },
+          "id": "S3",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "feed",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "f4392bf090ed7add3e58b54b8b9a00eb4296c298e04eb075e17ffbab8b20370e",
+          "title": "textwrap — Text wrapping and filling¶",
+          "url": "https://docs.python.org/3/library/textwrap.html"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794817040,
+            "etag": "\"6afa95cd-1549c\"",
+            "expires_at": 1794817340,
+            "fetched_at": 1794817040,
+            "hit": false,
+            "last_modified": "Mon, 16 Nov 2026 05:34:05 GMT",
+            "request_url": "https://docs.python.org/3/library/idle.html"
+          },
+          "document_version": "6fecfae98ba3396cdc5d5b24e171752db40fd736713d68f2526167884e7cb47e",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          },
+          "id": "S4",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "feed",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "f308ee9b75d22d94bd2f04bb55353cced2f16c13b9207ae6867a0c07a36ef843",
+          "title": "IDLE — Python editor and shell¶",
+          "url": "https://docs.python.org/3/library/idle.html"
+        }
+      ],
+      "actions": [
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 1,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 1,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 1,
+          "eligible": true,
+          "source_id": "S1"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S1",
+          "status": "ok"
+        },
+        {
+          "action": "read",
+          "attempt": 2,
+          "eligible": true,
+          "source_id": "S2"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S2",
+          "status": "ok"
+        },
+        {
+          "action": "withhold_claim",
+          "draft_claim": "A1",
+          "generation": 2,
+          "reason": "invalid/duplicate answer text"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A2",
+          "generation": 2
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A2",
+          "draft_claim": "A3",
+          "generation": 2
+        },
+        {
+          "action": "repair_claim_text",
+          "generation": 2
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A1",
+          "generation": 3
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A2",
+          "draft_claim": "A2",
+          "generation": 3
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A3",
+          "draft_claim": "A3",
+          "generation": 3
+        },
+        {
+          "action": "read",
+          "attempt": 3,
+          "eligible": true,
+          "source_id": "S3"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S3",
+          "status": "ok"
+        },
+        {
+          "action": "read",
+          "attempt": 4,
+          "eligible": true,
+          "source_id": "S4"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S4",
+          "status": "ok"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A1",
+          "generation": 5
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A2",
+          "draft_claim": "A2",
+          "generation": 5
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A3",
+          "draft_claim": "A3",
+          "generation": 5
+        }
+      ],
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 4,
+        "hits": 0,
+        "http_reads": 5,
+        "misses": 13,
+        "qwen_calls": 4,
+        "refresh": false,
+        "writes": 13
+      },
+      "budget": {
+        "documents": 4,
+        "forms": 1,
+        "generations": 6,
+        "qwen": 4,
+        "serp": 1
+      },
+      "elapsed_ms": 40278,
+      "witnesses_checked": 3,
+      "known_inner_cost_usd": 0.001604596,
+      "known_outer_cost_usd": 0,
+      "unknown_cost_calls": 0,
+      "max_context_chars": 20365,
+      "tool_payload_equal": [],
+      "result_sha256": "474cae89e505444aca1efe033ee3e4ce5f6d8f8a77fd6d850db3f773614e272b",
+      "raw_prefix": "candidate/cases/N01"
+    },
+    {
+      "arm": "candidate",
+      "group": "cases",
+      "id": "N02",
+      "status": "completed",
+      "tool_status": "partial",
+      "stop_reason": "budget_exhausted",
+      "claims": [
+        {
+          "answer_end": 129,
+          "answer_start": 0,
+          "evidence": [
+            {
+              "document_version": "88d8cdae39cb09e046bf4bd05751533fc10ec516b7b854ef95801ed46f89fb27",
+              "end": 1889,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "IGNORE \nWhen a constraint violation occurs, the one row that contains the constraint violation is not inserted or changed. But the command continues executing normally.",
+              "source_id": "S1",
+              "start": 1721
+            }
+          ],
+          "facets": [
+            1
+          ],
+          "id": "A1",
+          "kind": "fact",
+          "rationale": "",
+          "text": "При алгоритме IGNORE строка, нарушающая ограничение, не вставляется и не изменяется, но команда продолжает выполняться нормально."
+        },
+        {
+          "answer_end": 283,
+          "answer_start": 171,
+          "evidence": [
+            {
+              "document_version": "88d8cdae39cb09e046bf4bd05751533fc10ec516b7b854ef95801ed46f89fb27",
+              "end": 2032,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "Other rows before and after the row that contained the constraint violation continue to be inserted or updated normally. No error is returned.",
+              "source_id": "S1",
+              "start": 1890
+            }
+          ],
+          "facets": [
+            1
+          ],
+          "id": "A2",
+          "kind": "fact",
+          "rationale": "",
+          "text": "При IGNORE остальные строки до и после нарушающей вставляются или обновляются нормально, ошибка не возвращается."
+        },
+        {
+          "answer_end": 471,
+          "answer_start": 325,
+          "evidence": [
+            {
+              "document_version": "88d8cdae39cb09e046bf4bd05751533fc10ec516b7b854ef95801ed46f89fb27",
+              "end": 2200,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "REPLACE \nWhen a UNIQUE constraint violation occurs, the pre-existing row that caused the constraint violation is removed prior to inserting or updating the current ro",
+              "source_id": "S1",
+              "start": 2034
+            }
+          ],
+          "facets": [
+            1
+          ],
+          "id": "A3",
+          "kind": "fact",
+          "rationale": "",
+          "text": "При алгоритме REPLACE в случае нарушения UNIQUE существующая строка, вызвавшая нарушение, удаляется перед вставкой или обновлением текущей строки."
+        }
+      ],
+      "missing": [
+        0
+      ],
+      "sources": [
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794817056,
+            "etag": "\"m6af72ef6s184d\"",
+            "expires_at": 1794817176,
+            "fetched_at": 1794817056,
+            "hit": false,
+            "last_modified": "Fri, 13 Nov 2026 15:38:30 GMT",
+            "request_url": "https://sqlite.org/conflict.html"
+          },
+          "document_version": "88d8cdae39cb09e046bf4bd05751533fc10ec516b7b854ef95801ed46f89fb27",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "readability",
+            "scope": "inferred_article",
+            "truncated": false
+          },
+          "id": "S1",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "dba3c2c02ed2545bb37e9002f328a42e2e8c95b2d23b7daebebf290e9bbb432d",
+          "title": "Constraint Conflict Resolution in SQLite",
+          "url": "https://sqlite.org/conflict.html"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794817057,
+            "etag": "W/\"68c638f1e2f637c9a982eccd299d7422\"",
+            "expires_at": 1794817057,
+            "fetched_at": 1794817057,
+            "hit": false,
+            "last_modified": null,
+            "request_url": "https://github.com/noeta-lang/para-db"
+          },
+          "document_version": "28faa63087e96f17d246870603bcc10958d744604944acc60972308736f6bc52",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          },
+          "id": "S2",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "feed",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "c08f305c74375ff9d5e697ff8286efdbc26d9b3e128c075cf663c1c0370fed6c",
+          "title": "para/db",
+          "url": "https://github.com/noeta-lang/para-db"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794817079,
+            "etag": "W/\"09d415e6e697f5952a47a24c62206a37\"",
+            "expires_at": 1794817079,
+            "fetched_at": 1794817079,
+            "hit": false,
+            "last_modified": null,
+            "request_url": "https://github.com/portablesql/psql-sqlite"
+          },
+          "document_version": "97dd0e953b1fe75eb5e6753c33b080a0402582d18e1500c28b394f2a8a5552fa",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          },
+          "id": "S3",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "feed",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "545c42f0c13fb150d04092d022e48e0a0b0eb0cf4ea048a3aa540714aa8de922",
+          "title": "psql-sqlite",
+          "url": "https://github.com/portablesql/psql-sqlite"
+        }
+      ],
+      "actions": [
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 1,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 1,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 1,
+          "eligible": true,
+          "source_id": "S1"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S1",
+          "status": "ok"
+        },
+        {
+          "action": "read",
+          "attempt": 2,
+          "eligible": true,
+          "source_id": "S2"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S2",
+          "status": "ok"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A1",
+          "generation": 2
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A2",
+          "draft_claim": "A2",
+          "generation": 2
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A3",
+          "draft_claim": "A3",
+          "generation": 2
+        },
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 2,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 2,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 3,
+          "error": "fetch_timeout",
+          "url": "https://www.sqlitetutorial.net/sqlite-foreign-key/"
+        },
+        {
+          "action": "read",
+          "attempt": 4,
+          "eligible": true,
+          "source_id": "S3"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S3",
+          "status": "ok"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A1",
+          "generation": 4
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A2",
+          "draft_claim": "A2",
+          "generation": 4
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A3",
+          "draft_claim": "A3",
+          "generation": 4
+        }
+      ],
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 3,
+        "hits": 0,
+        "http_reads": 6,
+        "misses": 12,
+        "qwen_calls": 3,
+        "refresh": false,
+        "writes": 11
+      },
+      "budget": {
+        "documents": 4,
+        "forms": 2,
+        "generations": 5,
+        "qwen": 3,
+        "serp": 2
+      },
+      "elapsed_ms": 29837,
+      "witnesses_checked": 3,
+      "known_inner_cost_usd": 0.000983336,
+      "known_outer_cost_usd": 0,
+      "unknown_cost_calls": 0,
+      "max_context_chars": 14365,
+      "tool_payload_equal": [],
+      "result_sha256": "fb081a51b1aaaaf1a5460737824a0e1e87ea47d6189e6d648c18e9b53016981e",
+      "raw_prefix": "candidate/cases/N02"
+    },
+    {
+      "arm": "candidate",
+      "group": "cases",
+      "id": "N03",
+      "status": "completed",
+      "tool_status": "partial",
+      "stop_reason": "budget_exhausted",
+      "claims": [],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "sources": [
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794817089,
+            "etag": null,
+            "expires_at": 1794817389,
+            "fetched_at": 1794817089,
+            "hit": false,
+            "last_modified": null,
+            "request_url": "https://www.postgresql.org/docs/release/15.17/"
+          },
+          "document_version": "1b64b932dc2e6738d3387d1ab4110b1a9b4ae2cbe86822cbf3abb84e167bd12c",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "readability",
+            "scope": "inferred_article",
+            "truncated": false
+          },
+          "id": "S1",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "feed",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "139f68f6a946d428b857d6e85199778a95529480c71765d6c7e7c546578ebcd8",
+          "title": "Release Notes",
+          "url": "https://www.postgresql.org/docs/release/15.17/"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794817091,
+            "etag": null,
+            "expires_at": 1794817391,
+            "fetched_at": 1794817091,
+            "hit": false,
+            "last_modified": null,
+            "request_url": "https://www.postgresql.org/docs/release/14.16/"
+          },
+          "document_version": "7083c2277be44bf6f8b7abc5ece771b9b51447f7ed265757eab5f946322dcacf",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "readability",
+            "scope": "inferred_article",
+            "truncated": false
+          },
+          "id": "S2",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "feed",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "287cf454890b419af2a947c448d7bf365be251f74e378613b6f9d42aed3ab282",
+          "title": "Release Notes",
+          "url": "https://www.postgresql.org/docs/release/14.16/"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794817093,
+            "etag": null,
+            "expires_at": 1794817393,
+            "fetched_at": 1794817093,
+            "hit": false,
+            "last_modified": null,
+            "request_url": "https://www.postgresql.org/docs/current/release-18.html"
+          },
+          "document_version": "d71ac86c426f6fe3c8e3ecc12f918581ecbfd27f5d0cc379c724473ba50be7ef",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "readability",
+            "scope": "inferred_article",
+            "truncated": false
+          },
+          "id": "S3",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "feed",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "3bca7a361d202c03262572a02186a8a63cfa79508c7f0656d5ab06008394b5fb",
+          "title": "PostgreSQL: Documentation: 18: E.7. Release 18",
+          "url": "https://www.postgresql.org/docs/current/release-18.html"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794817095,
+            "etag": null,
+            "expires_at": 1794817395,
+            "fetched_at": 1794817095,
+            "hit": false,
+            "last_modified": null,
+            "request_url": "https://www.postgresql.org/docs/release/11.19/"
+          },
+          "document_version": "1b784799d8ab0e7d969b3b74d9f8a243551f570b2de612e4e29e637dc5511ded",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "readability",
+            "scope": "inferred_article",
+            "truncated": false
+          },
+          "id": "S4",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "feed",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "60713d39356e9b81162c743812688ec9c1e4251d3360482067d84efacbda8e78",
+          "title": "Release Notes",
+          "url": "https://www.postgresql.org/docs/release/11.19/"
+        }
+      ],
+      "actions": [
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 1,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 1,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 1,
+          "eligible": true,
+          "source_id": "S1"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S1",
+          "status": "ok"
+        },
+        {
+          "action": "read",
+          "attempt": 2,
+          "eligible": true,
+          "source_id": "S2"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S2",
+          "status": "ok"
+        },
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 2,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 2,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 3,
+          "eligible": true,
+          "source_id": "S3"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S3",
+          "status": "ok"
+        },
+        {
+          "action": "read",
+          "attempt": 4,
+          "eligible": true,
+          "source_id": "S4"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S4",
+          "status": "ok"
+        }
+      ],
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 4,
+        "hits": 0,
+        "http_reads": 6,
+        "misses": 14,
+        "qwen_calls": 4,
+        "refresh": false,
+        "writes": 14
+      },
+      "budget": {
+        "documents": 4,
+        "forms": 2,
+        "generations": 3,
+        "qwen": 4,
+        "serp": 2
+      },
+      "elapsed_ms": 11570,
+      "witnesses_checked": 0,
+      "known_inner_cost_usd": 0.000350012,
+      "known_outer_cost_usd": 0,
+      "unknown_cost_calls": 0,
+      "max_context_chars": 16017,
+      "tool_payload_equal": [],
+      "result_sha256": "00a1bef87249215c1e4c0ac655ddfe75cf5236128ee723256a9fe7c462910f01",
+      "raw_prefix": "candidate/cases/N03"
+    },
+    {
+      "arm": "candidate",
+      "group": "cases",
+      "id": "N04",
+      "status": "completed",
+      "tool_status": "error",
+      "stop_reason": "model_error",
+      "claims": [],
+      "missing": [],
+      "sources": [],
+      "actions": [],
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 0,
+        "hits": 0,
+        "http_reads": 0,
+        "misses": 0,
+        "qwen_calls": 0,
+        "refresh": false,
+        "writes": 0
+      },
+      "budget": {
+        "documents": 0,
+        "forms": 0,
+        "generations": 1,
+        "qwen": 0,
+        "serp": 0
+      },
+      "elapsed_ms": 2830,
+      "witnesses_checked": 0,
+      "known_inner_cost_usd": 4.266e-05,
+      "known_outer_cost_usd": 0,
+      "unknown_cost_calls": 0,
+      "max_context_chars": 668,
+      "tool_payload_equal": [],
+      "result_sha256": "3a88f938368891e7654ef1c7bc18bc4f278556eea1a10a12b47346b79a8568bb",
+      "raw_prefix": "candidate/cases/N04"
+    },
+    {
+      "arm": "candidate",
+      "group": "cases",
+      "id": "N05",
+      "status": "completed",
+      "tool_status": "error",
+      "stop_reason": "model_error",
+      "claims": [],
+      "missing": [
+        0,
+        1
+      ],
+      "sources": [],
+      "actions": [
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 1,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 1,
+          "status": "source_disabled"
+        }
+      ],
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 0,
+        "hits": 0,
+        "http_reads": 1,
+        "misses": 1,
+        "qwen_calls": 0,
+        "refresh": false,
+        "writes": 1
+      },
+      "budget": {
+        "documents": 0,
+        "forms": 1,
+        "generations": 1,
+        "qwen": 0,
+        "serp": 1
+      },
+      "elapsed_ms": 2170,
+      "witnesses_checked": 0,
+      "known_inner_cost_usd": 4.298e-05,
+      "known_outer_cost_usd": 0,
+      "unknown_cost_calls": 0,
+      "max_context_chars": 649,
+      "tool_payload_equal": [],
+      "result_sha256": "0c5f8f3c26dd9d3047f489b1904bd3120f0916b63399049ab31d9dfcf2fdaf8e",
+      "raw_prefix": "candidate/cases/N05"
+    },
+    {
+      "arm": "candidate",
+      "group": "cases",
+      "id": "N06",
+      "status": "completed",
+      "tool_status": "error",
+      "stop_reason": "model_error",
+      "claims": [],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "sources": [],
+      "actions": [
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 1,
+          "results": 4
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 1,
+          "status": "source_disabled"
+        }
+      ],
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 0,
+        "hits": 0,
+        "http_reads": 1,
+        "misses": 1,
+        "qwen_calls": 0,
+        "refresh": false,
+        "writes": 1
+      },
+      "budget": {
+        "documents": 0,
+        "forms": 1,
+        "generations": 1,
+        "qwen": 0,
+        "serp": 1
+      },
+      "elapsed_ms": 2279,
+      "witnesses_checked": 0,
+      "known_inner_cost_usd": 6.8236e-05,
+      "known_outer_cost_usd": 0,
+      "unknown_cost_calls": 0,
+      "max_context_chars": 687,
+      "tool_payload_equal": [],
+      "result_sha256": "5d13b7c5597dfa4a0fae8b2428ab8fbea4c8f50297449a1903c18735f5b9be75",
+      "raw_prefix": "candidate/cases/N06"
+    }
+  ],
+  "stats": [
+    {
+      "arm": "baseline",
+      "group": "cases",
+      "episodes": 11,
+      "claims": 10,
+      "qwen_calls": 14,
+      "qwen_ok": 9,
+      "qwen_fallback": 5,
+      "http_reads": 43,
+      "cache_hits": 2,
+      "known_cost_usd": 0.006587016,
+      "unknown_cost_calls": 0,
+      "p50_ms": 38870
+    },
+    {
+      "arm": "candidate",
+      "group": "cases",
+      "episodes": 11,
+      "claims": 15,
+      "qwen_calls": 29,
+      "qwen_ok": 29,
+      "qwen_fallback": 0,
+      "http_reads": 47,
+      "cache_hits": 2,
+      "known_cost_usd": 0.009279624,
+      "unknown_cost_calls": 0,
+      "p50_ms": 27498
+    }
+  ],
+  "paired_source_sets": {
+    "pairs": 11,
+    "same_source_sets": 3,
+    "shared_body_pairs": 5
+  },
+  "source_state_after": {
+    "blocked": {
+      "bing": "excluded from fixed protocol",
+      "ddg": "historical challenge; unqualified in this protocol",
+      "mwmbl": "excluded from fixed protocol",
+      "naver": "source_challenge: verification page; no retry"
+    },
+    "document_blocks": {
+      "devessentials.dev": "source_challenge: verification page; no retry",
+      "eur-lex.europa.eu": "HTTP 202",
+      "hermes-agent.nousresearch.com": "source_blocked: no retry in this probe",
+      "learn.microsoft.com": "source_challenge: verification page; no retry",
+      "parallelworks.com": "source_challenge: verification page; no retry",
+      "redis.io": "source_blocked: no retry in this probe",
+      "slice-master.co": "source_blocked: no retry in this probe",
+      "tfl.gov.uk": "source_blocked: no retry in this probe",
+      "www.atlantic.net": "source_blocked: no retry in this probe",
+      "www.ebay.com": "source_blocked: no retry in this probe",
+      "www.eracomp.cz": "source_challenge: verification widget; no retry",
+      "www.ltmuseum.co.uk": "source_blocked: no retry in this probe",
+      "www.mdpi.com": "source_blocked: no retry in this probe",
+      "www.mujrozhlas.cz": "source_blocked: no retry in this probe",
+      "www.webstaurantstore.com": "source_blocked: no retry in this probe"
+    }
+  },
+  "refusals_preserved": true,
+  "assessment": "FAILED new unsupported J01/A1 despite required coverage1/18->6/18; no observed live activation of new fallback; never causal lift or qualification"
+}

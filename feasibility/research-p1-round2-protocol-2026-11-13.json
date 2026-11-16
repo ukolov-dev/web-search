@@ -1,0 +1,18 @@
+{
+  "schema": "research-p1-round2-protocol-v1",
+  "frozen_before_inference": true,
+  "baseline_commit": "9b7dc17",
+  "baseline_binary_sha256": "187d521098a25a347c93a9f9d7b99e236a0a26be81032aef690e4f296d89c8cf",
+  "cases_sha256": "617dbabd5c9714584727b4643596984d307b419bcdc0ec2b7426fdc18689573a",
+  "gold_preflight_sha256": "05978a95ea0bd2368a5c2de1ae881b7ccbdfb2f63f118bb45730968d9264e19f",
+  "startup_sha256": "8253acc055fb3c8a6eacfc4f3e0b9a1820bb40f66fff78b1cb9936bfec158d90",
+  "cohorts": {
+    "fresh_questions": 6,
+    "known_controls": 6,
+    "harness_known_tasks": 2
+  },
+  "ordering": "baseline all12 before candidate; then Harness2perarm. source-state cumulative fromV1, per-arm initiallyemptycache",
+  "evaluation": "Same independent question-condition/returned-witness policy asV1; missing evidence stayspartial; no newfalse/unknown orlost baseline-supported condition. Questionpremise inference distinguished frominventedinitialstate. Baseline/candidate code differs; source-setdrift disclosed; notpooledwithV1.",
+  "stop": "No model refusal/auth/rate retry, preserveallsource refusals; no editingbinarywithinarm.",
+  "qualification": "Scoped knownfamilydevelopment/acceptance, notoriginal20/two-day/independent-sourcequalification"
+}

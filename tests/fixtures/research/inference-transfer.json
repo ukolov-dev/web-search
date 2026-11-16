@@ -1,0 +1,41 @@
+{
+  "cases": [
+    {
+      "id": "T01_python",
+      "question": "Toy Python mapping: d has key x with value 7. Evaluate d.get(\"missing\", 9).",
+      "claim": "The result is 9.",
+      "evidence": [
+        "Mapping.get returns the stored value when the key exists, otherwise the supplied default."
+      ],
+      "expected_supported": true
+    },
+    {
+      "id": "T02_python",
+      "question": "Toy Python mapping: d has key x with value 7. Evaluate d.get(\"x\", 9).",
+      "claim": "The result is 9.",
+      "evidence": [
+        "Mapping.get returns the stored value when the key exists, otherwise the supplied default."
+      ],
+      "expected_supported": false
+    },
+    {
+      "id": "T03_policy",
+      "question": "Protocol version 2 receives a request without a token. Is it rejected?",
+      "claim": "Version 2 rejects the request.",
+      "evidence": [
+        "Protocol version 2 rejects requests without a token."
+      ],
+      "expected_supported": true
+    },
+    {
+      "id": "T04_policy",
+      "question": "Protocol version 1 receives a request without a token. Is it rejected?",
+      "claim": "Version 1 rejects the request.",
+      "evidence": [
+        "Protocol version 2 rejects requests without a token."
+      ],
+      "expected_supported": false
+    }
+  ],
+  "provenance": "Synthetic stipulated rules, not claims about real Python/RFC normative behavior."
+}

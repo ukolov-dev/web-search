@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-29",
+  "scope": "First project-local installation in web-search; no previously installed router here",
+  "version": "0.11.0",
+  "release_url": "https://github.com/ukolov-dev/mcp-project-context-router/releases/tag/v0.11.0",
+  "archive_sha256": "358507670d57860747714ee05af6e538872bcc8d2b50e5afa943000e2f28e6f5",
+  "installed_files_match_verified_archive": 244,
+  "node_version": "22.23.2",
+  "npm_lifecycle_scripts_executed": false,
+  "package_integrity": "sha512-Jfdq3Ihgp8UUUHsoH/ZxjdgHLnKLGEW9h3Ctcc4/IxJMvzy4TodT8MsLm1Han2LteRfq07S2DoRlg3oBnhj8/Q==",
+  "mcp_version": {
+    "name": "project_context",
+    "version": "0.11.0"
+  },
+  "core_tool_count": 21,
+  "protocol_checks": [
+    "tree pagination",
+    "section IDs",
+    "bounded section read",
+    "section continuation"
+  ],
+  "doctor_summary": {
+    "ok": 15,
+    "warn": 5,
+    "fail": 0
+  },
+  "doctor_warnings": [
+    {
+      "id": "sqlite-ignore",
+      "status": "warn",
+      "message": "SQLite context index is not ignored by git."
+    },
+    {
+      "id": "draft-ignore",
+      "status": "warn",
+      "message": "Context drafts are not ignored by git."
+    },
+    {
+      "id": "source-coverage",
+      "status": "warn",
+      "message": "11758 candidate source/config file(s) outside configured source_globs; review intentional exclusions before changing configuration.",
+      "details": [
+        ".cache/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloc-no-stdlib-3.0.0/.travis.yml: core",
+        ".cache/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anyhow-1.0.104/build.rs: core",
+        ".cache/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-lc-rs-1.18.2/build.rs: core",
+        ".cache/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/brotli-decompressor-6.2.0/.travis.yml: core",
+        ".cache/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc32fast-1.5.3/build.rs: core",
+        ".cache/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/cssparser-macros-0.7.1/lib.rs: core",
+        ".cache/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/dunce-1.0.5/.appveyor.yml: core",
+        ".cache/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/dunce-1.0.5/.gitlab-ci.yml: core",
+        ".cache/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/encoding_rs-0.8.42/build.rs: core",
+        ".cache/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fnv-1.0.7/.travis.yml: core",
+        ".cache/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fnv-1.0.7/lib.rs: core",
+        ".cache/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/generic-array-0.14.7/build.rs: core",
+        ".cache/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/getrandom-0.3.4/build.rs: core",
+        ".cache/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/getrandom-0.4.3/build.rs: core",
+        ".cache/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/httparse-1.10.1/build.rs: core",
+        ".cache/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/iana-time-zone-haiku-0.1.2/build.rs: core",
+        ".cache/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/icu_normalizer_data-2.4.0/build.rs: core",
+        ".cache/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/icu_properties_data-2.4.0/build.rs: core",
+        ".cache/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ident_case-1.0.1/.travis.yml: core",
+        ".cache/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ipnet-2.12.2/.travis.yml: core",
+        ".cache/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/jni-0.22.4/build.rs: core",
+        ".cache/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/jni-macros-0.22.4/build.rs: core",
+        ".cache/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libc-0.2.191/build.rs: core",
+        ".cache/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libsqlite3-sys-0.39.1/build.rs: core",
+        ".cache/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/markup5ever-0.40.0/lib.rs: core",
+        ".cache/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/markup5ever-0.40.0/serialize.rs: core",
+        ".cache/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mime-0.3.17/.travis.yml: core",
+        ".cache/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/new_debug_unreachable-1.0.6/.travis.yml: core",
+        ".cache/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.31.3/build.rs: core",
+        ".cache/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/num-traits-0.2.19/build.rs: core"
+      ]
+    },
+    {
+      "id": "durable-memory",
+      "status": "warn",
+      "message": "Git tracking could not be verified; configure durable record distribution explicitly."
+    },
+    {
+      "id": "backlog-ready",
+      "status": "warn",
+      "message": "No unblocked ready/open backlog items are available."
+    }
+  ],
+  "global_config_modified": false,
+  "upstream_dirty_checkout_modified": false,
+  "hooks_installed": false,
+  "git_initialized": false,
+  "current_chat_reconnected": false,
+  "sha256": {
+    "package.json": "445c02c946e2a0f3978d1544e26736e3a40e6a6bd62dac48999a08be882c328d",
+    "package-lock.json": "9de35e33e4a61e550bef20d27465e2d22a9553f1f5e3e1f381893da3824f1e9e",
+    ".codex/config.toml": "dac7eaa88c16f55063bbdc27de9b577ba383f4ea9d3e54692bf6478fc7eb1392",
+    ".project-context/project.yaml": "b338ed500f0a7297bfb19f1f8e28de632a6f560ebaeffb3f2d75887f611feaa2",
+    "runs/router-0.11.0-2026-10-29/mcp-smoke.json": "66d7fdb507b73f061b5beba6a90ffcb224568720940536fdc9028006ee8e277a",
+    "runs/router-0.11.0-2026-10-29/doctor.json": "493012ea69398d92681060d225889d27004eb9f6574c75a30185efc7dc36d693"
+  },
+  "indexed_symbols": 300,
+  "indexed_context_records": 0
+}

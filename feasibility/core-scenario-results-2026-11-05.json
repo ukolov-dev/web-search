@@ -1,0 +1,54 @@
+{
+  "scenario": "Find and read the primary MDN reference for an exact JavaScript API question using a site-restricted query.",
+  "case_sha256": "883c66b2e03e3f34f730acc939db6f7571659782e32832f0b2baa92a68fd50f5",
+  "binary_sha256": "4d3f1d6b4de0308366d8984dd282172c65ea8692310c2e01c1c272da7d7a0e0b",
+  "scope": "Four new development cases; no broad search qualification or independent acceptance. No LLM, keys or alternate engines.",
+  "llm_calls": 0,
+  "cases": [
+    {
+      "id": "D01",
+      "query": "site:developer.mozilla.org Array every empty array true",
+      "status": "passed",
+      "selected_url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every",
+      "text_hash": "2d68a23d6979e40b75b016c034fe800276598875cf28fee4e5102fbf6ca7f37d",
+      "phrase_checks": {
+        "empty array": true,
+        "true": true
+      }
+    },
+    {
+      "id": "D02",
+      "query": "site:developer.mozilla.org URLSearchParams get first value null",
+      "status": "passed",
+      "selected_url": "https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/get",
+      "text_hash": "798a394a830d6ca40f51c148f03690465be9036765ee55f031d0b1f0304c004c",
+      "phrase_checks": {
+        "first value": true,
+        "null": true
+      }
+    },
+    {
+      "id": "D03",
+      "query": "site:developer.mozilla.org Promise any empty iterable rejected AggregateError",
+      "status": "passed",
+      "selected_url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/any",
+      "text_hash": "0dbe17b106c6fdd13158cc1aac362122424ab0d4ee787461a14451297ca63c47",
+      "phrase_checks": {
+        "empty": true,
+        "AggregateError": true
+      }
+    },
+    {
+      "id": "D04",
+      "query": "site:developer.mozilla.org AbortSignal timeout TimeoutError",
+      "status": "passed",
+      "selected_url": "https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/timeout_static",
+      "text_hash": "d9f821e734acf1fbaa291012e589b1f7c141d355133fd19ee78c7fb819e93bd5",
+      "phrase_checks": {
+        "TimeoutError": true,
+        "milliseconds": true
+      }
+    }
+  ],
+  "manual_review": "All four extracted bodies contain the requested API rule in context; search was responsible for selecting the URL. This is self-review of four development cases, not general or independent qualification."
+}

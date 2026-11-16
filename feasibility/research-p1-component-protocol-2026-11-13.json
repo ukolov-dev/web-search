@@ -1,0 +1,20 @@
+{
+  "frozen_before_component_calls": true,
+  "snapshot": "9b7dc17",
+  "fixture_sha256": "ef577e3b7532d8054bc2550d9f2abe9f054e855af53f80c72119139769151dcc",
+  "cases": [
+    "F02",
+    "F03"
+  ],
+  "comparison": "range suffix only; common updated RULES/DRAFT_PROMPT/admission/audit in both arms; not historical full-runtime A/B",
+  "bounds": "one draft plus optional one audit per case per arm;90s/call;no source HTTP/Qwen;no retry;stop model auth/rate refusal",
+  "outputs": [
+    "runs/research-p1-2026-11-13/range-baseline",
+    "runs/research-p1-2026-11-13/range-candidate"
+  ],
+  "policy": "Inspect admitted/supported required facts and exact witnesses; test exit0 is not semantic acceptance",
+  "commands": [
+    "RESEARCH_COVERAGE_CORPUS_DIR=\"$PWD/runs/qwen-acceptance-2026-11-13/candidate/new\" RESEARCH_COVERAGE_RANGE_ARM=baseline RESEARCH_GATE_REPLAY_DIR=\"$PWD/runs/research-p1-2026-11-13/range-baseline\" CARGO_HOME=\"$PWD/.cache/cargo\" cargo test --locked --offline coverage_live_saved_range_contexts -- --ignored --exact research::tests::coverage_live_saved_range_contexts",
+    "RESEARCH_COVERAGE_CORPUS_DIR=\"$PWD/runs/qwen-acceptance-2026-11-13/candidate/new\" RESEARCH_COVERAGE_RANGE_ARM=candidate RESEARCH_GATE_REPLAY_DIR=\"$PWD/runs/research-p1-2026-11-13/range-candidate\" CARGO_HOME=\"$PWD/.cache/cargo\" cargo test --locked --offline coverage_live_saved_range_contexts -- --ignored --exact research::tests::coverage_live_saved_range_contexts"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "version": "news-navigation-plan-v1",
+  "question": "Does bounded feed-to-article navigation plus publication-date/type gating improve useful news articles and remove app-download news-direct errors on a new eight-query live set?",
+  "stage": "limited implementation evaluation, not pilot qualification",
+  "case_file": "feasibility/news-navigation-cases-v1.json",
+  "baseline": "preserved v10 evidence-memory release",
+  "candidate": "new opt-in news path, same startup DeepSeek and local Qwen",
+  "fixed_before_live": ["queries", "date and topical criteria", "budgets", "arm order", "quality gates"],
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "reranker": "Qwen3-Reranker-0.6B-4bit",
+  "per_query_max": {"logical_search_calls": 2, "classification_calls": 3, "document_reads": 4, "reranker_calls": 4, "runtime_seconds": 180, "source_context_chars_per_model_call": 24000},
+  "arms": ["baseline", "fixed"],
+  "arm_order": "baseline,fixed for odd ordinal; fixed,baseline for even ordinal; process persists across all cases; calls sequential",
+  "source_policy": "Seznam/Naver only, one original form, no retries/restarts after blocks, existing public URL/DNS/IP/redirect/site safeguards",
+  "inputs": "live paired within the same session, not frozen identical SERPs or target HTML; all responses and errors retained",
+  "extra_validation": {"max_unique_urls": 24, "tool": "extract", "rule": "same fixed MCP process after primary calls; direct URLs first, then other returned URLs if slots remain; no repeated URL; no retries after failure/block; not charged to primary per-query budget and reported separately"},
+  "annotation": {
+    "blind": "source-only rows omit arm/classification/evidence/audit and are joined to hidden mapping only after frozen annotation",
+    "grade2_news": "a specific article directly matching place/topic/site and publication window, with a full observed publication date and source-bound evidence; article content checked where accessible",
+    "grade1": "topical feed/category/navigation, incomplete article, missing/ambiguous full publication date or useful background",
+    "grade0": "wrong place/topic/window, application advertisement for news-reading intent or unrelated content",
+    "unknown": "source inaccessible/insufficient to judge; unavailable original is not evidence of a false fact",
+    "date_rules": ["publication date separate from modification/event/teaser/copyright", "do not infer year from query or copyright", "ambiguous/conflicting dates unknown", "future publication is not current verified news", "an old article may be correct for the explicit historical query"],
+    "application_control": "nn08 judged for the explicitly requested app intent; neither force a news-date gate nor treat app type alone as false direct",
+    "de_dup": "canonical URL per case; syndicated same story flagged separately from independent coverage"
+  },
+  "measurements": ["returned rows and unique pages", "qualified concrete articles@10 per case/arm", "known suitable direct, known unsuitable direct IDs, unknown direct IDs", "news article/feed/application/unknown counts", "automatic parent feed→article lineage with successful fetch", "publication date valid/missing/conflict/out-of-window counts", "actual source/generative/read/Qwen budgets, errors, wall time"],
+  "quality_gates": ["no app-download news direct in nn01..nn07", "no direct with unknown/conflicting/future/out-of-window publication date in news cases", "no new known unsuitable direct IDs relative to the same-query baseline", "parent lineage is observed from fetched feed and all fetch/site/security checks retained", "all configured per-query budgets respected", "explicit application-control meaning preserved"],
+  "success_claim_limit": "A positive count difference on this small nonrandom live set is exploratory, not proof of isolated reranker effect, full-web recall, truth verification, or independent acceptance.",
+  "stop": "run all frozen eight queries in both arms, preserve failures, evaluate new results, complete relevant local checks, and save report in doc without tuning on this set"
+}

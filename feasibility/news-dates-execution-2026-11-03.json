@@ -1,0 +1,293 @@
+{
+  "task": "TASK-20261103-153636-001",
+  "scope": "Dated separate cohorts and development controls. Never pool scores. Runtime remains Rust, existing DeepSeek+local Qwen, legacy default.",
+  "completed_v13_cohorts": {
+    "NEW12": {
+      "candidate_version": "v13",
+      "status": "completed",
+      "arms": {
+        "baseline": {
+          "calls": 12,
+          "budget_totals": {
+            "classification_calls": 14,
+            "document_reads": 40,
+            "logical_search_calls": 24,
+            "reranker_calls": 4,
+            "reranker_pairs": 22,
+            "source_context_max": 16867
+          }
+        },
+        "fixed": {
+          "calls": 12,
+          "budget_totals": {
+            "classification_calls": 14,
+            "document_reads": 40,
+            "logical_search_calls": 24,
+            "reranker_calls": 3,
+            "reranker_pairs": 12,
+            "source_context_max": 16867
+          }
+        }
+      },
+      "source_and_binary_archive": "runs/news-dates-2026-11-03/v13-final",
+      "execution_sha256": "4b66392d15668663b187be630d3cdf5d2b9257508a612a159783dfdb0692e99f"
+    },
+    "supplement2": {
+      "candidate_version": "v13",
+      "status": "completed",
+      "arms": {
+        "baseline": {
+          "calls": 2,
+          "budget_totals": {
+            "classification_calls": 3,
+            "document_reads": 8,
+            "logical_search_calls": 4,
+            "reranker_calls": 3,
+            "reranker_pairs": 21,
+            "source_context_max": 15576
+          }
+        },
+        "fixed": {
+          "calls": 2,
+          "budget_totals": {
+            "classification_calls": 3,
+            "document_reads": 8,
+            "logical_search_calls": 4,
+            "reranker_calls": 3,
+            "reranker_pairs": 22,
+            "source_context_max": 15576
+          }
+        }
+      },
+      "source_and_binary_archive": "runs/news-dates-2026-11-03/v13-final",
+      "execution_sha256": "ad5213fe8d95c8e7c7802aaf6352d30d47babfb715de95bfcba8e3823bc523ae"
+    }
+  },
+  "v14_controls": "runs/news-dates-2026-11-03/v14-controls-summary.json",
+  "v14_freeze": "runs/news-dates-2026-11-03/v14-final-code-freeze.json",
+  "NEW6": {
+    "candidate_version": "v14",
+    "scope": "Separate adaptive mechanism-sensitive/source-aware confirmation; no pooling",
+    "status": "completed",
+    "actual_calls": 12,
+    "all_errors": [],
+    "arms": {
+      "baseline": {
+        "calls": 6,
+        "budget_totals": {
+          "classification_calls": 14,
+          "document_reads": 24,
+          "logical_search_calls": 12,
+          "reranker_calls": 14,
+          "reranker_pairs": 87,
+          "source_context_max": 17997
+        },
+        "wall_ms": 169883
+      },
+      "fixed": {
+        "calls": 6,
+        "budget_totals": {
+          "classification_calls": 16,
+          "document_reads": 24,
+          "logical_search_calls": 12,
+          "reranker_calls": 14,
+          "reranker_pairs": 87,
+          "source_context_max": 17163
+        },
+        "wall_ms": 180763
+      }
+    },
+    "code_unchanged": true,
+    "tooling_unchanged": true,
+    "source_gold_join": {
+      "created_utc": "2026-11-03T14:32:58.528520+00:00",
+      "gold_sha256": "8224af96a398ba761c3649dd49ed8bb85bab34c66b9c911f6d1059482e6c5a95",
+      "results_sha256": "2ab05eeb09c1eb7b477c18025c2db3bb051920330f78953e996b6dacc8946965",
+      "counts": {
+        "1": 27,
+        "None": 7,
+        "0": 17,
+        "2": 13
+      },
+      "primary": {
+        "scope": "paired successful READ+returned known-positive union (primary)",
+        "paired_cases": [
+          "ca01",
+          "ca02",
+          "ca03",
+          "ca04",
+          "ca05",
+          "ca06"
+        ],
+        "paired_case_count": 6,
+        "observed_union": 64,
+        "known_positive_union": 13,
+        "known_positive_blind_ids": [
+          "0374dc9c8a98131a",
+          "0527b73bd87ee41c",
+          "329a723bf6e0b229",
+          "3c01a8435d1b2b08",
+          "4f51be938955e5e2",
+          "583d8f1b8ad0c526",
+          "5f12f3866609bad1",
+          "65bcaf6d8ee80268",
+          "6f47db987010e6f2",
+          "893b8d233875d06f",
+          "8d6e3f3b467b1cdc",
+          "f0b6054132d84433",
+          "ff1052ab828d4b9f"
+        ],
+        "unknown_or_unannotated_union": 7,
+        "arms": {
+          "baseline": {
+            "tp": 9,
+            "fn": 4,
+            "direct_recall": 0.6923076923076923,
+            "tp_blind_ids": [
+              "0374dc9c8a98131a",
+              "0527b73bd87ee41c",
+              "3c01a8435d1b2b08",
+              "4f51be938955e5e2",
+              "583d8f1b8ad0c526",
+              "5f12f3866609bad1",
+              "65bcaf6d8ee80268",
+              "893b8d233875d06f",
+              "ff1052ab828d4b9f"
+            ],
+            "fn_blind_ids": [
+              "329a723bf6e0b229",
+              "6f47db987010e6f2",
+              "8d6e3f3b467b1cdc",
+              "f0b6054132d84433"
+            ]
+          },
+          "fixed": {
+            "tp": 13,
+            "fn": 0,
+            "direct_recall": 1.0,
+            "tp_blind_ids": [
+              "0374dc9c8a98131a",
+              "0527b73bd87ee41c",
+              "329a723bf6e0b229",
+              "3c01a8435d1b2b08",
+              "4f51be938955e5e2",
+              "583d8f1b8ad0c526",
+              "5f12f3866609bad1",
+              "65bcaf6d8ee80268",
+              "6f47db987010e6f2",
+              "893b8d233875d06f",
+              "8d6e3f3b467b1cdc",
+              "f0b6054132d84433",
+              "ff1052ab828d4b9f"
+            ],
+            "fn_blind_ids": []
+          }
+        },
+        "direct_recall_delta": 0.3076923076923077,
+        "clusters": {
+          "event_cluster": {
+            "distinct_named": 13,
+            "names": [
+              "chelyabinsk-kopeyskoe-mashinostroiteley-sign-removal-2026-11-03",
+              "chelyabinsk-offprice-stock-shops-report-2026-11-02",
+              "chelyabinsk-tashkent-flight-announcement-2026-11-03",
+              "ekaterinburg-elizaryev-estate-auction",
+              "ekaterinburg-malysheva-collision-video",
+              "ekaterinburg-verkhnyaya-pyshma-route108-stone-attack",
+              "omsk-alita-theatre-legal-registration",
+              "omsk-krasnodar-norilsk-extra-winter-flights",
+              "omsk-severnoe-siyanie-next-construction-stage",
+              "perm-pseudolawyer-verdict-2026-11-03",
+              "perm-tryasolobova-square-upgrade-2026-11-03",
+              "ufa-city-council-developers-overview-2026-11-02",
+              "ufa-kolkhoz-market-stall-demolition-2026-11-03"
+            ],
+            "unclustered_case_urls": 0
+          },
+          "publisher_cluster": {
+            "distinct_named": 5,
+            "names": [
+              "59.ru",
+              "74.ru",
+              "e1.ru",
+              "superomsk.ru",
+              "ufa1.ru"
+            ],
+            "unclustered_case_urls": 0
+          }
+        }
+      },
+      "quality_gate": {
+        "evaluated": true,
+        "expected_captures": 12,
+        "all12_valid_captures": true,
+        "gold_annotation_missing_ids": [],
+        "unused_gold_ids": [],
+        "new_known_false_direct_rows": [],
+        "candidate_unknown_direct_rows": [],
+        "candidate_news_direct_policy_violations": [],
+        "model_profile_violations": [],
+        "budget_violations": [],
+        "source_blocks": [],
+        "invalid_initial_classifiers": [],
+        "execution_integrity_violations": [],
+        "passed": true
+      },
+      "live_usefulness": {
+        "primary_known_positive_union": 13,
+        "primary_direct_recall_delta": 0.3076923076923077,
+        "primary_direct_recall_gain_observed": true,
+        "safety_and_gain": true
+      },
+      "independent_recount": "runs/news-dates-2026-11-03/confirm/independent-metrics-review.json"
+    },
+    "execution_sha256": "a6e688a282c60e63b9b6e4e7bef9dbf08557f82a33278620036bcf122b434cd5",
+    "protocol_review": "runs/news-dates-2026-11-03/confirm/independent-protocol-review.json",
+    "actual_initial_classifications": {
+      "baseline": 6,
+      "fixed": 6
+    },
+    "vacuous_classifier_flags": 0,
+    "source_bundle": {
+      "url_count": 24,
+      "variant_count": 42,
+      "case_url_cards": 64,
+      "missing_original_successful_read_rows": 0,
+      "sha256": "069ab47033b847fce6c04105b0e19ef4b24e9abb8e42f02f58d2d0bb5cb3bd22"
+    },
+    "diagnostics": "runs/news-dates-2026-11-03/confirm/four-baseline-fn-diagnostics.json"
+  },
+  "native_checks": {
+    "ordinary_unit": 115,
+    "ordinary_stdio": 5,
+    "release_stdio": 5,
+    "fmt": "passed",
+    "clippy": "passed",
+    "release": "passed"
+  },
+  "historical_invariants": {
+    "feasibility/search-cases.json": "b67e3269830ae0e976aa9b4c5dc2f6b9c3e922ad1adda35738289d6b1b8325d6",
+    "feasibility/b17-policy.json": "1e83c13aa670b1a656262542eb5c34b21f559aca8fd0da179ab704097dcc995e"
+  },
+  "limits": [
+    "Cumulative candidate; no isolated causal model/reranker quality attribution.",
+    "Saved-source controls bypass retrieval and initial classifier; old2 originals were standalone validation snapshots.",
+    "Team source-only grading/peer recount are not formal independent ready_to_merge acceptance.",
+    "No extra scrape/search API, target-validation requests, new models, VPS/deploy or global config changes."
+  ],
+  "project_context": {
+    "task": "TASK-20261103-153636-001",
+    "verification": "VERIFY-20261103-173605-001",
+    "research_revision": 24,
+    "finalize_status": "FINALIZED",
+    "completion": "partial",
+    "requiresHumanReview": false,
+    "reason": "No formal independently accepted ready_to_merge run; requested implementation/benchmark/report delivered. No pending user approval.",
+    "checks": {
+      "lint": "OK",
+      "index_check": "OK",
+      "context_smoke": "passed",
+      "doctor": "WARN existing noGit/sourcecoverage/backlog conditions, notcleanacceptance"
+    }
+  }
+}

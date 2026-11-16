@@ -1,0 +1,22 @@
+[
+  {"id":"ru01","query":"Rust владение borrowing документация"},
+  {"id":"ru02","query":"SQLite транзакции WAL документация"},
+  {"id":"ru03","query":"HTTP статус 304 Last-Modified ETag"},
+  {"id":"ru04","query":"Tokio асинхронный Rust руководство"},
+  {"id":"ru05","query":"экскаватор рабочий цикл перемещение грунта"},
+  {"id":"ru06","query":"site:doc.rust-lang.org ownership"},
+  {"id":"ru07","query":"Rust Python обработка HTML сравнение"},
+  {"id":"ru08","query":"последняя стабильная версия Rust октябрь 2026"},
+  {"id":"ru09","query":"Unicode графема кодовая точка разница"},
+  {"id":"ru10","query":"DNS rebinding SSRF IPv6 защита"},
+  {"id":"en01","query":"Rust ownership borrowing documentation"},
+  {"id":"en02","query":"SQLite WAL transactions documentation"},
+  {"id":"en03","query":"HTTP 304 ETag Last-Modified conditional requests"},
+  {"id":"en04","query":"Tokio Rust asynchronous programming tutorial"},
+  {"id":"en05","query":"excavator working cycle digging loading travel"},
+  {"id":"en06","query":"site:doc.rust-lang.org ownership"},
+  {"id":"en07","query":"Rust Python HTML extraction comparison"},
+  {"id":"en08","query":"latest stable Rust release October 2026"},
+  {"id":"en09","query":"Unicode grapheme cluster code point difference"},
+  {"id":"en10","query":"DNS rebinding SSRF IPv6 protection"}
+]

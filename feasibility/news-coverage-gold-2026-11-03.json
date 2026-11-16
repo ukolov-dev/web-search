@@ -1,0 +1,1897 @@
+{
+  "scope": "Source-only returned case/URL union; conditional recall, not full web. Independent same-team blind annotators; no formal acceptance.",
+  "created_utc": "2026-11-03T12:21:45.366575+00:00",
+  "protocol": "feasibility/news-coverage-plan-v1.json",
+  "source_bundle_sha256": "0e3bf85aac21510ee49a8abe0570d9570a9ada22068f95bebae4580654624c6e",
+  "parts": [
+    {
+      "path": "runs/news-coverage-2026-11-03/benchmark/blind/gold-nc01-04.json",
+      "sha256": "8ce61ae0219013ac74362594983021b352da14bdde10ba605d4e9200a68abe3e"
+    },
+    {
+      "path": "runs/news-coverage-2026-11-03/benchmark/blind/gold-part-nc05-nc08.json",
+      "sha256": "fbcdea43b695cf70014c79931ff61ef2c1d15166e268a4767873ce0a64f88d05"
+    }
+  ],
+  "limits": [
+    "Originals captured after primary reads; not byte-identical primary snapshots.",
+    "Card-only grade0/1 judgments provisional; missing original potential articles unknown.",
+    "Year never inferred from query, URL or copyright; own Article publication metadata required for grade2."
+  ],
+  "rows": [
+    {
+      "blind_id": "02982c1b98cc37f4",
+      "case_id": "nc06",
+      "url": "https://sgpress.ru/news/578958",
+      "grade": 0,
+      "kind": "article",
+      "published_date": "2026-08-25",
+      "source_reviewed": true,
+      "date_verified": true,
+      "reason": "Оригинал сообщает о мурале в Тольятти. Собственная публикация 25.08.2026, вне обязательного 03.11.2026; дата модификации не используется.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-native-documents.json documents['https://sgpress.ru/news/578958'].full_text: «Художники закончили создание нового мурала на стене многоквартирного дома на улице Механизаторов, 3 в Тольятти.»",
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-native-documents.json documents['https://sgpress.ru/news/578958'].raw_jsonld NewsArticle(mainEntityOfPage=https://sgpress.ru/news/578958).datePublished = 2026-08-25T15:41:00+04:00; same article:published_time; converted to Europe/Moscow"
+      ],
+      "review_boundary": "native_original_body_and_own_publication_metadata",
+      "source_refs": {
+        "raw_html_path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-16.html",
+        "raw_html_sha256": "80ce33a09f0407a644125195a8d4699e92f7b7ab7f82ded685cd0a98a8fbf9bc",
+        "bundle_full_text_sha256": "334bbd726ef21b137d7df9a04c85bc6a963d7011b7cb8ef370a02e7f3dcb2c2f",
+        "declared_text_hash": "334bbd726ef21b137d7df9a04c85bc6a963d7011b7cb8ef370a02e7f3dcb2c2f"
+      }
+    },
+    {
+      "blind_id": "056b0470843485d3",
+      "case_id": "nc04",
+      "url": "https://www.academia.edu/41220054/%D0%91%D0%B0%D0%BB%D0%B0%D1%85%D0%B2%D0%B0%D0%BD%D1%86%D0%B5%D0%B2_%D0%90_%D0%A1_%D0%91%D0%B8%D0%BC%D0%B5%D1%82%D0%B0%D0%BB%D0%BB%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D0%BB%D0%B5%D0%B2%D0%B5%D1%86_%D0%B8%D0%B7_%D0%91%D1%83%D0%B3%D1%83%D1%80%D1%83%D1%81%D0%BB%D0%B0%D0%BD%D0%B0_%D0%B8_%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC%D0%B0_%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D1%80%D0%B0%D0%BD%D0%BD%D0%B5%D1%81%D0%BA%D0%B8%D1%84%D1%81%D0%BA%D0%BE%D0%B9_%D0%BA%D1%83%D0%BB%D1%8C%D1%82%D1%83%D1%80%D1%8B_%D0%92%D0%BE%D0%B9%D0%BD%D0%B0_%D0%B8_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D0%BB%D0%BE_%D0%B2_%D1%81%D0%BA%D0%B8%D1%84%D0%BE_%D1%81%D0%B0%D1%80%D0%BC%D0%B0%D1%82%D1%81%D0%BA%D0%BE%D0%BC_%D0%BC%D0%B8%D1%80%D0%B5_%D0%A1_%D0%98_%D0%9B%D1%83%D0%BA%D1%8C%D1%8F%D1%88%D0%BA%D0%BE_%D1%80%D0%B5%D0%B4_%D0%A0%D0%BE%D1%81%D1%82%D0%BE%D0%B2_%D0%BD%D0%B0_%D0%94%D0%BE%D0%BD%D1%83_2015_%D0%A1_22_25",
+      "grade": 0,
+      "kind": "other",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка явно описывает научную/историческую публикацию, а не городские новости в заданном временном окне. Оригинал не предоставлен; отрицательная граница предварительная, только по явной теме карточки.",
+      "evidence": [
+        "Балахванцев А.С. Биметаллический клевец из Бугуруслана и проблема становления раннескифской культуры // Война и военное дело в скифо–сарматском мире / С.И. Лукьяшко (ред.). Ростов-на-Дону, 2015."
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/1/source_cards/0/snippet",
+          "url": "https://www.academia.edu/41220054/%D0%91%D0%B0%D0%BB%D0%B0%D1%85%D0%B2%D0%B0%D0%BD%D1%86%D0%B5%D0%B2_%D0%90_%D0%A1_%D0%91%D0%B8%D0%BC%D0%B5%D1%82%D0%B0%D0%BB%D0%BB%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D0%BB%D0%B5%D0%B2%D0%B5%D1%86_%D0%B8%D0%B7_%D0%91%D1%83%D0%B3%D1%83%D1%80%D1%83%D1%81%D0%BB%D0%B0%D0%BD%D0%B0_%D0%B8_%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC%D0%B0_%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D1%80%D0%B0%D0%BD%D0%BD%D0%B5%D1%81%D0%BA%D0%B8%D1%84%D1%81%D0%BA%D0%BE%D0%B9_%D0%BA%D1%83%D0%BB%D1%8C%D1%82%D1%83%D1%80%D1%8B_%D0%92%D0%BE%D0%B9%D0%BD%D0%B0_%D0%B8_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D0%BB%D0%BE_%D0%B2_%D1%81%D0%BA%D0%B8%D1%84%D0%BE_%D1%81%D0%B0%D1%80%D0%BC%D0%B0%D1%82%D1%81%D0%BA%D0%BE%D0%BC_%D0%BC%D0%B8%D1%80%D0%B5_%D0%A1_%D0%98_%D0%9B%D1%83%D0%BA%D1%8C%D1%8F%D1%88%D0%BA%D0%BE_%D1%80%D0%B5%D0%B4_%D0%A0%D0%BE%D1%81%D1%82%D0%BE%D0%B2_%D0%BD%D0%B0_%D0%94%D0%BE%D0%BD%D1%83_2015_%D0%A1_22_25",
+          "field": "snippet",
+          "quote": "Балахванцев А.С. Биметаллический клевец из Бугуруслана и проблема становления раннескифской культуры // Война и военное дело в скифо–сарматском мире / С.И. Лукьяшко (ред.). Ростов-на-Дону, 2015."
+        }
+      ],
+      "publisher_cluster": "www.academia.edu",
+      "event_cluster": null,
+      "annotation_boundary": "card_only_provisional",
+      "publication_evidence": []
+    },
+    {
+      "blind_id": "09e4ea566ed23610",
+      "case_id": "nc01",
+      "url": "https://www.vrn.kp.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": true,
+      "date_verified": false,
+      "reason": "Собственный оригинал содержит ленту нескольких самостоятельных заголовков/анонсов; отдельной публикации с собственной полной датой здесь нет. Даты соседних карточек и og:type не переносились на страницу как дату и тип статьи.",
+      "evidence": [
+        "Главные новости Воронежа и Воронежской области на сегодня. Мы ежедневно публикуем самую актуальную информацию города. Репортажи, аналитика, мнение экспертов, происшествия, ситуация на дорогах, новости политики, экономики",
+        "Ноябрь в Воронежской области окажется теплее и суше нормы"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/2/source_cards/0/snippet",
+          "url": "https://www.vrn.kp.ru/",
+          "field": "snippet",
+          "quote": "Главные новости Воронежа и Воронежской области на сегодня. Мы ежедневно публикуем самую актуальную информацию города. Репортажи, аналитика, мнение экспертов, происшествия, ситуация на дорогах, новости политики, экономики"
+        },
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-native-documents.json",
+          "json_pointer": "/documents/https:~1~1www.vrn.kp.ru~1/full_text",
+          "url": "https://www.vrn.kp.ru/",
+          "field": "full_text",
+          "start_char": 194,
+          "end_char": 251,
+          "quote": "Ноябрь в Воронежской области окажется теплее и суше нормы"
+        },
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-22.html",
+          "url": "https://www.vrn.kp.ru/",
+          "sha256": "86c84f4f0e9f4afff08af51e304774bd294d82d4b8de98a5d59667d7ee6d9819",
+          "role": "captured_original_html"
+        }
+      ],
+      "publisher_cluster": "www.vrn.kp.ru",
+      "event_cluster": null,
+      "annotation_boundary": "full_original_feed",
+      "publication_evidence": [],
+      "original_text_hash": "34ac22655a9b855275e60fbb0f47a0b6877541d8d5392a2d729f83865dfcb53d",
+      "original_final_url": "https://www.vrn.kp.ru/",
+      "original_http_status": 200
+    },
+    {
+      "blind_id": "0e413e24e609dcc2",
+      "case_id": "nc08",
+      "url": "https://az.mir24.tv/",
+      "grade": 0,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Явная лента новостей Азербайджана вместо городских новостей Самары. Никакая будущая дата публикации не установлена.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json rows[blind_id=0e413e24e609dcc2].source_cards[0] (https://az.mir24.tv/): «Последние новости Азербайджана»"
+      ],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "121bc5f103e5d3f4",
+      "case_id": "nc01",
+      "url": "https://www.kommersant.ru/regions/36",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка и адрес обозначают главную страницу, раздел или канал новостей; это навигация к публикациям, а не отдельная статья с проверенной датой. Оригинал не предоставлен для этой страницы; граница grade1 предварительная, основана только на карточке.",
+      "evidence": [
+        "«Ландшафтное земледелие для нас обременительно» ; Воронежский зампред и чиновник Минсельхоза на «Золотой осени» поспорили с бизнесом о деградации почв새 창 열림"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/4/source_cards/0/snippet",
+          "url": "https://www.kommersant.ru/regions/36",
+          "field": "snippet",
+          "quote": "«Ландшафтное земледелие для нас обременительно» ; Воронежский зампред и чиновник Минсельхоза на «Золотой осени» поспорили с бизнесом о деградации почв새 창 열림"
+        }
+      ],
+      "publisher_cluster": "www.kommersant.ru",
+      "event_cluster": null,
+      "annotation_boundary": "card_only_provisional",
+      "publication_evidence": []
+    },
+    {
+      "blind_id": "17fdf0c39d2421be",
+      "case_id": "nc04",
+      "url": "https://moe-belgorod.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка и адрес обозначают главную страницу, раздел или канал новостей; это навигация к публикациям, а не отдельная статья с проверенной датой. Оригинал не предоставлен для этой страницы; граница grade1 предварительная, основана только на карточке.",
+      "evidence": [
+        "Новости Белгорода и области - происшествия, спорт, экономика и другие события. Аналитические публикации, информационная лента новостей, события дня, видео- и фоторепортажи, комментарии새 창 열림"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/5/source_cards/0/snippet",
+          "url": "https://moe-belgorod.ru/",
+          "field": "snippet",
+          "quote": "Новости Белгорода и области - происшествия, спорт, экономика и другие события. Аналитические публикации, информационная лента новостей, события дня, видео- и фоторепортажи, комментарии새 창 열림"
+        }
+      ],
+      "publisher_cluster": "moe-belgorod.ru",
+      "event_cluster": null,
+      "annotation_boundary": "card_only_provisional",
+      "publication_evidence": []
+    },
+    {
+      "blind_id": "1d056b56bc271b63",
+      "case_id": "nc03",
+      "url": "https://www.slunecnice.cz/android/sw/hk-torpedo-sports-ru/",
+      "grade": 0,
+      "kind": "application",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка явно рекламирует скачивание приложения (download/App Store), а не отдельную новостную публикацию. Оригинал не предоставлен; отрицательная граница предварительная, только по карточке.",
+      "evidence": [
+        "ХК Торпедо+ 4.1.3 download - Торпедо edition by Sports.ru – лучшее приложение для поклонников команды из Нижнего Новгорода. Результаты и календарь…"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/6/source_cards/0/snippet",
+          "url": "https://www.slunecnice.cz/android/sw/hk-torpedo-sports-ru/",
+          "field": "snippet",
+          "quote": "ХК Торпедо+ 4.1.3 download - Торпедо edition by Sports.ru – лучшее приложение для поклонников команды из Нижнего Новгорода. Результаты и календарь…"
+        }
+      ],
+      "publisher_cluster": "www.slunecnice.cz",
+      "event_cluster": null,
+      "annotation_boundary": "card_only_provisional",
+      "publication_evidence": []
+    },
+    {
+      "blind_id": "1fbe65cf40a4ae2a",
+      "case_id": "nc05",
+      "url": "https://news161.ru/category/kultura/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка категории «Культура» — навигация по новостям региона, не отдельная публикация с проверенной собственной датой.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json rows[blind_id=1fbe65cf40a4ae2a].source_cards[0] (https://news161.ru/category/kultura/): «категории: «Культура»»"
+      ],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "229a20eb36218cb9",
+      "case_id": "nc01",
+      "url": "https://bloknot-voronezh.ru/news/kto-mozhet-zamenit-aleksandra-guseva-na-postu-gube-1590463?sphrase_id=6857429",
+      "grade": null,
+      "kind": "unknown",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Оригинал статьи не предоставлен; заголовок/текст карточки о бомбоубежище расходится с slug о губернаторе. Нельзя проверить фактическую статью, полную дату и соответствие окну.",
+      "evidence": [
+        "«Укрыться будет негде»: воронежцы пожаловались на переполненное нечистотами бомбоубежище В жестких коммунальных условиях оказались жители дома по улице Сомовской새 창 열림"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/8/source_cards/0/snippet",
+          "url": "https://bloknot-voronezh.ru/news/kto-mozhet-zamenit-aleksandra-guseva-na-postu-gube-1590463?sphrase_id=6857429",
+          "field": "snippet",
+          "quote": "«Укрыться будет негде»: воронежцы пожаловались на переполненное нечистотами бомбоубежище В жестких коммунальных условиях оказались жители дома по улице Сомовской새 창 열림"
+        }
+      ],
+      "publisher_cluster": "bloknot-voronezh.ru",
+      "event_cluster": null,
+      "annotation_boundary": "unknown_original_unavailable",
+      "publication_evidence": []
+    },
+    {
+      "blind_id": "263f13b40dc2862c",
+      "case_id": "nc01",
+      "url": "https://bloknot-voronezh.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": true,
+      "date_verified": false,
+      "reason": "Собственный оригинал содержит ленту нескольких самостоятельных заголовков/анонсов; отдельной публикации с собственной полной датой здесь нет. Даты соседних карточек и og:type не переносились на страницу как дату и тип статьи.",
+      "evidence": [
+        "Новости Воронежа. Новости бизнеса, политики, культуры и спорта Воронежа. Доска объявлений: недвижимость, автотранспорт, услуги, работа в Воронеже. Организации Воронежа",
+        "Общество Член «Новых людей» Антон Ткачев из Воронежа вернул мандат в Госдуму сегодня в 14:49"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/9/source_cards/0/snippet",
+          "url": "https://bloknot-voronezh.ru/",
+          "field": "snippet",
+          "quote": "Новости Воронежа. Новости бизнеса, политики, культуры и спорта Воронежа. Доска объявлений: недвижимость, автотранспорт, услуги, работа в Воронеже. Организации Воронежа"
+        },
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-native-documents.json",
+          "json_pointer": "/documents/https:~1~1bloknot-voronezh.ru~1/full_text",
+          "url": "https://bloknot-voronezh.ru/",
+          "field": "full_text",
+          "start_char": 615,
+          "end_char": 707,
+          "quote": "Общество Член «Новых людей» Антон Ткачев из Воронежа вернул мандат в Госдуму сегодня в 14:49"
+        },
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-21.html",
+          "url": "https://bloknot-voronezh.ru/",
+          "sha256": "c38d39b06e0e9fb6927c390d0e753d10327c87a48b5ff7dbe0b2a4a9a287aa1c",
+          "role": "captured_original_html"
+        }
+      ],
+      "publisher_cluster": "bloknot-voronezh.ru",
+      "event_cluster": null,
+      "annotation_boundary": "full_original_feed",
+      "publication_evidence": [],
+      "original_text_hash": "1976b345257d20dcdc9aa3d94ba9b8e3a056e104e1677159d69e69bf7eb5d936",
+      "original_final_url": "https://bloknot-voronezh.ru/",
+      "original_http_status": 200
+    },
+    {
+      "blind_id": "273bb4daf7f890ff",
+      "case_id": "nc07",
+      "url": "https://reds.cz/2025/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Годовой архив/навигация с общим описанием сайта, не подтверждённая отдельная казанская публикация за ноябрь 2025.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json rows[blind_id=273bb4daf7f890ff].source_cards[0] (https://reds.cz/2025/): «Rok 2025 | REDS»"
+      ],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "27e411e09be20901",
+      "case_id": "nc03",
+      "url": "https://progorodnn.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка и адрес обозначают главную страницу, раздел или канал новостей; это навигация к публикациям, а не отдельная статья с проверенной датой. Оригинал не предоставлен для этой страницы; граница grade1 предварительная, основана только на карточке.",
+      "evidence": [
+        "Про Город Нижний Новгород — самые свежие новости Нижнего Новгорода и Нижегородской области. Происшествия, свежие новости, аварии, бизнес, политика, спорт, фоторепортажи и онлайн...새 창 열림"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/11/source_cards/0/snippet",
+          "url": "https://progorodnn.ru/",
+          "field": "snippet",
+          "quote": "Про Город Нижний Новгород — самые свежие новости Нижнего Новгорода и Нижегородской области. Происшествия, свежие новости, аварии, бизнес, политика, спорт, фоторепортажи и онлайн...새 창 열림"
+        }
+      ],
+      "publisher_cluster": "progorodnn.ru",
+      "event_cluster": null,
+      "annotation_boundary": "card_only_provisional",
+      "publication_evidence": []
+    },
+    {
+      "blind_id": "2a0545163f102b20",
+      "case_id": "nc05",
+      "url": "http://ug.kommersant.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Главная регионального новостного издания; карточка не содержит отдельной статьи и её собственной даты.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json rows[blind_id=2a0545163f102b20].source_cards[0] (http://ug.kommersant.ru/): «Актуальные новости, объективный анализ»"
+      ],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "2b5c72aa1da8269d",
+      "case_id": "nc02",
+      "url": "https://ria.ru/location_Samara/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка и адрес обозначают главную страницу, раздел или канал новостей; это навигация к публикациям, а не отдельная статья с проверенной датой. Оригинал не предоставлен для этой страницы; граница grade1 предварительная, основана только на карточке.",
+      "evidence": [
+        "Самара: куда сходить и что посмотреть, главные достопримечательности19 марта 2025, 19:21새 창 열림"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/13/source_cards/0/snippet",
+          "url": "https://ria.ru/location_Samara/",
+          "field": "snippet",
+          "quote": "Самара: куда сходить и что посмотреть, главные достопримечательности19 марта 2025, 19:21새 창 열림"
+        }
+      ],
+      "publisher_cluster": "ria.ru",
+      "event_cluster": null,
+      "annotation_boundary": "card_only_provisional",
+      "publication_evidence": []
+    },
+    {
+      "blind_id": "2e46661a50fb1301",
+      "case_id": "nc04",
+      "url": "https://www.academia.edu/38584167/%D0%A1%D0%BB%D1%8E%D0%B6%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%81_%D0%A0_%D0%A2%D0%B5%D0%BA%D1%81%D1%82%D1%8B_%D0%BB%D1%8E%D1%82%D0%B5%D1%80%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D1%85_%D0%BF%D1%81%D0%B0%D0%BB%D1%8C%D0%BC%D0%BE%D0%B2_%D0%BD%D0%B0_%D0%BD%D0%B0%D0%B4%D0%B3%D1%80%D0%BE%D0%B1%D0%BD%D1%8B%D1%85_%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA%D0%B0%D1%85_%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D1%85_%D0%BA%D0%BB%D0%B0%D0%B4%D0%B1%D0%B8%D1%89_%D0%9A%D0%BB%D0%B0%D0%B9%D0%BF%D0%B5%D0%B4%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BA%D1%80%D0%B0%D1%8F_%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80_%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE%D0%BA%D1%83%D0%BB%D1%8C%D1%82%D1%83%D1%80%D0%BD%D0%BE%D0%B9_%D0%B8_%D0%B4%D0%B2%D1%83%D1%8F%D0%B7%D1%8B%D1%87%D0%BD%D0%BE%D0%B9_%D1%84%D0%BE%D0%BB%D1%8C%D0%BA%D0%BB%D0%BE%D1%80%D0%BD%D0%BE%D0%B9_%D1%82%D1%80%D0%B0%D0%B4%D0%B8%D1%86%D0%B8%D0%B8_%D0%92_%D0%BA%D0%BD_%D0%9C%D1%83%D0%B7%D1%8B%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%B6%D1%83%D1%80%D0%BD%D0%B0%D0%BB_%D0%95%D0%B2%D1%80%D0%BE%D0%BF%D0%B5%D0%B9%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%D0%B0_%D0%B3_%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D1%81%D0%BA_%D0%A0%D0%A4_1_17_2019_%D1%81_26_47_ISSN_2413_0486",
+      "grade": 0,
+      "kind": "other",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка явно описывает научную/историческую публикацию, а не городские новости в заданном временном окне. Оригинал не предоставлен; отрицательная граница предварительная, только по явной теме карточки.",
+      "evidence": [
+        "Сегодня эти некогда лютеранские территории преимущественно заселены католиками-литовцами и православными россиянами. Протестантское меньшинство прусских литовцев, исторически сконцентрированных в этом крае, осталось по с"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/14/source_cards/0/snippet",
+          "url": "https://www.academia.edu/38584167/%D0%A1%D0%BB%D1%8E%D0%B6%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%81_%D0%A0_%D0%A2%D0%B5%D0%BA%D1%81%D1%82%D1%8B_%D0%BB%D1%8E%D1%82%D0%B5%D1%80%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D1%85_%D0%BF%D1%81%D0%B0%D0%BB%D1%8C%D0%BC%D0%BE%D0%B2_%D0%BD%D0%B0_%D0%BD%D0%B0%D0%B4%D0%B3%D1%80%D0%BE%D0%B1%D0%BD%D1%8B%D1%85_%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA%D0%B0%D1%85_%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D1%85_%D0%BA%D0%BB%D0%B0%D0%B4%D0%B1%D0%B8%D1%89_%D0%9A%D0%BB%D0%B0%D0%B9%D0%BF%D0%B5%D0%B4%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BA%D1%80%D0%B0%D1%8F_%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80_%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE%D0%BA%D1%83%D0%BB%D1%8C%D1%82%D1%83%D1%80%D0%BD%D0%BE%D0%B9_%D0%B8_%D0%B4%D0%B2%D1%83%D1%8F%D0%B7%D1%8B%D1%87%D0%BD%D0%BE%D0%B9_%D1%84%D0%BE%D0%BB%D1%8C%D0%BA%D0%BB%D0%BE%D1%80%D0%BD%D0%BE%D0%B9_%D1%82%D1%80%D0%B0%D0%B4%D0%B8%D1%86%D0%B8%D0%B8_%D0%92_%D0%BA%D0%BD_%D0%9C%D1%83%D0%B7%D1%8B%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%B6%D1%83%D1%80%D0%BD%D0%B0%D0%BB_%D0%95%D0%B2%D1%80%D0%BE%D0%BF%D0%B5%D0%B9%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%D0%B0_%D0%B3_%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D1%81%D0%BA_%D0%A0%D0%A4_1_17_2019_%D1%81_26_47_ISSN_2413_0486",
+          "field": "snippet",
+          "quote": "Сегодня эти некогда лютеранские территории преимущественно заселены католиками-литовцами и православными россиянами. Протестантское меньшинство прусских литовцев, исторически сконцентрированных в этом крае, осталось по с"
+        }
+      ],
+      "publisher_cluster": "www.academia.edu",
+      "event_cluster": null,
+      "annotation_boundary": "card_only_provisional",
+      "publication_evidence": []
+    },
+    {
+      "blind_id": "2f4648c489145933",
+      "case_id": "nc08",
+      "url": "https://buh.ru/",
+      "grade": 0,
+      "kind": "other",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Бухгалтерский информационный портал с иной темой, не городская новостная статья Самары.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json rows[blind_id=2f4648c489145933].source_cards[0] (https://buh.ru/): «Бухгалтерский учет, налогообложение, отчетность»"
+      ],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "345c3984cc4bc2e9",
+      "case_id": "nc08",
+      "url": "https://play.google.com/store/apps/details?id=ru.rugion.android.news.r63&hl=cs",
+      "grade": 0,
+      "kind": "application",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка Google Play рекламирует приложение для чтения новостей. Это не собственная датированная новостная статья, требуемая запросом.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json rows[blind_id=345c3984cc4bc2e9].source_cards[0] (https://play.google.com/store/apps/details?id=ru.rugion.android.news.r63&hl=cs): «Aplikace na Google Play»"
+      ],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "35893ea1b708b9db",
+      "case_id": "nc07",
+      "url": "https://voda235.webnode.cz/rok-2025-udalosti/",
+      "grade": 0,
+      "kind": "other",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка страницы международных событий описывает визиты к Трампу, а не городские новости Казани. Ни одна дата из карточки не считается собственной датой публикации.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json rows[blind_id=35893ea1b708b9db].source_cards[0] (https://voda235.webnode.cz/rok-2025-udalosti/): «Trumpa postupně po jeho inauguraci navštěvují»"
+      ],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "35963bd114544d41",
+      "case_id": "nc03",
+      "url": "https://nnovgorod.bezformata.com/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка и адрес обозначают главную страницу, раздел или канал новостей; это навигация к публикациям, а не отдельная статья с проверенной датой. Оригинал не предоставлен для этой страницы; граница grade1 предварительная, основана только на карточке.",
+      "evidence": [
+        "Лента новостей Нижнего Новгорода и Нижегородской области. Последние новости, события, происшествия от ведущих СМИ региона.새 창 열림"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/18/source_cards/0/snippet",
+          "url": "https://nnovgorod.bezformata.com/",
+          "field": "snippet",
+          "quote": "Лента новостей Нижнего Новгорода и Нижегородской области. Последние новости, события, происшествия от ведущих СМИ региона.새 창 열림"
+        }
+      ],
+      "publisher_cluster": "nnovgorod.bezformata.com",
+      "event_cluster": null,
+      "annotation_boundary": "card_only_provisional",
+      "publication_evidence": []
+    },
+    {
+      "blind_id": "407fa89905aa1da4",
+      "case_id": "nc08",
+      "url": "https://global846.ru/person/id/246",
+      "grade": 0,
+      "kind": "other",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Страница персоны и биографии; дата рождения не является датой публикации новости. Самарская связь не превращает профиль в статью за 03.11.2030.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json rows[blind_id=407fa89905aa1da4].source_cards[0] (https://global846.ru/person/id/246): «Дата рождения: 3 марта 1972 года»"
+      ],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "458ed8bba9d58170",
+      "case_id": "nc04",
+      "url": "https://lenta.ru/tags/geo/belgorod/7/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка и адрес обозначают главную страницу, раздел или канал новостей; это навигация к публикациям, а не отдельная статья с проверенной датой. Оригинал не предоставлен для этой страницы; граница grade1 предварительная, основана только на карточке.",
+      "evidence": [
+        "В российском городе беспилотник ВСУ попал в жилой дом. Начался пожар, пострадали людиРоссияне пострадали при массовых ударах ВСУ по автомобилям мирных жителейРоссийский губернатор связал распространение сообщений о минир"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/20/source_cards/0/snippet",
+          "url": "https://lenta.ru/tags/geo/belgorod/7/",
+          "field": "snippet",
+          "quote": "В российском городе беспилотник ВСУ попал в жилой дом. Начался пожар, пострадали людиРоссияне пострадали при массовых ударах ВСУ по автомобилям мирных жителейРоссийский губернатор связал распространение сообщений о минир"
+        }
+      ],
+      "publisher_cluster": "lenta.ru",
+      "event_cluster": null,
+      "annotation_boundary": "card_only_provisional",
+      "publication_evidence": []
+    },
+    {
+      "blind_id": "4b7a7abed50692ec",
+      "case_id": "nc03",
+      "url": "https://pravda-nn.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка и адрес обозначают главную страницу, раздел или канал новостей; это навигация к публикациям, а не отдельная статья с проверенной датой. Оригинал не предоставлен для этой страницы; граница grade1 предварительная, основана только на карточке.",
+      "evidence": [
+        "Новости Нижнего Новгорода и районов нижегородской области새 창 열림"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/21/source_cards/0/snippet",
+          "url": "https://pravda-nn.ru/",
+          "field": "snippet",
+          "quote": "Новости Нижнего Новгорода и районов нижегородской области새 창 열림"
+        }
+      ],
+      "publisher_cluster": "pravda-nn.ru",
+      "event_cluster": null,
+      "annotation_boundary": "card_only_provisional",
+      "publication_evidence": []
+    },
+    {
+      "blind_id": "4c68bd2b5d620131",
+      "case_id": "nc02",
+      "url": "https://sovainfo.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка и адрес обозначают главную страницу, раздел или канал новостей; это навигация к публикациям, а не отдельная статья с проверенной датой. Оригинал не предоставлен для этой страницы; граница grade1 предварительная, основана только на карточке.",
+      "evidence": [
+        "Главные новости Самары и Самарской области на сегодня онлайн. Мы публикуем свежую информацию о последних событиях города: происшествия, новости политики, экономики, культуры и спорта.새 창 열림"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/22/source_cards/0/snippet",
+          "url": "https://sovainfo.ru/",
+          "field": "snippet",
+          "quote": "Главные новости Самары и Самарской области на сегодня онлайн. Мы публикуем свежую информацию о последних событиях города: происшествия, новости политики, экономики, культуры и спорта.새 창 열림"
+        }
+      ],
+      "publisher_cluster": "sovainfo.ru",
+      "event_cluster": null,
+      "annotation_boundary": "card_only_provisional",
+      "publication_evidence": []
+    },
+    {
+      "blind_id": "4d4e1c6613cdd241",
+      "case_id": "nc01",
+      "url": "https://voronezhnews.ru/cat_incidients.html",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка и адрес обозначают главную страницу, раздел или канал новостей; это навигация к публикациям, а не отдельная статья с проверенной датой. Оригинал не предоставлен для этой страницы; граница grade1 предварительная, основана только на карточке.",
+      "evidence": [
+        "Подростки сняли значок с Mercedes-Benz и поцарапали кузов в Воронеже새 창 열림"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/23/source_cards/0/snippet",
+          "url": "https://voronezhnews.ru/cat_incidients.html",
+          "field": "snippet",
+          "quote": "Подростки сняли значок с Mercedes-Benz и поцарапали кузов в Воронеже새 창 열림"
+        }
+      ],
+      "publisher_cluster": "voronezhnews.ru",
+      "event_cluster": null,
+      "annotation_boundary": "card_only_provisional",
+      "publication_evidence": []
+    },
+    {
+      "blind_id": "5072bc51b79fe413",
+      "case_id": "nc08",
+      "url": "https://parkgagarina.info/index.php/novosti.html",
+      "grade": null,
+      "kind": "unknown",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка содержит одиночный заголовок о Тольятти, но оригинал отсутствует. Форма страницы (лента/статья), собственная дата и полное содержание не проверены; не считаю это известным отрицательным только из-за отсутствия оригинала.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json rows[blind_id=5072bc51b79fe413].source_cards[0] (https://parkgagarina.info/index.php/novosti.html): «В Тольятти семеро детей попали в больницу»"
+      ],
+      "review_boundary": "missing_original_unknown_not_negative"
+    },
+    {
+      "blind_id": "52aaa8750c684ad7",
+      "case_id": "nc05",
+      "url": "https://161.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Главная городского новостного портала; полезная навигация, но не подтверждённая отдельная публикация за 03.11.2026.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json rows[blind_id=52aaa8750c684ad7].source_cards[0] (https://161.ru/): «Все новости региона на сайте 161.ру»"
+      ],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "594b61b2ce6dccc4",
+      "case_id": "nc07",
+      "url": "https://www.newsmarhi.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Главная с несколькими заголовками, в том числе событием в Казани. Навигация потенциально полезна, но отдельная статья и её публикационная дата не проверены.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json rows[blind_id=594b61b2ce6dccc4].source_cards[0] (https://www.newsmarhi.ru/): «по архитектуре, дизайну и искусству в Казани»"
+      ],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "61531ccdcdd06446",
+      "case_id": "nc04",
+      "url": "https://bel.aif.ru/society/novosti-belgoroda-2-noyabrya-drony-falshivki-zolotaya-ipoteka-i-tuman",
+      "grade": 0,
+      "kind": "article",
+      "published_date": "2026-11-02",
+      "source_reviewed": true,
+      "date_verified": true,
+      "reason": "Полная статья — белгородский новостной дайджест, но собственная дата публикации 02.11.2026 вне окна nc04 (только 03.11.2026). Прогноз на 3 ноября внутри текста не является датой публикации. raw meta и Article JSON-LD расходятся по часу, но дают один календарный день в Москве.",
+      "evidence": [
+        "ный период 2025-го из оборота вывели 22 фальшивки, сообщили в региональном ЦБ. Мошенники, как и прежде, бьют по самому дорогому. Почти две трети всех подделок — купюры номиналом 5000 рублей: целых 13 штук. Ещё 5 фальшивы",
+        "Фонтан из люка и река нечистот: как коммунальщики «решают» проблемы Белгорода",
+        "article:published_time = 2026-11-02T14:26:34+0300",
+        "Article.datePublished = 2026-11-02T17:26:34+03:00"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/27/source_cards/0/snippet",
+          "url": "https://bel.aif.ru/society/novosti-belgoroda-2-noyabrya-drony-falshivki-zolotaya-ipoteka-i-tuman",
+          "field": "snippet",
+          "quote": "ный период 2025-го из оборота вывели 22 фальшивки, сообщили в региональном ЦБ. Мошенники, как и прежде, бьют по самому дорогому. Почти две трети всех подделок — купюры номиналом 5000 рублей: целых 13 штук. Ещё 5 фальшивы"
+        },
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-native-documents.json",
+          "json_pointer": "/documents/https:~1~1bel.aif.ru~1society~1novosti-belgoroda-2-noyabrya-drony-falshivki-zolotaya-ipoteka-i-tuman/full_text",
+          "url": "https://bel.aif.ru/society/novosti-belgoroda-2-noyabrya-drony-falshivki-zolotaya-ipoteka-i-tuman",
+          "field": "full_text",
+          "start_char": 2922,
+          "end_char": 2999,
+          "quote": "Фонтан из люка и река нечистот: как коммунальщики «решают» проблемы Белгорода"
+        },
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-09.html",
+          "url": "https://bel.aif.ru/society/novosti-belgoroda-2-noyabrya-drony-falshivki-zolotaya-ipoteka-i-tuman",
+          "sha256": "b12fd0acfdff7c54002a2180ea35e5dbb85367a5ce8120b881d41113b7ec5430",
+          "role": "captured_original_html"
+        }
+      ],
+      "publisher_cluster": "bel.aif.ru",
+      "event_cluster": "belgorod-aif-daily-digest-2026-11-02",
+      "annotation_boundary": "full_original_and_own_publication_metadata",
+      "publication_evidence": [
+        {
+          "field": "article:published_time",
+          "value": "2026-11-02T14:26:34+0300",
+          "json_pointer": "/documents/https:~1~1bel.aif.ru~1society~1novosti-belgoroda-2-noyabrya-drony-falshivki-zolotaya-ipoteka-i-tuman/raw_meta/0"
+        },
+        {
+          "field": "Article.datePublished",
+          "value": "2026-11-02T17:26:34+03:00",
+          "json_pointer": "/documents/https:~1~1bel.aif.ru~1society~1novosti-belgoroda-2-noyabrya-drony-falshivki-zolotaya-ipoteka-i-tuman/raw_jsonld/1/datePublished",
+          "headline": "Новости Белгорода 2 ноября: дроны, фальшивки, «золотая» ипотека и туман",
+          "own_url": "https://bel.aif.ru/society/novosti-belgoroda-2-noyabrya-drony-falshivki-zolotaya-ipoteka-i-tuman"
+        }
+      ],
+      "original_text_hash": "141fbf01e401a270900c454d6b7f202f3108d3b338eca56924307103317f9565",
+      "original_final_url": "https://bel.aif.ru/society/novosti-belgoroda-2-noyabrya-drony-falshivki-zolotaya-ipoteka-i-tuman",
+      "original_http_status": 200
+    },
+    {
+      "blind_id": "61ba1141186c9f48",
+      "case_id": "nc07",
+      "url": "https://trans-alfa.com/news-1",
+      "grade": 0,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка корпоративных новостей про испытания троллейбуса в Петрозаводске, а не про Казань. Оценка только по явно указанному месту карточки.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json rows[blind_id=61ba1141186c9f48].source_cards[0] (https://trans-alfa.com/news-1): «проходит испытания в Петрозаводске»"
+      ],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "61ec9d70266347b6",
+      "case_id": "nc08",
+      "url": "https://www.niann.ru/",
+      "grade": 0,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Явная новостная лента о Нижнем Новгороде вместо Самары. Время и даты соседних анонсов не считаются собственной публикацией страницы.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json rows[blind_id=61ec9d70266347b6].source_cards[0] (https://www.niann.ru/): «Несколько улиц перекроют в центре Нижнего Новгорода»"
+      ],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "6f3fb05d3e32312c",
+      "case_id": "nc02",
+      "url": "https://samaragovorit.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка и адрес обозначают главную страницу, раздел или канал новостей; это навигация к публикациям, а не отдельная статья с проверенной датой. Оригинал не предоставлен для этой страницы; граница grade1 предварительная, основана только на карточке.",
+      "evidence": [
+        "Главные новости Самары за сегодня - на информационном портале города Самара. Самое важное о жизни Самары: новости, события, афиша. Будьте в курсе всех событий города!새 창 열림"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/30/source_cards/0/snippet",
+          "url": "https://samaragovorit.ru/",
+          "field": "snippet",
+          "quote": "Главные новости Самары за сегодня - на информационном портале города Самара. Самое важное о жизни Самары: новости, события, афиша. Будьте в курсе всех событий города!새 창 열림"
+        }
+      ],
+      "publisher_cluster": "samaragovorit.ru",
+      "event_cluster": null,
+      "annotation_boundary": "card_only_provisional",
+      "publication_evidence": []
+    },
+    {
+      "blind_id": "70db7242f29ad0c0",
+      "case_id": "nc05",
+      "url": "https://www.sitelike.org/similar/rudic.ru/",
+      "grade": 0,
+      "kind": "other",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка сервиса похожих сайтов, а не собственной городской новостной статьи.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json rows[blind_id=70db7242f29ad0c0].source_cards[0] (https://www.sitelike.org/similar/rudic.ru/): «rudic.ru alternatives - similar sites like rudic.ru»"
+      ],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "73a5e986b4f46ffa",
+      "case_id": "nc07",
+      "url": "https://fckhimki.com/",
+      "grade": 0,
+      "kind": "other",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Главная футбольного клуба с сообщением о деятельности «Химок», не установленная публикация городских новостей Казани.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json rows[blind_id=73a5e986b4f46ffa].source_cards[0] (https://fckhimki.com/): «Химки» приостанавливают свою деятельность»"
+      ],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "74d9eb798fecc25e",
+      "case_id": "nc04",
+      "url": "https://bel.aif.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка и адрес обозначают главную страницу, раздел или канал новостей; это навигация к публикациям, а не отдельная статья с проверенной датой. Оригинал не предоставлен для этой страницы; граница grade1 предварительная, основана только на карточке.",
+      "evidence": [
+        "Свежие новости Белгорода за день: обстановка в городе и районах, происшествия, власть, экономика, спорт и культура Белгородской области. Всё важное о жизни региона.새 창 열림"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/33/source_cards/0/snippet",
+          "url": "https://bel.aif.ru/",
+          "field": "snippet",
+          "quote": "Свежие новости Белгорода за день: обстановка в городе и районах, происшествия, власть, экономика, спорт и культура Белгородской области. Всё важное о жизни региона.새 창 열림"
+        }
+      ],
+      "publisher_cluster": "bel.aif.ru",
+      "event_cluster": null,
+      "annotation_boundary": "card_only_provisional",
+      "publication_evidence": []
+    },
+    {
+      "blind_id": "77caafcb9e595e43",
+      "case_id": "nc06",
+      "url": "https://sgpress.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Главная sgpress.ru: подходящая навигация по Самаре, но не отдельная статья с проверенной собственной датой за сегодня.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json rows[blind_id=77caafcb9e595e43].source_cards[0] (https://sgpress.ru/): «Последние новости Самары и Самарской области»"
+      ],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "78de6f71e613304e",
+      "case_id": "nc02",
+      "url": "https://samaratoday.ru/news/493709",
+      "grade": 2,
+      "kind": "article",
+      "published_date": "2026-11-03",
+      "source_reviewed": true,
+      "date_verified": true,
+      "reason": "Собственная полная статья сообщает об уходе главы Самары; собственная дата публикации 03.11.2026 подтверждена Article/datePublished и article:published_time. 1 декабря относится к будущему событию, не к публикации.",
+      "evidence": [
+        "Общество Иван Носков покинет пост главы Самары 1 декабря 03.11.2026 15 1 минута Глава Самары Иван Носков уйдёт с должности 1 декабря — он получил повышение и переходит на новую работу. Об этом на оперативном совещании пр",
+        "Глава Самары Иван Носков уйдёт с должности 1 декабря",
+        "article:published_time = 2026-11-03T05:25:33+00:00",
+        "Article.datePublished = 2026-11-03T05:25:33+00:00"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/35/source_cards/0/snippet",
+          "url": "https://samaratoday.ru/news/493709",
+          "field": "snippet",
+          "quote": "Общество Иван Носков покинет пост главы Самары 1 декабря 03.11.2026 15 1 минута Глава Самары Иван Носков уйдёт с должности 1 декабря — он получил повышение и переходит на новую работу. Об этом на оперативном совещании пр"
+        },
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-native-documents.json",
+          "json_pointer": "/documents/https:~1~1samaratoday.ru~1news~1493709/full_text",
+          "url": "https://samaratoday.ru/news/493709",
+          "field": "full_text",
+          "start_char": 83,
+          "end_char": 135,
+          "quote": "Глава Самары Иван Носков уйдёт с должности 1 декабря"
+        },
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-02.html",
+          "url": "https://samaratoday.ru/news/493709",
+          "sha256": "c3a30a966e7851fa1f5fce3836c9dcd9b3508d81529732cd03a7623691bdb33a",
+          "role": "captured_original_html"
+        }
+      ],
+      "publisher_cluster": "samaratoday.ru",
+      "event_cluster": "samara-noskov-office-transition-announcement-2026-11-03",
+      "annotation_boundary": "full_original_and_own_publication_metadata",
+      "publication_evidence": [
+        {
+          "field": "article:published_time",
+          "value": "2026-11-03T05:25:33+00:00",
+          "json_pointer": "/documents/https:~1~1samaratoday.ru~1news~1493709/raw_meta/1"
+        },
+        {
+          "field": "Article.datePublished",
+          "value": "2026-11-03T05:25:33+00:00",
+          "json_pointer": "/documents/https:~1~1samaratoday.ru~1news~1493709/raw_jsonld/0/@graph/0/datePublished",
+          "headline": "Иван Носков покинет пост главы Самары 1 декабря",
+          "own_url": "https://samaratoday.ru/news/493709"
+        },
+        {
+          "field": "Article.datePublished",
+          "value": "2026-11-03T09:25:33+04:00",
+          "json_pointer": "/documents/https:~1~1samaratoday.ru~1news~1493709/raw_jsonld/2/datePublished",
+          "headline": "Иван Носков покинет пост главы Самары 1 декабря",
+          "own_url": "https://samaratoday.ru/news/493709"
+        }
+      ],
+      "original_text_hash": "4d602af387ae9390933f656705b8cdec2290017355c6b8a23ad65161fff9d012",
+      "original_final_url": "https://samaratoday.ru/news/493709",
+      "original_http_status": 200
+    },
+    {
+      "blind_id": "7a00e30575cfb83a",
+      "case_id": "nc07",
+      "url": "https://kai.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Главная учреждения с новостным анонсом; отдельная публикация за ноябрь 2025 и её собственная дата не установлены. Упоминание KDW-2026 не переносится на дату публикации.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json rows[blind_id=7a00e30575cfb83a].source_cards[0] (https://kai.ru/): «КНИТУ-КАИ на KDW-2026»"
+      ],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "7ae2a8d89081bef3",
+      "case_id": "nc05",
+      "url": "https://bloknot-rostov.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Главная новостного портала Ростова с тематическими разделами и объявлениями; дата конкретной статьи не установлена.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json rows[blind_id=7ae2a8d89081bef3].source_cards[0] (https://bloknot-rostov.ru/): «Новости бизнеса, политики, культуры и спорта Ростова-на-Дону»"
+      ],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "7ca84479e3d880f5",
+      "case_id": "nc02",
+      "url": "https://samaratoday.ru/news/493733",
+      "grade": 2,
+      "kind": "article",
+      "published_date": "2026-11-03",
+      "source_reviewed": true,
+      "date_verified": true,
+      "reason": "Полная собственная статья о приговоре в Самаре; видимая дата 03.11.2026 согласуется с собственной Article/datePublished и article:published_time. 2023–2024 — период преступлений, не дата публикации.",
+      "evidence": [
+        "Происшествия Экс-сотрудников СИЗО в Самаре осудили за взятки 03.11.2026 0 1 минута Советский районный суд Самары вынес приговор двум бывшим сотрудникам следственного изолятора. Они брали деньги от родственников заключённ",
+        "Советский районный суд Самары вынес приговор двум бывшим сотрудникам следственного изолятора.",
+        "article:published_time = 2026-11-03T11:43:33+00:00",
+        "Article.datePublished = 2026-11-03T11:43:33+00:00"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/38/source_cards/0/snippet",
+          "url": "https://samaratoday.ru/news/493733",
+          "field": "snippet",
+          "quote": "Происшествия Экс-сотрудников СИЗО в Самаре осудили за взятки 03.11.2026 0 1 минута Советский районный суд Самары вынес приговор двум бывшим сотрудникам следственного изолятора. Они брали деньги от родственников заключённ"
+        },
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-native-documents.json",
+          "json_pointer": "/documents/https:~1~1samaratoday.ru~1news~1493733/full_text",
+          "url": "https://samaratoday.ru/news/493733",
+          "field": "full_text",
+          "start_char": 86,
+          "end_char": 179,
+          "quote": "Советский районный суд Самары вынес приговор двум бывшим сотрудникам следственного изолятора."
+        },
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-01.html",
+          "url": "https://samaratoday.ru/news/493733",
+          "sha256": "02bedff4f122303659b87380b14a6f76bed2d45ad513dc1bb187e4e632eed195",
+          "role": "captured_original_html"
+        }
+      ],
+      "publisher_cluster": "samaratoday.ru",
+      "event_cluster": "samara-remand-prison-bribery-verdict-2026-11-03",
+      "annotation_boundary": "full_original_and_own_publication_metadata",
+      "publication_evidence": [
+        {
+          "field": "article:published_time",
+          "value": "2026-11-03T11:43:33+00:00",
+          "json_pointer": "/documents/https:~1~1samaratoday.ru~1news~1493733/raw_meta/1"
+        },
+        {
+          "field": "Article.datePublished",
+          "value": "2026-11-03T11:43:33+00:00",
+          "json_pointer": "/documents/https:~1~1samaratoday.ru~1news~1493733/raw_jsonld/0/@graph/0/datePublished",
+          "headline": "Экс-сотрудников СИЗО в Самаре осудили за взятки",
+          "own_url": "https://samaratoday.ru/news/493733"
+        },
+        {
+          "field": "Article.datePublished",
+          "value": "2026-11-03T15:43:33+04:00",
+          "json_pointer": "/documents/https:~1~1samaratoday.ru~1news~1493733/raw_jsonld/2/datePublished",
+          "headline": "Экс-сотрудников СИЗО в Самаре осудили за взятки",
+          "own_url": "https://samaratoday.ru/news/493733"
+        }
+      ],
+      "original_text_hash": "f1b02dc485700a11cf91881fb4969a13b790516716f2dadd8b97b38c493fd664",
+      "original_final_url": "https://samaratoday.ru/news/493733",
+      "original_http_status": 200
+    },
+    {
+      "blind_id": "7df04079d7e22e67",
+      "case_id": "nc07",
+      "url": "https://www.novyvek.cz/2025/08/",
+      "grade": 0,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка месячного архива явно обозначает август 2025 вместо ноября; это не собственная дата отдельной статьи и не подтверждение казанской новости.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json rows[blind_id=7df04079d7e22e67].source_cards[0] (https://www.novyvek.cz/2025/08/): «sierpień 2025 – novyvek.cz»"
+      ],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "7e55262780e62101",
+      "case_id": "nc04",
+      "url": "https://www.slunecnice.cz/android/sw/novosti-belgoroda/",
+      "grade": 0,
+      "kind": "application",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка явно рекламирует скачивание приложения (download/App Store), а не отдельную новостную публикацию. Оригинал не предоставлен; отрицательная граница предварительная, только по карточке.",
+      "evidence": [
+        "Новости Белгорода 2.2 download - Приложение “Новости Белгорода” Хотите всегда оставаться в курсе происшествий где бы вы не находились? Скачайте…"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/40/source_cards/0/snippet",
+          "url": "https://www.slunecnice.cz/android/sw/novosti-belgoroda/",
+          "field": "snippet",
+          "quote": "Новости Белгорода 2.2 download - Приложение “Новости Белгорода” Хотите всегда оставаться в курсе происшествий где бы вы не находились? Скачайте…"
+        }
+      ],
+      "publisher_cluster": "www.slunecnice.cz",
+      "event_cluster": null,
+      "annotation_boundary": "card_only_provisional",
+      "publication_evidence": []
+    },
+    {
+      "blind_id": "81d7806baa419066",
+      "case_id": "nc03",
+      "url": "https://apps.apple.com/cz/app/nn-ru-%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8-%D0%BD-%D0%BD%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B0/id1489281213",
+      "grade": 0,
+      "kind": "application",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка явно рекламирует скачивание приложения (download/App Store), а не отдельную новостную публикацию. Оригинал не предоставлен; отрицательная граница предварительная, только по карточке.",
+      "evidence": [
+        "Download NN.ru — Новости Н. Новгорода by Городские порталы on the App Store. See screenshots, ratings and reviews, user tips and more games like NN.ru — Новости…"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/41/source_cards/0/snippet",
+          "url": "https://apps.apple.com/cz/app/nn-ru-%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8-%D0%BD-%D0%BD%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B0/id1489281213",
+          "field": "snippet",
+          "quote": "Download NN.ru — Новости Н. Новгорода by Городские порталы on the App Store. See screenshots, ratings and reviews, user tips and more games like NN.ru — Новости…"
+        }
+      ],
+      "publisher_cluster": "apps.apple.com",
+      "event_cluster": null,
+      "annotation_boundary": "card_only_provisional",
+      "publication_evidence": []
+    },
+    {
+      "blind_id": "838331f31fd48baa",
+      "case_id": "nc03",
+      "url": "https://www.youtube.com/@SetiNNstation",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка и адрес обозначают главную страницу, раздел или канал новостей; это навигация к публикациям, а не отдельная статья с проверенной датой. Оригинал не предоставлен для этой страницы; граница grade1 предварительная, основана только на карточке.",
+      "evidence": [
+        "\"Кстати... новости Нижнего НовгородаОфициальный сайт: http://setinn.tvОфициальная группа в вк: https://vk.com/kstatinnОфициальный канал в Telegram: https://"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/42/source_cards/0/snippet",
+          "url": "https://www.youtube.com/@SetiNNstation",
+          "field": "snippet",
+          "quote": "\"Кстати... новости Нижнего НовгородаОфициальный сайт: http://setinn.tvОфициальная группа в вк: https://vk.com/kstatinnОфициальный канал в Telegram: https://"
+        }
+      ],
+      "publisher_cluster": "kstatinn-setinn",
+      "event_cluster": null,
+      "annotation_boundary": "card_only_provisional",
+      "publication_evidence": []
+    },
+    {
+      "blind_id": "8438a5ed2392995a",
+      "case_id": "nc05",
+      "url": "https://webrate.org/site/bloknot-rostov.ru/",
+      "grade": 0,
+      "kind": "other",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Страница стороннего каталога/анализа сайта bloknot-rostov.ru, не собственная новостная статья.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json rows[blind_id=8438a5ed2392995a].source_cards[0] (https://webrate.org/site/bloknot-rostov.ru/): «Bloknot-rostov.ru Новости Ростова-на-Дону сегодня»"
+      ],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "8cf1f5bb61057296",
+      "case_id": "nc07",
+      "url": "https://www.linkedin.com/posts/tihobanov_2025-%D0%B1%D0%B5%D1%88%D0%B5-%D0%B3%D0%BE%D0%B4%D0%B8%D0%BD%D0%B0-%D0%BD%D0%B0-%D0%BF%D1%80%D0%B5%D0%BB%D0%BE%D0%BC%D0%B0-%D0%B3%D0%BE%D0%B4%D0%B8%D0%BD%D0%B0%D1%82%D0%B0-%D0%B2-activity-7412144432239693824-bXGb",
+      "grade": 0,
+      "kind": "other",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка социального поста об итогах года в искусственном интеллекте; явная иная тема, без городских новостей Казани.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json rows[blind_id=8cf1f5bb61057296].source_cards[0] (https://www.linkedin.com/posts/tihobanov_2025-%D0%B1%D0%B5%D1%88%D0%B5-%D0%B3%D0%BE%D0%B4%D0%B8%D0%BD%D0%B0-%D0%BD%D0%B0-%D0%BF%D1%80%D0%B5%D0%BB%D0%BE%D0%BC%D0%B0-%D0%B3%D0%BE%D0%B4%D0%B8%D0%BD%D0%B0%D1%82%D0%B0-%D0%B2-activity-7412144432239693824-bXGb): «изкуственият интелект премина от „експеримент“»"
+      ],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "8da7b472f7130035",
+      "case_id": "nc06",
+      "url": "https://sgpress.ru/news/587193",
+      "grade": 0,
+      "kind": "article",
+      "published_date": "2026-09-25",
+      "source_reviewed": true,
+      "date_verified": true,
+      "reason": "Оригинал — подборка мест осенних прогулок Самарской области, включая Самару. Собственная публикация 25.09.2026, вне 03.11.2026.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-native-documents.json documents['https://sgpress.ru/news/587193'].full_text: «Ботанический сад подойдет тем, кто хочет посмотреть на осеннюю природу, не выезжая из Самары.»",
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-native-documents.json documents['https://sgpress.ru/news/587193'].raw_jsonld NewsArticle(mainEntityOfPage=https://sgpress.ru/news/587193).datePublished = 2026-09-25T06:01:00+04:00; same article:published_time; converted to Europe/Moscow"
+      ],
+      "review_boundary": "native_original_body_and_own_publication_metadata",
+      "source_refs": {
+        "raw_html_path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-15.html",
+        "raw_html_sha256": "a3616d0088c55e6f303d28927aeb4d99239a919f73f0e9e73e1d136e713734a3",
+        "bundle_full_text_sha256": "cc057e77c2bacd04bbed935c6f4eb99fbd9087dec813c2432eb4d16bbf896323",
+        "declared_text_hash": "cc057e77c2bacd04bbed935c6f4eb99fbd9087dec813c2432eb4d16bbf896323"
+      }
+    },
+    {
+      "blind_id": "8e41ee00f8a8e8c7",
+      "case_id": "nc02",
+      "url": "https://www.niasam.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка и адрес обозначают главную страницу, раздел или канал новостей; это навигация к публикациям, а не отдельная статья с проверенной датой. Оригинал не предоставлен для этой страницы; граница grade1 предварительная, основана только на карточке.",
+      "evidence": [
+        "Читайте последние новости Самары, Тольятти и Самарской области на сайте niasam.ru새 창 열림"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/46/source_cards/0/snippet",
+          "url": "https://www.niasam.ru/",
+          "field": "snippet",
+          "quote": "Читайте последние новости Самары, Тольятти и Самарской области на сайте niasam.ru새 창 열림"
+        }
+      ],
+      "publisher_cluster": "www.niasam.ru",
+      "event_cluster": null,
+      "annotation_boundary": "card_only_provisional",
+      "publication_evidence": []
+    },
+    {
+      "blind_id": "92f8c181d48cc844",
+      "case_id": "nc08",
+      "url": "https://www.kuban.kp.ru/",
+      "grade": 0,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка региональной редакции Краснодара/Краснодарского края, не городских новостей Самары.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json rows[blind_id=92f8c181d48cc844].source_cards[0] (https://www.kuban.kp.ru/): «Главные новости Краснодара и Краснодарского края»"
+      ],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "93f84a4ce1d35ec5",
+      "case_id": "nc03",
+      "url": "https://www.youtube.com/channel/UCtAaRjR_XE8ryOG8SvLzJNA",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка и адрес обозначают главную страницу, раздел или канал новостей; это навигация к публикациям, а не отдельная статья с проверенной датой. Оригинал не предоставлен для этой страницы; граница grade1 предварительная, основана только на карточке.",
+      "evidence": [
+        "약 82.1만 명의 구독자를 보유한 Кстати Новости Нижнего Новгорода의 유튜브. 약 2.7만 개의 동영상이 있습니다. \"Кстати...\" новости Нижнего Новгорода Официальный сайт: http://setinn.tv Официальная группа в вк: https://vk.com...새 창 열림"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/48/source_cards/0/snippet",
+          "url": "https://www.youtube.com/channel/UCtAaRjR_XE8ryOG8SvLzJNA",
+          "field": "snippet",
+          "quote": "약 82.1만 명의 구독자를 보유한 Кстати Новости Нижнего Новгорода의 유튜브. 약 2.7만 개의 동영상이 있습니다. \"Кстати...\" новости Нижнего Новгорода Официальный сайт: http://setinn.tv Официальная группа в вк: https://vk.com...새 창 열림"
+        }
+      ],
+      "publisher_cluster": "kstatinn-setinn",
+      "event_cluster": null,
+      "annotation_boundary": "card_only_provisional",
+      "publication_evidence": []
+    },
+    {
+      "blind_id": "9584392ddc232a13",
+      "case_id": "nc07",
+      "url": "https://www.ruchess.ru/news/all/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Общая лента шахматных новостей с несколькими заголовками; отдельная казанская статья с собственной датой за нужный месяц не проверена.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json rows[blind_id=9584392ddc232a13].source_cards[0] (https://www.ruchess.ru/news/all/): «Первенство мира среди школьников выходит на финишную прямую»"
+      ],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "a03230e765ac07c8",
+      "case_id": "nc02",
+      "url": "https://samaratoday.ru/news/473479",
+      "grade": 2,
+      "kind": "article",
+      "published_date": "2026-11-03",
+      "source_reviewed": true,
+      "date_verified": true,
+      "reason": "Собственная полная новость о находке в самарском архиве; дата публикации 03.11.2026 подтверждена Article/datePublished и article:published_time. 4 октября 1965 относится к найденному документу, не к публикации.",
+      "evidence": [
+        "Общество В самарском архиве нашли автограф Черномырдина со времён учёбы в Самарском политехе 03.11.2026 8 Минут: 2 В Самарском областном архиве социально-политической истории нашли неизвестный автограф Виктора Черномырди",
+        "В Самарском областном архиве социально-политической истории нашли неизвестный автограф Виктора Черномырдина.",
+        "article:published_time = 2026-11-03T08:40:46+00:00",
+        "Article.datePublished = 2026-11-03T08:40:46+00:00"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/50/source_cards/0/snippet",
+          "url": "https://samaratoday.ru/news/473479",
+          "field": "snippet",
+          "quote": "Общество В самарском архиве нашли автограф Черномырдина со времён учёбы в Самарском политехе 03.11.2026 8 Минут: 2 В Самарском областном архиве социально-политической истории нашли неизвестный автограф Виктора Черномырди"
+        },
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-native-documents.json",
+          "json_pointer": "/documents/https:~1~1samaratoday.ru~1news~1473479/full_text",
+          "url": "https://samaratoday.ru/news/473479",
+          "field": "full_text",
+          "start_char": 118,
+          "end_char": 226,
+          "quote": "В Самарском областном архиве социально-политической истории нашли неизвестный автограф Виктора Черномырдина."
+        },
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-00.html",
+          "url": "https://samaratoday.ru/news/473479",
+          "sha256": "51ebc659392f3363d3eaae5e4113a037ea3e07b8d9e40c4072c98fef39b4da62",
+          "role": "captured_original_html"
+        }
+      ],
+      "publisher_cluster": "samaratoday.ru",
+      "event_cluster": "samara-archive-chernomyrdin-autograph-discovery-2026-11-03",
+      "annotation_boundary": "full_original_and_own_publication_metadata",
+      "publication_evidence": [
+        {
+          "field": "article:published_time",
+          "value": "2026-11-03T08:40:46+00:00",
+          "json_pointer": "/documents/https:~1~1samaratoday.ru~1news~1473479/raw_meta/1"
+        },
+        {
+          "field": "Article.datePublished",
+          "value": "2026-11-03T08:40:46+00:00",
+          "json_pointer": "/documents/https:~1~1samaratoday.ru~1news~1473479/raw_jsonld/0/@graph/0/datePublished",
+          "headline": "В самарском архиве нашли автограф Черномырдина со времён учёбы в Самарском политехе",
+          "own_url": "https://samaratoday.ru/news/473479"
+        },
+        {
+          "field": "Article.datePublished",
+          "value": "2026-11-03T12:40:46+04:00",
+          "json_pointer": "/documents/https:~1~1samaratoday.ru~1news~1473479/raw_jsonld/2/datePublished",
+          "headline": "В самарском архиве нашли автограф Черномырдина со времён учёбы в Самарском политехе",
+          "own_url": "https://samaratoday.ru/news/473479"
+        }
+      ],
+      "original_text_hash": "027da2edbbdd09fc25717bdb3fc948f68944e6dc7b7e93039476b44580ca73a9",
+      "original_final_url": "https://samaratoday.ru/news/473479",
+      "original_http_status": 200
+    },
+    {
+      "blind_id": "a66fc0f9b07e72af",
+      "case_id": "nc01",
+      "url": "https://vrn.dixinews.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка и адрес обозначают главную страницу, раздел или канал новостей; это навигация к публикациям, а не отдельная статья с проверенной датой. Оригинал не предоставлен для этой страницы; граница grade1 предварительная, основана только на карточке.",
+      "evidence": [
+        "Российское информационное агентство «Агентство официальных новостей» // Воронеж: публикует новости от официальных источников, экстренных служб, экспертов, журналистов с места событий по городу Воронежу и Воронежской обла"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/51/source_cards/0/snippet",
+          "url": "https://vrn.dixinews.ru/",
+          "field": "snippet",
+          "quote": "Российское информационное агентство «Агентство официальных новостей» // Воронеж: публикует новости от официальных источников, экстренных служб, экспертов, журналистов с места событий по городу Воронежу и Воронежской обла"
+        }
+      ],
+      "publisher_cluster": "vrn.dixinews.ru",
+      "event_cluster": null,
+      "annotation_boundary": "card_only_provisional",
+      "publication_evidence": []
+    },
+    {
+      "blind_id": "a6e4ca416d4eedcd",
+      "case_id": "nc03",
+      "url": "https://www.academia.edu/19749777/%D0%9C%D0%B5%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA_%D0%90_%D0%93_%D0%9A_%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%83_%D0%BE_%D0%BF%D1%80%D0%BE%D0%B8%D1%81%D1%85%D0%BE%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B8_%D1%82%D1%80%D0%B5%D1%85%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%BE%D0%B9_%D0%BE%D1%81%D0%B5%D0%B2%D0%BE%D0%B9_%D0%B0%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%BD%D0%BE%D0%B9_%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%B7%D0%B8%D1%86%D0%B8%D0%B8_%D1%86%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D1%82%D1%80%D0%B0%D0%BF%D0%B5%D0%B7%D0%BD%D0%B0%D1%8F_%D0%BA%D0%BE%D0%BB%D0%BE%D0%BA%D0%BE%D0%BB%D1%8C%D0%BD%D1%8F_%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA%D0%B8_%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D0%B8_%D0%B8_%D0%BA%D1%83%D0%BB%D1%8C%D1%82%D1%83%D1%80%D1%8B_%D0%92%D0%B5%D1%80%D1%85%D0%BD%D0%B5%D0%B3%D0%BE_%D0%9F%D0%BE%D0%B2%D0%BE%D0%BB%D0%B6%D1%8C%D1%8F_%D0%9D%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9_%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4_1991_%D0%A1_211_216",
+      "grade": 0,
+      "kind": "other",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка явно описывает научную/историческую публикацию, а не городские новости в заданном временном окне. Оригинал не предоставлен; отрицательная граница предварительная, только по явной теме карточки.",
+      "evidence": [
+        "Церковь Ильи Пророка на Ильинской горе 1655–1656 годов в контексте архитектуры посада Нижнего Новгорода, 2025"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/52/source_cards/0/snippet",
+          "url": "https://www.academia.edu/19749777/%D0%9C%D0%B5%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA_%D0%90_%D0%93_%D0%9A_%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%83_%D0%BE_%D0%BF%D1%80%D0%BE%D0%B8%D1%81%D1%85%D0%BE%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B8_%D1%82%D1%80%D0%B5%D1%85%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%BE%D0%B9_%D0%BE%D1%81%D0%B5%D0%B2%D0%BE%D0%B9_%D0%B0%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%BD%D0%BE%D0%B9_%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%B7%D0%B8%D1%86%D0%B8%D0%B8_%D1%86%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D1%82%D1%80%D0%B0%D0%BF%D0%B5%D0%B7%D0%BD%D0%B0%D1%8F_%D0%BA%D0%BE%D0%BB%D0%BE%D0%BA%D0%BE%D0%BB%D1%8C%D0%BD%D1%8F_%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA%D0%B8_%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D0%B8_%D0%B8_%D0%BA%D1%83%D0%BB%D1%8C%D1%82%D1%83%D1%80%D1%8B_%D0%92%D0%B5%D1%80%D1%85%D0%BD%D0%B5%D0%B3%D0%BE_%D0%9F%D0%BE%D0%B2%D0%BE%D0%BB%D0%B6%D1%8C%D1%8F_%D0%9D%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9_%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4_1991_%D0%A1_211_216",
+          "field": "snippet",
+          "quote": "Церковь Ильи Пророка на Ильинской горе 1655–1656 годов в контексте архитектуры посада Нижнего Новгорода, 2025"
+        }
+      ],
+      "publisher_cluster": "www.academia.edu",
+      "event_cluster": null,
+      "annotation_boundary": "card_only_provisional",
+      "publication_evidence": []
+    },
+    {
+      "blind_id": "ad10b6b6acec36ea",
+      "case_id": "nc02",
+      "url": "https://volga.news/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка и адрес обозначают главную страницу, раздел или канал новостей; это навигация к публикациям, а не отдельная статья с проверенной датой. Оригинал не предоставлен для этой страницы; граница grade1 предварительная, основана только на карточке.",
+      "evidence": [
+        "Все последние новости Самары, Тольятти и Самарской области на портале Волга Ньюс: политика, экономика, происшествия, культура, спорт."
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/53/source_cards/0/snippet",
+          "url": "https://volga.news/",
+          "field": "snippet",
+          "quote": "Все последние новости Самары, Тольятти и Самарской области на портале Волга Ньюс: политика, экономика, происшествия, культура, спорт."
+        }
+      ],
+      "publisher_cluster": "volga.news",
+      "event_cluster": null,
+      "annotation_boundary": "card_only_provisional",
+      "publication_evidence": []
+    },
+    {
+      "blind_id": "afd24db587ed65a5",
+      "case_id": "nc01",
+      "url": "https://moe-online.ru/news",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка и адрес обозначают главную страницу, раздел или канал новостей; это навигация к публикациям, а не отдельная статья с проверенной датой. Оригинал не предоставлен для этой страницы; граница grade1 предварительная, основана только на карточке.",
+      "evidence": [
+        "Последние новости Воронежа и области — происшествия, ЖКХ, спорт, экономика и другие события. Аналитические публикации, информационная лента новостей, события дня, видео- и фоторепортажи, комментарии새 창 열림"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/54/source_cards/0/snippet",
+          "url": "https://moe-online.ru/news",
+          "field": "snippet",
+          "quote": "Последние новости Воронежа и области — происшествия, ЖКХ, спорт, экономика и другие события. Аналитические публикации, информационная лента новостей, события дня, видео- и фоторепортажи, комментарии새 창 열림"
+        }
+      ],
+      "publisher_cluster": "moe-online.ru",
+      "event_cluster": null,
+      "annotation_boundary": "card_only_provisional",
+      "publication_evidence": []
+    },
+    {
+      "blind_id": "b04a0b262bb1486e",
+      "case_id": "nc04",
+      "url": "https://www.belnovosti.ru/",
+      "grade": null,
+      "kind": "unknown",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Предоставлена только общая фраза «Быть в курсе самых актуальных событий» без оригинала. Недостаточно для надёжного определения типа страницы, города и даты; по одному hostname соответствие не выводилось.",
+      "evidence": [
+        "Быть в курсе самых актуальных событий새 창 열림"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/55/source_cards/0/snippet",
+          "url": "https://www.belnovosti.ru/",
+          "field": "snippet",
+          "quote": "Быть в курсе самых актуальных событий새 창 열림"
+        }
+      ],
+      "publisher_cluster": "www.belnovosti.ru",
+      "event_cluster": null,
+      "annotation_boundary": "unknown_original_unavailable",
+      "publication_evidence": []
+    },
+    {
+      "blind_id": "b0b4144f772baf0d",
+      "case_id": "nc08",
+      "url": "https://www.fraus-klett.cz/experiencias-internacional-3-b1-libro-del-alumno-mp3-descargable",
+      "grade": 0,
+      "kind": "other",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка учебного пособия по языку, явная иная тема/тип, не новость Самары.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json rows[blind_id=b0b4144f772baf0d].source_cards[0] (https://www.fraus-klett.cz/experiencias-internacional-3-b1-libro-del-alumno-mp3-descargable): «Libro del alumno + MP3»"
+      ],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "b4e7937be65078f9",
+      "case_id": "nc06",
+      "url": "https://sgpress.ru/news/168597",
+      "grade": null,
+      "kind": "article",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка предполагаемой статьи о Самаре есть, оригинал в source-only bundle отсутствует. Полное тело и собственная дата публикации не проверены; исторический сюжет сам по себе не доказывает старую публикацию.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json rows[blind_id=b4e7937be65078f9].source_cards[0] (https://sgpress.ru/news/168597): «Было ли «стояние Зои» на самом деле»"
+      ],
+      "review_boundary": "missing_original_unknown_not_negative"
+    },
+    {
+      "blind_id": "b84776e788925a67",
+      "case_id": "nc05",
+      "url": "https://www.rostov.kp.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Главная региональной редакции с описанием рубрик; отдельная собственная публикация и дата не представлены.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json rows[blind_id=b84776e788925a67].source_cards[0] (https://www.rostov.kp.ru/): «Главные новости Ростова-на-Дону и Ростовской области»"
+      ],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "bbcadfe7d42f6b5c",
+      "case_id": "nc07",
+      "url": "https://kazan-kremlin.ru/",
+      "grade": 1,
+      "kind": "other",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Главная достопримечательности Казани — навигационный городской источник, не конкретная проверенная новостная публикация за ноябрь 2025.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json rows[blind_id=bbcadfe7d42f6b5c].source_cards[0] (https://kazan-kremlin.ru/): «Казанский Кремль - древнейшая часть Казани»"
+      ],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "bbf550d4a63b77b6",
+      "case_id": "nc01",
+      "url": "https://ria.ru/location_Voronezh/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка и адрес обозначают главную страницу, раздел или канал новостей; это навигация к публикациям, а не отдельная статья с проверенной датой. Оригинал не предоставлен для этой страницы; граница grade1 предварительная, основана только на карточке.",
+      "evidence": [
+        "Назван город-миллионник, где сильнее всего подорожали новостройки새 창 열림"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/60/source_cards/0/snippet",
+          "url": "https://ria.ru/location_Voronezh/",
+          "field": "snippet",
+          "quote": "Назван город-миллионник, где сильнее всего подорожали новостройки새 창 열림"
+        }
+      ],
+      "publisher_cluster": "ria.ru",
+      "event_cluster": null,
+      "annotation_boundary": "card_only_provisional",
+      "publication_evidence": []
+    },
+    {
+      "blind_id": "bd363bfbc5dc7d54",
+      "case_id": "nc06",
+      "url": "https://sgpress.ru/news/577479",
+      "grade": 0,
+      "kind": "article",
+      "published_date": "2026-08-19",
+      "source_reviewed": true,
+      "date_verified": true,
+      "reason": "Оригинал — содержательный очерк о восстановлении домов Самары. Собственная публикация 19.08.2026, вне обязательного 03.11.2026.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-native-documents.json documents['https://sgpress.ru/news/577479'].full_text: «Исторический центр Самары можно сравнить с мозаикой.»",
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-native-documents.json documents['https://sgpress.ru/news/577479'].raw_jsonld NewsArticle(mainEntityOfPage=https://sgpress.ru/news/577479).datePublished = 2026-08-19T07:07:00+04:00; same article:published_time; converted to Europe/Moscow"
+      ],
+      "review_boundary": "native_original_body_and_own_publication_metadata",
+      "source_refs": {
+        "raw_html_path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-17.html",
+        "raw_html_sha256": "57221c52bf024e42860aa05f2dda127611d4af0496050c1a8c0704b2f6715db5",
+        "bundle_full_text_sha256": "fa786b12d375b7d68663a1f675c7b56886a77d4ad61b89c37bd64859fd1bf01c",
+        "declared_text_hash": "fa786b12d375b7d68663a1f675c7b56886a77d4ad61b89c37bd64859fd1bf01c"
+      }
+    },
+    {
+      "blind_id": "bee851740acf36ba",
+      "case_id": "nc01",
+      "url": "https://novostivoronezha.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка и адрес обозначают главную страницу, раздел или канал новостей; это навигация к публикациям, а не отдельная статья с проверенной датой. Оригинал не предоставлен для этой страницы; граница grade1 предварительная, основана только на карточке.",
+      "evidence": [
+        "Все важные новости Воронежа и области: происшествия, политика, жизнь города새 창 열림"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/62/source_cards/0/snippet",
+          "url": "https://novostivoronezha.ru/",
+          "field": "snippet",
+          "quote": "Все важные новости Воронежа и области: происшествия, политика, жизнь города새 창 열림"
+        }
+      ],
+      "publisher_cluster": "novostivoronezha.ru",
+      "event_cluster": null,
+      "annotation_boundary": "card_only_provisional",
+      "publication_evidence": []
+    },
+    {
+      "blind_id": "c1614bc38617116c",
+      "case_id": "nc05",
+      "url": "https://rostovnadonu.bezformata.com/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Явная агрегирующая лента новостей, не отдельная датированная статья.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json rows[blind_id=c1614bc38617116c].source_cards[0] (https://rostovnadonu.bezformata.com/): «Лента новостей Ростова-на-Дону и Ростовской области»"
+      ],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "d36144c640699267",
+      "case_id": "nc04",
+      "url": "https://belgorod.sm.news/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка и адрес обозначают главную страницу, раздел или канал новостей; это навигация к публикациям, а не отдельная статья с проверенной датой. Оригинал не предоставлен для этой страницы; граница grade1 предварительная, основана только на карточке.",
+      "evidence": [
+        "Новости Белгорода: события, новости политики, финансов, культуры и спорта. Репортажи с места происшествий, аналитики, и мнения экспертов. Наш сайт работает ежедневно и круглосуточно.새 창 열림"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/64/source_cards/0/snippet",
+          "url": "https://belgorod.sm.news/",
+          "field": "snippet",
+          "quote": "Новости Белгорода: события, новости политики, финансов, культуры и спорта. Репортажи с места происшествий, аналитики, и мнения экспертов. Наш сайт работает ежедневно и круглосуточно.새 창 열림"
+        }
+      ],
+      "publisher_cluster": "belgorod.sm.news",
+      "event_cluster": null,
+      "annotation_boundary": "card_only_provisional",
+      "publication_evidence": []
+    },
+    {
+      "blind_id": "d8c90bcd66dd5c9b",
+      "case_id": "nc02",
+      "url": "https://450media.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка и адрес обозначают главную страницу, раздел или канал новостей; это навигация к публикациям, а не отдельная статья с проверенной датой. Оригинал не предоставлен для этой страницы; граница grade1 предварительная, основана только на карточке.",
+      "evidence": [
+        "Главные новости Самары и Самарской области на сегодня онлайн. Мы публикуем свежую информацию о последних событиях города: происшествия, новости политики, экономики, культуры и спорта."
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/65/source_cards/0/snippet",
+          "url": "https://450media.ru/",
+          "field": "snippet",
+          "quote": "Главные новости Самары и Самарской области на сегодня онлайн. Мы публикуем свежую информацию о последних событиях города: происшествия, новости политики, экономики, культуры и спорта."
+        }
+      ],
+      "publisher_cluster": "450media.ru",
+      "event_cluster": null,
+      "annotation_boundary": "card_only_provisional",
+      "publication_evidence": []
+    },
+    {
+      "blind_id": "e36b7f0b1816adb6",
+      "case_id": "nc08",
+      "url": "https://www.novinky.cz/clanek/zahranicni-evropa-ruska-hrozila-placici-trilete-dceri-ze-ji-pusti-z-balkonu-v-6-patre-neudrzela-ji-40362760",
+      "grade": null,
+      "kind": "article",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка новостной статьи содержит дату 9.6.2021, но оригинал отсутствует. Эту дату не верифицирую как собственную публикационную дату; полное содержание и связь с Самарой не проверены. Будущая публикация за 03.11.2030 не подтверждена.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json rows[blind_id=e36b7f0b1816adb6].source_cards[0] (https://www.novinky.cz/clanek/zahranicni-evropa-ruska-hrozila-placici-trilete-dceri-ze-ji-pusti-z-balkonu-v-6-patre-neudrzela-ji-40362760): «9. 6. 2021»"
+      ],
+      "review_boundary": "missing_original_unknown_not_negative"
+    },
+    {
+      "blind_id": "e3af9f4d7b5dfea7",
+      "case_id": "nc04",
+      "url": "https://chr.rbc.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": true,
+      "date_verified": false,
+      "reason": "Собственный оригинал содержит ленту нескольких самостоятельных заголовков/анонсов; отдельной публикации с собственной полной датой здесь нет. Даты соседних карточек и og:type не переносились на страницу как дату и тип статьи.",
+      "evidence": [
+        "✅Новости Воронежа, Липецка, Курска, Белгорода, Тамбова ⚡Свежие события и происшествия на РБК새 창 열림",
+        "В Белгородской области отремонтировали дорогу в Замостье за 38 млн руб."
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/67/source_cards/0/snippet",
+          "url": "https://chr.rbc.ru/",
+          "field": "snippet",
+          "quote": "✅Новости Воронежа, Липецка, Курска, Белгорода, Тамбова ⚡Свежие события и происшествия на РБК새 창 열림"
+        },
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-native-documents.json",
+          "json_pointer": "/documents/https:~1~1chr.rbc.ru~1/full_text",
+          "url": "https://chr.rbc.ru/",
+          "field": "full_text",
+          "start_char": 400,
+          "end_char": 471,
+          "quote": "В Белгородской области отремонтировали дорогу в Замостье за 38 млн руб."
+        },
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-23.html",
+          "url": "https://chr.rbc.ru/",
+          "sha256": "25450a16f8756e3a46edacee07691795bfe1c701925ec55110a44bd70107d30d",
+          "role": "captured_original_html"
+        }
+      ],
+      "publisher_cluster": "chr.rbc.ru",
+      "event_cluster": null,
+      "annotation_boundary": "full_original_feed",
+      "publication_evidence": [],
+      "original_text_hash": "7d7b38d56e84737afc4fc99da014f6af3da55f1371a5d9552f4a1ff754ff60ed",
+      "original_final_url": "https://chr.rbc.ru/",
+      "original_http_status": 200
+    },
+    {
+      "blind_id": "e4e2e0efd7739302",
+      "case_id": "nc02",
+      "url": "https://samaratoday.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка и адрес обозначают главную страницу, раздел или канал новостей; это навигация к публикациям, а не отдельная статья с проверенной датой. Оригинал не предоставлен для этой страницы; граница grade1 предварительная, основана только на карточке.",
+      "evidence": [
+        "Последние свежие новости Самары и Самарской области на сегодня - онлайн. Оперативная информация. Важные новости дня на сайте SAMARATODAY.RU새 창 열림"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/68/source_cards/0/snippet",
+          "url": "https://samaratoday.ru/",
+          "field": "snippet",
+          "quote": "Последние свежие новости Самары и Самарской области на сегодня - онлайн. Оперативная информация. Важные новости дня на сайте SAMARATODAY.RU새 창 열림"
+        }
+      ],
+      "publisher_cluster": "samaratoday.ru",
+      "event_cluster": null,
+      "annotation_boundary": "card_only_provisional",
+      "publication_evidence": []
+    },
+    {
+      "blind_id": "e5b3fc4f6533b7d6",
+      "case_id": "nc03",
+      "url": "https://setinn.tv/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка и адрес обозначают главную страницу, раздел или канал новостей; это навигация к публикациям, а не отдельная статья с проверенной датой. Оригинал не предоставлен для этой страницы; граница grade1 предварительная, основана только на карточке.",
+      "evidence": [
+        "новости Нижнего Новгорода새 창 열림"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/69/source_cards/0/snippet",
+          "url": "https://setinn.tv/",
+          "field": "snippet",
+          "quote": "новости Нижнего Новгорода새 창 열림"
+        }
+      ],
+      "publisher_cluster": "kstatinn-setinn",
+      "event_cluster": null,
+      "annotation_boundary": "card_only_provisional",
+      "publication_evidence": []
+    },
+    {
+      "blind_id": "ebd827f9707eb317",
+      "case_id": "nc01",
+      "url": "https://chr.rbc.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": true,
+      "date_verified": false,
+      "reason": "Собственный оригинал содержит ленту нескольких самостоятельных заголовков/анонсов; отдельной публикации с собственной полной датой здесь нет. Даты соседних карточек и og:type не переносились на страницу как дату и тип статьи.",
+      "evidence": [
+        "✅Новости Воронежа, Липецка, Курска, Белгорода, Тамбова ⚡Свежие события и происшествия на РБК새 창 열림",
+        "В Белгородской области отремонтировали дорогу в Замостье за 38 млн руб."
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/70/source_cards/0/snippet",
+          "url": "https://chr.rbc.ru/",
+          "field": "snippet",
+          "quote": "✅Новости Воронежа, Липецка, Курска, Белгорода, Тамбова ⚡Свежие события и происшествия на РБК새 창 열림"
+        },
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-native-documents.json",
+          "json_pointer": "/documents/https:~1~1chr.rbc.ru~1/full_text",
+          "url": "https://chr.rbc.ru/",
+          "field": "full_text",
+          "start_char": 400,
+          "end_char": 471,
+          "quote": "В Белгородской области отремонтировали дорогу в Замостье за 38 млн руб."
+        },
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-23.html",
+          "url": "https://chr.rbc.ru/",
+          "sha256": "25450a16f8756e3a46edacee07691795bfe1c701925ec55110a44bd70107d30d",
+          "role": "captured_original_html"
+        }
+      ],
+      "publisher_cluster": "chr.rbc.ru",
+      "event_cluster": null,
+      "annotation_boundary": "full_original_feed",
+      "publication_evidence": [],
+      "original_text_hash": "7d7b38d56e84737afc4fc99da014f6af3da55f1371a5d9552f4a1ff754ff60ed",
+      "original_final_url": "https://chr.rbc.ru/",
+      "original_http_status": 200
+    },
+    {
+      "blind_id": "ef9ec359a43c3bb7",
+      "case_id": "nc08",
+      "url": "https://www.majkl3d.cz/3d-slovnik-3mf",
+      "grade": 0,
+      "kind": "other",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка технического словаря о 3MF/3D-печати, явная иная тема, не городские новости Самары.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json rows[blind_id=ef9ec359a43c3bb7].source_cards[0] (https://www.majkl3d.cz/3d-slovnik-3mf): «3MF je moderní 3D formát - náhrada STL.»"
+      ],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "f08332ead912c7bc",
+      "case_id": "nc03",
+      "url": "https://nn.mk.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка и адрес обозначают главную страницу, раздел или канал новостей; это навигация к публикациям, а не отдельная статья с проверенной датой. Оригинал не предоставлен для этой страницы; граница grade1 предварительная, основана только на карточке.",
+      "evidence": [
+        "Московский Комсомолец в Нижнем Новгороде - все местные и федеральные новости, статьи, обзоры, видео.새 창 열림"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json",
+          "json_pointer": "/rows/72/source_cards/0/snippet",
+          "url": "https://nn.mk.ru/",
+          "field": "snippet",
+          "quote": "Московский Комсомолец в Нижнем Новгороде - все местные и федеральные новости, статьи, обзоры, видео.새 창 열림"
+        }
+      ],
+      "publisher_cluster": "nn.mk.ru",
+      "event_cluster": null,
+      "annotation_boundary": "card_only_provisional",
+      "publication_evidence": []
+    },
+    {
+      "blind_id": "f0e8f1f6c369bca9",
+      "case_id": "nc08",
+      "url": "https://csu.gov.cz/produkty/newsletter-35-kalendarni-tyden-2024",
+      "grade": 0,
+      "kind": "other",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка статистического бюллетеня о занятости и производстве мяса; явная иная тема, не городские новости Самары. Год выпуска бюллетеня не присвоен как дата публикации новости.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json rows[blind_id=f0e8f1f6c369bca9].source_cards[0] (https://csu.gov.cz/produkty/newsletter-35-kalendarni-tyden-2024): «Míry zaměstnanosti, nezaměstnanosti a ekonomické aktivity»"
+      ],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "fadd2f8a59a1ff3c",
+      "case_id": "nc05",
+      "url": "https://russia24.pro/rostov-na-donu/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Городская новостная подборка/лента; по карточке нельзя подтвердить отдельную публикацию за нужный день.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json rows[blind_id=fadd2f8a59a1ff3c].source_cards[0] (https://russia24.pro/rostov-na-donu/): «Ростов-на-Дону и Ростовская область в новостях»"
+      ],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "fce22601153a9aa4",
+      "case_id": "nc05",
+      "url": "https://ria.ru/location_Rostov_na_Donu/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "URL рубрики/location и карточка туристического материала дают навигацию по городу. Собственная дата всей рубрики не установлена; 2023 из карточки не присвоен как её publication date.",
+      "evidence": [
+        "runs/news-coverage-2026-11-03/benchmark/blind/source-cards.json rows[blind_id=fce22601153a9aa4].source_cards[0] (https://ria.ru/location_Rostov_na_Donu/): «Ростов-на-Дону: основные достопримечательности и туристические маршруты»"
+      ],
+      "review_boundary": "card_only_provisional"
+    }
+  ]
+}

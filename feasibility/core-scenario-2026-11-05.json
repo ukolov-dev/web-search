@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "frozen_on": "2026-11-05",
+  "scenario": "Find and read the primary MDN reference for an exact JavaScript API question using a site-restricted query.",
+  "scope": "Four new development cases; no broad search qualification or independent acceptance. No LLM, keys or alternate engines.",
+  "engine": "seznam",
+  "cases": [
+    {
+      "id": "D01",
+      "query": "site:developer.mozilla.org Array every empty array true",
+      "path": "/Web/JavaScript/Reference/Global_Objects/Array/every",
+      "phrases": [
+        "empty array",
+        "true"
+      ]
+    },
+    {
+      "id": "D02",
+      "query": "site:developer.mozilla.org URLSearchParams get first value null",
+      "path": "/Web/API/URLSearchParams/get",
+      "phrases": [
+        "first value",
+        "null"
+      ]
+    },
+    {
+      "id": "D03",
+      "query": "site:developer.mozilla.org Promise any empty iterable rejected AggregateError",
+      "path": "/Web/JavaScript/Reference/Global_Objects/Promise/any",
+      "phrases": [
+        "empty",
+        "AggregateError"
+      ]
+    },
+    {
+      "id": "D04",
+      "query": "site:developer.mozilla.org AbortSignal timeout TimeoutError",
+      "path": "/Web/API/AbortSignal/timeout_static",
+      "phrases": [
+        "TimeoutError",
+        "milliseconds"
+      ]
+    }
+  ]
+}

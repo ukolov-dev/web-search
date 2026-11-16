@@ -1,0 +1,88 @@
+{
+  "context": {
+    "question": "site:doc.rust-lang.org По документации Vec::pop: что возвращается для пустого вектора?",
+    "facets": [
+      "Vec::pop: что возвращается для пустого вектора по официальной документации doc.rust-lang.org",
+      "Проверить, не является ли вопрос основанным на ложной предпосылке о поведении Vec::pop"
+    ],
+    "chunks": [
+      {
+        "document_version": "881271ad4d4bda463151211e80be3c7720f6b7af768c9c8b230027680ec8a66a",
+        "end": 54200,
+        "field": "text",
+        "id": "S1P1",
+        "source_id": "S1",
+        "start": 53000,
+        "text": "within_capacity(value);\n        }\n    }\n    Ok(vec)\n}\nassert_eq!(from_iter_fallible(0..100), Ok(Vec::from_iter(0..100)));\n\n§Time complexity\n\nTakes O(1) time.\n\n1.0.0 · Source\npub fn pop(&mut self) -> Option<T>\n\nRemoves the last element from a vector and returns it, or None if it is empty.\n\nIf you’d like to pop the first element, consider using VecDeque::pop_front instead.\n\n§Examples\n\nlet mut vec = vec![1, 2, 3];\nassert_eq!(vec.pop(), Some(3));\nassert_eq!(vec, [1, 2]);\n\n§Time complexity\n\nTakes O(1) time.\n\n1.86.0 · Source\npub fn pop_if(&mut self, predicate: impl FnOnce(&mut T) -> bool) -> Option<T>\n\nRemoves and returns the last element from a vector if the predicate returns true, or None if the predicate returns false or the vector is empty (the predicate will not be called in that case).\n\n§Examples\n\nlet mut vec = vec![1, 2, 3, 4];\nlet pred = |x: &mut i32| *x % 2 == 0;\n\nassert_eq!(vec.pop_if(pred), Some(4));\nassert_eq!(vec, [1, 2, 3]);\nassert_eq!(vec.pop_if(pred), None);\n\nSource\npub fn peek_mut(&mut self) -> Option<PeekMut<'_, T, A>>\nwhere A: AllocatorNightly,\n\n🔬This is a nightly-only experimental API. (vec_peek_mut #122742)\n\nReturns a mutable reference to the last item in the vector,"
+      }
+    ],
+    "sources": [
+      {
+        "eligible": true,
+        "id": "S1",
+        "primary_rfc": null,
+        "publication": {
+          "date_status": "missing",
+          "kind": "unknown",
+          "published_date": null,
+          "witness_count": 0,
+          "witnesses": [],
+          "witnesses_limited": false
+        },
+        "title": "Struct Vec Copy item path",
+        "url_preview": "https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html"
+      }
+    ]
+  },
+  "draft": {
+    "claims": [
+      {
+        "text": "Vec::pop удаляет последний элемент и возвращает его, либо None, если вектор пуст.",
+        "kind": "fact",
+        "rationale": "",
+        "facets": [
+          0
+        ],
+        "evidence": [
+          {
+            "chunk_id": "S1P1",
+            "quote": "Removes the last element from a vector and returns it, or None if it is empty."
+          }
+        ]
+      },
+      {
+        "text": "Пример в документации: для vec![1, 2, 3] вызов pop() возвращает Some(3).",
+        "kind": "fact",
+        "rationale": "",
+        "facets": [
+          0
+        ],
+        "evidence": [
+          {
+            "chunk_id": "S1P1",
+            "quote": "let mut vec = vec![1, 2, 3];\nassert_eq!(vec.pop(), Some(3));"
+          }
+        ]
+      },
+      {
+        "text": "Документация указывает, что Vec::pop выполняется за время O(1).",
+        "kind": "fact",
+        "rationale": "",
+        "facets": [
+          0
+        ],
+        "evidence": [
+          {
+            "chunk_id": "S1P1",
+            "quote": "Takes O(1) time."
+          }
+        ]
+      }
+    ],
+    "next": {
+      "facet": 0,
+      "query": ""
+    }
+  },
+  "origin": "qwen-acceptance NEW12 F09/candidate; original model-visible chunk and returned claims, not a fresh evaluation"
+}

@@ -1,0 +1,108 @@
+{
+  "date": "2026-11-13",
+  "scope": "planning-only engineering review",
+  "runtime": "40fa7f9",
+  "baseline_backlog": "28bea4e",
+  "sources": [
+    {
+      "id": "S1",
+      "title": "JSONSchemaBench: A Rigorous Benchmark of Structured Outputs for Language Models",
+      "authors": "Geng et al.",
+      "version": "2025-02-27, arXiv v3",
+      "url": "https://arxiv.org/html/2501.10868v3",
+      "read": "§§3–6",
+      "transfer_limit": "schema coverage / efficiency / quality; другой decoder и модель",
+      "selection": "included",
+      "primary": true
+    },
+    {
+      "id": "S2",
+      "title": "JSON Schema Validation: A Vocabulary for Structural Validation of JSON",
+      "authors": "JSON Schema authors",
+      "version": "2022-06-16, Draft 2020-12",
+      "url": "https://json-schema.org/draft/2020-12/draft-bhutton-json-schema-validation-01",
+      "read": "structural / string / content validation",
+      "transfer_limit": "Internet-Draft; не factual verifier",
+      "selection": "included",
+      "primary": true
+    },
+    {
+      "id": "S3",
+      "title": "Query Rewriting for Retrieval-Augmented Large Language Models",
+      "authors": "Ma et al.",
+      "version": "EMNLP 2023, DOI 10.18653/v1/2023.emnlp-main.322",
+      "url": "https://aclanthology.org/2023.emnlp-main.322.pdf",
+      "read": "pipeline, experiments/analysis, Limitations",
+      "transfer_limit": "query rewrite; обучение/RL не принимаются",
+      "selection": "included",
+      "primary": true
+    },
+    {
+      "id": "S4",
+      "title": "RAGChecker: A Fine-grained Framework for Diagnosing Retrieval-Augmented Generation",
+      "authors": "Ru et al.",
+      "version": "2024-08-15, arXiv v1",
+      "url": "https://arxiv.org/html/2408.08067v1",
+      "read": "§§3–4, Appendix H",
+      "transfer_limit": "claim recall / context utilization; English corpus / evaluator limitations",
+      "selection": "included",
+      "primary": true
+    },
+    {
+      "id": "S5",
+      "title": "Enabling Large Language Models to Generate Text with Citations",
+      "authors": "Gao et al.",
+      "version": "EMNLP 2023, DOI 10.18653/v1/2023.emnlp-main.398",
+      "url": "https://aclanthology.org/2023.emnlp-main.398.pdf",
+      "read": "§§3.2–3.3, 6, Limitations",
+      "transfer_limit": "citation vs correctness; NLI imperfect",
+      "selection": "included",
+      "primary": true
+    },
+    {
+      "id": "S6",
+      "title": "Lost in the Middle: How Language Models Use Long Contexts",
+      "authors": "Liu et al.",
+      "version": "TACL 2024, DOI 10.1162/tacl_a_00638",
+      "url": "https://aclanthology.org/2024.tacl-1.9.pdf",
+      "read": "controlled positions, §2 setup",
+      "transfer_limit": "вспомогательная гипотеза; перенос на наши chunks не измерен",
+      "selection": "supplementary",
+      "primary": true
+    },
+    {
+      "id": "S7",
+      "title": "Large Language Models Cannot Self-Correct Reasoning Yet",
+      "authors": "Huang et al.",
+      "version": "ICLR 2024",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2024/file/8b4add8b0aa8749d80a34ca5d941c355-Paper-Conference.pdf",
+      "read": "feedback definition, evaluation/cost, limitations",
+      "transfer_limit": "intrinsic reasoning correction отличается от validator feedback",
+      "selection": "supplementary",
+      "primary": true
+    },
+    {
+      "id": "S8",
+      "title": "DocPrompting: Generating Code by Retrieving the Docs",
+      "authors": "Zhou et al.",
+      "version": "arXiv:2207.05987v3 / ICLR 2023",
+      "url": "https://arxiv.org/html/2207.05987v3",
+      "read": "§§3–4,6; top-k ablation",
+      "transfer_limit": "fixed docs pool / NL-to-code; не live-search evidence",
+      "selection": "included",
+      "primary": true
+    }
+  ],
+  "snowball": {
+    "from_source": "S4",
+    "reference": "57: Zhou et al. arXiv:2207.05987",
+    "to_source": "S8",
+    "method": "backward citation -> exact title search -> primary full text",
+    "outcome": "included with fixed-pool/code-generation limitation"
+  },
+  "limitations": [
+    "research-playbooks map unavailable; user says probably removed",
+    "No runtime edits, new product experiments or independent acceptance",
+    "OpenReview challenge and NeurIPS tool timeout retained in raw"
+  ]
+}

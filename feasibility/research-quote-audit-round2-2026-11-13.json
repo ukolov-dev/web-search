@@ -1,0 +1,30 @@
+{
+  "scope": "round2 quote-bound audit construction; model behavior not tested",
+  "base": "71b2c6f",
+  "historical_red": "runs/research-p1-2026-11-13/candidate/cases/G09/capture/0000-research/model-04-audit.json: A2 supported from outside returned witness",
+  "fixture": "tests/fixtures/research/quote-audit-g09.json",
+  "checks": [
+    {
+      "command": "CARGO_HOME=\"$PWD/.cache/cargo\" cargo test --locked --offline",
+      "status": "passed",
+      "results": [
+        "test result: ok. 158 passed; 0 failed; 37 ignored; 0 measured; 0 filtered out; finished in 1.90s",
+        "test result: ok. 6 passed; 0 failed; 10 ignored; 0 measured; 0 filtered out; finished in 0.65s"
+      ]
+    },
+    {
+      "command": "cargo fmt --check",
+      "status": "passed"
+    },
+    {
+      "command": "CARGO_HOME=\"$PWD/.cache/cargo\" cargo clippy --locked --offline --all-targets -- -D warnings",
+      "status": "passed"
+    }
+  ],
+  "unverified": [
+    "paired component model behavior",
+    "G07 example-to-general rejection",
+    "H02 valid question-premise inference and classification",
+    "independent acceptance and release"
+  ]
+}

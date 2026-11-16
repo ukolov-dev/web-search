@@ -1,0 +1,2883 @@
+{
+  "v7_loss_diagnosis": {
+    "protocol": {
+      "date": "2026-10-30",
+      "purpose": "Post-unsealing causal diagnosis of frozen fresh12 v7 losses; historical development evidence for the next revision, not independent acceptance.",
+      "gold_policy": "Frozen grades unchanged; only final results[].classification is used to define TP/FN.",
+      "inputs": {
+        "feasibility/passage-coverage-corpus-2026-10-30.json": "7c1cf6476aa381682bd18bf893e3d51a0fc58fe778641d00fcc498ad2370c9ad",
+        "feasibility/passage-coverage-gold-v1.json": "466c1a45df5d362704a1d266656866531aca1485ffabfa306e4c4f57cf781d9a",
+        "feasibility/passage-coverage-results-2026-10-30.json": "74283385873098c890b533d453e4504fec5181c9088764bb4fa8df3ddc2c36c9"
+      },
+      "offset_unit": "UTF-8 bytes in whitespace-normalized source_text(original HTML); visible text plus uniquely declared typed code-view JSON rawLines; other scripts/styles excluded",
+      "constraints": "Read saved local artifacts and source only; no code edits, models or network. Fresh12 outputs/gold were read only after parent explicitly unsealed them.",
+      "evidence_note": "exact_quote_in_supplied_passages uses whitespace-only normalization; an absent exact match may reflect formatting differences and is not by itself a semantic absence."
+    },
+    "metrics": {
+      "baseline_v6": {
+        "tp": 12,
+        "fp": 2,
+        "fn": 6,
+        "unjudged_direct": 0,
+        "recall": 0.6666666666666666,
+        "precision_judged": 0.8571428571428571,
+        "initial_valid": 12,
+        "initial_attempts": 12,
+        "initial_length": 0,
+        "initial_stop_empty": 0,
+        "initial_reasoning_tokens": 0,
+        "initial_elapsed_ms_median": 2555.0,
+        "elapsed_ms_median": 19562.5,
+        "elapsed_ms_sum": 315571,
+        "generative_calls": 35,
+        "known_cost_usd": 0.00620095,
+        "unpriced_generations": 0,
+        "prompt_tokens": 163345,
+        "completion_tokens": 16460,
+        "providers": {
+          "Morph": 35
+        },
+        "reads": 47,
+        "raw_snapshot_cache_hits": 0,
+        "known_positive": 18,
+        "positive_in_coverage_pool": 17,
+        "positive_read_selected": 16,
+        "positive_attempted": 16,
+        "positive_extracted": 16,
+        "read_recall": 0.8888888888888888,
+        "extracted_source_recall": 0.8888888888888888,
+        "reranker_calls": 39,
+        "reranker_pairs": 804,
+        "reranker_fallbacks": 0,
+        "proof_ranges_validated": 70,
+        "audit_conflicts_validated": 0,
+        "errors": {
+          "unsupported_direct_evidence_or_constraints": 5,
+          "evidence_verification": 9
+        },
+        "all_classes_recall_at10": 0.9444444444444444,
+        "relevant_returned_at10": 17
+      },
+      "v7": {
+        "tp": 10,
+        "fp": 0,
+        "fn": 8,
+        "unjudged_direct": 0,
+        "recall": 0.5555555555555556,
+        "precision_judged": 1.0,
+        "initial_valid": 12,
+        "initial_attempts": 12,
+        "initial_length": 0,
+        "initial_stop_empty": 0,
+        "initial_reasoning_tokens": 0,
+        "initial_elapsed_ms_median": 2601.0,
+        "elapsed_ms_median": 15348.5,
+        "elapsed_ms_sum": 223702,
+        "generative_calls": 33,
+        "known_cost_usd": 0.006155584,
+        "unpriced_generations": 0,
+        "prompt_tokens": 159520,
+        "completion_tokens": 16662,
+        "providers": {
+          "Morph": 33
+        },
+        "reads": 47,
+        "raw_snapshot_cache_hits": 39,
+        "known_positive": 18,
+        "positive_in_coverage_pool": 17,
+        "positive_read_selected": 16,
+        "positive_attempted": 16,
+        "positive_extracted": 16,
+        "read_recall": 0.8888888888888888,
+        "extracted_source_recall": 0.8888888888888888,
+        "reranker_calls": 38,
+        "reranker_pairs": 876,
+        "reranker_fallbacks": 0,
+        "proof_ranges_validated": 50,
+        "audit_conflicts_validated": 0,
+        "errors": {
+          "unsupported_direct_evidence_or_constraints": 4,
+          "evidence_verification": 11
+        },
+        "all_classes_recall_at10": 0.9444444444444444,
+        "relevant_returned_at10": 17
+      }
+    },
+    "lost_true_direct": [
+      {
+        "case": "p10",
+        "id": "C009",
+        "primary_stage": "coverage_batch_validation"
+      },
+      {
+        "case": "p12",
+        "id": "C004",
+        "primary_stage": "coverage_predicate_anchor"
+      }
+    ],
+    "eight_false_negative_stage_counts": {
+      "document_selection": 1,
+      "pool_selection": 1,
+      "audit_claim_status": 1,
+      "coverage_batch_validation": 2,
+      "audit_response_contract": 1,
+      "typed_literal_gate": 1,
+      "coverage_predicate_anchor": 1
+    },
+    "high_confidence_contract_failures": [
+      {
+        "case": "p10",
+        "affected_ids": [
+          "C006",
+          "C009"
+        ],
+        "trigger_id": "C011",
+        "raw_trigger": {
+          "checks": [
+            {
+              "passages": [
+                "T"
+              ],
+              "quote": "The subset of files is chosen by providing a list of directories in cone mode",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "T"
+              ],
+              "quote": "",
+              "status": "missing"
+            },
+            {
+              "passages": [
+                "T"
+              ],
+              "quote": "",
+              "status": "missing"
+            },
+            {
+              "passages": [
+                "S"
+              ],
+              "quote": "Note that all files under the specified directories (at any depth) will be included in the sparse checkout",
+              "status": "supported"
+            }
+          ]
+        },
+        "actual_error": "evidence_verification: evidence title-only core",
+        "effect": "Entire coverage review rejected: requirements=[], checks=[], no audit call; C009 had a material correct B1 witness.",
+        "minimal_fix": "Candidate/check-local invalidity quarantine; leave the title-only core ambiguous and mandatory audits unchanged. Whole-envelope/schema failures stay fail-closed."
+      },
+      {
+        "case": "p11",
+        "id": "C007",
+        "raw_verdict": {
+          "missing_aspect": "Passage B1/B2 explicitly states NOT MATERIALIZED forces the WITH query to be merged into the parent query, and gives the side-effect-free and single-vs-multiple reference conditions, directly covering the requested relationship.",
+          "supported": true
+        },
+        "effect": "true + nonempty positive missing_aspect is interpreted as rejection by current guard.",
+        "minimal_fix": "Constrain schema or bounded repair; do not remove the true-and-no-missing-aspect acceptance guard."
+      },
+      {
+        "case": "p12",
+        "id": "C004",
+        "effect": "Same allocation+reference count is accepted for core but rejected for newly isolated predicate anchor deep.",
+        "minimal_fix": "Negative-premise-aware condition role and operation-only subject; exact-source counterexample plus full audit must remain required."
+      }
+    ],
+    "not_selector_or_extraction_loss": [
+      "p10C009: exact inclusion rule is in B1",
+      "p12C004: exact allocation/refcount rule is in B1",
+      "p11C007: coverage passed; raw audit accepts but violates response contract",
+      "p11C014: coverage passed; missing literal CTE blocks audit"
+    ],
+    "rows": [
+      {
+        "case": "p03",
+        "id": "C002",
+        "url": "https://blog.yoshuawuyts.com/a-survey-of-every-iterator-variant/",
+        "query": "Rust Iterator size_hint ExactSizeIterator lower upper bounds guarantees",
+        "frozen_grade": 2,
+        "lost_v6_true_direct": false,
+        "primary_stage": "document_selection",
+        "cause": "Correct source is in the ten-candidate pool but receives none of the four reads. Its title/snippet only describe Iterator/IntoIterator; source body has size_hint guarantees and ExactSizeIterator but is unavailable to the reviewer.",
+        "minimal_general_fix": "Improve bounded document-read exploration for topical low-card-coverage sources; body-fragment changes cannot repair a source that is not read.",
+        "baseline": {
+          "final_classification": "background",
+          "in_coverage_pool": true,
+          "read_attempted": false,
+          "document": null,
+          "rejection": "unverified or uncovered requirements: R0,R1,R2,R3,audit:not accepted,literal:ExactSizeIterator,literal:size_hint",
+          "requirements": [
+            {
+              "anchor": "Rust Iterator size_hint ExactSizeIterator lower upper bounds guarantees",
+              "end": 71,
+              "id": "R0",
+              "start": 0
+            },
+            {
+              "anchor": "size_hint",
+              "end": 23,
+              "id": "R1",
+              "start": 14
+            },
+            {
+              "anchor": "ExactSizeIterator",
+              "end": 41,
+              "id": "R2",
+              "start": 24
+            },
+            {
+              "anchor": "lower",
+              "end": 47,
+              "id": "R3",
+              "start": 42
+            }
+          ],
+          "checks": [
+            {
+              "passages": [
+                "S"
+              ],
+              "quote": "",
+              "status": "missing"
+            },
+            {
+              "passages": [
+                "S"
+              ],
+              "quote": "",
+              "status": "missing"
+            },
+            {
+              "passages": [
+                "S"
+              ],
+              "quote": "",
+              "status": "missing"
+            },
+            {
+              "passages": [
+                "S"
+              ],
+              "quote": "",
+              "status": "missing"
+            }
+          ],
+          "audit_supported": null,
+          "audit_reason": "",
+          "case_errors": [
+            "unsupported_direct_evidence_or_constraints: 1 downgraded"
+          ]
+        },
+        "v7": {
+          "final_classification": "background",
+          "in_coverage_pool": true,
+          "read_attempted": false,
+          "document": null,
+          "rejection": "unverified or uncovered requirements: R0,R1,R2,R3,audit:not accepted,literal:ExactSizeIterator,literal:size_hint",
+          "requirements": [
+            {
+              "anchor": "Rust Iterator size_hint ExactSizeIterator lower upper bounds guarantees",
+              "end": 71,
+              "id": "R0",
+              "start": 0
+            },
+            {
+              "anchor": "size_hint",
+              "end": 23,
+              "id": "R1",
+              "start": 14
+            },
+            {
+              "anchor": "ExactSizeIterator",
+              "end": 41,
+              "id": "R2",
+              "start": 24
+            },
+            {
+              "anchor": "guarantees",
+              "end": 71,
+              "id": "R3",
+              "start": 61
+            }
+          ],
+          "checks": [
+            {
+              "passages": [
+                "S"
+              ],
+              "quote": "",
+              "status": "missing"
+            },
+            {
+              "passages": [
+                "S"
+              ],
+              "quote": "",
+              "status": "missing"
+            },
+            {
+              "passages": [
+                "S"
+              ],
+              "quote": "",
+              "status": "missing"
+            },
+            {
+              "passages": [
+                "S"
+              ],
+              "quote": "",
+              "status": "missing"
+            }
+          ],
+          "audit_supported": null,
+          "audit_reason": "",
+          "case_errors": [
+            "unsupported_direct_evidence_or_constraints: 1 downgraded"
+          ]
+        },
+        "gold_support": [
+          {
+            "quote": "/// Returns the bounds on the remaining length of the iterator. fn size_hint ( & self ) -> ( usize , Option < usize >) { .. }",
+            "start": 4577,
+            "end": 4702,
+            "source_snapshot": "runs/passage-coverage-2026-10-30/gold-audit/p03-C002.html",
+            "source_field": "raw_html_text",
+            "normalized_source_hash": "1ae0ce5a3fc65a283ef8c056069c2c2a8b1cc68bac83860ff80e13331d1e724b",
+            "exact_quote_in_supplied_passages": []
+          },
+          {
+            "quote": "A buggy iterator may yield less than the lower bound or more than the upper bound of elements.",
+            "start": 5423,
+            "end": 5517,
+            "source_snapshot": "runs/passage-coverage-2026-10-30/gold-audit/p03-C002.html",
+            "source_field": "raw_html_text",
+            "normalized_source_hash": "1ae0ce5a3fc65a283ef8c056069c2c2a8b1cc68bac83860ff80e13331d1e724b",
+            "exact_quote_in_supplied_passages": []
+          },
+          {
+            "quote": "pub trait ExactSizeIterator : Iterator { /// Returns the exact remaining length of the iterator. fn len ( & self ) -> usize { .. }",
+            "start": 6206,
+            "end": 6336,
+            "source_snapshot": "runs/passage-coverage-2026-10-30/gold-audit/p03-C002.html",
+            "source_field": "raw_html_text",
+            "normalized_source_hash": "1ae0ce5a3fc65a283ef8c056069c2c2a8b1cc68bac83860ff80e13331d1e724b",
+            "exact_quote_in_supplied_passages": []
+          },
+          {
+            "quote": "ExactSizeIterator has the same memory-safety guarantees as Iterator::size_hint meaning: you can't rely on it to be correct.",
+            "start": 6578,
+            "end": 6701,
+            "source_snapshot": "runs/passage-coverage-2026-10-30/gold-audit/p03-C002.html",
+            "source_field": "raw_html_text",
+            "normalized_source_hash": "1ae0ce5a3fc65a283ef8c056069c2c2a8b1cc68bac83860ff80e13331d1e724b",
+            "exact_quote_in_supplied_passages": []
+          }
+        ],
+        "supplied_passage_locations": [
+          {
+            "end": 58,
+            "field": "title",
+            "id": "T",
+            "normalized_text_hash": "02c0d1e3da5b06a75b8f466a63bb9530c5078240fbbab5dbd25baa915ad72288",
+            "source_url": "https://blog.yoshuawuyts.com/a-survey-of-every-iterator-variant/",
+            "start": 0,
+            "text_hash": "02c0d1e3da5b06a75b8f466a63bb9530c5078240fbbab5dbd25baa915ad72288"
+          },
+          {
+            "end": 140,
+            "field": "snippet",
+            "id": "S",
+            "normalized_text_hash": "7d405a1fcf6ac1f6158440d23e42db3203f6b810cae5a3b6f749c6544810ce03",
+            "source_url": "https://blog.yoshuawuyts.com/a-survey-of-every-iterator-variant/",
+            "start": 0,
+            "text_hash": "7d405a1fcf6ac1f6158440d23e42db3203f6b810cae5a3b6f749c6544810ce03"
+          }
+        ],
+        "coverage_call_path": "runs/passage-coverage-2026-10-30/fixed/p03-evidence-round1.json",
+        "raw_coverage_subject": "size_hint",
+        "raw_coverage_anchors": [
+          "size_hint",
+          "ExactSizeIterator",
+          "guarantees"
+        ],
+        "raw_coverage_checks": {
+          "checks": [
+            {
+              "passages": [
+                "S"
+              ],
+              "quote": "",
+              "status": "missing"
+            },
+            {
+              "passages": [
+                "S"
+              ],
+              "quote": "",
+              "status": "missing"
+            },
+            {
+              "passages": [
+                "S"
+              ],
+              "quote": "",
+              "status": "missing"
+            },
+            {
+              "passages": [
+                "S"
+              ],
+              "quote": "",
+              "status": "missing"
+            }
+          ]
+        },
+        "audit_call_path": "runs/passage-coverage-2026-10-30/fixed/p03-evidence-audit.json",
+        "raw_audit_verdict": null
+      },
+      {
+        "case": "p04",
+        "id": "C015",
+        "url": "https://www.postgresql.org/docs/current/ddl-rowsecurity.html",
+        "query": "PostgreSQL row level security table owner FORCE ROW LEVEL SECURITY bypass",
+        "frozen_grade": 2,
+        "lost_v6_true_direct": false,
+        "primary_stage": "pool_selection",
+        "cause": "The official table-owner/FORCE relationship is in frozen source HTML, but this background-classified card falls outside the ten-candidate selected pool and is never read or returned. Current pool includes two read timeouts.",
+        "minimal_general_fix": "Preserve bounded exploration for an exact query-subject source across the initial pool/read boundary, using card/API fidelity rather than assuming direct from URL; do not relax grounding or raise a source to direct without its witness.",
+        "baseline": {
+          "final_classification": null,
+          "in_coverage_pool": false,
+          "read_attempted": null,
+          "document": null,
+          "rejection": null,
+          "requirements": [
+            {
+              "anchor": "PostgreSQL row level security table owner FORCE ROW LEVEL SECURITY bypass",
+              "end": 73,
+              "id": "R0",
+              "start": 0
+            },
+            {
+              "anchor": "FORCE ROW LEVEL SECURITY",
+              "end": 66,
+              "id": "R1",
+              "start": 42
+            },
+            {
+              "anchor": "table owner",
+              "end": 41,
+              "id": "R2",
+              "start": 30
+            },
+            {
+              "anchor": "bypass",
+              "end": 73,
+              "id": "R3",
+              "start": 67
+            }
+          ],
+          "checks": null,
+          "audit_supported": null,
+          "audit_reason": null,
+          "case_errors": [
+            "evidence_verification: C005: fetch_timeout",
+            "evidence_verification: C014: fetch_timeout",
+            "unsupported_direct_evidence_or_constraints: 1 downgraded"
+          ]
+        },
+        "v7": {
+          "final_classification": null,
+          "in_coverage_pool": false,
+          "read_attempted": null,
+          "document": null,
+          "rejection": null,
+          "requirements": [
+            {
+              "anchor": "PostgreSQL row level security table owner FORCE ROW LEVEL SECURITY bypass",
+              "end": 73,
+              "id": "R0",
+              "start": 0
+            },
+            {
+              "anchor": "FORCE",
+              "end": 47,
+              "id": "R1",
+              "start": 42
+            },
+            {
+              "anchor": "ROW",
+              "end": 51,
+              "id": "R2",
+              "start": 48
+            },
+            {
+              "anchor": "LEVEL",
+              "end": 57,
+              "id": "R3",
+              "start": 52
+            }
+          ],
+          "checks": null,
+          "audit_supported": null,
+          "audit_reason": null,
+          "case_errors": [
+            "evidence_verification: C005: fetch_timeout",
+            "evidence_verification: C014: fetch_timeout",
+            "unsupported_direct_evidence_or_constraints: 1 downgraded"
+          ]
+        },
+        "gold_support": [
+          {
+            "quote": "Table owners normally bypass row security as well, though a table owner can choose to be subject to row security with ALTER TABLE ... FORCE ROW LEVEL SECURITY .",
+            "start": 2725,
+            "end": 2885,
+            "source_snapshot": "runs/passage-coverage-2026-10-30/gold-audit/p04-C015.html",
+            "source_field": "raw_html_text",
+            "normalized_source_hash": "191b2e68ab481f1ab6374e6cd8fffb9f1134a133b1202b654af038940774ac50",
+            "exact_quote_in_supplied_passages": []
+          }
+        ],
+        "supplied_passage_locations": [],
+        "coverage_call_path": "runs/passage-coverage-2026-10-30/fixed/p04-evidence-round1.json",
+        "raw_coverage_subject": "FORCE ROW LEVEL SECURITY",
+        "raw_coverage_anchors": [
+          "FORCE",
+          "ROW",
+          "LEVEL"
+        ],
+        "raw_coverage_checks": null,
+        "audit_call_path": "runs/passage-coverage-2026-10-30/fixed/p04-evidence-audit.json",
+        "raw_audit_verdict": null
+      },
+      {
+        "case": "p09",
+        "id": "C002",
+        "url": "https://bugs.python.org/issue46622",
+        "query": "Python functools lru_cache async coroutine await reuse limitations",
+        "frozen_grade": 2,
+        "lost_v6_true_direct": false,
+        "primary_stage": "audit_claim_status",
+        "cause": "All four coverage checks are supported and the supplied source contains the current coroutine-reawait limitation plus lru_cache discussion/workaround. Audit rejects the whole open enhancement issue as not current implemented behavior; no explicit source-status hard-gate appears in the final rejection.",
+        "minimal_general_fix": "Audit the status of the particular claim: an unresolved feature proposal can contain a concrete current limitation/counterexample. Keep rejection of unimplemented proposal claims and unsatisfied status when that status applies to the claimed behavior.",
+        "baseline": {
+          "final_classification": "background",
+          "in_coverage_pool": true,
+          "read_attempted": true,
+          "document": {
+            "content_scope": "inferred_article",
+            "final_url": "https://bugs.python.org/issue46622",
+            "hops": [
+              "https://bugs.python.org/issue46622"
+            ],
+            "html_hash": "2b633bc22f3ebda1733d0717c374130a09c48cccf821000d5ab8e719a3456d13",
+            "http_status": 200,
+            "id": "C002",
+            "raw_snapshot_cache_hit": false,
+            "text_hash": "e5ba808a98e94889a0e90052a4c0e0d362d69ed93044433b01344f29044bd943",
+            "truncated": false,
+            "url": "https://bugs.python.org/issue46622"
+          },
+          "rejection": "unverified or uncovered requirements: audit:Issue is an open, unresolved enhancement proposal (Status: open, PRs closed); it describes a workaround (reawaitable + lru_cache) rather than implemented lru_cache behavior for coroutines, so it is not direct evidence of current functools l",
+          "requirements": [
+            {
+              "anchor": "Python functools lru_cache async coroutine await reuse limitations",
+              "end": 66,
+              "id": "R0",
+              "start": 0
+            },
+            {
+              "anchor": "lru_cache async coroutine await",
+              "end": 48,
+              "id": "R1",
+              "start": 17
+            },
+            {
+              "anchor": "async coroutine await reuse",
+              "end": 54,
+              "id": "R2",
+              "start": 27
+            },
+            {
+              "anchor": "coroutine await reuse limitations",
+              "end": 66,
+              "id": "R3",
+              "start": 33
+            }
+          ],
+          "checks": [
+            {
+              "passages": [
+                "B2",
+                "B3"
+              ],
+              "quote": "Currently, decorating a coroutine with cached_property would cache the coroutine itself. But this is not useful in any way since a coroutine cannot be awaited multiple times.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B3"
+              ],
+              "quote": "It can be combined with lru_cache and cached_property any third-party caching decorator.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B3"
+              ],
+              "quote": "def reawaitable(func): @wraps(func) def wrapper(*args, **kwargs): return CachedAwaitable(func(*args, **kwargs))",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B3"
+              ],
+              "quote": "async_lru_cache() and async_cached_property() can be written using that decorator.",
+              "status": "supported"
+            }
+          ],
+          "audit_supported": false,
+          "audit_reason": "Issue is an open, unresolved enhancement proposal (Status: open, PRs closed); it describes a workaround (reawaitable + lru_cache) rather than implemented lru_cache behavior for coroutines, so it is not direct evidence of current functools l",
+          "case_errors": [
+            "evidence_verification: C018: host_disabled"
+          ]
+        },
+        "v7": {
+          "final_classification": "background",
+          "in_coverage_pool": true,
+          "read_attempted": true,
+          "document": {
+            "content_scope": "inferred_article",
+            "final_url": "https://bugs.python.org/issue46622",
+            "hops": [
+              "https://bugs.python.org/issue46622"
+            ],
+            "html_hash": "2b633bc22f3ebda1733d0717c374130a09c48cccf821000d5ab8e719a3456d13",
+            "http_status": 200,
+            "id": "C002",
+            "raw_snapshot_cache_hit": true,
+            "text_hash": "e5ba808a98e94889a0e90052a4c0e0d362d69ed93044433b01344f29044bd943",
+            "truncated": false,
+            "url": "https://bugs.python.org/issue46622"
+          },
+          "rejection": "unverified or uncovered requirements: audit:The source is an open, unresolved enhancement issue (Status: open, PRs closed) proposing an async lru_cache variant; it does not document current implemented behavior or a normative rule about lru_cache with coroutines and await reuse.",
+          "requirements": [
+            {
+              "anchor": "Python functools lru_cache async coroutine await reuse limitations",
+              "end": 66,
+              "id": "R0",
+              "start": 0
+            },
+            {
+              "anchor": "lru_cache",
+              "end": 26,
+              "id": "R1",
+              "start": 17
+            },
+            {
+              "anchor": "async",
+              "end": 32,
+              "id": "R2",
+              "start": 27
+            },
+            {
+              "anchor": "reuse",
+              "end": 54,
+              "id": "R3",
+              "start": 49
+            }
+          ],
+          "checks": [
+            {
+              "passages": [
+                "B2",
+                "B3"
+              ],
+              "quote": "Currently, decorating a coroutine with cached_property would cache the coroutine itself. But this is not useful in any way since a coroutine cannot be awaited multiple times.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B3"
+              ],
+              "quote": "It can be combined with lru_cache and cached_property any third-party caching decorator.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B2",
+                "B3"
+              ],
+              "quote": "But this is not useful in any way since a coroutine cannot be awaited multiple times.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B3"
+              ],
+              "quote": "def reawaitable(func): @wraps(func) def wrapper(*args, **kwargs): return CachedAwaitable(func(*args, **kwargs))",
+              "status": "supported"
+            }
+          ],
+          "audit_supported": false,
+          "audit_reason": "The source is an open, unresolved enhancement issue (Status: open, PRs closed) proposing an async lru_cache variant; it does not document current implemented behavior or a normative rule about lru_cache with coroutines and await reuse.",
+          "case_errors": [
+            "evidence_verification: C018: host_disabled"
+          ]
+        },
+        "gold_support": [
+          {
+            "quote": "Currently, decorating a coroutine with cached_property would cache the coroutine itself. But this is not useful in any way since a coroutine cannot be awaited multiple times.",
+            "start": 1326,
+            "end": 1500,
+            "source_snapshot": "runs/passage-coverage-2026-10-30/raw-cache/b6abe035866c5a28d1ab3759f8a234e9d889e960b98d95c428ec42a20184bc95.json",
+            "source_field": "raw_html_text",
+            "normalized_source_hash": "a64d1d07a2d7cb654612ec3da5c68bb40bebef64eac71ed8b0416bed17356045",
+            "exact_quote_in_supplied_passages": [
+              "B2"
+            ]
+          },
+          {
+            "quote": "class Foo: @functools.cache async def go(self): print(1) async def main(): foo = Foo() await foo.go() await foo.go() Although now I just noticed this actually does not work either.",
+            "start": 4654,
+            "end": 4834,
+            "source_snapshot": "runs/passage-coverage-2026-10-30/raw-cache/b6abe035866c5a28d1ab3759f8a234e9d889e960b98d95c428ec42a20184bc95.json",
+            "source_field": "raw_html_text",
+            "normalized_source_hash": "a64d1d07a2d7cb654612ec3da5c68bb40bebef64eac71ed8b0416bed17356045",
+            "exact_quote_in_supplied_passages": []
+          },
+          {
+            "quote": "Let's start from async functions support by `functools.lru_cache`.",
+            "start": 5050,
+            "end": 5116,
+            "source_snapshot": "runs/passage-coverage-2026-10-30/raw-cache/b6abe035866c5a28d1ab3759f8a234e9d889e960b98d95c428ec42a20184bc95.json",
+            "source_field": "raw_html_text",
+            "normalized_source_hash": "a64d1d07a2d7cb654612ec3da5c68bb40bebef64eac71ed8b0416bed17356045",
+            "exact_quote_in_supplied_passages": []
+          },
+          {
+            "quote": "def reawaitable(func): @wraps(func) def wrapper(*args, **kwargs): return CachedAwaitable(func(*args, **kwargs)) return wrapper It can be combined with lru_cache and cached_property any third-party caching decorator.",
+            "start": 10823,
+            "end": 11038,
+            "source_snapshot": "runs/passage-coverage-2026-10-30/raw-cache/b6abe035866c5a28d1ab3759f8a234e9d889e960b98d95c428ec42a20184bc95.json",
+            "source_field": "raw_html_text",
+            "normalized_source_hash": "a64d1d07a2d7cb654612ec3da5c68bb40bebef64eac71ed8b0416bed17356045",
+            "exact_quote_in_supplied_passages": [
+              "B3"
+            ]
+          },
+          {
+            "quote": "@lru_cache() @reawaitable async def coro(...): ...",
+            "start": 11086,
+            "end": 11136,
+            "source_snapshot": "runs/passage-coverage-2026-10-30/raw-cache/b6abe035866c5a28d1ab3759f8a234e9d889e960b98d95c428ec42a20184bc95.json",
+            "source_field": "raw_html_text",
+            "normalized_source_hash": "a64d1d07a2d7cb654612ec3da5c68bb40bebef64eac71ed8b0416bed17356045",
+            "exact_quote_in_supplied_passages": [
+              "B3"
+            ]
+          }
+        ],
+        "supplied_passage_locations": [
+          {
+            "end": 64,
+            "field": "title",
+            "id": "T",
+            "normalized_text_hash": "972ec26df9d19abb14bbb38c0a68799535d21b96468cfe3eb9f60764a5ea0500",
+            "source_url": "https://bugs.python.org/issue46622",
+            "start": 0,
+            "text_hash": "972ec26df9d19abb14bbb38c0a68799535d21b96468cfe3eb9f60764a5ea0500"
+          },
+          {
+            "end": 238,
+            "field": "snippet",
+            "id": "S",
+            "normalized_text_hash": "162e07c1beccba18459603e643ad4948e42f8148c3ac80050799d2813cb45dc7",
+            "source_url": "https://bugs.python.org/issue46622",
+            "start": 0,
+            "text_hash": "162e07c1beccba18459603e643ad4948e42f8148c3ac80050799d2813cb45dc7"
+          },
+          {
+            "end": 12208,
+            "field": "body",
+            "id": "B1",
+            "normalized_text_hash": "5a3df983f85843ec9922a03f3c51a1c88332d4cce9f71e3d6f4663cc2eb9af4b",
+            "source_url": "https://bugs.python.org/issue46622",
+            "start": 11008,
+            "text_hash": "e5ba808a98e94889a0e90052a4c0e0d362d69ed93044433b01344f29044bd943"
+          },
+          {
+            "end": 1200,
+            "field": "body",
+            "id": "B2",
+            "normalized_text_hash": "5a3df983f85843ec9922a03f3c51a1c88332d4cce9f71e3d6f4663cc2eb9af4b",
+            "source_url": "https://bugs.python.org/issue46622",
+            "start": 0,
+            "text_hash": "e5ba808a98e94889a0e90052a4c0e0d362d69ed93044433b01344f29044bd943"
+          },
+          {
+            "end": 11208,
+            "field": "body",
+            "id": "B3",
+            "normalized_text_hash": "5a3df983f85843ec9922a03f3c51a1c88332d4cce9f71e3d6f4663cc2eb9af4b",
+            "source_url": "https://bugs.python.org/issue46622",
+            "start": 10008,
+            "text_hash": "e5ba808a98e94889a0e90052a4c0e0d362d69ed93044433b01344f29044bd943"
+          },
+          {
+            "end": 79,
+            "field": "page_title",
+            "id": "H",
+            "normalized_text_hash": "3c9daae2e58a130457ee9e0be4e80ddade3c30f5be3917e5315b514406ff8aad",
+            "source_url": "https://bugs.python.org/issue46622",
+            "start": 0,
+            "text_hash": "3c9daae2e58a130457ee9e0be4e80ddade3c30f5be3917e5315b514406ff8aad"
+          }
+        ],
+        "coverage_call_path": "runs/passage-coverage-2026-10-30/fixed/p09-evidence-round1.json",
+        "raw_coverage_subject": "lru_cache async coroutine await",
+        "raw_coverage_anchors": [
+          "lru_cache",
+          "async",
+          "reuse"
+        ],
+        "raw_coverage_checks": {
+          "checks": [
+            {
+              "passages": [
+                "B2",
+                "B3"
+              ],
+              "quote": "Currently, decorating a coroutine with cached_property would cache the coroutine itself. But this is not useful in any way since a coroutine cannot be awaited multiple times.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B3"
+              ],
+              "quote": "It can be combined with lru_cache and cached_property any third-party caching decorator.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B2",
+                "B3"
+              ],
+              "quote": "But this is not useful in any way since a coroutine cannot be awaited multiple times.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B3"
+              ],
+              "quote": "def reawaitable(func): @wraps(func) def wrapper(*args, **kwargs): return CachedAwaitable(func(*args, **kwargs))",
+              "status": "supported"
+            }
+          ]
+        },
+        "audit_call_path": "runs/passage-coverage-2026-10-30/fixed/p09-evidence-audit.json",
+        "raw_audit_verdict": {
+          "missing_aspect": "The source is an open, unresolved enhancement issue (Status: open, PRs closed) proposing an async lru_cache variant; it does not document current implemented behavior or a normative rule about lru_cache with coroutines and await reuse.",
+          "supported": false
+        }
+      },
+      {
+        "case": "p10",
+        "id": "C006",
+        "url": "https://git-scm.com/docs/git-sparse-checkout",
+        "query": "git sparse-checkout cone mode parent directories files included",
+        "frozen_grade": 2,
+        "lost_v6_true_direct": false,
+        "primary_stage": "coverage_batch_validation",
+        "cause": "One different candidate C011 supplied a title-only supported core. Memory.apply aborts the entire review batch before committing valid candidate checks or the query contract. Consequently this source has checks=[] and no audit in v7. This source was already an FN in v6, so removing the batch failure alone does not prove recovery.",
+        "minimal_general_fix": "Quarantine an invalid candidate/check as ambiguous while retaining validation of all other candidates. Preserve exact witnesses, non-title core, known IDs, full-query audit, and fail-closed handling of structurally invalid whole responses.",
+        "baseline": {
+          "final_classification": "background",
+          "in_coverage_pool": true,
+          "read_attempted": true,
+          "document": {
+            "content_scope": "declared_body",
+            "final_url": "https://git-scm.com/docs/git-sparse-checkout",
+            "hops": [
+              "https://git-scm.com/docs/git-sparse-checkout"
+            ],
+            "html_hash": "3535926ceb6046ecd12e9bbe20752bdbe27e2ee60f3ec5ffb41d7529981d2665",
+            "http_status": 200,
+            "id": "C006",
+            "raw_snapshot_cache_hit": false,
+            "text_hash": "f128a4bdf7bb6ed2d0bf538cba179225c13ccfe1456109918fc9e38b8fe4e8b2",
+            "truncated": false,
+            "url": "https://git-scm.com/docs/git-sparse-checkout"
+          },
+          "rejection": "unverified or uncovered requirements: audit:No explicit statement that files in parent directories of specified directories are included in cone mode; B3 example mentions 'all files immediately under MY/ and SUB/' but does not clearly establish the parent-directory inclusion rule as ",
+          "requirements": [
+            {
+              "anchor": "git sparse-checkout cone mode parent directories files included",
+              "end": 63,
+              "id": "R0",
+              "start": 0
+            },
+            {
+              "anchor": "cone mode",
+              "end": 29,
+              "id": "R1",
+              "start": 20
+            },
+            {
+              "anchor": "parent directories",
+              "end": 48,
+              "id": "R2",
+              "start": 30
+            },
+            {
+              "anchor": "files included",
+              "end": 63,
+              "id": "R3",
+              "start": 49
+            }
+          ],
+          "checks": [
+            {
+              "passages": [
+                "B3"
+              ],
+              "quote": "Change to a sparse checkout with all files (at any depth) under MY/DIR1/ and SUB/DIR2/ present in the working copy (plus all files immediately under MY/ and SUB/ and the toplevel directory).",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "The subset of files is chosen by providing a list of directories in cone mode (the default)",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B3"
+              ],
+              "quote": "(plus all files immediately under MY/ and SUB/ and the toplevel directory)",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B3"
+              ],
+              "quote": "Add all files under SOME/DIR/ECTORY/ (at any depth) to the sparse checkout, as well as all files immediately under SOME/DIR/ and immediately under SOME/.",
+              "status": "supported"
+            }
+          ],
+          "audit_supported": false,
+          "audit_reason": "No explicit statement that files in parent directories of specified directories are included in cone mode; B3 example mentions 'all files immediately under MY/ and SUB/' but does not clearly establish the parent-directory inclusion rule as ",
+          "case_errors": []
+        },
+        "v7": {
+          "final_classification": "background",
+          "in_coverage_pool": true,
+          "read_attempted": true,
+          "document": {
+            "content_scope": "declared_body",
+            "final_url": "https://git-scm.com/docs/git-sparse-checkout",
+            "hops": [
+              "https://git-scm.com/docs/git-sparse-checkout"
+            ],
+            "html_hash": "3535926ceb6046ecd12e9bbe20752bdbe27e2ee60f3ec5ffb41d7529981d2665",
+            "http_status": 200,
+            "id": "C006",
+            "raw_snapshot_cache_hit": true,
+            "text_hash": "f128a4bdf7bb6ed2d0bf538cba179225c13ccfe1456109918fc9e38b8fe4e8b2",
+            "truncated": false,
+            "url": "https://git-scm.com/docs/git-sparse-checkout"
+          },
+          "rejection": "unverified or uncovered requirements: audit:not accepted",
+          "requirements": [],
+          "checks": [],
+          "audit_supported": null,
+          "audit_reason": "",
+          "case_errors": [
+            "evidence_verification: C011: HTTP 404",
+            "evidence_verification: evidence title-only core"
+          ]
+        },
+        "gold_support": [
+          {
+            "quote": "all files under the specified directories (at any depth) will be included in the sparse checkout, as well as files that are siblings of either the given directory or any of its ancestors",
+            "start": 4799,
+            "end": 4985,
+            "source_snapshot": "runs/passage-coverage-2026-10-30/raw-cache/94af4e93aec8a40cd1aeba56d90d6d594c3edfd9da5ea60ede1abce3308bcbb2.json",
+            "source_field": "raw_html_text",
+            "normalized_source_hash": "e36525fbac15f152c8dfd1243bc2bc2a140921b1aef2a86896e2d9a83b189bab",
+            "exact_quote_in_supplied_passages": []
+          },
+          {
+            "quote": "git sparse-checkout set A/B/C sets the directory A/B/C as a recursive pattern, the directories A and A/B are added as parent patterns.",
+            "start": 21109,
+            "end": 21243,
+            "source_snapshot": "runs/passage-coverage-2026-10-30/raw-cache/94af4e93aec8a40cd1aeba56d90d6d594c3edfd9da5ea60ede1abce3308bcbb2.json",
+            "source_field": "raw_html_text",
+            "normalized_source_hash": "e36525fbac15f152c8dfd1243bc2bc2a140921b1aef2a86896e2d9a83b189bab",
+            "exact_quote_in_supplied_passages": []
+          }
+        ],
+        "supplied_passage_locations": [
+          {
+            "end": 39,
+            "field": "title",
+            "id": "T",
+            "normalized_text_hash": "f1beee9d08451d1e0e1b3e65ba69088367d26ac95998019767cfa11fbaea09a6",
+            "source_url": "https://git-scm.com/docs/git-sparse-checkout",
+            "start": 0,
+            "text_hash": "f1beee9d08451d1e0e1b3e65ba69088367d26ac95998019767cfa11fbaea09a6"
+          },
+          {
+            "end": 188,
+            "field": "snippet",
+            "id": "S",
+            "normalized_text_hash": "8b3ea48e28cc3575bfda0fec028aad3e2e8b866406c0265902543a7499e523a8",
+            "source_url": "https://git-scm.com/docs/git-sparse-checkout",
+            "start": 0,
+            "text_hash": "8b3ea48e28cc3575bfda0fec028aad3e2e8b866406c0265902543a7499e523a8"
+          },
+          {
+            "end": 1200,
+            "field": "body",
+            "id": "B1",
+            "normalized_text_hash": "6c6e78e6dbc766debd6e1e5a5b1bab0bb9ad52cbbeca96d323a80db3b21fbde9",
+            "source_url": "https://git-scm.com/docs/git-sparse-checkout",
+            "start": 0,
+            "text_hash": "f128a4bdf7bb6ed2d0bf538cba179225c13ccfe1456109918fc9e38b8fe4e8b2"
+          },
+          {
+            "end": 18222,
+            "field": "body",
+            "id": "B2",
+            "normalized_text_hash": "6c6e78e6dbc766debd6e1e5a5b1bab0bb9ad52cbbeca96d323a80db3b21fbde9",
+            "source_url": "https://git-scm.com/docs/git-sparse-checkout",
+            "start": 17020,
+            "text_hash": "f128a4bdf7bb6ed2d0bf538cba179225c13ccfe1456109918fc9e38b8fe4e8b2"
+          },
+          {
+            "end": 8200,
+            "field": "body",
+            "id": "B3",
+            "normalized_text_hash": "6c6e78e6dbc766debd6e1e5a5b1bab0bb9ad52cbbeca96d323a80db3b21fbde9",
+            "source_url": "https://git-scm.com/docs/git-sparse-checkout",
+            "start": 7000,
+            "text_hash": "f128a4bdf7bb6ed2d0bf538cba179225c13ccfe1456109918fc9e38b8fe4e8b2"
+          },
+          {
+            "end": 39,
+            "field": "page_title",
+            "id": "H",
+            "normalized_text_hash": "f1beee9d08451d1e0e1b3e65ba69088367d26ac95998019767cfa11fbaea09a6",
+            "source_url": "https://git-scm.com/docs/git-sparse-checkout",
+            "start": 0,
+            "text_hash": "f1beee9d08451d1e0e1b3e65ba69088367d26ac95998019767cfa11fbaea09a6"
+          }
+        ],
+        "coverage_call_path": "runs/passage-coverage-2026-10-30/fixed/p10-evidence-round1.json",
+        "raw_coverage_subject": "cone mode parent directories",
+        "raw_coverage_anchors": [
+          "cone",
+          "parent",
+          "included"
+        ],
+        "raw_coverage_checks": {
+          "checks": [
+            {
+              "passages": [
+                "B2"
+              ],
+              "quote": "In cone mode, only directories are accepted, but they are translated into the same gitignore-style patterns used in the full pattern set.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B2"
+              ],
+              "quote": "Parent: All files immediately inside a directory are included.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B2"
+              ],
+              "quote": "Parent: All files immediately inside a directory are included.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B2"
+              ],
+              "quote": "Recursive: All paths inside a directory are included.",
+              "status": "supported"
+            }
+          ]
+        },
+        "audit_call_path": null,
+        "raw_audit_verdict": null
+      },
+      {
+        "case": "p10",
+        "id": "C009",
+        "url": "https://github.blog/open-source/git/bring-your-monorepo-down-to-size-with-sparse-checkout/",
+        "query": "git sparse-checkout cone mode parent directories files included",
+        "frozen_grade": 2,
+        "lost_v6_true_direct": true,
+        "primary_stage": "coverage_batch_validation",
+        "cause": "This lost TP has the exact parent-directory inclusion rule and example in B1. A separate C011 title-only core throws evidence title-only core, atomically discarding all ten candidates and the query contract. No audit is attempted; selector and extraction supplied the required passage.",
+        "minimal_general_fix": "Quarantine an invalid candidate/check instead of discarding unrelated valid candidates. Keep the invalid title-only core unaccepted and require the mandatory audit before promotion.",
+        "baseline": {
+          "final_classification": "direct",
+          "in_coverage_pool": true,
+          "read_attempted": true,
+          "document": {
+            "content_scope": "main",
+            "final_url": "https://github.blog/open-source/git/bring-your-monorepo-down-to-size-with-sparse-checkout/",
+            "hops": [
+              "https://github.blog/open-source/git/bring-your-monorepo-down-to-size-with-sparse-checkout/"
+            ],
+            "html_hash": "c81fd5586446f1fedb887aac03534bbc4a3e9c92dab4f2bd323d5eb32e25b922",
+            "http_status": 200,
+            "id": "C009",
+            "raw_snapshot_cache_hit": false,
+            "text_hash": "6c1c0b8505c0c64ca8d0a2c2b518dbafa206eaf75d6c49dc2e403e6a1a8fe73d",
+            "truncated": false,
+            "url": "https://github.blog/open-source/git/bring-your-monorepo-down-to-size-with-sparse-checkout/"
+          },
+          "rejection": null,
+          "requirements": [
+            {
+              "anchor": "git sparse-checkout cone mode parent directories files included",
+              "end": 63,
+              "id": "R0",
+              "start": 0
+            },
+            {
+              "anchor": "cone mode",
+              "end": 29,
+              "id": "R1",
+              "start": 20
+            },
+            {
+              "anchor": "parent directories",
+              "end": 48,
+              "id": "R2",
+              "start": 30
+            },
+            {
+              "anchor": "files included",
+              "end": 63,
+              "id": "R3",
+              "start": 49
+            }
+          ],
+          "checks": [
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "Further, any files that are immediately in a directory that’s a parent to a specified directory are also included.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "git sparse-checkout init --cone",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "any files that are immediately in a directory that’s a parent to a specified directory are also included",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "Git would include files with names A/B/C.txt (immediate child of A/B) and A/D.txt (immediate sibling of A/B) as well as E.txt (immediate sibling of A).",
+              "status": "supported"
+            }
+          ],
+          "audit_supported": true,
+          "audit_reason": "",
+          "case_errors": []
+        },
+        "v7": {
+          "final_classification": "background",
+          "in_coverage_pool": true,
+          "read_attempted": true,
+          "document": {
+            "content_scope": "main",
+            "final_url": "https://github.blog/open-source/git/bring-your-monorepo-down-to-size-with-sparse-checkout/",
+            "hops": [
+              "https://github.blog/open-source/git/bring-your-monorepo-down-to-size-with-sparse-checkout/"
+            ],
+            "html_hash": "c81fd5586446f1fedb887aac03534bbc4a3e9c92dab4f2bd323d5eb32e25b922",
+            "http_status": 200,
+            "id": "C009",
+            "raw_snapshot_cache_hit": true,
+            "text_hash": "6c1c0b8505c0c64ca8d0a2c2b518dbafa206eaf75d6c49dc2e403e6a1a8fe73d",
+            "truncated": false,
+            "url": "https://github.blog/open-source/git/bring-your-monorepo-down-to-size-with-sparse-checkout/"
+          },
+          "rejection": "unverified or uncovered requirements: audit:not accepted",
+          "requirements": [],
+          "checks": [],
+          "audit_supported": null,
+          "audit_reason": "",
+          "case_errors": [
+            "evidence_verification: C011: HTTP 404",
+            "evidence_verification: evidence title-only core"
+          ]
+        },
+        "gold_support": [
+          {
+            "quote": "The set subcommand modifies the sparse-checkout file with patterns to match the files in the given directories. Further, any files that are immediately in a directory that’s a parent to a specified directory are also included.",
+            "start": 10761,
+            "end": 10989,
+            "source_snapshot": "runs/passage-coverage-2026-10-30/raw-cache/cb209d791a4c27551ca47b4f80584d17a816f5b22ae98dbc442a3c63c1fe94c9.json",
+            "source_field": "raw_html_text",
+            "normalized_source_hash": "d822a39246ec1bd9cac086a010441ff91863955cb08c024e3f54e685b89d62fe",
+            "exact_quote_in_supplied_passages": [
+              "B1"
+            ]
+          },
+          {
+            "quote": "For example, if you ran git sparse-checkout set A/B , then Git would include files with names A/B/C.txt (immediate child of A/B ) and A/D.txt (immediate sibling of A/B ) as well as E.txt (immediate sibling of A ).",
+            "start": 10990,
+            "end": 11203,
+            "source_snapshot": "runs/passage-coverage-2026-10-30/raw-cache/cb209d791a4c27551ca47b4f80584d17a816f5b22ae98dbc442a3c63c1fe94c9.json",
+            "source_field": "raw_html_text",
+            "normalized_source_hash": "d822a39246ec1bd9cac086a010441ff91863955cb08c024e3f54e685b89d62fe",
+            "exact_quote_in_supplied_passages": []
+          },
+          {
+            "quote": "Given a file path such as /A/B/C/D.txt , Git includes the path in the working directory if any of the following are true: A/B/C is in the parent set, A/B/C is in the recursive set, A/B is in the recursive set, or A is in the recursive set.",
+            "start": 20499,
+            "end": 20738,
+            "source_snapshot": "runs/passage-coverage-2026-10-30/raw-cache/cb209d791a4c27551ca47b4f80584d17a816f5b22ae98dbc442a3c63c1fe94c9.json",
+            "source_field": "raw_html_text",
+            "normalized_source_hash": "d822a39246ec1bd9cac086a010441ff91863955cb08c024e3f54e685b89d62fe",
+            "exact_quote_in_supplied_passages": []
+          }
+        ],
+        "supplied_passage_locations": [
+          {
+            "end": 120,
+            "field": "title",
+            "id": "T",
+            "normalized_text_hash": "b03cfb121ed3069942f08390e7425a656a28c51ece0f7d5855d091135f447cc7",
+            "source_url": "https://github.blog/open-source/git/bring-your-monorepo-down-to-size-with-sparse-checkout/",
+            "start": 0,
+            "text_hash": "b03cfb121ed3069942f08390e7425a656a28c51ece0f7d5855d091135f447cc7"
+          },
+          {
+            "end": 299,
+            "field": "snippet",
+            "id": "S",
+            "normalized_text_hash": "fba930c406e8b9573dbacb603de4a867b9bbf84960693b137afa4410879a4bee",
+            "source_url": "https://github.blog/open-source/git/bring-your-monorepo-down-to-size-with-sparse-checkout/",
+            "start": 0,
+            "text_hash": "fba930c406e8b9573dbacb603de4a867b9bbf84960693b137afa4410879a4bee"
+          },
+          {
+            "end": 3219,
+            "field": "body",
+            "id": "B1",
+            "normalized_text_hash": "ab7ca66bd252d8175e67d568da9cda5724c6fec309274e882e3e3fb0bc52b34e",
+            "source_url": "https://github.blog/open-source/git/bring-your-monorepo-down-to-size-with-sparse-checkout/",
+            "start": 2007,
+            "text_hash": "6c1c0b8505c0c64ca8d0a2c2b518dbafa206eaf75d6c49dc2e403e6a1a8fe73d"
+          },
+          {
+            "end": 9263,
+            "field": "body",
+            "id": "B2",
+            "normalized_text_hash": "ab7ca66bd252d8175e67d568da9cda5724c6fec309274e882e3e3fb0bc52b34e",
+            "source_url": "https://github.blog/open-source/git/bring-your-monorepo-down-to-size-with-sparse-checkout/",
+            "start": 8047,
+            "text_hash": "6c1c0b8505c0c64ca8d0a2c2b518dbafa206eaf75d6c49dc2e403e6a1a8fe73d"
+          },
+          {
+            "end": 5225,
+            "field": "body",
+            "id": "B3",
+            "normalized_text_hash": "ab7ca66bd252d8175e67d568da9cda5724c6fec309274e882e3e3fb0bc52b34e",
+            "source_url": "https://github.blog/open-source/git/bring-your-monorepo-down-to-size-with-sparse-checkout/",
+            "start": 4025,
+            "text_hash": "6c1c0b8505c0c64ca8d0a2c2b518dbafa206eaf75d6c49dc2e403e6a1a8fe73d"
+          },
+          {
+            "end": 71,
+            "field": "page_title",
+            "id": "H",
+            "normalized_text_hash": "e794873207c8fdd13ea04497b58530a6c11bf7f332dd9d9e333a2d0e5a2e7982",
+            "source_url": "https://github.blog/open-source/git/bring-your-monorepo-down-to-size-with-sparse-checkout/",
+            "start": 0,
+            "text_hash": "e794873207c8fdd13ea04497b58530a6c11bf7f332dd9d9e333a2d0e5a2e7982"
+          }
+        ],
+        "coverage_call_path": "runs/passage-coverage-2026-10-30/fixed/p10-evidence-round1.json",
+        "raw_coverage_subject": "cone mode parent directories",
+        "raw_coverage_anchors": [
+          "cone",
+          "parent",
+          "included"
+        ],
+        "raw_coverage_checks": {
+          "checks": [
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "git sparse-checkout init --cone git sparse-checkout set <dir1> <dir2>",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "any files that are immediately in a directory that’s a parent to a specified directory are also included",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "any files that are immediately in a directory that’s a parent to a specified directory are also included",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "Git would include files with names A/B/C.txt (immediate child of A/B) and A/D.txt (immediate sibling of A/B) as well as E.txt (immediate sibling of A).",
+              "status": "supported"
+            }
+          ]
+        },
+        "audit_call_path": null,
+        "raw_audit_verdict": null
+      },
+      {
+        "case": "p11",
+        "id": "C007",
+        "url": "https://github.com/dimagi/django-cte/issues/31",
+        "query": "PostgreSQL CTE MATERIALIZED NOT MATERIALIZED side effect free multiple references",
+        "frozen_grade": 2,
+        "lost_v6_true_direct": false,
+        "primary_stage": "audit_response_contract",
+        "cause": "Raw v7 audit returns supported=true with a positive explanation in missing_aspect. rescue::audit only accepts true when missing_aspect is empty/none; it fail-closes this inconsistent response, preserving the explanation as a rejection. Coverage and supplied B1/B2 already contain the relationship.",
+        "minimal_general_fix": "Make the audit JSON schema express supported=true => missing_aspect empty, or perform a bounded contract-repair call on inconsistent verdicts. Preserve the final fail-closed guard; do not accept arbitrary nonempty reasons as true.",
+        "baseline": {
+          "final_classification": "background",
+          "in_coverage_pool": true,
+          "read_attempted": true,
+          "document": {
+            "content_scope": "main",
+            "final_url": "https://github.com/dimagi/django-cte/issues/31",
+            "hops": [
+              "https://github.com/dimagi/django-cte/issues/31"
+            ],
+            "html_hash": "47842a7d4a08da9438f2d29ad36146f722e3b2763a9509585413dbe0de0e48c2",
+            "http_status": 200,
+            "id": "C007",
+            "raw_snapshot_cache_hit": false,
+            "text_hash": "ff99793be52f02bdde746d9a4395fdbd3206a54203b921a8061d650e89e48d3e",
+            "truncated": false,
+            "url": "https://github.com/dimagi/django-cte/issues/31"
+          },
+          "rejection": "unverified or uncovered requirements: audit:Passage B2 does state NOT MATERIALIZED forces merging and the once-vs-multiple-references default, but the side-effect-free condition is only in B1's quoted doc text about default folding, not tied to NOT MATERIALIZED; partial",
+          "requirements": [
+            {
+              "anchor": "PostgreSQL CTE MATERIALIZED NOT MATERIALIZED side effect free multiple references",
+              "end": 81,
+              "id": "R0",
+              "start": 0
+            },
+            {
+              "anchor": "NOT MATERIALIZED",
+              "end": 44,
+              "id": "R1",
+              "start": 28
+            },
+            {
+              "anchor": "side effect free",
+              "end": 61,
+              "id": "R2",
+              "start": 45
+            },
+            {
+              "anchor": "multiple references",
+              "end": 81,
+              "id": "R3",
+              "start": 62
+            }
+          ],
+          "checks": [
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "By default, this happens if the parent query references the WITH query just once, but not if it references the WITH query more than once.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B2"
+              ],
+              "quote": "You can override that decision by specifying MATERIALIZED to force separate calculation of the WITH query, or by specifying NOT MATERIALIZED to force it to be merged into the parent query.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "S"
+              ],
+              "quote": "They're no longer materialized if they are non-recursive, side-effect free and only appear once in the query",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "By default, this happens if the parent query references the WITH query just once, but not if it references the WITH query more than once.",
+              "status": "supported"
+            }
+          ],
+          "audit_supported": false,
+          "audit_reason": "Passage B2 does state NOT MATERIALIZED forces merging and the once-vs-multiple-references default, but the side-effect-free condition is only in B1's quoted doc text about default folding, not tied to NOT MATERIALIZED; partial",
+          "case_errors": [
+            "evidence_verification: C001: failed to grab the article",
+            "unsupported_direct_evidence_or_constraints: 2 downgraded"
+          ]
+        },
+        "v7": {
+          "final_classification": "background",
+          "in_coverage_pool": true,
+          "read_attempted": true,
+          "document": {
+            "content_scope": "main",
+            "final_url": "https://github.com/dimagi/django-cte/issues/31",
+            "hops": [
+              "https://github.com/dimagi/django-cte/issues/31"
+            ],
+            "html_hash": "47842a7d4a08da9438f2d29ad36146f722e3b2763a9509585413dbe0de0e48c2",
+            "http_status": 200,
+            "id": "C007",
+            "raw_snapshot_cache_hit": true,
+            "text_hash": "ff99793be52f02bdde746d9a4395fdbd3206a54203b921a8061d650e89e48d3e",
+            "truncated": false,
+            "url": "https://github.com/dimagi/django-cte/issues/31"
+          },
+          "rejection": "unverified or uncovered requirements: audit:Passage B1/B2 explicitly states NOT MATERIALIZED forces the WITH query to be merged into the parent query, and gives the side-effect-free and single-vs-multiple reference conditions, directly covering the requested relationship.",
+          "requirements": [
+            {
+              "anchor": "PostgreSQL CTE MATERIALIZED NOT MATERIALIZED side effect free multiple references",
+              "end": 81,
+              "id": "R0",
+              "start": 0
+            },
+            {
+              "anchor": "side",
+              "end": 49,
+              "id": "R1",
+              "start": 45
+            },
+            {
+              "anchor": "effect",
+              "end": 56,
+              "id": "R2",
+              "start": 50
+            },
+            {
+              "anchor": "multiple",
+              "end": 70,
+              "id": "R3",
+              "start": 62
+            }
+          ],
+          "checks": [
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "By default, this happens if the parent query references the WITH query just once, but not if it references the WITH query more than once.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "if a WITH query is non-recursive and side-effect-free (that is, it is a SELECT containing no volatile functions) then it can be folded into the parent query",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "if a WITH query is non-recursive and side-effect-free (that is, it is a SELECT containing no volatile functions) then it can be folded into the parent query",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "By default, this happens if the parent query references the WITH query just once, but not if it references the WITH query more than once.",
+              "status": "supported"
+            }
+          ],
+          "audit_supported": false,
+          "audit_reason": "Passage B1/B2 explicitly states NOT MATERIALIZED forces the WITH query to be merged into the parent query, and gives the side-effect-free and single-vs-multiple reference conditions, directly covering the requested relationship.",
+          "case_errors": [
+            "evidence_verification: C002: fetch_timeout"
+          ]
+        },
+        "gold_support": [
+          {
+            "quote": "if a WITH query is non-recursive and side-effect-free (that is, it is a SELECT containing no volatile functions) then it can be folded into the parent query, allowing joint optimization of the two query levels. By default, this happens if the parent query references the WITH query just once, but not if it references the WITH query more than once.",
+            "start": 3066,
+            "end": 3414,
+            "source_snapshot": "runs/passage-coverage-2026-10-30/raw-cache/e0eb84e0870e33ebfc259f93a283f97fc3672fcb745eecf487fd4ad7b8ef0d59.json",
+            "source_field": "raw_html_text",
+            "normalized_source_hash": "b27d3ea026fc5f6b92c3d32fac158ba9ac28b283d56dda73711435448068e4cb",
+            "exact_quote_in_supplied_passages": [
+              "B1"
+            ]
+          },
+          {
+            "quote": "You can override that decision by specifying MATERIALIZED to force separate calculation of the WITH query, or by specifying NOT MATERIALIZED to force it to be merged into the parent query.",
+            "start": 3415,
+            "end": 3603,
+            "source_snapshot": "runs/passage-coverage-2026-10-30/raw-cache/e0eb84e0870e33ebfc259f93a283f97fc3672fcb745eecf487fd4ad7b8ef0d59.json",
+            "source_field": "raw_html_text",
+            "normalized_source_hash": "b27d3ea026fc5f6b92c3d32fac158ba9ac28b283d56dda73711435448068e4cb",
+            "exact_quote_in_supplied_passages": [
+              "B2"
+            ]
+          }
+        ],
+        "supplied_passage_locations": [
+          {
+            "end": 120,
+            "field": "title",
+            "id": "T",
+            "normalized_text_hash": "f767a9e69a0a4406218ffb66c97d5d9c7da522ccea588aa05f2f04996ed08877",
+            "source_url": "https://github.com/dimagi/django-cte/issues/31",
+            "start": 0,
+            "text_hash": "f767a9e69a0a4406218ffb66c97d5d9c7da522ccea588aa05f2f04996ed08877"
+          },
+          {
+            "end": 214,
+            "field": "snippet",
+            "id": "S",
+            "normalized_text_hash": "ff11ad6149a6864db44ba74511cfa8575aa23735bb6cb78756a410d296ba3729",
+            "source_url": "https://github.com/dimagi/django-cte/issues/31",
+            "start": 0,
+            "text_hash": "ff11ad6149a6864db44ba74511cfa8575aa23735bb6cb78756a410d296ba3729"
+          },
+          {
+            "end": 1200,
+            "field": "body",
+            "id": "B1",
+            "normalized_text_hash": "7602826c3a9d73de493f92396edf1a2c3e18af1c81d08819091e6ca2e81b6811",
+            "source_url": "https://github.com/dimagi/django-cte/issues/31",
+            "start": 0,
+            "text_hash": "ff99793be52f02bdde746d9a4395fdbd3206a54203b921a8061d650e89e48d3e"
+          },
+          {
+            "end": 2200,
+            "field": "body",
+            "id": "B2",
+            "normalized_text_hash": "7602826c3a9d73de493f92396edf1a2c3e18af1c81d08819091e6ca2e81b6811",
+            "source_url": "https://github.com/dimagi/django-cte/issues/31",
+            "start": 1000,
+            "text_hash": "ff99793be52f02bdde746d9a4395fdbd3206a54203b921a8061d650e89e48d3e"
+          },
+          {
+            "end": 3200,
+            "field": "body",
+            "id": "B3",
+            "normalized_text_hash": "7602826c3a9d73de493f92396edf1a2c3e18af1c81d08819091e6ca2e81b6811",
+            "source_url": "https://github.com/dimagi/django-cte/issues/31",
+            "start": 2000,
+            "text_hash": "ff99793be52f02bdde746d9a4395fdbd3206a54203b921a8061d650e89e48d3e"
+          },
+          {
+            "end": 96,
+            "field": "page_title",
+            "id": "H",
+            "normalized_text_hash": "e67efeb122b351e797efaf942bb322b39c7a3c3722fc0f989edf8c1bfa94af35",
+            "source_url": "https://github.com/dimagi/django-cte/issues/31",
+            "start": 0,
+            "text_hash": "e67efeb122b351e797efaf942bb322b39c7a3c3722fc0f989edf8c1bfa94af35"
+          }
+        ],
+        "coverage_call_path": "runs/passage-coverage-2026-10-30/fixed/p11-evidence-round1.json",
+        "raw_coverage_subject": "NOT MATERIALIZED",
+        "raw_coverage_anchors": [
+          "side",
+          "effect",
+          "multiple"
+        ],
+        "raw_coverage_checks": {
+          "checks": [
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "By default, this happens if the parent query references the WITH query just once, but not if it references the WITH query more than once.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "if a WITH query is non-recursive and side-effect-free (that is, it is a SELECT containing no volatile functions) then it can be folded into the parent query",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "if a WITH query is non-recursive and side-effect-free (that is, it is a SELECT containing no volatile functions) then it can be folded into the parent query",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "By default, this happens if the parent query references the WITH query just once, but not if it references the WITH query more than once.",
+              "status": "supported"
+            }
+          ]
+        },
+        "audit_call_path": "runs/passage-coverage-2026-10-30/fixed/p11-evidence-audit.json",
+        "raw_audit_verdict": {
+          "missing_aspect": "Passage B1/B2 explicitly states NOT MATERIALIZED forces the WITH query to be merged into the parent query, and gives the side-effect-free and single-vs-multiple reference conditions, directly covering the requested relationship.",
+          "supported": true
+        }
+      },
+      {
+        "case": "p11",
+        "id": "C014",
+        "url": "https://www.postgresql.org/docs/current/sql-select.html",
+        "query": "PostgreSQL CTE MATERIALIZED NOT MATERIALIZED side effect free multiple references",
+        "frozen_grade": 2,
+        "lost_v6_true_direct": false,
+        "primary_stage": "typed_literal_gate",
+        "cause": "All coverage checks are supported, but exact uppercase CTE is absent from the candidate bounded source context; the page uses WITH query. literal:CTE prevents audit. This is an existing v6 FN and not a reranker or extraction loss.",
+        "minimal_general_fix": "Do not silently map acronyms to synonyms. A future typed query/subject binding may distinguish concept vocabulary from required API identifiers only with explicit source-grounded binding; until then this literal miss remains unresolved.",
+        "baseline": {
+          "final_classification": "background",
+          "in_coverage_pool": true,
+          "read_attempted": true,
+          "document": {
+            "content_scope": "inferred_article",
+            "final_url": "https://www.postgresql.org/docs/current/sql-select.html",
+            "hops": [
+              "https://www.postgresql.org/docs/current/sql-select.html"
+            ],
+            "html_hash": "9aa2ffff600acc6ba9729fc068e47ae9de7cfcaf35ea82c90eaa93389b66db8e",
+            "http_status": 200,
+            "id": "C014",
+            "raw_snapshot_cache_hit": false,
+            "text_hash": "b747f46b2248e6be5d93d724c06a0f5fec838c22ca9f09b27432eae570fab189",
+            "truncated": false,
+            "url": "https://www.postgresql.org/docs/current/sql-select.html"
+          },
+          "rejection": "unverified or uncovered requirements: audit:not accepted,literal:CTE",
+          "requirements": [
+            {
+              "anchor": "PostgreSQL CTE MATERIALIZED NOT MATERIALIZED side effect free multiple references",
+              "end": 81,
+              "id": "R0",
+              "start": 0
+            },
+            {
+              "anchor": "NOT MATERIALIZED",
+              "end": 44,
+              "id": "R1",
+              "start": 28
+            },
+            {
+              "anchor": "side effect free",
+              "end": 61,
+              "id": "R2",
+              "start": 45
+            },
+            {
+              "anchor": "multiple references",
+              "end": 81,
+              "id": "R3",
+              "start": 62
+            }
+          ],
+          "checks": [
+            {
+              "passages": [
+                "B3"
+              ],
+              "quote": "A WITH query that is referenced more than once in FROM is computed only once, unless specified otherwise with NOT MATERIALIZED.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B2"
+              ],
+              "quote": "However, a WITH query can be marked NOT MATERIALIZED to remove this guarantee.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "NOT MATERIALIZED is ignored if it is attached to a WITH query that is recursive or is not side-effect-free",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B3"
+              ],
+              "quote": "A WITH query that is referenced more than once in FROM is computed only once, unless specified otherwise with NOT MATERIALIZED.",
+              "status": "supported"
+            }
+          ],
+          "audit_supported": null,
+          "audit_reason": "",
+          "case_errors": [
+            "evidence_verification: C001: failed to grab the article",
+            "unsupported_direct_evidence_or_constraints: 2 downgraded"
+          ]
+        },
+        "v7": {
+          "final_classification": "background",
+          "in_coverage_pool": true,
+          "read_attempted": true,
+          "document": {
+            "content_scope": "inferred_article",
+            "final_url": "https://www.postgresql.org/docs/current/sql-select.html",
+            "hops": [
+              "https://www.postgresql.org/docs/current/sql-select.html"
+            ],
+            "html_hash": "9aa2ffff600acc6ba9729fc068e47ae9de7cfcaf35ea82c90eaa93389b66db8e",
+            "http_status": 200,
+            "id": "C014",
+            "raw_snapshot_cache_hit": true,
+            "text_hash": "b747f46b2248e6be5d93d724c06a0f5fec838c22ca9f09b27432eae570fab189",
+            "truncated": false,
+            "url": "https://www.postgresql.org/docs/current/sql-select.html"
+          },
+          "rejection": "unverified or uncovered requirements: audit:not accepted,literal:CTE",
+          "requirements": [
+            {
+              "anchor": "PostgreSQL CTE MATERIALIZED NOT MATERIALIZED side effect free multiple references",
+              "end": 81,
+              "id": "R0",
+              "start": 0
+            },
+            {
+              "anchor": "side",
+              "end": 49,
+              "id": "R1",
+              "start": 45
+            },
+            {
+              "anchor": "effect",
+              "end": 56,
+              "id": "R2",
+              "start": 50
+            },
+            {
+              "anchor": "multiple",
+              "end": 70,
+              "id": "R3",
+              "start": 62
+            }
+          ],
+          "checks": [
+            {
+              "passages": [
+                "B1",
+                "B3"
+              ],
+              "quote": "NOT MATERIALIZED is ignored if it is attached to a WITH query that is recursive or is not side-effect-free",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "NOT MATERIALIZED is ignored if it is attached to a WITH query that is recursive or is not side-effect-free (i.e., is not a plain SELECT containing no volatile functions).",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "NOT MATERIALIZED is ignored if it is attached to a WITH query that is recursive or is not side-effect-free (i.e., is not a plain SELECT containing no volatile functions).",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B3"
+              ],
+              "quote": "This results in duplicate computations if the primary query refers to that WITH query more than once",
+              "status": "supported"
+            }
+          ],
+          "audit_supported": null,
+          "audit_reason": "",
+          "case_errors": [
+            "evidence_verification: C002: fetch_timeout"
+          ]
+        },
+        "gold_support": [
+          {
+            "quote": "A WITH query that is referenced more than once in FROM is computed only once, unless specified otherwise with NOT MATERIALIZED .",
+            "start": 3089,
+            "end": 3217,
+            "source_snapshot": "runs/passage-coverage-2026-10-30/raw-cache/b53c08444749a8dd3bba1912a1d2556a16da59b41a8a8e42c6a3ff948009a9ae.json",
+            "source_field": "raw_html_text",
+            "normalized_source_hash": "30930e2c24d99f054dc31934dc5de5ffd39b82216a9424f36bca786ecf72a383",
+            "exact_quote_in_supplied_passages": []
+          },
+          {
+            "quote": "a WITH query can be marked NOT MATERIALIZED to remove this guarantee. In that case, the WITH query can be folded into the primary query much as though it were a simple sub- SELECT in the primary query's FROM clause.",
+            "start": 10482,
+            "end": 10697,
+            "source_snapshot": "runs/passage-coverage-2026-10-30/raw-cache/b53c08444749a8dd3bba1912a1d2556a16da59b41a8a8e42c6a3ff948009a9ae.json",
+            "source_field": "raw_html_text",
+            "normalized_source_hash": "30930e2c24d99f054dc31934dc5de5ffd39b82216a9424f36bca786ecf72a383",
+            "exact_quote_in_supplied_passages": []
+          },
+          {
+            "quote": "By default, a side-effect-free WITH query is folded into the primary query if it is used exactly once in the primary query's FROM clause.",
+            "start": 11143,
+            "end": 11280,
+            "source_snapshot": "runs/passage-coverage-2026-10-30/raw-cache/b53c08444749a8dd3bba1912a1d2556a16da59b41a8a8e42c6a3ff948009a9ae.json",
+            "source_field": "raw_html_text",
+            "normalized_source_hash": "30930e2c24d99f054dc31934dc5de5ffd39b82216a9424f36bca786ecf72a383",
+            "exact_quote_in_supplied_passages": [
+              "B1"
+            ]
+          },
+          {
+            "quote": "However, such folding can be prevented by marking the WITH query as MATERIALIZED .",
+            "start": 11395,
+            "end": 11477,
+            "source_snapshot": "runs/passage-coverage-2026-10-30/raw-cache/b53c08444749a8dd3bba1912a1d2556a16da59b41a8a8e42c6a3ff948009a9ae.json",
+            "source_field": "raw_html_text",
+            "normalized_source_hash": "30930e2c24d99f054dc31934dc5de5ffd39b82216a9424f36bca786ecf72a383",
+            "exact_quote_in_supplied_passages": []
+          }
+        ],
+        "supplied_passage_locations": [
+          {
+            "end": 120,
+            "field": "title",
+            "id": "T",
+            "normalized_text_hash": "32767c1be1cb6ee6af25255ec836650e78df16701dd20a2f85996636fe2df75a",
+            "source_url": "https://www.postgresql.org/docs/current/sql-select.html",
+            "start": 0,
+            "text_hash": "32767c1be1cb6ee6af25255ec836650e78df16701dd20a2f85996636fe2df75a"
+          },
+          {
+            "end": 300,
+            "field": "snippet",
+            "id": "S",
+            "normalized_text_hash": "aa7a04a94ffcc288d40bb77b928d32e07216287e2c715f0854ed5b0500b311dc",
+            "source_url": "https://www.postgresql.org/docs/current/sql-select.html",
+            "start": 0,
+            "text_hash": "aa7a04a94ffcc288d40bb77b928d32e07216287e2c715f0854ed5b0500b311dc"
+          },
+          {
+            "end": 9200,
+            "field": "body",
+            "id": "B1",
+            "normalized_text_hash": "3bc24b922c2da88bed15a33caa2ee4939e5309b72ecbc92dd0e5348a2a8d03ab",
+            "source_url": "https://www.postgresql.org/docs/current/sql-select.html",
+            "start": 8000,
+            "text_hash": "b747f46b2248e6be5d93d724c06a0f5fec838c22ca9f09b27432eae570fab189"
+          },
+          {
+            "end": 5200,
+            "field": "body",
+            "id": "B2",
+            "normalized_text_hash": "3bc24b922c2da88bed15a33caa2ee4939e5309b72ecbc92dd0e5348a2a8d03ab",
+            "source_url": "https://www.postgresql.org/docs/current/sql-select.html",
+            "start": 4000,
+            "text_hash": "b747f46b2248e6be5d93d724c06a0f5fec838c22ca9f09b27432eae570fab189"
+          },
+          {
+            "end": 8200,
+            "field": "body",
+            "id": "B3",
+            "normalized_text_hash": "3bc24b922c2da88bed15a33caa2ee4939e5309b72ecbc92dd0e5348a2a8d03ab",
+            "source_url": "https://www.postgresql.org/docs/current/sql-select.html",
+            "start": 7000,
+            "text_hash": "b747f46b2248e6be5d93d724c06a0f5fec838c22ca9f09b27432eae570fab189"
+          },
+          {
+            "end": 37,
+            "field": "page_title",
+            "id": "H",
+            "normalized_text_hash": "8c925ad68a66f3b5c203b4c012a9a4d8ed2a999948b8ff9b8120d84bf10fb5e2",
+            "source_url": "https://www.postgresql.org/docs/current/sql-select.html",
+            "start": 0,
+            "text_hash": "8c925ad68a66f3b5c203b4c012a9a4d8ed2a999948b8ff9b8120d84bf10fb5e2"
+          }
+        ],
+        "coverage_call_path": "runs/passage-coverage-2026-10-30/fixed/p11-evidence-round1.json",
+        "raw_coverage_subject": "NOT MATERIALIZED",
+        "raw_coverage_anchors": [
+          "side",
+          "effect",
+          "multiple"
+        ],
+        "raw_coverage_checks": {
+          "checks": [
+            {
+              "passages": [
+                "B1",
+                "B3"
+              ],
+              "quote": "NOT MATERIALIZED is ignored if it is attached to a WITH query that is recursive or is not side-effect-free",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "NOT MATERIALIZED is ignored if it is attached to a WITH query that is recursive or is not side-effect-free (i.e., is not a plain SELECT containing no volatile functions).",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "NOT MATERIALIZED is ignored if it is attached to a WITH query that is recursive or is not side-effect-free (i.e., is not a plain SELECT containing no volatile functions).",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B3"
+              ],
+              "quote": "This results in duplicate computations if the primary query refers to that WITH query more than once",
+              "status": "supported"
+            }
+          ]
+        },
+        "audit_call_path": "runs/passage-coverage-2026-10-30/fixed/p11-evidence-audit.json",
+        "raw_audit_verdict": null
+      },
+      {
+        "case": "p12",
+        "id": "C004",
+        "url": "https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html",
+        "query": "Rust Arc clone deep copy underlying value reference count",
+        "frozen_grade": 2,
+        "lost_v6_true_direct": true,
+        "primary_stage": "coverage_predicate_anchor",
+        "cause": "This lost TP has the same-allocation and increased-reference-count statement in B1 in both branches. v7 chooses subject Arc clone deep and atomic anchors Arc/clone/deep. Core/R1/R2 accept the statement, but R3=deep is missing, blocking audit. The full source relation supports a negative answer to deep-copy premise; no needed fragment was omitted.",
+        "minimal_general_fix": "Keep the subject to the operation and interpret a condition as its role in the original relationship, including an explicitly grounded negative answer. Add a focused same-allocation/negative-premise regression; preserve full-query audit and do not auto-accept from matching names or generic synonyms.",
+        "baseline": {
+          "final_classification": "direct",
+          "in_coverage_pool": true,
+          "read_attempted": true,
+          "document": {
+            "content_scope": "main",
+            "final_url": "https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html",
+            "hops": [
+              "https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html"
+            ],
+            "html_hash": "3f27db3fd3ed74228108aab5523e0211c16687002d51b6ab14314ac7a08e8aa9",
+            "http_status": 200,
+            "id": "C004",
+            "raw_snapshot_cache_hit": false,
+            "text_hash": "5fa8e93a7791d2c73269c6476b3899b6b2ee27b0a144bd77d5e0e63ac761c1ff",
+            "truncated": false,
+            "url": "https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html"
+          },
+          "rejection": null,
+          "requirements": [
+            {
+              "anchor": "Rust Arc clone deep copy underlying value reference count",
+              "end": 57,
+              "id": "R0",
+              "start": 0
+            },
+            {
+              "anchor": "Arc clone",
+              "end": 14,
+              "id": "R1",
+              "start": 5
+            },
+            {
+              "anchor": "clone deep copy",
+              "end": 24,
+              "id": "R2",
+              "start": 9
+            },
+            {
+              "anchor": "reference count",
+              "end": 57,
+              "id": "R3",
+              "start": 42
+            }
+          ],
+          "checks": [
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "Invoking clone on Arc produces a new Arc instance, which points to the same allocation on the heap as the source Arc, while increasing a reference count.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "Invoking clone on Arc produces a new Arc instance, which points to the same allocation on the heap as the source Arc, while increasing a reference count.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "Invoking clone on Arc produces a new Arc instance, which points to the same allocation on the heap as the source Arc, while increasing a reference count.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "Invoking clone on Arc produces a new Arc instance, which points to the same allocation on the heap as the source Arc, while increasing a reference count.",
+              "status": "supported"
+            }
+          ],
+          "audit_supported": true,
+          "audit_reason": "",
+          "case_errors": [
+            "evidence_verification: C003: fetch_timeout"
+          ]
+        },
+        "v7": {
+          "final_classification": "background",
+          "in_coverage_pool": true,
+          "read_attempted": true,
+          "document": {
+            "content_scope": "main",
+            "final_url": "https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html",
+            "hops": [
+              "https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html"
+            ],
+            "html_hash": "3f27db3fd3ed74228108aab5523e0211c16687002d51b6ab14314ac7a08e8aa9",
+            "http_status": 200,
+            "id": "C004",
+            "raw_snapshot_cache_hit": true,
+            "text_hash": "5fa8e93a7791d2c73269c6476b3899b6b2ee27b0a144bd77d5e0e63ac761c1ff",
+            "truncated": false,
+            "url": "https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html"
+          },
+          "rejection": "unverified or uncovered requirements: R3,audit:not accepted",
+          "requirements": [
+            {
+              "anchor": "Rust Arc clone deep copy underlying value reference count",
+              "end": 57,
+              "id": "R0",
+              "start": 0
+            },
+            {
+              "anchor": "Arc",
+              "end": 8,
+              "id": "R1",
+              "start": 5
+            },
+            {
+              "anchor": "clone",
+              "end": 14,
+              "id": "R2",
+              "start": 9
+            },
+            {
+              "anchor": "deep",
+              "end": 19,
+              "id": "R3",
+              "start": 15
+            }
+          ],
+          "checks": [
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "Invoking clone on Arc produces a new Arc instance, which points to the same allocation on the heap as the source Arc, while increasing a reference count.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "Invoking clone on Arc produces a new Arc instance, which points to the same allocation on the heap as the source Arc, while increasing a reference count.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "Invoking clone on Arc produces a new Arc instance, which points to the same allocation on the heap as the source Arc, while increasing a reference count.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1",
+                "B2"
+              ],
+              "quote": "",
+              "status": "missing"
+            }
+          ],
+          "audit_supported": null,
+          "audit_reason": "",
+          "case_errors": [
+            "evidence_verification: C003: fetch_timeout"
+          ]
+        },
+        "gold_support": [
+          {
+            "quote": "Invoking clone on Arc produces a new Arc instance, which points to the same allocation on the heap as the source Arc , while increasing a reference count.",
+            "start": 2206,
+            "end": 2360,
+            "source_snapshot": "runs/passage-coverage-2026-10-30/raw-cache/a26ee2f23642a63bc5a3ba081d479e3a38c5b942b42c55eef7c0e4037b0e4f79.json",
+            "source_field": "raw_html_text",
+            "normalized_source_hash": "353cb4f206ca5df6c54833ed258468dc507e883de03ae9b2320fe1c3c1f6399c",
+            "exact_quote_in_supplied_passages": []
+          },
+          {
+            "quote": "Makes a clone of the Arc pointer. This creates another pointer to the same allocation, increasing the strong reference count.",
+            "start": 50580,
+            "end": 50705,
+            "source_snapshot": "runs/passage-coverage-2026-10-30/raw-cache/a26ee2f23642a63bc5a3ba081d479e3a38c5b942b42c55eef7c0e4037b0e4f79.json",
+            "source_field": "raw_html_text",
+            "normalized_source_hash": "353cb4f206ca5df6c54833ed258468dc507e883de03ae9b2320fe1c3c1f6399c",
+            "exact_quote_in_supplied_passages": []
+          }
+        ],
+        "supplied_passage_locations": [
+          {
+            "end": 25,
+            "field": "title",
+            "id": "T",
+            "normalized_text_hash": "f061ae5a3cf1d6cc733df57538aba76c062085fb4477e0cf26744b8e1d967e61",
+            "source_url": "https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html",
+            "start": 0,
+            "text_hash": "f061ae5a3cf1d6cc733df57538aba76c062085fb4477e0cf26744b8e1d967e61"
+          },
+          {
+            "end": 98,
+            "field": "snippet",
+            "id": "S",
+            "normalized_text_hash": "c9e2a3aca1e9ef627f4f3638c6828cfb066b063cbca9ffe661f66e186e5fad3d",
+            "source_url": "https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html",
+            "start": 0,
+            "text_hash": "c9e2a3aca1e9ef627f4f3638c6828cfb066b063cbca9ffe661f66e186e5fad3d"
+          },
+          {
+            "end": 1213,
+            "field": "body",
+            "id": "B1",
+            "normalized_text_hash": "fc58be65d4dcfdb964ace86bb41fbd66d219d1e27325b2df8517f430a2cd7d2b",
+            "source_url": "https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html",
+            "start": 0,
+            "text_hash": "5fa8e93a7791d2c73269c6476b3899b6b2ee27b0a144bd77d5e0e63ac761c1ff"
+          },
+          {
+            "end": 2214,
+            "field": "body",
+            "id": "B2",
+            "normalized_text_hash": "fc58be65d4dcfdb964ace86bb41fbd66d219d1e27325b2df8517f430a2cd7d2b",
+            "source_url": "https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html",
+            "start": 1013,
+            "text_hash": "5fa8e93a7791d2c73269c6476b3899b6b2ee27b0a144bd77d5e0e63ac761c1ff"
+          },
+          {
+            "end": 40458,
+            "field": "body",
+            "id": "B3",
+            "normalized_text_hash": "fc58be65d4dcfdb964ace86bb41fbd66d219d1e27325b2df8517f430a2cd7d2b",
+            "source_url": "https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html",
+            "start": 39255,
+            "text_hash": "5fa8e93a7791d2c73269c6476b3899b6b2ee27b0a144bd77d5e0e63ac761c1ff"
+          },
+          {
+            "end": 25,
+            "field": "page_title",
+            "id": "H",
+            "normalized_text_hash": "f061ae5a3cf1d6cc733df57538aba76c062085fb4477e0cf26744b8e1d967e61",
+            "source_url": "https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html",
+            "start": 0,
+            "text_hash": "f061ae5a3cf1d6cc733df57538aba76c062085fb4477e0cf26744b8e1d967e61"
+          }
+        ],
+        "coverage_call_path": "runs/passage-coverage-2026-10-30/fixed/p12-evidence-round1.json",
+        "raw_coverage_subject": "Arc clone deep",
+        "raw_coverage_anchors": [
+          "Arc",
+          "clone",
+          "deep"
+        ],
+        "raw_coverage_checks": {
+          "checks": [
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "Invoking clone on Arc produces a new Arc instance, which points to the same allocation on the heap as the source Arc, while increasing a reference count.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "Invoking clone on Arc produces a new Arc instance, which points to the same allocation on the heap as the source Arc, while increasing a reference count.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "Invoking clone on Arc produces a new Arc instance, which points to the same allocation on the heap as the source Arc, while increasing a reference count.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1",
+                "B2"
+              ],
+              "quote": "",
+              "status": "missing"
+            }
+          ]
+        },
+        "audit_call_path": null,
+        "raw_audit_verdict": null
+      }
+    ],
+    "limitations": [
+      "No proposed fix is executed or validated here.",
+      "p10C006 was already rejected by v6 audit; isolating the invalid C011 row cannot itself establish that C006 will pass a fresh mandatory audit.",
+      "p03 document and p04 pool misses require bounded retrieval/read-policy work; prompt/schema changes cannot recover missing source context.",
+      "The typed literal CTE/WITH mismatch is reported, not resolved by injecting an alias or gold evidence."
+    ]
+  },
+  "v7_false_direct_audit_and_annotation_erratum": {
+    "protocol": "Read-only audit of the two baseline false-direct identities reported against frozen old12 gold. Original gold is immutable; one annotation defect is disclosed, not silently relabeled. No code, network, model calls or new-cohort predictions.",
+    "frozen_gold_sha256": "466c1a45df5d362704a1d266656866531aca1485ffabfa306e4c4f57cf781d9a",
+    "reported_false_direct_changes": {
+      "removed": [
+        [
+          "p06",
+          "C010"
+        ],
+        [
+          "p12",
+          "C005"
+        ]
+      ]
+    },
+    "review_conclusion": "One supported removal of a partial source and one source-gold annotation error hiding a v7 true-positive loss.",
+    "annotation_erratum_sensitivity": {
+      "note": "post-unsealing sensitivity only, not replacement primary results; only p12C005 changes grade1 to2",
+      "baseline": {
+        "tp": 13,
+        "fp": 1,
+        "fn": 6,
+        "known_positive": 19,
+        "recall": 0.6842105263157895
+      },
+      "v7": {
+        "tp": 10,
+        "fp": 0,
+        "fn": 9,
+        "known_positive": 19,
+        "recall": 0.5263157894736842
+      }
+    },
+    "cases": [
+      {
+        "case": "p06",
+        "id": "C010",
+        "url": "https://github.com/moby/moby/issues/44978",
+        "frozen_grade": 1,
+        "baseline": {
+          "classification": "direct",
+          "evidence": "The \"rro\" mount type has been supported by runc >= 1.1, on kernel >= 5.12.",
+          "requirements": [
+            {
+              "anchor": "Docker bind mount readonly recursive submounts Linux kernel 5.12",
+              "end": 64,
+              "id": "R0",
+              "start": 0
+            },
+            {
+              "anchor": "Docker bind mount",
+              "end": 17,
+              "id": "R1",
+              "start": 0
+            },
+            {
+              "anchor": "readonly recursive submounts",
+              "end": 46,
+              "id": "R2",
+              "start": 18
+            },
+            {
+              "anchor": "Linux kernel 5.12",
+              "end": 64,
+              "id": "R3",
+              "start": 47
+            }
+          ],
+          "coverage_raw": {
+            "checks": [
+              {
+                "passages": [
+                  "B1"
+                ],
+                "quote": "The \"rro\" mount type has been supported by runc >= 1.1, on kernel >= 5.12.",
+                "status": "supported"
+              },
+              {
+                "passages": [
+                  "B1"
+                ],
+                "quote": "docker run -v /mnt:/mnt:rro,rprivate to make its submounts such as /mnt/usbstorage to be read-only.",
+                "status": "supported"
+              },
+              {
+                "passages": [
+                  "B1"
+                ],
+                "quote": "The \"rro\" mount type has to be used in conjunction with rprivate propagation, in order to avoid accidentally having writable submounts.",
+                "status": "supported"
+              },
+              {
+                "passages": [
+                  "B1"
+                ],
+                "quote": "The \"rro\" mount type has been supported by runc >= 1.1, on kernel >= 5.12.",
+                "status": "supported"
+              }
+            ]
+          },
+          "coverage_applied": [
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "The \"rro\" mount type has been supported by runc >= 1.1, on kernel >= 5.12.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "docker run -v /mnt:/mnt:rro,rprivate to make its submounts such as /mnt/usbstorage to be read-only.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "The \"rro\" mount type has to be used in conjunction with rprivate propagation, in order to avoid accidentally having writable submounts.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "The \"rro\" mount type has been supported by runc >= 1.1, on kernel >= 5.12.",
+              "status": "supported"
+            }
+          ],
+          "audit_verdict": {
+            "missing_aspect": "",
+            "supported": true
+          },
+          "audit_supported": true,
+          "candidate_input_sha256": "8b7f369f4ba8333877b4c3850e8fcfb259fe5acaf5727a7e1986bd9f4fd00240",
+          "passage_ids": [
+            "T",
+            "S",
+            "B1",
+            "B2",
+            "H"
+          ],
+          "source_document": {
+            "content_scope": "main",
+            "final_url": "https://github.com/moby/moby/issues/44978",
+            "hops": [
+              "https://github.com/moby/moby/issues/44978"
+            ],
+            "html_hash": "bc283d237d770fe5eb57708d5c2f5cb4aac03c55dfd2a4b8a07133bfab955364",
+            "http_status": 200,
+            "id": "C010",
+            "raw_snapshot_cache_hit": false,
+            "text_hash": "ec2b0635f89334696438017d4a81abac5f021d758777334965d5c4eb634bb626",
+            "truncated": false,
+            "url": "https://github.com/moby/moby/issues/44978"
+          },
+          "result_path": "runs/passage-coverage-2026-10-30/baseline/p06-result.json",
+          "coverage_path": "runs/passage-coverage-2026-10-30/baseline/p06-evidence-round1.json"
+        },
+        "v7": {
+          "classification": "background",
+          "evidence": null,
+          "requirements": [
+            {
+              "anchor": "Docker bind mount readonly recursive submounts Linux kernel 5.12",
+              "end": 64,
+              "id": "R0",
+              "start": 0
+            },
+            {
+              "anchor": "Docker",
+              "end": 6,
+              "id": "R1",
+              "start": 0
+            },
+            {
+              "anchor": "bind",
+              "end": 11,
+              "id": "R2",
+              "start": 7
+            },
+            {
+              "anchor": "readonly",
+              "end": 26,
+              "id": "R3",
+              "start": 18
+            }
+          ],
+          "coverage_raw": {
+            "checks": [
+              {
+                "passages": [
+                  "B1"
+                ],
+                "quote": "The \"rro\" mount type has been supported by runc >= 1.1, on kernel >= 5.12.",
+                "status": "missing"
+              },
+              {
+                "passages": [
+                  "B1"
+                ],
+                "quote": "The \"rro\" mount type has been supported by runc >= 1.1, on kernel >= 5.12.",
+                "status": "missing"
+              },
+              {
+                "passages": [
+                  "B1"
+                ],
+                "quote": "The \"rro\" mount type has been supported by runc >= 1.1, on kernel >= 5.12.",
+                "status": "missing"
+              },
+              {
+                "passages": [
+                  "B1"
+                ],
+                "quote": "The \"rro\" mount type has been supported by runc >= 1.1, on kernel >= 5.12.",
+                "status": "missing"
+              }
+            ]
+          },
+          "coverage_applied": [
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "",
+              "status": "missing"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "",
+              "status": "missing"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "",
+              "status": "missing"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "",
+              "status": "missing"
+            }
+          ],
+          "audit_verdict": null,
+          "audit_supported": null,
+          "candidate_input_sha256": "8b7f369f4ba8333877b4c3850e8fcfb259fe5acaf5727a7e1986bd9f4fd00240",
+          "passage_ids": [
+            "T",
+            "S",
+            "B1",
+            "B2",
+            "H"
+          ],
+          "source_document": {
+            "content_scope": "main",
+            "final_url": "https://github.com/moby/moby/issues/44978",
+            "hops": [
+              "https://github.com/moby/moby/issues/44978"
+            ],
+            "html_hash": "bc283d237d770fe5eb57708d5c2f5cb4aac03c55dfd2a4b8a07133bfab955364",
+            "http_status": 200,
+            "id": "C010",
+            "raw_snapshot_cache_hit": true,
+            "text_hash": "ec2b0635f89334696438017d4a81abac5f021d758777334965d5c4eb634bb626",
+            "truncated": false,
+            "url": "https://github.com/moby/moby/issues/44978"
+          },
+          "result_path": "runs/passage-coverage-2026-10-30/fixed/p06-result.json",
+          "coverage_path": "runs/passage-coverage-2026-10-30/fixed/p06-evidence-round1.json"
+        },
+        "immediate_gate": "covered(entry) requires all supplied checks supported before audit eligibility; unsupported candidates cannot reach supported(entry)",
+        "gate_code": {
+          "path": "runs/passage-coverage-2026-10-30/fixed-src/evidence.rs",
+          "covered_line": 449,
+          "audit_ids_line": 505,
+          "supported_line": 502
+        },
+        "scope": "diagnosis after old12 unsealing; frozen labels remain untouched; not a new blind evaluation",
+        "review_grade": 1,
+        "annotation_error": false,
+        "source_cause": "Source is a Docker feature proposal that illustrates proposed rro syntax and an existing runc capability; it does not establish current Docker bind-recursive behavior. Baseline treated the runc kernel fact and proposal examples as full current Docker evidence.",
+        "why_v7_rejects": "All four coverage checks are missing; audit verdict absent. This observed removal is at coverage, not proof that the explicit publisher status gate caught the proposal.",
+        "causal_limit": "Coverage input for this candidate is identical across branches; exact attribution to prompt wording versus model variability is not proven by one serial comparison.",
+        "source": {
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/526fd61f842d4f9f9b7987f9e131e244ecbbd08e09f3db2e9fa47da9b00829f3.json",
+          "html_hash": "bc283d237d770fe5eb57708d5c2f5cb4aac03c55dfd2a4b8a07133bfab955364",
+          "canonical_text_hash": "92d9f6445332512c52ad347e6917a074f66e80034cd1079b13e3a6ee250411d6",
+          "offsets": "UTF-8 bytes in whitespace-normalized source_text",
+          "support": [
+            {
+              "quote": "e.g., docker run -v /mnt:/mnt:rro,rprivate to make its submounts such as /mnt/usbstorage to be read-only.",
+              "start": 2529,
+              "end": 2634
+            },
+            {
+              "quote": "The existing ro mounts should remain non-recursive, for compatibility sake.",
+              "start": 2635,
+              "end": 2710
+            },
+            {
+              "quote": "The \"rro\" mount type has been supported by runc >= 1.1, on kernel >= 5.12.",
+              "start": 2711,
+              "end": 2785
+            }
+          ]
+        }
+      },
+      {
+        "case": "p12",
+        "id": "C005",
+        "url": "https://doc.rust-lang.org/std/clone/trait.Clone.html",
+        "frozen_grade": 1,
+        "baseline": {
+          "classification": "direct",
+          "evidence": "For smart pointers like Arc or Rc, this increments the reference count but still points to the same underlying data",
+          "requirements": [
+            {
+              "anchor": "Rust Arc clone deep copy underlying value reference count",
+              "end": 57,
+              "id": "R0",
+              "start": 0
+            },
+            {
+              "anchor": "Arc clone",
+              "end": 14,
+              "id": "R1",
+              "start": 5
+            },
+            {
+              "anchor": "clone deep copy",
+              "end": 24,
+              "id": "R2",
+              "start": 9
+            },
+            {
+              "anchor": "reference count",
+              "end": 57,
+              "id": "R3",
+              "start": 42
+            }
+          ],
+          "coverage_raw": {
+            "checks": [
+              {
+                "passages": [
+                  "B3"
+                ],
+                "quote": "For smart pointers like Arc or Rc, this increments the reference count but still points to the same underlying data",
+                "status": "supported"
+              },
+              {
+                "passages": [
+                  "B3"
+                ],
+                "quote": "For smart pointers like Arc or Rc, this increments the reference count but still points to the same underlying data",
+                "status": "supported"
+              },
+              {
+                "passages": [
+                  "B1"
+                ],
+                "quote": "this increments the reference count but still points to the same underlying data",
+                "status": "supported"
+              },
+              {
+                "passages": [
+                  "B3"
+                ],
+                "quote": "For smart pointers like Arc or Rc, this increments the reference count but still points to the same underlying data",
+                "status": "supported"
+              }
+            ]
+          },
+          "coverage_applied": [
+            {
+              "passages": [
+                "B3"
+              ],
+              "quote": "For smart pointers like Arc or Rc, this increments the reference count but still points to the same underlying data",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B3"
+              ],
+              "quote": "For smart pointers like Arc or Rc, this increments the reference count but still points to the same underlying data",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "this increments the reference count but still points to the same underlying data",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B3"
+              ],
+              "quote": "For smart pointers like Arc or Rc, this increments the reference count but still points to the same underlying data",
+              "status": "supported"
+            }
+          ],
+          "audit_verdict": {
+            "missing_aspect": "",
+            "supported": true
+          },
+          "audit_supported": true,
+          "candidate_input_sha256": "1cc551d35f2ee6c9baed1d569d5a3d042f2b17411605422adcb62d28e4a58772",
+          "passage_ids": [
+            "T",
+            "S",
+            "B1",
+            "B2",
+            "B3",
+            "H"
+          ],
+          "source_document": {
+            "content_scope": "main",
+            "final_url": "https://doc.rust-lang.org/std/clone/trait.Clone.html",
+            "hops": [
+              "https://doc.rust-lang.org/std/clone/trait.Clone.html"
+            ],
+            "html_hash": "e8a40ccab00c369c3b8fae8c06d54949399c0818828bd1b4d9ee67987e7579db",
+            "http_status": 200,
+            "id": "C005",
+            "raw_snapshot_cache_hit": false,
+            "text_hash": "f428794756840b1cb4f8f51f49c1db80ae9f965c7e9c27d1fee28fb42a140698",
+            "truncated": false,
+            "url": "https://doc.rust-lang.org/std/clone/trait.Clone.html"
+          },
+          "result_path": "runs/passage-coverage-2026-10-30/baseline/p12-result.json",
+          "coverage_path": "runs/passage-coverage-2026-10-30/baseline/p12-evidence-round1.json"
+        },
+        "v7": {
+          "classification": "background",
+          "evidence": null,
+          "requirements": [
+            {
+              "anchor": "Rust Arc clone deep copy underlying value reference count",
+              "end": 57,
+              "id": "R0",
+              "start": 0
+            },
+            {
+              "anchor": "Arc",
+              "end": 8,
+              "id": "R1",
+              "start": 5
+            },
+            {
+              "anchor": "clone",
+              "end": 14,
+              "id": "R2",
+              "start": 9
+            },
+            {
+              "anchor": "deep",
+              "end": 19,
+              "id": "R3",
+              "start": 15
+            }
+          ],
+          "coverage_raw": {
+            "checks": [
+              {
+                "passages": [
+                  "B2"
+                ],
+                "quote": "For smart pointers like Arc or Rc, this increments the reference count but still points to the same underlying data",
+                "status": "supported"
+              },
+              {
+                "passages": [
+                  "B2"
+                ],
+                "quote": "For smart pointers like Arc or Rc, this increments the reference count but still points to the same underlying data",
+                "status": "supported"
+              },
+              {
+                "passages": [
+                  "B2"
+                ],
+                "quote": "For smart pointers like Arc or Rc, this increments the reference count but still points to the same underlying data",
+                "status": "supported"
+              },
+              {
+                "passages": [
+                  "B2"
+                ],
+                "quote": "For most types, this creates a deep, independent copy",
+                "status": "contradicted"
+              }
+            ]
+          },
+          "coverage_applied": [
+            {
+              "passages": [
+                "B2"
+              ],
+              "quote": "For smart pointers like Arc or Rc, this increments the reference count but still points to the same underlying data",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B2"
+              ],
+              "quote": "For smart pointers like Arc or Rc, this increments the reference count but still points to the same underlying data",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B2"
+              ],
+              "quote": "For smart pointers like Arc or Rc, this increments the reference count but still points to the same underlying data",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B2"
+              ],
+              "quote": "For most types, this creates a deep, independent copy",
+              "status": "contradicted"
+            }
+          ],
+          "audit_verdict": null,
+          "audit_supported": null,
+          "candidate_input_sha256": "4743855a4d8541a7de696d51a4ad853a37d19729cc4fb97eae8c1cdc3c916c72",
+          "passage_ids": [
+            "T",
+            "S",
+            "B1",
+            "B2",
+            "B3",
+            "H"
+          ],
+          "source_document": {
+            "content_scope": "main",
+            "final_url": "https://doc.rust-lang.org/std/clone/trait.Clone.html",
+            "hops": [
+              "https://doc.rust-lang.org/std/clone/trait.Clone.html"
+            ],
+            "html_hash": "e8a40ccab00c369c3b8fae8c06d54949399c0818828bd1b4d9ee67987e7579db",
+            "http_status": 200,
+            "id": "C005",
+            "raw_snapshot_cache_hit": true,
+            "text_hash": "f428794756840b1cb4f8f51f49c1db80ae9f965c7e9c27d1fee28fb42a140698",
+            "truncated": false,
+            "url": "https://doc.rust-lang.org/std/clone/trait.Clone.html"
+          },
+          "result_path": "runs/passage-coverage-2026-10-30/fixed/p12-result.json",
+          "coverage_path": "runs/passage-coverage-2026-10-30/fixed/p12-evidence-round1.json"
+        },
+        "immediate_gate": "covered(entry) requires all supplied checks supported before audit eligibility; unsupported candidates cannot reach supported(entry)",
+        "gate_code": {
+          "path": "runs/passage-coverage-2026-10-30/fixed-src/evidence.rs",
+          "covered_line": 449,
+          "audit_ids_line": 505,
+          "supported_line": 502
+        },
+        "scope": "diagnosis after old12 unsealing; frozen labels remain untouched; not a new blind evaluation",
+        "review_grade": 2,
+        "annotation_error": true,
+        "source_cause": "The blinded annotation missed the later Clone::clone paragraph explicitly stating Arc/Rc cloning increments the reference count and shares underlying data, plus a concrete Arc clone example. The original no-increment basis is false.",
+        "why_v7_rejects": "R0, Arc and clone checks are supported, but added R3=deep is contradicted using a generic most-types deep-copy statement. The same source immediately gives the Arc/Rc exception, so this is a false semantic coverage veto on a correct negative-premise answer, not a removed false direct.",
+        "source": {
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/45c009e14c456a4b17a2b0bfed1e8bdd69a4e8a4cd80413e5f38d553f31a8e47.json",
+          "html_hash": "e8a40ccab00c369c3b8fae8c06d54949399c0818828bd1b4d9ee67987e7579db",
+          "canonical_text_hash": "631fb4e0ac6085cc2c2a7addd417bbcd311ca22d66ac54a5bb86aecfe47c3e5a",
+          "offsets": "UTF-8 bytes in whitespace-normalized source_text",
+          "support": [
+            {
+              "quote": "Note that what “duplicate” means varies by type:",
+              "start": 5185,
+              "end": 5237
+            },
+            {
+              "quote": "For most types, this creates a deep, independent copy",
+              "start": 5238,
+              "end": 5291
+            },
+            {
+              "quote": "For smart pointers like Arc or Rc , this increments the reference count but still points to the same underlying data",
+              "start": 5371,
+              "end": 5487
+            },
+            {
+              "quote": "let data_clone = data.clone(); // Creates another Arc pointing to the same Mutex",
+              "start": 5708,
+              "end": 5788
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

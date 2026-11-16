@@ -1,0 +1,1189 @@
+{
+  "task_id": "TASK-20261030-212411-001",
+  "recorded_at_utc": "2026-10-30T19:29:00.623543+00:00",
+  "stages": {
+    "old9_v10_before_heading": {
+      "cases": 9,
+      "generative_calls": 25,
+      "known_cost_usd": 0.005952016,
+      "unpriced_generations": 0,
+      "source": "runs/admission-literals-2026-10-30/development/fixed/results.json",
+      "sha256": "3c4412a1a9ad49205c5e74298a72e360bc1a4ae9fa7fb6495461d994dd9c9c88"
+    },
+    "old9_current_v9": {
+      "cases": 9,
+      "generative_calls": 25,
+      "known_cost_usd": 0.005372524,
+      "unpriced_generations": 0,
+      "source": "runs/admission-literals-2026-10-30/development/baseline-current/results.json",
+      "sha256": "8fe6faf3e6fe0604aad50d253560864484db024accbd216cae892b718be78fc4"
+    },
+    "old9_final_v10": {
+      "cases": 9,
+      "generative_calls": 26,
+      "known_cost_usd": 0.005971538,
+      "unpriced_generations": 0,
+      "source": "runs/admission-literals-2026-10-30/development/after-heading/results.json",
+      "sha256": "cf7ede40c953d13eedcd510c9a1c85b520ce24a3a90ab0e01e7ba224cd089c48"
+    },
+    "new24_baseline_v9": {
+      "cases": 24,
+      "generative_calls": 65,
+      "known_cost_usd": 0.011823232,
+      "unpriced_generations": 0,
+      "source": "runs/admission-literals-2026-10-30/baseline/results.json",
+      "sha256": "96fd19c4bcdf42a7a68fd478397d40f3d3c7d7b841f1ddc0ef8fe22e9d2ed93b"
+    },
+    "new24_fixed_v10": {
+      "cases": 24,
+      "generative_calls": 65,
+      "known_cost_usd": 0.0128478,
+      "unpriced_generations": 0,
+      "source": "runs/admission-literals-2026-10-30/fixed/results.json",
+      "sha256": "80ec2102171141cde152e21a9a77dc1f9f641b6ed977b420bb0b803bc3895f5b"
+    }
+  },
+  "mcp_smokes": [
+    {
+      "source": "runs/admission-literals-2026-10-30/release-mcp-pre-heading.json",
+      "status": "ok",
+      "errors": [],
+      "budget": {
+        "classification_calls": 3,
+        "document_reads": 4,
+        "logical_search_calls": 2,
+        "reranker_calls": 4,
+        "reranker_pairs": 61,
+        "source_context_max": 14962
+      },
+      "unpriced_generations": 3
+    },
+    {
+      "source": "runs/admission-literals-2026-10-30/release-mcp.json",
+      "status": "ok",
+      "errors": [],
+      "budget": {
+        "classification_calls": 3,
+        "document_reads": 4,
+        "logical_search_calls": 2,
+        "reranker_calls": 4,
+        "reranker_pairs": 61,
+        "source_context_max": 14962
+      },
+      "unpriced_generations": 3
+    }
+  ],
+  "priced_generations": 206,
+  "known_cost_usd": 0.04196711,
+  "unpriced_generations": 6,
+  "new24_quality_gate": {
+    "passed": false,
+    "reason": "new known false direct l19/C004 and one unjudged direct in each arm; recall gain not a safety pass",
+    "new_false_direct_ids": [
+      [
+        "l19",
+        "C004"
+      ]
+    ]
+  },
+  "native_checks": [
+    {
+      "command": [
+        "cargo",
+        "fmt"
+      ],
+      "exit_code": 0,
+      "seconds": 0.168,
+      "log": "runs/admission-literals-2026-10-30/fmt-final.log"
+    },
+    {
+      "command": [
+        "cargo",
+        "fmt",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.155,
+      "log": "runs/admission-literals-2026-10-30/fmt-check-final.log"
+    },
+    {
+      "command": [
+        "cargo",
+        "test",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 4.53,
+      "log": "runs/admission-literals-2026-10-30/tests-final-v10.log"
+    },
+    {
+      "command": [
+        "cargo",
+        "clippy",
+        "--locked",
+        "--offline",
+        "--all-targets",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "seconds": 1.442,
+      "log": "runs/admission-literals-2026-10-30/clippy-final.log"
+    },
+    {
+      "command": [
+        "cargo",
+        "build",
+        "--release",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "seconds": 6.27,
+      "log": "runs/admission-literals-2026-10-30/release-build-final.log"
+    }
+  ],
+  "ordinary_tests": {
+    "unit": 79,
+    "stdio": 5,
+    "total_passed": 84
+  },
+  "release_stdio_passed": 5,
+  "raw_acquisition": {
+    "queries": 24,
+    "cards": 440,
+    "unique_urls": 424,
+    "fetch_attempts": 395,
+    "same_url_imports": 2,
+    "host_disabled_skips": 27,
+    "source_search_requests": 48,
+    "blocked_hosts": 25,
+    "raw_elapsed_seconds": 1593.02,
+    "dev_fetch_attempts": 2
+  },
+  "integrity_after_both": {
+    "at_utc": "2026-10-30T19:24:37.433111+00:00",
+    "baseline_cases": 24,
+    "fixed_cases": 24,
+    "code_gold_raw_all_hashes_unchanged": true
+  },
+  "metrics_peer": {
+    "status": "PASS",
+    "independent_of_primary_metric_code": true,
+    "formal_independent_implementation_acceptance": false,
+    "reviewer_prior_roles": [
+      "cohort author",
+      "one source-gold shard author",
+      "source-only peer",
+      "benchmark tooling"
+    ],
+    "rows": {
+      "baseline": 24,
+      "fixed": 24
+    },
+    "branches": {
+      "baseline": {
+        "tp": 15,
+        "fp": 0,
+        "fn": 39,
+        "unjudged_direct": 1,
+        "recall": 0.2777777777777778
+      },
+      "fixed": {
+        "tp": 17,
+        "fp": 1,
+        "fn": 37,
+        "unjudged_direct": 1,
+        "recall": 0.3148148148148148
+      }
+    },
+    "false_direct_changes": {
+      "new": [
+        [
+          "l19",
+          "C004"
+        ]
+      ],
+      "removed": [],
+      "retained": []
+    },
+    "cases": {
+      "baseline": {
+        "l01": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "unjudged_direct": 0
+        },
+        "l02": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 5,
+          "unjudged_direct": 0
+        },
+        "l03": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "unjudged_direct": 0
+        },
+        "l04": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "unjudged_direct": 0
+        },
+        "l05": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "unjudged_direct": 0
+        },
+        "l06": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "unjudged_direct": 0
+        },
+        "l07": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "unjudged_direct": 0
+        },
+        "l08": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "unjudged_direct": 0
+        },
+        "l09": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 3,
+          "unjudged_direct": 0
+        },
+        "l10": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "unjudged_direct": 0
+        },
+        "l11": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 2,
+          "unjudged_direct": 0
+        },
+        "l12": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "unjudged_direct": 0
+        },
+        "l13": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 5,
+          "unjudged_direct": 0
+        },
+        "l14": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "unjudged_direct": 0
+        },
+        "l15": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "unjudged_direct": 0
+        },
+        "l16": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "unjudged_direct": 0
+        },
+        "l17": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "unjudged_direct": 1
+        },
+        "l18": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "unjudged_direct": 0
+        },
+        "l19": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "unjudged_direct": 0
+        },
+        "l20": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "unjudged_direct": 0
+        },
+        "l21": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "unjudged_direct": 0
+        },
+        "l22": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "unjudged_direct": 0
+        },
+        "l23": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "unjudged_direct": 0
+        },
+        "l24": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "unjudged_direct": 0
+        }
+      },
+      "fixed": {
+        "l01": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "unjudged_direct": 0
+        },
+        "l02": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 5,
+          "unjudged_direct": 0
+        },
+        "l03": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "unjudged_direct": 0
+        },
+        "l04": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "unjudged_direct": 0
+        },
+        "l05": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "unjudged_direct": 0
+        },
+        "l06": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "unjudged_direct": 0
+        },
+        "l07": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "unjudged_direct": 0
+        },
+        "l08": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "unjudged_direct": 0
+        },
+        "l09": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 3,
+          "unjudged_direct": 0
+        },
+        "l10": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "unjudged_direct": 0
+        },
+        "l11": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 1,
+          "unjudged_direct": 0
+        },
+        "l12": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "unjudged_direct": 0
+        },
+        "l13": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 5,
+          "unjudged_direct": 0
+        },
+        "l14": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "unjudged_direct": 0
+        },
+        "l15": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "unjudged_direct": 0
+        },
+        "l16": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "unjudged_direct": 0
+        },
+        "l17": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "unjudged_direct": 1
+        },
+        "l18": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "unjudged_direct": 0
+        },
+        "l19": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "unjudged_direct": 0
+        },
+        "l20": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "unjudged_direct": 0
+        },
+        "l21": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "unjudged_direct": 0
+        },
+        "l22": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "unjudged_direct": 0
+        },
+        "l23": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "unjudged_direct": 0
+        },
+        "l24": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "unjudged_direct": 0
+        }
+      }
+    },
+    "source_gold_counts": {
+      "null": 152,
+      "0": 76,
+      "1": 158,
+      "2": 54
+    },
+    "frozen_paths_checked": 491,
+    "raw_urls_checked": 424,
+    "exact_gold_quotes_checked": 456,
+    "branch_document_provenance_checked": 140,
+    "final_direct_proofs_checked": 171,
+    "identical_initial_requests": 24,
+    "primary_metrics_match": true,
+    "candidate_quality_gate": {
+      "passed": false,
+      "criterion": "higher direct recall and zero new known false-direct IDs",
+      "recall_gain_pp": 3.7037037037037033,
+      "new_known_false_directs": [
+        [
+          "l19",
+          "C004"
+        ]
+      ]
+    },
+    "gold_sha256": "5dface55b01d5bea90969fa26d98cbcc444d0c67469c2c13fd35b664d894abad",
+    "primary_results_sha256": "652e17af90b6aa221b6c830a1c34cf9a4aa47fe3b0ea0d44e8789ce88757681a",
+    "limits": [
+      "Independent arithmetic/data-path check; not independent product acceptance.",
+      "No claim of model determinism, universal recall, source factual truth or production SLA."
+    ],
+    "checked_at_utc": "2026-10-30T19:26:33.455023+00:00",
+    "checker_sha256": "137c9541656eeea39f040a0019ced5af0acb0ec09ee86f54d4d897d1fc5e16ba"
+  },
+  "protocol_peer": {
+    "review": "offline protocol peer review, not formal acceptance",
+    "reviewer": "literal_binding; separate from root runner, but previously authored scoped runtime fixes and l09-l16 source gold, and reviewed l17-l24 sources",
+    "reviewed_at_utc": "2026-10-30T19:12:53.820729+00:00",
+    "status": "PASS_WITH_DISCLOSED_PROTOCOL_DEVIATIONS_AND_LIMITS",
+    "independent_product_acceptance": false,
+    "scope": {
+      "fresh_prediction_contents_read": false,
+      "arm_identity_manifest_read": "baseline/manifest.json only",
+      "arm_output_filesystem_metadata_read": true,
+      "runtime_or_gold_edits": 0,
+      "network_calls": 0,
+      "model_calls": 0
+    },
+    "checks": [
+      {
+        "id": "frozen_query_pool",
+        "status": "PASS",
+        "evidence": "cases and criteria/plan frozen 18:26:59 UTC; retrieval finished18:36:17; all24 case rows byte-equivalent as JSON values to retrieval; 440cards/424 unique URLs; exact pool URL order preserved in preacquisition",
+        "cases_sha256": "f601f81f885fe9ac2cee89e88510a4f51016628241dbfc1c71e21055c92562b7",
+        "plan_sha256": "f5dde2dd8e6ad0cb98e9622db4dad965aa66c75cc6428e595fff8eebc3941e59",
+        "limit": "Overlap checks assess the recorded historical query inventory and operation patterns; no universal novelty or random sampling claim."
+      },
+      {
+        "id": "code_chronology",
+        "status": "PASS_WITH_DEVIATION",
+        "evidence": "Initial code marker18:38:14 UTC, old9-driven heading amendment18:52:53, recorded final code18:55:03 (manifest FSmtime18:55:31), all before NEW24 inference19:08:06. Source annotations had started; amendment metadata explicitly records this. Actual diff is actual page_title contains full core quote -> ambiguous, plus regressions; no model/profile/source-specific allowlist changes.",
+        "deviation": "This was not a single untouched pre-source code freeze. Raw imports started18:36:17 and new acquisition18:36:22 before initial code marker; final code also follows source authoring. The claim must be freeze before NEW24 inference with disclosed old9 amendment, not freeze before all acquisition/annotation.",
+        "source_blindness_limit": "No fresh prediction tuning is supported by chronology/participant source-only workflow declarations; artifacts alone cannot prove an implementer never saw any source."
+      },
+      {
+        "id": "raw_immutability",
+        "status": "PASS_WITH_SCHEDULING_QUALIFICATION",
+        "evidence": "427/427 raw manifest entries match; all424 URL snapshot hashes match per-acquisition hashes, HTML hashes and SHA256(url) cache identity; blocks SHA matches confirmation; cache contains only frozen retrieved URLs. Whole raw manifest froze19:04:21 before assembled gold/inference.",
+        "qualification": "Authors worked incrementally on completed immutable per-case caches before global raw freeze; l01-l08 final shard18:50:13 and l09-l16 revised final19:02:21 precede global19:04:21. This is not a globally sequential raw-freeze-then-all-annotation workflow. Original raw contents unavailable/blocked remain explicit rather than negative."
+      },
+      {
+        "id": "gold_peer_chronology",
+        "status": "PASS",
+        "evidence": "All440cards annotated exactly once; 288 known grades each separately accepted by rotated peer,152 unknown retained. Final author shards18:50:13/19:02:21/19:06:16; rotated peers18:51:10/19:03:09/19:07:42; gold freeze19:08:06.063473, inference marker19:08:06.191560. Exact source-only proofs and reviewer hashes frozen.",
+        "limit": "Gold-before-inference marker precedes start marker by128ms; local application timestamps plus filesystem metadata are supporting evidence, not independently signed launch/API logs. Authors/peers are implementation-team agents; this is not external product acceptance."
+      },
+      {
+        "id": "historical_inputs_dependencies",
+        "status": "PASS",
+        "evidence": "All4 original input hashes match baseline-input-hashes: original20, B17, mainCargo.toml and Cargo.lock. Baseline replay Cargo files differ only package name web-search->web-search-admission-baseline; dependency entries unchanged. Baseline evidence matches original v9 snapshot.",
+        "hashes": {
+          "Cargo.toml": "a412701626ddb64f41b6252ce73621b53cf274313eed3b1b6629da01ff228db4",
+          "Cargo.lock": "807351f5b582ec57b22aa8f02dfcc86349e0e382d0091d5e17769beb54a997a5",
+          "feasibility/search-cases.json": "b67e3269830ae0e976aa9b4c5dc2f6b9c3e922ad1adda35738289d6b1b8325d6",
+          "feasibility/b17-policy.json": "1e83c13aa670b1a656262542eb5c34b21f559aca8fd0da179ab704097dcc995e"
+        }
+      },
+      {
+        "id": "paired_runtime_profiles",
+        "status": "PASS_CODE_AND_BOTH_ARM_IDENTITIES",
+        "evidence": "Both source trees identical except evidence.rs; shared replay tooling added cache-only preacquisition/guards and version identity gates. Model/policy/reranker/rescue/net unchanged and equal arms. Exact version gate v9 vs v10 plus same conservative-evidence-v4-bounded-output. DeepSeek deepseek/deepseek-v4.1-flash-1017; temperature0, strictschema, require_parameters=true, allow_fallbacks=false; initial reasoningnone/max4096; coverage none/6000; finalaudit low/6000/exclude=true. Qwen3-Reranker-0.6B-4bit local required.",
+        "caps": {
+          "generations_per_query": 3,
+          "document_reads": 4,
+          "reranker_calls_at_most": 4,
+          "query_wall_seconds": 180,
+          "source_context_chars_per_call": 24000,
+          "reranker_windows_per_call_at_most": 128,
+          "window_chars": 1200,
+          "body_chars_at_most": 100000,
+          "per_arm_cost_stop_usd": 2.0
+        },
+        "limit": "Profiles and caps verified in shared source, not fresh call contents. Three-generative budget excludes startup model/reranker availability checks; four-read budget excludes all-candidate preacquisition. Remote provider weights, backend behavior, local Qwen weight digest and secrets/startup file contents were not independently verified.",
+        "postcheck": "Both arm identity manifests now match expected versions/classifier/profile/Qwen and actual executable hashes; request contents intentionally not read."
+      },
+      {
+        "id": "no_initial_bypass_no_gold_input",
+        "status": "PASS_AT_CODE_LEVEL",
+        "evidence": "full_pipeline_replay constructs frozen Session from captured sources and calls normal Session.run(...,evidence_memory=true); Session.run exports original candidates, builds classifier context and invokes model.classify, then uses remaining3-call budget. Runner reads retrieval corpus/raw cache, not source gold/author/peer; candidate equality asserted eachcase. Re-running same candidates does not imply same stochastic model labels."
+      },
+      {
+        "id": "cache_only_no_live_fallback",
+        "status": "PASS_AT_CODE_LEVEL",
+        "evidence": "admission-literals requires RAW_CACHE_ONLY plus RAW_CACHE. Missing cache URL errors before net::fetch. Saved error envelopes replay errors; success validates identity/htmlhash/public URLs/status/redirect provenance. No cache block save occurs in cache-only branch. Frozen Session returns captured sources. Existing offline cache-only-miss regression is included in successful recorded ordinary final tests.",
+        "limit": "This does not imply no network: remote LLM and local Qwen inference still occur. Public browser reading, new retrieval providers and blocked-host retries are not enabled."
+      },
+      {
+        "id": "executable_and_settings_preregistration",
+        "status": "PASS_EXECUTABLE_IDENTITY_WITH_STARTUP_DIGEST_LIMIT",
+        "evidence": "Source/Cargo manifests frozen before NEW24 inference. Baseline executable458d6a… also recorded in development/baseline-current/manifest.json before primary run; baseline primary manifest19:08:12 matches actual executable with filesystemmtime18:38:21. Actual fixed test executable from tests-final-v10.log is web_search-25a9438a3e6df638, SHA e29498b7…, filesystemmtime18:54:41 (before start).",
+        "executables": [
+          {
+            "path": "target/debug/deps/web_search_admission_baseline-72536d7df0459e22",
+            "sha256": "458d6a1a1d25e8efc4a5f64c1c03e31585432482a63481ca47c964204c196d4e",
+            "mtime_utc": "2026-10-30T18:38:21.428509+00:00",
+            "birthtime_utc": "2026-10-30T18:38:21.403724+00:00"
+          },
+          {
+            "path": "target/debug/deps/web_search-25a9438a3e6df638",
+            "sha256": "e29498b72a7bfe522bbc68fe034fdce8ad0e422bbfe8ef977ec746fee684f444",
+            "mtime_utc": "2026-10-30T18:54:41.800680+00:00",
+            "birthtime_utc": "2026-10-30T18:54:41.796544+00:00"
+          }
+        ],
+        "limit": "Final code manifest does not itself include binary/startup digests. Baseline has pre-primary identity and binary FS metadata corroborates build timing; fixed primary identity remains pending. Key/auth/config hashes intentionally not persisted or inspected. Public startup/model pins and shared source profiles are checked, not secret file identity. Remote weights and local Qwen weight hashes remain outside review.",
+        "postcheck": "Both primary identity manifests now match actual baseline458d6a… / fixede29498… and pre-fixed executable metadata. No secret/startup digest claim added."
+      },
+      {
+        "id": "no_prior_inference_gate",
+        "status": "LIMIT_WITH_SUPPORTING_METADATA",
+        "evidence": "At reviewed moment, no baseline/fixed output file birth/mtime precedes gold marker; earliest observed output baseline/l01-call00.json19:08:16.116886; contents not read.",
+        "mechanical_gap": "Gold helper before_inference() checks results.json and *-model-*.json, whereas runner emits *-call00.json, *-evidence-round*.json, *-evidence-audit.json. Gate is not exhaustive for a partially started case without results.json. Do not claim this guard alone proves no prior generations.",
+        "metadata": {
+          "checked_at_utc": "2026-10-30T19:12:14.318579+00:00",
+          "gold_freeze_marker_utc": "2026-10-30T19:08:06.063473+00:00",
+          "arms": [
+            {
+              "arm": "baseline",
+              "metadata_only": true,
+              "earliest_artifact": {
+                "name": "l01-call00.json",
+                "time_utc": "2026-10-30T19:08:16.116886+00:00"
+              },
+              "artifacts_with_birth_or_mtime_before_gold_marker": 0,
+              "contents_not_read": true
+            },
+            {
+              "arm": "fixed",
+              "metadata_only": true,
+              "earliest_artifact": null,
+              "artifacts_with_birth_or_mtime_before_gold_marker": 0,
+              "contents_not_read": true
+            }
+          ],
+          "limits": "Filesystem metadata supports observed artifact creation chronology; not external API audit or proof of absent deleted/unlogged artifacts."
+        },
+        "additional_procedural_evidence": "Root reports an explicit pre-launch assertion that baseline and fixed output directories did not exist immediately before writing inference-start.json and first NEW24 cargo invocation. Reviewer received this as direct parent coordination evidence; original launch tool command was not independently replayed/read. This is distinct from incomplete helper glob guard."
+      },
+      {
+        "id": "current_hash_integrity",
+        "status": "PASS",
+        "evidence": {
+          "code-freeze.json": {
+            "entries": 54,
+            "matched": 54,
+            "missing": [],
+            "mismatches": [],
+            "manifest_sha256": "4a0ea2f28f45dedbaf2834acc8f59d69ee051112ccb9cee505197ac847afe6ae"
+          },
+          "raw-freeze.json": {
+            "entries": 427,
+            "matched": 427,
+            "missing": [],
+            "mismatches": [],
+            "manifest_sha256": "bd64757b9a6aabb2a63aa645c538c535210603da7db8a0da4e31208b0954fca2"
+          },
+          "gold-freeze.json": {
+            "entries": 440,
+            "matched": 440,
+            "missing": [],
+            "mismatches": [],
+            "manifest_sha256": "724a2218f77fac2896735ad18c68ba1aabd06ce8ed7074a37cbe4d223926ace7"
+          },
+          "baseline-input-hashes.json": {
+            "entries": 4,
+            "matched": 4,
+            "missing": [],
+            "mismatches": [],
+            "manifest_sha256": "b84c6a2211384036209a5d9e673ca5594316d5b9a16ef5e9c3de926a1bf8fa7f"
+          }
+        }
+      },
+      {
+        "id": "post_both_arms_check",
+        "status": "PASS_INTEGRITY_AND_IDENTITY",
+        "evidence": "Separately reran all frozen hashes and actual executable/manifest checks after both completed arms; code54/raw427/gold440/historical4 match; baseline458d6a… fixede29498… actual executables match identity/pre-fixed metadata; both retain24 result filenames; no fresh prediction contents read. Observed budget/quality review remains separate.",
+        "supplement": "protocol-post-integrity.json"
+      }
+    ],
+    "timeline_utc": [
+      [
+        "2026-10-30T18:26:59.588471+00:00",
+        "query cases/plan frozen"
+      ],
+      [
+        "2026-10-30T18:36:17.145802+00:00",
+        "first raw import cache file born"
+      ],
+      [
+        "2026-10-30T18:36:22.947332+00:00",
+        "first newly acquired raw cache file born"
+      ],
+      [
+        "2026-10-30T18:38:14.841561+00:00",
+        "initial code marker"
+      ],
+      [
+        "2026-10-30T18:39:14.142916+00:00",
+        "gold tooling guard update, before final gold/new arms"
+      ],
+      [
+        "2026-10-30T18:50:13.698467+00:00",
+        "l01-l08 final source author shard"
+      ],
+      [
+        "2026-10-30T18:52:53.425371+00:00",
+        "old9 heading-only witness amendment recorded"
+      ],
+      [
+        "2026-10-30T18:55:03.919645+00:00",
+        "recorded final code freeze"
+      ],
+      [
+        "2026-10-30T19:02:55.205731+00:00",
+        "whole preacquisition complete"
+      ],
+      [
+        "2026-10-30T19:04:21.162603+00:00",
+        "global raw freeze/cache complete confirmation"
+      ],
+      [
+        "2026-10-30T19:07:42.223767+00:00",
+        "last rotated peer final"
+      ],
+      [
+        "2026-10-30T19:08:06.063473+00:00",
+        "gold-before-inference marker"
+      ],
+      [
+        "2026-10-30T19:08:06.191560+00:00",
+        "NEW24 start marker"
+      ],
+      [
+        "2026-10-30T19:08:12.334980+00:00",
+        "baseline identity manifest"
+      ],
+      [
+        "2026-10-30T19:08:16.116886+00:00",
+        "earliest observed case output metadata, content uninspected"
+      ]
+    ],
+    "support_artifacts": [
+      "protocol-hash-check.json",
+      "protocol-input-structure-check.json",
+      "protocol-executable-stat-check.json",
+      "protocol-output-metadata-only.json",
+      "code-before-new-sources.json",
+      "heading-amendment.json",
+      "gold-tooling-freeze-update.json",
+      "inference-start.json",
+      "gold-audit/cache-complete-confirmation.json",
+      "gold-audit/gold-before-inference.json",
+      "code-freeze.json",
+      "raw-freeze.json",
+      "gold-freeze.json"
+    ],
+    "conclusion": "The frozen paired comparison can be interpreted as exploratory, source-reviewed engineering evidence with disclosed chronological and auditability limits. It cannot be presented as untouched pre-source preregistration, external acceptance, or general qualification. Do not change gold/runtime after NEW24 predictions.",
+    "post_both_arms_integrity": {
+      "status": "PASS",
+      "checked_at_utc": "2026-10-30T19:25:17.912511+00:00",
+      "artifact": "protocol-post-integrity.json",
+      "markdown": "protocol-post-integrity.md",
+      "fresh_prediction_contents_read": false
+    }
+  },
+  "protocol_post_integrity": {
+    "review": "Independent post-both-arms protocol integrity supplement; not formal acceptance",
+    "reviewer": "literal_binding, separately reran hashes/identity checks without arm prediction contents",
+    "checked_at_utc": "2026-10-30T19:25:17.912511+00:00",
+    "status": "PASS",
+    "network_calls": 0,
+    "model_calls": 0,
+    "runtime_gold_or_frozen_script_edits": 0,
+    "fresh_prediction_contents_read": false,
+    "scope": "Current frozen bytes, source/configuration code identities, actual executables, arm identity manifests and stat-only output chronology. No quality metrics or semantic review of model outputs.",
+    "manifest_checks": {
+      "code-freeze.json": {
+        "entries": 54,
+        "matched": 54,
+        "manifest_sha256": "4a0ea2f28f45dedbaf2834acc8f59d69ee051112ccb9cee505197ac847afe6ae",
+        "missing": [],
+        "mismatches": []
+      },
+      "raw-freeze.json": {
+        "entries": 427,
+        "matched": 427,
+        "manifest_sha256": "bd64757b9a6aabb2a63aa645c538c535210603da7db8a0da4e31208b0954fca2",
+        "missing": [],
+        "mismatches": []
+      },
+      "gold-freeze.json": {
+        "entries": 440,
+        "matched": 440,
+        "manifest_sha256": "724a2218f77fac2896735ad18c68ba1aabd06ce8ed7074a37cbe4d223926ace7",
+        "missing": [],
+        "mismatches": []
+      },
+      "baseline-input-hashes.json": {
+        "entries": 4,
+        "matched": 4,
+        "manifest_sha256": "b84c6a2211384036209a5d9e673ca5594316d5b9a16ef5e9c3de926a1bf8fa7f",
+        "missing": [],
+        "mismatches": []
+      }
+    },
+    "manifest_changes_since_protocol_precheck": [],
+    "shared_profile_sources": {
+      "model_equal_both_arms": true,
+      "model_sha256": "38aa97faf9fca71dada459282da9c7a945e9ba18002f56e1bd1a25708f89fe9b",
+      "reranker_equal_both_arms": true,
+      "reranker_sha256": "590cafd49810a721b72b5adb2c5a017ee887a83cc8f6723decd80915a65e759d",
+      "public_model_pin": "deepseek/deepseek-v4.1-flash-1017",
+      "initial": {
+        "reasoning": "none",
+        "max_tokens": 4096
+      },
+      "coverage": {
+        "reasoning": "none",
+        "max_tokens": 6000
+      },
+      "audit": {
+        "reasoning": "low",
+        "max_tokens": 6000,
+        "exclude_reasoning": true
+      },
+      "temperature": 0,
+      "caps": {
+        "generative_calls_per_query": 3,
+        "document_reads_per_query": 4,
+        "local_qwen_calls_per_query": 4,
+        "seconds_per_query": 180,
+        "context_chars_per_call": 24000
+      },
+      "limit": "Pinned code and observed executable identities; no fresh request bodies or external/local provider weights/settings/secret contents inspected."
+    },
+    "timestamps": {
+      "final_code_frozen_recorded_utc": "2026-10-30T18:55:03.919645+00:00",
+      "final_code_manifest_filesystem_mtime_utc": "2026-10-30T18:55:31.637254+00:00",
+      "raw_frozen_utc": "2026-10-30T19:04:21.162603+00:00",
+      "gold_frozen_utc": "2026-10-30T19:08:06.063473+00:00",
+      "inference_start_marker_utc": "2026-10-30T19:08:06.191560+00:00",
+      "pre_fixed_executables_observed_utc": "2026-10-30T19:12:39.185896+00:00"
+    },
+    "arms": [
+      {
+        "arm": "baseline",
+        "identity_manifest": "runs/admission-literals-2026-10-30/baseline/manifest.json",
+        "manifest_sha256": "d6570c88b20a4462674a9412083fb0c22d325ca3c28b97f6fb505433282c6d1e",
+        "manifest": {
+          "binary_sha256": "458d6a1a1d25e8efc4a5f64c1c03e31585432482a63481ca47c964204c196d4e",
+          "branch": "baseline",
+          "classifier": "conservative-evidence-v4-bounded-output",
+          "evidence_version": "request-evidence-v9-reference-context",
+          "experiment_profile": "admission-literals",
+          "initial_classifier_bypass": false,
+          "raw_acquisition_cache": true,
+          "reranker": "Qwen3-Reranker-0.6B-4bit"
+        },
+        "manifest_birthtime_utc": "2026-10-30T19:08:12.334905+00:00",
+        "manifest_mtime_utc": "2026-10-30T19:08:12.334980+00:00",
+        "executable": "target/debug/deps/web_search_admission_baseline-72536d7df0459e22",
+        "executable_sha256": "458d6a1a1d25e8efc4a5f64c1c03e31585432482a63481ca47c964204c196d4e",
+        "executable_mtime_utc": "2026-10-30T18:38:21.428509+00:00",
+        "executable_birthtime_utc": "2026-10-30T18:38:21.403724+00:00",
+        "matches_expected_executable_and_pre_fixed_manifest": true,
+        "result_artifact_count": 24,
+        "result_names_exactly_l01_l24": true,
+        "earliest_output_metadata_utc": "2026-10-30T19:08:16.116886+00:00",
+        "latest_output_metadata_utc": "2026-10-30T19:14:53.760448+00:00",
+        "output_artifacts_predating_gold_marker": [],
+        "prediction_contents_read": false
+      },
+      {
+        "arm": "fixed",
+        "identity_manifest": "runs/admission-literals-2026-10-30/fixed/manifest.json",
+        "manifest_sha256": "d5c2dc7fb596af2b90566130be01999804ad40c6da811b31aef64c10b7123a97",
+        "manifest": {
+          "binary_sha256": "e29498b72a7bfe522bbc68fe034fdce8ad0e422bbfe8ef977ec746fee684f444",
+          "branch": "fixed",
+          "classifier": "conservative-evidence-v4-bounded-output",
+          "evidence_version": "request-evidence-v10-admission-literals",
+          "experiment_profile": "admission-literals",
+          "initial_classifier_bypass": false,
+          "raw_acquisition_cache": true,
+          "reranker": "Qwen3-Reranker-0.6B-4bit"
+        },
+        "manifest_birthtime_utc": "2026-10-30T19:15:40.940886+00:00",
+        "manifest_mtime_utc": "2026-10-30T19:15:40.940960+00:00",
+        "executable": "target/debug/deps/web_search-25a9438a3e6df638",
+        "executable_sha256": "e29498b72a7bfe522bbc68fe034fdce8ad0e422bbfe8ef977ec746fee684f444",
+        "executable_mtime_utc": "2026-10-30T18:54:41.800680+00:00",
+        "executable_birthtime_utc": "2026-10-30T18:54:41.796544+00:00",
+        "matches_expected_executable_and_pre_fixed_manifest": true,
+        "result_artifact_count": 24,
+        "result_names_exactly_l01_l24": true,
+        "earliest_output_metadata_utc": "2026-10-30T19:15:42.622609+00:00",
+        "latest_output_metadata_utc": "2026-10-30T19:24:09.455420+00:00",
+        "output_artifacts_predating_gold_marker": [],
+        "prediction_contents_read": false
+      }
+    ],
+    "historical_hashes": {
+      "Cargo.toml": "a412701626ddb64f41b6252ce73621b53cf274313eed3b1b6629da01ff228db4",
+      "Cargo.lock": "807351f5b582ec57b22aa8f02dfcc86349e0e382d0091d5e17769beb54a997a5",
+      "feasibility/search-cases.json": "b67e3269830ae0e976aa9b4c5dc2f6b9c3e922ad1adda35738289d6b1b8325d6",
+      "feasibility/b17-policy.json": "1e83c13aa670b1a656262542eb5c34b21f559aca8fd0da179ab704097dcc995e"
+    },
+    "limits": [
+      "This postcheck confirms current bytes and retained artifact metadata; it is not a signed filesystem/API event audit and cannot exclude deleted/unlogged artifacts or transient mutation restored before checking.",
+      "No model call contents/results or quality metrics were read; observed per-call/read/time budgets remain for the separate metrics reviewer. Result filenames establish retained artifact completeness, not semantic validity or success of each result.",
+      "Previously disclosed old9 heading amendment after source authoring began, incremental source authoring before global raw freeze, helper-glob coverage and absence of secret/settings preregistration limitations remain unchanged.",
+      "Source-only gold was reviewed by implementation-team peers; this is not formal independent product acceptance or general qualification."
+    ],
+    "errors": []
+  },
+  "case_gold_code_timing": {
+    "gold": {
+      "frozen_at_utc": "2026-10-30T19:08:06.063473+00:00",
+      "gold_sha256": "5dface55b01d5bea90969fa26d98cbcc444d0c67469c2c13fd35b664d894abad",
+      "baseline_results_present": false,
+      "fixed_results_present": false,
+      "inspected_sources": 288,
+      "peer_reviewed_sources": 288,
+      "candidate_sources": 440
+    },
+    "inference_start": {
+      "at_utc": "2026-10-30T19:08:06.191560+00:00",
+      "gold_frozen_before_either_arm": true,
+      "cases": 24,
+      "branches": [
+        "baseline_v9",
+        "fixed_v10"
+      ],
+      "raw_cache_only": true,
+      "gold_sha256": "5dface55b01d5bea90969fa26d98cbcc444d0c67469c2c13fd35b664d894abad",
+      "code_freeze_sha256": "4a0ea2f28f45dedbaf2834acc8f59d69ee051112ccb9cee505197ac847afe6ae",
+      "raw_freeze_sha256": "bd64757b9a6aabb2a63aa645c538c535210603da7db8a0da4e31208b0954fca2",
+      "initial_classifier_bypass": false,
+      "runtime_tuning_after_this_point": false
+    },
+    "heading_amendment": {
+      "at_utc": "2026-10-30T18:52:53.425371+00:00",
+      "trigger": "old9 p06C010 additional false direct; exact core quote was an actual page title duplicated in body",
+      "scope": "apply_atomic core witness structural validation; actual page_title only, no keyword/domain/genre or model changes",
+      "before_code_manifest": "runs/admission-literals-2026-10-30/code-freeze-before-heading-guard.json",
+      "archived_source_hashes": {
+        "runs/admission-literals-2026-10-30/pre-heading-src/benchmark.rs": "a986628eac97c65ba3b96138f1b24cf52a0807c5b2208ec5abce7a1d4f515500",
+        "runs/admission-literals-2026-10-30/pre-heading-src/browser.rs": "4bf08cddf944b6a1f7640b7350d69e88a5d9f93772099ea64f759dceb4ec807b",
+        "runs/admission-literals-2026-10-30/pre-heading-src/discover.rs": "3dd98313a4bf003d217a21a6640d99797615e397d926b159155fcf3a3f5d2b68",
+        "runs/admission-literals-2026-10-30/pre-heading-src/evidence.rs": "50aebd49de9ae334303a08010e1fc9959a0aeede49bb582cee2994c5ac40a080",
+        "runs/admission-literals-2026-10-30/pre-heading-src/evidence_probe.rs": "4be45e9118fc627b53c9a2d819b3a5258cdf97e483eb777789e803ff2d6a7c4c",
+        "runs/admission-literals-2026-10-30/pre-heading-src/main.rs": "b7b5e3f435718812fd8cbbe52d7929a9afc7612c992b2fc7504ded8201c3999d",
+        "runs/admission-literals-2026-10-30/pre-heading-src/mcp.rs": "ecda6cc2625d3ba8158f2063be5fa7bad03aad8483bc2ee6e402389ba448694d",
+        "runs/admission-literals-2026-10-30/pre-heading-src/model.rs": "38aa97faf9fca71dada459282da9c7a945e9ba18002f56e1bd1a25708f89fe9b",
+        "runs/admission-literals-2026-10-30/pre-heading-src/net.rs": "0d50f463d9f5c017c87e8420352fc4034ca1be13bb3d13218df8958665ad7139",
+        "runs/admission-literals-2026-10-30/pre-heading-src/policy.rs": "f5436c4e01d5fc2699b8c9b19a0cc5d030b4a54b35a3acfb124bfa7d102f4afb",
+        "runs/admission-literals-2026-10-30/pre-heading-src/reliability_benchmark.rs": "d99a9bcdd58b8af2e52adbcd5de950e34ec6e6ed35574c20569d1418b419740d",
+        "runs/admission-literals-2026-10-30/pre-heading-src/reranker.rs": "590cafd49810a721b72b5adb2c5a017ee887a83cc8f6723decd80915a65e759d",
+        "runs/admission-literals-2026-10-30/pre-heading-src/reranker_benchmark.rs": "d2341b43d554121b0c8e79889cdf114a8f6018ac230e52ef2f911c5545e0fe61",
+        "runs/admission-literals-2026-10-30/pre-heading-src/rescue.rs": "d63409e55016de8aacfa546197ccc13080d5a57fa72bd0145534460c40ceeff9",
+        "runs/admission-literals-2026-10-30/pre-heading-src/search.rs": "4d073253ccc65cb4420b4164fb836ed795624ac67931aff9cdd2d60826b45d1c"
+      },
+      "new24_inference_started": false,
+      "source_annotations_already_started": true,
+      "gold_criteria_unchanged": true,
+      "gold_before_new24_inference_still_required": true,
+      "no_fresh_prediction_tuning": true,
+      "final_code_frozen_at_utc": "2026-10-30T18:55:03.919645+00:00",
+      "final_code_manifest_sha256": "4a0ea2f28f45dedbaf2834acc8f59d69ee051112ccb9cee505197ac847afe6ae",
+      "native_checks": "84passed/fmt/clippy/release"
+    }
+  },
+  "original_input_hashes": {
+    "Cargo.toml": "a412701626ddb64f41b6252ce73621b53cf274313eed3b1b6629da01ff228db4",
+    "Cargo.lock": "807351f5b582ec57b22aa8f02dfcc86349e0e382d0091d5e17769beb54a997a5",
+    "feasibility/search-cases.json": "b67e3269830ae0e976aa9b4c5dc2f6b9c3e922ad1adda35738289d6b1b8325d6",
+    "feasibility/b17-policy.json": "1e83c13aa670b1a656262542eb5c34b21f559aca8fd0da179ab704097dcc995e"
+  },
+  "independent_product_acceptance": false,
+  "scope_limits": [
+    "One exploratory paired NEW24 run, not pilot20/day2 qualification or causal isolated reranker gain.",
+    "Unknown full sources remain unknown; no label edits after inference.",
+    "No VPS/load/MiMo-v10/global config/hooks or new dependencies.",
+    "No Git repository: actual snapshots/diffs/hashes used.",
+    "Source context24000 chars per model call, not total across calls."
+  ],
+  "final_project_context_verification": {
+    "at_utc": "2026-10-30T19:34:10.128985+00:00",
+    "local_markdown_links_checked": 181,
+    "broken_links": [],
+    "frozen_code_gold_raw_unchanged": true,
+    "context_checks": {
+      "context-lint-after-finalize.json": {
+        "status": "OK",
+        "errors": [],
+        "warnings": [],
+        "categories": {
+          "active": [],
+          "historical": [],
+          "draft": []
+        }
+      },
+      "context-index-check-after-finalize.json": {
+        "status": "OK",
+        "fresh": true
+      },
+      "context-doctor-after-finalize.json": {
+        "status": "WARN",
+        "diagnostics": [
+          {
+            "id": "context-dir",
+            "status": "ok",
+            "message": ".project-context exists."
+          },
+          {
+            "id": "project-yaml",
+            "status": "ok",
+            "message": "project.yaml exists."
+          },
+          {
+            "id": "package-json",
+            "status": "ok",
+            "message": "Context-router package exists."
+          },
+          {
+            "id": "dependencies",
+            "status": "ok",
+            "message": "Context-router runtime dependencies resolved from the installed package."
+          },
+          {
+            "id": "codex-config",
+            "status": "ok",
+            "message": "Codex project config declares project_context; runtime connection and tool availability in the current client are not verified."
+          },
+          {
+            "id": "codex-hooks-json",
+            "status": "ok",
+            "message": "Project config does not require Codex lifecycle hooks."
+          },
+          {
+            "id": "git-hooks-path",
+            "status": "ok",
+            "message": "Project config does not require a custom Git hooks path."
+          },
+          {
+            "id": "sqlite-ignore",
+            "status": "warn",
+            "message": "SQLite context index is not ignored by git."
+          },
+          {
+            "id": "draft-ignore",
+            "status": "warn",
+            "message": "Context drafts are not ignored by git."
+          },
+          {
+            "id": "context-index",
+            "status": "ok",
+            "message": "Context SQLite index is present and fresh."
+          },
+          {
+            "id": "context-search",
+            "status": "ok",
+            "message": "Context search index implementation is queryable."
+          },
+          {
+            "id": "context-record-ids",
+            "status": "ok",
+            "message": "Context record ids are unique across indexed records."
+          },
+          {
+            "id": "context-mappings",
+            "status": "ok",
+            "message": "Routing and record module mappings are valid."
+          },
+          {
+            "id": "source-coverage",
+            "status": "warn",
+            "message": "12255 candidate source/config file(s) outside configured source_globs; review intentional exclusions before changing configuration.",
+            "details": [
+              "scripts/admission-literals-gold-2026-10-30.py: context",
+              "scripts/analyze-admission-literals-2026-10-30.py: context",
+              "scripts/analyze-classifier-relation-2026-10-30.py: context",
+              "scripts/analyze-direct-coverage-2026-10-30.py: context",
+              "scripts/analyze-evidence-layer-2026-10-30.py: context",
+              "scripts/analyze-extraction-selection-2026-10-30.py: context",
+              "scripts/analyze-model-benchmark-2026-10-30.py: context",
+              "scripts/analyze-passage-coverage-2026-10-30.py: context",
+              "scripts/analyze-passage-coverage-confirm-2026-10-30.py: context",
+              "scripts/analyze-passage-coverage-final-2026-10-30.py: context",
+              "scripts/analyze-reranker-2026-10-30.py: context",
+              "scripts/classifier-relation-gold-2026-10-30.py: context",
+              "scripts/compare-extraction-selection-sources-2026-10-30.py: context",
+              "scripts/diagnose-admission-literals-2026-10-30.py: context",
+              "scripts/direct-coverage-gold-2026-10-30.py: context",
+              "scripts/extraction-selection-gold-2026-10-30.py: context",
+              "scripts/passage-coverage-confirm-gold-2026-10-30.py: context",
+              "scripts/passage-coverage-final-gold-2026-10-30.py: context",
+              "scripts/passage-coverage-gold-2026-10-30.py: context",
+              "scripts/reliability-holdout-gold-2026-10-30.py: context",
+              "scripts/reranker-gold-2026-10-30.py: context",
+              "runs/admission-literals-2026-10-30/check-metrics-peer.py: context",
+              "runs/extraction-selection-2026-10-30/main-before-extraction.rs: context",
+              "runs/full-policy-2026-10-29/grade.py: context",
+              "runs/full-policy-2026-10-29/update-docs.py: context",
+              "runs/model-benchmark-2026-10-30/analyze.py: context",
+              "runs/model-benchmark-2026-10-30/render_tables.py: context",
+              "runs/passage-coverage-2026-10-30/fetch-gold-only.py: context",
+              "runs/passage-coverage-confirm-2026-10-30/fetch-gold-only.py: context",
+              "runs/passage-coverage-final-2026-10-30/fetch-gold-only.py: context"
+            ]
+          },
+          {
+            "id": "durable-memory",
+            "status": "warn",
+            "message": "Git tracking could not be verified; configure durable record distribution explicitly."
+          },
+          {
+            "id": "context-file-references",
+            "status": "ok",
+            "message": "Active context file references resolve; 0 historical/draft issue(s) are non-blocking."
+          },
+          {
+            "id": "backlog-ready",
+            "status": "warn",
+            "message": "No unblocked ready/open backlog items are available."
+          },
+          {
+            "id": "context-lint",
+            "status": "ok",
+            "message": "Context lint is clean."
+          },
+          {
+            "id": "hook-state-retention",
+            "status": "ok",
+            "message": "Codex hook session state is within the 7-day TTL."
+          },
+          {
+            "id": "pack-cache-retention",
+            "status": "ok",
+            "message": "Context pack cache is within the 30-day retention window."
+          }
+        ],
+        "summary": {
+          "ok": 15,
+          "warn": 5,
+          "fail": 0
+        }
+      }
+    },
+    "context_smoke_passed": true,
+    "quality_gate_passed": false,
+    "formal_acceptance": false
+  },
+  "formal_task_completion": "partial: qualitygatefailed and independent ready_to_merge acceptance absent"
+}

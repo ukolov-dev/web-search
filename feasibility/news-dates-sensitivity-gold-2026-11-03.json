@@ -1,0 +1,672 @@
+{
+  "scope": "Separate adaptive source-aware sensitivity2; not NEW12 or pooled qualification. Successful READ+returned source-only gold.",
+  "created_utc": "2026-11-03T13:27:56.354036+00:00",
+  "protocol": "feasibility/news-dates-sensitivity-plan-v1.json",
+  "parts": [
+    {
+      "path": "runs/news-dates-2026-11-03/sensitivity/blind/gold-ds01.json",
+      "sha256": "e68d3ef1e6824a77b41704ea130948ff4a57441a2f8c4cbf6d5f19b9cf6f6b0b"
+    },
+    {
+      "path": "runs/news-dates-2026-11-03/sensitivity/blind/gold-ds02.json",
+      "sha256": "af93c64c55d869609a1331f568f22f889e2f657c5787c38c38593cfab62ee4f0"
+    }
+  ],
+  "source_bundle_sha256": "8686634f4ee60ba10da590610a3ddc3cc4e125cb5dbb0eb5ec79b0cef0d9ebf8",
+  "rows": [
+    {
+      "blind_id": "0abab0ceaa1cbccf",
+      "case_id": "ds01",
+      "url": "https://nn.rbc.ru/nn",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Главная/региональная страница новостного портала или лента, не отдельная проверенная городская публикация. Собственная полная дата статьи отсутствует; даты отдельных анонсов не датируют саму ленту. Только карточка; граница навигации предварительная.",
+      "evidence": [
+        "✅Новости Нижнего Новгорода и Нижегородской области ⚡Свежие события и происшествия на РБК새 창 열림"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/sensitivity/blind/source-cards.json",
+          "json_pointer": "/rows/0/source_cards/0",
+          "url": "https://nn.rbc.ru/nn"
+        }
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "nn.rbc.ru",
+      "annotation_boundary": "card_only_provisional",
+      "variant_reviews": [],
+      "material_variant_conflict": false
+    },
+    {
+      "blind_id": "173eb453a3a780ab",
+      "case_id": "ds01",
+      "url": "https://www.vgoroden.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Главная/региональная страница новостного портала или лента, не отдельная проверенная городская публикация. Собственная полная дата статьи отсутствует; даты отдельных анонсов не датируют саму ленту. Только карточка; граница навигации предварительная.",
+      "evidence": [
+        "Новости В городе N — свежие и актуальные новости Нижнего Новгорода. Просшествия, криминал, фото и видео ДТП, политика. У"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/sensitivity/blind/source-cards.json",
+          "json_pointer": "/rows/1/source_cards/0",
+          "url": "https://www.vgoroden.ru/"
+        }
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "vgoroden.ru",
+      "annotation_boundary": "card_only_provisional",
+      "variant_reviews": [],
+      "material_variant_conflict": false
+    },
+    {
+      "blind_id": "1f3b126f2ee54918",
+      "case_id": "ds02",
+      "url": "https://www.stahuj.cz/android/noviny-a-casopisy/74-ru/",
+      "grade": 0,
+      "kind": "application",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка каталога Android-приложения для чтения новостей, не собственная новостная статья. Оценка по явно рекламируемым функциям приложения предварительна.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/sensitivity/blind/source-cards.json rows[blind_id=1f3b126f2ee54918].source_cards (https://www.stahuj.cz/android/noviny-a-casopisy/74-ru/): «С помощью нашего приложения вы сможете»"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "stahuj.cz",
+      "source_variants": [],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "3cc8a56a8e7ca171",
+      "case_id": "ds01",
+      "url": "https://www.slunecnice.cz/ios/sw/nn-ru/",
+      "grade": 0,
+      "kind": "application",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка магазина/каталога программ описывает приложение NN.ru и функции чтения новостей, а не отдельную новостную публикацию. Оригинал не предоставлен; граница предварительная по явному типу карточки.",
+      "evidence": [
+        "NN.ru - Slunečnice.cz",
+        "- читать последние новости Нижнего Новгорода; - смотреть фоторепортажи; - смотреть видеоролики; - сохранять избранные новости и авторов; - делиться с друзьями новостями по e-mail и через соцсети; - смотреть тек"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/sensitivity/blind/source-cards.json",
+          "json_pointer": "/rows/3/source_cards/0",
+          "url": "https://www.slunecnice.cz/ios/sw/nn-ru/"
+        }
+      ],
+      "event_cluster": "nnru-news-reader-application",
+      "publisher_cluster": "slunecnice.cz",
+      "annotation_boundary": "card_only_provisional",
+      "variant_reviews": [],
+      "material_variant_conflict": false
+    },
+    {
+      "blind_id": "4688bde6740d6f5c",
+      "case_id": "ds02",
+      "url": "https://74.ru/text/entertainment/2026/11/02/76696137/",
+      "grade": 0,
+      "kind": "article",
+      "published_date": "2026-11-02",
+      "source_reviewed": true,
+      "date_verified": true,
+      "reason": "Оба originals — общий развлекательный тест по географии планеты (Канберра, горы, океаны), не событие/новость Челябинска. «Троечники Челябинска» в заголовке — обращение к аудитории, не собственная городская фактическая тема. Собственная дата02.11.2026 верна, но не исправляет тематическое несоответствие.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/sensitivity/blind/originals/source-328b5e3752d1cb91e468510201567f9ff1e5b86a691572183162c9a492aa5110.html own #articleBody: «Столицей какой страны является город Канберра?»; own Article.url=https://74.ru/text/entertainment/2026/11/02/76696137/, @id=https://74.ru/text/entertainment/2026/11/02/76696137/#articleBody, datePublished=2026-11-02T19:30:00+03:00; own header time=2026-11-02T21:30:00+05:00 is same instant, Moscow date 2026-11-02",
+        "runs/news-dates-2026-11-03/sensitivity/blind/originals/source-f01711f02eb6fbdd38c0b6867658260a4bddfe74b7397c01d080933f27d646ea.html own #articleBody: «Столицей какой страны является город Канберра?»; own Article.url=https://74.ru/text/entertainment/2026/11/02/76696137/, @id=https://74.ru/text/entertainment/2026/11/02/76696137/#articleBody, datePublished=2026-11-02T19:30:00+03:00; own header time=2026-11-02T21:30:00+05:00 is same instant, Moscow date 2026-11-02"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "74.ru",
+      "source_variants": [
+        {
+          "variant_id": "7f9252d3ac87bdedefefe9bc4e0b7104fbb3d34cac4c6dd6403cdc4784aa64dc",
+          "raw_html_path": "runs/news-dates-2026-11-03/sensitivity/blind/originals/source-328b5e3752d1cb91e468510201567f9ff1e5b86a691572183162c9a492aa5110.html",
+          "html_hash": "328b5e3752d1cb91e468510201567f9ff1e5b86a691572183162c9a492aa5110",
+          "source_reviewed": true,
+          "material_suitability_conflict": false,
+          "truncated": false,
+          "own_article_id": "https://74.ru/text/entertainment/2026/11/02/76696137/#articleBody",
+          "own_headline": "Может, вы и пролив от залива не отличаете? Тест по географии, с которым справятся даже троечники Челябинска",
+          "own_article_body_sha256": "5f867ef55c4ddec87032b0feb187d7696f6501a9e9f474c03a577138f6515450",
+          "own_article_body_chars": 831,
+          "own_jsonld_datePublished": "2026-11-02T19:30:00+03:00",
+          "own_visible_header_time": "2026-11-02T21:30:00+05:00",
+          "same_publication_instant": true,
+          "publication_moscow_date": "2026-11-02",
+          "own_scope": "unique article containing own h1 + #articleBody; neighbouring teaser/comment body excluded"
+        },
+        {
+          "variant_id": "466dbaa690887411ac918664c282d0eac2dfadd48113b1ff33462efcf3103247",
+          "raw_html_path": "runs/news-dates-2026-11-03/sensitivity/blind/originals/source-f01711f02eb6fbdd38c0b6867658260a4bddfe74b7397c01d080933f27d646ea.html",
+          "html_hash": "f01711f02eb6fbdd38c0b6867658260a4bddfe74b7397c01d080933f27d646ea",
+          "source_reviewed": true,
+          "material_suitability_conflict": false,
+          "truncated": false,
+          "own_article_id": "https://74.ru/text/entertainment/2026/11/02/76696137/#articleBody",
+          "own_headline": "Может, вы и пролив от залива не отличаете? Тест по географии, с которым справятся даже троечники Челябинска",
+          "own_article_body_sha256": "5f867ef55c4ddec87032b0feb187d7696f6501a9e9f474c03a577138f6515450",
+          "own_article_body_chars": 831,
+          "own_jsonld_datePublished": "2026-11-02T19:30:00+03:00",
+          "own_visible_header_time": "2026-11-02T21:30:00+05:00",
+          "same_publication_instant": true,
+          "publication_moscow_date": "2026-11-02",
+          "own_scope": "unique article containing own h1 + #articleBody; neighbouring teaser/comment body excluded"
+        }
+      ],
+      "review_boundary": "exact_primary_raw_own_scope",
+      "all_variants_same_own_article_body_and_publication": true
+    },
+    {
+      "blind_id": "8d2288d2975d3644",
+      "case_id": "ds01",
+      "url": "https://nn-news.net/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Главная/региональная страница новостного портала или лента, не отдельная проверенная городская публикация. Собственная полная дата статьи отсутствует; даты отдельных анонсов не датируют саму ленту. Только карточка; граница навигации предварительная.",
+      "evidence": [
+        "Последние новости Нижнего Новгорода оперативно. Следите за событиями Нижнего Новгорода в режиме онлайн. Видео, происшест"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/sensitivity/blind/source-cards.json",
+          "json_pointer": "/rows/5/source_cards/0",
+          "url": "https://nn-news.net/"
+        }
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "nn-news.net",
+      "annotation_boundary": "card_only_provisional",
+      "variant_reviews": [],
+      "material_variant_conflict": false
+    },
+    {
+      "blind_id": "8e4928eacad90321",
+      "case_id": "ds02",
+      "url": "https://www.slunecnice.cz/android/sw/ura-ru-novosti-moskvy-ekaterinburga-celabinska/",
+      "grade": 0,
+      "kind": "application",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка скачивания приложения Ура.ру, не собственная новостная публикация. Упоминание Челябинска в названии приложения не устанавливает городскую новость.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/sensitivity/blind/source-cards.json rows[blind_id=8e4928eacad90321].source_cards (https://www.slunecnice.cz/android/sw/ura-ru-novosti-moskvy-ekaterinburga-celabinska/): «1.0.2 download»"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "slunecnice.cz",
+      "source_variants": [],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "9632787ef45fc87e",
+      "case_id": "ds02",
+      "url": "https://mir74.ru/news/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка раздела /news/ прямо описывает ленту разных городских/региональных событий. Навигационный источник, не отдельная проверенная публикация. Оригинал отсутствует, оценка типа предварительна.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/sensitivity/blind/source-cards.json rows[blind_id=9632787ef45fc87e].source_cards (https://mir74.ru/news/): «Последние новости Челябинска и Челябинской области»"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "mir74.ru",
+      "source_variants": [],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "a3806e68945b669a",
+      "case_id": "ds02",
+      "url": "https://www.stahuj.cz/ios/zpravy/74-ru/",
+      "grade": 0,
+      "kind": "application",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка официального приложения для iPhone/iPad и скачивания, не собственная новостная статья.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/sensitivity/blind/source-cards.json rows[blind_id=a3806e68945b669a].source_cards (https://www.stahuj.cz/ios/zpravy/74-ru/): «Официальное приложение 74.ru для iPhone и iPad»"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "stahuj.cz",
+      "source_variants": [],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "a5e52def490b5307",
+      "case_id": "ds02",
+      "url": "https://74.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": true,
+      "date_verified": false,
+      "reason": "Оба exact originals — главная лента с множеством независимых анонсов. Истории и относительные даты карточек не становятся собственной датой root URL.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/sensitivity/blind/originals/source-fc5cb7edf0a186554f27ad886b2333fdb68bf88ec2629b39747c25dcd94be819.html: head title «Новости Челябинска и Челябинской области | 74.ру»; JSON-LD WebSite url=https://74.ru/; multiple independent story cards, no own Article body/date",
+        "runs/news-dates-2026-11-03/sensitivity/blind/originals/source-40c771ba3db6f451d319e295dccf903bd0f3064c80e3027d46f4c03bc8815d20.html: head title «Новости Челябинска и Челябинской области | 74.ру»; JSON-LD WebSite url=https://74.ru/; multiple independent story cards, no own Article body/date"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "74.ru",
+      "source_variants": [
+        {
+          "variant_id": "10a04326c76465f701409e3abbb11759c9941729cf93250db91e75fba2b5ad8f",
+          "raw_html_path": "runs/news-dates-2026-11-03/sensitivity/blind/originals/source-fc5cb7edf0a186554f27ad886b2333fdb68bf88ec2629b39747c25dcd94be819.html",
+          "html_hash": "fc5cb7edf0a186554f27ad886b2333fdb68bf88ec2629b39747c25dcd94be819",
+          "source_reviewed": true,
+          "material_suitability_conflict": false,
+          "truncated": false,
+          "own_scope": "root WebSite, multiple independent story cards; no individual publication claimed"
+        },
+        {
+          "variant_id": "0a3a705493d3db8707ecb814c99c6808b6dbb22a45e3a2638632c9d643959e5a",
+          "raw_html_path": "runs/news-dates-2026-11-03/sensitivity/blind/originals/source-40c771ba3db6f451d319e295dccf903bd0f3064c80e3027d46f4c03bc8815d20.html",
+          "html_hash": "40c771ba3db6f451d319e295dccf903bd0f3064c80e3027d46f4c03bc8815d20",
+          "source_reviewed": true,
+          "material_suitability_conflict": false,
+          "truncated": false,
+          "own_scope": "root WebSite, multiple independent story cards; no individual publication claimed"
+        }
+      ],
+      "review_boundary": "exact_primary_raw_own_scope"
+    },
+    {
+      "blind_id": "b60b098857e70588",
+      "case_id": "ds01",
+      "url": "https://progorodnn.ru/news/29614",
+      "grade": null,
+      "kind": "unknown",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Оригинал статьи не предоставлен. Заголовок о молнии/канатной дороге и сниппет о сокращении чиновников относятся к разным сюжетам; собственное тело и полная дата публикации не установлены. Нельзя подтвердить пригодность в окне 01–03.11.2026.",
+      "evidence": [
+        "Во время утреннего ливня в опору канатной дороги ударил разряд…",
+        "Мэр Нижнего Новгорода уволит каждого десятого чиновника ради экономии"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/sensitivity/blind/source-cards.json",
+          "json_pointer": "/rows/10/source_cards/0",
+          "url": "https://progorodnn.ru/news/29614"
+        }
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "progorodnn.ru",
+      "annotation_boundary": "unknown_original_unavailable",
+      "variant_reviews": [],
+      "material_variant_conflict": false
+    },
+    {
+      "blind_id": "ba0aaed5bbbb8930",
+      "case_id": "ds02",
+      "url": "https://74.ru/text/auto/2026/11/03/76741445/",
+      "grade": 2,
+      "kind": "article",
+      "published_date": "2026-11-03",
+      "source_reviewed": true,
+      "date_verified": true,
+      "reason": "Полное собственное тело о снятии спорных дорожных знаков на конкретном пересечении Копейского шоссе и Машиностроителей; own h1 прямо связывает этот предмет с Челябинском. Это содержательное городское изменение движения, а не только publisher/teaser связь. Own NewsArticle publication03.11.2026 в окне01–03.11, все варианты согласованы.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/sensitivity/blind/originals/source-5ebd73e538d69cccbe760650ae3df4d1f0d2d3f822c15a6ff232011e667cb573.html own #articleBody: «После публикации 74.RU на пересечении Копейского шоссе и улицы Машиностроителей убрали знаки «Круговое движение»»; own NewsArticle.url=https://74.ru/text/auto/2026/11/03/76741445/, @id=https://74.ru/text/auto/2026/11/03/76741445/#articleBody, datePublished=2026-11-03T09:57:36+03:00; own header time=2026-11-03T11:57:36+05:00 is same instant, Moscow date 2026-11-03",
+        "runs/news-dates-2026-11-03/sensitivity/blind/originals/source-8e14852325d6828f9d67989426c41e660ff390defeb7a177243aa3e06b32deb7.html own #articleBody: «После публикации 74.RU на пересечении Копейского шоссе и улицы Машиностроителей убрали знаки «Круговое движение»»; own NewsArticle.url=https://74.ru/text/auto/2026/11/03/76741445/, @id=https://74.ru/text/auto/2026/11/03/76741445/#articleBody, datePublished=2026-11-03T09:57:36+03:00; own header time=2026-11-03T11:57:36+05:00 is same instant, Moscow date 2026-11-03"
+      ],
+      "event_cluster": "chelyabinsk-kopeyskoe-mashinostroiteley-sign-removal",
+      "publisher_cluster": "74.ru",
+      "source_variants": [
+        {
+          "variant_id": "0cdb0fde54630af07a5522952673dcfd448ba5f33560d5c7e5899807919afc86",
+          "raw_html_path": "runs/news-dates-2026-11-03/sensitivity/blind/originals/source-5ebd73e538d69cccbe760650ae3df4d1f0d2d3f822c15a6ff232011e667cb573.html",
+          "html_hash": "5ebd73e538d69cccbe760650ae3df4d1f0d2d3f822c15a6ff232011e667cb573",
+          "source_reviewed": true,
+          "material_suitability_conflict": false,
+          "truncated": false,
+          "own_article_id": "https://74.ru/text/auto/2026/11/03/76741445/#articleBody",
+          "own_headline": "Раскольцевали дорогу. На популярном перекрестке Челябинска убрали спорные знаки",
+          "own_article_body_sha256": "e9e39d2f5fcc20d8a9473d3162458720f600d9016b0337c781d0a8083457091a",
+          "own_article_body_chars": 1425,
+          "own_jsonld_datePublished": "2026-11-03T09:57:36+03:00",
+          "own_visible_header_time": "2026-11-03T11:57:36+05:00",
+          "same_publication_instant": true,
+          "publication_moscow_date": "2026-11-03",
+          "own_scope": "unique article containing own h1 + #articleBody; neighbouring teaser/comment body excluded"
+        },
+        {
+          "variant_id": "15362518e47863870b332318b5cf5bc1d956f2195d1784570722735f8a054e53",
+          "raw_html_path": "runs/news-dates-2026-11-03/sensitivity/blind/originals/source-8e14852325d6828f9d67989426c41e660ff390defeb7a177243aa3e06b32deb7.html",
+          "html_hash": "8e14852325d6828f9d67989426c41e660ff390defeb7a177243aa3e06b32deb7",
+          "source_reviewed": true,
+          "material_suitability_conflict": false,
+          "truncated": false,
+          "own_article_id": "https://74.ru/text/auto/2026/11/03/76741445/#articleBody",
+          "own_headline": "Раскольцевали дорогу. На популярном перекрестке Челябинска убрали спорные знаки",
+          "own_article_body_sha256": "e9e39d2f5fcc20d8a9473d3162458720f600d9016b0337c781d0a8083457091a",
+          "own_article_body_chars": 1425,
+          "own_jsonld_datePublished": "2026-11-03T09:57:36+03:00",
+          "own_visible_header_time": "2026-11-03T11:57:36+05:00",
+          "same_publication_instant": true,
+          "publication_moscow_date": "2026-11-03",
+          "own_scope": "unique article containing own h1 + #articleBody; neighbouring teaser/comment body excluded"
+        }
+      ],
+      "review_boundary": "exact_primary_raw_own_scope",
+      "all_variants_same_own_article_body_and_publication": true
+    },
+    {
+      "blind_id": "c595b13790cd474c",
+      "case_id": "ds02",
+      "url": "https://74.ru/text/business/2026/11/02/76729550/",
+      "grade": 2,
+      "kind": "article",
+      "published_date": "2026-11-02",
+      "source_reviewed": true,
+      "date_verified": true,
+      "reason": "Полный собственный репортаж о действующих сток-магазинах Челябинска: наблюдения/разговоры и отдельный описанный «челябинский магазин» в own body. Own Article publication02.11.2026 входит в окно01–03.11. Это не вывод из домена или соседних ссылок; все relevant variants согласованы.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/sensitivity/blind/originals/source-285c17b3c16e0a76d6e8903d998377673865c254fc3908927c005fede86ec46e.html own #articleBody: «Второй такой челябинский магазин работает по другой схеме»; own Article.url=https://74.ru/text/business/2026/11/02/76729550/, @id=https://74.ru/text/business/2026/11/02/76729550/#articleBody, datePublished=2026-11-02T05:45:00+03:00; own header time=2026-11-02T07:45:00+05:00 is same instant, Moscow date 2026-11-02",
+        "runs/news-dates-2026-11-03/sensitivity/blind/originals/source-4d329493b8686497c00c5062120e0ce28fca58c8c3e8cc640851026d4f27379a.html own #articleBody: «Второй такой челябинский магазин работает по другой схеме»; own Article.url=https://74.ru/text/business/2026/11/02/76729550/, @id=https://74.ru/text/business/2026/11/02/76729550/#articleBody, datePublished=2026-11-02T05:45:00+03:00; own header time=2026-11-02T07:45:00+05:00 is same instant, Moscow date 2026-11-02"
+      ],
+      "event_cluster": "chelyabinsk-offprice-stock-store-reportage",
+      "publisher_cluster": "74.ru",
+      "source_variants": [
+        {
+          "variant_id": "bd3973ddb101416d9063193e369f6d20b59b97978189cabc6d0df19268e352d7",
+          "raw_html_path": "runs/news-dates-2026-11-03/sensitivity/blind/originals/source-285c17b3c16e0a76d6e8903d998377673865c254fc3908927c005fede86ec46e.html",
+          "html_hash": "285c17b3c16e0a76d6e8903d998377673865c254fc3908927c005fede86ec46e",
+          "source_reviewed": true,
+          "material_suitability_conflict": false,
+          "truncated": false,
+          "own_article_id": "https://74.ru/text/business/2026/11/02/76729550/#articleBody",
+          "own_headline": "Valentino за 2000 рублей и Lego за полцены: смотрим, что продают в сток-магазинах Челябинска",
+          "own_article_body_sha256": "8970b181ee301b0fc492813425ff9e6a897f4fc290875a0d669f4dd0873dc977",
+          "own_article_body_chars": 6059,
+          "own_jsonld_datePublished": "2026-11-02T05:45:00+03:00",
+          "own_visible_header_time": "2026-11-02T07:45:00+05:00",
+          "same_publication_instant": true,
+          "publication_moscow_date": "2026-11-02",
+          "own_scope": "unique article containing own h1 + #articleBody; neighbouring teaser/comment body excluded"
+        },
+        {
+          "variant_id": "68796aaf80fa6067dc567ab45b4eab9fb47a082f3dc8cf720eb6172a0f919823",
+          "raw_html_path": "runs/news-dates-2026-11-03/sensitivity/blind/originals/source-4d329493b8686497c00c5062120e0ce28fca58c8c3e8cc640851026d4f27379a.html",
+          "html_hash": "4d329493b8686497c00c5062120e0ce28fca58c8c3e8cc640851026d4f27379a",
+          "source_reviewed": true,
+          "material_suitability_conflict": false,
+          "truncated": false,
+          "own_article_id": "https://74.ru/text/business/2026/11/02/76729550/#articleBody",
+          "own_headline": "Valentino за 2000 рублей и Lego за полцены: смотрим, что продают в сток-магазинах Челябинска",
+          "own_article_body_sha256": "8970b181ee301b0fc492813425ff9e6a897f4fc290875a0d669f4dd0873dc977",
+          "own_article_body_chars": 6059,
+          "own_jsonld_datePublished": "2026-11-02T05:45:00+03:00",
+          "own_visible_header_time": "2026-11-02T07:45:00+05:00",
+          "same_publication_instant": true,
+          "publication_moscow_date": "2026-11-02",
+          "own_scope": "unique article containing own h1 + #articleBody; neighbouring teaser/comment body excluded"
+        }
+      ],
+      "review_boundary": "exact_primary_raw_own_scope",
+      "all_variants_same_own_article_body_and_publication": true
+    },
+    {
+      "blind_id": "c681d7ac9d40e532",
+      "case_id": "ds01",
+      "url": "https://apps.apple.com/cz/app/nn-ru-%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8-%D0%BD-%D0%BD%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B0/id1489281213",
+      "grade": 0,
+      "kind": "application",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка магазина/каталога программ описывает приложение NN.ru и функции чтения новостей, а не отдельную новостную публикацию. Оригинал не предоставлен; граница предварительная по явному типу карточки.",
+      "evidence": [
+        "‎NN.ru — Новости Н. Новгорода App - App Store",
+        "Download NN.ru — Новости Н. Новгорода by Городские порталы on the App Store. See screenshots, ratings and reviews, user tips and more games like NN.ru — Новости…"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/sensitivity/blind/source-cards.json",
+          "json_pointer": "/rows/13/source_cards/0",
+          "url": "https://apps.apple.com/cz/app/nn-ru-%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8-%D0%BD-%D0%BD%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B0/id1489281213"
+        }
+      ],
+      "event_cluster": "nnru-news-reader-application",
+      "publisher_cluster": "apps.apple.com",
+      "annotation_boundary": "card_only_provisional",
+      "variant_reviews": [],
+      "material_variant_conflict": false
+    },
+    {
+      "blind_id": "ca95062539d3ebe2",
+      "case_id": "ds01",
+      "url": "https://setinn.tv/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": true,
+      "date_verified": false,
+      "reason": "Главная/региональная страница новостного портала или лента, не отдельная проверенная городская публикация. Собственная полная дата статьи отсутствует; даты отдельных анонсов не датируют саму ленту. Исходный HTML просмотрен.",
+      "evidence": [
+        "Новости Кстати - новости Нижнего Новгорода",
+        "Родители молодых людей, которых обвиняют в похищении, заявляют, что показания выбивали под пытками"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/sensitivity/blind/source-cards.json",
+          "json_pointer": "/rows/14/source_cards/0",
+          "url": "https://setinn.tv/"
+        },
+        {
+          "path": "runs/news-dates-2026-11-03/sensitivity/blind/originals/source-239938a0b24c38d75962a057ed520ca347a3fe8ce945feb48156592430cd5d80.html",
+          "url": "https://setinn.tv/",
+          "variant_id": "5e09f6bf436b73a35e02e46d45b384d674d7a4d2457f971c6cab5dfd53d63631",
+          "sha256": "239938a0b24c38d75962a057ed520ca347a3fe8ce945feb48156592430cd5d80"
+        }
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "setinn.tv",
+      "annotation_boundary": "all_relevant_primary_originals",
+      "variant_reviews": [
+        {
+          "variant_id": "5e09f6bf436b73a35e02e46d45b384d674d7a4d2457f971c6cab5dfd53d63631",
+          "case_ids": [
+            "ds01"
+          ],
+          "raw_html_path": "runs/news-dates-2026-11-03/sensitivity/blind/originals/source-239938a0b24c38d75962a057ed520ca347a3fe8ce945feb48156592430cd5d80.html",
+          "html_sha256": "239938a0b24c38d75962a057ed520ca347a3fe8ce945feb48156592430cd5d80",
+          "source_reviewed": true,
+          "captured_extract_truncated": false,
+          "source_type": "feed/navigation with separate news links",
+          "heading_examples": [
+            "Последние новости",
+            "Родители молодых людей, которых обвиняют в похищении, заявляют, что показания выбивали под пытками",
+            "Замначальника центра размещения заказов, придумал схему откатов на миллионы",
+            "Лося, провалившегося в погреб, спасли с помощью экскаватора"
+          ],
+          "own_article_publication_date": null,
+          "grade": 1,
+          "material_conflict": false
+        }
+      ],
+      "material_variant_conflict": false
+    },
+    {
+      "blind_id": "e15e099dc22e79ba",
+      "case_id": "ds01",
+      "url": "https://setinn.tv/novosti/podrostki-lazavshie-po-garazham-nashli-telo-mertvogo-cheloveka/",
+      "grade": 0,
+      "kind": "article",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка прямо помещает событие в Павлово («Жуткая находка в Павлове»), а не в запрошенный город Нижний Новгород. Региональный издатель этого не меняет. Оригинал и собственная дата не предоставлены; отрицательная граница по явному месту карточки предварительная.",
+      "evidence": [
+        "Подростки, лазавшие по гаражам, нашли тело мертвого человека…",
+        "Жуткая находка в Павлове."
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/sensitivity/blind/source-cards.json",
+          "json_pointer": "/rows/15/source_cards/0",
+          "url": "https://setinn.tv/novosti/podrostki-lazavshie-po-garazham-nashli-telo-mertvogo-cheloveka/"
+        }
+      ],
+      "event_cluster": "pavlovo-garage-body-discovery",
+      "publisher_cluster": "setinn.tv",
+      "annotation_boundary": "card_only_provisional",
+      "variant_reviews": [],
+      "material_variant_conflict": false
+    },
+    {
+      "blind_id": "e6dc85baf69a5511",
+      "case_id": "ds02",
+      "url": "https://www.kommersant.ru/regions/74",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "URL регионального раздела /regions/74 с анонсом материала — навигация, а не полный собственный original конкретной статьи. Publication date не установлена; карточная оценка типа предварительна.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/sensitivity/blind/source-cards.json rows[blind_id=e6dc85baf69a5511].source_cards (https://www.kommersant.ru/regions/74): «Прокуратура требует изменить основание прекращения полномочий»"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "kommersant.ru",
+      "source_variants": [],
+      "review_boundary": "card_only_provisional"
+    },
+    {
+      "blind_id": "eeab50ce2ebd3b91",
+      "case_id": "ds01",
+      "url": "https://nijniy-novgorod.sm.news/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": true,
+      "date_verified": false,
+      "reason": "Главная/региональная страница новостного портала или лента, не отдельная проверенная городская публикация. Собственная полная дата статьи отсутствует; даты отдельных анонсов не датируют саму ленту. Исходный HTML просмотрен.",
+      "evidence": [
+        "Новости Нижнего Новгорода: события, новости политики, финансов, культуры и спорта. Репортажи с места происшествий, анали",
+        "Регионы\nПроисшествия и ЧП\nОбщество\nСпорт\nАвтомобили\nИгры и электроника\nЗдоровье\nНаука и обучение\nНовости компаний\nМакрорегионы\nЭкономика"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/sensitivity/blind/source-cards.json",
+          "json_pointer": "/rows/17/source_cards/0",
+          "url": "https://nijniy-novgorod.sm.news/"
+        },
+        {
+          "path": "runs/news-dates-2026-11-03/sensitivity/blind/originals/source-6473bbaa201b6f9c4034f50e4dfc152872bf75bc05babcb656e3d1d68415b2ff.html",
+          "url": "https://nijniy-novgorod.sm.news/",
+          "variant_id": "03af4c2523dd2be463d6b6320cb61626c5bfa4ce85c401f4eb93b919692ee0a1",
+          "sha256": "6473bbaa201b6f9c4034f50e4dfc152872bf75bc05babcb656e3d1d68415b2ff"
+        }
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "nijniy-novgorod.sm.news",
+      "annotation_boundary": "all_relevant_primary_originals",
+      "variant_reviews": [
+        {
+          "variant_id": "03af4c2523dd2be463d6b6320cb61626c5bfa4ce85c401f4eb93b919692ee0a1",
+          "case_ids": [
+            "ds01"
+          ],
+          "raw_html_path": "runs/news-dates-2026-11-03/sensitivity/blind/originals/source-6473bbaa201b6f9c4034f50e4dfc152872bf75bc05babcb656e3d1d68415b2ff.html",
+          "html_sha256": "6473bbaa201b6f9c4034f50e4dfc152872bf75bc05babcb656e3d1d68415b2ff",
+          "source_reviewed": true,
+          "captured_extract_truncated": false,
+          "source_type": "feed/navigation with separate news links",
+          "heading_examples": [
+            "Новости в Нижнем Новгороде"
+          ],
+          "own_article_publication_date": null,
+          "grade": 1,
+          "material_conflict": false
+        }
+      ],
+      "material_variant_conflict": false
+    },
+    {
+      "blind_id": "f4c28a73d3641dba",
+      "case_id": "ds01",
+      "url": "https://nnovgorod.bezformata.com/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": true,
+      "date_verified": false,
+      "reason": "Главная/региональная страница новостного портала или лента, не отдельная проверенная городская публикация. Собственная полная дата статьи отсутствует; даты отдельных анонсов не датируют саму ленту. Исходный HTML просмотрен.",
+      "evidence": [
+        "Лента новостей Нижнего Новгорода и Нижегородской области. Последние новости, события, происшествия от ведущих СМИ регион",
+        "Новости Нижнего Новгорода и Нижегородской области"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-dates-2026-11-03/sensitivity/blind/source-cards.json",
+          "json_pointer": "/rows/18/source_cards/0",
+          "url": "https://nnovgorod.bezformata.com/"
+        },
+        {
+          "path": "runs/news-dates-2026-11-03/sensitivity/blind/originals/source-ab90f054c1e535d69d29a5f9abad7c9b95371ffbaaae936669b6ba6e40eeab6e.html",
+          "url": "https://nnovgorod.bezformata.com/",
+          "variant_id": "91d8dded8e0b45fc7c882330aaf6b9301862f346e35c6130897e191d3715c62a",
+          "sha256": "ab90f054c1e535d69d29a5f9abad7c9b95371ffbaaae936669b6ba6e40eeab6e"
+        }
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "nnovgorod.bezformata.com",
+      "annotation_boundary": "all_relevant_primary_originals",
+      "variant_reviews": [
+        {
+          "variant_id": "91d8dded8e0b45fc7c882330aaf6b9301862f346e35c6130897e191d3715c62a",
+          "case_ids": [
+            "ds01"
+          ],
+          "raw_html_path": "runs/news-dates-2026-11-03/sensitivity/blind/originals/source-ab90f054c1e535d69d29a5f9abad7c9b95371ffbaaae936669b6ba6e40eeab6e.html",
+          "html_sha256": "ab90f054c1e535d69d29a5f9abad7c9b95371ffbaaae936669b6ba6e40eeab6e",
+          "source_reviewed": true,
+          "captured_extract_truncated": false,
+          "source_type": "feed/navigation with separate news links",
+          "heading_examples": [
+            "Новости Нижнего Новгорода и Нижегородской области",
+            "Последние новости Нижнего Новгорода и Нижегородской области"
+          ],
+          "own_article_publication_date": null,
+          "grade": 1,
+          "material_conflict": false
+        }
+      ],
+      "material_variant_conflict": false
+    },
+    {
+      "blind_id": "feeaa42a0d4442cf",
+      "case_id": "ds02",
+      "url": "https://ria.ru/location_CHeljabinsk/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "source_reviewed": false,
+      "date_verified": false,
+      "reason": "Карточка прямо называет тематическую ленту Челябинска. Анонс про жителей дома не является полным собственным материалом по этому root/tag URL и не датирует всю ленту.",
+      "evidence": [
+        "runs/news-dates-2026-11-03/sensitivity/blind/source-cards.json rows[blind_id=feeaa42a0d4442cf].source_cards (https://ria.ru/location_CHeljabinsk/): «в ленте новостей на сайте РИА Новости»"
+      ],
+      "event_cluster": null,
+      "publisher_cluster": "ria.ru",
+      "source_variants": [],
+      "review_boundary": "card_only_provisional"
+    }
+  ]
+}

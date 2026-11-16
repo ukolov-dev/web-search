@@ -1,0 +1,97 @@
+{
+  "protocol": {
+    "date": "2026-10-30",
+    "stage": "fresh questions fixed before implementation and outputs inspection",
+    "primary_model": "deepseek/deepseek-v4.1-flash-1017",
+    "comparison": "same captured retrieval, shared initial classifier output, old rescue vs evidence memory",
+    "budget": "max3 generations,4 target attempts,180s per logical branch; remote observed total cap $2",
+    "gold": "author judgment from blinded source snapshots before prediction inspection, not independent acceptance; unjudged not FP",
+    "no_tuning_after_new_predictions": true
+  },
+  "cases": [
+    {
+      "id": "n01",
+      "query": "SQLite BEGIN DEFERRED BEGIN IMMEDIATE SQLITE_BUSY различие транзакций",
+      "forms": [
+        "SQLite BEGIN DEFERRED BEGIN IMMEDIATE SQLITE_BUSY различие транзакций"
+      ]
+    },
+    {
+      "id": "n02",
+      "query": "Rust Pin Unpin самоссылочные структуры перемещение документация",
+      "forms": [
+        "Rust Pin Unpin самоссылочные структуры перемещение документация"
+      ]
+    },
+    {
+      "id": "n03",
+      "query": "Python asyncio shield wait_for отмена задачи при timeout",
+      "forms": [
+        "Python asyncio shield wait_for отмена задачи при timeout"
+      ]
+    },
+    {
+      "id": "n04",
+      "query": "PostgreSQL INSERT ON CONFLICT DO UPDATE WHERE excluded условие обновления",
+      "forms": [
+        "PostgreSQL INSERT ON CONFLICT DO UPDATE WHERE excluded условие обновления"
+      ]
+    },
+    {
+      "id": "n05",
+      "query": "Docker Compose depends_on service_healthy порядок запуска и перезапуск зависимостей",
+      "forms": [
+        "Docker Compose depends_on service_healthy порядок запуска и перезапуск зависимостей"
+      ]
+    },
+    {
+      "id": "n06",
+      "query": "CSS position sticky overflow hidden scroll ancestor поведение",
+      "forms": [
+        "CSS position sticky overflow hidden scroll ancestor поведение"
+      ]
+    },
+    {
+      "id": "n07",
+      "query": "git pull --rebase --autostash conflicts documentation",
+      "forms": [
+        "git pull --rebase --autostash conflicts documentation"
+      ]
+    },
+    {
+      "id": "n08",
+      "query": "HTTP Retry-After 429 503 seconds HTTP-date behavior",
+      "forms": [
+        "HTTP Retry-After 429 503 seconds HTTP-date behavior"
+      ]
+    },
+    {
+      "id": "n09",
+      "query": "Tokio select cancellation safety read_exact recv documentation",
+      "forms": [
+        "Tokio select cancellation safety read_exact recv documentation"
+      ]
+    },
+    {
+      "id": "n10",
+      "query": "JavaScript Array sort toSorted mutation ES2023 difference",
+      "forms": [
+        "JavaScript Array sort toSorted mutation ES2023 difference"
+      ]
+    },
+    {
+      "id": "n11",
+      "query": "Redis SET NX PX GET return value existing key documentation",
+      "forms": [
+        "Redis SET NX PX GET return value existing key documentation"
+      ]
+    },
+    {
+      "id": "n12",
+      "query": "curl --resolve --connect-to Host TLS SNI difference",
+      "forms": [
+        "curl --resolve --connect-to Host TLS SNI difference"
+      ]
+    }
+  ]
+}

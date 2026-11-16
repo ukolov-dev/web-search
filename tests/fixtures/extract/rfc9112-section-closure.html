@@ -1,0 +1,137 @@
+<html><head><title>RFC 9112: HTTP/1.1</title><meta name="rfc.number" content="9112"><meta name="generator" content="xml2rfc 3.12.10"></head><body><h1 id="rfcnum">RFC 9112</h1><h1 id="title">HTTP/1.1</h1><section id="section-6.2">
+        <h3 id="name-content-length">
+<a href="#section-6.2" class="section-number selfRef">6.2. </a><a href="#name-content-length" class="section-name selfRef">Content-Length</a>
+        </h3>
+<span id="iref-content-length-header-field" class="iref"></span>
+        <p id="section-6.2-1">
+   When a message does not have a <a href="#field.transfer-encoding" class="xref">Transfer-Encoding</a> header
+   field, a Content-Length header field (<span><a href="https://www.rfc-editor.org/rfc/rfc9110#section-8.6" class="relref">Section 8.6</a> of [<a href="#HTTP" class="xref">HTTP</a>]</span>) can provide the anticipated size,
+   as a decimal number of octets, for potential content.
+   For messages that do include content, the Content-Length field value
+   provides the framing information necessary for determining where the data
+   (and message) ends.  For messages that do not include content, the
+   Content-Length indicates the size of the selected representation
+   (<span><a href="https://www.rfc-editor.org/rfc/rfc9110#section-8.6" class="relref">Section 8.6</a> of [<a href="#HTTP" class="xref">HTTP</a>]</span>).<a href="#section-6.2-1" class="pilcrow">¶</a></p>
+<p id="section-6.2-2">
+   A sender <span class="bcp14">MUST NOT</span> send a Content-Length header field in any message that
+   contains a <a href="#field.transfer-encoding" class="xref">Transfer-Encoding</a> header field.<a href="#section-6.2-2" class="pilcrow">¶</a></p>
+<aside id="section-6.2-3">
+          <p id="section-6.2-3.1">
+ <strong>Note:</strong> HTTP's use of Content-Length for message framing differs
+   significantly from the same field's use in MIME, where it is an optional
+   field used only within the "message/external-body" media-type.<a href="#section-6.2-3.1" class="pilcrow">¶</a></p>
+</aside>
+</section><div id="field.transfer-encoding"><section id="section-6.1">
+        <h3 id="name-transfer-encoding">
+<a href="#section-6.1" class="section-number selfRef">6.1. </a><a href="#name-transfer-encoding" class="section-name selfRef">Transfer-Encoding</a>
+        </h3>
+<span id="iref-fields-transfer-encoding-45" class="iref"></span>
+        <span id="iref-header-fields-transfer-enco" class="iref"></span>
+        <span id="iref-transfer-encoding-header-fi" class="iref"></span>
+        <span id="iref-chunked-coding-format-48" class="iref"></span>
+        <p id="section-6.1-1">
+   The Transfer-Encoding header field lists the transfer coding names
+   corresponding to the sequence of transfer codings that have been
+   (or will be) applied to the content in order to form the message body.
+   Transfer codings are defined in <a href="#transfer.codings" class="xref">Section 7</a>.<a href="#section-6.1-1" class="pilcrow">¶</a></p>
+<span id="iref-grammar-transfer-encoding-4" class="iref"></span>
+        <div id="section-6.1-2">
+<pre class="lang-abnf9110 sourcecode">  Transfer-Encoding = #transfer-coding
+                       ; defined in [HTTP], Section 10.1.4
+</pre><a href="#section-6.1-2" class="pilcrow">¶</a>
+</div>
+<p id="section-6.1-3">
+   Transfer-Encoding is analogous to the Content-Transfer-Encoding field of
+   MIME, which was designed to enable safe transport of binary data over a
+   7-bit transport service (<span>[<a href="#RFC2045" class="xref">RFC2045</a>], <a href="https://www.rfc-editor.org/rfc/rfc2045#section-6" class="relref">Section 6</a></span>).
+   However, safe transport has a different focus for an 8bit-clean transfer
+   protocol. In HTTP's case, Transfer-Encoding is primarily intended to
+   accurately delimit dynamically generated content. It also serves to
+   distinguish encodings that are only applied in transit from the encodings
+   that are a characteristic of the selected representation.<a href="#section-6.1-3" class="pilcrow">¶</a></p>
+<p id="section-6.1-4">
+   A recipient <span class="bcp14">MUST</span> be able to parse the chunked transfer coding
+   (<a href="#chunked.encoding" class="xref">Section 7.1</a>) because it plays a crucial role in
+   framing messages when the content size is not known in advance.
+   A sender <span class="bcp14">MUST NOT</span> apply the chunked transfer coding more than once to a
+   message body (i.e., chunking an already chunked message is not allowed).
+   If any transfer coding other than chunked is applied to a request's content,
+   the sender <span class="bcp14">MUST</span> apply chunked as the final transfer coding to
+   ensure that the message is properly framed.
+   If any transfer coding other than chunked is applied to a response's content,
+   the sender <span class="bcp14">MUST</span> either apply chunked as the final transfer coding
+   or terminate the message by closing the connection.<a href="#section-6.1-4" class="pilcrow">¶</a></p>
+<p id="section-6.1-5">
+   For example,<a href="#section-6.1-5" class="pilcrow">¶</a></p>
+<div id="section-6.1-6">
+<pre class="lang-http-message sourcecode">Transfer-Encoding: gzip, chunked
+</pre><a href="#section-6.1-6" class="pilcrow">¶</a>
+</div>
+<p id="section-6.1-7">
+   indicates that the content has been compressed using the gzip
+   coding and then chunked using the chunked coding while forming the
+   message body.<a href="#section-6.1-7" class="pilcrow">¶</a></p>
+<p id="section-6.1-8">
+   Unlike Content-Encoding (<span><a href="https://www.rfc-editor.org/rfc/rfc9110#section-8.4.1" class="relref">Section 8.4.1</a> of [<a href="#HTTP" class="xref">HTTP</a>]</span>),
+   Transfer-Encoding is a property of the message, not of the representation.
+   Any recipient along the request/response chain <span class="bcp14">MAY</span> decode the received
+   transfer coding(s) or apply additional transfer coding(s) to the message
+   body, assuming that corresponding changes are made to the Transfer-Encoding
+   field value. Additional information about the encoding parameters can be
+   provided by other header fields not defined by this specification.<a href="#section-6.1-8" class="pilcrow">¶</a></p>
+<p id="section-6.1-9">
+   Transfer-Encoding <span class="bcp14">MAY</span> be sent in a response to a HEAD request or in a
+   304 (Not Modified) response (<span><a href="https://www.rfc-editor.org/rfc/rfc9110#section-15.4.5" class="relref">Section 15.4.5</a> of [<a href="#HTTP" class="xref">HTTP</a>]</span>) to a GET request,
+   neither of which includes a message body,
+   to indicate that the origin server would have applied a transfer coding
+   to the message body if the request had been an unconditional GET.
+   This indication is not required, however, because any recipient on
+   the response chain (including the origin server) can remove transfer
+   codings when they are not needed.<a href="#section-6.1-9" class="pilcrow">¶</a></p>
+<p id="section-6.1-10">
+   A server <span class="bcp14">MUST NOT</span> send a Transfer-Encoding header field in any response
+   with a status code of
+   1xx (Informational) or 204 (No Content).
+   A server <span class="bcp14">MUST NOT</span> send a Transfer-Encoding header field in any
+   2xx (Successful) response to a CONNECT request (<span><a href="https://www.rfc-editor.org/rfc/rfc9110#section-9.3.6" class="relref">Section 9.3.6</a> of [<a href="#HTTP" class="xref">HTTP</a>]</span>).<a href="#section-6.1-10" class="pilcrow">¶</a></p>
+<p id="section-6.1-11">
+   A server that receives a request message with a transfer coding it does
+   not understand <span class="bcp14">SHOULD</span> respond with 501 (Not Implemented).<a href="#section-6.1-11" class="pilcrow">¶</a></p>
+<p id="section-6.1-12">
+   Transfer-Encoding was added in HTTP/1.1. It is generally assumed that
+   implementations advertising only HTTP/1.0 support will not understand
+   how to process transfer-encoded content, and that an HTTP/1.0 message
+   received with a Transfer-Encoding is likely to have been forwarded
+   without proper handling of the chunked transfer coding in transit.<a href="#section-6.1-12" class="pilcrow">¶</a></p>
+<p id="section-6.1-13">
+   A client <span class="bcp14">MUST NOT</span> send a request containing Transfer-Encoding unless it
+   knows the server will handle HTTP/1.1 requests (or later minor revisions);
+   such knowledge might be in the form of specific user configuration or by
+   remembering the version of a prior received response.
+   A server <span class="bcp14">MUST NOT</span> send a response containing Transfer-Encoding unless
+   the corresponding request indicates HTTP/1.1 (or later minor revisions).<a href="#section-6.1-13" class="pilcrow">¶</a></p>
+<p id="section-6.1-14">
+   Early implementations of Transfer-Encoding would occasionally send both
+   a chunked transfer coding for message framing and an estimated Content-Length
+   header field for use by progress bars. This is why Transfer-Encoding is
+   defined as overriding Content-Length, as opposed to them being mutually
+   incompatible. Unfortunately, forwarding such a message can lead to
+   vulnerabilities regarding
+   request smuggling (<a href="#request.smuggling" class="xref">Section 11.2</a>) or
+   response splitting (<a href="#response.splitting" class="xref">Section 11.1</a>) attacks
+   if any downstream recipient fails to parse the message according to this
+   specification, particularly when a downstream recipient only implements
+   HTTP/1.0.<a href="#section-6.1-14" class="pilcrow">¶</a></p>
+<p id="section-6.1-15">
+   A server <span class="bcp14">MAY</span> reject a request that contains both Content-Length and
+   Transfer-Encoding or process such a request in accordance with the
+   Transfer-Encoding alone. Regardless, the server <span class="bcp14">MUST</span> close the connection
+   after responding to such a request to avoid the potential attacks.<a href="#section-6.1-15" class="pilcrow">¶</a></p>
+<p id="section-6.1-16">
+   A server or client that receives an HTTP/1.0 message containing a
+   Transfer-Encoding header field <span class="bcp14">MUST</span> treat the message as if the framing
+   is faulty, even if a Content-Length is present, and close the connection
+   after processing the message. The message sender might have retained a
+   portion of the message, in buffer, that could be misinterpreted by further
+   use of the connection.<a href="#section-6.1-16" class="pilcrow">¶</a></p>
+</section></div></body></html>

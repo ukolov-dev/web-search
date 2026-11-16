@@ -1,0 +1,1859 @@
+{
+  "protocol": {
+    "labeler": "single author; blinded to branch outputs, not independent acceptance",
+    "grade": "2 relevant,1 observed incomplete,0 unrelated,null unjudged",
+    "recall": "known relevant captured-source recall; incomplete pool labels are not universal web recall",
+    "unknown_direct": "reported separately, never counted as FP or silently correct",
+    "passage_metric": "actual successful runtime-read positives only; any/all exact support anchors inside selected top3 body windows",
+    "gold_audit": "extra pages for label verification do not enter branch contexts",
+    "full12_novelty": "new strings; five topics overlap earlier development suites; no independent holdout claim"
+  },
+  "cases": [
+    {
+      "id": "r01",
+      "query": "Python pathlib Path resolve strict symlink loop behavior",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://blog.creativecc.cn/posts/Language-Python-Lib2.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://bugs.python.org/issue31842",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://docs.astral.sh/ruff/rules/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://docs.kanaries.net/ko/topics/Python/python-pathlib",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://docs.python.org/3/library/pathlib.html",
+          "grade": 2,
+          "basis": "blinded captured source directly helps the requested relationship; no complete answer required",
+          "support": [
+            {
+              "quote": "Symlink loops are treated like other errors: OSError is raised in strict mode, and no exception is raised in non-stric",
+              "start": 25018,
+              "end": 25136
+            },
+            {
+              "quote": "strictly impure. Expanding and resolving paths¶ classmethod Path.home()¶ Return a",
+              "start": 23302,
+              "end": 23385
+            }
+          ],
+          "snapshot": "runs/reranker-2026-10-30/gold-audit/r01-C005-document.json",
+          "text_hash": "a8fa621eced55596be4f5a8d5b857df25d817a37ed0e0f42cd520407aa5c230e",
+          "normalized_text_hash": "cf9897e4b9103816c81e850d2a7de334ae6c74eef4390c6426c2c6301f554e74"
+        },
+        {
+          "id": "C006",
+          "url": "https://www.geeksforgeeks.org/python/python-while-loop/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://github.com/jython/jython/blob/master/NEWS",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://github.com/python/cpython/issues/76023",
+          "grade": 1,
+          "basis": "blinded extracted snapshot; incomplete for actual mandatory relationship",
+          "support": [],
+          "snapshot": "runs/reranker-2026-10-30/capture/r01-C008-document.json",
+          "text_hash": "5aabd2cb646d0ddf8b5f3fbb970880c5882d653e5a61846a99c4aa57f3f75520",
+          "normalized_text_hash": "a74ff7fdf7bb1778e23801f7047d844650a107e1be5a2b61404dca8804f3f130"
+        },
+        {
+          "id": "C009",
+          "url": "https://github.com/python/cpython/issues/82974",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://learn.microsoft.com/cs-cz/azure/foundry/agents/how-to/deploy-hosted-agent-code",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://www.nuget.org/packages/Lokad.Lython",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://pydantic.dev/docs/monty/api/python/os/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://pypi.org/project/ruff/0.0.238/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://python.flowdas.com/library/pathlib.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://realpython.com/python-pathlib/",
+          "grade": 1,
+          "basis": "blinded extracted snapshot; incomplete for actual mandatory relationship",
+          "support": [],
+          "snapshot": "runs/reranker-2026-10-30/capture/r01-C015-document.json",
+          "text_hash": "45ab72ae6b69958d67545b57d37acf63ab281cc88f790274a89eade08d96723f",
+          "normalized_text_hash": "f7a5257544ad078952900be50596ff406bb8ec8360b0ab949472495dfc21b858"
+        },
+        {
+          "id": "C016",
+          "url": "https://stackoverflow.com/questions/tagged/pathlib?tab=Newest",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://www.tensorflow.org/api_docs/python/tf/linalg/LinearOperatorComposition",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://towardsdatascience.com/my-ai-couldnt-see-my-files-i-built-a-zero-dependency-mcp-server/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://vercel.com/docs/sandbox/python-sdk-reference",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "r02",
+      "query": "Rust std sync Mutex poisoning lock recovery into_inner",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://blog.naver.com/sssang97/224052716178",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://blog.rust-lang.org/2020/12/11/lock-poisoning-survey/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://crates.io/crates/rustix-futex-sync",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://daleseo.com/rust-mutex/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://doc.rust-lang.org/std/sync/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://doc.rust-lang.org/std/sync/struct.Mutex.html",
+          "grade": 2,
+          "basis": "blinded captured source directly helps the requested relationship; no complete answer required",
+          "support": [
+            {
+              "quote": "mutex is poisoned, all other threads are unable to access the data by default as it is likel",
+              "start": 720,
+              "end": 812
+            },
+            {
+              "quote": "into_inner method which will return the guard that would have otherwise been returned",
+              "start": 1202,
+              "end": 1287
+            }
+          ],
+          "snapshot": "runs/reranker-2026-10-30/gold-audit/r02-C006-document.json",
+          "text_hash": "dd7b8f75af5581872f25cc8a8170e5480698ff18c88b50bf68998207b199eb41",
+          "normalized_text_hash": "5ed875036b4a2dc3c8cc940bc326abf19912eebb8c824cbd3fa8ef24d8b78a8a"
+        },
+        {
+          "id": "C007",
+          "url": "https://doc.rust-lang.org/std/sync/struct.MutexGuard.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://doc.rust-lang.org/std/sync/struct.PoisonError.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://doc.rust-lang.org/std/sync/struct.RwLock.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://en.wikipedia.org/wiki/Rust_syntax",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://fuchsia.dev/fuchsia-src/development/debugging/lock_cycles",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://github.com/dsx-ai-factory/infra-controller/blob/main/STYLE_GUIDE.md",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://github.com/rust-lang/rust/issues/134646",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://goodspace.ai/interview-questions/rust",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://google.github.io/comprehensive-rust/bare-metal/useful-crates/spin.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://keens.github.io/blog/2020/12/25/rustnomutexnopoisoning/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://www.kernel.org/doc/rustdoc/latest/kernel/sync/lock/mutex/type.Mutex.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://stonefly.com/blog/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://sunshowers.io/posts/on-poisoning/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "r03",
+      "query": "PostgreSQL VACUUM FULL exclusive lock disk space",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://www.baculasystems.com/postgresql-backup-tool/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://blog.naver.com/pjt3591oo/224151545238",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://blog.naver.com/tarzandb/224118225811",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://www.c-sharpcorner.com/article/postgresql-vacuum-how-to-reclaim-space-and-prevent-table-bloat-2",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://dba.stackexchange.com/questions/37028/vacuum-returning-disk-space-to-operating-system",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://www.enterprisedb.com/blog/postgresql-vacuum-and-analyze-best-practice-tips",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://kiransabne.dev/postgresql-vacuum-why-it-exists-and-what-happens-when-it-falls-behind",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://www.linkedin.com/pulse/postgresql-vacuum-how-when-why-breaks-your-db-fix-bur%C3%A7in-yaz%C4%B1c%C4%B1-5cn0f",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "unrelated partner navigation",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://www.ntchosting.com/video-tutorials/postgresql/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://postgrespro.com/products/postgrespro/standard",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://postgresql.kr/docs/10/sql-vacuum.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://www.postgresql.org/docs/12/sql-vacuum.html",
+          "grade": 2,
+          "basis": "blinded captured source directly helps the requested relationship; no complete answer required",
+          "support": [
+            {
+              "quote": "requires an ACCESS EXCLUSIVE lock on each table while it is being processed. When the option list is surroun",
+              "start": 1940,
+              "end": 2048
+            },
+            {
+              "quote": "requires extra disk space, since it writes a new copy of the table and doesn't release the old copy ",
+              "start": 2431,
+              "end": 2531
+            }
+          ],
+          "snapshot": "runs/reranker-2026-10-30/gold-audit/r03-C013-document.json",
+          "text_hash": "8519b2fad678a9b1ca83a053781080d2c4a7ce89fbfa1191192afe30a6d49737",
+          "normalized_text_hash": "b91c669fc4e39c927e452fa86ada416fc181a04200b61c6c945a4c101f79c54f"
+        },
+        {
+          "id": "C014",
+          "url": "https://www.postgresql.org/docs/7.3/sql-vacuum.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://www.postgresql.org/docs/9.1/sql-vacuum.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://www.postgresql.org/docs/current/sql-vacuum.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://reliadb.com/blog/postgresql-autovacuum-internals-tuning-guide.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "http://www.sqlnosql.com/postgresql-vacuum/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://velog.io/@milcho0604/PostgreSQL-VACUUM-VACUUM%EA%B3%BC-VACUUM-FULL%EC%9D%98-%EC%B0%A8%EC%9D%B4",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "r04",
+      "query": "SQLite foreign_keys pragma transaction no op",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://blog.naver.com/junetoltol/224045743761",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://blog.naver.com/mjek_0o1/224356940912",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://bun.com/docs/runtime/sql",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://www.caniusesql.com/f/foreign-key",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://cysqlite.readthedocs.io/en/latest/api.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://github.com/NousResearch/hermes-agent/blob/main/hermes_state_schema.py",
+          "grade": 1,
+          "basis": "blinded extracted snapshot; incomplete for actual mandatory relationship",
+          "support": [],
+          "snapshot": "runs/reranker-2026-10-30/capture/r04-C006-document.json",
+          "text_hash": "f07313e390950c97f254a821006185b745a4d8b1fcdf523eb470e88f35181856",
+          "normalized_text_hash": "35a83d3af49bb10512f292dc45f316bea4641b18e0678bb8e91f01ba5495580b"
+        },
+        {
+          "id": "C007",
+          "url": "https://github.com/leafo/lapis/issues/798",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://github.com/tekartik/sqflite/issues/624",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://gitlab.com/cznic/sqlite/-/issues/142",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "unrelated partner navigation",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://news.ycombinator.com/item?id=45781298",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://nodejs.org/download/release/v24.10.0/docs/api/sqlite.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://oracleplsql.ru/foreign-keys-with-set-null-on-delete-sqlite.html",
+          "grade": 1,
+          "basis": "blinded extracted snapshot; incomplete for actual mandatory relationship",
+          "support": [],
+          "snapshot": "runs/reranker-2026-10-30/capture/r04-C013-document.json",
+          "text_hash": "da703d1103c61deae9eb7e9e3a62df0dd800439609dce0481b416daa13f4bc37",
+          "normalized_text_hash": "9e9127fad83685b87fae99595e07b654dfe3590466ad3edfd656fc55af0c66fc"
+        },
+        {
+          "id": "C014",
+          "url": "https://sangseek.com/communities/60428",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://sqlite-utils.datasette.io/en/stable/changelog.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://www.sqlite.org/foreignkeys.html",
+          "grade": 2,
+          "basis": "blinded captured source directly helps the requested relationship; no complete answer required",
+          "support": [
+            {
+              "quote": "It is not possible to enable or disable foreign key constraints in the middle of a multi-statement transaction (when SQLite is not in autocommit mode). Attempting to do so does not retu",
+              "start": 10901,
+              "end": 11086
+            }
+          ],
+          "snapshot": "runs/reranker-2026-10-30/capture/r04-C016-document.json",
+          "text_hash": "f703ad25cc5ece23e9a9c7710391a25cd6705a3aaa4a82e5c347f061b015b8f4",
+          "normalized_text_hash": "0a13673f66c3077bc5c2a6dec86811838f636a0d472c87119fe14337ba73a369"
+        },
+        {
+          "id": "C017",
+          "url": "https://www.sqlite.org/pragma.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://www.sqlitetutorial.net/sqlite-foreign-key/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://trip2g.com/dev/fable_refactoring",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "r05",
+      "query": "Docker bind mount obscures existing container files",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://blog.naver.com/wonnho71/224042207625",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://blog.naver.com/worldium/224405636106",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://www.curotec.com/services/technologies/docker/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://docs.cloud.google.com/compute/docs/containers/migrate-containers",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://docs.ddev.com/en/stable/users/install/docker-installation/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://docs.docker.com/engine/storage/bind-mounts/",
+          "grade": 2,
+          "basis": "blinded captured source directly helps the requested relationship; no complete answer required",
+          "support": [
+            {
+              "quote": "pre-existing files are obscured by the mount. This is similar to if you were to save files into /mnt on a Linux host, a",
+              "start": 1224,
+              "end": 1343
+            }
+          ],
+          "snapshot": "runs/reranker-2026-10-30/gold-audit/r05-C006-document.json",
+          "text_hash": "0285d9317c8a8e2c75db0da2d54ea8cedc2050e6972e4bc53631b8b78032d844",
+          "normalized_text_hash": "2d37f13979ff8c546f7a41ba1419d8ee6a60111a0f2f3a6750dbf8333e6b51f9"
+        },
+        {
+          "id": "C007",
+          "url": "https://docs.weblate.org/en/latest/admin/install/docker.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://www.elastic.co/docs/reference/integrations/docker",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://gist.github.com/x-yuri/3e16c42bcef2d253c110ceb0816888da",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://github.com/flatrun/agent/issues/139",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://github.com/jaameypr/docker-orchestrator",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://learn.microsoft.com/en-us/azure/container-instances/container-instances-volume-azure-files",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "unrelated partner navigation",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://www.portainer.io/blog/persistent-storage-docker-bind-mounts-and-named-volumes",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://selfhosting.sh/foundations/docker-volumes/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://tracker.debian.org/pkg/docker.io",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://velog.io/@gonnnnn/Docker-Volume-Bind-mounts",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://vercel.com/i/docker-works-locally-fails-in-production",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://www.warp.dev/terminus/docker-compose-volume",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "r06",
+      "query": "CSS box-sizing border-box padding margin width",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://blog.naver.com/artist_yul/224432598717",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://blog.naver.com/dangnee_/224368077338",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://blog.naver.com/dev-dog/224441064261",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://blog.naver.com/estrella1001/224449116011",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://blog.naver.com/haiya003/224355460660",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://blog.naver.com/pingoo1-/224390257431",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://www.brownells.cz/wwsd2020",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Box_sizing",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/box-sizing",
+          "grade": 2,
+          "basis": "blinded captured source directly helps the requested relationship; no complete answer required",
+          "support": [
+            {
+              "quote": "border-box tells the browser to account for any border and padding in the values you specify for an element's width and height. If you set an",
+              "start": 3222,
+              "end": 3363
+            }
+          ],
+          "snapshot": "runs/reranker-2026-10-30/gold-audit/r06-C009-document.json",
+          "text_hash": "e13597c9f1d57f25e712a99ca92cc9e9c63a721fc1a7cd1801efa7440ebec69f",
+          "normalized_text_hash": "aa1d63217d0654f7c107faf6bc94973beef7076c9672b2dd21fde16449ca321b"
+        },
+        {
+          "id": "C010",
+          "url": "https://garden.bradwoods.io/notes/css/box-sizing",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://www.jakpsatweb.cz/css/box-sizing.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://www.linkedin.com/learning/css-for-developers-24925920/it-starts-with-the-css-box-model",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "unrelated partner navigation",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://mimo.org/glossary/css/box-sizing",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://www.modio.cz/p/braun-nahradni-brit-pro-zastrihovace-braun-series-x-styler-xt20",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://nugunahrd.com/resources/html-css-web/7",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://quirksmode.org/css/user-interface/boxsizing.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://runebook.dev/ko/docs/css/padding-top",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://thesassway.com/css-box-model/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C020",
+          "url": "https://velog.io/@real-bird/CSS-%EB%B0%95%EC%8A%A4-%EB%AA%A8%EB%8D%B8",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "r07",
+      "query": "git reset soft mixed hard index working tree difference",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://www.analyticsvidhya.com/blog/2024/06/git-reset-vs-revert/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://www.atlassian.com/git/tutorials/undoing-changes/git-reset",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://coddy.tech/git-commands/git-reset",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://daleseo.com/git-reset/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://www.datacamp.com/tutorial/git-reset-soft-complete-guide",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://git-scm.com/docs/git-reset",
+          "grade": 2,
+          "basis": "blinded captured source directly helps the requested relationship; no complete answer required",
+          "support": [
+            {
+              "quote": "Leave your working tree files and the index unchanged. For example, if you have no staged changes, you can use git reset --soft ",
+              "start": 1213,
+              "end": 1341
+            },
+            {
+              "quote": "working tree, which are left untouched, but such usage can lead to confusion. --hard Overwrite all files and dire",
+              "start": 1441,
+              "end": 1554
+            }
+          ],
+          "snapshot": "runs/reranker-2026-10-30/gold-audit/r07-C006-document.json",
+          "text_hash": "ba4de0245a2b76f397a6702e4dca9addf7a715cb03b1a3cd29c9c1efa12277d4",
+          "normalized_text_hash": "af72752bf3484941d78af0e09e6f5d0fbfc0a9f7f8bd2c76d1120cdeb75f5d70"
+        },
+        {
+          "id": "C007",
+          "url": "https://github.com/git/git/blob/master/Documentation/CodingGuidelines",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://github.com/orgs/community/discussions/68224",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://gitkraken.com/learn/git/git-reset",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://gitlab.com/git-vcs/htmldocs/-/blob/gh-pages/git-reset.txt?ref_type=heads",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://www.golinuxcloud.com/git-reset-examples/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://heydevjob.com/projects/git-reset-soft",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://initialcommit.com/blog/git-reset",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://www.kernel.org/pub/software/scm/git/docs/git-reset.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://www.kernel.org/pub/software/scm/git/docs/git.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://serveravatar.com/git-reset/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://smjeon.dev/git/git-reset/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Git-reset-hard-vs-soft-Whats-the-difference",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "r08",
+      "query": "HTTP 307 303 redirect POST method difference",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://www.cssportal.com/http-status-codes/303.php",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/307",
+          "grade": 1,
+          "basis": "blinded extracted snapshot; incomplete for actual mandatory relationship",
+          "support": [],
+          "snapshot": "runs/reranker-2026-10-30/gold-audit/r08-C002-document.json",
+          "text_hash": "bef460e5a36013501b48645e0b83953186313f34575e7907f1ffb2bd439fdba0",
+          "normalized_text_hash": "621e275e2cab9aa5cfa2fe0fa4355256e2a6631af732cde7a4c953725330bb7c"
+        },
+        {
+          "id": "C003",
+          "url": "https://ec.haxx.se/http/redirects.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://en.wikipedia.org/wiki/Open_redirect_vulnerability",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://geekformat.com/network/redirect-checker/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://github.com/reactphp/http",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://httpguides.com/status/308-permanent-redirect",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://kinsta.com/blog/307-redirect/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://miniwebtool.com/redirect-checker/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://perfectacle.github.io/2017/10/16/http-status-code-307-vs-308/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://www.ranktracker.com/seo-guide/seo-basics/our-complete-guide-to-seo-redirects/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://redirect.pizza/resources/redirects/http-redirect-status-codes",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://reqbin.com/Article/HTTPRedirect",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://www.searchenginejournal.com/technical-seo/redirects/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://www.semrush.com/blog/307-redirect/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://seo-hacker.com/common-http-redirects/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://topic.alibabacloud.com/a/http-status-code-301-302-redirect_1_11_30593201.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://trydecoding.com/blog/http-redirect-types-codes/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://urleditor.online/docs/seo/redirects",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C020",
+          "url": "https://velog.io/@jisoo/NETWORK-HTTP-Status-Code-Redirection-302-303-307-tlxcuarv",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "r09",
+      "query": "JavaScript structuredClone transferable ArrayBuffer detached",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1302036",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://core-js.io/v3/docs/features/web-standards/structured-clone",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/structuredClone",
+          "grade": 1,
+          "basis": "blinded extracted snapshot; incomplete for actual mandatory relationship",
+          "support": [],
+          "snapshot": "runs/reranker-2026-10-30/gold-audit/r09-C003-document.json",
+          "text_hash": "9f677b14aa8e8b62ecb35065df08215d720b4b935d2b640b6c1b508233377188",
+          "normalized_text_hash": "39bdf81f0f3d46bd9f8088d6f5a9c1e69734c37be15cc55fa18159ed67a049f9"
+        },
+        {
+          "id": "C004",
+          "url": "https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/detached",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://docs.pears.com/bare/reference/bare/modules/bare-structured-clone/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://github.com/nordstjernen-web/nordstjernen-browser/blob/main/docs/HTML-compatibility.md",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://github.com/ungap/structured-clone",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://www.golinuxcloud.com/javascript-clone-object/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://html.spec.whatwg.org/multipage/structured-data.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://htmlspecs.com/streams/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://javascript.info/arraybuffer-binary-arrays",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://learn.microsoft.com/cs-cz/aspnet/core/client-side/dotnet-interop/?view=aspnetcore-10.0",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "unrelated partner navigation",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://momdo.github.io/html/structured-data.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://www.npmjs.com/package/@endo/immutable-arraybuffer",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://www.thenodebook.com/runtime-platform/web-platform-apis",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://ttj.kr/quiz/question/javascript-structuredclone-1",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://velog.io/@1984/structuredClone-%EA%B3%B5%EC%8B%9D-%EB%AC%B8%EC%84%9C-%EA%B0%99%EC%9D%B4-%EC%9D%BD%EC%9C%BC%EB%A9%B0-%EC%9D%B4%ED%95%B4%ED%95%B4%EB%B3%B4%EA%B8%B0",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://web.dev/articles/structured-clone?hl=ko",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "r10",
+      "query": "Python asyncio TaskGroup gather exception cancellation difference",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://av.tib.eu/media/68642",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://www.c-sharpcorner.com/article/mastering-async-concurrency-in-enterprise-ai-gather-vs-ascompleted-vs-taskgrou",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://docs.python.org/3/library/asyncio-task.html",
+          "grade": 2,
+          "basis": "blinded captured source directly helps the requested relationship; no complete answer required",
+          "support": [
+            {
+              "quote": "TaskGroup provides stronger safety guarantees than gather for scheduling a nesting of subtasks: if a task (or a subtask, a task sche",
+              "start": 15526,
+              "end": 15658
+            },
+            {
+              "quote": "gather will not, cancel the remaining scheduled tasks. Example: import asyncio async def f",
+              "start": 15718,
+              "end": 15808
+            }
+          ],
+          "snapshot": "runs/reranker-2026-10-30/gold-audit/r10-C003-document.json",
+          "text_hash": "198737ebf09ef9901e5d3de8f7c83f821cf30d4e00fd3a7954cdd19543abd775",
+          "normalized_text_hash": "31763a2f4e3f0d036673fcb189ae55041452a922a7fca0fd42457f9b12c9340f"
+        },
+        {
+          "id": "C004",
+          "url": "https://en.wikipedia.org/wiki/Exception_handling_(programming)",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://www.geeksforgeeks.org/python/python-taskgroups-with-asyncio/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://github.com/peterhinch/micropython-async/blob/master/v3/docs/TUTORIAL.md",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://github.com/python/cpython/issues/116048",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://github.com/python/cpython/issues/97696",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://www.patricksoftwareblog.com/introduction_to_asyncio_in_python.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://peps.python.org/pep-0789/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://pythondatabench.com/article/async-etl-python-httpx-asyncio-pandas",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://pythonhowtoprogram.com/python-asyncio-taskgroup-tutorial/",
+          "grade": 2,
+          "basis": "blinded captured source directly helps the requested relationship; no complete answer required",
+          "support": [
+            {
+              "quote": "TaskGroup is more powerful: it enforces structured concurrency, automatically cancels remaining tasks on failure, and collects all except",
+              "start": 16859,
+              "end": 16996
+            }
+          ],
+          "snapshot": "runs/reranker-2026-10-30/capture/r10-C012-document.json",
+          "text_hash": "d5f72d39176e7094a8f70df21fea9ad3ab67acf493a03845a5cf47556da75ef1",
+          "normalized_text_hash": "6ecb6ffe27b7a6b7c7e568834eab606699c024e69c6586f2a93df961bcb42a47"
+        },
+        {
+          "id": "C013",
+          "url": "https://realpython.com/ref/stdlib/asyncio/",
+          "grade": 1,
+          "basis": "blinded extracted snapshot; incomplete for actual mandatory relationship",
+          "support": [],
+          "snapshot": "runs/reranker-2026-10-30/capture/r10-C013-document.json",
+          "text_hash": "6df3f4dbae81bb7a0aa7ddf38eaa598bc837eb27095015bb38f0fd6d95ad4c3c",
+          "normalized_text_hash": "b67cee2a789edb74f312d8a8fdc7622ad91dd81666675d18df02fe14ef868dd0"
+        },
+        {
+          "id": "C014",
+          "url": "https://www.ryuslog.com/blog/python-asyncio-tasks",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://sailor.li/asyncio",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://stackoverflow.com/questions/79864151/why-does-asyncio-gather-not-propagate-cancellation-immediately-when-one-task-a",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://superfastpython.com/asyncio-task-cancellation-best-practices/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://superfastpython.com/python-asyncio/",
+          "grade": 1,
+          "basis": "blinded extracted snapshot; incomplete for actual mandatory relationship",
+          "support": [],
+          "snapshot": "runs/reranker-2026-10-30/capture/r10-C018-document.json",
+          "text_hash": "238fd9b8410698c9fd80a7b40ca4817564e6c1b4312ef247ef56baf4d073076e",
+          "normalized_text_hash": "8399ac8cc9d8fc3eb2cb43a3ba7b6bce760e6513fec4f57441686b8eea4bb2a3"
+        },
+        {
+          "id": "C019",
+          "url": "https://www.udemy.com/course/python-asynchronous-programming-questions/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C020",
+          "url": "https://velog.io/@l_cloud/Ptyhon-3.11-New-Feature-ExceptionGroup-TaskGroup",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "r11",
+      "query": "Rust std sync Mutex guaranteed fairness FIFO acquisition",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://blog.naver.com/sssang97/224052716178",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://www.c-plusplus.net/forum/topic/333717/std-mutex-mit-priorit%C3%A4t",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://www.cisa.gov/news-events/bulletins/sb26-229",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://crates.io/crates/asupersync/range/%5E0.3.4",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://www.datart.cz/Kabel-audio-video-AQ-CVA201-Redukce-SCART-na-S-Video-nebo-na-3x-CINCH-prepinani-smeru.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://doc.rust-lang.org/std/sync/",
+          "grade": 1,
+          "basis": "blinded extracted snapshot; incomplete for actual mandatory relationship",
+          "support": [],
+          "snapshot": "runs/reranker-2026-10-30/capture/r11-C006-document.json",
+          "text_hash": "2741634d538a2723d123f8eff115014ad0d37a0b49bda0655cb70921775ccc1d",
+          "normalized_text_hash": "888e66e1df7e20b4cd9b7d4a06f1e6dbfd9acbc0e43c7361161dc9fcc85350bb"
+        },
+        {
+          "id": "C007",
+          "url": "https://doc.rust-lang.org/std/sync/struct.Mutex.html",
+          "grade": 1,
+          "basis": "blinded extracted snapshot; incomplete for actual mandatory relationship",
+          "support": [],
+          "snapshot": "runs/reranker-2026-10-30/capture/r11-C007-document.json",
+          "text_hash": "dd7b8f75af5581872f25cc8a8170e5480698ff18c88b50bf68998207b199eb41",
+          "normalized_text_hash": "5ed875036b4a2dc3c8cc940bc326abf19912eebb8c824cbd3fa8ef24d8b78a8a"
+        },
+        {
+          "id": "C008",
+          "url": "https://doc.rust-lang.org/std/sync/struct.RwLock.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://docs.rs/critical-section/latest/critical_section/struct.Mutex.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://docs.rs/tokio/latest/tokio/sync/struct.Mutex.html",
+          "grade": 1,
+          "basis": "blinded extracted snapshot; incomplete for actual mandatory relationship",
+          "support": [],
+          "snapshot": "runs/reranker-2026-10-30/capture/r11-C010-document.json",
+          "text_hash": "5b80e30876bb3c1b1bb35bfea86ce0ee17440c8b44919ca7fb4ad08380e25603",
+          "normalized_text_hash": "794bf05ec73a75cdc106802af2c1dc8cf398d062ca801fa658193c44ede61af8"
+        },
+        {
+          "id": "C011",
+          "url": "https://en.cppreference.com/cpp/thread/mutex",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://en.wikipedia.org/wiki/Rust_syntax",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://github.com/async-rs/async-std",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://github.com/fereidani/xutex",
+          "grade": 1,
+          "basis": "blinded extracted snapshot; incomplete for actual mandatory relationship",
+          "support": [],
+          "snapshot": "runs/reranker-2026-10-30/capture/r11-C014-document.json",
+          "text_hash": "c0e2f2c4799f44afecceb737bb5281782f26f11aa5ef0441bee0173e73ac9ed5",
+          "normalized_text_hash": "f57eea5cf180ec86e8c535f007f375f3be130bc05998d2b60cfbc4831e33fc0c"
+        },
+        {
+          "id": "C015",
+          "url": "https://grokipedia.com/page/Channel_(programming)",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://travisdowns.github.io/blog/2020/07/06/concurrency-costs.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://webkit.org/blog/6161/locking-in-webkit/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "r12",
+      "query": "PostgreSQL VACUUM FULL without exclusive lock guaranteed",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://www.arsys.net/cloud/dbaas/postgresql",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://blog.naver.com/tarzandb/224118225811",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://www.c-sharpcorner.com/article/postgresql-vacuum-how-to-reclaim-space-and-prevent-table-bloat-2",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://cloud.ionos.com/managed/dbaas/postgresql",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://www.enterprisedb.com/blog/postgresql-vacuum-and-analyze-best-practice-tips",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://www.heroku.com/blog/curious-case-table-locking-update-query/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://juhoplayground.github.io/posts/PostgreSQL_VACUUM/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://junhkang.com/posts/17/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://www.linkedin.com/pulse/postgresql-vacuum-how-when-why-breaks-your-db-fix-bur%C3%A7in-yaz%C4%B1c%C4%B1-5cn0f",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "unrelated partner navigation",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://postgresql.kr/docs/9.1/explicit-locking.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://www.postgresql.org/docs/12/sql-vacuum.html",
+          "grade": 2,
+          "basis": "blinded captured source directly helps the requested relationship; no complete answer required",
+          "support": [
+            {
+              "quote": "requires an ACCESS EXCLUSIVE lock on each table while it is being processed. When the option list is surroun",
+              "start": 1940,
+              "end": 2048
+            }
+          ],
+          "snapshot": "runs/reranker-2026-10-30/gold-audit/r12-C012-document.json",
+          "text_hash": "8519b2fad678a9b1ca83a053781080d2c4a7ce89fbfa1191192afe30a6d49737",
+          "normalized_text_hash": "b91c669fc4e39c927e452fa86ada416fc181a04200b61c6c945a4c101f79c54f"
+        },
+        {
+          "id": "C013",
+          "url": "https://www.postgresql.org/docs/7.3/sql-vacuum.html",
+          "grade": 2,
+          "basis": "blinded captured source directly helps the requested relationship; no complete answer required",
+          "support": [
+            {
+              "quote": "requires an exclusive lock on each table while it is being processed. FREEZE is a special-purpose option that cause",
+              "start": 2418,
+              "end": 2533
+            }
+          ],
+          "snapshot": "runs/reranker-2026-10-30/capture/r12-C013-document.json",
+          "text_hash": "17bce2733ec180b8303cde1f1fe0a9eaeeb4879d9f803bee2e2c606a7552e3f4",
+          "normalized_text_hash": "fbbc469df9fd9da5a6a0995279bcdd55a5788dd47a052833a21b48a608070625"
+        },
+        {
+          "id": "C014",
+          "url": "https://www.postgresql.org/docs/9.0/sql-vacuum.html",
+          "grade": 2,
+          "basis": "blinded captured source directly helps the requested relationship; no complete answer required",
+          "support": [
+            {
+              "quote": "requires an exclusive lock on each table while it is being processed. When the option list is surrounded by parenth",
+              "start": 1714,
+              "end": 1829
+            }
+          ],
+          "snapshot": "runs/reranker-2026-10-30/capture/r12-C014-document.json",
+          "text_hash": "a4cd442350301fcb6a54eead16032ac917348e75df17591ebecf101b0a64bb68",
+          "normalized_text_hash": "a19350c31a3fdb9e743a5ea9b02e948c4fa7ccfabb5d3ebfe5aa90aba3c75e78"
+        },
+        {
+          "id": "C015",
+          "url": "https://www.postgresql.org/docs/current/explicit-locking.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://www.postgresql.org/docs/current/sql-vacuum.html",
+          "grade": 2,
+          "basis": "blinded captured source directly helps the requested relationship; no complete answer required",
+          "support": [
+            {
+              "quote": "requires an ACCESS EXCLUSIVE lock on each table while it is being processed. Parameters FULL Selects “full” ",
+              "start": 2059,
+              "end": 2171
+            }
+          ],
+          "snapshot": "runs/reranker-2026-10-30/capture/r12-C016-document.json",
+          "text_hash": "f247321ee10a17822239092e98325d9146fdf3f7cf1fa6c106c750675914c9e1",
+          "normalized_text_hash": "4dd68a607a5a17a26ca7f1c80190c81597d8b8a6cabce289d41659712140c863"
+        },
+        {
+          "id": "C017",
+          "url": "http://www.sqlnosql.com/postgresql-vacuum/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://velog.io/@milcho0604/PostgreSQL-VACUUM-VACUUM%EA%B3%BC-VACUUM-FULL%EC%9D%98-%EC%B0%A8%EC%9D%B4",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://www.zabbix.com/integrations/postgresql",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        }
+      ]
+    }
+  ]
+}

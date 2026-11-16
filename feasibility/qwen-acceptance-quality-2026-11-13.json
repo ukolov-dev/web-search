@@ -1,0 +1,416 @@
+{
+  "schema": "qwen-acceptance-quality-v1",
+  "assessor": "root, manual source-first review; not independent acceptance",
+  "policy": "Whole frozen factual questions out of 11; F11 negative control separate. Compound question counts only when all requested conditions are covered. Truth in visible context and correctness of returned witness binding are distinct; a new binding failure fails acceptance even if the fact is true elsewhere.",
+  "rows": [
+    {
+      "id": "F01",
+      "kind": "factual_question",
+      "baseline": {
+        "question_fully_answered": false,
+        "negative_control_passed": null,
+        "claims": [
+          {
+            "id": "A1",
+            "factual_status": "supported_in_read_context",
+            "returned_witness_status": "supported",
+            "contributes_to_frozen_question": false
+          },
+          {
+            "id": "A2",
+            "factual_status": "supported_in_read_context",
+            "returned_witness_status": "supported",
+            "contributes_to_frozen_question": false
+          }
+        ]
+      },
+      "candidate": {
+        "question_fully_answered": true,
+        "negative_control_passed": null,
+        "claims": [
+          {
+            "id": "A1",
+            "factual_status": "supported_in_read_context",
+            "returned_witness_status": "supported",
+            "contributes_to_frozen_question": true
+          },
+          {
+            "id": "A2",
+            "factual_status": "supported_in_read_context",
+            "returned_witness_status": "supported",
+            "contributes_to_frozen_question": false
+          },
+          {
+            "id": "A3",
+            "factual_status": "supported_in_read_context",
+            "returned_witness_status": "supported",
+            "contributes_to_frozen_question": false
+          },
+          {
+            "id": "A4",
+            "factual_status": "supported_in_read_context",
+            "returned_witness_status": "supported",
+            "contributes_to_frozen_question": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "F02",
+      "kind": "factual_question",
+      "baseline": {
+        "question_fully_answered": false,
+        "negative_control_passed": null,
+        "claims": []
+      },
+      "candidate": {
+        "question_fully_answered": false,
+        "negative_control_passed": null,
+        "claims": []
+      }
+    },
+    {
+      "id": "F03",
+      "kind": "factual_question",
+      "baseline": {
+        "question_fully_answered": false,
+        "negative_control_passed": null,
+        "claims": []
+      },
+      "candidate": {
+        "question_fully_answered": false,
+        "negative_control_passed": null,
+        "claims": []
+      }
+    },
+    {
+      "id": "F04",
+      "kind": "factual_question",
+      "baseline": {
+        "question_fully_answered": false,
+        "negative_control_passed": null,
+        "claims": []
+      },
+      "candidate": {
+        "question_fully_answered": true,
+        "negative_control_passed": null,
+        "claims": [
+          {
+            "id": "A1",
+            "factual_status": "supported_in_read_context",
+            "returned_witness_status": "supported",
+            "contributes_to_frozen_question": true
+          },
+          {
+            "id": "A2",
+            "factual_status": "supported_in_read_context",
+            "returned_witness_status": "supported",
+            "contributes_to_frozen_question": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "F05",
+      "kind": "factual_question",
+      "baseline": {
+        "question_fully_answered": false,
+        "negative_control_passed": null,
+        "claims": []
+      },
+      "candidate": {
+        "question_fully_answered": true,
+        "negative_control_passed": null,
+        "claims": [
+          {
+            "id": "A1",
+            "factual_status": "supported_in_read_context",
+            "returned_witness_status": "supported",
+            "contributes_to_frozen_question": true
+          },
+          {
+            "id": "A2",
+            "factual_status": "supported_in_read_context",
+            "returned_witness_status": "supported",
+            "contributes_to_frozen_question": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "F06",
+      "kind": "factual_question",
+      "baseline": {
+        "question_fully_answered": false,
+        "negative_control_passed": null,
+        "claims": []
+      },
+      "candidate": {
+        "question_fully_answered": true,
+        "negative_control_passed": null,
+        "claims": [
+          {
+            "id": "A1",
+            "factual_status": "supported_in_read_context",
+            "returned_witness_status": "supported",
+            "contributes_to_frozen_question": true
+          },
+          {
+            "id": "A2",
+            "factual_status": "supported_in_read_context",
+            "returned_witness_status": "supported",
+            "contributes_to_frozen_question": true
+          },
+          {
+            "id": "A3",
+            "factual_status": "supported_in_read_context",
+            "returned_witness_status": "supported",
+            "contributes_to_frozen_question": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "F07",
+      "kind": "factual_question",
+      "baseline": {
+        "question_fully_answered": false,
+        "negative_control_passed": null,
+        "claims": []
+      },
+      "candidate": {
+        "question_fully_answered": true,
+        "negative_control_passed": null,
+        "claims": [
+          {
+            "id": "A1",
+            "factual_status": "supported_in_read_context",
+            "returned_witness_status": "supported",
+            "contributes_to_frozen_question": true
+          },
+          {
+            "id": "A2",
+            "factual_status": "supported_in_read_context",
+            "returned_witness_status": "supported",
+            "contributes_to_frozen_question": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "F08",
+      "kind": "factual_question",
+      "baseline": {
+        "question_fully_answered": false,
+        "negative_control_passed": null,
+        "claims": []
+      },
+      "candidate": {
+        "question_fully_answered": true,
+        "negative_control_passed": null,
+        "claims": [
+          {
+            "id": "A1",
+            "factual_status": "supported_in_read_context",
+            "returned_witness_status": "supported",
+            "contributes_to_frozen_question": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "F09",
+      "kind": "factual_question",
+      "baseline": {
+        "question_fully_answered": true,
+        "negative_control_passed": null,
+        "claims": [
+          {
+            "id": "A1",
+            "factual_status": "supported_in_read_context",
+            "returned_witness_status": "supported",
+            "contributes_to_frozen_question": true
+          }
+        ]
+      },
+      "candidate": {
+        "question_fully_answered": true,
+        "negative_control_passed": null,
+        "claims": [
+          {
+            "id": "A1",
+            "factual_status": "supported_in_read_context",
+            "returned_witness_status": "supported",
+            "contributes_to_frozen_question": true
+          },
+          {
+            "id": "A2",
+            "factual_status": "supported_in_read_context",
+            "returned_witness_status": "supported",
+            "contributes_to_frozen_question": false
+          },
+          {
+            "id": "A3",
+            "factual_status": "supported_in_read_context",
+            "returned_witness_status": "wrong_API_occurrence",
+            "contributes_to_frozen_question": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "F10",
+      "kind": "factual_question",
+      "baseline": {
+        "question_fully_answered": true,
+        "negative_control_passed": null,
+        "claims": [
+          {
+            "id": "A1",
+            "factual_status": "supported_in_read_context",
+            "returned_witness_status": "supported",
+            "contributes_to_frozen_question": true
+          },
+          {
+            "id": "A2",
+            "factual_status": "supported_in_read_context",
+            "returned_witness_status": "supported",
+            "contributes_to_frozen_question": true
+          },
+          {
+            "id": "A3",
+            "factual_status": "supported_in_read_context",
+            "returned_witness_status": "supported",
+            "contributes_to_frozen_question": true
+          }
+        ]
+      },
+      "candidate": {
+        "question_fully_answered": true,
+        "negative_control_passed": null,
+        "claims": [
+          {
+            "id": "A1",
+            "factual_status": "supported_in_read_context",
+            "returned_witness_status": "supported",
+            "contributes_to_frozen_question": true
+          },
+          {
+            "id": "A2",
+            "factual_status": "supported_in_read_context",
+            "returned_witness_status": "supported",
+            "contributes_to_frozen_question": true
+          },
+          {
+            "id": "A3",
+            "factual_status": "supported_in_read_context",
+            "returned_witness_status": "supported",
+            "contributes_to_frozen_question": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "F11",
+      "kind": "negative_control",
+      "baseline": {
+        "question_fully_answered": null,
+        "negative_control_passed": true,
+        "claims": []
+      },
+      "candidate": {
+        "question_fully_answered": null,
+        "negative_control_passed": true,
+        "claims": []
+      }
+    },
+    {
+      "id": "F12",
+      "kind": "factual_question",
+      "baseline": {
+        "question_fully_answered": false,
+        "negative_control_passed": null,
+        "claims": []
+      },
+      "candidate": {
+        "question_fully_answered": false,
+        "negative_control_passed": null,
+        "claims": [
+          {
+            "id": "A1",
+            "factual_status": "supported_in_read_context",
+            "returned_witness_status": "supported",
+            "contributes_to_frozen_question": false
+          },
+          {
+            "id": "A2",
+            "factual_status": "supported_in_read_context",
+            "returned_witness_status": "supported",
+            "contributes_to_frozen_question": false
+          },
+          {
+            "id": "A3",
+            "factual_status": "supported_in_read_context",
+            "returned_witness_status": "supported",
+            "contributes_to_frozen_question": false
+          },
+          {
+            "id": "A4",
+            "factual_status": "supported_in_read_context",
+            "returned_witness_status": "supported",
+            "contributes_to_frozen_question": false
+          }
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "baseline_fully_answered_factual_questions": 2,
+    "candidate_fully_answered_factual_questions": 8,
+    "factual_questions": 11,
+    "false_claims_baseline": 0,
+    "false_claims_candidate": 0,
+    "unknown_as_cited_claims_baseline": 0,
+    "unknown_as_cited_claims_candidate": 1,
+    "lost_baseline_supported_question_ids": [],
+    "negative_control_passed_both": true,
+    "gate": "failed",
+    "new_failure_ids": [
+      "F09/candidate/A3"
+    ],
+    "remaining_missing_question_ids": [
+      "F02",
+      "F03",
+      "F12"
+    ]
+  },
+  "findings": [
+    {
+      "id": "F09/candidate/A3",
+      "type": "returned_witness_binding_failure",
+      "factually_false": false,
+      "unknown_as_returned_witness": true,
+      "claim": "Vec::pop takes O(1) time.",
+      "returned_witness_method": "push_within_capacity",
+      "intended_method": "pop",
+      "quote": "Takes O(1) time.",
+      "source_chunk": "S1P1",
+      "duplicate_quote_occurrences_in_read_chunk": 2,
+      "reason": "Non-RFC quote resolves first text occurrence. The correct pop complexity sentence is also visible later, so factual support in read context exists but the returned original range binds the neighbouring API.",
+      "cause": "src/research.rs Session::quote: selected_start None -> text.find(quote)",
+      "code_changed_during_trial": false,
+      "returned_range": {
+        "start": 53141,
+        "end": 53157
+      },
+      "correct_visible_range": {
+        "start": 53491,
+        "end": 53507
+      },
+      "document_version": "881271ad4d4bda463151211e80be3c7720f6b7af768c9c8b230027680ec8a66a",
+      "source_url": "https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html",
+      "returned_scope_excerpt": " returned or added at least 1 free slot\n            let _ = vec.push_within_capacity(value);\n        }\n    }\n    Ok(vec)\n}\nassert_eq!(from_iter_fallible(0..100), Ok(Vec::from_iter(0..100)));\n\n§Time complexity\n\nTakes O(1) time.\n\n1.0.0 · Source\npub fn pop(&mut self) -> Option<T>\n\nRemoves the last element fr",
+      "correct_scope_excerpt": " empty.\n\nIf you’d like to pop the first element, consider using VecDeque::pop_front instead.\n\n§Examples\n\nlet mut vec = vec![1, 2, 3];\nassert_eq!(vec.pop(), Some(3));\nassert_eq!(vec, [1, 2]);\n\n§Time complexity\n\nTakes O(1) time.\n\n1.86.0 · Source\npub fn pop_if(&mut self, predicate: impl FnOnce(&mut T) -> boo"
+    }
+  ]
+}

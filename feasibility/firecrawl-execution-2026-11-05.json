@@ -1,0 +1,244 @@
+{
+  "date": "2026-11-05",
+  "task_id": "TASK-20261105-101353-001",
+  "research_id": "RESEARCH-20261029-124155-001",
+  "scope": "Historical fixed12 page reader component via actual Rust extraction/evidence consumer; no retrieval, initial classifier, public JS or published Firecrawl MCP backend.",
+  "runtime_changed": false,
+  "permanent_client_config_changed": false,
+  "default_reader_changed": false,
+  "pages": 12,
+  "known_positive_pages": 7,
+  "negative_background_pages": 5,
+  "witnesses": 17,
+  "date_applicable_pages": 6,
+  "metrics": {
+    "baseline": {
+      "documents_successful": 11,
+      "all_witnesses_pages": 11,
+      "witnesses_preserved": 16,
+      "witnesses_total": 17,
+      "own_dates_preserved": 6,
+      "applicable_dates": 6,
+      "quality": {
+        "tp_ids": [
+          "P01",
+          "P02",
+          "P05",
+          "P07",
+          "P08",
+          "P10"
+        ],
+        "fn_ids": [
+          "P06"
+        ],
+        "fp_ids": [],
+        "unknown_direct_ids": [],
+        "direct_recall": 0.8571428571428571
+      },
+      "latency_all_attempts": {
+        "n": 36,
+        "min_ms": 0.69,
+        "p50_ms": 2.6675,
+        "p95_ms": 10.96,
+        "max_ms": 11.241
+      },
+      "latency_common_successful_pages": {
+        "n": 33,
+        "min_ms": 0.69,
+        "p50_ms": 2.729,
+        "p95_ms": 10.96,
+        "max_ms": 11.241
+      },
+      "reader_failures": [
+        {
+          "arm": "baseline",
+          "document": null,
+          "elapsed_us": 2483,
+          "error": "failed to grab the article",
+          "page_id": "P11",
+          "round": 0
+        },
+        {
+          "arm": "baseline",
+          "document": null,
+          "elapsed_us": 2358,
+          "error": "failed to grab the article",
+          "page_id": "P11",
+          "round": 1
+        },
+        {
+          "arm": "baseline",
+          "document": null,
+          "elapsed_us": 2395,
+          "error": "failed to grab the article",
+          "page_id": "P11",
+          "round": 2
+        }
+      ]
+    },
+    "firecrawl": {
+      "documents_successful": 12,
+      "all_witnesses_pages": 12,
+      "witnesses_preserved": 17,
+      "witnesses_total": 17,
+      "own_dates_preserved": 6,
+      "applicable_dates": 6,
+      "quality": {
+        "tp_ids": [
+          "P02",
+          "P05",
+          "P06",
+          "P07",
+          "P08",
+          "P10"
+        ],
+        "fn_ids": [
+          "P01"
+        ],
+        "fp_ids": [],
+        "unknown_direct_ids": [],
+        "direct_recall": 0.8571428571428571
+      },
+      "latency_all_attempts": {
+        "n": 36,
+        "min_ms": 12.074,
+        "p50_ms": 29.9855,
+        "p95_ms": 153.61,
+        "max_ms": 260.665
+      },
+      "latency_common_successful_pages": {
+        "n": 33,
+        "min_ms": 12.074,
+        "p50_ms": 32.403,
+        "p95_ms": 153.61,
+        "max_ms": 260.665
+      },
+      "reader_failures": []
+    }
+  },
+  "calls": {
+    "local_firecrawl_parse_smoke": 2,
+    "local_firecrawl_parse_original_capture": 36,
+    "local_firecrawl_parse_latency_correction": 36,
+    "local_firecrawl_parse_total": 74,
+    "openrouter_generations": 16,
+    "local_qwen_inference": 23,
+    "qwen_pairs_baseline": 82,
+    "qwen_pairs_firecrawl": 107,
+    "target_http": 0,
+    "public_browser": 0,
+    "search_requests": 0,
+    "release_cli_extract_file": 12
+  },
+  "model_profile": {
+    "actual_model_ids": {
+      "deepseek/deepseek-v4.1-flash-1017": 16
+    },
+    "finish_reasons": {
+      "stop": 16
+    },
+    "actual_qwen_pairs": {
+      "baseline": 82,
+      "firecrawl": 107
+    },
+    "qwen_response_models": {
+      "Qwen3-Reranker-0.6B-4bit": 23
+    },
+    "generative_calls": 16
+  },
+  "upstream": {
+    "build_sha": "7d8e92dc5d270b1247d60e809c3fd32f52e0e47b",
+    "image": "ghcr.io/firecrawl/firecrawl@sha256:d09e210a9fbbf1fffb6ec8972f23e854498cdee672ee374dbdce9c344a301d8e",
+    "uncompressed_image_bytes": 2744201755,
+    "stack": "API + Redis /v2/parse HTML upload only",
+    "api_memory_peak_bytes": 412368896,
+    "api_memory_limit_bytes": 2147483648,
+    "api_cpus": 2,
+    "redis_memory_limit_bytes": 134217728
+  },
+  "teardown": {
+    "owned_project_removed": true,
+    "expected_preexisting_containers_running": [
+      "WeKnora-app",
+      "WeKnora-docreader",
+      "WeKnora-frontend",
+      "WeKnora-postgres",
+      "WeKnora-redis",
+      "vincenzo-context-hub-local-backend-1",
+      "vincenzo-context-hub-local-confluence-stub-1",
+      "vincenzo-context-hub-local-postgres-1"
+    ],
+    "observed_running_container_count": 8,
+    "private_api_no_longer_accepts_tcp": true,
+    "limits": "No functional acceptance of other apps or proof of zero restarts; no initial StartedAt record."
+  },
+  "offline_replay": {
+    "status": "passed",
+    "artifacts_restored": 337,
+    "results_byte_identical": true,
+    "results_sha256": "d932d262c6eabda628e85eb1beaa72bcff1865ed701f5ef21595dc4b8e546052",
+    "corpus_sha256": "dc9ba918d43296710c5445d86a805e15c8ee80ea582bc9b9dfc82aea62fbbbb1"
+  },
+  "checks": {
+    "cargo_fmt": "passed",
+    "ordinary_locked_offline": {
+      "unit_passed": 116,
+      "stdio_passed": 5,
+      "unit_ignored": 32,
+      "stdio_ignored": 10
+    },
+    "clippy_all_targets_deny_warnings": "passed",
+    "release_build": "passed",
+    "fresh_release_stdio": {
+      "passed": 5
+    },
+    "frozen_quality_gold_code_integrity": "passed",
+    "corrected_latency_body_hashes_match_original": "passed",
+    "release_cli_baseline_parity": "11 matching successful text hashes and same P11 extraction error",
+    "refactor_review": "CLI heuristic empty without Git; actual saved source diff inspected",
+    "context": {
+      "lint": "OK",
+      "index_check": "fresh",
+      "stdio_router_smoke": "passed",
+      "doctor": "WARN",
+      "doctor_summary": {
+        "ok": 15,
+        "warn": 5,
+        "fail": 0
+      },
+      "warnings": [
+        "sqlite-ignore",
+        "draft-ignore",
+        "source-coverage",
+        "durable-memory",
+        "backlog-ready"
+      ]
+    }
+  },
+  "files_sha256": {
+    "src/firecrawl_benchmark.rs": "779899bdb7e0c15fdfd6c61ed5cef56c3e667dd9d645554b8901ceb865b987ef",
+    "scripts/prepare-firecrawl-2026-11-05.py": "08f7dae3299d68b3394f735fabedcb88a83325fb6a8db86aa3c89dfbb64467f0",
+    "scripts/analyze-firecrawl-2026-11-05.py": "e5899ba136f794b89be34a1c0805f69d3ec76322970e6f4e49385e9782eb2ee7",
+    "scripts/restore-firecrawl-2026-11-05.py": "dfb56acf296c89ffbf68c4d122260a34e35515db4d9a59f17548dc2c3217709b"
+  },
+  "limits": [
+    "Prior-known source-aware development, not fresh holdout or general fullweb recall.",
+    "Single paired model pass, P01 lost and P06 gained; net flat is not per-source nonregression.",
+    "Own date gate on hash-matching returned rawHtml, not Firecrawl publishedTime accuracy.",
+    "Warm local reader latency excludes infrastructure startup and target fetching.",
+    "No public JS/network gate, VPS/load or independent ready_to_merge acceptance."
+  ],
+  "decision": "Keep current default; no runtime integration justified by flat direct recall and the P01 regression.",
+  "research_revision": 26,
+  "verification": {
+    "id": "VERIFY-20261105-114446-001",
+    "path": ".project-context/active/verification/VERIFY-20261105-114446-001.md"
+  },
+  "task_finalization": {
+    "status": "FINALIZED",
+    "completion": "partial",
+    "requiresHumanReview": false,
+    "taskStatus": "in_progress",
+    "reason": "Requested study delivered; independent accepted ready_to_merge execution absent, so formal Router completion gate preserved."
+  }
+}

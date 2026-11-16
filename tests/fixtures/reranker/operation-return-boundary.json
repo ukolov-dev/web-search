@@ -1,0 +1,682 @@
+{
+  "provenance": {
+    "source_url": "https://developer.android.com/reference/java/util/concurrent/ConcurrentHashMap",
+    "capture": "runs/passage-coverage-final-2026-10-30/fixed/f04-C003-document.json",
+    "normalized_text_sha256": "df34dbd0531727ba6dc8bbe2b97c74c3736437cf6f0d9d05a336f121ea793207",
+    "purpose": "Fixed source text and Qwen scores for operation-header boundary regression; no generative predictions or labels."
+  },
+  "query": "Java ConcurrentHashMap computeIfAbsent atomic invocation null result absent mapping",
+  "text": "Android Developers Develop API reference Added in API level 1 Summary: Nested Classes | Ctors | Methods | Inherited Methods ConcurrentHashMap public class ConcurrentHashMap extends AbstractMap<K, V> implements ConcurrentMap<K, V>, Serializable java.lang.Object ↳ java.util.AbstractMap<K, V> ↳ java.util.concurrent.ConcurrentHashMap<K, V> A hash table supporting full concurrency of retrievals and high expected concurrency for updates. This class obeys the same functional specification as Hashtable, and includes versions of methods corresponding to each method of Hashtable. However, even though all operations are thread-safe, retrieval operations do not entail locking, and there is not any support for locking the entire table in a way that prevents all access. This class is fully interoperable with Hashtable in programs that rely on its thread safety but not on its synchronization details. Retrieval operations (including get) generally do not block, so may overlap with update operations (including put and remove). Retrievals reflect the results of the most recently completed update operations holding upon their onset. (More formally, an update operation for a given key bears a happens-before relation with any (non-null) retrieval for that key reporting the updated value.) For aggregate operations such as putAll and clear, concurrent retrievals may reflect insertion or removal of only some entries. Similarly, Iterators, Spliterators and Enumerations return elements reflecting the state of the hash table at some point at or since the creation of the iterator/enumeration. They do not throw ConcurrentModificationException. However, iterators are designed to be used by only one thread at a time. Bear in mind that the results of aggregate status methods including size, isEmpty, and containsValue are typically useful only when a map is not undergoing concurrent updates in other threads. Otherwise the results of these methods reflect transient states that may be adequate for monitoring or estimation purposes, but not for program control. The table is dynamically expanded when there are too many collisions (i.e., keys that have distinct hash codes but fall into the same slot modulo the table size), with the expected average effect of maintaining roughly two bins per mapping (corresponding to a 0.75 load factor threshold for resizing). There may be much variance around this average as mappings are added and removed, but overall, this maintains a commonly accepted time/space tradeoff for hash tables. However, resizing this or any other kind of hash table may be a relatively slow operation. When possible, it is a good idea to provide a size estimate as an optional initialCapacity constructor argument. An additional optional loadFactor constructor argument provides a further means of customizing initial table capacity by specifying the table density to be used in calculating the amount of space to allocate for the given number of elements. Also, for compatibility with previous versions of this class, constructors may optionally specify an expected concurrencyLevel as an additional hint for internal sizing. Note that using many keys with exactly the same hashCode() is a sure way to slow down performance of any hash table. To ameliorate impact, when keys are Comparable, this class may use comparison order among keys to help break ties. A Set projection of a ConcurrentHashMap may be created (using newKeySet() or newKeySet(int)), or viewed (using keySet(Object) when only keys are of interest, and the mapped values are (perhaps transiently) not used or all take the same mapping value. A ConcurrentHashMap can be used as a scalable frequency map (a form of histogram or multiset) by using LongAdder values and initializing via computeIfAbsent. For example, to add a count to a ConcurrentHashMap<String,LongAdder> freqs, you can use freqs.computeIfAbsent(key, k -> new LongAdder()).increment(); This class and its views and iterators implement all of the optional methods of the Map and Iterator interfaces. Like Hashtable but unlike HashMap, this class does not allow null to be used as a key or value. ConcurrentHashMaps support a set of sequential and parallel bulk operations that, unlike most Stream methods, are designed to be safely, and often sensibly, applied even with maps that are being concurrently updated by other threads; for example, when computing a snapshot summary of the values in a shared registry. There are three kinds of operation, each with four forms, accepting functions with keys, values, entries, and (key, value) pairs as arguments and/or return values. Because the elements of a ConcurrentHashMap are not ordered in any particular way, and may be processed in different orders in different parallel executions, the correctness of supplied functions should not depend on any ordering, or on any other objects or values that may transiently change while computation is in progress; and except for forEach actions, should ideally be side-effect-free. Bulk operations on Map.Entry objects do not support method setValue. forEach: Performs a given action on each element. A variant form applies a given transformation on each element before performing the action. search: Returns the first available non-null result of applying a given function on each element; skipping further search when a result is found. reduce: Accumulates each element. The supplied reduction function cannot rely on ordering (more formally, it should be both associative and commutative). There are five variants: Plain reductions. (There is not a form of this method for (key, value) function arguments since there is no corresponding return type.) Mapped reductions that accumulate the results of a given function applied to each element. Reductions to scalar doubles, longs, and ints, using a given basis value. These bulk operations accept a parallelismThreshold argument. Methods proceed sequentially if the current map size is estimated to be less than the given threshold. Using a value of Long.MAX_VALUE suppresses all parallelism. Using a value of 1 results in maximal parallelism by partitioning into enough subtasks to fully utilize the ForkJoinPool.commonPool() that is used for all parallel computations. Normally, you would initially choose one of these extreme values, and then measure performance of using in-between values that trade off overhead versus throughput. The concurrency properties of bulk operations follow from those of ConcurrentHashMap: Any non-null result returned from get(key) and related access methods bears a happens-before relation with the associated insertion or update. The result of any bulk operation reflects the composition of these per-element relations (but is not necessarily atomic with respect to the map as a whole unless it is somehow known to be quiescent). Conversely, because keys and values in the map are never null, null serves as a reliable atomic indicator of the current lack of any result. To maintain this property, null serves as an implicit basis for all non-scalar reduction operations. For the double, long, and int versions, the basis should be one that, when combined with any other value, returns that other value (more formally, it should be the identity element for the reduction). Most common reductions have these properties; for example, computing a sum with basis 0 or a minimum with basis MAX_VALUE. Search and transformation functions provided as arguments should similarly return null to indicate the lack of any result (in which case it is not used). In the case of mapped reductions, this also enables transformations to serve as filters, returning null (or, in the case of primitive specializations, the identity basis) if the element should not be combined. You can create compound transformations and filterings by composing them yourself under this \"null means there is nothing there now\" rule before using them in search or reduce operations. Methods accepting and/or returning Entry arguments maintain key-value associations. They may be useful for example when finding the key for the greatest value. Note that \"plain\" Entry arguments can be supplied using new AbstractMap.SimpleEntry(k,v). Bulk operations may complete abruptly, throwing an exception encountered in the application of a supplied function. Bear in mind when handling such exceptions that other concurrently executing functions could also have thrown exceptions, or would have done so if the first exception had not occurred. Speedups for parallel compared to sequential forms are common but not guaranteed. Parallel operations involving brief functions on small maps may execute more slowly than sequential forms if the underlying work to parallelize the computation is more expensive than the computation itself. Similarly, parallelization may not lead to much actual parallelism if all processors are busy performing unrelated tasks. All arguments to all task methods must be non-null. This class is a member of the Java Collections Framework. Summary Nested classes class ConcurrentHashMap.KeySetView<K, V> A view of a ConcurrentHashMap as a Set of keys, in which additions may optionally be enabled by mapping to a common value. Public constructors ConcurrentHashMap() Creates a new, empty map with the default initial table size (16). ConcurrentHashMap(int initialCapacity) Creates a new, empty map with an initial table size accommodating the specified number of elements without the need to dynamically resize. ConcurrentHashMap(int initialCapacity, float loadFactor) Creates a new, empty map with an initial table size based on the given number of elements (initialCapacity) and initial table density (loadFactor). ConcurrentHashMap(int initialCapacity, float loadFactor, int concurrencyLevel) Creates a new, empty map with an initial table size based on the given number of elements (initialCapacity), initial table density (loadFactor), and number of concurrently updating threads (concurrencyLevel). ConcurrentHashMap(Map<? extends K, ? extends V> m) Creates a new map with the same mappings as the given map. Public methods void clear() Removes all of the mappings from this map. V compute(K key, BiFunction<? super K, ? super V, ? extends V> remappingFunction) Attempts to compute a mapping for the specified key and its current mapped value (or null if there is no current mapping). V computeIfAbsent(K key, Function<? super K, ? extends V> mappingFunction) If the specified key is not already associated with a value, attempts to compute its value using the given mapping function and enters it into this map unless null. V computeIfPresent(K key, BiFunction<? super K, ? super V, ? extends V> remappingFunction) If the value for the specified key is present, attempts to compute a new mapping given the key and its current mapped value. boolean contains(Object value) Tests if some key maps into the specified value in this table. boolean containsKey(Object key) Tests if the specified object is a key in this table. boolean containsValue(Object value) Returns true if this map maps one or more keys to the specified value. Enumeration<V> elements() Returns an enumeration of the values in this table. Set<Entry<K, V>> entrySet() Returns a Set view of the mappings contained in this map. boolean equals(Object o) Compares the specified object with this map for equality. <U> void forEach(long parallelismThreshold, BiFunction<? super K, ? super V, ? extends U> transformer, Consumer<? super U> action) Performs the given action for each non-null transformation of each (key, value). void forEach(BiConsumer<? super K, ? super V> action) Performs the given action for each entry in this map until all entries have been processed or the action throws an exception. void forEach(long parallelismThreshold, BiConsumer<? super K, ? super V> action) Performs the given action for each (key, value). <U> void forEachEntry(long parallelismThreshold, Function<Entry<K, V>, ? extends U> transformer, Consumer<? super U> action) Performs the given action for each non-null transformation of each entry. void forEachEntry(long parallelismThreshold, Consumer<? super Entry<K, V>> action) Performs the given action for each entry. <U> void forEachKey(long parallelismThreshold, Function<? super K, ? extends U> transformer, Consumer<? super U> action) Performs the given action for each non-null transformation of each key. void forEachKey(long parallelismThreshold, Consumer<? super K> action) Performs the given action for each key. <U> void forEachValue(long parallelismThreshold, Function<? super V, ? extends U> transformer, Consumer<? super U> action) Performs the given action for each non-null transformation of each value. void forEachValue(long parallelismThreshold, Consumer<? super V> action) Performs the given action for each value. V get(Object key) Returns the value to which the specified key is mapped, or null if this map contains no mapping for the key. V getOrDefault(Object key, V defaultValue) Returns the value to which the specified key is mapped, or the given default value if this map contains no mapping for the key. int hashCode() Returns the hash code value for this Map, i.e., the sum of, for each key-value pair in the map, key.hashCode() ^ value.hashCode(). boolean isEmpty() Returns true if this map contains no key-value mappings. Set<K> keySet() Returns a Set view of the keys contained in this map. KeySetView<K, V> keySet(V mappedValue) Returns a Set view of the keys in this map, using the given common mapped value for any additions (i.e., Collection.add and Collection.addAll(Collection)). Enumeration<K> keys() Returns an enumeration of the keys in this table. long mappingCount() Returns the number of mappings. V merge(K key, V value, BiFunction<? super V, ? super V, ? extends V> remappingFunction) If the specified key is not already associated with a (non-null) value, associates it with the given value. static <K> KeySetView<K, Boolean> newKeySet() Creates a new Set backed by a ConcurrentHashMap from the given type to Boolean.TRUE. static <K> KeySetView<K, Boolean> newKeySet(int initialCapacity) Creates a new Set backed by a ConcurrentHashMap from the given type to Boolean.TRUE. V put(K key, V value) Maps the specified key to the specified value in this table. void putAll(Map<? extends K, ? extends V> m) Copies all of the mappings from the specified map to this one. V putIfAbsent(K key, V value) If the specified key is not already associated with a value, associates it with the given value. <U> U reduce(long parallelismThreshold, BiFunction<? super K, ? super V, ? extends U> transformer, BiFunction<? super U, ? super U, ? extends U> reducer) Returns the result of accumulating the given transformation of all (key, value) pairs using the given reducer to combine values, or null if none. <U> U reduceEntries(long parallelismThreshold, Function<Entry<K, V>, ? extends U> transformer, BiFunction<? super U, ? super U, ? extends U> reducer) Returns the result of accumulating the given transformation of all entries using the given reducer to combine values, or null if none. Entry<K, V> reduceEntries(long parallelismThreshold, BiFunction<Entry<K, V>, Entry<K, V>, ? extends Entry<K, V>> reducer) Returns the result of accumulating all entries using the given reducer to combine values, or null if none. double reduceEntriesToDouble(long parallelismThreshold, ToDoubleFunction<Entry<K, V>> transformer, double basis, DoubleBinaryOperator reducer) Returns the result of accumulating the given transformation of all entries using the given reducer to combine values, and the given basis as an identity value. int reduceEntriesToInt(long parallelismThreshold, ToIntFunction<Entry<K, V>> transformer, int basis, IntBinaryOperator reducer) Returns the result of accumulating the given transformation of all entries using the given reducer to combine values, and the given basis as an identity value. long reduceEntriesToLong(long parallelismThreshold, ToLongFunction<Entry<K, V>> transformer, long basis, LongBinaryOperator reducer) Returns the result of accumulating the given transformation of all entries using the given reducer to combine values, and the given basis as an identity value. <U> U reduceKeys(long parallelismThreshold, Function<? super K, ? extends U> transformer, BiFunction<? super U, ? super U, ? extends U> reducer) Returns the result of accumulating the given transformation of all keys using the given reducer to combine values, or null if none. K reduceKeys(long parallelismThreshold, BiFunction<? super K, ? super K, ? extends K> reducer) Returns the result of accumulating all keys using the given reducer to combine values, or null if none. double reduceKeysToDouble(long parallelismThreshold, ToDoubleFunction<? super K> transformer, double basis, DoubleBinaryOperator reducer) Returns the result of accumulating the given transformation of all keys using the given reducer to combine values, and the given basis as an identity value. int reduceKeysToInt(long parallelismThreshold, ToIntFunction<? super K> transformer, int basis, IntBinaryOperator reducer) Returns the result of accumulating the given transformation of all keys using the given reducer to combine values, and the given basis as an identity value. long reduceKeysToLong(long parallelismThreshold, ToLongFunction<? super K> transformer, long basis, LongBinaryOperator reducer) Returns the result of accumulating the given transformation of all keys using the given reducer to combine values, and the given basis as an identity value. double reduceToDouble(long parallelismThreshold, ToDoubleBiFunction<? super K, ? super V> transformer, double basis, DoubleBinaryOperator reducer) Returns the result of accumulating the given transformation of all (key, value) pairs using the given reducer to combine values, and the given basis as an identity value. int reduceToInt(long parallelismThreshold, ToIntBiFunction<? super K, ? super V> transformer, int basis, IntBinaryOperator reducer) Returns the result of accumulating the given transformation of all (key, value) pairs using the given reducer to combine values, and the given basis as an identity value. long reduceToLong(long parallelismThreshold, ToLongBiFunction<? super K, ? super V> transformer, long basis, LongBinaryOperator reducer) Returns the result of accumulating the given transformation of all (key, value) pairs using the given reducer to combine values, and the given basis as an identity value. <U> U reduceValues(long parallelismThreshold, Function<? super V, ? extends U> transformer, BiFunction<? super U, ? super U, ? extends U> reducer) Returns the result of accumulating the given transformation of all values using the given reducer to combine values, or null if none. V reduceValues(long parallelismThreshold, BiFunction<? super V, ? super V, ? extends V> reducer) Returns the result of accumulating all values using the given reducer to combine values, or null if none. double reduceValuesToDouble(long parallelismThreshold, ToDoubleFunction<? super V> transformer, double basis, DoubleBinaryOperator reducer) Returns the result of accumulating the given transformation of all values using the given reducer to combine values, and the given basis as an identity value. int reduceValuesToInt(long parallelismThreshold, ToIntFunction<? super V> transformer, int basis, IntBinaryOperator reducer) Returns the result of accumulating the given transformation of all values using the given reducer to combine values, and the given basis as an identity value. long reduceValuesToLong(long parallelismThreshold, ToLongFunction<? super V> transformer, long basis, LongBinaryOperator reducer) Returns the result of accumulating the given transformation of all values using the given reducer to combine values, and the given basis as an identity value. V remove(Object key) Removes the key (and its corresponding value) from this map. boolean remove(Object key, Object value) Removes the entry for a key only if currently mapped to a given value. boolean replace(K key, V oldValue, V newValue) Replaces the entry for a key only if currently mapped to a given value. V replace(K key, V value) Replaces the entry for a key only if currently mapped to some value. void replaceAll(BiFunction<? super K, ? super V, ? extends V> function) Replaces each entry's value with the result of invoking the given function on that entry until all entries have been processed or the function throws an exception (optional operation). <U> U search(long parallelismThreshold, BiFunction<? super K, ? super V, ? extends U> searchFunction) Returns a non-null result from applying the given search function on each (key, value), or null if none. <U> U searchEntries(long parallelismThreshold, Function<Entry<K, V>, ? extends U> searchFunction) Returns a non-null result from applying the given search function on each entry, or null if none. <U> U searchKeys(long parallelismThreshold, Function<? super K, ? extends U> searchFunction) Returns a non-null result from applying the given search function on each key, or null if none. <U> U searchValues(long parallelismThreshold, Function<? super V, ? extends U> searchFunction) Returns a non-null result from applying the given search function on each value, or null if none. int size() Returns the number of key-value mappings in this map. String toString() Returns a string representation of this map. Collection<V> values() Returns a Collection view of the values contained in this map. Inherited methods From class java.util.AbstractMap void clear() Removes all of the mappings from this map (optional operation). Object clone() Returns a shallow copy of this AbstractMap instance: the keys and values themselves are not cloned. boolean containsKey(Object key) Returns true if this map contains a mapping for the specified key. boolean containsValue(Object value) Returns true if this map maps one or more keys to the specified value. abstract Set<Entry<K, V>> entrySet() Returns a Set view of the mappings contained in this map. boolean equals(Object o) Compares the specified object with this map for equality. V get(Object key) Returns the value to which the specified key is mapped, or null if this map contains no mapping for the key. int hashCode() Returns the hash code value for this map. boolean isEmpty() Returns true if this map contains no key-value mappings. Set<K> keySet() Returns a Set view of the keys contained in this map. V put(K key, V value) Associates the specified value with the specified key in this map (optional operation). void putAll(Map<? extends K, ? extends V> m) Copies all of the mappings from the specified map to this map (optional operation). V remove(Object key) Removes the mapping for a key from this map if it is present (optional operation). int size() Returns the number of key-value mappings in this map. String toString() Returns a string representation of this map. Collection<V> values() Returns a Collection view of the values contained in this map. From class java.lang.Object Object clone() Creates and returns a copy of this object. boolean equals(Object obj) Indicates whether some other object is \"equal to\" this one. void finalize() Called by the garbage collector on an object when garbage collection determines that there are no more references to the object. final Class<?> getClass() Returns the runtime class of this Object. int hashCode() Returns a hash code value for the object. final void notify() Wakes up a single thread that is waiting on this object's monitor. final void notifyAll() Wakes up all threads that are waiting on this object's monitor. String toString() Returns a string representation of the object. final void wait(long timeoutMillis, int nanos) Causes the current thread to wait until it is awakened, typically by being notified or interrupted, or until a certain amount of real time has elapsed. final void wait(long timeoutMillis) Causes the current thread to wait until it is awakened, typically by being notified or interrupted, or until a certain amount of real time has elapsed. final void wait() Causes the current thread to wait until it is awakened, typically by being notified or interrupted. From interface java.util.Map abstract void clear() Removes all of the mappings from this map (optional operation). default V compute(K key, BiFunction<? super K, ? super V, ? extends V> remappingFunction) Attempts to compute a mapping for the specified key and its current mapped value, or null if there is no current mapping (optional operation). default V computeIfAbsent(K key, Function<? super K, ? extends V> mappingFunction) If the specified key is not already associated with a value (or is mapped to null), attempts to compute its value using the given mapping function and enters it into this map unless null (optional operation). default V computeIfPresent(K key, BiFunction<? super K, ? super V, ? extends V> remappingFunction) If the value for the specified key is present and non-null, attempts to compute a new mapping given the key and its current mapped value (optional operation). abstract boolean containsKey(Object key) Returns true if this map contains a mapping for the specified key. abstract boolean containsValue(Object value) Returns true if this map maps one or more keys to the specified value. static <K, V> Map<K, V> copyOf(Map<? extends K, ? extends V> map) Returns an unmodifiable Map containing the entries of the given Map. static <K, V> Entry<K, V> entry(K k, V v) Returns an unmodifiable Entry containing the given key and value. abstract Set<Entry<K, V>> entrySet() Returns a Set view of the mappings contained in this map. abstract boolean equals(Object o) Compares the specified object with this map for equality. default void forEach(BiConsumer<? super K, ? super V> action) Performs the given action for each entry in this map until all entries have been processed or the action throws an exception. abstract V get(Object key) Returns the value to which the specified key is mapped, or null if this map contains no mapping for the key. default V getOrDefault(Object key, V defaultValue) Returns the value to which the specified key is mapped, or defaultValue if this map contains no mapping for the key. abstract int hashCode() Returns the hash code value for this map. abstract boolean isEmpty() Returns true if this map contains no key-value mappings. abstract Set<K> keySet() Returns a Set view of the keys contained in this map. default V merge(K key, V value, BiFunction<? super V, ? super V, ? extends V> remappingFunction) If the specified key is not already associated with a value or is associated with null, associates it with the given non-null value (optional operation). static <K, V> Map<K, V> of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5) Returns an unmodifiable map containing five mappings. static <K, V> Map<K, V> of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4) Returns an unmodifiable map containing four mappings. static <K, V> Map<K, V> of(K k1, V v1) Returns an unmodifiable map containing a single mapping. static <K, V> Map<K, V> of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7, K k8, V v8) Returns an unmodifiable map containing eight mappings. static <K, V> Map<K, V> of(K k1, V v1, K k2, V v2) Returns an unmodifiable map containing two mappings. static <K, V> Map<K, V> of(K k1, V v1, K k2, V v2, K k3, V v3) Returns an unmodifiable map containing three mappings. static <K, V> Map<K, V> of() Returns an unmodifiable map containing zero mappings. static <K, V> Map<K, V> of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7, K k8, V v8, K k9, V v9) Returns an unmodifiable map containing nine mappings. static <K, V> Map<K, V> of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6) Returns an unmodifiable map containing six mappings. static <K, V> Map<K, V> of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7) Returns an unmodifiable map containing seven mappings. static <K, V> Map<K, V> of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7, K k8, V v8, K k9, V v9, K k10, V v10) Returns an unmodifiable map containing ten mappings. static <K, V> Map<K, V> ofEntries(Entry...<? extends K, ? extends V> entries) Returns an unmodifiable map containing keys and values extracted from the given entries. abstract V put(K key, V value) Associates the specified value with the specified key in this map (optional operation). abstract void putAll(Map<? extends K, ? extends V> m) Copies all of the mappings from the specified map to this map (optional operation). default V putIfAbsent(K key, V value) If the specified key is not already associated with a value (or is mapped to null) associates it with the given value and returns null, else returns the current value (optional operation). default boolean remove(Object key, Object value) Removes the entry for the specified key only if it is currently mapped to the specified value (optional operation). abstract V remove(Object key) Removes the mapping for a key from this map if it is present (optional operation). default boolean replace(K key, V oldValue, V newValue) Replaces the entry for the specified key only if currently mapped to the specified value (optional operation). default V replace(K key, V value) Replaces the entry for the specified key only if it is currently mapped to some value (optional operation). default void replaceAll(BiFunction<? super K, ? super V, ? extends V> function) Replaces each entry's value with the result of invoking the given function on that entry until all entries have been processed or the function throws an exception (optional operation). abstract int size() Returns the number of key-value mappings in this map. abstract Collection<V> values() Returns a Collection view of the values contained in this map. From interface java.util.concurrent.ConcurrentMap default V compute(K key, BiFunction<? super K, ? super V, ? extends V> remappingFunction) Attempts to compute a mapping for the specified key and its current mapped value, or null if there is no current mapping (optional operation). default V computeIfAbsent(K key, Function<? super K, ? extends V> mappingFunction) If the specified key is not already associated with a value (or is mapped to null), attempts to compute its value using the given mapping function and enters it into this map unless null (optional operation). default V computeIfPresent(K key, BiFunction<? super K, ? super V, ? extends V> remappingFunction) If the value for the specified key is present and non-null, attempts to compute a new mapping given the key and its current mapped value (optional operation). default void forEach(BiConsumer<? super K, ? super V> action) Performs the given action for each entry in this map until all entries have been processed or the action throws an exception. default V getOrDefault(Object key, V defaultValue) Returns the value to which the specified key is mapped, or defaultValue if this map contains no mapping for the key. default V merge(K key, V value, BiFunction<? super V, ? super V, ? extends V> remappingFunction) If the specified key is not already associated with a value or is associated with null, associates it with the given non-null value (optional operation). abstract V putIfAbsent(K key, V value) If the specified key is not already associated with a value, associates it with the given value. abstract boolean remove(Object key, Object value) Removes the entry for a key only if currently mapped to a given value. abstract boolean replace(K key, V oldValue, V newValue) Replaces the entry for a key only if currently mapped to a given value. abstract V replace(K key, V value) Replaces the entry for a key only if currently mapped to some value. default void replaceAll(BiFunction<? super K, ? super V, ? extends V> function) Replaces each entry's value with the result of invoking the given function on that entry until all entries have been processed or the function throws an exception (optional operation). Public constructors ConcurrentHashMap Added in API level 1 public ConcurrentHashMap () Creates a new, empty map with the default initial table size (16). ConcurrentHashMap Added in API level 1 public ConcurrentHashMap (int initialCapacity) Creates a new, empty map with an initial table size accommodating the specified number of elements without the need to dynamically resize. Parameters initialCapacity int: The implementation performs internal sizing to accommodate this many elements. Throws IllegalArgumentException if the initial capacity of elements is negative ConcurrentHashMap Added in API level 9 public ConcurrentHashMap (int initialCapacity, float loadFactor) Creates a new, empty map with an initial table size based on the given number of elements (initialCapacity) and initial table density (loadFactor). Parameters initialCapacity int: the initial capacity. The implementation performs internal sizing to accommodate this many elements, given the specified load factor. loadFactor float: the load factor (table density) for establishing the initial table size Throws IllegalArgumentException if the initial capacity of elements is negative or the load factor is nonpositive ConcurrentHashMap Added in API level 1 public ConcurrentHashMap (int initialCapacity, float loadFactor, int concurrencyLevel) Creates a new, empty map with an initial table size based on the given number of elements (initialCapacity), initial table density (loadFactor), and number of concurrently updating threads (concurrencyLevel). Parameters initialCapacity int: the initial capacity. The implementation performs internal sizing to accommodate this many elements, given the specified load factor. loadFactor float: the load factor (table density) for establishing the initial table size concurrencyLevel int: the estimated number of concurrently updating threads. The implementation may use this value as a sizing hint. Throws IllegalArgumentException if the initial capacity is negative or the load factor or concurrencyLevel are nonpositive ConcurrentHashMap Added in API level 1 public ConcurrentHashMap (Map<? extends K, ? extends V> m) Creates a new map with the same mappings as the given map. Parameters m Map: the map Public methods clear Added in API level 1 public void clear () Removes all of the mappings from this map. compute Added in API level 24 public V compute (K key, BiFunction<? super K, ? super V, ? extends V> remappingFunction) Attempts to compute a mapping for the specified key and its current mapped value (or null if there is no current mapping). The entire method invocation is performed atomically. The supplied function is invoked exactly once per invocation of this method. Some attempted update operations on this map by other threads may be blocked while computation is in progress, so the computation should be short and simple. The remapping function must not modify this map during computation. Parameters key K: key with which the specified value is to be associated remappingFunction BiFunction: the function to compute a value Returns V the new value associated with the specified key, or null if none Throws IllegalStateException if the computation detectably attempts a recursive update to this map that would otherwise never complete NullPointerException if the specified key or remappingFunction is null RuntimeException or Error if the remappingFunction does so, in which case the mapping is unchanged computeIfAbsent Added in API level 24 public V computeIfAbsent (K key, Function<? super K, ? extends V> mappingFunction) If the specified key is not already associated with a value, attempts to compute its value using the given mapping function and enters it into this map unless null. The entire method invocation is performed atomically. The supplied function is invoked exactly once per invocation of this method if the key is absent, else not at all. Some attempted update operations on this map by other threads may be blocked while computation is in progress, so the computation should be short and simple. The mapping function must not modify this map during computation. Parameters key K: key with which the specified value is to be associated mappingFunction Function: the function to compute a value Returns V the current (existing or computed) value associated with the specified key, or null if the computed value is null Throws IllegalStateException if the computation detectably attempts a recursive update to this map that would otherwise never complete NullPointerException if the specified key or mappingFunction is null RuntimeException or Error if the mappingFunction does so, in which case the mapping is left unestablished computeIfPresent Added in API level 24 public V computeIfPresent (K key, BiFunction<? super K, ? super V, ? extends V> remappingFunction) If the value for the specified key is present, attempts to compute a new mapping given the key and its current mapped value. The entire method invocation is performed atomically. The supplied function is invoked exactly once per invocation of this method if the key is present, else not at all. Some attempted update operations on this map by other threads may be blocked while computation is in progress, so the computation should be short and simple. The remapping function must not modify this map during computation. Parameters key K: key with which a value may be associated remappingFunction BiFunction: the function to compute a value Returns V the new value associated with the specified key, or null if none Throws IllegalStateException if the computation detectably attempts a recursive update to this map that would otherwise never complete NullPointerException if the specified key or remappingFunction is null RuntimeException or Error if the remappingFunction does so, in which case the mapping is unchanged contains Added in API level 1 public boolean contains (Object value) Tests if some key maps into the specified value in this table. Note that this method is identical in functionality to containsValue(Object), and exists solely to ensure full compatibility with class Hashtable, which supported this method prior to introduction of the Java Collections Framework. Parameters value Object: a value to search for Returns boolean true if and only if some key maps to the value argument in this table as determined by the equals method; false otherwise Throws NullPointerException if the specified value is null containsKey Added in API level 1 public boolean containsKey (Object key) Tests if the specified object is a key in this table. Parameters key Object: possible key Returns boolean true if and only if the specified object is a key in this table, as determined by the equals method; false otherwise Throws NullPointerException if the specified key is null containsValue Added in API level 1 public boolean containsValue (Object value) Returns true if this map maps one or more keys to the specified value. Note: This method may require a full traversal of the map, and is much slower than method containsKey. Parameters value Object: value whose presence in this map is to be tested Returns boolean true if this map maps one or more keys to the specified value Throws NullPointerException if the specified value is null elements Added in API level 1 public Enumeration<V> elements () Returns an enumeration of the values in this table. Returns Enumeration<V> an enumeration of the values in this table See also: values() entrySet Added in API level 1 public Set<Entry<K, V>> entrySet () Returns a Set view of the mappings contained in this map. The set is backed by the map, so changes to the map are reflected in the set, and vice-versa. The set supports element removal, which removes the corresponding mapping from the map, via the Iterator.remove, Set.remove, removeAll, retainAll, and clear operations. The view's iterators and spliterators are weakly consistent. The view's spliterator reports Spliterator.CONCURRENT, Spliterator.DISTINCT, and Spliterator.NONNULL. Returns Set<Entry<K, V>> the set view equals Added in API level 1 public boolean equals (Object o) Compares the specified object with this map for equality. Returns true if the given object is a map with the same mappings as this map. This operation may return misleading results if either map is concurrently modified during execution of this method. Parameters o Object: object to be compared for equality with this map Returns boolean true if the specified object is equal to this map forEach Added in API level 24 public void forEach (long parallelismThreshold, BiFunction<? super K, ? super V, ? extends U> transformer, Consumer<? super U> action) Performs the given action for each non-null transformation of each (key, value). Parameters parallelismThreshold long: the (estimated) number of elements needed for this operation to be executed in parallel transformer BiFunction: a function returning the transformation for an element, or null if there is no transformation (in which case the action is not applied) action Consumer: the action forEach Added in API level 24 public void forEach (BiConsumer<? super K, ? super V> action) Performs the given action for each entry in this map until all entries have been processed or the action throws an exception. Unless otherwise specified by the implementing class, actions are performed in the order of entry set iteration (if an iteration order is specified.) Exceptions thrown by the action are relayed to the caller. Parameters action BiConsumer: The action to be performed for each entry forEach Added in API level 24 public void forEach (long parallelismThreshold, BiConsumer<? super K, ? super V> action) Performs the given action for each (key, value). Parameters parallelismThreshold long: the (estimated) number of elements needed for this operation to be executed in parallel action BiConsumer: the action forEachEntry Added in API level 24 public void forEachEntry (long parallelismThreshold, Function<Entry<K, V>, ? extends U> transformer, Consumer<? super U> action) Performs the given action for each non-null transformation of each entry. Parameters parallelismThreshold long: the (estimated) number of elements needed for this operation to be executed in parallel transformer Function: a function returning the transformation for an element, or null if there is no transformation (in which case the action is not applied) action Consumer: the action forEachEntry Added in API level 24 public void forEachEntry (long parallelismThreshold, Consumer<? super Entry<K, V>> action) Performs the given action for each entry. Parameters parallelismThreshold long: the (estimated) number of elements needed for this operation to be executed in parallel action Consumer: the action forEachKey Added in API level 24 public void forEachKey (long parallelismThreshold, Function<? super K, ? extends U> transformer, Consumer<? super U> action) Performs the given action for each non-null transformation of each key. Parameters parallelismThreshold long: the (estimated) number of elements needed for this operation to be executed in parallel transformer Function: a function returning the transformation for an element, or null if there is no transformation (in which case the action is not applied) action Consumer: the action forEachKey Added in API level 24 public void forEachKey (long parallelismThreshold, Consumer<? super K> action) Performs the given action for each key. Parameters parallelismThreshold long: the (estimated) number of elements needed for this operation to be executed in parallel action Consumer: the action forEachValue Added in API level 24 public void forEachValue (long parallelismThreshold, Function<? super V, ? extends U> transformer, Consumer<? super U> action) Performs the given action for each non-null transformation of each value. Parameters parallelismThreshold long: the (estimated) number of elements needed for this operation to be executed in parallel transformer Function: a function returning the transformation for an element, or null if there is no transformation (in which case the action is not applied) action Consumer: the action forEachValue Added in API level 24 public void forEachValue (long parallelismThreshold, Consumer<? super V> action) Performs the given action for each value. Parameters parallelismThreshold long: the (estimated) number of elements needed for this operation to be executed in parallel action Consumer: the action get Added in API level 1 public V get (Object key) Returns the value to which the specified key is mapped, or null if this map contains no mapping for the key. More formally, if this map contains a mapping from a key k to a value v such that key.equals(k), then this method returns v; otherwise it returns null. (There can be at most one such mapping.) Parameters key Object: the key whose associated value is to be returned Returns V the value to which the specified key is mapped, or null if this map contains no mapping for the key Throws NullPointerException if the specified key is null getOrDefault Added in API level 24 public V getOrDefault (Object key, V defaultValue) Returns the value to which the specified key is mapped, or the given default value if this map contains no mapping for the key. Parameters key Object: the key whose associated value is to be returned defaultValue V: the value to return if this map contains no mapping for the given key Returns V the mapping for the key, if present; else the default value Throws NullPointerException if the specified key is null hashCode Added in API level 1 public int hashCode () Returns the hash code value for this Map, i.e., the sum of, for each key-value pair in the map, key.hashCode() ^ value.hashCode(). Returns int the hash code value for this map isEmpty Added in API level 1 public boolean isEmpty () Returns true if this map contains no key-value mappings. Returns boolean true if this map contains no key-value mappings keySet Added in API level 1 public Set<K> keySet () Returns a Set view of the keys contained in this map. The set is backed by the map, so changes to the map are reflected in the set, and vice-versa. The set supports element removal, which removes the corresponding mapping from this map, via the Iterator.remove, Set.remove, removeAll, retainAll, and clear operations. It does not support the add or addAll operations. The set returned by this method is guaranteed to an instance of KeySetView. The view's iterators and spliterators are weakly consistent. The view's spliterator reports Spliterator.CONCURRENT, Spliterator.DISTINCT, and Spliterator.NONNULL. Returns Set<K> the set view keySet Added in API level 24 public KeySetView<K, V> keySet (V mappedValue) Returns a Set view of the keys in this map, using the given common mapped value for any additions (i.e., Collection.add and Collection.addAll(Collection)). This is of course only appropriate if it is acceptable to use the same value for all additions from this view. Parameters mappedValue V: the mapped value to use for any additions Returns KeySetView<K, V> the set view Throws NullPointerException if the mappedValue is null keys Added in API level 1 public Enumeration<K> keys () Returns an enumeration of the keys in this table. Returns Enumeration<K> an enumeration of the keys in this table See also: keySet() mappingCount Added in API level 24 public long mappingCount () Returns the number of mappings. This method should be used instead of size() because a ConcurrentHashMap may contain more mappings than can be represented as an int. The value returned is an estimate; the actual count may differ if there are concurrent insertions or removals. Returns long the number of mappings merge Added in API level 24 public V merge (K key, V value, BiFunction<? super V, ? super V, ? extends V> remappingFunction) If the specified key is not already associated with a (non-null) value, associates it with the given value. Otherwise, replaces the value with the results of the given remapping function, or removes if null. The entire method invocation is performed atomically. Some attempted update operations on this map by other threads may be blocked while computation is in progress, so the computation should be short and simple, and must not attempt to update any other mappings of this Map. Parameters key K: key with which the specified value is to be associated value V: the value to use if absent remappingFunction BiFunction: the function to recompute a value if present Returns V the new value associated with the specified key, or null if none Throws NullPointerException if the specified key or the remappingFunction is null RuntimeException or Error if the remappingFunction does so, in which case the mapping is unchanged newKeySet Added in API level 24 public static KeySetView<K, Boolean> newKeySet () Creates a new Set backed by a ConcurrentHashMap from the given type to Boolean.TRUE. Returns KeySetView<K, Boolean> the new set newKeySet Added in API level 24 public static KeySetView<K, Boolean> newKeySet (int initialCapacity) Creates a new Set backed by a ConcurrentHashMap from the given type to Boolean.TRUE. Parameters initialCapacity int: The implementation performs internal sizing to accommodate this many elements. Returns KeySetView<K, Boolean> the new set Throws IllegalArgumentException if the initial capacity of elements is negative put Added in API level 1 public V put (K key, V value) Maps the specified key to the specified value in this table. Neither the key nor the value can be null. The value can be retrieved by calling the get method with a key that is equal to the original key. Parameters key K: key with which the specified value is to be associated value V: value to be associated with the specified key Returns V the previous value associated with key, or null if there was no mapping for key Throws NullPointerException if the specified key or value is null putAll Added in API level 1 public void putAll (Map<? extends K, ? extends V> m) Copies all of the mappings from the specified map to this one. These mappings replace any mappings that this map had for any of the keys currently in the specified map. Parameters m Map: mappings to be stored in this map putIfAbsent Added in API level 1 public V putIfAbsent (K key, V value) If the specified key is not already associated with a value, associates it with the given value. This is equivalent to, for this map: if (!map.containsKey(key)) return map.put(key, value); else return map.get(key); except that the action is performed atomically. Parameters key K: key with which the specified value is to be associated value V: value to be associated with the specified key Returns V the previous value associated with the specified key, or null if there was no mapping for the key Throws NullPointerException if the specified key or value is null reduce Added in API level 24 public U reduce (long parallelismThreshold, BiFunction<? super K, ? super V, ? extends U> transformer, BiFunction<? super U, ? super U, ? extends U> reducer) Returns the result of accumulating the given transformation of all (key, value) pairs using the given reducer to combine values, or null if none. Parameters parallelismThreshold long: the (estimated) number of elements needed for this operation to be executed in parallel transformer BiFunction: a function returning the transformation for an element, or null if there is no transformation (in which case it is not combined) reducer BiFunction: a commutative associative combining function Returns U the result of accumulating the given transformation of all (key, value) pairs reduceEntries Added in API level 24 public U reduceEntries (long parallelismThreshold, Function<Entry<K, V>, ? extends U> transformer, BiFunction<? super U, ? super U, ? extends U> reducer) Returns the result of accumulating the given transformation of all entries using the given reducer to combine values, or null if none. Parameters parallelismThreshold long: the (estimated) number of elements needed for this operation to be executed in parallel transformer Function: a function returning the transformation for an element, or null if there is no transformation (in which case it is not combined) reducer BiFunction: a commutative associative combining function Returns U the result of accumulating the given transformation of all entries reduceEntries Added in API level 24 public Entry<K, V> reduceEntries (long parallelismThreshold, BiFunction<Entry<K, V>, Entry<K, V>, ? extends Entry<K, V>> reducer) Returns the result of accumulating all entries using the given reducer to combine values, or null if none. Parameters parallelismThreshold long: the (estimated) number of elements needed for this operation to be executed in parallel reducer BiFunction: a commutative associative combining function Returns Entry<K, V> the result of accumulating all entries reduceEntriesToDouble Added in API level 24 public double reduceEntriesToDouble (long parallelismThreshold, ToDoubleFunction<Entry<K, V>> transformer, double basis, DoubleBinaryOperator reducer) Returns the result of accumulating the given transformation of all entries using the given reducer to combine values, and the given basis as an identity value. Parameters parallelismThreshold long: the (estimated) number of elements needed for this operation to be executed in parallel transformer ToDoubleFunction: a function returning the transformation for an element basis double: the identity (initial default value) for the reduction reducer DoubleBinaryOperator: a commutative associative combining function Returns double the result of accumulating the given transformation of all entries reduceEntriesToInt Added in API level 24 public int reduceEntriesToInt (long parallelismThreshold, ToIntFunction<Entry<K, V>> transformer, int basis, IntBinaryOperator reducer) Returns the result of accumulating the given transformation of all entries using the given reducer to combine values, and the given basis as an identity value. Parameters parallelismThreshold long: the (estimated) number of elements needed for this operation to be executed in parallel transformer ToIntFunction: a function returning the transformation for an element basis int: the identity (initial default value) for the reduction reducer IntBinaryOperator: a commutative associative combining function Returns int the result of accumulating the given transformation of all entries reduceEntriesToLong Added in API level 24 public long reduceEntriesToLong (long parallelismThreshold, ToLongFunction<Entry<K, V>> transformer, long basis, LongBinaryOperator reducer) Returns the result of accumulating the given transformation of all entries using the given reducer to combine values, and the given basis as an identity value. Parameters parallelismThreshold long: the (estimated) number of elements needed for this operation to be executed in parallel transformer ToLongFunction: a function returning the transformation for an element basis long: the identity (initial default value) for the reduction reducer LongBinaryOperator: a commutative associative combining function Returns long the result of accumulating the given transformation of all entries reduceKeys Added in API level 24 public U reduceKeys (long parallelismThreshold, Function<? super K, ? extends U> transformer, BiFunction<? super U, ? super U, ? extends U> reducer) Returns the result of accumulating the given transformation of all keys using the given reducer to combine values, or null if none. Parameters parallelismThreshold long: the (estimated) number of elements needed for this operation to be executed in parallel transformer Function: a function returning the transformation for an element, or null if there is no transformation (in which case it is not combined) reducer BiFunction: a commutative associative combining function Returns U the result of accumulating the given transformation of all keys reduceKeys Added in API level 24 public K reduceKeys (long parallelismThreshold, BiFunction<? super K, ? super K, ? extends K> reducer) Returns the result of accumulating all keys using the given reducer to combine values, or null if none. Parameters parallelismThreshold long: the (estimated) number of elements needed for this operation to be executed in parallel reducer BiFunction: a commutative associative combining function Returns K the result of accumulating all keys using the given reducer to combine values, or null if none reduceKeysToDouble Added in API level 24 public double reduceKeysToDouble (long parallelismThreshold, ToDoubleFunction<? super K> transformer, double basis, DoubleBinaryOperator reducer) Returns the result of accumulating the given transformation of all keys using the given reducer to combine values, and the given basis as an identity value. Parameters parallelismThreshold long: the (estimated) number of elements needed for this operation to be executed in parallel transformer ToDoubleFunction: a function returning the transformation for an element basis double: the identity (initial default value) for the reduction reducer DoubleBinaryOperator: a commutative associative combining function Returns double the result of accumulating the given transformation of all keys reduceKeysToInt Added in API level 24 public int reduceKeysToInt (long parallelismThreshold, ToIntFunction<? super K> transformer, int basis, IntBinaryOperator reducer) Returns the result of accumulating the given transformation of all keys using the given reducer to combine values, and the given basis as an identity value. Parameters parallelismThreshold long: the (estimated) number of elements needed for this operation to be executed in parallel transformer ToIntFunction: a function returning the transformation for an element basis int: the identity (initial default value) for the reduction reducer IntBinaryOperator: a commutative associative combining function Returns int the result of accumulating the given transformation of all keys reduceKeysToLong Added in API level 24 public long reduceKeysToLong (long parallelismThreshold, ToLongFunction<? super K> transformer, long basis, LongBinaryOperator reducer) Returns the result of accumulating the given transformation of all keys using the given reducer to combine values, and the given basis as an identity value. Parameters parallelismThreshold long: the (estimated) number of elements needed for this operation to be executed in parallel transformer ToLongFunction: a function returning the transformation for an element basis long: the identity (initial default value) for the reduction reducer LongBinaryOperator: a commutative associative combining function Returns long the result of accumulating the given transformation of all keys reduceToDouble Added in API level 24 public double reduceToDouble (long parallelismThreshold, ToDoubleBiFunction<? super K, ? super V> transformer, double basis, DoubleBinaryOperator reducer) Returns the result of accumulating the given transformation of all (key, value) pairs using the given reducer to combine values, and the given basis as an identity value. Parameters parallelismThreshold long: the (estimated) number of elements needed for this operation to be executed in parallel transformer ToDoubleBiFunction: a function returning the transformation for an element basis double: the identity (initial default value) for the reduction reducer DoubleBinaryOperator: a commutative associative combining function Returns double the result of accumulating the given transformation of all (key, value) pairs reduceToInt Added in API level 24 public int reduceToInt (long parallelismThreshold, ToIntBiFunction<? super K, ? super V> transformer, int basis, IntBinaryOperator reducer) Returns the result of accumulating the given transformation of all (key, value) pairs using the given reducer to combine values, and the given basis as an identity value. Parameters parallelismThreshold long: the (estimated) number of elements needed for this operation to be executed in parallel transformer ToIntBiFunction: a function returning the transformation for an element basis int: the identity (initial default value) for the reduction reducer IntBinaryOperator: a commutative associative combining function Returns int the result of accumulating the given transformation of all (key, value) pairs reduceToLong Added in API level 24 public long reduceToLong (long parallelismThreshold, ToLongBiFunction<? super K, ? super V> transformer, long basis, LongBinaryOperator reducer) Returns the result of accumulating the given transformation of all (key, value) pairs using the given reducer to combine values, and the given basis as an identity value. Parameters parallelismThreshold long: the (estimated) number of elements needed for this operation to be executed in parallel transformer ToLongBiFunction: a function returning the transformation for an element basis long: the identity (initial default value) for the reduction reducer LongBinaryOperator: a commutative associative combining function Returns long the result of accumulating the given transformation of all (key, value) pairs reduceValues Added in API level 24 public U reduceValues (long parallelismThreshold, Function<? super V, ? extends U> transformer, BiFunction<? super U, ? super U, ? extends U> reducer) Returns the result of accumulating the given transformation of all values using the given reducer to combine values, or null if none. Parameters parallelismThreshold long: the (estimated) number of elements needed for this operation to be executed in parallel transformer Function: a function returning the transformation for an element, or null if there is no transformation (in which case it is not combined) reducer BiFunction: a commutative associative combining function Returns U the result of accumulating the given transformation of all values reduceValues Added in API level 24 public V reduceValues (long parallelismThreshold, BiFunction<? super V, ? super V, ? extends V> reducer) Returns the result of accumulating all values using the given reducer to combine values, or null if none. Parameters parallelismThreshold long: the (estimated) number of elements needed for this operation to be executed in parallel reducer BiFunction: a commutative associative combining function Returns V the result of accumulating all values reduceValuesToDouble Added in API level 24 public double reduceValuesToDouble (long parallelismThreshold, ToDoubleFunction<? super V> transformer, double basis, DoubleBinaryOperator reducer) Returns the result of accumulating the given transformation of all values using the given reducer to combine values, and the given basis as an identity value. Parameters parallelismThreshold long: the (estimated) number of elements needed for this operation to be executed in parallel transformer ToDoubleFunction: a function returning the transformation for an element basis double: the identity (initial default value) for the reduction reducer DoubleBinaryOperator: a commutative associative combining function Returns double the result of accumulating the given transformation of all values reduceValuesToInt Added in API level 24 public int reduceValuesToInt (long parallelismThreshold, ToIntFunction<? super V> transformer, int basis, IntBinaryOperator reducer) Returns the result of accumulating the given transformation of all values using the given reducer to combine values, and the given basis as an identity value. Parameters parallelismThreshold long: the (estimated) number of elements needed for this operation to be executed in parallel transformer ToIntFunction: a function returning the transformation for an element basis int: the identity (initial default value) for the reduction reducer IntBinaryOperator: a commutative associative combining function Returns int the result of accumulating the given transformation of all values reduceValuesToLong Added in API level 24 public long reduceValuesToLong (long parallelismThreshold, ToLongFunction<? super V> transformer, long basis, LongBinaryOperator reducer) Returns the result of accumulating the given transformation of all values using the given reducer to combine values, and the given basis as an identity value. Parameters parallelismThreshold long: the (estimated) number of elements needed for this operation to be executed in parallel transformer ToLongFunction: a function returning the transformation for an element basis long: the identity (initial default value) for the reduction reducer LongBinaryOperator: a commutative associative combining function Returns long the result of accumulating the given transformation of all values remove Added in API level 1 public V remove (Object key) Removes the key (and its corresponding value) from this map. This method does nothing if the key is not in the map. Parameters key Object: the key that needs to be removed Returns V the previous value associated with key, or null if there was no mapping for key Throws NullPointerException if the specified key is null remove Added in API level 1 public boolean remove (Object key, Object value) Removes the entry for a key only if currently mapped to a given value. This is equivalent to, for this map: if (map.containsKey(key) && Objects.equals(map.get(key), value)) { map.remove(key); return true; } else { return false; } except that the action is performed atomically. Parameters key Object: key with which the specified value is associated value Object: value expected to be associated with the specified key Returns boolean true if the value was removed Throws NullPointerException if the specified key is null replace Added in API level 1 public boolean replace (K key, V oldValue, V newValue) Replaces the entry for a key only if currently mapped to a given value. This is equivalent to, for this map: if (map.containsKey(key) && Objects.equals(map.get(key), oldValue)) { map.put(key, newValue); return true; } else { return false; } except that the action is performed atomically. Parameters key K: key with which the specified value is associated oldValue V: value expected to be associated with the specified key newValue V: value to be associated with the specified key Returns boolean true if the value was replaced Throws NullPointerException if any of the arguments are null replace Added in API level 1 public V replace (K key, V value) Replaces the entry for a key only if currently mapped to some value. This is equivalent to, for this map: if (map.containsKey(key)) return map.put(key, value); else return null; except that the action is performed atomically. Parameters key K: key with which the specified value is associated value V: value to be associated with the specified key Returns V the previous value associated with the specified key, or null if there was no mapping for the key Throws NullPointerException if the specified key or value is null replaceAll Added in API level 24 public void replaceAll (BiFunction<? super K, ? super V, ? extends V> function) Replaces each entry's value with the result of invoking the given function on that entry until all entries have been processed or the function throws an exception (optional operation). Exceptions thrown by the function are relayed to the caller. Parameters function BiFunction: the function to apply to each entry search Added in API level 24 public U search (long parallelismThreshold, BiFunction<? super K, ? super V, ? extends U> searchFunction) Returns a non-null result from applying the given search function on each (key, value), or null if none. Upon success, further element processing is suppressed and the results of any other parallel invocations of the search function are ignored. Parameters parallelismThreshold long: the (estimated) number of elements needed for this operation to be executed in parallel searchFunction BiFunction: a function returning a non-null result on success, else null Returns U a non-null result from applying the given search function on each (key, value), or null if none searchEntries Added in API level 24 public U searchEntries (long parallelismThreshold, Function<Entry<K, V>, ? extends U> searchFunction) Returns a non-null result from applying the given search function on each entry, or null if none. Upon success, further element processing is suppressed and the results of any other parallel invocations of the search function are ignored. Parameters parallelismThreshold long: the (estimated) number of elements needed for this operation to be executed in parallel searchFunction Function: a function returning a non-null result on success, else null Returns U a non-null result from applying the given search function on each entry, or null if none searchKeys Added in API level 24 public U searchKeys (long parallelismThreshold, Function<? super K, ? extends U> searchFunction) Returns a non-null result from applying the given search function on each key, or null if none. Upon success, further element processing is suppressed and the results of any other parallel invocations of the search function are ignored. Parameters parallelismThreshold long: the (estimated) number of elements needed for this operation to be executed in parallel searchFunction Function: a function returning a non-null result on success, else null Returns U a non-null result from applying the given search function on each key, or null if none searchValues Added in API level 24 public U searchValues (long parallelismThreshold, Function<? super V, ? extends U> searchFunction) Returns a non-null result from applying the given search function on each value, or null if none. Upon success, further element processing is suppressed and the results of any other parallel invocations of the search function are ignored. Parameters parallelismThreshold long: the (estimated) number of elements needed for this operation to be executed in parallel searchFunction Function: a function returning a non-null result on success, else null Returns U a non-null result from applying the given search function on each value, or null if none size Added in API level 1 public int size () Returns the number of key-value mappings in this map. If the map contains more than Integer.MAX_VALUE elements, returns Integer.MAX_VALUE. Returns int the number of key-value mappings in this map toString Added in API level 1 public String toString () Returns a string representation of this map. The string representation consists of a list of key-value mappings (in no particular order) enclosed in braces (\"{}\"). Adjacent mappings are separated by the characters \", \" (comma and space). Each key-value mapping is rendered as the key followed by an equals sign (\"=\") followed by the associated value. Returns String a string representation of this map values Added in API level 1 public Collection<V> values () Returns a Collection view of the values contained in this map. The collection is backed by the map, so changes to the map are reflected in the collection, and vice-versa. The collection supports element removal, which removes the corresponding mapping from this map, via the Iterator.remove, Collection.remove, removeAll, retainAll, and clear operations. It does not support the add or addAll operations. The view's iterators and spliterators are weakly consistent. The view's spliterator reports Spliterator.CONCURRENT and Spliterator.NONNULL. Returns Collection<V> the collection view Content and code samples on this page are subject to the licenses described in the Content License. Java and OpenJDK are trademarks or registered trademarks of Oracle and/or its affiliates. Last updated 2026-08-03 UTC.",
+  "scores": {
+    "results": [
+      {
+        "document": null,
+        "index": 3,
+        "relevance_score": 0.9921875
+      },
+      {
+        "document": null,
+        "index": 10,
+        "relevance_score": 0.9921875
+      },
+      {
+        "document": null,
+        "index": 34,
+        "relevance_score": 0.9921875
+      },
+      {
+        "document": null,
+        "index": 35,
+        "relevance_score": 0.9921875
+      },
+      {
+        "document": null,
+        "index": 36,
+        "relevance_score": 0.9921875
+      },
+      {
+        "document": null,
+        "index": 30,
+        "relevance_score": 0.984375
+      },
+      {
+        "document": null,
+        "index": 37,
+        "relevance_score": 0.984375
+      },
+      {
+        "document": null,
+        "index": 48,
+        "relevance_score": 0.9765625
+      },
+      {
+        "document": null,
+        "index": 24,
+        "relevance_score": 0.96875
+      },
+      {
+        "document": null,
+        "index": 50,
+        "relevance_score": 0.96875
+      },
+      {
+        "document": null,
+        "index": 14,
+        "relevance_score": 0.95703125
+      },
+      {
+        "document": null,
+        "index": 6,
+        "relevance_score": 0.93359375
+      },
+      {
+        "document": null,
+        "index": 4,
+        "relevance_score": 0.9140625
+      },
+      {
+        "document": null,
+        "index": 9,
+        "relevance_score": 0.875
+      },
+      {
+        "document": null,
+        "index": 32,
+        "relevance_score": 0.70703125
+      },
+      {
+        "document": null,
+        "index": 67,
+        "relevance_score": 0.65234375
+      },
+      {
+        "document": null,
+        "index": 8,
+        "relevance_score": 0.578125
+      },
+      {
+        "document": null,
+        "index": 49,
+        "relevance_score": 0.515625
+      },
+      {
+        "document": null,
+        "index": 29,
+        "relevance_score": 0.46875
+      },
+      {
+        "document": null,
+        "index": 47,
+        "relevance_score": 0.421875
+      },
+      {
+        "document": null,
+        "index": 13,
+        "relevance_score": 0.36328125
+      },
+      {
+        "document": null,
+        "index": 66,
+        "relevance_score": 0.11328125
+      },
+      {
+        "document": null,
+        "index": 25,
+        "relevance_score": 0.076171875
+      },
+      {
+        "document": null,
+        "index": 28,
+        "relevance_score": 0.0673828125
+      },
+      {
+        "document": null,
+        "index": 0,
+        "relevance_score": 0.060302734375
+      },
+      {
+        "document": null,
+        "index": 31,
+        "relevance_score": 0.060302734375
+      },
+      {
+        "document": null,
+        "index": 65,
+        "relevance_score": 0.05029296875
+      },
+      {
+        "document": null,
+        "index": 22,
+        "relevance_score": 0.047607421875
+      },
+      {
+        "document": null,
+        "index": 7,
+        "relevance_score": 0.03125
+      },
+      {
+        "document": null,
+        "index": 26,
+        "relevance_score": 0.03125
+      },
+      {
+        "document": null,
+        "index": 45,
+        "relevance_score": 0.03125
+      },
+      {
+        "document": null,
+        "index": 21,
+        "relevance_score": 0.02294921875
+      },
+      {
+        "document": null,
+        "index": 70,
+        "relevance_score": 0.020263671875
+      },
+      {
+        "document": null,
+        "index": 51,
+        "relevance_score": 0.01104736328125
+      },
+      {
+        "document": null,
+        "index": 20,
+        "relevance_score": 0.0103759765625
+      },
+      {
+        "document": null,
+        "index": 15,
+        "relevance_score": 0.00860595703125
+      },
+      {
+        "document": null,
+        "index": 46,
+        "relevance_score": 0.008056640625
+      },
+      {
+        "document": null,
+        "index": 12,
+        "relevance_score": 0.007110595703125
+      },
+      {
+        "document": null,
+        "index": 33,
+        "relevance_score": 0.007110595703125
+      },
+      {
+        "document": null,
+        "index": 44,
+        "relevance_score": 0.007110595703125
+      },
+      {
+        "document": null,
+        "index": 71,
+        "relevance_score": 0.007110595703125
+      },
+      {
+        "document": null,
+        "index": 1,
+        "relevance_score": 0.006683349609375
+      },
+      {
+        "document": null,
+        "index": 5,
+        "relevance_score": 0.006256103515625
+      },
+      {
+        "document": null,
+        "index": 64,
+        "relevance_score": 0.005218505859375
+      },
+      {
+        "document": null,
+        "index": 39,
+        "relevance_score": 0.004913330078125
+      },
+      {
+        "document": null,
+        "index": 11,
+        "relevance_score": 0.004608154296875
+      },
+      {
+        "document": null,
+        "index": 38,
+        "relevance_score": 0.004608154296875
+      },
+      {
+        "document": null,
+        "index": 68,
+        "relevance_score": 0.00360107421875
+      },
+      {
+        "document": null,
+        "index": 40,
+        "relevance_score": 0.0031890869140625
+      },
+      {
+        "document": null,
+        "index": 19,
+        "relevance_score": 0.00299072265625
+      },
+      {
+        "document": null,
+        "index": 27,
+        "relevance_score": 0.0026397705078125
+      },
+      {
+        "document": null,
+        "index": 62,
+        "relevance_score": 0.0026397705078125
+      },
+      {
+        "document": null,
+        "index": 18,
+        "relevance_score": 0.0023956298828125
+      },
+      {
+        "document": null,
+        "index": 41,
+        "relevance_score": 0.0021820068359375
+      },
+      {
+        "document": null,
+        "index": 16,
+        "relevance_score": 0.00193023681640625
+      },
+      {
+        "document": null,
+        "index": 52,
+        "relevance_score": 0.00193023681640625
+      },
+      {
+        "document": null,
+        "index": 56,
+        "relevance_score": 0.00170135498046875
+      },
+      {
+        "document": null,
+        "index": 69,
+        "relevance_score": 0.0016021728515625
+      },
+      {
+        "document": null,
+        "index": 2,
+        "relevance_score": 0.00145721435546875
+      },
+      {
+        "document": null,
+        "index": 55,
+        "relevance_score": 0.00141143798828125
+      },
+      {
+        "document": null,
+        "index": 54,
+        "relevance_score": 0.00128936767578125
+      },
+      {
+        "document": null,
+        "index": 57,
+        "relevance_score": 0.00102996826171875
+      },
+      {
+        "document": null,
+        "index": 60,
+        "relevance_score": 0.00102996826171875
+      },
+      {
+        "document": null,
+        "index": 59,
+        "relevance_score": 0.00099945068359375
+      },
+      {
+        "document": null,
+        "index": 17,
+        "relevance_score": 0.00096893310546875
+      },
+      {
+        "document": null,
+        "index": 42,
+        "relevance_score": 0.00096893310546875
+      },
+      {
+        "document": null,
+        "index": 23,
+        "relevance_score": 0.000885009765625
+      },
+      {
+        "document": null,
+        "index": 61,
+        "relevance_score": 0.00083160400390625
+      },
+      {
+        "document": null,
+        "index": 53,
+        "relevance_score": 0.00075531005859375
+      },
+      {
+        "document": null,
+        "index": 58,
+        "relevance_score": 0.0004444122314453125
+      },
+      {
+        "document": null,
+        "index": 43,
+        "relevance_score": 0.00040435791015625
+      },
+      {
+        "document": null,
+        "index": 63,
+        "relevance_score": 0.000179290771484375
+      }
+    ]
+  },
+  "pool_ranges": [
+    [
+      0,
+      1204
+    ],
+    [
+      1004,
+      2204
+    ],
+    [
+      2004,
+      3204
+    ],
+    [
+      3004,
+      4204
+    ],
+    [
+      4004,
+      5204
+    ],
+    [
+      5004,
+      6204
+    ],
+    [
+      6004,
+      7204
+    ],
+    [
+      7004,
+      8204
+    ],
+    [
+      8004,
+      9204
+    ],
+    [
+      9004,
+      10204
+    ],
+    [
+      10004,
+      11204
+    ],
+    [
+      11004,
+      12204
+    ],
+    [
+      12004,
+      13204
+    ],
+    [
+      13004,
+      14204
+    ],
+    [
+      14004,
+      15204
+    ],
+    [
+      15004,
+      16204
+    ],
+    [
+      16004,
+      17204
+    ],
+    [
+      17004,
+      18204
+    ],
+    [
+      18004,
+      19204
+    ],
+    [
+      19004,
+      20204
+    ],
+    [
+      20004,
+      21204
+    ],
+    [
+      21004,
+      22204
+    ],
+    [
+      22004,
+      23204
+    ],
+    [
+      23004,
+      24204
+    ],
+    [
+      24004,
+      25204
+    ],
+    [
+      25004,
+      26204
+    ],
+    [
+      26004,
+      27204
+    ],
+    [
+      27004,
+      28204
+    ],
+    [
+      28004,
+      29204
+    ],
+    [
+      29004,
+      30204
+    ],
+    [
+      30004,
+      31204
+    ],
+    [
+      31004,
+      32204
+    ],
+    [
+      32004,
+      33204
+    ],
+    [
+      33004,
+      34204
+    ],
+    [
+      34004,
+      35204
+    ],
+    [
+      35004,
+      36204
+    ],
+    [
+      36004,
+      37204
+    ],
+    [
+      37004,
+      38204
+    ],
+    [
+      38004,
+      39204
+    ],
+    [
+      39004,
+      40204
+    ],
+    [
+      40004,
+      41204
+    ],
+    [
+      41004,
+      42204
+    ],
+    [
+      42004,
+      43204
+    ],
+    [
+      43004,
+      44204
+    ],
+    [
+      44004,
+      45204
+    ],
+    [
+      45004,
+      46204
+    ],
+    [
+      46004,
+      47204
+    ],
+    [
+      47004,
+      48204
+    ],
+    [
+      48004,
+      49204
+    ],
+    [
+      49004,
+      50204
+    ],
+    [
+      50004,
+      51204
+    ],
+    [
+      51004,
+      52204
+    ],
+    [
+      52004,
+      53204
+    ],
+    [
+      53004,
+      54204
+    ],
+    [
+      54004,
+      55204
+    ],
+    [
+      55004,
+      56204
+    ],
+    [
+      56004,
+      57204
+    ],
+    [
+      57004,
+      58204
+    ],
+    [
+      58004,
+      59204
+    ],
+    [
+      59004,
+      60204
+    ],
+    [
+      60004,
+      61204
+    ],
+    [
+      61004,
+      62204
+    ],
+    [
+      62004,
+      63204
+    ],
+    [
+      63004,
+      64204
+    ],
+    [
+      64004,
+      65204
+    ],
+    [
+      65004,
+      66204
+    ],
+    [
+      66004,
+      67204
+    ],
+    [
+      67004,
+      68204
+    ],
+    [
+      68004,
+      69204
+    ],
+    [
+      69004,
+      70204
+    ],
+    [
+      70004,
+      71204
+    ],
+    [
+      71004,
+      71872
+    ]
+  ],
+  "before_ranges": [
+    [
+      3004,
+      4204
+    ],
+    [
+      35004,
+      36204
+    ],
+    [
+      30004,
+      31204
+    ]
+  ],
+  "operation": "computeIfAbsent",
+  "return_witness": "or null if the computed value is null",
+  "throws_witness": "NullPointerException if the specified key or mappingFunction is null",
+  "next_operation": "computeIfPresent"
+}

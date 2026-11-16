@@ -1,0 +1,1401 @@
+{
+  "protocol": {
+    "author": "single author blinded to both branches predicted labels; not independent acceptance",
+    "freeze": "queries/code frozen before inference; gold frozen after inference but before inspecting predictions",
+    "scope": "known relevant retrieved sources; NOT universal web recall; null remains unjudged",
+    "criteria": "grade2 concrete requested relationship with material conditions; grade1 partial topic; grade0 unrelated; short/failed snapshots unknown unless positive witness",
+    "source_gold": "union of retained extracted snapshots plus two gold-only primary fetches; h07 official retained HTML manually inspected because extraction lost flags",
+    "isolation": "gold and gold-only documents never passed to branches; normal page selection and budgets retained"
+  },
+  "cases": [
+    {
+      "id": "h01",
+      "query": "HTTP 202 Accepted processing completed guarantee response status",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://cs.wikipedia.org/wiki/Stavov%C3%A9_k%C3%B3dy_HTTP",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://www.cssportal.com/http-status-codes/202.php",
+          "grade": 2,
+          "basis": "source provides concrete evidence for requested relation, including material conditions; negative answer to premise counts",
+          "support": [
+            {
+              "quote": "there is no guarantee that the action will be carried out",
+              "start": 246,
+              "end": 303
+            },
+            {
+              "quote": "processing has not been completed",
+              "start": 501,
+              "end": 534
+            }
+          ],
+          "snapshot": "runs/reliability-holdout-2026-10-30/page-cache/861019bca0af92a2a13dc4cb6eb986889b15117a54cac105d1bf8e2329f8077e.json",
+          "text_hash": "1f55f12e5fc1c5f83641e65da85c387e2f21c5447932dae905d36e60932b80e7",
+          "snapshot_chars": 2993
+        },
+        {
+          "id": "C003",
+          "url": "https://cwiki.apache.org/confluence/display/STRATOS/HTTP+Status+Codes",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://devdoc.net/web/developer.mozilla.org/en-US/docs/Web/HTTP/Status/202.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/202",
+          "grade": 2,
+          "basis": "source provides concrete evidence for requested relation, including material conditions; negative answer to premise counts",
+          "support": [
+            {
+              "quote": "processing has not been completed or may not have started",
+              "start": 130,
+              "end": 187
+            },
+            {
+              "quote": "processing of the request is not guaranteed",
+              "start": 200,
+              "end": 243
+            }
+          ],
+          "snapshot": "runs/reliability-holdout-2026-10-30/page-cache/d2b917279360e73c776583dc03aee8672951da4ee48bd3a9d0590055400fc3ab.json",
+          "text_hash": "cff6dbd9a516337f53765e134906eceb92f15654c7ec77f1f2b1c921c00c531c",
+          "snapshot_chars": 1614
+        },
+        {
+          "id": "C006",
+          "url": "https://docs.adyen.com/development-resources/response-handling",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://ec.europa.eu/internet-standards/methodology.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://en.wikipedia.org/wiki/List_of_HTTP_status_codes",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://en.wikipedia.org/wiki/U.S._federal_government_response_to_the_COVID-19_pandemic",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://www.hostinger.com/tutorials/http-status-codes/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://learn.microsoft.com/en-us/troubleshoot/developer/webapps/iis/health-diagnostic-performance/http-status-code",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://www.linkedin.com/pulse/http-status-codes-worth-knowing-venkat-keesara",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://mze.gov.cz/public/portal/mze/-a86076---pQv6yhk9/nove-otazky-a-odpovedi-evropske-komise-k-systemu-catch?_linka=a695046",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://ref.getfoxi.com/ko/reference/http/202",
+          "grade": 2,
+          "basis": "source provides concrete evidence for requested relation, including material conditions; negative answer to premise counts",
+          "support": [
+            {
+              "quote": "요청이 접수되었지만 아직 처리가 완료되지 않았을 때 반환됩니다.",
+              "start": 126,
+              "end": 215
+            }
+          ],
+          "snapshot": "runs/reliability-holdout-2026-10-30/page-cache/07b394f16fa57826061ecc8726ce551d74e6200e947ee6ea8158fece62bf7267.json",
+          "text_hash": "174de19f9ebc55f8477530b5ed68b2328280d022470ec56be1f5d2b4f6fb19bd",
+          "snapshot_chars": 480
+        },
+        {
+          "id": "C015",
+          "url": "https://restfulapi.net/http-status-202-accepted/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://runebook.dev/ko/docs/http/status/202",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://www.screamingfrog.co.uk/learn-seo/http-status-codes/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://www.sec.gov/Archives/edgar/data/1448397/000114036125009905/0001140361-25-009905.txt",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://umbraco.com/knowledge-base/http-status-codes/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "h02",
+      "query": "PostgreSQL sequence nextval rollback gaps cache transaction",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://builder.aws.com/content/3CDn1F5HUfGQS3JXLHPMxpnwpTw/amazon-aurora-dsql-a-practical-guide-to-awss-distributed-sql-database",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://www.cybertec-postgresql.com/en/gaps-in-sequences-postgresql/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://dba.stackexchange.com/questions/343731/is-concurrently-using-nextval-with-generate-series-guaranteed-to-return-incremen",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://www.debutinfotech.com/cryptocurrency-exchange-development",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://www.digitalocean.com/community/tutorials/sql-commit-sql-rollback",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://docs.cloud.google.com/spanner/docs/reference/postgresql/data-definition-language",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://docs.sqlalchemy.org/en/21/dialects/postgresql.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://donmain.dev/postgres/architecture-overview/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://www.geeksforgeeks.org/sql/sql-sequences/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://ilia.ws/files/confoo_pgsql.pdf",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://intraservis.cz/sluzby/databazove-vrstvy/postgresql/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://junhkang.com/posts/23/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://mate.naver.com/#partners",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://www.orioledb.com/docs/architecture/row-level-concurrency",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://www.postgresql.org/docs/release/8.1.0/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://www.rubrik.com/solutions/postgresql",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://www.tatacommunications.com/cloud/enterprise-cloud/postgresql",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://velog.io/@ryu_log/%EA%B8%80%EB%98%90-PK%EA%B0%80-33%EC%94%A9-%EB%9B%B0%EB%8A%94-auto-increase-%ED%98%84%EC%83%81-%ED%8A%B8%EB%9F%AC%EB%B8%94-%EC%8A%88%ED%8C%85%EA%B8%B0%ED%95%B4%EA%B2%B0%EC%9D%80-%EC%95%84%EB%8B%88%EA%B3%A0-..-%EC%9B%90%EC%9D%B8-%EC%B0%BE%EA%B8%B0",
+          "grade": 2,
+          "basis": "source provides concrete evidence for requested relation, including material conditions; negative answer to premise counts",
+          "support": [
+            {
+              "quote": "시퀀스는 RollBack이 되지 않습니다.",
+              "start": 1368,
+              "end": 1413
+            },
+            {
+              "quote": "서로 다른 세션에서 nextval 시퀀스 값을 조회하면 cache_size 만큼 차이가 날 수",
+              "start": 4165,
+              "end": 4265
+            }
+          ],
+          "snapshot": "runs/reliability-holdout-2026-10-30/page-cache/bb972dcb08196d906d5ab06ee12be9954bc7a23424906e8cdbbde904b52ef6ca.json",
+          "text_hash": "015e5163f1df2a0ef08b8a9f57a80e9f9eb370d9f83114eadd6b17bdb41e129b",
+          "snapshot_chars": 4075
+        },
+        {
+          "id": "C019",
+          "url": "https://wiki.postgresql.org/wiki/FAQ",
+          "grade": 2,
+          "basis": "source provides concrete evidence for requested relation, including material conditions; negative answer to premise counts",
+          "support": [
+            {
+              "quote": "This causes gaps in numbering from aborted transactions",
+              "start": 43881,
+              "end": 43936
+            },
+            {
+              "quote": "Another cause for gaps in sequence is the use of the CACHE clause",
+              "start": 44349,
+              "end": 44414
+            }
+          ],
+          "snapshot": "runs/reliability-holdout-2026-10-30/page-cache/7e8f9785f043448d77361229bb69a792b3a740aadd336eae755e29c3cf8390ed.json",
+          "text_hash": "09d9a67b6dbc4779f9d5966248e6e74938e9cc8ee51506dba4b7aec1368f5b1d",
+          "snapshot_chars": 65352
+        }
+      ]
+    },
+    {
+      "id": "h03",
+      "query": "Python zip strict ValueError iterators consumed length mismatch",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://www.backendmesh.com/python-interview-questions/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://crates.io/crates/fnp-io",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://en.wikipedia.org/wiki/Comparison_of_programming_languages_(string_functions)",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://fuchsia.googlesource.com/third_party/github.com/tensorflow/tensorflow/+show/refs/heads/upstream/exported_pr_974216928/RELEASE.md",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://gist.github.com/farizrahman4u/1cc60f726b1c136ed4dc882a08289d4e",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://github.com/gto76/python-cheatsheet/blob/main/index.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://huggingface.co/datasets/gso-bench/gso",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://mail.python.org/archives/list/python-ideas@python.org/thread/6GFUADSQ5JTF7W7OGWF7XF2NH2XUTUQM/",
+          "grade": 1,
+          "basis": "captured source helps topic but lacks the requested relationship or a material queried condition",
+          "support": [],
+          "snapshot": "runs/reliability-holdout-2026-10-30/page-cache/eced67d30251cd049d63e7f4574b4d6a4b3dfd69c80c2f5d7f040e092c111b74.json",
+          "text_hash": "1f32671eaffbd53322896c9446bde9dff723a82ff67e649ed947f6e6bead15db",
+          "snapshot_chars": 1278
+        },
+        {
+          "id": "C009",
+          "url": "https://mate.naver.com/#partners",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://more-itertools.readthedocs.io/en/stable/_modules/more_itertools/more.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://peps.python.org/pep-0618/",
+          "grade": 2,
+          "basis": "source provides concrete evidence for requested relation, including material conditions; negative answer to premise counts",
+          "support": [
+            {
+              "quote": "the resulting iterator will raise a ValueError if the arguments are exhausted at differing lengths",
+              "start": 4241,
+              "end": 4339
+            },
+            {
+              "quote": "This error will occur at the point when iteration would normally stop today.",
+              "start": 4341,
+              "end": 4417
+            }
+          ],
+          "snapshot": "runs/reliability-holdout-2026-10-30/page-cache/96dd3f2737478e2e7432eaf3227f447b2bc7e865067fa61fabcd50a76f232097.json",
+          "text_hash": "7af8eca9b2012051f7c7cb0bc0eb30d647f4a455909b7307e9554c9cbc824eeb",
+          "snapshot_chars": 14107
+        },
+        {
+          "id": "C012",
+          "url": "https://python.flowdas.com/genindex-all.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://pythoncodecrack.com/pythons-zip-the-complete-guide-you-actually-need.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://pythonprogramminglanguage.com/zip/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://realpython.com/python-zip-function/",
+          "grade": 2,
+          "basis": "source provides concrete evidence for requested relation, including material conditions; negative answer to premise counts",
+          "support": [
+            {
+              "quote": "if you set strict to True",
+              "start": 9883,
+              "end": 9908
+            },
+            {
+              "quote": "list(zip(range(5), range(100), strict=True))",
+              "start": 10058,
+              "end": 10102
+            },
+            {
+              "quote": "ValueError: zip() argument 2 is longer than argument 1",
+              "start": 10174,
+              "end": 10228
+            }
+          ],
+          "snapshot": "runs/reliability-holdout-2026-10-30/page-cache/19047b4844c06b8c7a1d39c487f282ab633a929ad9eefa23291cca6373e50f0a.json",
+          "text_hash": "02a8d5f48bdd6799dfe1b3daffaa938471e1f71fc619f812714873b078e3d9b8",
+          "snapshot_chars": 24222
+        },
+        {
+          "id": "C016",
+          "url": "https://stackoverflow.com/questions/32954486/zip-iterators-asserting-for-equal-length-in-python",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://velog.io/@8113jsl-ai/python-zip-strict-length-mismatch",
+          "grade": 2,
+          "basis": "source provides concrete evidence for requested relation, including material conditions; negative answer to premise counts",
+          "support": [
+            {
+              "quote": "except ValueError",
+              "start": 923,
+              "end": 940
+            },
+            {
+              "quote": "실제로 원소를 꺼내는 과정에서 불일치를 발견해요.",
+              "start": 1048,
+              "end": 1117
+            }
+          ],
+          "snapshot": "runs/reliability-holdout-2026-10-30/page-cache/7266ac1c340509cc11ea434b160b72b1d5e1ee7e71ecdefa08734469da39575b.json",
+          "text_hash": "64913093ab769c087c3b7fd2da52caef507812eafb40e5dd3963197aa659adea",
+          "snapshot_chars": 1461
+        },
+        {
+          "id": "C018",
+          "url": "https://www.yueswater.com/articles/python/python-zip-enum-en/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "h04",
+      "query": "Rust std fs rename cross filesystem existing target replacement",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://android.googlesource.com/platform/prebuilts/rust-toolchain/linux-x86/+/7ea9d841246a331142a7fe975ab6af22b55b3ea2/1.97.0/lib/rustlib/src/rust/library/std/src/sys/pal/windows/c/bindings.txt",
+          "grade": 0,
+          "basis": "different API/product/navigation; no requested std::fs::rename relationship",
+          "support": [],
+          "snapshot": "runs/reliability-holdout-2026-10-30/page-cache/d385256c5ceb43271408f85ae086f46dccf97c034e0ce8056c2aba98a367b8d6.json",
+          "text_hash": "4cfec9225b16c5fa33f165c1767eec6c4066a367d918e6deaa610cd9e0b6db0a",
+          "snapshot_chars": 66393
+        },
+        {
+          "id": "C002",
+          "url": "https://blog.rust-lang.org/2022/01/20/cve-2022-21658/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://crates.io/crates/hjkl-fs",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://doc.rust-lang.org/stable/core/primitive.f32.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://doc.rust-lang.org/std/fs/fn.rename.html",
+          "grade": 2,
+          "basis": "source provides concrete evidence for requested relation, including material conditions; negative answer to premise counts",
+          "support": [
+            {
+              "quote": "replacing the original file if to already exists",
+              "start": 178,
+              "end": 226
+            },
+            {
+              "quote": "from and to are on separate filesystems",
+              "start": 1109,
+              "end": 1148
+            }
+          ],
+          "snapshot": "runs/reliability-holdout-2026-10-30/page-cache/8c2cad1c45c5e872b78a71a892bccda8d3516c9f1570be9c183f9235e1bc003d.json",
+          "text_hash": "e3b86a29a00cae7bb03aa007788daddf96a571a084a1aa49903491cc149561da",
+          "snapshot_chars": 1269
+        },
+        {
+          "id": "C006",
+          "url": "https://doc.rust-lang.org/std/option/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://doc.rust-lang.org/std/str/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://en.wikipedia.org/wiki/General_Dynamics_F-16_Fighting_Falcon_variants",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://formulae.brew.sh/formula/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://github.com/git/git/blob/master/Makefile",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://github.com/openclaw/fs-safe",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://github.com/walujanle/file-rename-plus",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://lib.rs/os",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://milahu.github.io/NUR/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://news.ycombinator.com/item?id=41654871",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://www.paragon-software.com/home/linuxfs-windows/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://rosettacode.org/wiki/Mad_Libs",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://rust-lang.github.io/rfcs/1048-rename-soft-link-to-symlink.html",
+          "grade": 0,
+          "basis": "different API/product/navigation; no requested std::fs::rename relationship",
+          "support": [],
+          "snapshot": "runs/reliability-holdout-2026-10-30/page-cache/c49ede0efb99533a08fb01b3b0fac3902c57bc0da01aff41dc45ddc5fe8d50de.json",
+          "text_hash": "5673cda0369019cce4e524e88e51a6c8cfe8345b3e5ab554f83fe738e0ea7628",
+          "snapshot_chars": 8130
+        },
+        {
+          "id": "C019",
+          "url": "https://shop.instaluj.cz/file-scavenger-standard-15088/diskuse",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C020",
+          "url": "https://sourceforge.net/directory/file-systems/",
+          "grade": 0,
+          "basis": "different API/product/navigation; no requested std::fs::rename relationship",
+          "support": [],
+          "snapshot": "runs/reliability-holdout-2026-10-30/page-cache/24d39c69c1738a1d49be04c42c7b5cc733879a0747dc8362f9af2b4d049fec63.json",
+          "text_hash": "49df04ab0bf85b04e950c737df57759422beb0fa5e9648aaab19361c35674924",
+          "snapshot_chars": 25513
+        }
+      ]
+    },
+    {
+      "id": "h05",
+      "query": "Docker restart on-failure daemon restart unless-stopped difference",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://www.baculasystems.com/docker-container-backup/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://www.baeldung.com/ops/docker-containers-start-automatically",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://blog.leocat.kr/notes/2019/11/20/docker-restart-container-whenever-start-docker-desktop",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://blog.naver.com/clickpedia/224354623055",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://blog.naver.com/leehw3614/224136149154",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://docs.docker.com/engine/containers/start-containers-automatically/",
+          "grade": 2,
+          "basis": "source provides concrete evidence for requested relation, including material conditions; negative answer to premise counts",
+          "support": [
+            {
+              "quote": "on-failure",
+              "start": 798,
+              "end": 808
+            },
+            {
+              "quote": "The on-failure policy only prompts a restart if the container exits with a failure. It doesn't restart the container if the daemon restarts.",
+              "start": 1036,
+              "end": 1176
+            },
+            {
+              "quote": "unless-stopped",
+              "start": 1404,
+              "end": 1418
+            }
+          ],
+          "snapshot": "runs/reliability-holdout-2026-10-30/gold-audit/h05-C006-document.json",
+          "text_hash": "349b2d9d454de8ab9ea416bfb136af5274388af2585bd9b5cce8f81b893603c4",
+          "snapshot_chars": 5080
+        },
+        {
+          "id": "C007",
+          "url": "https://docs.docker.com/reference/cli/docker/compose/restart",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://dpcvirtualtips.com/docker-containers-not-starting-on-boot/",
+          "grade": 2,
+          "basis": "source provides concrete evidence for requested relation, including material conditions; negative answer to premise counts",
+          "support": [
+            {
+              "quote": "It does not restart the container simply because the Docker daemon restarts.",
+              "start": 1366,
+              "end": 1442
+            },
+            {
+              "quote": "unless-stopped",
+              "start": 1618,
+              "end": 1632
+            }
+          ],
+          "snapshot": "runs/reliability-holdout-2026-10-30/page-cache/500a01d315f96fee52372508ae33313dcfd153a98e4d6e3f95fe8b6af0730596.json",
+          "text_hash": "3f2b04cb325d4a8c01bd9581135872c0d36edca74640284d7105dd468afea7e3",
+          "snapshot_chars": 8542
+        },
+        {
+          "id": "C009",
+          "url": "https://en.wikipedia.org/wiki/Docker_(software)",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://flowgenius.in/ocker-container-keeps-restarting-after-reboot/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://geekthis.net/post/automatically-start-docker-container/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://github.com/docker-archive/docker-ce/releases",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://www.jenkins.io/doc/book/installing/docker/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://www.lainyzine.com/ko/article/how-to-automatically-restart-docker-containers/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://linuxconfig.org/how-to-restart-docker-on-ubuntu-26-04",
+          "grade": 2,
+          "basis": "source provides concrete evidence for requested relation, including material conditions; negative answer to premise counts",
+          "support": [
+            {
+              "quote": "on-failure[:max-retries] Restarts only if the container exits with a non-zero exit code.",
+              "start": 6711,
+              "end": 6799
+            },
+            {
+              "quote": "unless-stopped Same as always but does not restart if the container was manually stopped before the daemon restarted.",
+              "start": 6937,
+              "end": 7054
+            }
+          ],
+          "snapshot": "runs/reliability-holdout-2026-10-30/page-cache/371891feace5c0d4b0a3f4f2d3e3d8555e5e726059578d2a128988442343592e.json",
+          "text_hash": "41758a8cde919aa727307f503f21e38fae4be31d276e105f9d1e0de83e3cc7e9",
+          "snapshot_chars": 13469
+        },
+        {
+          "id": "C016",
+          "url": "https://mariushosting.com/synology-how-to-change-docker-containers-restart-policy/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://mate.naver.com/#partners",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://sangseek.com/communities/109019",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://www.ssdnodes.com/learn/docker-compose-auto-start-on-boot",
+          "grade": 2,
+          "basis": "source provides concrete evidence for requested relation, including material conditions; negative answer to premise counts",
+          "support": [
+            {
+              "quote": "on-failure does not survive one",
+              "start": 145,
+              "end": 176
+            },
+            {
+              "quote": "unless-stopped behaves like always",
+              "start": 2946,
+              "end": 2980
+            }
+          ],
+          "snapshot": "runs/reliability-holdout-2026-10-30/page-cache/f5e21d04c4c388cd875cfba8990bd3e88a160face61fae5c1201871eec544c75.json",
+          "text_hash": "8aec6cc2ed09bac6d53d525d2555e890431ed0b560fb2fb981ee442f1974ace5",
+          "snapshot_chars": 13552
+        },
+        {
+          "id": "C020",
+          "url": "https://tprpahen.com/%ED%99%88-%EC%84%9C%EB%B2%84%EC%97%90%EC%84%9C-docker-%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EC%9E%90%EB%8F%99-%EC%9E%AC%EC%8B%9C%EC%9E%91-%EC%84%A4%EC%A0%95%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "h06",
+      "query": "SQLite INTEGER PRIMARY KEY AUTOINCREMENT ROWID reuse overhead",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://bun.com/docs/runtime/sql",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://www.caniusesql.com/f/primary-key",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://chromium.googlesource.com/chromium/src/+/HEAD/sql/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://dbconvert.com/sqlite/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://developer.android.com/topic/performance/sqlite-performance-best-practices",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://www.devkuma.com/docs/sqlite/autoincrement%EC%9D%84-%EC%84%A4%EC%A0%95%ED%96%88%EC%9D%84-%EB%95%8C-%EA%B0%92%EC%9D%98-%ED%95%A0%EB%8B%B9-%EA%B7%9C%EC%B9%99/",
+          "grade": 1,
+          "basis": "captured source helps topic but lacks the requested relationship or a material queried condition",
+          "support": [],
+          "snapshot": "runs/reliability-holdout-2026-10-30/page-cache/8c2be4c4d1a7a9e78119148b2505a915fa226190d636897d4f4ae5dbdd5ab0ec.json",
+          "text_hash": "a09c8b34950fd23d1edc5b14f28e93499f64982876eb82b6ff1b45af236c2c92",
+          "snapshot_chars": 4317
+        },
+        {
+          "id": "C007",
+          "url": "https://gist.github.com/texhex/84d103c782c56a815d5f",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://github.com/dotnet/efcore/issues/36888",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://github.com/libredb/libredb-studio/blob/main/docs/providers/libsql.md",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://goodspace.ai/interview-questions/sqlite",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://gywn.net/2013/09/let-me-know-data-index-of-sqlite/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://mate.naver.com/#partners",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://www.sitepoint.com/community/t/error-creating-table-with-primary-key-on-2-columns/321752",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://www.sqlite.org/autoinc.html",
+          "grade": 2,
+          "basis": "source provides concrete evidence for requested relation, including material conditions; negative answer to premise counts",
+          "support": [
+            {
+              "quote": "extra CPU, memory, disk space, and disk I/O overhead",
+              "start": 66,
+              "end": 118
+            },
+            {
+              "quote": "prevent the reuse of ROWIDs from previously deleted rows",
+              "start": 862,
+              "end": 918
+            }
+          ],
+          "snapshot": "runs/reliability-holdout-2026-10-30/page-cache/ba4476d7609398659a710749a2d69c2d23a95d7cbea5ebda89a4fc3b8078d74c.json",
+          "text_hash": "07c0363c9d4559d8957f8dbabb778bff307c5992dc0d8ed8896eae2704ffc3a6",
+          "snapshot_chars": 6339
+        },
+        {
+          "id": "C015",
+          "url": "https://www.sqlitetutorial.net/sqlite-autoincrement/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://velog.io/@strurao/SQLite-primary-key-autoincrement",
+          "grade": 1,
+          "basis": "captured source helps topic but lacks the requested relationship or a material queried condition",
+          "support": [],
+          "snapshot": "runs/reliability-holdout-2026-10-30/page-cache/0a311cb64b7d9a0a85b962785f76e8916af55f85e69c93ee010752c9a86b8664.json",
+          "text_hash": "c2722ca155f23e8c609423ac94f9e8cf414edad6a52808e8aeb033d11482bbe3",
+          "snapshot_chars": 2286
+        },
+        {
+          "id": "C017",
+          "url": "https://www.vogella.com/tutorials/AndroidSQLite/article.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://voidstar.tech/sqlite_insert_speed/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "h07",
+      "query": "git clean -n -x -X ignored files directories difference",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://www.atlassian.com/git/tutorials/undoing-changes/git-clean",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://blog.naver.com/mintand/224031977059",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://blog.naver.com/sophy__2/224043029131",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://coddy.tech/git-commands/git-remove-untracked-files",
+          "grade": 1,
+          "basis": "captured source helps topic but lacks the requested relationship or a material queried condition",
+          "support": [],
+          "snapshot": "runs/reliability-holdout-2026-10-30/page-cache/37123b444df7e978787c6db75061749715dd57815f9164fde46d1a8679b42335.json",
+          "text_hash": "dc1ae183acf8271d2e39c6142fb81277a2536d2a4e36832eec2ecbef980ebcce",
+          "snapshot_chars": 2498
+        },
+        {
+          "id": "C005",
+          "url": "https://confluence.curvc.com/spaces/ASD/pages/51578360/git+clean",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://www.datacamp.com/tutorial/git-clean",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://www.fltk.org/doc-misc/fltk-svn-to-git.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://www.freecodecamp.org/news/7-git-hacks-you-just-can-t-ignore-41aea137727a/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://www.geeksforgeeks.org/git/git-clean/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://gist.github.com/raduserbanescu/b29e39ef1625eae636366872db48177b",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://git-scm.com/docs/git-clean",
+          "grade": 2,
+          "basis": "source provides concrete evidence for requested relation, including material conditions; negative answer to premise counts",
+          "support": [
+            {
+              "quote": "--dry-run Don’t actually remove anything",
+              "start": 4497,
+              "end": 4539
+            },
+            {
+              "quote": "-X Remove only files ignored by Git.",
+              "start": 5217,
+              "end": 5253
+            },
+            {
+              "quote": "-x Don’t use the standard ignore rules",
+              "start": 4875,
+              "end": 4915
+            }
+          ],
+          "snapshot": "runs/reliability-holdout-2026-10-30/fixed/h07-C011.html",
+          "text_hash": "443eaf0ac0f1b730e410f2201d5a9f19e916a13b36c8b521a42b0fcd2350de58",
+          "snapshot_chars": 1838,
+          "snapshot_sha256": "3ea826e21bb54c0ddf674cf8064a9f6acf66220900d3e1507b15a5140c89f9fe",
+          "extraction_gap": "captured extracted text contains only Interactive mode; flags exist in original HTML"
+        },
+        {
+          "id": "C012",
+          "url": "https://github.com/git/git/blob/master/Documentation/SubmittingPatches",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://initialcommit.com/blog/git-clean",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://www.kernel.org/pub/software/scm/git/docs/user-manual.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://marcinjahn.com/technologies/git/overview/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://mate.naver.com/#partners",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://sourceforge.net/directory/storage/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://swcarpentry.github.io/git-novice/06-ignore.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/How-to-use-the-git-clean-command",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C020",
+          "url": "https://ucsb-cs156.github.io/topics/git/git_clean.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "h08",
+      "query": "CSS visibility hidden display none layout accessibility difference",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://12daysofweb.dev/2024/css-content-visibility/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://blog.naver.com/khcwang/224102775739",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://codingeverybody.kr/css-display-none/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://developer.mozilla.org/ja/docs/Web/CSS/Guides/Transitions/Using",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://developer.mozilla.org/ko/docs/Web/CSS/Reference/Properties/visibility",
+          "grade": 2,
+          "basis": "source provides concrete evidence for requested relation, including material conditions; negative answer to premise counts",
+          "support": [
+            {
+              "quote": "display 속성을 none으로 설정하세요.",
+              "start": 1240,
+              "end": 1285
+            },
+            {
+              "quote": "접근성 트리에서 제외됩니다.",
+              "start": 3872,
+              "end": 3911
+            }
+          ],
+          "snapshot": "runs/reliability-holdout-2026-10-30/gold-audit/h08-C005-document.json",
+          "text_hash": "d9577d91f4985fe5a247c540b13c63afc8e5521ef3dba13fdc020c77bf496e4e",
+          "snapshot_chars": 3380
+        },
+        {
+          "id": "C006",
+          "url": "https://dzone.com/articles/css-display-none-vs-visibility-hidden",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://github.com/manthanank/learn-css",
+          "grade": 1,
+          "basis": "captured source helps topic but lacks the requested relationship or a material queried condition",
+          "support": [],
+          "snapshot": "runs/reliability-holdout-2026-10-30/page-cache/07d370fbb386f5b4a1e18671593338b9eb4961f5a836c10e7956f79ef9f997e7.json",
+          "text_hash": "d0ed2edab9ef6adf1eeab1f15f9347034ad44e5cb8da719b79a2d60915db6ac2",
+          "snapshot_chars": 52003
+        },
+        {
+          "id": "C008",
+          "url": "https://kizu.dev/restoring-visibility/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://ko.eyewated.com/css%EC%9D%98-display-none%EA%B3%BC-visibility-hidden%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://mate.naver.com/#partners",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://purecss.com/examples/show-hide-content/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://www.sitepoint.com/when-and-how-to-visually-hide-content/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://stackoverflow.com/questions/133051/what-is-the-difference-between-visibilityhidden-and-displaynone",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://tailwindcss.com/docs/visibility",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://www.testmuai.com/learning-hub/content-visibility-browser-support/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://ttj.kr/story/quiz/question/css-visibility-hidden-display-none",
+          "grade": 1,
+          "basis": "captured source helps topic but lacks the requested relationship or a material queried condition",
+          "support": [],
+          "snapshot": "runs/reliability-holdout-2026-10-30/page-cache/ffffc0c94b61ae404bcda25277e3308ae899a6220ad1b78ae320bc5596b32044.json",
+          "text_hash": "ce8f81cb6952e7697bef660cc2b2df721b2e6c1df481e37a9f0c6f8db732b22f",
+          "snapshot_chars": 880
+        },
+        {
+          "id": "C017",
+          "url": "https://velog.io/@planic324/CSS-display-none-vs-visibility-hidden",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://www.vzhurudolu.cz/prirucka/css-content-visibility",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://www.w3.org/TR/css-transforms-2/",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        },
+        {
+          "id": "C020",
+          "url": "https://web.dev/articles/content-visibility",
+          "grade": null,
+          "basis": "unjudged: no sufficient source snapshot",
+          "support": []
+        }
+      ]
+    }
+  ]
+}

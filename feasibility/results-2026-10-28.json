@@ -1,0 +1,126 @@
+{
+  "date": "2026-10-28",
+  "timezone": "Europe/Moscow",
+  "tz_version": "1.2",
+  "hardware": {
+    "model": "MacBook Pro Mac17,8",
+    "chip": "Apple M5 Pro",
+    "memory_gib": 24,
+    "architecture": "arm64",
+    "os": "26.6.2"
+  },
+  "rustc": "rustc 1.95.0 (59807616e 2026-04-14)",
+  "omlx_version": "0.7.0",
+  "search_cases_used": "feasibility/search-cases-v1.json",
+  "search_cases_sha256": "e87d74655a59d0de08abe9a2fc0b3079586c8b30ae4efe39d46d68a28f66f9bb",
+  "current_search_cases_version": 2,
+  "search_case_correction": "v1 ru06 duplicated en06 and was English; v2 corrects ru06. Full v2 live suite has not been run.",
+  "search": {
+    "ddg": {
+      "attempted": 1,
+      "http_status": 202,
+      "remaining_skipped": 19,
+      "gate": "blocked"
+    },
+    "bing": {
+      "attempted": 20,
+      "structurally_parsed": 20,
+      "known_failed_unique_cases": [
+        "ru08",
+        "ru09",
+        "en06",
+        "en08",
+        "en09"
+      ],
+      "relevance_gate": "failed; five unique cases cannot provide three relevant links"
+    },
+    "brave": {
+      "http_status": 429,
+      "gate": "blocked; no retry"
+    },
+    "google": {
+      "http_status": 200,
+      "gate": "unproven; redirects to HTML without h3 organic result blocks; safe browser DOM not qualified"
+    }
+  },
+  "extraction": {
+    "loaded": 20,
+    "marker_pass": 19,
+    "marker_fail": [
+      "html11"
+    ],
+    "gate": "promising; marker checks and sampled content review are not full acceptance",
+    "known_loss": "dom_smoothie loses the introductory ETag text; loss also exists in library text output, before block serialization",
+    "truncated": [
+      "html07"
+    ]
+  },
+  "omlx": {
+    "model": "MiMo-V2.6-Distill-Qwen-9B-OptiQ-4bit",
+    "native_tool_call_passes": 2,
+    "latency_ms": [
+      25607,
+      2048
+    ],
+    "sampling": {
+      "temperature": 0,
+      "max_tokens": 256
+    },
+    "limitation": "same short prompt; no multistep research or prompt-injection qualification"
+  },
+  "browser": {
+    "js": "passed synthetic fixture",
+    "public_browser_enabled": false,
+    "full_network_isolation": "not proven; one TCP connection reached loopback sink from synthetic nonlocal origin",
+    "private_tcp_connections": 1,
+    "received_request_lines": [
+      ""
+    ],
+    "http_or_websocket_payload_exfiltration": "not demonstrated",
+    "dns_rebinding": "not tested"
+  },
+  "overall": "stage_1_not_accepted; no qualified pair of HTML search providers and no fully qualified browser isolation",
+  "checks": {
+    "unit_tests": {
+      "passed": 6,
+      "failed": 0
+    },
+    "fmt": "passed",
+    "clippy": "passed with -D warnings; all targets",
+    "release_build": "passed; pinned Rust 1.95.0"
+  },
+  "not_implemented": [
+    "production API and OpenAPI contract",
+    "SQLite cache schema",
+    "research cycle",
+    "live JS acceptance pages",
+    "adversarial DNS-rebinding integration test",
+    "second live run on another day",
+    "automatic diagnostic retention/cleanup"
+  ],
+  "release_binary_bytes": 17867760,
+  "artifact_sha256": {
+    "omlx.json": "927494d2c7c68e4c1ae6c28b922aa01753794b4328bbbdb5fe960a9dbb4c1b6c",
+    "omlx-warm.json": "c96d9973d5f85e16d3ea3abe3de72910b0805ccf9c40c4ec30d4274080669560",
+    "browser.json": "18c21e84ea29682958f038dc49b674404df9ede75c79a6938b2646588e8567f0",
+    "browser-detail.json": "e81cc00aee099f5a3664177da8218cf8241578a27f896bfa580e219e5dd54895",
+    "browser-public-origin.json": "322ae86cc9dcb30b0ee7f352545d549c5b9173ccd86763316e6ad3dfd62e16ba",
+    "search/summary.json": "70c8a0e12a4945cb42f996dda9b5cb2fdc4bd8f05cdfb71bc592737b24dc5644",
+    "extract/summary.json": "75b2bf833a074bbfcfb411ff0de1134cc2d746d7325d9eecf5e87ee60a8806c6",
+    "extra/bing-region-200.html": "8a65267ffac85025bb2fd191764c1e5a28a97351515443223b4557196c84166a",
+    "extra/brave-429.html": "4ddd20981b9c5b12413d8d67426097b8b925a305af03a1508b95dee4e2ada468",
+    "extra/google-final-200.html": "563252923ed2fb06a67576e1cf81e62d56722d82c8bb411caf57121d053d54b9",
+    "extra/initial-ddg-en-200.html": "b1953900a283e099bd6d055e2bb2755a0196e5f59a48b766efebf434f256ba37"
+  },
+  "runtime_artifacts_size_bytes": 6551663,
+  "final_source_sha256": {
+    "Cargo.toml": "a994539690c91c48611c2128a098d8297f439eb15c6b5ec7be7de1aae40acbf3",
+    "Cargo.lock": "3920115e32de278b6ceee2179c207af833032f0522d0973ba5a472a48e7dc77d",
+    "rust-toolchain.toml": "7d21c66a15f41bad66b82ed06a289f5dc8a6e3751951d2696bbf20ce296f2b0f",
+    "src/browser.rs": "80a2c6747bd2e6959dc16a677e411319d2e835b5ce55b86d305a1bc81a08b4e4",
+    "src/main.rs": "83f84bcbbb4b171787729d03100010c2029213e7309d15876cbaee907da88260",
+    "src/net.rs": "0d50f463d9f5c017c87e8420352fc4034ca1be13bb3d13218df8958665ad7139",
+    "src/search.rs": "745bb1c2358f81d18048de60e140160b047f315cf9483e14222a487b239422db"
+  },
+  "completed_at": "2026-10-28T11:18:28.973952+03:00"
+}

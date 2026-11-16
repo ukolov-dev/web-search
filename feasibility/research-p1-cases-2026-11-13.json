@@ -1,0 +1,184 @@
+{
+  "schema": "research-p1-frozen-cases-v1",
+  "note": "8 new questions in known source families +4 explicit known controls; not unseen-source qualification. Gold/references never passed runtime. Question language4RU/4EN; output language fixed ru.",
+  "cases": [
+    {
+      "id": "I01",
+      "tool": "research",
+      "question": "По документации Rust Option::take: что возвращается и что остаётся в исходном Option?",
+      "gold_aspects": [
+        "Returns old value.",
+        "Leaves None in original Option."
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/option/enum.Option.html#method.take"
+      ],
+      "role": "new_question_with_known_source_families"
+    },
+    {
+      "id": "I02",
+      "tool": "research",
+      "question": "According to Rust Option::zip documentation, what happens when both inputs are Some and when either input is None?",
+      "gold_aspects": [
+        "Both Some returns Some((s,o)).",
+        "Either None returns None."
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/option/enum.Option.html#method.zip"
+      ],
+      "role": "new_question_with_known_source_families"
+    },
+    {
+      "id": "I03",
+      "tool": "research",
+      "question": "According to Rust Vec::truncate documentation, what happens if the requested length exceeds the current length, and does truncation change allocated capacity?",
+      "gold_aspects": [
+        "Greater length has no effect.",
+        "Allocated capacity does not change."
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/vec/struct.Vec.html#method.truncate"
+      ],
+      "role": "new_question_with_known_source_families"
+    },
+    {
+      "id": "I04",
+      "tool": "research",
+      "question": "По документации Rust str::strip_prefix: снимает ли метод повторяющийся префикс многократно и что вернёт при отсутствии префикса?",
+      "gold_aspects": [
+        "Removes prefix exactly once.",
+        "Returns None when string does not start with prefix."
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/primitive.str.html#method.strip_prefix"
+      ],
+      "role": "new_question_with_known_source_families"
+    },
+    {
+      "id": "I05",
+      "tool": "research",
+      "question": "RFC 8259: are Infinity and NaN permitted JSON numeric values?",
+      "gold_aspects": [
+        "Numeric values unrepresentable by grammar, such as Infinity and NaN, are not permitted."
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc8259.html"
+      ],
+      "role": "new_question_with_known_source_families"
+    },
+    {
+      "id": "I06",
+      "tool": "research",
+      "question": "RFC 8259: обязаны ли все значения внутри одного JSON array иметь одинаковый тип?",
+      "gold_aspects": [
+        "No requirement for values in array to be same type."
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc8259.html"
+      ],
+      "role": "new_question_with_known_source_families"
+    },
+    {
+      "id": "I07",
+      "tool": "research",
+      "question": "RFC 8259: требуется ли lowercase для literal names true, false и null?",
+      "gold_aspects": [
+        "Literal names MUST be lowercase; no other literal names allowed."
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc8259.html"
+      ],
+      "role": "new_question_with_known_source_families"
+    },
+    {
+      "id": "I08",
+      "tool": "research",
+      "question": "RFC 8259: where is insignificant whitespace allowed relative to the six structural characters?",
+      "gold_aspects": [
+        "Before or after any of six structural characters."
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc8259.html"
+      ],
+      "role": "new_question_with_known_source_families"
+    },
+    {
+      "id": "G02",
+      "tool": "research",
+      "question": "RFC 8259: SHOULD или MUST имена членов JSON object быть уникальными?",
+      "gold_aspects": [
+        "The names within an object SHOULD be unique; do not strengthen SHOULD to MUST."
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc8259.html"
+      ],
+      "role": "known_control",
+      "origin_id": "G02"
+    },
+    {
+      "id": "G07",
+      "tool": "research",
+      "question": "По документации Rust str::split_once: что возвращается, если delimiter в строке не найден?",
+      "gold_aspects": [
+        "Returns None if pattern not found."
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/primitive.str.html#method.split_once"
+      ],
+      "role": "known_control",
+      "origin_id": "G07"
+    },
+    {
+      "id": "G08",
+      "tool": "research",
+      "question": "По документации Rust Vec::insert: что произойдёт, если index больше длины вектора?",
+      "gold_aspects": [
+        "Panics if index > len."
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/vec/struct.Vec.html#method.insert"
+      ],
+      "role": "known_control",
+      "origin_id": "G08"
+    },
+    {
+      "id": "G09",
+      "tool": "research",
+      "question": "site:doc.rust-lang.org По документации Vec::pop: что возвращается для пустого вектора?",
+      "gold_aspects": [
+        "Returns None for empty vector."
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/vec/struct.Vec.html#method.pop"
+      ],
+      "group": "scope",
+      "role": "known_control",
+      "source_case": "F09",
+      "origin_id": "G09"
+    }
+  ],
+  "harness": [
+    {
+      "id": "H01",
+      "prompt": "Проверь по RFC 6585: ответ HTTP 511 можно сохранить в кэше или он MUST NOT кэшироваться? Укажи прочитанную норму, не додумывай.\nВызови research ровно один раз с question, равным вопросу выше без этой инструкции, language=ru. Ответ только по его проверенным утверждениям; пропуски обозначь явно.",
+      "gold_aspects": [
+        "511 response MUST NOT be stored by cache"
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc6585.html#section-6"
+      ]
+    },
+    {
+      "id": "H02",
+      "prompt": "Проверь в документации Rust результат Vec::split_off(2) для [1, 2, 3, 4]: что возвращается, что остаётся в исходном Vec и меняется ли его capacity? Покажи значения с квадратными скобками.\nВызови research ровно один раз с question, равным вопросу выше без этой инструкции, language=ru. Ответ только по его проверенным утверждениям; пропуски обозначь явно.",
+      "gold_aspects": [
+        "returns [3,4]",
+        "original contains [1,2]",
+        "original capacity unchanged"
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/vec/struct.Vec.html#method.split_off"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1100 @@
+{
+  "protocol": {
+    "labeler": "single author; blinded to branch outputs, not independent acceptance",
+    "grade": "2 relevant,1 observed incomplete,0 unrelated,null unjudged",
+    "recall": "known relevant captured-source recall; incomplete pool labels are not universal web recall",
+    "unknown_direct": "reported separately, never counted as FP or silently correct",
+    "passage_metric": "actual successful runtime-read positives only; any/all exact support anchors inside selected top3 body windows",
+    "gold_audit": "extra pages for label verification do not enter branch contexts",
+    "full12_novelty": "new strings; five topics overlap earlier development suites; no independent holdout claim"
+  },
+  "cases": [
+    {
+      "id": "h01",
+      "query": "site:docs.python.org weakref.finalize atexit exception interpreter shutdown",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://docs.python.org/3.10/whatsnew/changelog.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://docs.python.org/3.11/whatsnew/changelog.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://docs.python.org/3.12/whatsnew/changelog.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://docs.python.org/3/c-api/interp-lifecycle.html",
+          "grade": 1,
+          "basis": "blinded extracted snapshot; incomplete for actual mandatory relationship",
+          "support": [],
+          "snapshot": "runs/reranker-component-2026-10-30/capture/h01-C004-document.json",
+          "text_hash": "ff4b7a721c4b37cc533e495809540563a1a8ef50b9b40f25cfc4ff55e6b6c82e",
+          "normalized_text_hash": "21f3e47676e995de6c26cbf5e367492646aadd9831fff64fea858bafacdbb39f"
+        },
+        {
+          "id": "C005",
+          "url": "https://docs.python.org/3/genindex-all.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://docs.python.org/3/library/atexit.html",
+          "grade": 1,
+          "basis": "blinded extracted snapshot; incomplete for actual mandatory relationship",
+          "support": [],
+          "snapshot": "runs/reranker-component-2026-10-30/capture/h01-C006-document.json",
+          "text_hash": "1ea0371fb032efd68393d8381cf32d3f4248528f425a7141223487cd853c1248",
+          "normalized_text_hash": "42d4ae2360b5f13d70afcfc0642ee9bc0762b4ce711ca6271fe61c82ebe1ff64"
+        },
+        {
+          "id": "C007",
+          "url": "https://docs.python.org/3/library/exceptions.html",
+          "grade": 1,
+          "basis": "blinded extracted snapshot; incomplete for actual mandatory relationship",
+          "support": [],
+          "snapshot": "runs/reranker-component-2026-10-30/capture/h01-C007-document.json",
+          "text_hash": "d94f55228fc4d1e77583a418d9df078f68419f72d938a15b6b4652de8ff2344d",
+          "normalized_text_hash": "aa2e570978e57a68982cd7ffb495aa13126285fcd4e8af9372b08cdd2f434eb5"
+        },
+        {
+          "id": "C008",
+          "url": "https://docs.python.org/3/library/multiprocessing.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://docs.python.org/3/library/weakref.html",
+          "grade": 2,
+          "basis": "blinded captured source directly helps the requested relationship; no complete answer required",
+          "support": [
+            {
+              "quote": "Exceptions raised by finalizer callbacks during garbage collection will be shown on the standard error output, but cannot be propagated. They",
+              "start": 10193,
+              "end": 10334
+            },
+            {
+              "quote": "A finalizer will never invoke its callback during the later part of the interpreter shutdown when module globals are liable to have been re",
+              "start": 10660,
+              "end": 10799
+            },
+            {
+              "quote": "each remaining live finalizer is called unless its atexit attribute has been set to false. They are called in reverse order of creat",
+              "start": 10523,
+              "end": 10655
+            }
+          ],
+          "snapshot": "runs/reranker-component-2026-10-30/gold-audit/h01-C009-document.json",
+          "text_hash": "a79a5cb102f1dbab9bc8e6107031265493b84a4b5f08c55347c45c4a1e4f4334",
+          "normalized_text_hash": "fe8c3ac11b3b7ee35d48393837e623a29d6ab95a4ffab857065b9126d3cebffe"
+        },
+        {
+          "id": "C010",
+          "url": "https://docs.python.org/ko/3/glossary.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "unrelated partner navigation",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "h02",
+      "query": "site:doc.rust-lang.org Condvar wait spurious wakeups wait_while predicate",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://doc.rust-lang.org/nightly/cargo/CHANGELOG.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://doc.rust-lang.org/src/std/sync/nonpoison/condvar.rs.html",
+          "grade": 2,
+          "basis": "blinded captured source directly helps the requested relationship; no complete answer required",
+          "support": [
+            {
+              "quote": "Note that this function is susceptible to spurious wakeups. Condition 81 /// variables normally have a boolean predicate associated w",
+              "start": 2578,
+              "end": 2711
+            },
+            {
+              "quote": "while condition(guard.deref_mut()) { 179 self.wait(guard); 180 } 181 } 182 183 /// Waits on this condition va",
+              "start": 6038,
+              "end": 6147
+            }
+          ],
+          "snapshot": "runs/reranker-component-2026-10-30/capture/h02-C002-document.json",
+          "text_hash": "7974fee3586f1e7d09766a3037578cd20fa6991e8fd5da2f65f3bca7b463204d",
+          "normalized_text_hash": "5fdb607a62643efe8b90093ddbf3e046e994c8541c2d99fd6a1e41b0e13d31a1"
+        },
+        {
+          "id": "C003",
+          "url": "https://doc.rust-lang.org/src/std/sync/poison/condvar.rs.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://doc.rust-lang.org/stable/cargo/CHANGELOG.html",
+          "grade": 1,
+          "basis": "blinded extracted snapshot; incomplete for actual mandatory relationship",
+          "support": [],
+          "snapshot": "runs/reranker-component-2026-10-30/capture/h02-C004-document.json",
+          "text_hash": "14d38bc326a3de13ffe39a3d475195ebf98309b4cf543479c92e95295e744751",
+          "normalized_text_hash": "f971b4c0fc173504a1759e6a037e7f3324caf1913c2ce36566fb6462fb2a3edd"
+        },
+        {
+          "id": "C005",
+          "url": "https://doc.rust-lang.org/stable/releases.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://doc.rust-lang.org/std/sync/nonpoison/struct.Condvar.html",
+          "grade": 2,
+          "basis": "blinded captured source directly helps the requested relationship; no complete answer required",
+          "support": [
+            {
+              "quote": "this function is susceptible to spurious wakeups. Condition variables normally have a boolean predicate associated with the",
+              "start": 1988,
+              "end": 2111
+            },
+            {
+              "quote": "Blocks the current thread until the provided condition becomes false. condition is checked immediately; if not met (returns true), this will wa",
+              "start": 3122,
+              "end": 3265
+            }
+          ],
+          "snapshot": "runs/reranker-component-2026-10-30/capture/h02-C006-document.json",
+          "text_hash": "2450bbf9c4dcf079aeb5753d486d0919e7de7e08aae52fa96ebdabe2b54a133b",
+          "normalized_text_hash": "c952f956ce76f2880b14c6e5e9ab475b46413f204f33f9f31fb88dfd0f3ca9a7"
+        },
+        {
+          "id": "C007",
+          "url": "https://doc.rust-lang.org/std/sync/struct.Condvar.html",
+          "grade": 2,
+          "basis": "blinded captured source directly helps the requested relationship; no complete answer required",
+          "support": [
+            {
+              "quote": "this function is susceptible to spurious wakeups. Condition variables normally have a boolean predicate associated with the",
+              "start": 1978,
+              "end": 2101
+            },
+            {
+              "quote": "Blocks the current thread until the provided condition becomes false. condition is checked immediately; if not met (returns true), this will wa",
+              "start": 3227,
+              "end": 3370
+            }
+          ],
+          "snapshot": "runs/reranker-component-2026-10-30/capture/h02-C007-document.json",
+          "text_hash": "5163e04b69c922ca694a91277ba4e4239a6338ef5ba38b39c5e2314f8aab131f",
+          "normalized_text_hash": "b54603ac6fa0b80de633a5c75de8d52d36b969bc937de48d2b11da08236bc352"
+        },
+        {
+          "id": "C008",
+          "url": "https://doc.rust-lang.org/std/thread/fn.park.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "h03",
+      "query": "site:postgresql.org CREATE INDEX CONCURRENTLY transaction block invalid index failure",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "unrelated partner navigation",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://www.postgresql.org/docs/11/release-11-14.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://www.postgresql.org/docs/17/release-17-11.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://www.postgresql.org/docs/current/amcheck.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://www.postgresql.org/docs/current/release-18-6.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://www.postgresql.org/docs/current/sql-altertable.html",
+          "grade": 1,
+          "basis": "blinded extracted snapshot; incomplete for actual mandatory relationship",
+          "support": [],
+          "snapshot": "runs/reranker-component-2026-10-30/capture/h03-C006-document.json",
+          "text_hash": "553a56b7c79738957ce8d16f2220e057a3592526b1ba299e993d11391b9a266a",
+          "normalized_text_hash": "011f3d5da58f24bfd685af4171b389cc33185dcf00bcdefcb538853480c2a2bd"
+        },
+        {
+          "id": "C007",
+          "url": "https://www.postgresql.org/docs/current/sql-createindex.html",
+          "grade": 2,
+          "basis": "blinded captured source directly helps the requested relationship; no complete answer required",
+          "support": [
+            {
+              "quote": "will fail but leave behind an “invalid” index. This index will be ignored for querying purposes because it might be inco",
+              "start": 14362,
+              "end": 14486
+            },
+            {
+              "quote": "CREATE INDEX command can be performed within a transaction block, but CREATE INDEX CONCURRENTLY cannot. Concurrent builds for indexes on partitioned tables are currently not sup",
+              "start": 15994,
+              "end": 16171
+            }
+          ],
+          "snapshot": "runs/reranker-component-2026-10-30/capture/h03-C007-document.json",
+          "text_hash": "722d4ab2b7ff1ffe50d7615c67beb8b6990d74b9114e1b5943aba71b1782c225",
+          "normalized_text_hash": "8799f00b414ef988b7af920b8eafb47ab3d761d9a240a9856c2b0715ff7ce79c"
+        },
+        {
+          "id": "C008",
+          "url": "https://www.postgresql.org/docs/current/sql-reindex.html",
+          "grade": 1,
+          "basis": "blinded extracted snapshot; incomplete for actual mandatory relationship",
+          "support": [],
+          "snapshot": "runs/reranker-component-2026-10-30/capture/h03-C008-document.json",
+          "text_hash": "62840e59ec4ea0c8355b7e760f2506aca9cf82c67c0e1504cdae81428074303b",
+          "normalized_text_hash": "30f6d60b3dabe8ef318f9f0c31eac20fc5dadeb47bccbe986c35e7f03302e14c"
+        },
+        {
+          "id": "C009",
+          "url": "https://www.postgresql.org/docs/release/10.19/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://www.postgresql.org/docs/release/12.1/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://www.postgresql.org/docs/release/13.14/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://www.postgresql.org/docs/release/13.2/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://www.postgresql.org/docs/release/14.10/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://www.postgresql.org/docs/release/16.12/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://www.postgresql.org/docs/release/9.2.2/",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://www.postgresql.org/message-id/28303.1790158015%40localhost",
+          "grade": 1,
+          "basis": "blinded extracted snapshot; incomplete for actual mandatory relationship",
+          "support": [],
+          "snapshot": "runs/reranker-component-2026-10-30/capture/h03-C016-document.json",
+          "text_hash": "62929e89b6323eeed08e0d7d79c14d921c75bab8f986e283eb59ccafedc7feb6",
+          "normalized_text_hash": "f0d68d4865f3170931a95d7d0571da1d38717bf803d2b2a16618c711575ad4c3"
+        },
+        {
+          "id": "C017",
+          "url": "https://www.postgresql.org/message-id/attachment/79585/drop_index_concurrently.v5.patch",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://wiki.postgresql.org/wiki/Operations_cheat_sheet",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "h04",
+      "query": "site:sqlite.org journal_size_limit WAL checkpoint truncate size limit",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://www.sqlite.org/c3ref/c_fcntl_begin_atomic_write.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://www.sqlite.org/c3ref/constlist.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://www.sqlite.org/c3ref/funclist.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://www.sqlite.org/c3ref/wal_checkpoint_v2.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://www.sqlite.org/capi3ref.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://www.sqlite.org/compile.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://www.sqlite.org/fileformat.html",
+          "grade": 1,
+          "basis": "blinded extracted snapshot; incomplete for actual mandatory relationship",
+          "support": [],
+          "snapshot": "runs/reranker-component-2026-10-30/capture/h04-C007-document.json",
+          "text_hash": "4ac384b740412deb6a9f17d569dba6378e5b8f53eddba760f13062acbee591a1",
+          "normalized_text_hash": "19b7dec5d21a6f29f1bda0cc6acf76a002e164268cc4db16ba0bd2d24cecbea4"
+        },
+        {
+          "id": "C008",
+          "url": "https://www.sqlite.org/keyword_index.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://sqlite.org/lpc2019/doc/trunk/briefing.md",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://sqlite.org/oldnews.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://www.sqlite.org/opcode.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://www.sqlite.org/pragma.html",
+          "grade": 2,
+          "basis": "blinded captured source directly helps the requested relationship; no complete answer required",
+          "support": [
+            {
+              "quote": "The journal_size_limit pragma may be used to limit the size of rollback-journal and WAL files left in the file-system after transactio",
+              "start": 41862,
+              "end": 41996
+            },
+            {
+              "quote": "if the journal or WAL file is larger it is truncated to the limit. The second form of the pragma listed above is used to set a new limit in ",
+              "start": 42205,
+              "end": 42345
+            }
+          ],
+          "snapshot": "runs/reranker-component-2026-10-30/capture/h04-C012-document.json",
+          "text_hash": "fb83c7da94926eb6831f9f8704190d2fd9eb46442ce4c5864adbda80b581fe05",
+          "normalized_text_hash": "97ce03e13ec9d2d0977c4bc6d7f18a7172a00af73bf31d17a5e6b20d1d4469a2"
+        },
+        {
+          "id": "C013",
+          "url": "https://www.sqlite.org/wal.html",
+          "grade": 2,
+          "basis": "blinded captured source directly helps the requested relationship; no complete answer required",
+          "support": [
+            {
+              "quote": "The checkpoint does not normally truncate the WAL file (unless the journal_size_limit pragma is set). Instead, it merely causes S",
+              "start": 17605,
+              "end": 17734
+            }
+          ],
+          "snapshot": "runs/reranker-component-2026-10-30/capture/h04-C013-document.json",
+          "text_hash": "14d2e34f3fbbf33dd07e64202f31edd2cf327d462dba92a335d06653b79b72bb",
+          "normalized_text_hash": "da4857cd06f0d2f061d3d469cb2f0bc1347c036ae4ea71458fdeb741ea29e16c"
+        },
+        {
+          "id": "C014",
+          "url": "https://sqlite.org/walformat.html",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://sqlite.org/zipvfs/doc/trunk/www/howitworks.wiki",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "h05",
+      "query": "site:docs.docker.com tmpfs mount reboot memory swap persistence",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://docs.docker.com/ai/sandboxes/governance/access-controls/filesystem",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://docs.docker.com/build/builders/drivers/docker-container",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://docs.docker.com/build/cache/optimize",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://docs.docker.com/engine/deprecated",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://docs.docker.com/engine/storage/drivers/btrfs-driver",
+          "grade": 1,
+          "basis": "blinded extracted snapshot; incomplete for actual mandatory relationship",
+          "support": [],
+          "snapshot": "runs/reranker-component-2026-10-30/capture/h05-C005-document.json",
+          "text_hash": "a8ba36a79245038feec1e1385fcafb64e64aa0aaef276ff58f8cce6413892344",
+          "normalized_text_hash": "53a7cb18af95761c5827a064eec2fbb57d52c3a39fb3825d1a47e146a67bcf2d"
+        },
+        {
+          "id": "C006",
+          "url": "https://docs.docker.com/engine/storage/drivers/device-mapper-driver",
+          "grade": 1,
+          "basis": "blinded extracted snapshot; incomplete for actual mandatory relationship",
+          "support": [],
+          "snapshot": "runs/reranker-component-2026-10-30/capture/h05-C006-document.json",
+          "text_hash": "2551a5a7e6c6e7a713e9d4eed0a457c82ab25f2516d9ea555b8a51af193af24b",
+          "normalized_text_hash": "3e2b5d8d9066d528a22e703276e31aa17e71f85916faab73396192c646105d0f"
+        },
+        {
+          "id": "C007",
+          "url": "https://docs.docker.com/engine/storage/drivers/zfs-driver",
+          "grade": 1,
+          "basis": "blinded extracted snapshot; incomplete for actual mandatory relationship",
+          "support": [],
+          "snapshot": "runs/reranker-component-2026-10-30/capture/h05-C007-document.json",
+          "text_hash": "806b25ab0a097d2b588b128349b09eae8e7d4bc5fef1d1498316ce3495740d4d",
+          "normalized_text_hash": "073b39c225dfba77711f683a8c2e250020d9edf834e96f29a6622e00c9bd0750"
+        },
+        {
+          "id": "C008",
+          "url": "https://docs.docker.com/engine/storage/tmpfs",
+          "grade": 2,
+          "basis": "blinded captured source directly helps the requested relationship; no complete answer required",
+          "support": [
+            {
+              "quote": "When the container stops, the tmpfs mount is removed, and files written there won't be persisted. Because tmpfs stores data in ",
+              "start": 516,
+              "end": 643
+            },
+            {
+              "quote": "the temporary data may be written to a swap file, and thereby persisted to the filesystem. Mounting over existing data If y",
+              "start": 1356,
+              "end": 1479
+            }
+          ],
+          "snapshot": "runs/reranker-component-2026-10-30/capture/h05-C008-document.json",
+          "text_hash": "829be6d4330332837064990a47552dcb6944eba9175e40b9531f0aa6c7f90d55",
+          "normalized_text_hash": "fb1e7a3eba31e68241b75679ef85a4b84f84770ec513b74e2da6987238d6dd05"
+        },
+        {
+          "id": "C009",
+          "url": "https://docs.docker.com/reference/cli/docker/container/run",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://docs.docker.com/reference/compose-file/services",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "h06",
+      "query": "site:developer.mozilla.org flex item min-width auto min-content shrink",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://developer.mozilla.org/de/docs/Web/CSS/Reference/Properties/flex-shrink",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios",
+          "grade": 2,
+          "basis": "blinded captured source directly helps the requested relationship; no complete answer required",
+          "support": [
+            {
+              "quote": "neither will shrink below their min-content width. Play around with the different values: as with flex-grow, you can use dec",
+              "start": 14535,
+              "end": 14659
+            }
+          ],
+          "snapshot": "runs/reranker-component-2026-10-30/capture/h06-C003-document.json",
+          "text_hash": "d6051f0faf564cc501d2f30502f4a4723facadbbc5c030efd3529ee1ddfb3551",
+          "normalized_text_hash": "3134d34d720ce8836cfc7fe69d57c9c4e3d8fc83a1e57ead520202e1b0b53394"
+        },
+        {
+          "id": "C004",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex-basis",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex-shrink",
+          "grade": 1,
+          "basis": "blinded extracted snapshot; incomplete for actual mandatory relationship",
+          "support": [],
+          "snapshot": "runs/reranker-component-2026-10-30/capture/h06-C008-document.json",
+          "text_hash": "8359790fce15a4b40a6114c05bae5b362071d35d0a23469cb117bb0e11e2e97e",
+          "normalized_text_hash": "5dd641ffa8e6b8cd07aca8dfd7ecb18c6e22f23db264354dc362897c6fee43e7"
+        },
+        {
+          "id": "C009",
+          "url": "https://developer.mozilla.org/fr/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://developer.mozilla.org/fr/docs/Web/CSS/Reference/Properties/flex-shrink",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://developer.mozilla.org/ja/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Properties/flex",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Properties/flex-shrink",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://developer.mozilla.org/ko/docs/Web/CSS/Reference/Properties/flex",
+          "grade": 2,
+          "basis": "blinded captured source directly helps the requested relationship; no complete answer required",
+          "support": [
+            {
+              "quote": "기본적으로 플렉스 아이템은 콘텐츠의 최소 너비 미만으로 줄어들지 않습니다. min-width나 min-height 값을 지정해 바꿀 수 있습니다. 구문 css /* Keyword values */ flex: ",
+              "start": 1408,
+              "end": 1618
+            }
+          ],
+          "snapshot": "runs/reranker-component-2026-10-30/capture/h06-C014-document.json",
+          "text_hash": "367054e91b6a561c555c911c89c832970fd70bf948f8853068b9c8dfde59f6c9",
+          "normalized_text_hash": "8a2602cd7958c2051c4ab8697b82d9653d419704da170f8e412be429adb9fc0a"
+        },
+        {
+          "id": "C015",
+          "url": "https://developer.mozilla.org/ko/docs/Web/CSS/Reference/Properties/flex-basis",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://developer.mozilla.org/pt-BR/docs/Web/CSS/Reference/Properties/flex",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://developer.mozilla.org/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios",
+          "grade": 2,
+          "basis": "blinded captured source directly helps the requested relationship; no complete answer required",
+          "support": [
+            {
+              "quote": "它们绝不会小于 min-content 的大小。随着盒子变得越来越小，第三个元素随后从空间中溢出。 html <div class=\"box\"> <div>Item One</div> <div>",
+              "start": 12191,
+              "end": 12361
+            }
+          ],
+          "snapshot": "runs/reranker-component-2026-10-30/capture/h06-C017-document.json",
+          "text_hash": "58575b65d6cd26bace07882f102d4c56b5697ae68dc478d78cee8f6a1d8ed794",
+          "normalized_text_hash": "a7ab4fddb25be0e2d045c7ed2ff5b52015d469387e4b03313e0b66567c7b7f77"
+        },
+        {
+          "id": "C018",
+          "url": "https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference/Properties/flex-shrink",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "unrelated partner navigation",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "h07",
+      "query": "site:git-scm.com git restore staged worktree source restore index difference",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://git-scm.com/docs/git-checkout",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://git-scm.com/docs/git-checkout/2.0.5",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://git-scm.com/docs/git-commit/2.25.0",
+          "grade": 1,
+          "basis": "blinded extracted snapshot; incomplete for actual mandatory relationship",
+          "support": [],
+          "snapshot": "runs/reranker-component-2026-10-30/capture/h07-C003-document.json",
+          "text_hash": "9d1b3c3f15f4517c4430da31abe7e393367f430153b8c2751a017775f92c62a5",
+          "normalized_text_hash": "37e79f35c5dc2c6a8dff2674b9b13bad0abe0f452b62128aa55eb13d5b067f82"
+        },
+        {
+          "id": "C004",
+          "url": "https://git-scm.com/docs/git-diff-index",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://git-scm.com/docs/git-format-patch",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://git-scm.com/docs/git-restore/2.25.0",
+          "grade": 2,
+          "basis": "blinded captured source directly helps the requested relationship; no complete answer required",
+          "support": [
+            {
+              "quote": "By default, the restore sources for working tree and the index are the index and HEAD respectively. --source could be used to specify a commit as the restore source. See \"Re",
+              "start": 716,
+              "end": 889
+            },
+            {
+              "quote": "restore both the working tree and the index with --staged --worktree. By default, the restore sources for working tree and the index are the in",
+              "start": 646,
+              "end": 789
+            }
+          ],
+          "snapshot": "runs/reranker-component-2026-10-30/capture/h07-C006-document.json",
+          "text_hash": "73553c12bc0806d04006d0122ff9e1db19c085dac538928fb295d2100d1107a4",
+          "normalized_text_hash": "61176140258569feeb76b3451a3f7336c8cdaacb94f0470a8d6a241be80f7bca"
+        },
+        {
+          "id": "C007",
+          "url": "https://git-scm.com/docs/git-restore/2.35.0",
+          "grade": 2,
+          "basis": "blinded captured source directly helps the requested relationship; no complete answer required",
+          "support": [
+            {
+              "quote": "By default, if --staged is given, the contents are restored from HEAD, otherwise from the index. Use --source to restore from a different commit",
+              "start": 716,
+              "end": 860
+            },
+            {
+              "quote": "restore both the working tree and the index with --staged --worktree. By default, if --staged is given, the contents are restored from HEAD, ot",
+              "start": 646,
+              "end": 789
+            }
+          ],
+          "snapshot": "runs/reranker-component-2026-10-30/capture/h07-C007-document.json",
+          "text_hash": "6e2cfcbbf76ca4b0561fa66efd638e5c699bc302ba8aeac2a9187fb6faf262f0",
+          "normalized_text_hash": "11ceecc35b45fafdba2bc9e0e3e6bc333774c9cf6cf5ed7d70313c3420a7edaa"
+        },
+        {
+          "id": "C008",
+          "url": "https://git-scm.com/docs/git-restore/es",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://git-scm.com/docs/git-restore/fr",
+          "grade": 2,
+          "basis": "blinded captured source directly helps the requested relationship; no complete answer required",
+          "support": [
+            {
+              "quote": "Par défaut, si --staged est donné, le contenu est restauré depuis HEAD, sinon depuis l’index. Utilisez --source pour restaurer à partir d’un comm",
+              "start": 826,
+              "end": 979
+            },
+            {
+              "quote": "restaurer à la fois l’arbre de travail et l’index avec --staged --worktree. Par défaut, si --staged est donné, le contenu est restauré depuis HEAD, s",
+              "start": 745,
+              "end": 902
+            }
+          ],
+          "snapshot": "runs/reranker-component-2026-10-30/capture/h07-C009-document.json",
+          "text_hash": "40e7127698054879f487506049597d7aab1ac8bb9ec886e8704d9061a3182065",
+          "normalized_text_hash": "b3143a422196bb6d2a37db49c3f570407af9e4ff36fa9fc08228c4b7836faf16"
+        },
+        {
+          "id": "C010",
+          "url": "https://git-scm.com/docs/git-restore/ru",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://git-scm.com/docs/git-restore/sv",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://git-scm.com/docs/git-restore/uk",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://git-scm.com/docs/git-restore/zh_HANS-CN",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://git-scm.com/docs/git-status",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://git-scm.com/docs/git-update-index",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://git-scm.com/docs/git/2.39.4",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://git-scm.com/docs/gitcli",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://git-scm.com/docs/sparse-checkout",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://git-scm.com/docs/user-manual/2.56.0",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C020",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "unrelated partner navigation",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "h08",
+      "query": "site:developer.mozilla.org If-Range strong ETag weak validator range request",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://developer.mozilla.org/de/docs/Web/HTTP/Reference/Headers/ETag",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Conditional_requests",
+          "grade": 1,
+          "basis": "blinded extracted snapshot; incomplete for actual mandatory relationship",
+          "support": [],
+          "snapshot": "runs/reranker-component-2026-10-30/capture/h08-C002-document.json",
+          "text_hash": "7e0f15e56bd727d003078756e3edac034b13133da6eb62575075489a9eeb0f19",
+          "normalized_text_hash": "f6317046d732305f6ebde9ec54f6626189d587553e68a978eedb87235dcc4f37"
+        },
+        {
+          "id": "C003",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Accept-Ranges",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/ETag",
+          "grade": 1,
+          "basis": "blinded extracted snapshot; incomplete for actual mandatory relationship",
+          "support": [],
+          "snapshot": "runs/reranker-component-2026-10-30/capture/h08-C004-document.json",
+          "text_hash": "c43dedfa39696d9e33fbd60f84cf75c5a00240925b0266d34408d0589025217f",
+          "normalized_text_hash": "4671beb0d2c680e7c50a027dbb59c4b5c63beeb89f6f86e518439c95c9768de1"
+        },
+        {
+          "id": "C005",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/If-Range",
+          "grade": 2,
+          "basis": "blinded captured source directly helps the requested relationship; no complete answer required",
+          "support": [
+            {
+              "quote": "A weak entity tag (one prefixed by W/) must not be used in this header. <day-name> One of Mon, Tue, Wed, Thu, Fri, Sat, or Sun (case-sensitive). ",
+              "start": 1132,
+              "end": 1277
+            }
+          ],
+          "snapshot": "runs/reranker-component-2026-10-30/gold-audit/h08-C005-document.json",
+          "text_hash": "90db21afe102cb790b7d801ecd1a9793b86c39a53c62b5bdff22560d8cafd9db",
+          "normalized_text_hash": "5577e80635af539ec47655fb0fd2710b708328df2d93cfddb706d95222a643a5"
+        },
+        {
+          "id": "C006",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Input_validation",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://developer.mozilla.org/fr/docs/Web/HTTP/Reference/Headers/ETag",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://developer.mozilla.org/ja/docs/Web/HTTP/Guides/Conditional_requests",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://developer.mozilla.org/ko/docs/Web/HTTP/Guides/Conditional_requests",
+          "grade": 1,
+          "basis": "blinded extracted snapshot; incomplete for actual mandatory relationship",
+          "support": [],
+          "snapshot": "runs/reranker-component-2026-10-30/capture/h08-C009-document.json",
+          "text_hash": "9fd402a8b0a32d8ae16f41e15b2ebd0e5859761f6c3324b02434c4a6187096a1",
+          "normalized_text_hash": "2fae59bf86b20b0839933fb9b872f498de09a7e22cb43c9d261e534d901be1d5"
+        },
+        {
+          "id": "C010",
+          "url": "https://developer.mozilla.org/ru/docs/Web/HTTP/Guides/Conditional_requests",
+          "grade": 1,
+          "basis": "blinded extracted snapshot; incomplete for actual mandatory relationship",
+          "support": [],
+          "snapshot": "runs/reranker-component-2026-10-30/capture/h08-C010-document.json",
+          "text_hash": "69bbf209e180f54b83365b0fc8460914436fe6a367bf6ce9ef76e52670f40a83",
+          "normalized_text_hash": "ed858d1f61f27de59a06e544c83ae54c4f573a104be7813b041c6a13b9d198fe"
+        },
+        {
+          "id": "C011",
+          "url": "https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Guides/Conditional_requests",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Guides/Caching",
+          "grade": null,
+          "basis": "unjudged; no full captured page",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "unrelated partner navigation",
+          "support": []
+        }
+      ]
+    }
+  ]
+}

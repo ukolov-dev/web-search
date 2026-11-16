@@ -1,0 +1,56 @@
+{
+  "query": "новости Воронежа",
+  "candidate": {
+    "url": "https://www.slunecnice.cz/android/sw/novosti-voroneza/",
+    "title": "Новости Воронежа - Slunečnice.cz",
+    "snippet": "Новости Воронежа 1.6 download - Приложение позволяет читать новости Воронежа и Воронежской области. Новости берутся с лучших местных сайтов. Все права…",
+    "document_http_status": null,
+    "fetch_method": "unknown",
+    "id": "C009"
+  },
+  "coverage_response": {
+    "subject": "новости Воронежа",
+    "anchors": [
+      "новости",
+      "Воронежа"
+    ],
+    "labels": {
+      "C009": {
+        "checks": [
+          {
+            "passages": [
+              "T",
+              "S"
+            ],
+            "quote": "Новости Воронежа 1.6 download - Приложение позволяет читать новости Воронежа и Воронежской области.",
+            "status": "supported"
+          },
+          {
+            "passages": [
+              "T",
+              "S"
+            ],
+            "quote": "Новости Воронежа 1.6 download - Приложение позволяет читать новости Воронежа и Воронежской области.",
+            "status": "supported"
+          },
+          {
+            "passages": [
+              "T",
+              "S"
+            ],
+            "quote": "Новости Воронежа 1.6 download - Приложение позволяет читать новости Воронежа и Воронежской области.",
+            "status": "supported"
+          },
+          {
+            "passages": [],
+            "quote": "",
+            "status": "missing"
+          }
+        ]
+      }
+    }
+  },
+  "original_audit_supported": true,
+  "original_read_attempted": false,
+  "source": "runs/voronezh-news-2026-11-03/casual-query/n00-ranked.json"
+}

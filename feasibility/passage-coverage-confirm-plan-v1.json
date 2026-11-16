@@ -1,0 +1,255 @@
+{
+  "protocol": "Frozen new4 query cohort for data-path confirmation; query-only planning, no source, network, model or label use",
+  "created_at_utc": "2026-10-30T16:51:26.189187+00:00",
+  "cases_file": "feasibility/passage-coverage-confirm-cases-v1.json",
+  "cases_sha256": "dbab276c27a21715bb51d22f37df5aa404100d8318441286c4d2c4da929670ef",
+  "counts": {
+    "new_cases": 4,
+    "forms_per_case": 1,
+    "distinct_api_operations": 4,
+    "historical_case_files_scanned": 22,
+    "historical_query_rows": 191,
+    "historical_query_and_form_rows": 357,
+    "unique_historical_normalized_queries_and_forms": 162,
+    "exact_normalized_query_overlaps": 0,
+    "final_api_operation_overlap_hits": 0,
+    "within_cohort_duplicate_queries": 0,
+    "source_gold_labels": 0,
+    "predictions": 0,
+    "model_calls": 0,
+    "network_calls": 0
+  },
+  "overlap_check": {
+    "normalization": "Unicode NFKC, casefold, whitespace collapse. Queries and all string translation forms from every listed historical case file plus b17-policy.json.",
+    "original20_included": "feasibility/b17-policy.json",
+    "prior_fresh12_included": "feasibility/passage-coverage-cases-v1.json",
+    "prior_final8_included": "feasibility/passage-coverage-final-cases-v1.json",
+    "collisions": [],
+    "final_operation_patterns": {
+      "h01": "\\b(?:rstrip|removesuffix)\\b",
+      "h02": "\\bEXPIRE\\b",
+      "h03": "Object\\.freeze",
+      "h04": "\\b(?:dup|dup2)\\b"
+    },
+    "final_operation_hits": {
+      "h01": [],
+      "h02": [],
+      "h03": [],
+      "h04": []
+    },
+    "manual_subject_operation_check": "rstrip/removesuffix, Redis EXPIRE, Object.freeze and POSIX dup/dup2 are absent from historical operations. Prior Redis SET NX PX GET is a distinct operation and requested relation. Python/JavaScript/Linux as broad languages/platforms do not by themselves define a repeated API relation.",
+    "pre_freeze_replacement": {
+      "discarded_suggestion": "POSIX rename overwrite atomicity existing open descriptors",
+      "reason": "Historical reliability-holdout h04 already asks Rust std fs rename cross filesystem existing target replacement; rename/replacement materially overlaps.",
+      "replacement": "POSIX dup/dup2 open-file-description sharing versus descriptor flags",
+      "when": "Before this cohort freeze and before any acquisition or predictions; not a result-driven substitution."
+    },
+    "closest_lexical_overlap_only": [
+      {
+        "id": "h01",
+        "max_token_jaccard": 0.1333,
+        "historical_file": "feasibility/recall-cases-v1.json",
+        "historical_id": "r03",
+        "historical_query": "Python asyncio shield wait_for timeout cancellation difference"
+      },
+      {
+        "id": "h02",
+        "max_token_jaccard": 0.15,
+        "historical_file": "feasibility/evidence-layer-cases-v1.json",
+        "historical_id": "n11",
+        "historical_query": "Redis SET NX PX GET return value existing key documentation"
+      },
+      {
+        "id": "h03",
+        "max_token_jaccard": 0.1429,
+        "historical_file": "feasibility/evidence-layer-cases-v1.json",
+        "historical_id": "n10",
+        "historical_query": "JavaScript Array sort toSorted mutation ES2023 difference"
+      },
+      {
+        "id": "h04",
+        "max_token_jaccard": 0.0526,
+        "historical_file": "feasibility/classifier-relation-cases-v1.json",
+        "historical_id": "s10",
+        "historical_query": "Linux open O_NOFOLLOW final component symbolic links earlier components"
+      }
+    ],
+    "inventory": [
+      {
+        "file": "feasibility/agent-e2e-cases.json",
+        "sha256": "e8c948dd030a8013d131f4507896687e95c5f5a439cb87113bcdb265bac49262",
+        "query_rows": 0,
+        "form_rows": 0
+      },
+      {
+        "file": "feasibility/b17-policy.json",
+        "sha256": "1e83c13aa670b1a656262542eb5c34b21f559aca8fd0da179ab704097dcc995e",
+        "query_rows": 20,
+        "form_rows": 38
+      },
+      {
+        "file": "feasibility/classifier-relation-cases-v1.json",
+        "sha256": "fae408268c8b07360a46309aa8b952a2a9ea6197a2d205dba2a2db86072614bc",
+        "query_rows": 12,
+        "form_rows": 12
+      },
+      {
+        "file": "feasibility/direct-coverage-cases-v1.json",
+        "sha256": "322eb6d6da47e8f05f64e32d50c7347f462e5ec31d4849330bcf3d3a5b010445",
+        "query_rows": 8,
+        "form_rows": 8
+      },
+      {
+        "file": "feasibility/docs-evidence-cases.json",
+        "sha256": "fe652a0d569fd6dc5333cc44e807ea14f698e78163212f5fc1e9b807cff6d4b8",
+        "query_rows": 1,
+        "form_rows": 0
+      },
+      {
+        "file": "feasibility/evidence-layer-cases-v1.json",
+        "sha256": "38fd42a05b6c8dce9c5fdc2a9bf878c95c9c85b51e1c613c82d715fbbfad584f",
+        "query_rows": 12,
+        "form_rows": 12
+      },
+      {
+        "file": "feasibility/extract-cases.json",
+        "sha256": "fcf36ec1eb73954fab1cf33bebde665dac4d48b772c6b6ddd9c3c3e779e5ce2d",
+        "query_rows": 0,
+        "form_rows": 0
+      },
+      {
+        "file": "feasibility/extraction-selection-cases-v1.json",
+        "sha256": "850f39dd15808600c297e2d516c2e7784d805c47027e327f91aab66638fecf03",
+        "query_rows": 8,
+        "form_rows": 8
+      },
+      {
+        "file": "feasibility/locale-research-cases.json",
+        "sha256": "ee3a6ca2abb7435e5a46d480435d62a7548db71aa4855c1e2a61594c9b9ecc15",
+        "query_rows": 2,
+        "form_rows": 0
+      },
+      {
+        "file": "feasibility/passage-coverage-cases-v1.json",
+        "sha256": "0fce8d484273e22353147a1ff3e4220416be71d5a383ea1e90ab3069a6d2912d",
+        "query_rows": 12,
+        "form_rows": 12
+      },
+      {
+        "file": "feasibility/passage-coverage-final-cases-v1.json",
+        "sha256": "e1b9355fdaa7c8830fbad5beef9feb0ebf472bdc43d447e45a751ffc07298134",
+        "query_rows": 8,
+        "form_rows": 8
+      },
+      {
+        "file": "feasibility/recall-cases-v1.json",
+        "sha256": "527f03621c8623705afa68e5068d9691e30a9c7bc2883329eb941df2e88923ce",
+        "query_rows": 8,
+        "form_rows": 8
+      },
+      {
+        "file": "feasibility/recall-final-cases-v1.json",
+        "sha256": "0eef11e4dc9ac19fd75316d832bc2eb2ce193de4161c363507c7d513b72f1ca2",
+        "query_rows": 8,
+        "form_rows": 8
+      },
+      {
+        "file": "feasibility/recall-validation-cases-v1.json",
+        "sha256": "a1b112b04a6cc944afd16f36644e71c08dc2b87ceeb91c1fa8d3349199058bc8",
+        "query_rows": 6,
+        "form_rows": 6
+      },
+      {
+        "file": "feasibility/relevance-dev-cases-v1.json",
+        "sha256": "1e10b0952ba2a196c8bfe40d31f604683b1277696fb55eaf2f21cfaae5477981",
+        "query_rows": 12,
+        "form_rows": 12
+      },
+      {
+        "file": "feasibility/relevance-holdout-cases-v1.json",
+        "sha256": "211780a88925668f6c267da80a720627e4de75fbf37dfad69e3a42630b42ace6",
+        "query_rows": 6,
+        "form_rows": 6
+      },
+      {
+        "file": "feasibility/reliability-agent-case.json",
+        "sha256": "815f36a2e5b47ea3fc19c27321ec799d115d1e1e257ac8a19fdc6abe02df6334",
+        "query_rows": 0,
+        "form_rows": 0
+      },
+      {
+        "file": "feasibility/reliability-holdout-cases-v1.json",
+        "sha256": "bc8b4a78c9ceddadaa8ee8072258c0e755837948f5a310d073384751c2c93d6f",
+        "query_rows": 8,
+        "form_rows": 8
+      },
+      {
+        "file": "feasibility/reranker-cases-v1.json",
+        "sha256": "374f310f9da50386faf1341035d84e89d3083856abe55db374c1ccd77fc57569",
+        "query_rows": 12,
+        "form_rows": 12
+      },
+      {
+        "file": "feasibility/reranker-component-cases-v1.json",
+        "sha256": "e69802da4db68e4438d0b600e711ff5d685f6ace6ee1a1052af5e0a7129d7cc0",
+        "query_rows": 8,
+        "form_rows": 8
+      },
+      {
+        "file": "feasibility/search-cases-v1.json",
+        "sha256": "e87d74655a59d0de08abe9a2fc0b3079586c8b30ae4efe39d46d68a28f66f9bb",
+        "query_rows": 20,
+        "form_rows": 0
+      },
+      {
+        "file": "feasibility/search-cases.json",
+        "sha256": "b67e3269830ae0e976aa9b4c5dc2f6b9c3e922ad1adda35738289d6b1b8325d6",
+        "query_rows": 20,
+        "form_rows": 0
+      }
+    ]
+  },
+  "planned_change_scope": {
+    "allowed_fixed_revision_scope": [
+      "Preserve reference/API method detail sections during extraction.",
+      "Preserve bounded contiguous continuation carrying operation result/exception conditions."
+    ],
+    "comparison_manifests": "Parent records exact baseline/fixed code hashes, trusted startup/model settings and identical candidate/source pools before inference. This plan does not prescribe or expose secrets.",
+    "no_runtime_or_model_changes_by_query_author": true
+  },
+  "rationale": [
+    {
+      "id": "h01",
+      "topic": "Character-set stripping versus exact-suffix operation",
+      "reason": "Distinct Python string operations with comparison direction; useful for source-local API relation coverage."
+    },
+    {
+      "id": "h02",
+      "topic": "Conditional Redis expiration options and a nonvolatile key",
+      "reason": "A new command with several option conditions; useful for preserving one operation’s conditions together."
+    },
+    {
+      "id": "h03",
+      "topic": "Freeze depth and strict-mode mutation behavior",
+      "reason": "A distinct JavaScript operation with nested-object and execution-mode scope."
+    },
+    {
+      "id": "h04",
+      "topic": "Descriptor duplication, shared file state and descriptor-local flags",
+      "reason": "A distinct POSIX operation with an explicit state-versus-flag distinction."
+    }
+  ],
+  "evaluation_rules": [
+    "Freeze queries/forms now; no source-dependent or prediction-dependent query replacement.",
+    "Acquire the same bounded candidate/source pool for both variants without third-party search/scraping APIs or bypassing source blocks.",
+    "Author and peer-review source-only gold from retained original HTML, not branch-extracted text, before inspecting new predictions. Preserve exact witnesses, UTF-8 source offsets, hashes, partial/unknown labels and source conflicts.",
+    "Freeze code/config and gold before inference. Keep old development outcomes separate from this new4 cohort.",
+    "Compare final classification direct against known grade2; grades0/1 are known negatives. Report unjudged directs separately. Do not relabel after seeing predictions.",
+    "Report direct recall/known false directs and failure stages; four queries are a small confirmation, not general qualification or independent acceptance."
+  ],
+  "limitations": [
+    "Query selection is informed by prior failure classes and the planned data-only fixes; sources and new labels were not inspected.",
+    "The four-query cohort is small and may provide few known positives. Report source availability and unknowns explicitly.",
+    "This artifact freezes only cases and the evaluation plan. Acquisition, source gold, code freeze, inference and verification remain separate steps."
+  ]
+}

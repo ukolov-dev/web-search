@@ -1,0 +1,233 @@
+{
+  "schema": "research-gates-new12-v1",
+  "frozen_before_inference": true,
+  "cases": [
+    {
+      "id": "N01",
+      "group": "RFC",
+      "tool": "research",
+      "question": "Does RFC 6585 permit caching a 428 Precondition Required response, or say MUST NOT?",
+      "gold_aspects": [
+        "428 responses MUST NOT be stored by a cache"
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc6585.html#section-3"
+      ],
+      "false_claim_controls": [
+        "428 responses MAY be cached"
+      ]
+    },
+    {
+      "id": "N02",
+      "group": "RFC",
+      "tool": "research",
+      "question": "По RFC 7617 могут ли user-id и password в Basic Auth содержать управляющие символы? Нужна точная норма MUST или MUST NOT.",
+      "gold_aspects": [
+        "Both user-id and password MUST NOT contain control characters"
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc7617.html#section-2"
+      ],
+      "false_claim_controls": [
+        "only user-id restricted",
+        "password controls allowed"
+      ]
+    },
+    {
+      "id": "N03",
+      "group": "RFC",
+      "tool": "research",
+      "question": "According to RFC 8259 section 9, MUST a JSON parser accept all texts conforming to the JSON grammar?",
+      "gold_aspects": [
+        "JSON parser MUST accept all texts conforming to JSON grammar"
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc8259.html#section-9"
+      ],
+      "false_claim_controls": [
+        "parser MAY reject conforming JSON without qualification"
+      ]
+    },
+    {
+      "id": "N04",
+      "group": "RFC",
+      "tool": "research",
+      "question": "По RFC 6455 может ли WebSocket-сервер маскировать кадры, которые посылает клиенту, или действует MUST NOT?",
+      "gold_aspects": [
+        "Server MUST NOT mask frames it sends to client"
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc6455.html#section-5.1"
+      ],
+      "false_claim_controls": [
+        "server MUST mask sent frames"
+      ]
+    },
+    {
+      "id": "N05",
+      "group": "technical",
+      "tool": "research",
+      "question": "What are the windows(2) of Rust slice [1, 2, 3]? Do the windows overlap?",
+      "gold_aspects": [
+        "windows overlap",
+        "windows [1,2] and [2,3]"
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/primitive.slice.html#method.windows"
+      ],
+      "false_claim_controls": [
+        "non-overlapping windows"
+      ]
+    },
+    {
+      "id": "N06",
+      "group": "technical",
+      "tool": "research",
+      "question": "Что возвращает Rust std::mem::take для v = vec![1, 2] и что после этого находится в v?",
+      "gold_aspects": [
+        "returns old vector [1,2]",
+        "v becomes empty default vector"
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/mem/fn.take.html"
+      ],
+      "false_claim_controls": [
+        "old vector cloned instead of moved"
+      ]
+    },
+    {
+      "id": "N07",
+      "group": "technical",
+      "tool": "research",
+      "question": "Rust Vec::retain on [1, 2, 3, 4] with an even predicate: which values remain, is their original order preserved?",
+      "gold_aspects": [
+        "retains [2,4]",
+        "preserves retained element order"
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/vec/struct.Vec.html#method.retain"
+      ],
+      "false_claim_controls": [
+        "retained order arbitrary"
+      ]
+    },
+    {
+      "id": "N08",
+      "group": "technical",
+      "tool": "research",
+      "question": "Для Rust slice [1, 2, 3, 4, 5], что дают chunks(2) и chunks_exact(2), где последний элемент у второго?",
+      "gold_aspects": [
+        "chunks yields [1,2],[3,4],[5]",
+        "chunks_exact yields first two full pairs and remainder [5]"
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/primitive.slice.html#method.chunks",
+        "https://doc.rust-lang.org/std/primitive.slice.html#method.chunks_exact"
+      ],
+      "false_claim_controls": [
+        "chunks_exact silently destroys remainder"
+      ]
+    },
+    {
+      "id": "N09",
+      "group": "scope",
+      "tool": "research",
+      "question": "RFC 8259 says object names MUST NOT repeat and requires every parser to reject duplicate JSON members, right? Verify the modal and whether rejection is universally mandated.",
+      "gold_aspects": [
+        "object names SHOULD be unique",
+        "duplicate handling not a universal MUST reject; implementations differ"
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc8259.html#section-4"
+      ],
+      "false_claim_controls": [
+        "RFC8259 MUST NOT repeat",
+        "every conforming parser MUST reject duplicates"
+      ]
+    },
+    {
+      "id": "N10",
+      "group": "scope",
+      "tool": "research",
+      "question": "Одинаков ли array.into_iter() для массива [1, 2, 3] в Rust editions 2018 и 2021 после Rust 1.53? Учти метод и явный IntoIterator::into_iter.",
+      "gold_aspects": [
+        "method syntax in 2018 uses reference compatibility",
+        "2021 method syntax consumes array",
+        "trait implementation in all editions; explicit trait call distinct from method special case"
+      ],
+      "references": [
+        "https://doc.rust-lang.org/edition-guide/rust-2021/IntoIterator-for-arrays.html"
+      ],
+      "false_claim_controls": [
+        "array IntoIterator exists only in edition2021"
+      ]
+    },
+    {
+      "id": "N11",
+      "group": "scope",
+      "tool": "research",
+      "question": "Does a panic in Rust OnceLock::get_or_init permanently poison the cell, as a Mutex can? What does the reference say about later initialization?",
+      "gold_aspects": [
+        "OnceLock not poisoned on panic",
+        "initialization panic propagates and cell remains uninitialized"
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/sync/struct.OnceLock.html#method.get_or_init"
+      ],
+      "false_claim_controls": [
+        "OnceLock permanently poisoned after initializer panic"
+      ]
+    },
+    {
+      "id": "N12",
+      "group": "scope",
+      "tool": "research",
+      "question": "Найди в официальном Rust std описание метода Vec::truncate_and_zero_capacity и объясни гарантии очистки capacity. Если метода не удаётся подтвердить, не подменяй его truncate или shrink_to_fit.",
+      "gold_aspects": [
+        "Explicitly cannot confirm requested method from read official documentation; no invented API semantics"
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/vec/struct.Vec.html"
+      ],
+      "false_claim_controls": [
+        "invented truncate_and_zero_capacity behavior",
+        "silently replace requested method"
+      ]
+    }
+  ],
+  "harness": [
+    {
+      "id": "H01",
+      "prompt": "Проверь по RFC 6585: ответ HTTP 511 можно сохранить в кэше или он MUST NOT кэшироваться? Укажи прочитанную норму, не додумывай.\nВызови research ровно один раз с question, равным вопросу выше без этой инструкции, language=ru. Ответ только по его проверенным утверждениям; пропуски обозначь явно.",
+      "gold_aspects": [
+        "511 response MUST NOT be stored by cache"
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc6585.html#section-6"
+      ]
+    },
+    {
+      "id": "H02",
+      "prompt": "Проверь в документации Rust результат Vec::split_off(2) для [1, 2, 3, 4]: что возвращается, что остаётся в исходном Vec и меняется ли его capacity? Покажи значения с квадратными скобками.\nВызови research ровно один раз с question, равным вопросу выше без этой инструкции, language=ru. Ответ только по его проверенным утверждениям; пропуски обозначь явно.",
+      "gold_aspects": [
+        "returns [3,4]",
+        "original contains [1,2]",
+        "original capacity unchanged"
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/vec/struct.Vec.html#method.split_off"
+      ]
+    }
+  ],
+  "protocol": {
+    "baseline_git": "0744c73",
+    "product_source_git": "82a37561b6882bc16724a53f803c7f9d6cc53293",
+    "holdout_no_tuning": true,
+    "old_replay_separate": true,
+    "judgement": "source-first claim IDs; exact quote is provenance only; missing target evidence never counted as success",
+    "new_false_claim_id_blocks_acceptance": true,
+    "unknown_claim_id_blocks_acceptance": true,
+    "live_pairing": "same model/Qwen/budgets/ledger/cache; record source hashes/cache and separate drift from validator effect",
+    "language": "Questions RU/EN, research answer ru for both arms to match existing driver; Harness final ru"
+  }
+}

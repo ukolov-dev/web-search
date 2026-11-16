@@ -1,0 +1,49 @@
+{
+  "base": "ebdcc83",
+  "task": "TASK-20261116-110523-001",
+  "scope": "test-only prototype; production unchanged",
+  "captured_f02": {
+    "baseline": {
+      "chars": 100000,
+      "truncated": true,
+      "text_hash": "6f20214cfccc318385b390ea9ae9f72ce0b63ad18382b53a774eeef2f2bd2615",
+      "content_scope": "rfc_body",
+      "selected_section": null,
+      "offset_scope": null,
+      "content_and_trailers": false
+    },
+    "candidate": {
+      "chars": 1660,
+      "truncated": false,
+      "text_hash": "14edc1c4ef044889c1b302e0fefeda684ee82d8fdbeefdefdb545b2db632b29d",
+      "content_scope": "experimental_selected_rfc_section",
+      "selected_section": "section-15.3.5",
+      "offset_scope": "Unicode positions in selected extracted text, not full source body",
+      "content_and_trailers": true
+    }
+  },
+  "checks": [
+    {
+      "command": "CARGO_HOME=\"$PWD/.cache/cargo\" cargo test --locked --offline",
+      "result": [
+        "test result: ok. 171 passed; 0 failed; 38 ignored; 0 measured; 0 filtered out; finished in 2.54s",
+        "test result: ok. 6 passed; 0 failed; 10 ignored; 0 measured; 0 filtered out; finished in 0.80s"
+      ]
+    },
+    {
+      "command": "CARGO_HOME=\"$PWD/.cache/cargo\" cargo clippy --locked --offline --all-targets -- -D warnings",
+      "status": "passed"
+    },
+    {
+      "command": "SECTION_EXPERIMENT_HTML=<captured F02 read-01.html> SECTION_EXPERIMENT_OUTPUT=<fresh dir> CARGO_HOME=\"$PWD/.cache/cargo\" cargo test --locked --offline captured_f02_section_before_cap -- --ignored",
+      "status": "passed1; offline original HTML"
+    }
+  ],
+  "limits": [
+    "Only test module helper; no runtime wiring or model quality gain",
+    "Exact heading lexical match is simple and multilingual synonyms not covered",
+    "Ambiguous/no matching headings fall back to unchanged full prefix",
+    "Selectedtext offsets are not fullbody offsets; ownhash/scope explicit",
+    "Initial scope child selector failed to findheading; corrected single descendantheading"
+  ]
+}

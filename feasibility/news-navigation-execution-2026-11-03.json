@@ -1,0 +1,94 @@
+{
+  "date": "2026-11-03",
+  "task": "TASK-20261103-135033-001",
+  "verification": "VERIFY-20261103-144054-001",
+  "finalization": {
+    "status": "FINALIZED",
+    "completion": "partial",
+    "taskStatus": "in_progress",
+    "requiresHumanReview": false
+  },
+  "scope": "local opt-in v11 news navigation/date/app guard; no deploy/VPS/globalconfig",
+  "native": {
+    "unit_passed": 97,
+    "stdio_passed": 5,
+    "total_ordinary_passed": 102,
+    "fmt": "passed",
+    "clippy_all_targets": "passed",
+    "release_build": "passed",
+    "release_stdio_passed": 5
+  },
+  "primary": {
+    "calls": 15,
+    "planned": 16,
+    "news_pairs_completed": 7,
+    "status": "partial_block",
+    "blocked_host": "andro.io",
+    "missing": "baseline nn08 explicit application control",
+    "budget_totals": {
+      "baseline": {
+        "logical_search_calls": 14,
+        "classification_calls": 16,
+        "document_reads": 16,
+        "reranker_calls": 16,
+        "reranker_pairs": 65
+      },
+      "fixed": {
+        "logical_search_calls": 16,
+        "classification_calls": 12,
+        "document_reads": 28,
+        "reranker_calls": 6,
+        "reranker_pairs": 14
+      }
+    },
+    "code_unchanged": true
+  },
+  "source_validation": {
+    "research_web_opens": 8,
+    "research_readable": 2,
+    "native_unique_attempts": 23,
+    "native_http200": 22,
+    "native_fetch_timeout": 1,
+    "native_full_extracted_texts": 21,
+    "retries_after_blocks": 0,
+    "no_search_model_calls": true,
+    "limits": "fresh originals after primary, not byte-identical to initial target reads; raw parent feed archive not available for every lineage"
+  },
+  "gold": {
+    "rows": 76,
+    "grade0": 35,
+    "grade1": 31,
+    "grade2": 3,
+    "unknown": 7,
+    "final_sha256": "6e9d6d7647e2c3125bec4f513556e0ae33a2e0bbf1b34bef49ca8e72d077348b",
+    "blind_parts_before_join": true,
+    "grade_preserving_enum_normalization": true,
+    "independent_acceptance": false
+  },
+  "quality_gate": {
+    "passed": null,
+    "reason": "incomplete full NEW8 after apphostblock; observed seven-news-pair metrics are bounded exploratory evidence"
+  },
+  "review": {
+    "source_team_blind": "completed",
+    "metrics_independent_recount": "passed",
+    "report_peer": "PASS",
+    "formal_ready_to_merge": "not_run"
+  },
+  "artifacts": {
+    "report": "doc/news-navigation-2026-11-03.md",
+    "results": "feasibility/news-navigation-results-2026-11-03.json",
+    "gold": "feasibility/news-navigation-gold-2026-11-03.json",
+    "baseline": "runs/news-navigation-2026-11-03/baseline-src",
+    "fixed": "runs/news-navigation-2026-11-03/fixed-src",
+    "raw_sources": "runs/news-navigation-2026-11-03/benchmark/raw-source-freeze.json",
+    "bug_report": "outputs/news-navigation-2026-11-03/bug-reproducer-report.md"
+  },
+  "limits": [
+    "live input drift",
+    "same-team source review",
+    "coverage unused requirement false negatives remain",
+    "no general zero-FP or web-recall claim",
+    "no day2/load/VPS"
+  ]
+}

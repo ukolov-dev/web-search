@@ -1,0 +1,109 @@
+{
+  "kind": "actual-old-p06-repeated-heading-coverage-replay",
+  "query": "Docker bind mount readonly recursive submounts Linux kernel 5.12",
+  "entry": {
+    "audit_reason": "",
+    "audit_supported": true,
+    "checks": [
+      {
+        "passages": [
+          "B1"
+        ],
+        "quote": "Support recursively read-only (RRO) bind mounts (kernel >= 5.12)",
+        "status": "supported"
+      },
+      {
+        "passages": [
+          "B1"
+        ],
+        "quote": "docker run -v /mnt:/mnt:rro,rprivate to make its submounts such as /mnt/usbstorage to be read-only",
+        "status": "supported"
+      },
+      {
+        "passages": [
+          "B1"
+        ],
+        "quote": "The \"rro\" mount type has been supported by runc >= 1.1, on kernel >= 5.12.",
+        "status": "supported"
+      },
+      {
+        "passages": [
+          "B1"
+        ],
+        "quote": "The \"rro\" mount type has been supported by runc >= 1.1, on kernel >= 5.12.",
+        "status": "supported"
+      }
+    ],
+    "id": "C010",
+    "passages": [
+      {
+        "end": 120,
+        "field": "title",
+        "id": "T",
+        "normalized_text_hash": "0f1dcb0922baced5f0865bf4e2160a595565af9090c12b915d3c36bd297ca8a5",
+        "source_url": "https://github.com/moby/moby/issues/44978",
+        "start": 0,
+        "text_hash": "0f1dcb0922baced5f0865bf4e2160a595565af9090c12b915d3c36bd297ca8a5",
+        "text": "Description e.g., docker run -v /mnt:/mnt:rro,rprivate to make its submounts such as /mnt/usbstorage to be read-only. Th"
+      },
+      {
+        "end": 214,
+        "field": "snippet",
+        "id": "S",
+        "normalized_text_hash": "3361e4d279e7c3339e430c3c95009553b2a4b1f75a9caf6da768b2afa76ac935",
+        "source_url": "https://github.com/moby/moby/issues/44978",
+        "start": 0,
+        "text_hash": "3361e4d279e7c3339e430c3c95009553b2a4b1f75a9caf6da768b2afa76ac935",
+        "text": "Description e.g., docker run -v /mnt:/mnt:rro,rprivate to make its submounts such as /mnt/usbstorage to be read-only. The existing ro mounts should remain non-recursive, for compatibility sake. The...새 창 열림"
+      },
+      {
+        "end": 1200,
+        "field": "body",
+        "id": "B1",
+        "normalized_text_hash": "0e6a0be44330af633d15cbb4bd6ac65bdbc31af30b00849745a670511b6af2ec",
+        "source_url": "https://github.com/moby/moby/issues/44978",
+        "start": 0,
+        "text_hash": "ec2b0635f89334696438017d4a81abac5f021d758777334965d5c4eb634bb626",
+        "text": "Repository navigation Support recursively read-only (RRO) bind mounts (kernel >= 5.12) #44978 Closed #45278 Closed Support recursively read-only (RRO) bind mounts (kernel >= 5.12)#44978 #45278 Labels area/securitykind/enhancementstatus/1-design-review AkihiroSuda opened on Feb 11, 2023 Description e.g., docker run -v /mnt:/mnt:rro,rprivate to make its submounts such as /mnt/usbstorage to be read-only. The existing ro mounts should remain non-recursive, for compatibility sake. The \"rro\" mount type has been supported by runc >= 1.1, on kernel >= 5.12. Support recursive mount attrs (\"rro\", \"rnosuid\", \"rnodev\", ...) opencontainers/runc#3272 The \"rro\" mount type has to be used in conjunction with rprivate propagation, in order to avoid accidentally having writable submounts. So, we should also have: Add an option to forcibly enable rprivate propagation #44977 (Not a hard dependency, as -v /foo:/bar:rprivate does not automatically fall back to rslave when the propagation is explicitly specified) Related: Support recursive read-only (RRO) mounts: nerdctl run -v /foo:/bar:rro,rprivate containerd/nerdctl#511 KEP-3857: Recursive Read-only (RRO) mounts kubernetes/enhancements#3858 Fixes: Subf"
+      },
+      {
+        "end": 2142,
+        "field": "body",
+        "id": "B2",
+        "normalized_text_hash": "0e6a0be44330af633d15cbb4bd6ac65bdbc31af30b00849745a670511b6af2ec",
+        "source_url": "https://github.com/moby/moby/issues/44978",
+        "start": 1000,
+        "text_hash": "ec2b0635f89334696438017d4a81abac5f021d758777334965d5c4eb634bb626",
+        "text": "ied) Related: Support recursive read-only (RRO) mounts: nerdctl run -v /foo:/bar:rro,rprivate containerd/nerdctl#511 KEP-3857: Recursive Read-only (RRO) mounts kubernetes/enhancements#3858 Fixes: Subfolders of read-only volume are writeable docker/for-linux#788 AkihiroSuda added status/1-design-review kind/enhancement area/security on Feb 11, 2023 AkihiroSuda on Feb 11, 2023 MemberAuthor kubernetes/enhancements#3858 (comment) Probably we should have if-possible form like: -v /mnt:/mnt:rro-if-possible,rprivate --mount type=bind,src=/mnt,dest=/mnt,ro,bind-recursivelyreadonly=if-possible,bind-propagation=rslave AkihiroSuda on Apr 3, 2023 MemberAuthor @thaJeztah PTAL 🙏 AkihiroSuda on Apr 5, 2023 MemberAuthor PR: Support recursively read-only (RRO) mounts #45278 thaJeztah closed this as completedin #45278on May 26, 2023 Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Assignees No one assigned Labels area/securitykind/enhancementstatus/1-design-review Type No type Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests"
+      },
+      {
+        "end": 103,
+        "field": "page_title",
+        "id": "H",
+        "normalized_text_hash": "f6c42fa770df095fcdd975ac937d1b85e3aa7ab26bf36461718fd4eaf942e9d7",
+        "source_url": "https://github.com/moby/moby/issues/44978",
+        "start": 0,
+        "text_hash": "f6c42fa770df095fcdd975ac937d1b85e3aa7ab26bf36461718fd4eaf942e9d7",
+        "text": "Support recursively read-only (RRO) bind mounts (kernel >= 5.12) · Issue #44978 · moby/moby · GitHub"
+      }
+    ],
+    "read_attempted": true
+  },
+  "coverage_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "message": {
+          "content": "{\"anchors\": [\"Docker\", \"bind\", \"readonly\"], \"labels\": {\"C010\": {\"checks\": [{\"passages\": [\"B1\"], \"quote\": \"Support recursively read-only (RRO) bind mounts (kernel >= 5.12)\", \"status\": \"supported\"}, {\"passages\": [\"B1\"], \"quote\": \"docker run -v /mnt:/mnt:rro,rprivate to make its submounts such as /mnt/usbstorage to be read-only\", \"status\": \"supported\"}, {\"passages\": [\"B1\"], \"quote\": \"The \\\"rro\\\" mount type has been supported by runc >= 1.1, on kernel >= 5.12.\", \"status\": \"supported\"}, {\"passages\": [\"B1\"], \"quote\": \"The \\\"rro\\\" mount type has been supported by runc >= 1.1, on kernel >= 5.12.\", \"status\": \"supported\"}]}}, \"subject\": \"Docker bind mount\"}"
+        }
+      }
+    ]
+  },
+  "provenance": {
+    "coverage_path": "runs/admission-literals-2026-10-30/development/fixed/p06-evidence-round1.json",
+    "coverage_sha256": "cf90f93401084970c0e7e4fbf54193c839e71a89883f0cc5ff541639d91d538a",
+    "result_path": "runs/admission-literals-2026-10-30/development/fixed/p06-result.json",
+    "result_sha256": "ab9c40d526084dce8d8c75c8ccba7e4b2f0af0114116fb79d590139a527ffe53",
+    "scope": "C010 actual coverage row and unchanged subject/anchors; other candidate rows omitted only to isolate this existing witness check; actual supplied passage texts joined to recorded field/offset/hash metadata. No gold or fresh sources."
+  }
+}

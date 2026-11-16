@@ -1,0 +1,724 @@
+{
+  "created_utc": "2026-11-03T12:23:47.656690+00:00",
+  "scope": "Post-hoc exploratory observed read+returned known-positive union, not preregistered primary or full-web recall. Independent source-only auxiliary grading after primary freeze; no source/code/prediction changes.",
+  "primary_gold_sha256": "0b03817e0b701defa9b7b119017057890381519bacea0aba816ced4fc87cec73",
+  "auxiliary_parts": [
+    {
+      "path": "runs/news-coverage-2026-11-03/benchmark/blind/auxiliary-nonreturned-nc01-04.json",
+      "sha256": "235112b3210d29d50c75b88c9490564c0bd37461fcda682b33066e3a89ff9756",
+      "source_note": {
+        "version": "news-coverage-auxiliary-nonreturned-source-review-v1",
+        "scope": "Eight Bloknot Voronezh / Nizhny Novgorod Bezformata / Belgorod AiF native originals absent from the returned-card URL union. Separate source diagnostic; excluded from primary gold/recall denominator.",
+        "source_bundle_sha256": "0e3bf85aac21510ee49a8abe0570d9570a9ada22068f95bebae4580654624c6e",
+        "primary_gold_sha256": "8ce61ae0219013ac74362594983021b352da14bdde10ba605d4e9200a68abe3e",
+        "source_only": true,
+        "predictions_opened": false,
+        "network_or_models_called": false,
+        "timezone": "Europe/Moscow",
+        "counts": {
+          "eligible_city_articles": 2,
+          "known_unsuitable": 4,
+          "unverified_full_publication_date": 2
+        },
+        "limitations": [
+          "Original snapshots are later standalone source captures, not primary model input bytes.",
+          "Source-only suitability does not prove whether either arm read, shortlisted, audited or rejected the page.",
+          "Bor story is excluded under strict requested-city criterion, despite the Nizhny Novgorod aggregation section.",
+          "Unknown Bloknot publication dates were not inferred from relative yesterday, adjacent teaser dates, query or capture clock.",
+          "Two AiF parts share one historical interview series; Bezformata train/rest stories share downstream publisher Время Н."
+        ],
+        "rows": [
+          {
+            "url": "https://bloknot-voronezh.ru/news/nikakikh-proryvov-ne-ozhidaetsya-ekspert-mezhdunar-2022844",
+            "case_id": "nc01",
+            "primary_gold": false,
+            "returned_in_source_cards": false,
+            "kind": "article",
+            "grade": null,
+            "published_date": null,
+            "source_reviewed": true,
+            "full_body_reviewed": true,
+            "date_verified": false,
+            "reason": "Местный эксперт из Воронежа комментирует международные переговоры, но собственная дата обозначена лишь «вчера». Полной даты в собственном заголовочном блоке, raw meta или JSON-LD нет. Не выводилась из соседних публикаций, текста, query/copyright или времени сохранения. Пригодность по полному окну не подтверждена.",
+            "event_cluster": "voronezh-expert-abu-dhabi-commentary",
+            "publisher_cluster": "bloknot-voronezh.ru",
+            "evidence": [
+              "Общество, вчера, 13:14"
+            ],
+            "source_refs": [
+              {
+                "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-native-documents.json",
+                "url": "https://bloknot-voronezh.ru/news/nikakikh-proryvov-ne-ozhidaetsya-ekspert-mezhdunar-2022844",
+                "field": "full_text",
+                "start_char": 255,
+                "end_char": 277,
+                "quote": "Общество, вчера, 13:14"
+              },
+              {
+                "path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-03.html",
+                "sha256": "9660c369eab60d6ba8e7e335daf26f23a1b979590e3a66f8a4e19aa1cb9bd5c9",
+                "role": "captured_original_html"
+              }
+            ],
+            "publication_evidence": [
+              {
+                "field": "own visible news-date-time header",
+                "value": "вчера, 13:14",
+                "complete_date": false,
+                "raw_html_path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-03.html"
+              }
+            ]
+          },
+          {
+            "url": "https://bloknot-voronezh.ru/news/rvk-okazalsya-ne-prichasten-k-zavonyuchivaniyu-voz-2022826",
+            "case_id": "nc01",
+            "primary_gold": false,
+            "returned_in_source_cards": false,
+            "kind": "article",
+            "grade": null,
+            "published_date": null,
+            "source_reviewed": true,
+            "full_body_reviewed": true,
+            "date_verified": false,
+            "reason": "Тело явно описывает коммунальную аварию в Воронеже, но собственная дата — только «вчера». Полной даты нет; дата события 1 ноября не подменяет публикацию. Пригодность по окну не подтверждена.",
+            "event_cluster": "voronezh-water-leak-nevskogo-13",
+            "publisher_cluster": "bloknot-voronezh.ru",
+            "evidence": [
+              "Общество, вчера, 13:02"
+            ],
+            "source_refs": [
+              {
+                "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-native-documents.json",
+                "url": "https://bloknot-voronezh.ru/news/rvk-okazalsya-ne-prichasten-k-zavonyuchivaniyu-voz-2022826",
+                "field": "full_text",
+                "start_char": 255,
+                "end_char": 277,
+                "quote": "Общество, вчера, 13:02"
+              },
+              {
+                "path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-04.html",
+                "sha256": "a93bdd31608ba74c4f7fb22ba6a149a778e81b714114871844f8fd009c33efa1",
+                "role": "captured_original_html"
+              }
+            ],
+            "publication_evidence": [
+              {
+                "field": "own visible news-date-time header",
+                "value": "вчера, 13:02",
+                "complete_date": false,
+                "raw_html_path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-04.html"
+              }
+            ]
+          },
+          {
+            "url": "https://bloknot-voronezh.ru/news/kosmicheskuyu-summu-zaplatil-voronezhets-za-12-43--1985715",
+            "case_id": "nc01",
+            "primary_gold": false,
+            "returned_in_source_cards": false,
+            "kind": "article",
+            "grade": 0,
+            "published_date": "2026-06-23",
+            "source_reviewed": true,
+            "full_body_reviewed": true,
+            "date_verified": true,
+            "reason": "Собственная видимая дата статьи 23.06.2026 вне окна nc01 (только 03.11.2026). Тема и место — цены на бензин в Воронеже; соседние текущие заголовки не меняют старую дату статьи.",
+            "event_cluster": "voronezh-gasoline-price-reader-report-2026-06-23",
+            "publisher_cluster": "bloknot-voronezh.ru",
+            "evidence": [
+              "Общество, 23.06.2026 15:01"
+            ],
+            "source_refs": [
+              {
+                "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-native-documents.json",
+                "url": "https://bloknot-voronezh.ru/news/kosmicheskuyu-summu-zaplatil-voronezhets-za-12-43--1985715",
+                "field": "full_text",
+                "start_char": 255,
+                "end_char": 281,
+                "quote": "Общество, 23.06.2026 15:01"
+              },
+              {
+                "path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-05.html",
+                "sha256": "626e8dc0f20c12bac84807ba13ec1ec92310db7bca1b5e131aaaed5eb871532b",
+                "role": "captured_original_html"
+              }
+            ],
+            "publication_evidence": [
+              {
+                "field": "own visible news-date-time header",
+                "value": "23.06.2026 15:01",
+                "complete_date": true,
+                "raw_html_path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-05.html"
+              }
+            ]
+          },
+          {
+            "url": "https://nnovgorod.bezformata.com/listnews/poezd-svyazhet-kazan/165476847/",
+            "case_id": "nc03",
+            "primary_gold": false,
+            "returned_in_source_cards": false,
+            "kind": "article",
+            "grade": 2,
+            "published_date": "2026-11-03",
+            "source_reviewed": true,
+            "full_body_reviewed": true,
+            "date_verified": true,
+            "reason": "Полное собственное тело сообщает о новом поезде с остановкой в Нижнем Новгороде. Своя datePublished=2026-11-03 находится в главном NewsArticle рядом с собственным itemprop=url и заголовком, подтверждена видимым временем 03.11.2026 13:20. 28 ноября — дата начала движения, не публикации.",
+            "event_cluster": "nn-kazan-moscow-new-train-2026-11-03",
+            "publisher_cluster": "bezformata.com",
+            "evidence": [
+              "В пути следования предусмотрены остановки в том числе на станциях Нижний Новгород-Стригино, Владимир.",
+              "03.11.2026 13:20"
+            ],
+            "source_refs": [
+              {
+                "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-native-documents.json",
+                "url": "https://nnovgorod.bezformata.com/listnews/poezd-svyazhet-kazan/165476847/",
+                "field": "full_text",
+                "start_char": 210,
+                "end_char": 311,
+                "quote": "В пути следования предусмотрены остановки в том числе на станциях Нижний Новгород-Стригино, Владимир."
+              },
+              {
+                "path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-06.html",
+                "sha256": "d2d237f2e4774b9e30b8556050f62e9c29a99bd1aa61510383b560bb65964803",
+                "role": "captured_original_html"
+              }
+            ],
+            "publication_evidence": [
+              {
+                "field": "own main NewsArticle.datePublished",
+                "value": "2026-11-03",
+                "raw_html_path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-06.html",
+                "main_schema_start_char": 6789,
+                "main_schema_end_char": 8137,
+                "own_url": "https://nnovgorod.bezformata.com/listnews/poezd-svyazhet-kazan/165476847/"
+              }
+            ]
+          },
+          {
+            "url": "https://nnovgorod.bezformata.com/listnews/obvinyayut-v-pohishenii/165476075/",
+            "case_id": "nc03",
+            "primary_gold": false,
+            "returned_in_source_cards": false,
+            "kind": "article",
+            "grade": 0,
+            "published_date": "2026-11-03",
+            "source_reviewed": true,
+            "full_body_reviewed": true,
+            "date_verified": true,
+            "reason": "Собственная дата соответствует окну, но основное событие прямо помещено на Бор, а не в запрошенный город Нижний Новгород. При строгом city-only критерии nc03 не считается положительной. Шаблонный contentLocation=Нижний Новгород и местный раздел не заменяют географию основного тела.",
+            "event_cluster": "bor-kidnapping-allegation-2026-11-03",
+            "publisher_cluster": "bezformata.com",
+            "evidence": [
+              "Украсть за 12 секунд: два молодых человека на Бору обвиняются в самом скоростном похищении девушки с автобусной остановки.",
+              "03.11.2026 13:06"
+            ],
+            "source_refs": [
+              {
+                "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-native-documents.json",
+                "url": "https://nnovgorod.bezformata.com/listnews/obvinyayut-v-pohishenii/165476075/",
+                "field": "full_text",
+                "start_char": 100,
+                "end_char": 222,
+                "quote": "Украсть за 12 секунд: два молодых человека на Бору обвиняются в самом скоростном похищении девушки с автобусной остановки."
+              },
+              {
+                "path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-07.html",
+                "sha256": "12b3b600248b8770652d72fb5edc0c9d9b4c55f3675d853b7c8274a9cd04c58c",
+                "role": "captured_original_html"
+              }
+            ],
+            "publication_evidence": [
+              {
+                "field": "own main NewsArticle.datePublished",
+                "value": "2026-11-03",
+                "raw_html_path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-07.html",
+                "main_schema_start_char": 6754,
+                "main_schema_end_char": 8293,
+                "own_url": "https://nnovgorod.bezformata.com/listnews/obvinyayut-v-pohishenii/165476075/"
+              }
+            ]
+          },
+          {
+            "url": "https://nnovgorod.bezformata.com/listnews/punkt-dlya-otdiha/165482058/",
+            "case_id": "nc03",
+            "primary_gold": false,
+            "returned_in_source_cards": false,
+            "kind": "article",
+            "grade": 2,
+            "published_date": "2026-11-03",
+            "source_reviewed": true,
+            "full_body_reviewed": true,
+            "date_verified": true,
+            "reason": "Полное собственное тело прямо помещает открытый пункт в Канавинский район Нижнего Новгорода. Своя datePublished=2026-11-03 в главном NewsArticle рядом с собственным itemprop=url подтверждена видимым временем 03.11.2026 15:05; дата входит в окно nc03.",
+            "event_cluster": "nn-raketnaya-dispatch-rest-point-2026-11-03",
+            "publisher_cluster": "bezformata.com",
+            "evidence": [
+              "Модульный диспетчерский пункт для отдыха водителей, кондукторов и диспетчерского персонала АО «Нижегородпассажиравтотранс» открыли на улице Ракетной в Канавинском районе Нижнего Новгорода, сообщили в ЦРТС.",
+              "03.11.2026 15:05"
+            ],
+            "source_refs": [
+              {
+                "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-native-documents.json",
+                "url": "https://nnovgorod.bezformata.com/listnews/punkt-dlya-otdiha/165482058/",
+                "field": "full_text",
+                "start_char": 124,
+                "end_char": 329,
+                "quote": "Модульный диспетчерский пункт для отдыха водителей, кондукторов и диспетчерского персонала АО «Нижегородпассажиравтотранс» открыли на улице Ракетной в Канавинском районе Нижнего Новгорода, сообщили в ЦРТС."
+              },
+              {
+                "path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-08.html",
+                "sha256": "345339dafa3c0070ee988a0aabd7aadf13aa52b270a70f0ffa9d413bf5ebaf77",
+                "role": "captured_original_html"
+              }
+            ],
+            "publication_evidence": [
+              {
+                "field": "own main NewsArticle.datePublished",
+                "value": "2026-11-03",
+                "raw_html_path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-08.html",
+                "main_schema_start_char": 6627,
+                "main_schema_end_char": 7991,
+                "own_url": "https://nnovgorod.bezformata.com/listnews/punkt-dlya-otdiha/165482058/"
+              }
+            ]
+          },
+          {
+            "url": "https://bel.aif.ru/society/history/fedor-i-i-godunov-chto-vazhnoe-v-zhizni-sovershil-car-osnovatel-belgoroda",
+            "case_id": "nc04",
+            "primary_gold": false,
+            "returned_in_source_cards": false,
+            "kind": "article",
+            "grade": 0,
+            "published_date": "2026-11-01",
+            "source_reviewed": true,
+            "full_body_reviewed": false,
+            "date_verified": true,
+            "reason": "Собственные article:published_time и Article/datePublished дают 01.11.2026, вне окна nc04 (03.11.2026). Исторические годы и события в интервью не являются датой публикации. Полное семантическое чтение длинного исторического интервью не требовалось для исключения по проверенной дате.",
+            "event_cluster": "belgorod-founder-fedor-godunov-interview-part2",
+            "publisher_cluster": "bel.aif.ru",
+            "evidence": [
+              "Мы продолжаем публикацию интервью с директором Государственного архива Белгородской области Алексеем Бондаренко"
+            ],
+            "source_refs": [
+              {
+                "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-native-documents.json",
+                "url": "https://bel.aif.ru/society/history/fedor-i-i-godunov-chto-vazhnoe-v-zhizni-sovershil-car-osnovatel-belgoroda",
+                "field": "full_text",
+                "start_char": 0,
+                "end_char": 111,
+                "quote": "Мы продолжаем публикацию интервью с директором Государственного архива Белгородской области Алексеем Бондаренко"
+              },
+              {
+                "path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-10.html",
+                "sha256": "152250c204cb805532eff76a35d6e506ca41200331743c01c4bab24580958a59",
+                "role": "captured_original_html"
+              }
+            ],
+            "publication_evidence": [
+              {
+                "field": "article:published_time",
+                "value": "2026-11-01T08:49:51+0300"
+              },
+              {
+                "field": "own Article.datePublished",
+                "value": "2026-11-01T11:49:51+03:00",
+                "own_url": "https://bel.aif.ru/society/history/fedor-i-i-godunov-chto-vazhnoe-v-zhizni-sovershil-car-osnovatel-belgoroda"
+              }
+            ]
+          },
+          {
+            "url": "https://bel.aif.ru/society/history/zamalival-grehi-otca-kakim-byl-osnovatel-belgoroda-car-fedor-ioannovich",
+            "case_id": "nc04",
+            "primary_gold": false,
+            "returned_in_source_cards": false,
+            "kind": "article",
+            "grade": 0,
+            "published_date": "2026-10-31",
+            "source_reviewed": true,
+            "full_body_reviewed": false,
+            "date_verified": true,
+            "reason": "Собственные article:published_time и Article/datePublished дают 31.10.2026, вне окна nc04 (03.11.2026). 11 сентября и XVI век внутри исторического интервью — события, не публикация. Полное семантическое чтение длинного интервью не требовалось для исключения по проверенной дате.",
+            "event_cluster": "belgorod-founder-fedor-godunov-interview-part1",
+            "publisher_cluster": "bel.aif.ru",
+            "evidence": [
+              "В этом году 11 сентября Белгород тихо и без помпы отпраздновал 430-летие своего основания"
+            ],
+            "source_refs": [
+              {
+                "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-native-documents.json",
+                "url": "https://bel.aif.ru/society/history/zamalival-grehi-otca-kakim-byl-osnovatel-belgoroda-car-fedor-ioannovich",
+                "field": "full_text",
+                "start_char": 0,
+                "end_char": 89,
+                "quote": "В этом году 11 сентября Белгород тихо и без помпы отпраздновал 430-летие своего основания"
+              },
+              {
+                "path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-11.html",
+                "sha256": "52560e044391a766b7b9821b01f3a227a61709757b1a57f77120fb0777aa2636",
+                "role": "captured_original_html"
+              }
+            ],
+            "publication_evidence": [
+              {
+                "field": "article:published_time",
+                "value": "2026-10-31T08:48:22+0300"
+              },
+              {
+                "field": "own Article.datePublished",
+                "value": "2026-10-31T11:48:22+03:00",
+                "own_url": "https://bel.aif.ru/society/history/zamalival-grehi-otca-kakim-byl-osnovatel-belgoroda-car-fedor-ioannovich"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "path": "runs/news-coverage-2026-11-03/benchmark/blind/auxiliary-nc05-nc07-source-note.json",
+      "sha256": "e0b01af7fab1d4ce6d7ddc0c4e1c4018b5ef3d5416c9c5e67a484b6c6e7cc78f",
+      "source_note": {
+        "version": "news-coverage-auxiliary-source-note-v1",
+        "as_of": "2026-11-03",
+        "timezone": "Europe/Moscow",
+        "created_after_primary_gold_freeze": true,
+        "primary_gold_sha256": "fbcdea43b695cf70014c79931ff61ef2c1d15166e268a4767873ce0a64f88d05",
+        "source_bundle_sha256": "0e3bf85aac21510ee49a8abe0570d9570a9ada22068f95bebae4580654624c6e",
+        "reviewer": "coverage_fix; source-only, no predictions/arm artifacts/network/model",
+        "scope": "Six native original child articles absent from all76 primary source cards. Kept separate by frozen returned-union plan, not selected out by quality.",
+        "limits": [
+          "Bloknot original bodies contain substantial content, but publication labels are relative today/yesterday only. SERVER_TIME, upload paths, copyright, query date and adjacent teasers are not own full publication dates.",
+          "Fckhimki article event dates and URL components are not own publication dates.",
+          "No source is added to the returned-union denominator; auxiliary findings expose blind spots without changing primary recall definition.",
+          "No verified eligible publication among these6 under the frozen full-own-publication-date rule. The2 Bloknot city-related articles remain possible substantive retrieval opportunities, with publication date unresolved."
+        ],
+        "rows": [
+          {
+            "url": "https://bloknot-rostov.ru/news/v-rostove-zaderzhali-troikh-podozrevaemykh-v-serii-2022985",
+            "target_case": "nc05",
+            "kind": "article",
+            "source_reviewed": true,
+            "date_verified": false,
+            "published_date": null,
+            "returned_in_primary_source_cards": false,
+            "included_in_primary_gold": false,
+            "assessment_scope": "auxiliary source-only disclosure; not a primary metric or candidate-pool recall label",
+            "title": "В Ростове задержали троих подозреваемых в серии краж из автомобилей на Дону",
+            "place": "Ростов-на-Дону и Ростовская область",
+            "place_match": "yes",
+            "topic": "Полицейская городская новость о краже из автомобилей",
+            "observed_own_date_text": "вчера, 20:00",
+            "grade": 1,
+            "eligibility": "unresolved_publication_date",
+            "reason": "Полное содержательное тело подтверждает место/тему, но собственная дата дана только относительно. Полной собственной даты публикации в raw HTML не найдено; для grade2 недостаточно. Относительное «вчера» дополнительно не соответствует требованию «сегодня», но не превращено в полную дату.",
+            "evidence": [
+              "runs/news-coverage-2026-11-03/benchmark/blind/source-native-documents.json documents['https://bloknot-rostov.ru/news/v-rostove-zaderzhali-troikh-podozrevaemykh-v-serii-2022985'].full_text: «В Ростове-на-Дону полицейские задержали троих мужчин, которых подозревают в серии краж имущества из автомобилей.»",
+              "runs/news-coverage-2026-11-03/benchmark/native-originals/source-12.html: span.news-date-time = «вчера, 20:00»"
+            ],
+            "source_refs": {
+              "raw_html_path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-12.html",
+              "raw_html_sha256": "26649f7146fb6b4667e820d82511a16f7c7c0c405e3c00f87fa07b4b9c255a8e",
+              "bundle_full_text_sha256": "79036e3236242a1046261dad9c4a8250349d83041bdad1dffd64566cb9b514e4"
+            }
+          },
+          {
+            "url": "https://bloknot-rostov.ru/news/roudmuvi-ot-rostova-do-vladivostoka-kak-rostovchan-2023028",
+            "target_case": "nc05",
+            "kind": "article",
+            "source_reviewed": true,
+            "date_verified": false,
+            "published_date": null,
+            "returned_in_primary_source_cards": false,
+            "included_in_primary_gold": false,
+            "assessment_scope": "auxiliary source-only disclosure; not a primary metric or candidate-pool recall label",
+            "title": "Роудмуви от Ростова до Владивостока. Как ростовчанин поехал за японской машиной и открыл для себя всю Россию",
+            "place": "Ростов-на-Дону/Ростовская область; путешествие жителя через Россию",
+            "place_match": "yes",
+            "topic": "Местный очерк об авто и путешествии ростовчанина",
+            "observed_own_date_text": "сегодня, 14:00",
+            "grade": 1,
+            "eligibility": "unresolved_publication_date",
+            "reason": "Полное тело содержательное, локальная связь установлена. Собственный publication span относительный; полной собственной даты публикации в raw HTML не найдено. 2026 в статистике продаж относится к факту, а не публикации.",
+            "evidence": [
+              "runs/news-coverage-2026-11-03/benchmark/blind/source-native-documents.json documents['https://bloknot-rostov.ru/news/roudmuvi-ot-rostova-do-vladivostoka-kak-rostovchan-2023028'].full_text: «Продажи подержанных японских автомобилей в Ростовской области бьют рекорды.»",
+              "runs/news-coverage-2026-11-03/benchmark/native-originals/source-13.html: span.news-date-time = «сегодня, 14:00»"
+            ],
+            "source_refs": {
+              "raw_html_path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-13.html",
+              "raw_html_sha256": "24b01ce3a4eb705a1a03d141cd0bf0503bc93f54c36a2dea9df8eb526d32a4cd",
+              "bundle_full_text_sha256": "e0bbb042cb24c0dd2bd2950b192ccdb2ea98e812ef503ab1b6539813a23e324a"
+            }
+          },
+          {
+            "url": "https://bloknot-rostov.ru/news/muzhchina-zabralsya-na-lep-otkazyvalsya-spuskatsya-2023109",
+            "target_case": "nc05",
+            "kind": "article",
+            "source_reviewed": true,
+            "date_verified": false,
+            "published_date": null,
+            "returned_in_primary_source_cards": false,
+            "included_in_primary_gold": false,
+            "assessment_scope": "auxiliary source-only disclosure; not a primary metric or candidate-pool recall label",
+            "title": "Под Ростовом дезертир забрался на ЛЭП и всю ночь отказывался спускаться",
+            "place": "Батайск, Ростовская область; не сам Ростов-на-Дону",
+            "place_match": "regional_partial",
+            "topic": "Региональное происшествие с отключением электричества",
+            "observed_own_date_text": "сегодня, 11:20",
+            "grade": 1,
+            "eligibility": "unresolved_publication_date_and_city_boundary",
+            "reason": "Содержательное тело есть; событие в соседнем Батайске. Собственная дата относительная, полного publication date нет. Нельзя засчитать как проверенную публикацию Ростова за 03.11.2026.",
+            "evidence": [
+              "runs/news-coverage-2026-11-03/benchmark/blind/source-native-documents.json documents['https://bloknot-rostov.ru/news/muzhchina-zabralsya-na-lep-otkazyvalsya-spuskatsya-2023109'].full_text: «В Батайске мужчина забрался на опору линии электропередачи и отказался спускаться.»",
+              "runs/news-coverage-2026-11-03/benchmark/native-originals/source-14.html: span.news-date-time = «сегодня, 11:20»"
+            ],
+            "source_refs": {
+              "raw_html_path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-14.html",
+              "raw_html_sha256": "1b760537cf91ef2b5dc542055ed53f5e63e9ac9580103c031ad45a280728f91a",
+              "bundle_full_text_sha256": "5fcc6d4511e14782130a0c308e6754da6ff8480db35461dffb389a99bbd3f7a6"
+            }
+          },
+          {
+            "url": "https://fckhimki.com/news/sezon-2025/iyun/khimki-m-oderzhali-volevuyu-pobedu-nad-vityazem/",
+            "target_case": "nc07",
+            "kind": "article",
+            "source_reviewed": true,
+            "date_verified": false,
+            "published_date": null,
+            "returned_in_primary_source_cards": false,
+            "included_in_primary_gold": false,
+            "assessment_scope": "auxiliary source-only disclosure; not a primary metric or candidate-pool recall label",
+            "title": "Химки-М одержали волевую победу над Витязем",
+            "place": "Одинцовский городской округ, Московская область; Химки",
+            "place_match": "no",
+            "topic": "Матч чемпионата Московской области",
+            "observed_own_date_text": null,
+            "grade": 0,
+            "eligibility": "unsuitable_wrong_place_and_topic",
+            "reason": "Полное тело о матче команд Московской области, не о Казани. «15 июня 2025 г.» — дата матча со стадионом и зрителями, не доказанная дата публикации. Собственной даты публикации не найдено.",
+            "evidence": [
+              "runs/news-coverage-2026-11-03/benchmark/blind/source-native-documents.json documents['https://fckhimki.com/news/sezon-2025/iyun/khimki-m-oderzhali-volevuyu-pobedu-nad-vityazem/'].full_text: «Чемпионат Московской области. 9-й тур.»"
+            ],
+            "source_refs": {
+              "raw_html_path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-18.html",
+              "raw_html_sha256": "aafe29281b4b262b6414e9568b3e21d26853c91abc1c0303f8181b5824c98df2",
+              "bundle_full_text_sha256": "e850680907b5f47d1c2e3fe3ee2f5668a86af3b7462162949a70755ba4b7eb3f"
+            }
+          },
+          {
+            "url": "https://fckhimki.com/news/sezon-2025/iyun/khimki-m-ustupili-lytkarino/",
+            "target_case": "nc07",
+            "kind": "article",
+            "source_reviewed": true,
+            "date_verified": false,
+            "published_date": null,
+            "returned_in_primary_source_cards": false,
+            "included_in_primary_gold": false,
+            "assessment_scope": "auxiliary source-only disclosure; not a primary metric or candidate-pool recall label",
+            "title": "Химки-М уступили Лыткарино",
+            "place": "Химки и Лыткарино, Московская область",
+            "place_match": "no",
+            "topic": "Матч чемпионата Московской области",
+            "observed_own_date_text": null,
+            "grade": 0,
+            "eligibility": "unsuitable_wrong_place_and_topic",
+            "reason": "Полное тело о матче в Химках, не о Казани. «12 июня 2025 г.» — дата матча со стадионом и зрителями, не публикационная. Год/месяц из URL не используется.",
+            "evidence": [
+              "runs/news-coverage-2026-11-03/benchmark/blind/source-native-documents.json documents['https://fckhimki.com/news/sezon-2025/iyun/khimki-m-ustupili-lytkarino/'].full_text: «Чемпионат Московской области. 8-й тур.»"
+            ],
+            "source_refs": {
+              "raw_html_path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-19.html",
+              "raw_html_sha256": "c8293ea886f642def10e067f92d872cf5f579b95b8c7d172bff1207ef60a2107",
+              "bundle_full_text_sha256": "494a1dbda20420affccc5f7a6c1195249ea099430dfc25d68984e825cb1b26fa"
+            }
+          },
+          {
+            "url": "https://fckhimki.com/news/sezon-2025/iyun/nikita-kokarev-vklyuchen-v-short-list-premii-winline-geroi-rpl/",
+            "target_case": "nc07",
+            "kind": "article",
+            "source_reviewed": true,
+            "date_verified": false,
+            "published_date": null,
+            "returned_in_primary_source_cards": false,
+            "included_in_primary_gold": false,
+            "assessment_scope": "auxiliary source-only disclosure; not a primary metric or candidate-pool recall label",
+            "title": "Никита Кокарев включен в шорт-лист премии Winline Герои РПЛ",
+            "place": "Клуб Химки; премия и Центр Кино «Мосфильм»",
+            "place_match": "no",
+            "topic": "Голосование за футбольную премию",
+            "observed_own_date_text": null,
+            "grade": 0,
+            "eligibility": "unsuitable_wrong_place_and_topic",
+            "reason": "Полное тело о клубном вратаре и спортивной премии, связь с городскими новостями Казани отсутствует. 15 и 27 июня — сроки голосования/церемонии, не собственная дата публикации; год не восстанавливается из URL.",
+            "evidence": [
+              "runs/news-coverage-2026-11-03/benchmark/blind/source-native-documents.json documents['https://fckhimki.com/news/sezon-2025/iyun/nikita-kokarev-vklyuchen-v-short-list-premii-winline-geroi-rpl/'].full_text: «Никита Кокарев включен в шорт-лист премии Winline Герои РПЛ. Теперь ваш ход.»"
+            ],
+            "source_refs": {
+              "raw_html_path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-20.html",
+              "raw_html_sha256": "9f3673f054d8548c21021f4dc216696b580421ccae36f2a5bf3dde02497ac7ed",
+              "bundle_full_text_sha256": "34c5e5d093def4fc381d1c3014a87a28a9d0fb7b61050a1815a250f4813288e6"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "extra_known_positive_rows": [
+    {
+      "url": "https://nnovgorod.bezformata.com/listnews/poezd-svyazhet-kazan/165476847/",
+      "case_id": "nc03",
+      "primary_gold": false,
+      "returned_in_source_cards": false,
+      "kind": "article",
+      "grade": 2,
+      "published_date": "2026-11-03",
+      "source_reviewed": true,
+      "full_body_reviewed": true,
+      "date_verified": true,
+      "reason": "Полное собственное тело сообщает о новом поезде с остановкой в Нижнем Новгороде. Своя datePublished=2026-11-03 находится в главном NewsArticle рядом с собственным itemprop=url и заголовком, подтверждена видимым временем 03.11.2026 13:20. 28 ноября — дата начала движения, не публикации.",
+      "event_cluster": "nn-kazan-moscow-new-train-2026-11-03",
+      "publisher_cluster": "bezformata.com",
+      "evidence": [
+        "В пути следования предусмотрены остановки в том числе на станциях Нижний Новгород-Стригино, Владимир.",
+        "03.11.2026 13:20"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-native-documents.json",
+          "url": "https://nnovgorod.bezformata.com/listnews/poezd-svyazhet-kazan/165476847/",
+          "field": "full_text",
+          "start_char": 210,
+          "end_char": 311,
+          "quote": "В пути следования предусмотрены остановки в том числе на станциях Нижний Новгород-Стригино, Владимир."
+        },
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-06.html",
+          "sha256": "d2d237f2e4774b9e30b8556050f62e9c29a99bd1aa61510383b560bb65964803",
+          "role": "captured_original_html"
+        }
+      ],
+      "publication_evidence": [
+        {
+          "field": "own main NewsArticle.datePublished",
+          "value": "2026-11-03",
+          "raw_html_path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-06.html",
+          "main_schema_start_char": 6789,
+          "main_schema_end_char": 8137,
+          "own_url": "https://nnovgorod.bezformata.com/listnews/poezd-svyazhet-kazan/165476847/"
+        }
+      ]
+    },
+    {
+      "url": "https://nnovgorod.bezformata.com/listnews/punkt-dlya-otdiha/165482058/",
+      "case_id": "nc03",
+      "primary_gold": false,
+      "returned_in_source_cards": false,
+      "kind": "article",
+      "grade": 2,
+      "published_date": "2026-11-03",
+      "source_reviewed": true,
+      "full_body_reviewed": true,
+      "date_verified": true,
+      "reason": "Полное собственное тело прямо помещает открытый пункт в Канавинский район Нижнего Новгорода. Своя datePublished=2026-11-03 в главном NewsArticle рядом с собственным itemprop=url подтверждена видимым временем 03.11.2026 15:05; дата входит в окно nc03.",
+      "event_cluster": "nn-raketnaya-dispatch-rest-point-2026-11-03",
+      "publisher_cluster": "bezformata.com",
+      "evidence": [
+        "Модульный диспетчерский пункт для отдыха водителей, кондукторов и диспетчерского персонала АО «Нижегородпассажиравтотранс» открыли на улице Ракетной в Канавинском районе Нижнего Новгорода, сообщили в ЦРТС.",
+        "03.11.2026 15:05"
+      ],
+      "source_refs": [
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/blind/source-native-documents.json",
+          "url": "https://nnovgorod.bezformata.com/listnews/punkt-dlya-otdiha/165482058/",
+          "field": "full_text",
+          "start_char": 124,
+          "end_char": 329,
+          "quote": "Модульный диспетчерский пункт для отдыха водителей, кондукторов и диспетчерского персонала АО «Нижегородпассажиравтотранс» открыли на улице Ракетной в Канавинском районе Нижнего Новгорода, сообщили в ЦРТС."
+        },
+        {
+          "path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-08.html",
+          "sha256": "345339dafa3c0070ee988a0aabd7aadf13aa52b270a70f0ffa9d413bf5ebaf77",
+          "role": "captured_original_html"
+        }
+      ],
+      "publication_evidence": [
+        {
+          "field": "own main NewsArticle.datePublished",
+          "value": "2026-11-03",
+          "raw_html_path": "runs/news-coverage-2026-11-03/benchmark/native-originals/source-08.html",
+          "main_schema_start_char": 6627,
+          "main_schema_end_char": 7991,
+          "own_url": "https://nnovgorod.bezformata.com/listnews/punkt-dlya-otdiha/165482058/"
+        }
+      ]
+    }
+  ],
+  "runtime_traces": [
+    {
+      "arm": "baseline",
+      "case_id": "nc03",
+      "id": "C023",
+      "url": "https://nnovgorod.bezformata.com/listnews/poezd-svyazhet-kazan/165476847/",
+      "read": true,
+      "returned": false,
+      "http_status": 200,
+      "text_hash": "264efa070a5c878d7949275f43dd0f5161d71f6d8e7ab671c219bf35a1f162e7",
+      "runtime_rejection": "publication_date_not_verified",
+      "runtime_published_date": null
+    },
+    {
+      "arm": "baseline",
+      "case_id": "nc03",
+      "id": "C021",
+      "url": "https://nnovgorod.bezformata.com/listnews/punkt-dlya-otdiha/165482058/",
+      "read": true,
+      "returned": false,
+      "http_status": 200,
+      "text_hash": "d66d3dd25b8528d30e61382dca8ac69f8d4d82884b1a741ba172d59e17f6f188",
+      "runtime_rejection": "publication_date_not_verified",
+      "runtime_published_date": null
+    },
+    {
+      "arm": "fixed",
+      "case_id": "nc03",
+      "id": "C023",
+      "url": "https://nnovgorod.bezformata.com/listnews/poezd-svyazhet-kazan/165476847/",
+      "read": true,
+      "returned": false,
+      "http_status": 200,
+      "text_hash": "264efa070a5c878d7949275f43dd0f5161d71f6d8e7ab671c219bf35a1f162e7",
+      "runtime_rejection": "publication_date_not_verified",
+      "runtime_published_date": null
+    },
+    {
+      "arm": "fixed",
+      "case_id": "nc03",
+      "id": "C021",
+      "url": "https://nnovgorod.bezformata.com/listnews/punkt-dlya-otdiha/165482058/",
+      "read": true,
+      "returned": false,
+      "http_status": 200,
+      "text_hash": "d66d3dd25b8528d30e61382dca8ac69f8d4d82884b1a741ba172d59e17f6f188",
+      "runtime_rejection": "publication_date_not_verified",
+      "runtime_published_date": null
+    }
+  ],
+  "expanded_known_positive_denominator": 5,
+  "arms": {
+    "baseline": {
+      "direct_tp": 3,
+      "fn": 2,
+      "direct_recall": 0.6
+    },
+    "fixed": {
+      "direct_tp": 3,
+      "fn": 2,
+      "direct_recall": 0.6
+    }
+  },
+  "limits": [
+    "Only later validated observed reads and returned union; no web-wide or fullcandidate pool recall.",
+    "Other auxiliary relative-date originals remain unresolved; do not force negatives.",
+    "Two additional known eligible pages share downstream publisher Vremya N; not independent publisher replication.",
+    "New misses are before coverage: date parser did not bind own visible full publication DOM. No tuning based on this fresh set."
+  ]
+}

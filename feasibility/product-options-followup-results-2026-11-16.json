@@ -1,0 +1,1318 @@
+{
+  "schema": "section-pipeline-followup-v1",
+  "rows": [
+    {
+      "id": "F02-baseline",
+      "result_sha256": "4ad6529db424c74f1e3eded29c67c5567db99f230431565ea2e414e77e534d1f",
+      "result": {
+        "actions": [
+          {
+            "action": "serp",
+            "engine": "seznam",
+            "error": null,
+            "form": 1,
+            "results": 1
+          },
+          {
+            "action": "serp",
+            "engine": "naver",
+            "form": 1,
+            "status": "source_disabled"
+          },
+          {
+            "action": "read",
+            "attempt": 1,
+            "eligible": true,
+            "source_id": "S1"
+          },
+          {
+            "action": "qwen",
+            "cache_hit": null,
+            "source_id": "S1",
+            "status": "ok"
+          },
+          {
+            "action": "retain_claim",
+            "audit_claim": "A1",
+            "draft_claim": "A1",
+            "generation": 2
+          },
+          {
+            "action": "serp",
+            "engine": "seznam",
+            "error": null,
+            "form": 2,
+            "results": 1
+          },
+          {
+            "action": "serp",
+            "engine": "naver",
+            "form": 2,
+            "status": "source_disabled"
+          }
+        ],
+        "answer": "RFC 9110: All 1xx (Informational), 204 (No Content), and 304 (Not Modified) responses do not include content. [S1](<https://www.rfc-editor.org/rfc/rfc9110.html>)",
+        "budget": {
+          "limits": {
+            "browser": 0,
+            "documents": 4,
+            "forms": 2,
+            "generations": 6,
+            "output_bytes": 32768,
+            "qwen": 4,
+            "seconds": 180,
+            "serp": 4,
+            "source_context_chars": 24000
+          },
+          "remaining": {
+            "documents": 3,
+            "forms": 0,
+            "generations": 3,
+            "milliseconds": 170694,
+            "qwen": 3,
+            "serp": 2
+          },
+          "used": {
+            "documents": 1,
+            "forms": 2,
+            "generations": 3,
+            "qwen": 1,
+            "serp": 2
+          }
+        },
+        "cache": {
+          "enabled": false,
+          "errors": 0,
+          "extractions": 0,
+          "hits": 0,
+          "http_reads": 0,
+          "misses": 0,
+          "qwen_calls": 1,
+          "refresh": false,
+          "writes": 0
+        },
+        "claims": [
+          {
+            "answer_end": 109,
+            "answer_start": 0,
+            "evidence": [
+              {
+                "document_version": "05c172b579f2bc9aa2ce3842ac6e235a5376a0fbb722efa23482e2de1fe2abeb",
+                "end": 80857,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "All 1xx (Informational), 204 (No Content), and 304 (Not Modified) responses do not include content.",
+                "source_id": "S1",
+                "start": 80758
+              }
+            ],
+            "facets": [
+              0,
+              2
+            ],
+            "id": "A1",
+            "kind": "fact",
+            "rationale": "",
+            "text": "RFC 9110: All 1xx (Informational), 204 (No Content), and 304 (Not Modified) responses do not include content."
+          }
+        ],
+        "conflicts": [],
+        "elapsed_ms": 9305,
+        "error": null,
+        "facets": [
+          "Может ли ответ 204 содержать content (тело сообщения)?",
+          "Может ли ответ 204 содержать trailers (трейлеры)?",
+          "Проверить формулировки RFC 9110 о 204 No Content и о теле/трейлерах"
+        ],
+        "independence": "distinct document bodies; publisher independence not established",
+        "missing": [
+          1
+        ],
+        "model_calls": [
+          {
+            "elapsed_ms": 1449,
+            "stage": "plan",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 77,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 5.5816e-05,
+              "cost_details": {
+                "upstream_inference_completions_cost": 3.85e-05,
+                "upstream_inference_cost": 5.5816e-05,
+                "upstream_inference_prompt_cost": 1.7316e-05
+              },
+              "is_byok": false,
+              "prompt_tokens": 481,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "video_tokens": 0
+              },
+              "total_tokens": 558
+            }
+          },
+          {
+            "elapsed_ms": 1606,
+            "stage": "draft",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 99,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 0.000145656,
+              "cost_details": {
+                "upstream_inference_completions_cost": 4.95e-05,
+                "upstream_inference_cost": 0.000145656,
+                "upstream_inference_prompt_cost": 9.6156e-05
+              },
+              "is_byok": false,
+              "prompt_tokens": 2671,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "video_tokens": 0
+              },
+              "total_tokens": 2770
+            }
+          },
+          {
+            "elapsed_ms": 1075,
+            "stage": "audit",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 95,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 0.00011842,
+              "cost_details": {
+                "upstream_inference_completions_cost": 4.75e-05,
+                "upstream_inference_cost": 0.00011842,
+                "upstream_inference_prompt_cost": 7.092e-05
+              },
+              "is_byok": false,
+              "prompt_tokens": 1970,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "video_tokens": 0
+              },
+              "total_tokens": 2065
+            }
+          }
+        ],
+        "news_window": null,
+        "offset_unit": "Unicode code points; answer ranges exclude app-added citation suffixes",
+        "output_limited": false,
+        "query_forms": [
+          "RFC 9110 204 No Content documentation",
+          "RFC 9110 204 No Content trailers trailer section"
+        ],
+        "request_id": "9f3fe4a4a6d212102892de28e19b2c5ea8e03789b9b555f4c928c0d4e8be46d8",
+        "semantic_verification": "experimental separate model audit; not an independent truth guarantee",
+        "sources": [
+          {
+            "cache": null,
+            "document_version": "05c172b579f2bc9aa2ce3842ac6e235a5376a0fbb722efa23482e2de1fe2abeb",
+            "eligibility": "read_body",
+            "eligible": true,
+            "extraction": {
+              "method": "declared_rfc_body",
+              "scope": "rfc_body",
+              "truncated": true
+            },
+            "id": "S1",
+            "parent_url": null,
+            "publication": {
+              "date_status": "missing",
+              "kind": "unknown",
+              "published_date": null,
+              "witness_count": 0,
+              "witnesses": [],
+              "witnesses_limited": false
+            },
+            "text_hash": "6f20214cfccc318385b390ea9ae9f72ce0b63ad18382b53a774eeef2f2bd2615",
+            "title": "RFC 9110: HTTP Semantics",
+            "url": "https://www.rfc-editor.org/rfc/rfc9110.html"
+          }
+        ],
+        "status": "partial",
+        "stop_reason": "no_new_evidence",
+        "sufficiency": {
+          "audit_completed": true,
+          "cited_distinct_documents": 1,
+          "judge_sufficient": false,
+          "required_distinct_documents": 2
+        },
+        "untrusted_content": true
+      },
+      "witnesses_checked": 1,
+      "max_context_chars": 8205,
+      "known_cost_usd": 0.000319892,
+      "unknown_cost_calls": 0,
+      "mode": "known fixed source oracle; no public search"
+    },
+    {
+      "id": "F02-candidate",
+      "result_sha256": "ec7f1df53fcf493a103578c08882d7beb9f7c9b92c706af580f688975a1742e2",
+      "result": {
+        "actions": [
+          {
+            "action": "serp",
+            "engine": "seznam",
+            "error": null,
+            "form": 1,
+            "results": 1
+          },
+          {
+            "action": "serp",
+            "engine": "naver",
+            "form": 1,
+            "status": "source_disabled"
+          },
+          {
+            "action": "read",
+            "attempt": 1,
+            "eligible": true,
+            "source_id": "S1"
+          },
+          {
+            "action": "qwen",
+            "cache_hit": null,
+            "source_id": "S1",
+            "status": "ok"
+          },
+          {
+            "action": "retain_claim",
+            "audit_claim": "A1",
+            "draft_claim": "A1",
+            "generation": 2
+          },
+          {
+            "action": "retain_claim",
+            "audit_claim": "A2",
+            "draft_claim": "A2",
+            "generation": 2
+          },
+          {
+            "action": "serp",
+            "engine": "seznam",
+            "error": null,
+            "form": 2,
+            "results": 1
+          },
+          {
+            "action": "serp",
+            "engine": "naver",
+            "form": 2,
+            "status": "source_disabled"
+          }
+        ],
+        "answer": "RFC 9110: A 204 response is terminated by the end of the header section; it cannot contain content or trailers. [S1](<https://www.rfc-editor.org/rfc/rfc9110.html>)\nRFC 9110: The 204 (No Content) status code indicates that the server has successfully fulfilled the request and that there is no additional content to send in the response content. [S1](<https://www.rfc-editor.org/rfc/rfc9110.html>)",
+        "budget": {
+          "limits": {
+            "browser": 0,
+            "documents": 4,
+            "forms": 2,
+            "generations": 6,
+            "output_bytes": 32768,
+            "qwen": 4,
+            "seconds": 180,
+            "serp": 4,
+            "source_context_chars": 24000
+          },
+          "remaining": {
+            "documents": 3,
+            "forms": 0,
+            "generations": 3,
+            "milliseconds": 174918,
+            "qwen": 3,
+            "serp": 2
+          },
+          "used": {
+            "documents": 1,
+            "forms": 2,
+            "generations": 3,
+            "qwen": 1,
+            "serp": 2
+          }
+        },
+        "cache": {
+          "enabled": false,
+          "errors": 0,
+          "extractions": 0,
+          "hits": 0,
+          "http_reads": 0,
+          "misses": 0,
+          "qwen_calls": 1,
+          "refresh": false,
+          "writes": 0
+        },
+        "claims": [
+          {
+            "answer_end": 111,
+            "answer_start": 0,
+            "evidence": [
+              {
+                "document_version": "6c9b9d082727939b77131c10e559c601a4743eb3b107dd67229cf4b7436a9ec8",
+                "end": 1495,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "A 204 response is terminated by the end of the header section; it cannot contain content or trailers.",
+                "source_id": "S1",
+                "start": 1394
+              }
+            ],
+            "facets": [
+              0,
+              1
+            ],
+            "id": "A1",
+            "kind": "fact",
+            "rationale": "",
+            "text": "RFC 9110: A 204 response is terminated by the end of the header section; it cannot contain content or trailers."
+          },
+          {
+            "answer_end": 344,
+            "answer_start": 164,
+            "evidence": [
+              {
+                "document_version": "6c9b9d082727939b77131c10e559c601a4743eb3b107dd67229cf4b7436a9ec8",
+                "end": 220,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "The 204 (No Content) status code indicates that the server has successfully fulfilled the request and that there is no additional content to send in the response content.",
+                "source_id": "S1",
+                "start": 50
+              }
+            ],
+            "facets": [
+              0
+            ],
+            "id": "A2",
+            "kind": "fact",
+            "rationale": "",
+            "text": "RFC 9110: The 204 (No Content) status code indicates that the server has successfully fulfilled the request and that there is no additional content to send in the response content."
+          }
+        ],
+        "conflicts": [],
+        "elapsed_ms": 5081,
+        "error": null,
+        "facets": [
+          "Может ли ответ 204 содержать content (тело сообщения)?",
+          "Может ли ответ 204 содержать trailers (трейлеры)?",
+          "Проверить, что именно RFC 9110 (не 7231/2616) регулирует 204 и поля тела/трейлеров"
+        ],
+        "independence": "distinct document bodies; publisher independence not established",
+        "missing": [
+          2
+        ],
+        "model_calls": [
+          {
+            "elapsed_ms": 1797,
+            "stage": "plan",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 95,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 5.4832e-05,
+              "cost_details": {
+                "upstream_inference_completions_cost": 4.75e-05,
+                "upstream_inference_cost": 5.4832e-05,
+                "upstream_inference_prompt_cost": 7.332e-06
+              },
+              "is_byok": false,
+              "prompt_tokens": 481,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 384,
+                "video_tokens": 0
+              },
+              "total_tokens": 576
+            }
+          },
+          {
+            "elapsed_ms": 1381,
+            "stage": "draft",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 158,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 0.000151864,
+              "cost_details": {
+                "upstream_inference_completions_cost": 7.9e-05,
+                "upstream_inference_cost": 0.000151864,
+                "upstream_inference_prompt_cost": 7.2864e-05
+              },
+              "is_byok": false,
+              "prompt_tokens": 2024,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "video_tokens": 0
+              },
+              "total_tokens": 2182
+            }
+          },
+          {
+            "elapsed_ms": 1469,
+            "stage": "audit",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 124,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 0.000124676,
+              "cost_details": {
+                "upstream_inference_completions_cost": 6.2e-05,
+                "upstream_inference_cost": 0.000124676,
+                "upstream_inference_prompt_cost": 6.2676e-05
+              },
+              "is_byok": false,
+              "prompt_tokens": 1741,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "video_tokens": 0
+              },
+              "total_tokens": 1865
+            }
+          }
+        ],
+        "news_window": null,
+        "offset_unit": "Unicode code points; answer ranges exclude app-added citation suffixes",
+        "output_limited": false,
+        "query_forms": [
+          "RFC 9110 204 No Content message body trailer fields site:rfc-editor.org",
+          "RFC 9110 15.3.5 204 No Content"
+        ],
+        "request_id": "690874c348a33cd5c1e74fec0442d7914766e816ee6314b894a0db2b7d7c2400",
+        "semantic_verification": "experimental separate model audit; not an independent truth guarantee",
+        "sources": [
+          {
+            "cache": null,
+            "document_version": "6c9b9d082727939b77131c10e559c601a4743eb3b107dd67229cf4b7436a9ec8",
+            "eligibility": "read_body",
+            "eligible": true,
+            "extraction": {
+              "method": "declared_rfc_body",
+              "scope": "experimental_selected_rfc_section",
+              "truncated": false
+            },
+            "id": "S1",
+            "parent_url": null,
+            "publication": {
+              "date_status": "missing",
+              "kind": "unknown",
+              "published_date": null,
+              "witness_count": 0,
+              "witnesses": [],
+              "witnesses_limited": false
+            },
+            "text_hash": "14edc1c4ef044889c1b302e0fefeda684ee82d8fdbeefdefdb545b2db632b29d",
+            "title": "RFC 9110: HTTP Semantics",
+            "url": "https://www.rfc-editor.org/rfc/rfc9110.html"
+          }
+        ],
+        "status": "partial",
+        "stop_reason": "no_new_evidence",
+        "sufficiency": {
+          "audit_completed": true,
+          "cited_distinct_documents": 1,
+          "judge_sufficient": true,
+          "required_distinct_documents": 2
+        },
+        "untrusted_content": true
+      },
+      "witnesses_checked": 2,
+      "max_context_chars": 5220,
+      "known_cost_usd": 0.000331372,
+      "unknown_cost_calls": 0,
+      "mode": "known fixed source oracle; no public search"
+    },
+    {
+      "id": "F03-baseline",
+      "result_sha256": "c61910dc691a9fd3b30232ba9b3a572b7f4ee041bacfa4d38a91f944aeb00de4",
+      "result": {
+        "actions": [
+          {
+            "action": "serp",
+            "engine": "seznam",
+            "error": null,
+            "form": 1,
+            "results": 1
+          },
+          {
+            "action": "serp",
+            "engine": "naver",
+            "form": 1,
+            "status": "source_disabled"
+          },
+          {
+            "action": "read",
+            "attempt": 1,
+            "eligible": true,
+            "source_id": "S1"
+          },
+          {
+            "action": "qwen",
+            "cache_hit": null,
+            "source_id": "S1",
+            "status": "ok"
+          },
+          {
+            "action": "retain_claim",
+            "audit_claim": "A1",
+            "draft_claim": "A1",
+            "generation": 2
+          },
+          {
+            "action": "retain_claim",
+            "audit_claim": "A2",
+            "draft_claim": "A2",
+            "generation": 2
+          },
+          {
+            "action": "withhold_claim",
+            "draft_claim": "A3",
+            "generation": 2,
+            "reason": "invalid/duplicate answer text"
+          },
+          {
+            "action": "retain_claim",
+            "audit_claim": "A3",
+            "draft_claim": "A4",
+            "generation": 2
+          }
+        ],
+        "answer": "RFC 9111: The no-store response directive indicates that a cache MUST NOT store any part of either the immediate request or the response and MUST NOT use the response to satisfy any other request. [S1](<https://www.rfc-editor.org/rfc/rfc9111.html>)\nRFC 9111: This directive applies to both private and shared caches. [S1](<https://www.rfc-editor.org/rfc/rfc9111.html>)\nRFC 9111: Note that the must-understand cache directive overrides no-store in certain circumstances; see Section 5.2.2.3. [S1](<https://www.rfc-editor.org/rfc/rfc9111.html>)",
+        "budget": {
+          "limits": {
+            "browser": 0,
+            "documents": 4,
+            "forms": 2,
+            "generations": 6,
+            "output_bytes": 32768,
+            "qwen": 4,
+            "seconds": 180,
+            "serp": 4,
+            "source_context_chars": 24000
+          },
+          "remaining": {
+            "documents": 3,
+            "forms": 1,
+            "generations": 3,
+            "milliseconds": 174689,
+            "qwen": 3,
+            "serp": 3
+          },
+          "used": {
+            "documents": 1,
+            "forms": 1,
+            "generations": 3,
+            "qwen": 1,
+            "serp": 1
+          }
+        },
+        "cache": {
+          "enabled": false,
+          "errors": 0,
+          "extractions": 0,
+          "hits": 0,
+          "http_reads": 0,
+          "misses": 0,
+          "qwen_calls": 1,
+          "refresh": false,
+          "writes": 0
+        },
+        "claims": [
+          {
+            "answer_end": 196,
+            "answer_start": 0,
+            "evidence": [
+              {
+                "document_version": "deb7cf0d399f8ba7698d658c1ada0be366254faea8319a7a67bf2a9c0bcf2d5d",
+                "end": 229,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "The no-store response directive indicates that a cache MUST NOT store any part of either the immediate request or the response and MUST NOT use the response to satisfy any other request.",
+                "source_id": "S1",
+                "start": 43
+              }
+            ],
+            "facets": [
+              0
+            ],
+            "id": "A1",
+            "kind": "fact",
+            "rationale": "",
+            "text": "RFC 9111: The no-store response directive indicates that a cache MUST NOT store any part of either the immediate request or the response and MUST NOT use the response to satisfy any other request."
+          },
+          {
+            "answer_end": 316,
+            "answer_start": 249,
+            "evidence": [
+              {
+                "document_version": "deb7cf0d399f8ba7698d658c1ada0be366254faea8319a7a67bf2a9c0bcf2d5d",
+                "end": 289,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "This directive applies to both private and shared caches.",
+                "source_id": "S1",
+                "start": 232
+              }
+            ],
+            "facets": [
+              0
+            ],
+            "id": "A2",
+            "kind": "fact",
+            "rationale": "",
+            "text": "RFC 9111: This directive applies to both private and shared caches."
+          },
+          {
+            "answer_end": 490,
+            "answer_start": 369,
+            "evidence": [
+              {
+                "document_version": "deb7cf0d399f8ba7698d658c1ada0be366254faea8319a7a67bf2a9c0bcf2d5d",
+                "end": 893,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "Note that the must-understand cache directive overrides no-store in certain circumstances; see Section 5.2.2.3.",
+                "source_id": "S1",
+                "start": 782
+              }
+            ],
+            "facets": [
+              1
+            ],
+            "id": "A3",
+            "kind": "fact",
+            "rationale": "",
+            "text": "RFC 9111: Note that the must-understand cache directive overrides no-store in certain circumstances; see Section 5.2.2.3."
+          }
+        ],
+        "conflicts": [],
+        "elapsed_ms": 5310,
+        "error": null,
+        "facets": [
+          "Что именно запрещает директива no-store для private и shared кэшей согласно RFC 9111 §5.2.2.5",
+          "При каких условиях другая директива позволяет игнорировать no-store (проверка ложной посылки)"
+        ],
+        "independence": "distinct document bodies; publisher independence not established",
+        "missing": [],
+        "model_calls": [
+          {
+            "elapsed_ms": 1637,
+            "stage": "plan",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 95,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 5.906e-05,
+              "cost_details": {
+                "upstream_inference_completions_cost": 4.75e-05,
+                "upstream_inference_cost": 5.906e-05,
+                "upstream_inference_prompt_cost": 1.156e-05
+              },
+              "is_byok": false,
+              "prompt_tokens": 506,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 256,
+                "video_tokens": 0
+              },
+              "total_tokens": 601
+            }
+          },
+          {
+            "elapsed_ms": 2391,
+            "stage": "draft",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 323,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 0.000197872,
+              "cost_details": {
+                "upstream_inference_completions_cost": 0.0001615,
+                "upstream_inference_cost": 0.000197872,
+                "upstream_inference_prompt_cost": 3.6372e-05
+              },
+              "is_byok": false,
+              "prompt_tokens": 1565,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 768,
+                "video_tokens": 0
+              },
+              "total_tokens": 1888
+            }
+          },
+          {
+            "elapsed_ms": 1157,
+            "stage": "audit",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 167,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 0.000129768,
+              "cost_details": {
+                "upstream_inference_completions_cost": 8.35e-05,
+                "upstream_inference_cost": 0.000129768,
+                "upstream_inference_prompt_cost": 4.6268e-05
+              },
+              "is_byok": false,
+              "prompt_tokens": 1655,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 512,
+                "video_tokens": 0
+              },
+              "total_tokens": 1822
+            }
+          }
+        ],
+        "news_window": null,
+        "offset_unit": "Unicode code points; answer ranges exclude app-added citation suffixes",
+        "output_limited": false,
+        "query_forms": [
+          "RFC 9111 §5.2.2.5 no-store private shared cache ignore directive site:rfc-editor.org"
+        ],
+        "request_id": "789a2326428377de9f7d5163a826843b07d94fb8ffc9b74d287cf5cbc854ee5a",
+        "semantic_verification": "experimental separate model audit; not an independent truth guarantee",
+        "sources": [
+          {
+            "cache": null,
+            "document_version": "deb7cf0d399f8ba7698d658c1ada0be366254faea8319a7a67bf2a9c0bcf2d5d",
+            "eligibility": "read_body",
+            "eligible": true,
+            "extraction": {
+              "method": "declared_rfc_body",
+              "scope": "experimental_rfc_section_closure",
+              "truncated": false
+            },
+            "id": "S1",
+            "parent_url": null,
+            "publication": {
+              "date_status": "missing",
+              "kind": "unknown",
+              "published_date": null,
+              "witness_count": 0,
+              "witnesses": [],
+              "witnesses_limited": false
+            },
+            "text_hash": "37472edfcba6869de48af3e0973c7817e10f25129e57590cc0b3ece3c36821d6",
+            "title": "RFC 9111: HTTP Caching",
+            "url": "https://www.rfc-editor.org/rfc/rfc9111.html"
+          }
+        ],
+        "status": "partial",
+        "stop_reason": "no_new_evidence",
+        "sufficiency": {
+          "audit_completed": true,
+          "cited_distinct_documents": 1,
+          "judge_sufficient": false,
+          "required_distinct_documents": 2
+        },
+        "untrusted_content": true
+      },
+      "witnesses_checked": 3,
+      "max_context_chars": 3864,
+      "known_cost_usd": 0.0003867,
+      "unknown_cost_calls": 0,
+      "mode": "known fixed source oracle; no public search"
+    },
+    {
+      "id": "F03-candidate",
+      "result_sha256": "e4779174c13208d35086c1292096dcc8e55a12dba51daef1c30e827d91ddfaec",
+      "result": {
+        "actions": [
+          {
+            "action": "serp",
+            "engine": "seznam",
+            "error": null,
+            "form": 1,
+            "results": 1
+          },
+          {
+            "action": "serp",
+            "engine": "naver",
+            "form": 1,
+            "status": "source_disabled"
+          },
+          {
+            "action": "read",
+            "attempt": 1,
+            "eligible": true,
+            "source_id": "S1"
+          },
+          {
+            "action": "qwen",
+            "cache_hit": null,
+            "source_id": "S1",
+            "status": "ok"
+          },
+          {
+            "action": "retain_claim",
+            "audit_claim": "A1",
+            "draft_claim": "A1",
+            "generation": 2
+          },
+          {
+            "action": "retain_claim",
+            "audit_claim": "A2",
+            "draft_claim": "A2",
+            "generation": 2
+          },
+          {
+            "action": "withhold_claim",
+            "draft_claim": "A3",
+            "generation": 2,
+            "reason": "invalid/duplicate answer text"
+          },
+          {
+            "action": "retain_claim",
+            "audit_claim": "A3",
+            "draft_claim": "A4",
+            "generation": 2
+          }
+        ],
+        "answer": "RFC 9111: The no-store response directive indicates that a cache MUST NOT store any part of either the immediate request or the response and MUST NOT use the response to satisfy any other request. [S1](<https://www.rfc-editor.org/rfc/rfc9111.html>)\nRFC 9111: This directive applies to both private and shared caches. [S1](<https://www.rfc-editor.org/rfc/rfc9111.html>)\nRFC 9111: When a cache that implements the must-understand directive receives a response that includes it, the cache SHOULD ignore the no-store directive if it understands and implements the status code's caching requirements. [S1](<https://www.rfc-editor.org/rfc/rfc9111.html>)",
+        "budget": {
+          "limits": {
+            "browser": 0,
+            "documents": 4,
+            "forms": 2,
+            "generations": 6,
+            "output_bytes": 32768,
+            "qwen": 4,
+            "seconds": 180,
+            "serp": 4,
+            "source_context_chars": 24000
+          },
+          "remaining": {
+            "documents": 3,
+            "forms": 1,
+            "generations": 3,
+            "milliseconds": 175071,
+            "qwen": 3,
+            "serp": 3
+          },
+          "used": {
+            "documents": 1,
+            "forms": 1,
+            "generations": 3,
+            "qwen": 1,
+            "serp": 1
+          }
+        },
+        "cache": {
+          "enabled": false,
+          "errors": 0,
+          "extractions": 0,
+          "hits": 0,
+          "http_reads": 0,
+          "misses": 0,
+          "qwen_calls": 1,
+          "refresh": false,
+          "writes": 0
+        },
+        "claims": [
+          {
+            "answer_end": 196,
+            "answer_start": 0,
+            "evidence": [
+              {
+                "document_version": "e1200d0763f49316ba8bd4a8df6960fe4254f207f7be01f7bc5f6dc1f0b22d40",
+                "end": 229,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "The no-store response directive indicates that a cache MUST NOT store any part of either the immediate request or the response and MUST NOT use the response to satisfy any other request.",
+                "source_id": "S1",
+                "start": 43
+              }
+            ],
+            "facets": [
+              0
+            ],
+            "id": "A1",
+            "kind": "fact",
+            "rationale": "",
+            "text": "RFC 9111: The no-store response directive indicates that a cache MUST NOT store any part of either the immediate request or the response and MUST NOT use the response to satisfy any other request."
+          },
+          {
+            "answer_end": 316,
+            "answer_start": 249,
+            "evidence": [
+              {
+                "document_version": "e1200d0763f49316ba8bd4a8df6960fe4254f207f7be01f7bc5f6dc1f0b22d40",
+                "end": 289,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "This directive applies to both private and shared caches.",
+                "source_id": "S1",
+                "start": 232
+              }
+            ],
+            "facets": [
+              0
+            ],
+            "id": "A2",
+            "kind": "fact",
+            "rationale": "",
+            "text": "RFC 9111: This directive applies to both private and shared caches."
+          },
+          {
+            "answer_end": 595,
+            "answer_start": 369,
+            "evidence": [
+              {
+                "document_version": "e1200d0763f49316ba8bd4a8df6960fe4254f207f7be01f7bc5f6dc1f0b22d40",
+                "end": 1403,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "When a cache that implements the must-understand directive receives a response that includes it, the cache SHOULD ignore the no-store directive if it understands and implements the status code's caching requirements.",
+                "source_id": "S1",
+                "start": 1187
+              }
+            ],
+            "facets": [
+              1,
+              2
+            ],
+            "id": "A3",
+            "kind": "fact",
+            "rationale": "",
+            "text": "RFC 9111: When a cache that implements the must-understand directive receives a response that includes it, the cache SHOULD ignore the no-store directive if it understands and implements the status code's caching requirements."
+          }
+        ],
+        "conflicts": [],
+        "elapsed_ms": 4928,
+        "error": null,
+        "facets": [
+          "RFC 9111 §5.2.2.5: что именно запрещает директива no-store для private и shared кэшей",
+          "RFC 9111 §5.2.2.5: при каких условиях другая директива позволяет игнорировать no-store",
+          "Проверить, действительно ли §5.2.2.5 содержит правило об игнорировании no-store другой директивой"
+        ],
+        "independence": "distinct document bodies; publisher independence not established",
+        "missing": [],
+        "model_calls": [
+          {
+            "elapsed_ms": 1705,
+            "stage": "plan",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 133,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 7.4732e-05,
+              "cost_details": {
+                "upstream_inference_completions_cost": 6.65e-05,
+                "upstream_inference_cost": 7.4732e-05,
+                "upstream_inference_prompt_cost": 8.232e-06
+              },
+              "is_byok": false,
+              "prompt_tokens": 506,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 384,
+                "video_tokens": 0
+              },
+              "total_tokens": 639
+            }
+          },
+          {
+            "elapsed_ms": 1989,
+            "stage": "draft",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 314,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 0.00020896,
+              "cost_details": {
+                "upstream_inference_completions_cost": 0.000157,
+                "upstream_inference_cost": 0.00020896,
+                "upstream_inference_prompt_cost": 5.196e-05
+              },
+              "is_byok": false,
+              "prompt_tokens": 1998,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 768,
+                "video_tokens": 0
+              },
+              "total_tokens": 2312
+            }
+          },
+          {
+            "elapsed_ms": 1072,
+            "stage": "audit",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 137,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 0.000124776,
+              "cost_details": {
+                "upstream_inference_completions_cost": 6.85e-05,
+                "upstream_inference_cost": 0.000124776,
+                "upstream_inference_prompt_cost": 5.6276e-05
+              },
+              "is_byok": false,
+              "prompt_tokens": 1933,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 512,
+                "video_tokens": 0
+              },
+              "total_tokens": 2070
+            }
+          }
+        ],
+        "news_window": null,
+        "offset_unit": "Unicode code points; answer ranges exclude app-added citation suffixes",
+        "output_limited": false,
+        "query_forms": [
+          "RFC 9111 5.2.2.5 no-store private shared cache другой директивой игнорировать site:rfc-editor.org"
+        ],
+        "request_id": "b5b894157fbcaa4ff194aaf801bb59c720b14d59161de320b8e2b52c7cad8ffe",
+        "semantic_verification": "experimental separate model audit; not an independent truth guarantee",
+        "sources": [
+          {
+            "cache": null,
+            "document_version": "e1200d0763f49316ba8bd4a8df6960fe4254f207f7be01f7bc5f6dc1f0b22d40",
+            "eligibility": "read_body",
+            "eligible": true,
+            "extraction": {
+              "method": "declared_rfc_body",
+              "scope": "experimental_rfc_section_closure",
+              "truncated": false
+            },
+            "id": "S1",
+            "parent_url": null,
+            "publication": {
+              "date_status": "missing",
+              "kind": "unknown",
+              "published_date": null,
+              "witness_count": 0,
+              "witnesses": [],
+              "witnesses_limited": false
+            },
+            "text_hash": "9a95f9c0923d36353f1083e85e3f524cc9848a7de859d505de3ebf3df643c9b1",
+            "title": "RFC 9111: HTTP Caching",
+            "url": "https://www.rfc-editor.org/rfc/rfc9111.html"
+          }
+        ],
+        "status": "partial",
+        "stop_reason": "no_new_evidence",
+        "sufficiency": {
+          "audit_completed": true,
+          "cited_distinct_documents": 1,
+          "judge_sufficient": true,
+          "required_distinct_documents": 2
+        },
+        "untrusted_content": true
+      },
+      "witnesses_checked": 3,
+      "max_context_chars": 5027,
+      "known_cost_usd": 0.000408468,
+      "unknown_cost_calls": 0,
+      "mode": "known fixed source oracle; no public search"
+    }
+  ],
+  "independent_quality": {
+    "reviewer": "/root/options_review",
+    "status": "completed",
+    "rows": [
+      {
+        "id": "F02",
+        "arm": "baseline",
+        "supported_conditions": [
+          0
+        ],
+        "false": [],
+        "unknown": [],
+        "own_witness_review": "Baseline exact204nocontent clause; candidate exact204content+trailers clause. All returned claims supported by own source.",
+        "status": "partial",
+        "stop_reason": "no_new_evidence",
+        "result_sha256": "4ad6529db424c74f1e3eded29c67c5567db99f230431565ea2e414e77e534d1f"
+      },
+      {
+        "id": "F02",
+        "arm": "candidate",
+        "supported_conditions": [
+          0,
+          1
+        ],
+        "false": [],
+        "unknown": [],
+        "own_witness_review": "Baseline exact204nocontent clause; candidate exact204content+trailers clause. All returned claims supported by own source.",
+        "status": "partial",
+        "stop_reason": "no_new_evidence",
+        "result_sha256": "ec7f1df53fcf493a103578c08882d7beb9f7c9b92c706af580f688975a1742e2"
+      },
+      {
+        "id": "F03",
+        "arm": "baseline",
+        "supported_conditions": [
+          0,
+          1
+        ],
+        "missing_conditions": [
+          2
+        ],
+        "false": [],
+        "unknown": [],
+        "own_witness_review": "All3claims exactly supported; override existence quote does not state the actual requiredconditions. modelmissing[] not accepted as complete.",
+        "status": "partial",
+        "stop_reason": "no_new_evidence",
+        "result_sha256": "c61910dc691a9fd3b30232ba9b3a572b7f4ee041bacfa4d38a91f944aeb00de4"
+      },
+      {
+        "id": "F03",
+        "arm": "candidate",
+        "supported_conditions": [
+          0,
+          1,
+          2
+        ],
+        "missing_conditions": [],
+        "false": [],
+        "unknown": [],
+        "own_witness_review": "Own exact no-store/private/shared and full must-understand conditional SHOULDignore quote supports all3dimensions.",
+        "status": "partial",
+        "stop_reason": "no_new_evidence",
+        "result_sha256": "e4779174c13208d35086c1292096dcc8e55a12dba51daef1c30e827d91ddfaec"
+      }
+    ],
+    "summary": {
+      "conditions_baseline": 3,
+      "conditions_candidate": 5,
+      "conditions_total": 5,
+      "complete_baseline": 0,
+      "complete_candidate": 2,
+      "questions": 2,
+      "false_baseline": 0,
+      "false_candidate": 0,
+      "unknown_baseline": 0,
+      "unknown_candidate": 0,
+      "scope": "Frozen oracle-source Qwen+currentgeneration/audit component; not public retrieval/general qualification",
+      "gate": "SCOPED_NO_NEW_NO_LOSS_PASSED"
+    },
+    "limitations": [
+      "F02startup sanitized prehash recorded afterF02calls; F03 beforecalls.",
+      "Single source forces partial; correct condition coverage is separate from product sufficient status.",
+      "F03explicitcondition question differs earlier vague extractionpair but frozen beforeF03inference.",
+      "No new live retrieval comparison, no runtime selection/cache wiring."
+    ]
+  },
+  "focused_query": {
+    "result": "SERP reachability and primary body norm found",
+    "query": "RFC 6585 428 Precondition Required caching MUST NOT Что RFC 6585 говорит о кэшировании ответа 428 Precondition Required: разрешает или MUST NOT?",
+    "source_result_rank": 1,
+    "mapping": "existing rfc_body_candidate info→body",
+    "final_url": "https://www.rfc-editor.org/rfc/rfc6585.html",
+    "text_hash": "0ca74f5a0eedd3fcddf326ec6d752c898f4f14b0540c316a856b12338511254e",
+    "quote": "Responses with the 428 status code MUST NOT be stored by a cache.",
+    "start": 4689,
+    "end": 4754,
+    "offset_unit": "Unicode positions in returned extracted text",
+    "baseline_extra_requests": 0,
+    "candidate_search_requests": 1,
+    "candidate_document_reads": 1,
+    "model_calls": 0,
+    "limits": [
+      "Not paired retrieval quality",
+      "No original historical queue replay",
+      "No new final answer or claim audit",
+      "Initial url vs urls validation error did not perform HTTP; retained"
+    ]
+  },
+  "source_state_after": {
+    "blocked": {
+      "bing": "excluded from fixed protocol",
+      "ddg": "historical challenge; unqualified in this protocol",
+      "mwmbl": "excluded from fixed protocol",
+      "naver": "source_challenge: verification page; no retry"
+    },
+    "document_blocks": {
+      "devessentials.dev": "source_challenge: verification page; no retry",
+      "eur-lex.europa.eu": "HTTP 202",
+      "hermes-agent.nousresearch.com": "source_blocked: no retry in this probe",
+      "learn.microsoft.com": "source_challenge: verification page; no retry",
+      "parallelworks.com": "source_challenge: verification page; no retry",
+      "redis.io": "source_blocked: no retry in this probe",
+      "slice-master.co": "source_blocked: no retry in this probe",
+      "tfl.gov.uk": "source_blocked: no retry in this probe",
+      "www.atlantic.net": "source_blocked: no retry in this probe",
+      "www.ebay.com": "source_blocked: no retry in this probe",
+      "www.eracomp.cz": "source_challenge: verification widget; no retry",
+      "www.ltmuseum.co.uk": "source_blocked: no retry in this probe",
+      "www.mdpi.com": "source_blocked: no retry in this probe",
+      "www.mujrozhlas.cz": "source_blocked: no retry in this probe",
+      "www.webstaurantstore.com": "source_blocked: no retry in this probe"
+    }
+  },
+  "limits": [
+    "No production wiring",
+    "F02startup prehash absent",
+    "Single document is not independence qualification",
+    "No historicalqueue endtoend replay"
+  ]
+}

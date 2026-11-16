@@ -1,0 +1,26 @@
+[
+  {
+    "id": "agent-ru-rust-move",
+    "language": "ru",
+    "question": "В Rust после let s1 = String::from(\"hello\"); let s2 = s1; можно ли продолжить использовать s1? Объясни, почему, и как сохранить возможность использовать обе переменные. Подтверди ответ официальной документацией.",
+    "required_facts": [
+      "Присваивание String передаёт владение s2; s1 становится недействительной для использования",
+      "String не реализует Copy; правило предотвращает повторное освобождение одной памяти",
+      "s1.clone() позволяет получить независимую копию и использовать обе переменные"
+    ],
+    "acceptable_source_hosts": ["doc.rust-lang.org", "rust-lang.org"],
+    "forbidden_claims": ["Присваивание String автоматически делает глубокую копию", "s1 можно читать после move без clone или другого изменения кода"]
+  },
+  {
+    "id": "agent-en-sqlite-wal",
+    "language": "en",
+    "question": "In SQLite WAL mode, can readers run concurrently with a writer, can two writers commit at the same time, and does an already open read transaction immediately see new commits? Support each point with official SQLite documentation.",
+    "required_facts": [
+      "WAL permits concurrent readers and a writer",
+      "Only one writer may write at a time; WAL does not enable simultaneous writers",
+      "A read transaction keeps its snapshot and does not immediately see later commits; a new read transaction is needed"
+    ],
+    "acceptable_source_hosts": ["sqlite.org", "www.sqlite.org"],
+    "forbidden_claims": ["WAL supports concurrent simultaneous writers", "An existing read transaction automatically sees every new committed change"]
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "scope": "coverage component implementation, not independent acceptance",
+  "base": "35765fe",
+  "diagnostics": [
+    {
+      "id": "G02",
+      "first_break": "admission: full literal SHOULD sentence rejected because following separate ABNF paragraph begins lowercase",
+      "fix": "paragraph boundary respected; exact quote/source modality retained",
+      "status": "deterministic red-to-green"
+    },
+    {
+      "id": "G08",
+      "first_break": "selected VecDeque::insert, question asks Vec::insert; audit rejected correctly",
+      "status": "retrieval/selection scope, handed to docs agent"
+    },
+    {
+      "id": "F02",
+      "first_break": "draft range uses document offsets and1200-character chunk, selector demands chunk-relative<=360",
+      "status": "range guidance clarified; model effect not tested"
+    },
+    {
+      "id": "F03",
+      "first_break": "same wrong range convention; draft also incomplete/bad text",
+      "status": "range guidance clarified; model effect not tested"
+    },
+    {
+      "id": "F12",
+      "first_break": "returned background does not cover429 mandatory/optional; exact429 optionality support not established in selected chunks",
+      "status": "audit missing[0,1] preserved; no unsupported inference"
+    }
+  ],
+  "checks": [
+    {
+      "command": "CARGO_HOME=\"$PWD/.cache/cargo\" cargo test --locked --offline rfc_complete_clause_before_lowercase_paragraph_keeps_required_fact",
+      "baseline": "failed: RFC attribution needs a complete literal clause from matching primary",
+      "fixed": "passed1"
+    },
+    {
+      "command": "CARGO_HOME=\"$PWD/.cache/cargo\" cargo test --locked --offline",
+      "status": "passed",
+      "result": [
+        "test result: ok. 156 passed; 0 failed; 35 ignored; 0 measured; 0 filtered out; finished in 1.84s",
+        "test result: ok. 6 passed; 0 failed; 10 ignored; 0 measured; 0 filtered out; finished in 0.68s"
+      ]
+    },
+    {
+      "command": "cargo fmt --check",
+      "status": "passed"
+    },
+    {
+      "command": "CARGO_HOME=\"$PWD/.cache/cargo\" cargo clippy --locked --offline --all-targets -- -D warnings",
+      "status": "passed"
+    }
+  ],
+  "limits": [
+    "No live model/Qwen/public HTTP probes; root coordinates acceptance.",
+    "G02 tests use original clause and immediately surrounding source pattern, not full live retrieval.",
+    "F12 initial optional keyword reading corrected: refers428, not429.",
+    "Initial test harness Draft.clone compile failure corrected; not counted as red defect evidence.",
+    "RFC range guidance benefit remains unmeasured."
+  ]
+}

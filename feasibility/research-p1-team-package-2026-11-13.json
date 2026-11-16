@@ -1,0 +1,16 @@
+{
+  "path": "feasibility/research-p1-team-corpus-2026-11-13.tar.gz",
+  "bytes": 13959424,
+  "sha256": "a513f96399ff87f005340ec16254124cd75237d8bc3804169ffdc9e731689664",
+  "members": 1409,
+  "hashes_verified": true,
+  "credentials_detected": 0,
+  "excluded": [
+    "SDK homes/configs",
+    "workspace",
+    "binaries",
+    "caches",
+    "keys",
+    "user settings"
+  ]
+}

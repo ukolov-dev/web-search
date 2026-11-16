@@ -1,0 +1,34 @@
+{
+  "schema": "bounded-research-dev-confirm-v1",
+  "frozen_at": "2026-11-05T14:23:35.021424+00:00",
+  "notes": [
+    "Fresh development confirmation after fixing main-model/Qwen wiring and withholding invalid individual claims. Not blind qualification or A/B. Original4 primary trials remain immutable.",
+    "Same refusal ledger; budgets unchanged; no reference URLs in product input."
+  ],
+  "cases": [
+    {
+      "id": "R05",
+      "question": "При HTTP 301 может ли клиент заменить POST на GET, а при HTTP 307 обязан ли сохранить метод? Подтверди различие источниками.",
+      "gold": [
+        "301 allows historical POST-to-GET change",
+        "307 does not allow method change on automatic redirect"
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc9110.html#section-15.4.2",
+        "https://www.rfc-editor.org/rfc/rfc9110.html#section-15.4.8"
+      ]
+    },
+    {
+      "id": "R06",
+      "question": "Может ли Redis SSCAN вернуть один и тот же элемент несколько раз в полной итерации? Когда заканчивать обход: по пустому списку или по курсору?",
+      "gold": [
+        "duplicates are permitted; application handles them",
+        "empty list does not establish completion",
+        "cursor zero establishes completion"
+      ],
+      "references": [
+        "https://redis.io/docs/latest/commands/scan/"
+      ]
+    }
+  ]
+}

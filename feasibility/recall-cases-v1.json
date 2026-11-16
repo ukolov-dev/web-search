@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "frozen_at": "2026-10-29T20:56:27.321594+03:00",
+  "purpose": "Fresh8 validation, frozen before source capture. Do not tune semantic verifier after reviewing this set. Author assessment, not independent acceptance.",
+  "cases": [
+    {
+      "id": "r01",
+      "query": "HTTP 206 Range If-Range partial content documentation",
+      "forms": [
+        "HTTP 206 Range If-Range partial content documentation"
+      ]
+    },
+    {
+      "id": "r02",
+      "query": "PostgreSQL INSERT ON CONFLICT DO NOTHING DO UPDATE различие",
+      "forms": [
+        "PostgreSQL INSERT ON CONFLICT DO NOTHING DO UPDATE различие"
+      ]
+    },
+    {
+      "id": "r03",
+      "query": "Python asyncio shield wait_for timeout cancellation difference",
+      "forms": [
+        "Python asyncio shield wait_for timeout cancellation difference"
+      ]
+    },
+    {
+      "id": "r04",
+      "query": "CSS visibility hidden display none доступность отличие",
+      "forms": [
+        "CSS visibility hidden display none доступность отличие"
+      ]
+    },
+    {
+      "id": "r05",
+      "query": "site:docs.python.org csv newline empty Windows documentation",
+      "forms": [
+        "site:docs.python.org csv newline empty Windows documentation"
+      ]
+    },
+    {
+      "id": "r06",
+      "query": "Git merge revert -m mainline parent документация",
+      "forms": [
+        "Git merge revert -m mainline parent документация"
+      ]
+    },
+    {
+      "id": "r07",
+      "query": "Node.js 20 release April 2023 permission model official",
+      "forms": [
+        "Node.js 20 release April 2023 permission model official"
+      ]
+    },
+    {
+      "id": "r08",
+      "query": "JavaScript Promise.all Promise.allSettled fail fast difference",
+      "forms": [
+        "JavaScript Promise.all Promise.allSettled fail fast difference"
+      ]
+    }
+  ]
+}

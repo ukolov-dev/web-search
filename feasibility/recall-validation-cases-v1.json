@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "frozen_at": "2026-10-29T21:14:12.542200+03:00",
+  "purpose": "Fresh6 validation after development8 exposed untrusted planner failures. No semantic changes after inspecting this set.",
+  "cases": [
+    {
+      "id": "v01",
+      "query": "HTTP Cache-Control no-cache no-store difference",
+      "forms": [
+        "HTTP Cache-Control no-cache no-store difference"
+      ]
+    },
+    {
+      "id": "v02",
+      "query": "PostgreSQL TRUNCATE DELETE RESTART IDENTITY отличие",
+      "forms": [
+        "PostgreSQL TRUNCATE DELETE RESTART IDENTITY отличие"
+      ]
+    },
+    {
+      "id": "v03",
+      "query": "Python subprocess.run check=True CalledProcessError documentation",
+      "forms": [
+        "Python subprocess.run check=True CalledProcessError documentation"
+      ]
+    },
+    {
+      "id": "v04",
+      "query": "CSS position sticky overflow предок документация",
+      "forms": [
+        "CSS position sticky overflow предок документация"
+      ]
+    },
+    {
+      "id": "v05",
+      "query": "site:developer.mozilla.org AbortController fetch abort signal",
+      "forms": [
+        "site:developer.mozilla.org AbortController fetch abort signal"
+      ]
+    },
+    {
+      "id": "v06",
+      "query": "Go 1.22 release February 2024 for loop variable semantics",
+      "forms": [
+        "Go 1.22 release February 2024 for loop variable semantics"
+      ]
+    }
+  ]
+}

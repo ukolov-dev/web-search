@@ -1,0 +1,476 @@
+{
+  "date": "2026-10-28",
+  "engine": "mwmbl",
+  "rubric": "doc/search-quality-rubric-v1.md",
+  "assessment": "assistant manual SERP grading; all pages not reviewed",
+  "diagnostic_only": true,
+  "qualification_pass": false,
+  "mixed_binary_versions": true,
+  "continuation_reason": "Local guard initially rejected a legitimate Wikipedia label. Corrected against official frontend; only en09/en10 continued. There was no remote HTTP block.",
+  "case_set_sha256": "b67e3269830ae0e976aa9b4c5dc2f6b9c3e922ad1adda35738289d6b1b8325d6",
+  "input_reports": [
+    {
+      "path": "runs/quality-mwmbl-1793186014/capture.json",
+      "sha256": "8e5874765487e301954af3c8f52ca4222edea63c47230c76da3d0bac0a2d2346"
+    },
+    {
+      "path": "runs/reliability-2026-10-28/mwmbl-continuation.json",
+      "sha256": "a0db5d4057dcfb30a447f7a27cadfed1954513ecc6d0db8c4e87851487f10996"
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "ru01",
+      "query": "Rust владение borrowing документация",
+      "status": "empty",
+      "unique_relevant": 0,
+      "pass": false,
+      "results": [],
+      "binary_sha256": "f2713804da7930fa55c80f49b8a8b7a3c16cb06a4e4f56b14220088a09d9e919",
+      "capture_path": "runs/quality-mwmbl-1793186014/capture.json"
+    },
+    {
+      "case_id": "ru02",
+      "query": "SQLite транзакции WAL документация",
+      "status": "empty",
+      "unique_relevant": 0,
+      "pass": false,
+      "results": [],
+      "binary_sha256": "f2713804da7930fa55c80f49b8a8b7a3c16cb06a4e4f56b14220088a09d9e919",
+      "capture_path": "runs/quality-mwmbl-1793186014/capture.json"
+    },
+    {
+      "case_id": "ru03",
+      "query": "HTTP статус 304 Last-Modified ETag",
+      "status": "ok",
+      "unique_relevant": 1,
+      "pass": false,
+      "results": [
+        {
+          "position": 1,
+          "snippet": "I suggest adding the ETag and Last-Modified HTTP headers to all the pages and feeds to allow for HTTP response \"304 Not Modified\" in case the content has…",
+          "title": "ETag and Last-Modified headers wanted | MetaTalk",
+          "url": "http://metatalk.metafilter.com/mefi/10993",
+          "grade": 1
+        },
+        {
+          "position": 2,
+          "snippet": "Is it possible to use HTTP caching for conditional GET requests over a secure HTTPS connection? I've got caching working over non-secure HTTP, but when I…",
+          "title": "caching - Etags and last-modified over https SSL? - Stack Overfl…",
+          "url": "https://stackoverflow.com/a/19102293",
+          "grade": 2
+        }
+      ],
+      "binary_sha256": "f2713804da7930fa55c80f49b8a8b7a3c16cb06a4e4f56b14220088a09d9e919",
+      "capture_path": "runs/quality-mwmbl-1793186014/capture.json"
+    },
+    {
+      "case_id": "ru04",
+      "query": "Tokio асинхронный Rust руководство",
+      "status": "empty",
+      "unique_relevant": 0,
+      "pass": false,
+      "results": [],
+      "binary_sha256": "f2713804da7930fa55c80f49b8a8b7a3c16cb06a4e4f56b14220088a09d9e919",
+      "capture_path": "runs/quality-mwmbl-1793186014/capture.json"
+    },
+    {
+      "case_id": "ru05",
+      "query": "экскаватор рабочий цикл перемещение грунта",
+      "status": "empty",
+      "unique_relevant": 0,
+      "pass": false,
+      "results": [],
+      "binary_sha256": "f2713804da7930fa55c80f49b8a8b7a3c16cb06a4e4f56b14220088a09d9e919",
+      "capture_path": "runs/quality-mwmbl-1793186014/capture.json"
+    },
+    {
+      "case_id": "ru06",
+      "query": "site:doc.rust-lang.org владение ownership",
+      "status": "empty",
+      "unique_relevant": 0,
+      "pass": false,
+      "results": [],
+      "binary_sha256": "f2713804da7930fa55c80f49b8a8b7a3c16cb06a4e4f56b14220088a09d9e919",
+      "capture_path": "runs/quality-mwmbl-1793186014/capture.json"
+    },
+    {
+      "case_id": "ru07",
+      "query": "Rust Python обработка HTML сравнение",
+      "status": "ok",
+      "unique_relevant": 0,
+      "pass": false,
+      "results": [
+        {
+          "position": 1,
+          "snippet": "",
+          "title": "Сравнение одинакового проекта в Rust, Haskell, C++, Python, Scal…",
+          "url": "https://habr.com/ru/post/456638/",
+          "grade": 1
+        }
+      ],
+      "binary_sha256": "f2713804da7930fa55c80f49b8a8b7a3c16cb06a4e4f56b14220088a09d9e919",
+      "capture_path": "runs/quality-mwmbl-1793186014/capture.json"
+    },
+    {
+      "case_id": "ru08",
+      "query": "последняя стабильная версия Rust октябрь 2026",
+      "status": "empty",
+      "unique_relevant": 0,
+      "pass": false,
+      "results": [],
+      "binary_sha256": "f2713804da7930fa55c80f49b8a8b7a3c16cb06a4e4f56b14220088a09d9e919",
+      "capture_path": "runs/quality-mwmbl-1793186014/capture.json"
+    },
+    {
+      "case_id": "ru09",
+      "query": "Unicode графема кодовая точка разница",
+      "status": "empty",
+      "unique_relevant": 0,
+      "pass": false,
+      "results": [],
+      "binary_sha256": "f2713804da7930fa55c80f49b8a8b7a3c16cb06a4e4f56b14220088a09d9e919",
+      "capture_path": "runs/quality-mwmbl-1793186014/capture.json"
+    },
+    {
+      "case_id": "ru10",
+      "query": "DNS rebinding SSRF IPv6 защита",
+      "status": "empty",
+      "unique_relevant": 0,
+      "pass": false,
+      "results": [],
+      "binary_sha256": "f2713804da7930fa55c80f49b8a8b7a3c16cb06a4e4f56b14220088a09d9e919",
+      "capture_path": "runs/quality-mwmbl-1793186014/capture.json"
+    },
+    {
+      "case_id": "en01",
+      "query": "Rust ownership borrowing documentation",
+      "status": "ok",
+      "unique_relevant": 2,
+      "pass": false,
+      "results": [
+        {
+          "position": 1,
+          "snippet": "Ownership & Borrowing Ownership is Rust's most unique feature and the foundation of its memory safety guarantees. This system allows Rust to manage memor…",
+          "title": "Rust Ownership & Borrowing - Memory Safety Without Garbage Colle…",
+          "url": "https://webreference.com/rust/ownership/",
+          "grade": 2
+        },
+        {
+          "position": 2,
+          "snippet": "By using an ownership model, Rust takes a novel approach to ensure memory safety at compile time. Rust’s ownershipand borrowing might be confusing if we …",
+          "title": "Rust Ownership and Borrowing Enforce Memory Safety - DZone",
+          "url": "http://dzone.com/articles/rusts-ownership-and-borrowing-enforce-memory-safety",
+          "grade": 2
+        },
+        {
+          "position": 3,
+          "snippet": "",
+          "title": "Why Rust's ownership/borrowing is hard | Lobsters",
+          "url": "https://lobste.rs/s/cmo4rk/why_rust_s_ownership_borrowing_is_hard",
+          "grade": 1
+        }
+      ],
+      "binary_sha256": "f2713804da7930fa55c80f49b8a8b7a3c16cb06a4e4f56b14220088a09d9e919",
+      "capture_path": "runs/quality-mwmbl-1793186014/capture.json"
+    },
+    {
+      "case_id": "en02",
+      "query": "SQLite WAL transactions documentation",
+      "status": "ok",
+      "unique_relevant": 0,
+      "pass": false,
+      "results": [
+        {
+          "position": 1,
+          "snippet": "commit 284676cf2ac8 changed the sqlite3 module so it will no longer implicitly commit an open transaction before DDL statements. The docs have been updat…",
+          "title": "Issue 29121: sqlite3 Controlling Transactions documentation not …",
+          "url": "http://bugs.python.org/issue29121",
+          "grade": 1
+        }
+      ],
+      "binary_sha256": "f2713804da7930fa55c80f49b8a8b7a3c16cb06a4e4f56b14220088a09d9e919",
+      "capture_path": "runs/quality-mwmbl-1793186014/capture.json"
+    },
+    {
+      "case_id": "en03",
+      "query": "HTTP 304 ETag Last-Modified conditional requests",
+      "status": "ok",
+      "unique_relevant": 0,
+      "pass": false,
+      "results": [
+        {
+          "position": 1,
+          "snippet": "I suggest adding the ETag and Last-Modified HTTP headers to all the pages and feeds to allow for HTTP response \"304 Not Modified\" in case the content has…",
+          "title": "ETag and Last-Modified headers wanted | MetaTalk",
+          "url": "http://metatalk.metafilter.com/mefi/10993",
+          "grade": 1
+        }
+      ],
+      "binary_sha256": "f2713804da7930fa55c80f49b8a8b7a3c16cb06a4e4f56b14220088a09d9e919",
+      "capture_path": "runs/quality-mwmbl-1793186014/capture.json"
+    },
+    {
+      "case_id": "en04",
+      "query": "Tokio Rust asynchronous programming tutorial",
+      "status": "ok",
+      "unique_relevant": 5,
+      "pass": true,
+      "results": [
+        {
+          "position": 1,
+          "snippet": "Tokio is an asynchronous runtime for the Rust programming language. It provides the building blocks needed for writing networking applications. It gives t…",
+          "title": "Tutorial | Tokio - An asynchronous Rust runtime",
+          "url": "http://tokio.rs/tokio/tutorial",
+          "grade": 2
+        },
+        {
+          "position": 2,
+          "snippet": "Saved searches Use saved searches to filter your results more quickly You signed in with another tab or window. Reload to refresh your session.You signed…",
+          "title": "GitHub - rgreinho/trauma: Tokio Rust Asynchronous Universal down…",
+          "url": "https://github.com/rgreinho/trauma",
+          "grade": 1
+        },
+        {
+          "position": 3,
+          "snippet": "Tokio is an asynchronous runtime for the Rust programming language. It provides the building blocks needed for writing network applications. It gives the …",
+          "title": "Tokio - An asynchronous Rust runtime",
+          "url": "http://tokio.rs/",
+          "grade": 1
+        },
+        {
+          "position": 4,
+          "snippet": "Asynchronous programming in Rust Asynchronous programming: Incredibly useful but difficult to learn. You can't avoid async programming to create a fast a…",
+          "title": "Asynchronous programming in Rust | Opensource.com",
+          "url": "https://opensource.com/article/22/10/asynchronous-programming-rust",
+          "grade": 2
+        },
+        {
+          "position": 5,
+          "snippet": "I/O in Tokio operates in much the same way as in std , but asynchronously. There is a trait for reading ( AsyncRead ) and a trait for writing ( AsyncWrite…",
+          "title": "I/O | Tokio - An asynchronous Rust runtime",
+          "url": "http://tokio.rs/tokio/tutorial/io",
+          "grade": 2
+        },
+        {
+          "position": 6,
+          "snippet": "Tokio consists of a number of modules that provide a range of functionality\nessential for implementing asynchronous applications in Rust. In this\nsection…",
+          "title": "tokio - Rust",
+          "url": "http://docs.rs/tokio",
+          "grade": 2
+        },
+        {
+          "position": 7,
+          "snippet": "Tokio is a runtime for writing reliable asynchronous applications with Rust. It provides async I/O, networking, scheduling, timers, and more.",
+          "title": "Topics | Tokio - An asynchronous Rust runtime",
+          "url": "http://tokio.rs/tokio/topics",
+          "grade": 1
+        },
+        {
+          "position": 8,
+          "snippet": "Asynchronous Programming in Rust Asynchronous programming greatly improves our development with faster and more responsive code. Learn about how async wo…",
+          "title": "Asynchronous Programming in Rust",
+          "url": "https://www.telerik.com/blogs/asynchronous-programming-in-rust",
+          "grade": 2
+        },
+        {
+          "position": 9,
+          "snippet": "Topics Featured in Development Starting your first project with Spring Boot can be a bit daunting given the vast options that it provides. This updated v…",
+          "title": "Rust Asynchronous Runtime Tokio Reaches 1.0 - InfoQ",
+          "url": "https://www.infoq.com/news/2021/01/rust-tokio-async-runtime/",
+          "grade": 1
+        },
+        {
+          "position": 10,
+          "snippet": "Tokio is a runtime for writing reliable asynchronous applications with Rust. It provides async I/O, networking, scheduling, timers, and more.",
+          "title": "Blog Posts | Tokio - An asynchronous Rust runtime",
+          "url": "http://tokio.rs/blog",
+          "grade": 1
+        }
+      ],
+      "binary_sha256": "f2713804da7930fa55c80f49b8a8b7a3c16cb06a4e4f56b14220088a09d9e919",
+      "capture_path": "runs/quality-mwmbl-1793186014/capture.json"
+    },
+    {
+      "case_id": "en05",
+      "query": "excavator working cycle digging loading travel",
+      "status": "empty",
+      "unique_relevant": 0,
+      "pass": false,
+      "results": [],
+      "binary_sha256": "f2713804da7930fa55c80f49b8a8b7a3c16cb06a4e4f56b14220088a09d9e919",
+      "capture_path": "runs/quality-mwmbl-1793186014/capture.json"
+    },
+    {
+      "case_id": "en06",
+      "query": "site:doc.rust-lang.org ownership",
+      "status": "empty",
+      "unique_relevant": 0,
+      "pass": false,
+      "results": [],
+      "binary_sha256": "f2713804da7930fa55c80f49b8a8b7a3c16cb06a4e4f56b14220088a09d9e919",
+      "capture_path": "runs/quality-mwmbl-1793186014/capture.json"
+    },
+    {
+      "case_id": "en07",
+      "query": "Rust Python HTML extraction comparison",
+      "status": "ok",
+      "unique_relevant": 0,
+      "pass": false,
+      "results": [
+        {
+          "position": 1,
+          "snippet": "Articles Tagged: HTML Extraction Prerequisites Knowledge of the following is required: Python 3 Basic HTML Urllib2 (not mandatory but recommended) Basic …",
+          "title": "HTML Extraction Archives | Python Central",
+          "url": "https://www.pythoncentral.io/tag/html-extraction/",
+          "grade": 1
+        },
+        {
+          "position": 2,
+          "snippet": "",
+          "title": "Python Buzz Forum - Regex HTML extraction examples",
+          "url": "http://www.artima.com/forums/flat.jsp?forum=122&thread=13609",
+          "grade": 1
+        }
+      ],
+      "binary_sha256": "f2713804da7930fa55c80f49b8a8b7a3c16cb06a4e4f56b14220088a09d9e919",
+      "capture_path": "runs/quality-mwmbl-1793186014/capture.json"
+    },
+    {
+      "case_id": "en08",
+      "query": "latest stable Rust release October 2026",
+      "status": "ok",
+      "unique_relevant": 0,
+      "pass": false,
+      "results": [
+        {
+          "position": 1,
+          "snippet": "MSRV The currently latest stable Rust release is the minimum Rust\nversion that this crate supports. Having a policy reaching\nfurther back would make no s…",
+          "title": "rcgen 0.8.10 - Docs.rs",
+          "url": "http://docs.rs/crate/rcgen/0.8.10",
+          "grade": 1
+        },
+        {
+          "position": 2,
+          "snippet": "MSRV The currently latest stable Rust release is the minimum Rust\nversion that this crate supports. Having a policy reaching\nfurther back would make no s…",
+          "title": "rcgen 0.8.13 - Docs.rs",
+          "url": "http://docs.rs/crate/rcgen/0.8.13",
+          "grade": 1
+        },
+        {
+          "position": 3,
+          "snippet": "MSRV The currently latest stable Rust release is the minimum Rust\nversion that this crate supports. Having a policy reaching\nfurther back would make no s…",
+          "title": "rcgen 0.8.4 - Docs.rs",
+          "url": "http://docs.rs/crate/rcgen/0.8.4",
+          "grade": 1
+        },
+        {
+          "position": 4,
+          "snippet": "MSRV The currently latest stable Rust release is the minimum Rust\nversion that this crate supports. Having a policy reaching\nfurther back would make no s…",
+          "title": "rcgen 0.9.0 - Docs.rs",
+          "url": "http://docs.rs/crate/rcgen/0.9.0",
+          "grade": 1
+        },
+        {
+          "position": 5,
+          "snippet": "MSRV The currently latest stable Rust release is the minimum Rust\nversion that this crate supports. Having a policy reaching\nfurther back would make no s…",
+          "title": "rcgen 0.8.2 - Docs.rs",
+          "url": "http://docs.rs/crate/rcgen/0.8.2",
+          "grade": 1
+        },
+        {
+          "position": 6,
+          "snippet": "MSRV The currently latest stable Rust release is the minimum Rust\nversion that this crate supports. Having a policy reaching\nfurther back would make no s…",
+          "title": "rcgen 0.8.3 - Docs.rs",
+          "url": "http://docs.rs/crate/rcgen/0.8.3",
+          "grade": 1
+        },
+        {
+          "position": 7,
+          "snippet": "The currently latest stable Rust release is the minimum Rust version that this crate supports. Having a policy reaching further back would make no sense b…",
+          "title": "rcgen 0.8.12 - Docs.rs",
+          "url": "https://docs.rs/crate/rcgen/0.8.12",
+          "grade": 1
+        },
+        {
+          "position": 8,
+          "snippet": "The currently latest stable Rust release is the minimum Rust version that this crate supports. Having a policy reaching further back would make no sense b…",
+          "title": "rcgen 0.8.11 - Docs.rs",
+          "url": "https://docs.rs/crate/rcgen/0.8.11",
+          "grade": 1
+        },
+        {
+          "position": 9,
+          "snippet": "The currently latest stable Rust release is the minimum Rust version that this crate supports. Having a policy reaching further back would make no sense b…",
+          "title": "rcgen 0.8.7 - Docs.rs",
+          "url": "https://docs.rs/crate/rcgen/0.8.7",
+          "grade": 1
+        },
+        {
+          "position": 10,
+          "snippet": "The currently latest stable Rust release is the minimum Rust version that this crate supports. Having a policy reaching further back would make no sense b…",
+          "title": "rcgen 0.8.6 - Docs.rs",
+          "url": "https://docs.rs/crate/rcgen/0.8.6",
+          "grade": 1
+        }
+      ],
+      "binary_sha256": "f2713804da7930fa55c80f49b8a8b7a3c16cb06a4e4f56b14220088a09d9e919",
+      "capture_path": "runs/quality-mwmbl-1793186014/capture.json"
+    },
+    {
+      "case_id": "en09",
+      "query": "Unicode grapheme cluster code point difference",
+      "status": "ok",
+      "unique_relevant": 3,
+      "pass": true,
+      "results": [
+        {
+          "position": 1,
+          "result_source": "Mwmbl",
+          "snippet": "Unicode grapheme clusters are an approximation to user perceived graphemes where the boundaries are established by rules applied to code point sequences a…",
+          "title": "Grapheme segmenter",
+          "url": "https://r12a.github.io/scripts/apps/graphemes/index.html",
+          "grade": 2
+        },
+        {
+          "position": 2,
+          "result_source": "Wikipedia",
+          "snippet": "singular Unicode extended grapheme cluster may consist of any number of Unicode code points, each of which in UTF-16 might require one or two code units",
+          "title": "UTF-16",
+          "url": "https://en.wikipedia.org/wiki/UTF-16",
+          "grade": 2
+        },
+        {
+          "position": 3,
+          "result_source": "Mwmbl",
+          "snippet": "I am using the C++ ICU library. I wish to split a utf-8 string into approximately equal chunks. However, I want the chunks to be demarcated at grapheme c…",
+          "title": "c++ - Maximum number of codepoints in a grapheme cluster - Stack…",
+          "url": "https://stackoverflow.com/a/71011579",
+          "grade": 2
+        }
+      ],
+      "binary_sha256": "2009fe6a2163b273c6659ab038fbc02dc30eb68080435b597cc6a9fea5d9b7a0",
+      "capture_path": "runs/reliability-2026-10-28/mwmbl-continuation.json"
+    },
+    {
+      "case_id": "en10",
+      "query": "DNS rebinding SSRF IPv6 protection",
+      "status": "empty",
+      "unique_relevant": 0,
+      "pass": false,
+      "results": [],
+      "binary_sha256": "2009fe6a2163b273c6659ab038fbc02dc30eb68080435b597cc6a9fea5d9b7a0",
+      "capture_path": "runs/reliability-2026-10-28/mwmbl-continuation.json"
+    }
+  ],
+  "summary": {
+    "cases": 20,
+    "passed": 2,
+    "empty": 11,
+    "links_scored": 33,
+    "qualified_source_pair": false,
+    "new_case_vs_bing_baseline": [
+      "en04"
+    ]
+  }
+}

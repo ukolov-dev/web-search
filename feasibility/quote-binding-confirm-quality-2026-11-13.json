@@ -1,0 +1,489 @@
+{
+  "schema": "quote-binding-confirm-quality-v1",
+  "assessor": "root, manual source-first; not independent reviewer",
+  "policy": "Frozen separate cohort, eight new questions + four known controls. Whole factual questions count only with all conditions and correctly bound returned witnesses. G11 control forbids affirming unsupported freeze_owned; true background Vec facts do not establish that API. Read-context truth is distinct from returned-witness support.",
+  "rows": [
+    {
+      "id": "G01",
+      "role": "new_question",
+      "kind": "factual_question",
+      "baseline": {
+        "fully_answered_with_valid_returned_witness": true,
+        "unsupported_API_not_affirmed": null,
+        "claims": [
+          {
+            "id": "A1",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          },
+          {
+            "id": "A2",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          },
+          {
+            "id": "A3",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          }
+        ]
+      },
+      "candidate": {
+        "fully_answered_with_valid_returned_witness": true,
+        "unsupported_API_not_affirmed": null,
+        "claims": [
+          {
+            "id": "A1",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          },
+          {
+            "id": "A2",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          },
+          {
+            "id": "A3",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          }
+        ]
+      }
+    },
+    {
+      "id": "G02",
+      "role": "new_question",
+      "kind": "factual_question",
+      "baseline": {
+        "fully_answered_with_valid_returned_witness": false,
+        "unsupported_API_not_affirmed": null,
+        "claims": [
+          {
+            "id": "A1",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          }
+        ]
+      },
+      "candidate": {
+        "fully_answered_with_valid_returned_witness": false,
+        "unsupported_API_not_affirmed": null,
+        "claims": [
+          {
+            "id": "A1",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          },
+          {
+            "id": "A2",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          }
+        ]
+      }
+    },
+    {
+      "id": "G03",
+      "role": "new_question",
+      "kind": "factual_question",
+      "baseline": {
+        "fully_answered_with_valid_returned_witness": true,
+        "unsupported_API_not_affirmed": null,
+        "claims": [
+          {
+            "id": "A1",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          }
+        ]
+      },
+      "candidate": {
+        "fully_answered_with_valid_returned_witness": true,
+        "unsupported_API_not_affirmed": null,
+        "claims": [
+          {
+            "id": "A1",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          },
+          {
+            "id": "A2",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          }
+        ]
+      }
+    },
+    {
+      "id": "G04",
+      "role": "new_question",
+      "kind": "factual_question",
+      "baseline": {
+        "fully_answered_with_valid_returned_witness": true,
+        "unsupported_API_not_affirmed": null,
+        "claims": [
+          {
+            "id": "A1",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          },
+          {
+            "id": "A2",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          }
+        ]
+      },
+      "candidate": {
+        "fully_answered_with_valid_returned_witness": true,
+        "unsupported_API_not_affirmed": null,
+        "claims": [
+          {
+            "id": "A1",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          },
+          {
+            "id": "A2",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          }
+        ]
+      }
+    },
+    {
+      "id": "G05",
+      "role": "new_question",
+      "kind": "factual_question",
+      "baseline": {
+        "fully_answered_with_valid_returned_witness": true,
+        "unsupported_API_not_affirmed": null,
+        "claims": [
+          {
+            "id": "A1",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          },
+          {
+            "id": "A2",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          },
+          {
+            "id": "A3",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          }
+        ]
+      },
+      "candidate": {
+        "fully_answered_with_valid_returned_witness": true,
+        "unsupported_API_not_affirmed": null,
+        "claims": [
+          {
+            "id": "A1",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          },
+          {
+            "id": "A2",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          },
+          {
+            "id": "A3",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          }
+        ]
+      }
+    },
+    {
+      "id": "G06",
+      "role": "new_question",
+      "kind": "factual_question",
+      "baseline": {
+        "fully_answered_with_valid_returned_witness": true,
+        "unsupported_API_not_affirmed": null,
+        "claims": [
+          {
+            "id": "A1",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          },
+          {
+            "id": "A2",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          },
+          {
+            "id": "A3",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          },
+          {
+            "id": "A4",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          }
+        ]
+      },
+      "candidate": {
+        "fully_answered_with_valid_returned_witness": true,
+        "unsupported_API_not_affirmed": null,
+        "claims": [
+          {
+            "id": "A1",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          },
+          {
+            "id": "A2",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          },
+          {
+            "id": "A3",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          }
+        ]
+      }
+    },
+    {
+      "id": "G07",
+      "role": "new_question",
+      "kind": "factual_question",
+      "baseline": {
+        "fully_answered_with_valid_returned_witness": true,
+        "unsupported_API_not_affirmed": null,
+        "claims": [
+          {
+            "id": "A1",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          }
+        ]
+      },
+      "candidate": {
+        "fully_answered_with_valid_returned_witness": false,
+        "unsupported_API_not_affirmed": null,
+        "claims": []
+      }
+    },
+    {
+      "id": "G08",
+      "role": "new_question",
+      "kind": "factual_question",
+      "baseline": {
+        "fully_answered_with_valid_returned_witness": false,
+        "unsupported_API_not_affirmed": null,
+        "claims": []
+      },
+      "candidate": {
+        "fully_answered_with_valid_returned_witness": false,
+        "unsupported_API_not_affirmed": null,
+        "claims": []
+      }
+    },
+    {
+      "id": "G09",
+      "role": "known_control",
+      "kind": "factual_question",
+      "baseline": {
+        "fully_answered_with_valid_returned_witness": true,
+        "unsupported_API_not_affirmed": null,
+        "claims": [
+          {
+            "id": "A1",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          },
+          {
+            "id": "A2",
+            "factually_false": false,
+            "returned_witness_status": "wrong_API_occurrence"
+          }
+        ]
+      },
+      "candidate": {
+        "fully_answered_with_valid_returned_witness": true,
+        "unsupported_API_not_affirmed": null,
+        "claims": [
+          {
+            "id": "A1",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          },
+          {
+            "id": "A2",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          },
+          {
+            "id": "A3",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          }
+        ]
+      }
+    },
+    {
+      "id": "G10",
+      "role": "known_control",
+      "kind": "factual_question",
+      "baseline": {
+        "fully_answered_with_valid_returned_witness": true,
+        "unsupported_API_not_affirmed": null,
+        "claims": [
+          {
+            "id": "A1",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          },
+          {
+            "id": "A2",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          },
+          {
+            "id": "A3",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          }
+        ]
+      },
+      "candidate": {
+        "fully_answered_with_valid_returned_witness": true,
+        "unsupported_API_not_affirmed": null,
+        "claims": [
+          {
+            "id": "A1",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          },
+          {
+            "id": "A2",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          },
+          {
+            "id": "A3",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          }
+        ]
+      }
+    },
+    {
+      "id": "G11",
+      "role": "known_control",
+      "kind": "negative_API_control",
+      "baseline": {
+        "fully_answered_with_valid_returned_witness": null,
+        "unsupported_API_not_affirmed": true,
+        "claims": []
+      },
+      "candidate": {
+        "fully_answered_with_valid_returned_witness": null,
+        "unsupported_API_not_affirmed": true,
+        "claims": [
+          {
+            "id": "A1",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          },
+          {
+            "id": "A2",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          },
+          {
+            "id": "A3",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          }
+        ]
+      }
+    },
+    {
+      "id": "G12",
+      "role": "known_control",
+      "kind": "factual_question",
+      "baseline": {
+        "fully_answered_with_valid_returned_witness": false,
+        "unsupported_API_not_affirmed": null,
+        "claims": [
+          {
+            "id": "A1",
+            "factually_false": false,
+            "returned_witness_status": "wrong_API_occurrence"
+          },
+          {
+            "id": "A2",
+            "factually_false": false,
+            "returned_witness_status": "wrong_API_occurrence"
+          }
+        ]
+      },
+      "candidate": {
+        "fully_answered_with_valid_returned_witness": true,
+        "unsupported_API_not_affirmed": null,
+        "claims": [
+          {
+            "id": "A1",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          },
+          {
+            "id": "A2",
+            "factually_false": false,
+            "returned_witness_status": "supported"
+          }
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "baseline_fully_answered": 8,
+    "candidate_fully_answered": 8,
+    "factual_questions": 11,
+    "lost_supported_question_ids": [
+      "G07"
+    ],
+    "gained_supported_question_ids": [
+      "G12"
+    ],
+    "false_claims_baseline": 0,
+    "false_claims_candidate": 0,
+    "unknown_as_cited_claims_baseline": 3,
+    "unknown_as_cited_claims_candidate": 0,
+    "unsupported_API_control_passed_both": true,
+    "gate": "failed",
+    "reason": "G07 positive baseline answer lost; aggregate equality does not satisfy no-loss gate."
+  },
+  "findings": [
+    {
+      "id": "G07/candidate",
+      "type": "lost_supported_answer",
+      "cause_observed": "Candidate first query lacks baseline site restriction and reads irrelevant pages; after reaching Rust documentation, draft emits Option<(&str, &str)> and existing text gate rejects angle-bracket signature. No ambiguous-quote rejection occurred in G07.",
+      "causal_attribution": "Whole-policy loss observed; not proven caused by V7 uniqueness gate. Baseline exact example remains unique and admissible under V7.",
+      "remaining_missing_both": [
+        "G02",
+        "G08"
+      ]
+    },
+    {
+      "id": "G12",
+      "type": "known_defect_control",
+      "baseline_wrong_witness": "Generic Time complexity quote resolves push_within_capacity; pop signature is separately cited but does not prove its complexity.",
+      "candidate_correct_witness": "Unique contiguous quote includes following pop_if header and resolves the complexity section belonging to pop."
+    },
+    {
+      "id": "G11",
+      "type": "negative_control_background",
+      "candidate_claims": 3,
+      "note": "True background Vec capacity statements; freeze_owned is not affirmed, requested API remains missing. Not counted as a positive answered question."
+    }
+  ]
+}

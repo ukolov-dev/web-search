@@ -1,0 +1,470 @@
+{
+  "schema": "research-mvp-results-v1",
+  "date": "2026-11-05",
+  "scope": "development implementation probes; multiple explicitly tagged versions; no pooled quality score, no A/B or blind qualification",
+  "cases": "feasibility/research-mvp-cases-2026-11-05.json",
+  "confirmation_cases": "feasibility/research-mvp-confirm-cases-2026-11-05.json",
+  "quality_audit_by": "implementing agent, source-first manual assessment; not independent acceptance",
+  "runs": [
+    {
+      "id": "R01",
+      "phase": "primary",
+      "runtime_version": "initial-v0",
+      "status": "partial",
+      "stop_reason": "budget_exhausted",
+      "elapsed_ms": 26570,
+      "budget_used": {
+        "documents": 4,
+        "forms": 2,
+        "generations": 5,
+        "qwen": 1,
+        "serp": 2
+      },
+      "claims": 4,
+      "witness_placements_checked": 4,
+      "document_versions_checked": 4,
+      "public_utf8_bytes": 11166,
+      "model_cost_usd_known": 0.000690766,
+      "unknown_cost_attempts": 0,
+      "sources": [
+        {
+          "id": "S1",
+          "url": "https://www.rfc-editor.org/info/rfc9110/",
+          "text_hash": "795b3679a87cc2392e6335aac509bf71cface866e408c4541a8139dd4f934fb1",
+          "eligible": true,
+          "eligibility": "read_body"
+        },
+        {
+          "id": "S2",
+          "url": "https://en.wikipedia.org/wiki/List_of_HTTP_status_codes",
+          "text_hash": "d6072ea32ef73927f724934fce833e1a746c7b3d892af819a79dcf9cda08b24d",
+          "eligible": true,
+          "eligibility": "read_body"
+        },
+        {
+          "id": "S3",
+          "url": "https://www.rfc-editor.org/info/rfc9112/",
+          "text_hash": "37fe38f6e7878a04f87cc21cf275ddd77198ac8d815e2ef3e12ce5ecb568cce5",
+          "eligible": true,
+          "eligibility": "read_body"
+        },
+        {
+          "id": "S4",
+          "url": "https://www.rfc-editor.org/info/rfc9111/",
+          "text_hash": "9cf259d3b5d8d4c0ce34d7590a74b79deb05998011859a3689bb94b86fe84557",
+          "eligible": true,
+          "eligibility": "read_body"
+        }
+      ],
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 4,
+        "hits": 0,
+        "http_reads": 6,
+        "misses": 10,
+        "qwen_calls": 0,
+        "refresh": false,
+        "writes": 10
+      },
+      "quality_audit": {
+        "version": "initial-v0",
+        "frozen_aspects_fully_met": 0,
+        "gold_aspects": 4,
+        "verdict": "partial; one factual overstatement against RFC9110",
+        "findings": [
+          "A1 claims 410 resource will never return; normative RFC9110 says likely permanent. The quote exists in a weaker secondary source; exact provenance and a second model audit did not prevent this overstatement.",
+          "A2/A3 are unsolicited advice. A4 says negative404 results may be stored, not proof of default heuristic cacheability. Missing primary clauses and404meaning remain."
+        ],
+        "source_requirement_met": false
+      },
+      "capture_member": "primary/R01/capture/0000-research/result.json"
+    },
+    {
+      "id": "R02",
+      "phase": "primary",
+      "runtime_version": "initial-v0",
+      "status": "partial",
+      "stop_reason": "budget_exhausted",
+      "elapsed_ms": 23548,
+      "budget_used": {
+        "documents": 4,
+        "forms": 2,
+        "generations": 4,
+        "qwen": 1,
+        "serp": 2
+      },
+      "claims": 3,
+      "witness_placements_checked": 3,
+      "document_versions_checked": 3,
+      "public_utf8_bytes": 9167,
+      "model_cost_usd_known": 0.000384754,
+      "unknown_cost_attempts": 0,
+      "sources": [
+        {
+          "id": "S1",
+          "url": "https://cursor.com/docs/hooks",
+          "text_hash": "f648930544cc004a640db48d5ad36bc9334b24795b54051df0889b9201e0525e",
+          "eligible": true,
+          "eligibility": "read_body"
+        },
+        {
+          "id": "S2",
+          "url": "https://www.dragonflydb.io/guides/redis-scan",
+          "text_hash": "5b92e6759bf3ed3ce95204cb41bf9ac78c67637cf21f16aab4211eb42aab3349",
+          "eligible": true,
+          "eligibility": "read_body"
+        },
+        {
+          "id": "S3",
+          "url": "https://github.com/redis/redis-py/blob/master/CHANGES",
+          "text_hash": "8b6d2f29bba50b2199740cfd0b0191757b5fbfb0264b65d9aca2169e092dc9ec",
+          "eligible": true,
+          "eligibility": "read_body"
+        }
+      ],
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 3,
+        "hits": 0,
+        "http_reads": 6,
+        "misses": 7,
+        "qwen_calls": 0,
+        "refresh": false,
+        "writes": 4
+      },
+      "quality_audit": {
+        "version": "initial-v0",
+        "frozen_aspects_fully_met": 3,
+        "gold_aspects": 3,
+        "verdict": "useful partial factual answer; original Redis documentation unavailable",
+        "findings": [
+          "Three returned statements match pre-frozen reference semantics: no exact count guarantee, possible empty batch, termination at cursor0.",
+          "All citations use one Dragonfly guide; second useful quoted body and original official documentation are missing. redis.io refused once; ledger retained."
+        ],
+        "source_requirement_met": false
+      },
+      "capture_member": "primary/R02/capture/0000-research/result.json"
+    },
+    {
+      "id": "R03",
+      "phase": "primary",
+      "runtime_version": "qwen-v1",
+      "status": "partial",
+      "stop_reason": "model_error",
+      "elapsed_ms": 30280,
+      "budget_used": {
+        "documents": 2,
+        "forms": 1,
+        "generations": 2,
+        "qwen": 2,
+        "serp": 1
+      },
+      "claims": 0,
+      "witness_placements_checked": 0,
+      "document_versions_checked": 2,
+      "public_utf8_bytes": 4508,
+      "model_cost_usd_known": 9.8264e-05,
+      "unknown_cost_attempts": 0,
+      "sources": [
+        {
+          "id": "S1",
+          "url": "https://realpython.com/python-statistics/",
+          "text_hash": "ca8c8d2829a179d3b21d7398e0e2e36decc48b38b45237b446ea1fd784cf0c32",
+          "eligible": true,
+          "eligibility": "read_body"
+        },
+        {
+          "id": "S2",
+          "url": "https://en.wikipedia.org/wiki/Order_statistic",
+          "text_hash": "66e0a4a8d1c2d768394452ee66d87254fd74f493733a29ef7c5d6c89ba297953",
+          "eligible": true,
+          "eligibility": "read_body"
+        }
+      ],
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 2,
+        "hits": 0,
+        "http_reads": 3,
+        "misses": 7,
+        "qwen_calls": 2,
+        "refresh": false,
+        "writes": 7
+      },
+      "quality_audit": {
+        "version": "qwen-v1",
+        "frozen_aspects_fully_met": 0,
+        "gold_aspects": 3,
+        "verdict": "claim without citation withheld; model_error with preserved source metadata",
+        "findings": [
+          "Real Qwen called twice. Draft proposed unsupported-looking claim with an empty evidence list; Rust withheld it.",
+          "Final controller now prunes an invalid individual draft claim and may use remaining round instead of aborting entire research; original trial retained."
+        ],
+        "source_requirement_met": false
+      },
+      "capture_member": "primary/R03/capture/0000-research/result.json"
+    },
+    {
+      "id": "R04",
+      "phase": "primary",
+      "runtime_version": "qwen-v1",
+      "status": "partial",
+      "stop_reason": "budget_exhausted",
+      "elapsed_ms": 7289,
+      "budget_used": {
+        "documents": 4,
+        "forms": 2,
+        "generations": 3,
+        "qwen": 0,
+        "serp": 2
+      },
+      "claims": 0,
+      "witness_placements_checked": 0,
+      "document_versions_checked": 2,
+      "public_utf8_bytes": 5656,
+      "model_cost_usd_known": 9.0342e-05,
+      "unknown_cost_attempts": 0,
+      "sources": [
+        {
+          "id": "S1",
+          "url": "https://casopisctenar.cz/2026/09/23/editorial-5-2026/",
+          "text_hash": "521c4a2bf90c7e9613807e6dcb826ac8c46021af2d3f486e4951e295f467c580",
+          "eligible": false,
+          "eligibility": "outside_publication_window"
+        },
+        {
+          "id": "S2",
+          "url": "https://en.wikipedia.org/wiki/2026",
+          "text_hash": "e7010b598b6b0091e3f209a82f44337bd47a1063a28b2a8abfa645475f71ea6b",
+          "eligible": false,
+          "eligibility": "outside_publication_window"
+        }
+      ],
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 2,
+        "hits": 0,
+        "http_reads": 6,
+        "misses": 8,
+        "qwen_calls": 0,
+        "refresh": false,
+        "writes": 6
+      },
+      "quality_audit": {
+        "version": "qwen-v1",
+        "frozen_aspects_fully_met": 0,
+        "gold_aspects": 2,
+        "verdict": "honest shortage; no qualified Perm water news article",
+        "findings": [
+          "Two dated but irrelevant/out-of-window bodies rejected before fragment selection. Other read attempts failed. No events/dates/URLs invented in final answer.",
+          "This does not establish absence of qualifying articles on the web."
+        ],
+        "source_requirement_met": false,
+        "honest_shortage": true
+      },
+      "capture_member": "primary/R04/capture/0000-research/result.json"
+    },
+    {
+      "id": "R05",
+      "phase": "confirmation",
+      "runtime_version": "final-v2-before-block-propagation",
+      "status": "partial",
+      "stop_reason": "budget_exhausted",
+      "elapsed_ms": 26916,
+      "budget_used": {
+        "documents": 4,
+        "forms": 2,
+        "generations": 4,
+        "qwen": 4,
+        "serp": 2
+      },
+      "claims": 4,
+      "witness_placements_checked": 8,
+      "document_versions_checked": 4,
+      "public_utf8_bytes": 12597,
+      "model_cost_usd_known": 0.000618548,
+      "unknown_cost_attempts": 0,
+      "sources": [
+        {
+          "id": "S1",
+          "url": "https://www.rfc-editor.org/info/rfc7538/",
+          "text_hash": "21951a6a4320de4f56f9b1326c48479645c793871e89a2a3684deb5e2df89f8a",
+          "eligible": true,
+          "eligibility": "read_body"
+        },
+        {
+          "id": "S2",
+          "url": "https://kinsta.com/blog/307-redirect/",
+          "text_hash": "83da6806c0748b2b5924a20ec6eba917911a05e0326be5e9fa8df5e721b2ab00",
+          "eligible": true,
+          "eligibility": "read_body"
+        },
+        {
+          "id": "S3",
+          "url": "https://www.rfc-editor.org/info/rfc7231/",
+          "text_hash": "de4cdf58e8e09c613f52a566a8e6223856f5bf7256578edd108f93d480d9ecd4",
+          "eligible": true,
+          "eligibility": "read_body"
+        },
+        {
+          "id": "S4",
+          "url": "https://en.wikipedia.org/wiki/Open_redirect_vulnerability",
+          "text_hash": "1f48534d4ba14d743c06442caebe3b901b38de25bea5f0210a7ac8c337173b4e",
+          "eligible": true,
+          "eligibility": "read_body"
+        }
+      ],
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 4,
+        "hits": 0,
+        "http_reads": 6,
+        "misses": 14,
+        "qwen_calls": 4,
+        "refresh": false,
+        "writes": 14
+      },
+      "quality_audit": {
+        "version": "final-v2-before-block-propagation",
+        "frozen_aspects_fully_met": 2,
+        "gold_aspects": 2,
+        "verdict": "two content aspects supported, conservative partial for normative307 wording",
+        "findings": [
+          "First claim cites RFC7538 abstract for301/307 method distinction; additionally cited308 and secondary summaries. These do not replace reading current normative RFC9110 clauses.",
+          "Four accepted claims with eight exact witness placements; audit leaves facet1 missing. No claim of full question fulfillment."
+        ],
+        "source_requirement_met": false
+      },
+      "capture_member": "confirmation/R05/capture/0000-research/result.json"
+    },
+    {
+      "id": "R06",
+      "phase": "harness",
+      "runtime_version": "final-v2-before-block-propagation",
+      "status": "partial",
+      "stop_reason": "budget_exhausted",
+      "elapsed_ms": 27314,
+      "budget_used": {
+        "documents": 4,
+        "forms": 2,
+        "generations": 3,
+        "qwen": 4,
+        "serp": 2
+      },
+      "claims": 0,
+      "witness_placements_checked": 0,
+      "document_versions_checked": 4,
+      "public_utf8_bytes": 7838,
+      "model_cost_usd_known": 0.000259488,
+      "unknown_cost_attempts": 0,
+      "sources": [
+        {
+          "id": "S1",
+          "url": "https://sweb.ru/ssl/",
+          "text_hash": "8eb5f2d681f7f10ebbcf8f0348dfdc7a47226ec13f9396b02ad29ab1a85d7995",
+          "eligible": true,
+          "eligibility": "read_body"
+        },
+        {
+          "id": "S2",
+          "url": "https://gid.cz/topic/27941-%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B5-%D0%B8-%D1%87%D0%B5%D1%85%D0%B8-%D0%B5%D1%81%D1%82%D1%8C-%D0%BB%D0%B8-%D1%80%D0%B0%D0%B7%D0%BD%D0%B8%D1%86%D0%B0/",
+          "text_hash": "2c41b24858244640b80fd14ac44597aa8b4d10be86d4338b11586aaed2261ec2",
+          "eligible": true,
+          "eligibility": "read_body"
+        },
+        {
+          "id": "S3",
+          "url": "https://www.dragonflydb.io/guides/redis-scan",
+          "text_hash": "5b92e6759bf3ed3ce95204cb41bf9ac78c67637cf21f16aab4211eb42aab3349",
+          "eligible": true,
+          "eligibility": "read_body"
+        },
+        {
+          "id": "S4",
+          "url": "https://github.com/sylvinhio676-ux/tenant-core/blob/main/docs/ARCHITECTURE.md",
+          "text_hash": "35af73ffb97b8eee93e16beb4fa580e7c0acf074fbd1a0009dd5aab65e129fd1",
+          "eligible": true,
+          "eligibility": "read_body"
+        }
+      ],
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 4,
+        "hits": 0,
+        "http_reads": 6,
+        "misses": 12,
+        "qwen_calls": 4,
+        "refresh": false,
+        "writes": 10
+      },
+      "quality_audit": {
+        "version": "final-v2-before-block-propagation",
+        "frozen_aspects_fully_met": 0,
+        "gold_aspects": 3,
+        "verdict": "real Harness completed with honest shortage; inner claims empty",
+        "findings": [
+          "One actual research tool call; two outer Harness LLM calls. All four invalid uncited candidate claims withheld. No tool output spill found.",
+          "Outer answer overstates that every returned document is irrelevant (Dragonfly guide can be background) and abbreviates a forum URL; outer answer is not covered by the inner semantic audit."
+        ],
+        "source_requirement_met": false,
+        "honest_shortage": true,
+        "outer_answer_qualified": false
+      },
+      "capture_member": "harness/R06/capture/0000-research/result.json",
+      "harness": {
+        "episode_status": "completed",
+        "episode_elapsed_ms": 37272,
+        "tool_calls": 1,
+        "outer_model_calls": 2,
+        "outer_cost_usd_known": 0.000286434,
+        "outer_unknown_cost_attempts": 0,
+        "tool_output_spills": 0
+      }
+    }
+  ],
+  "source_state_after": {
+    "blocked": {
+      "bing": "excluded from fixed protocol",
+      "ddg": "historical challenge; unqualified in this protocol",
+      "mwmbl": "excluded from fixed protocol",
+      "naver": "source_challenge: verification page; no retry"
+    },
+    "document_blocks": {
+      "hermes-agent.nousresearch.com": "source_blocked: no retry in this probe",
+      "redis.io": "source_blocked: no retry in this probe",
+      "tfl.gov.uk": "source_blocked: no retry in this probe",
+      "www.ltmuseum.co.uk": "source_blocked: no retry in this probe",
+      "www.mujrozhlas.cz": "source_blocked: no retry in this probe"
+    }
+  },
+  "structural_checks": {
+    "claim_ranges": 11,
+    "witness_placements": 15,
+    "versions": 19,
+    "all_exact": true
+  },
+  "cost": {
+    "inner_calls": 21,
+    "inner_usd_known": 0.002142162,
+    "inner_unknown_cost_attempts": 0,
+    "note": "OpenRouter reported usage.cost only; local Qwen energy/hardware not priced; outerHarness cost separate"
+  },
+  "final_post_probe_changes": [
+    "Immediate host-block propagation and observed redirect-host refusal bookkeeping; offline regression/full checks and fresh release MCP passed, whole live set not repeated.",
+    "Two added offline duplicate-body and multiline-quote regressions; no runtime selection/ranking change after R05/R06.",
+    "Allow a safe narrowing site: query for an initially unrestricted question; preserve original caller boundary and reject private targets. Offline regression passed; no site: forms were used in R05/R06."
+  ],
+  "qualification": {
+    "full_answers": 0,
+    "total_development_tasks": 6,
+    "two_day_general_acceptance": false,
+    "corpus_recall_measured": false,
+    "false_direct_metric_applicable": false
+  }
+}

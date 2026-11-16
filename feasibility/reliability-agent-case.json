@@ -1,0 +1,13 @@
+{
+  "id": "agent-tokio-source-fallback",
+  "question": "Что такое Tokio в Rust, какие задачи он выполняет и как связан с async/await? Подтверди основные утверждения официальной документацией.",
+  "required_facts": [
+    "Tokio — среда выполнения асинхронных Rust-программ",
+    "Tokio предоставляет планирование/выполнение асинхронных задач",
+    "Tokio предоставляет асинхронный ввод-вывод, сетевые операции и таймеры"
+  ],
+  "first_query": "site:tokio.rs Tokio Rust asynchronous programming tutorial",
+  "fallback_engine": "mwmbl",
+  "fallback_query": "Tokio Rust asynchronous programming tutorial",
+  "purpose": "Integration regression of explicit source fallback and site guard; not a new acceptance benchmark"
+}

@@ -1,0 +1,14 @@
+{
+  "path": "feasibility/qwen-acceptance-corpus-2026-11-13.tar.gz",
+  "bytes": 8896821,
+  "sha256": "93a7b3c40f44b1a0fa5ec6677cce99faeb3bf92eede4a333c9ef398abca74e17",
+  "members": 654,
+  "all_hashes_verified": true,
+  "credentials_detected": 0,
+  "excluded": [
+    "SDK homes/config/workspace",
+    "keys",
+    "binaries",
+    "cache"
+  ]
+}

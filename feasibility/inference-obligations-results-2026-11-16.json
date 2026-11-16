@@ -1,0 +1,288 @@
+{
+  "status": "FAILED_CANDIDATE_NOT_FOR_RUNTIME",
+  "base": "ebdcc83",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "rounds": {
+    "run": {
+      "rows": [
+        {
+          "id": "J01_entity",
+          "supported": false,
+          "expected": false,
+          "judge_supported": true,
+          "bindings_valid": false
+        },
+        {
+          "id": "J01_negation",
+          "supported": false,
+          "expected": false,
+          "judge_supported": false,
+          "bindings_valid": false
+        },
+        {
+          "id": "J01_number",
+          "supported": false,
+          "expected": false,
+          "judge_supported": false,
+          "bindings_valid": false
+        },
+        {
+          "id": "J01_original",
+          "supported": false,
+          "expected": false,
+          "judge_supported": false,
+          "bindings_valid": false
+        },
+        {
+          "id": "J01_rule_removed",
+          "supported": false,
+          "expected": false,
+          "judge_supported": false,
+          "bindings_valid": false
+        },
+        {
+          "id": "J01_rule_restored",
+          "supported": false,
+          "expected": true,
+          "judge_supported": true,
+          "bindings_valid": false
+        },
+        {
+          "id": "J01_version",
+          "supported": false,
+          "expected": false,
+          "judge_supported": true,
+          "bindings_valid": false
+        },
+        {
+          "id": "pop_no_rule",
+          "supported": false,
+          "expected": false,
+          "judge_supported": true,
+          "bindings_valid": false
+        },
+        {
+          "id": "pop_transfer",
+          "supported": false,
+          "expected": true,
+          "judge_supported": true,
+          "bindings_valid": false
+        },
+        {
+          "id": "pop_wrong_input",
+          "supported": false,
+          "expected": false,
+          "judge_supported": false,
+          "bindings_valid": false
+        }
+      ],
+      "calls": 10,
+      "cost_usd": 0.0005934839999999999,
+      "excluded": false,
+      "matched": 8
+    },
+    "run2": {
+      "rows": [
+        {
+          "id": "J01_entity",
+          "supported": true,
+          "expected": false,
+          "judge_supported": true,
+          "bindings_valid": true
+        },
+        {
+          "id": "J01_negation",
+          "supported": false,
+          "expected": false,
+          "judge_supported": false,
+          "bindings_valid": true
+        },
+        {
+          "id": "J01_number",
+          "supported": false,
+          "expected": false,
+          "judge_supported": false,
+          "bindings_valid": true
+        },
+        {
+          "id": "J01_original",
+          "supported": false,
+          "expected": false,
+          "judge_supported": false,
+          "bindings_valid": true
+        },
+        {
+          "id": "J01_rule_removed",
+          "supported": true,
+          "expected": false,
+          "judge_supported": true,
+          "bindings_valid": true
+        },
+        {
+          "id": "J01_rule_restored",
+          "supported": true,
+          "expected": true,
+          "judge_supported": true,
+          "bindings_valid": true
+        },
+        {
+          "id": "J01_version",
+          "supported": false,
+          "expected": false,
+          "judge_supported": false,
+          "bindings_valid": true
+        },
+        {
+          "id": "pop_no_rule",
+          "supported": false,
+          "expected": false,
+          "judge_supported": false,
+          "bindings_valid": false
+        },
+        {
+          "id": "pop_transfer",
+          "supported": true,
+          "expected": true,
+          "judge_supported": true,
+          "bindings_valid": true
+        },
+        {
+          "id": "pop_wrong_input",
+          "supported": false,
+          "expected": false,
+          "judge_supported": false,
+          "bindings_valid": true
+        }
+      ],
+      "calls": 10,
+      "cost_usd": 0.0006966,
+      "excluded": false,
+      "matched": 8
+    },
+    "transfer": {
+      "rows": [
+        {
+          "id": "J01_entity",
+          "supported": true,
+          "expected": false,
+          "judge_supported": true,
+          "bindings_valid": true
+        },
+        {
+          "id": "J01_negation",
+          "supported": false,
+          "expected": false,
+          "judge_supported": false,
+          "bindings_valid": true
+        },
+        {
+          "id": "J01_number",
+          "supported": false,
+          "expected": false,
+          "judge_supported": false,
+          "bindings_valid": true
+        },
+        {
+          "id": "J01_original",
+          "supported": false,
+          "expected": false,
+          "judge_supported": false,
+          "bindings_valid": true
+        },
+        {
+          "id": "J01_rule_removed",
+          "supported": false,
+          "expected": false,
+          "judge_supported": false,
+          "bindings_valid": true
+        },
+        {
+          "id": "J01_rule_restored",
+          "supported": true,
+          "expected": true,
+          "judge_supported": true,
+          "bindings_valid": true
+        },
+        {
+          "id": "J01_version",
+          "supported": true,
+          "expected": false,
+          "judge_supported": true,
+          "bindings_valid": true
+        },
+        {
+          "id": "pop_no_rule",
+          "supported": true,
+          "expected": false,
+          "judge_supported": true,
+          "bindings_valid": true
+        },
+        {
+          "id": "pop_transfer",
+          "supported": true,
+          "expected": true,
+          "judge_supported": true,
+          "bindings_valid": true
+        }
+      ],
+      "calls": 9,
+      "cost_usd": 0.000600576,
+      "excluded": true,
+      "matched": 6
+    },
+    "transfer4": {
+      "rows": [
+        {
+          "id": "T01_python",
+          "supported": true,
+          "expected": true,
+          "judge_supported": true,
+          "bindings_valid": true
+        },
+        {
+          "id": "T02_python",
+          "supported": false,
+          "expected": false,
+          "judge_supported": false,
+          "bindings_valid": true
+        },
+        {
+          "id": "T03_policy",
+          "supported": true,
+          "expected": true,
+          "judge_supported": true,
+          "bindings_valid": true
+        },
+        {
+          "id": "T04_policy",
+          "supported": false,
+          "expected": false,
+          "judge_supported": false,
+          "bindings_valid": true
+        }
+      ],
+      "calls": 4,
+      "cost_usd": 0.000226936,
+      "excluded": false,
+      "matched": 4
+    }
+  },
+  "total_recorded_cost_usd": 0.002117596,
+  "unknown_cost_attempts": 1,
+  "archive": {
+    "path": "feasibility/inference-obligations-corpus-2026-11-16.tar.gz",
+    "bytes": 14701,
+    "sha256": "5205655d14a6e6d12c2c0a63c4d02443e341a3ad483968445147a4f539a9db2b"
+  },
+  "checks": {
+    "offline": "171 unit +6stdio passed (38unit/10stdio ignored)",
+    "fmt": "passed",
+    "clippy": "passed"
+  },
+  "limits": [
+    "No generic semantic guarantee; binding validity alone insufficient.",
+    "Round2 reused development10, transfer4 new synthetic rules not production qualification.",
+    "Accidental repeated development fixture run interrupted, preserved and excluded; last attempted call unknown cost.",
+    "No production source changed; no public source HTTP or Qwen calls."
+  ]
+}

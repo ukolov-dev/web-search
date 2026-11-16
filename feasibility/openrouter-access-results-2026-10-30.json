@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-30",
+  "root_cause": "OpenRouter model client forced direct no_proxy despite existing macOS HTTPS proxy. Direct unauthenticated root and catalog return Cloudflare 403; existing configured route returns200. Exact Cloudflare blocking rule unknown.",
+  "direct_public_probes": [
+    {
+      "path": "/",
+      "status": 403,
+      "server": "cloudflare",
+      "ray": "a529808c5bc2e315-DME"
+    },
+    {
+      "path": "/api/v1/models",
+      "status": 403,
+      "server": "cloudflare",
+      "ray": "a529808cda96e92d-DME"
+    }
+  ],
+  "system_route_catalog_status": 200,
+  "key_authentication_and_generation_verified": true,
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "synthetic_classification": {
+    "valid": true,
+    "elapsed_ms": 2546,
+    "usage": {
+      "completion_tokens": 476,
+      "completion_tokens_details": {
+        "audio_tokens": 0,
+        "image_tokens": 0,
+        "reasoning_tokens": 420
+      },
+      "cost": 0.0005671497,
+      "cost_details": {
+        "upstream_inference_completions_cost": 0.00054264,
+        "upstream_inference_cost": 0.0005671497,
+        "upstream_inference_prompt_cost": 2.45097e-05
+      },
+      "is_byok": false,
+      "prompt_tokens": 723,
+      "prompt_tokens_details": {
+        "audio_tokens": 0,
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "video_tokens": 0
+      },
+      "total_tokens": 1199
+    }
+  },
+  "release_mcp": {
+    "model": "deepseek/deepseek-v4.1-flash-1017",
+    "model_provider": "openrouter",
+    "status": "partial",
+    "classifier_valid": true,
+    "elapsed_ms": 26864,
+    "budget": {
+      "classification_calls": 3,
+      "document_reads": 4,
+      "logical_search_calls": 2,
+      "source_context_max": 8713
+    },
+    "discarded_by_site": 1,
+    "errors": []
+  },
+  "page_promotions": 1,
+  "mcp_target_statuses": [
+    200,
+    200,
+    200,
+    200
+  ],
+  "new_paid_generation_attempts": 4,
+  "new_model_api_preflights": 2,
+  "new_unauthenticated_http_probes": 3,
+  "new_search_fetch_operations": 2,
+  "new_target_fetch_operations": 4,
+  "mcp_cost_usd": null,
+  "mcp_cost_note": "Public MCP result omits raw model usage; no total cost inferred from synthetic call.",
+  "release_binary_sha256": "45c6fd1a92266e7603df97ede79fa58723e4614ab2fcbfbf69161c804d165cb3",
+  "limits": "Single synthetic case + one MDN site-constrained MCP smoke; not a relevance benchmark or independent acceptance."
+}

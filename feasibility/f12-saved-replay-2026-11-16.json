@@ -1,0 +1,30 @@
+{
+  "runtime": "8f6c86a",
+  "mode": "offline saved-context/draft/audit replay; no HTTP/model",
+  "result": "passed diagnostic, not product acceptance",
+  "optional_all_codes_body_offset": 3050,
+  "not_required_429_body_offset": 10289,
+  "selected_S1P2": [
+    9000,
+    10200
+  ],
+  "misleading_optional": "428 status code is optional, not429",
+  "admitted_background_claims": 4,
+  "missing": [
+    0,
+    1
+  ],
+  "stage": "body->selected chunk misses429 optional/not-required norm; draft repeats background; audit correctly incomplete",
+  "command": "F12_FIXTURE=\"$PWD/.cache/f12-fixture.json\" CARGO_HOME=\"$PWD/.cache/cargo\" CARGO_TARGET_DIR=/path/to/web-search/target cargo test --locked --offline f12_saved_current_runtime_diagnostic -- --nocapture",
+  "test_result": "1 passed;0failed;214filtered",
+  "artifacts": {
+    "/path/to/web-search/outputs/f12-saved-replay-2026-11-16/fixture.json": "b3e9083d36f673a79f29b72e8d420cea960efac2e307d195743f49752e62aca9",
+    "/path/to/web-search/outputs/f12-saved-replay-2026-11-16/reproducer.rs": "ac6da58e7fceb2ace3e5d5df79884038bfe4f2811ec7354c670890df7c4f31b7",
+    "/path/to/web-search/outputs/f12-saved-replay-2026-11-16/replay.log": "e22453ec05c5f404fd471f54a28e7c3987d482af6038167035ef72d959756762"
+  },
+  "limits": [
+    "Not current-model regeneration; exact saved model04draft/model05audit from13November",
+    "No rerun of extractor/Qwen selection; saved selected context reproduced",
+    "No new product fix; no independent acceptance"
+  ]
+}

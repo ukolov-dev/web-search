@@ -1,0 +1,45 @@
+{
+  "scope": "captured HTML extraction component, no network",
+  "case": "F03",
+  "raw_path": "runs/qwen-acceptance-2026-11-13/candidate/new/F03/capture/0000-research/read-01.html",
+  "baseline": {
+    "method": "readability",
+    "chars": 54294,
+    "truncated": false,
+    "text_hash": "a963d72942010375b16efbc64f37589bab26b3ef3ab441ac10cbb0693bdffd62",
+    "immediate_request": -1
+  },
+  "candidate": {
+    "method": "declared_rfc_body",
+    "chars": 73476,
+    "truncated": false,
+    "text_hash": "de91e3bd2c4173199dbd698053d7fa0e14a73b71a31275492b325dc91b09579d",
+    "immediate_request": 51755,
+    "private_shared": 46945,
+    "own_rfc_header_in_first2048": true
+  },
+  "checks": [
+    {
+      "command": "CARGO_HOME=\"$PWD/.cache/cargo\" cargo test --locked --offline extraction_keeps_declared_rfc_body_and_requires_consistent_identity",
+      "baseline": "failed, readability instead of declared RFC body",
+      "candidate": "passed in full suite"
+    },
+    {
+      "command": "CARGO_HOME=\"$PWD/.cache/cargo\" cargo test --locked --offline",
+      "status": "passed",
+      "results": [
+        "test result: ok. 161 passed; 0 failed; 37 ignored; 0 measured; 0 filtered out; finished in 1.94s",
+        "test result: ok. 6 passed; 0 failed; 10 ignored; 0 measured; 0 filtered out; finished in 0.65s"
+      ]
+    },
+    {
+      "command": "CARGO_HOME=\"$PWD/.cache/cargo\" cargo clippy --locked --offline --all-targets -- -D warnings",
+      "status": "passed"
+    }
+  ],
+  "limits": [
+    "F02long100000cap retained",
+    "model/Qwen/fresh retrieval/independent acceptance untested",
+    "Readability underlying heuristic not rewritten"
+  ]
+}

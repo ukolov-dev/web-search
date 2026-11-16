@@ -1,0 +1,106 @@
+{
+  "date": "2026-10-28",
+  "client": "Codex CLI 0.164.0; default model",
+  "fixture": {
+    "id": "agent-tokio-source-fallback",
+    "question": "Что такое Tokio в Rust, какие задачи он выполняет и как связан с async/await? Подтверди основные утверждения официальной документацией.",
+    "required_facts": [
+      "Tokio — среда выполнения асинхронных Rust-программ",
+      "Tokio предоставляет планирование/выполнение асинхронных задач",
+      "Tokio предоставляет асинхронный ввод-вывод, сетевые операции и таймеры"
+    ],
+    "first_query": "site:tokio.rs Tokio Rust asynchronous programming tutorial",
+    "fallback_engine": "mwmbl",
+    "fallback_query": "Tokio Rust asynchronous programming tutorial",
+    "purpose": "Integration regression of explicit source fallback and site guard; not a new acceptance benchmark"
+  },
+  "execution": {
+    "case_id": "agent-tokio-source-fallback",
+    "exit_code": 0,
+    "timed_out": false,
+    "elapsed_seconds": 29.25,
+    "external_search_disabled": true,
+    "global_config_modified_by_runner": false
+  },
+  "binary_sha256": "2009fe6a2163b273c6659ab038fbc02dc30eb68080435b597cc6a9fea5d9b7a0",
+  "tool_counts": {
+    "search": 1,
+    "extract": 1
+  },
+  "tool_trace": [
+    {
+      "tool": "search",
+      "arguments": {
+        "engine": "bing",
+        "query": "site:tokio.rs Tokio Rust asynchronous programming tutorial",
+        "max_results": 5
+      },
+      "result": {
+        "discarded_results": 9,
+        "elapsed_ms": 599,
+        "engine": "bing",
+        "hops": [
+          "https://www.bing.com/search?q=site%3Atokio.rs+Tokio+Rust+asynchronous+programming+tutorial"
+        ],
+        "http_status": 200,
+        "query": "site:tokio.rs Tokio Rust asynchronous programming tutorial",
+        "results": [
+          {
+            "position": 4,
+            "snippet": "Tokio is a runtime for writing reliable asynchronous applications with Rust. It provides async I/O, networking, scheduling, timers, and …",
+            "title": "Tokio - An asynchronous Rust runtime",
+            "url": "https://tokio.rs/"
+          }
+        ],
+        "site_filter": "https://tokio.rs/",
+        "status": "partial",
+        "untrusted_content": true,
+        "warnings": [
+          "Results outside the site filter were discarded",
+          "Experimental HTML source: relevance is not qualified"
+        ]
+      }
+    },
+    {
+      "tool": "extract",
+      "arguments": {
+        "urls": [
+          "https://tokio.rs/"
+        ]
+      },
+      "status": "ok",
+      "documents": [
+        {
+          "blocks": 19,
+          "chars": 1721,
+          "elapsed_ms": 394,
+          "final_url": "https://tokio.rs/",
+          "hops": [
+            "https://tokio.rs/"
+          ],
+          "status": "ok",
+          "text_hash": "ace935030f8f49be32b018e1e1be0a123478c85bb0b7dd7a3222782255519f52",
+          "title": "Tokio - An asynchronous Rust runtime",
+          "truncated": false,
+          "url": "https://tokio.rs/"
+        }
+      ]
+    }
+  ],
+  "fallback_exercised": false,
+  "answer": "**Tokio — среда выполнения (runtime) для асинхронных приложений на Rust.** Она предоставляет инфраструктуру для ввода-вывода, таймеров, работы с файловой системой, синхронизации и планирования задач. [Официальная документация](https://tokio.rs/)\n\nTokio организует выполнение задач; в частности, предоставляет многопоточный планировщик с *work stealing* — перераспределением работы между потоками. Это основа для построения асинхронных клиентов и серверов. [Источник](https://tokio.rs/)\n\n**Связь с `async/await`:** `async/await` упрощает написание асинхронного кода, а Tokio предоставляет среду выполнения и необходимые асинхронные инструменты. Они дополняют друг друга: языковой синтаксис описывает асинхронную работу, runtime обеспечивает её выполнение. [Источник](https://tokio.rs/)\n\nИзвлечённая официальная страница подтверждает эти основные положения, но не раскрывает подробную механику `Future`, опроса задач и пробуждений.",
+  "citation_base_urls_verified": true,
+  "required_facts_supported": 3,
+  "required_facts_total": 3,
+  "assessment": "assistant manual review of the extracted Tokio primary page; not independent human annotation",
+  "events_path": "runs/reliability-agent-2026-10-28/agent-tokio-source-fallback-events.jsonl",
+  "events_sha256": "41b82be3ec708cef434bd6958655c651e5b6ed7b7342815fdb16fbceea5d43dc",
+  "usage": {
+    "input_tokens": 73539,
+    "cached_input_tokens": 55040,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 390,
+    "reasoning_output_tokens": 0
+  },
+  "global_config_modified": false
+}

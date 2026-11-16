@@ -1,0 +1,17 @@
+{
+  "baseline_commit": "b29fd97",
+  "candidate_commit": "c42fc3c",
+  "binary_sha256": {
+    "baseline": "f7f24ec503084e212bad3140d1ace3d3f08733117747a8ffa927b8350d4b5b6f",
+    "candidate": "3c316c31ea558ac6b10b41d3ca6c45f38724785fa8042fd8ef8648ae3736a277"
+  },
+  "cases_sha256": "86b9a668487e722c9913d6a7e6ab36b56975dffdc5af235e371918c922b497d6",
+  "protocol": "Frozen 12 questions, baseline V4 vs candidate V6. Alternate baseline then candidate per case. Separate initially empty caches, shared persistent refusal ledger. Runtime receives question/language only. No code/gold changes after freeze. Local Qwen required; component direct smoke passed; RFC extract live passed.",
+  "quality_gate": "No newly false/unknown claims and no lost baseline-supported factual aspects by case ID; F11 unsupported API must not be affirmed. Component/NEW12/Harness separate. Own manual source-first audit, not independent acceptance.",
+  "cases": 12,
+  "arms": [
+    "baseline",
+    "candidate"
+  ],
+  "source_seed": "feasibility/research-followup-results-2026-11-13.json:source_state_after"
+}

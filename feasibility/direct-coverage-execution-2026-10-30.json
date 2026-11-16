@@ -1,0 +1,98 @@
+{
+  "stages": {
+    "development": {
+      "unique_generations": 14,
+      "known_reported_usd": 0.00232119
+    },
+    "historical-first": {
+      "unique_generations": 2,
+      "known_reported_usd": 0.000188538
+    },
+    "historical-final": {
+      "unique_generations": 2,
+      "known_reported_usd": 0.000204272
+    },
+    "fresh-baseline": {
+      "unique_generations": 20,
+      "known_reported_usd": 0.003793002
+    },
+    "fresh-fixed": {
+      "unique_generations": 20,
+      "known_reported_usd": 0.00377114
+    }
+  },
+  "priced_generations": 58,
+  "known_reported_usd": 0.010278142,
+  "refused_unpriced_attempts": 1,
+  "refusal": "one initial baseline429 before any validlabels;preserved;after129secondquietinterval,keyreadystatus andsame route/model newrun succeeded;no runtime automatic retries",
+  "unpriced_release_mcp_generations": 3,
+  "release_mcp": {
+    "status": "partial",
+    "classifier_valid": true,
+    "budget": {
+      "classification_calls": 3,
+      "document_reads": 4,
+      "logical_search_calls": 2,
+      "reranker_calls": 4,
+      "reranker_pairs": 61,
+      "source_context_max": 14962
+    },
+    "errors": [
+      "unsupported_direct_evidence_or_constraints: 1 downgraded"
+    ]
+  },
+  "raw_acquisition_outcomes": 33,
+  "raw_acquisition_errors": {
+    "fetch_timeout": 3
+  },
+  "gold_only_reads": 3,
+  "freeze_amendment": {
+    "time": "2026-10-30T15:34:53.538046+00:00",
+    "changed": [
+      "src/evidence.rs"
+    ],
+    "reason": "Scoped source review before fixed inference proved History API keyword could bypass historical status guard; unrelated to held-out queries/predictions. Red101→green0. Baseline control unchanged; parent/gold author have not inspected fresh predicted labels.",
+    "previous": "pre-review-code-freeze.json",
+    "before_fixed_inference": true
+  },
+  "pre_review_hashes": {
+    "src/policy.rs": "f5436c4e01d5fc2699b8c9b19a0cc5d030b4a54b35a3acfb124bfa7d102f4afb",
+    "src/net.rs": "0d50f463d9f5c017c87e8420352fc4034ca1be13bb3d13218df8958665ad7139",
+    "src/discover.rs": "3dd98313a4bf003d217a21a6640d99797615e397d926b159155fcf3a3f5d2b68",
+    "src/benchmark.rs": "a986628eac97c65ba3b96138f1b24cf52a0807c5b2208ec5abce7a1d4f515500",
+    "src/reliability_benchmark.rs": "ceb9e44e48e98edb43688648326ec0b8b72427e517801ffb46c97de4bf865e03",
+    "src/rescue.rs": "d63409e55016de8aacfa546197ccc13080d5a57fa72bd0145534460c40ceeff9",
+    "src/reranker.rs": "2ca4b7b40cb02fa79f38f211e3e75fd28631b97528af032f842aefe0a09d389c",
+    "src/reranker_benchmark.rs": "d2341b43d554121b0c8e79889cdf114a8f6018ac230e52ef2f911c5545e0fe61",
+    "src/evidence.rs": "ebe1a9e8eb24de0b700dce0625ba4045f83c34900c3acffcc21d5302f293caae",
+    "src/main.rs": "d9144568b2515358d038040434cb9999284b1bf35075d3f3f9c1f0de5ed1bee2",
+    "src/search.rs": "4d073253ccc65cb4420b4164fb836ed795624ac67931aff9cdd2d60826b45d1c",
+    "src/browser.rs": "4bf08cddf944b6a1f7640b7350d69e88a5d9f93772099ea64f759dceb4ec807b",
+    "src/model.rs": "2ad61e944bf2495547d8d2d0097706224a49fc7a726962a613d327c0e16f2794",
+    "src/evidence_probe.rs": "4be45e9118fc627b53c9a2d819b3a5258cdf97e483eb777789e803ff2d6a7c4c",
+    "src/mcp.rs": "ecda6cc2625d3ba8158f2063be5fa7bad03aad8483bc2ee6e402389ba448694d",
+    "tests/mcp_stdio.rs": "32f34701d0272e1f4a5b7580b54b24f88820745890607c7fd4dedb38415b3a7e",
+    "feasibility/direct-coverage-cases-v1.json": "322eb6d6da47e8f05f64e32d50c7347f462e5ec31d4849330bcf3d3a5b010445",
+    "runs/direct-coverage-2026-10-30/retrieval/corpus.json": "645c05ed09d2874895874a617553dbf14a5bda4ca31e84254b684b94e254dbf8"
+  },
+  "final_code_hashes": {
+    "src/policy.rs": "f5436c4e01d5fc2699b8c9b19a0cc5d030b4a54b35a3acfb124bfa7d102f4afb",
+    "src/net.rs": "0d50f463d9f5c017c87e8420352fc4034ca1be13bb3d13218df8958665ad7139",
+    "src/discover.rs": "3dd98313a4bf003d217a21a6640d99797615e397d926b159155fcf3a3f5d2b68",
+    "src/benchmark.rs": "a986628eac97c65ba3b96138f1b24cf52a0807c5b2208ec5abce7a1d4f515500",
+    "src/reliability_benchmark.rs": "ceb9e44e48e98edb43688648326ec0b8b72427e517801ffb46c97de4bf865e03",
+    "src/rescue.rs": "d63409e55016de8aacfa546197ccc13080d5a57fa72bd0145534460c40ceeff9",
+    "src/reranker.rs": "2ca4b7b40cb02fa79f38f211e3e75fd28631b97528af032f842aefe0a09d389c",
+    "src/reranker_benchmark.rs": "d2341b43d554121b0c8e79889cdf114a8f6018ac230e52ef2f911c5545e0fe61",
+    "src/evidence.rs": "666ede949d8a6162fb5cc57c7bd56b1b79629591bebd3b10761295fa60d9a12c",
+    "src/main.rs": "d9144568b2515358d038040434cb9999284b1bf35075d3f3f9c1f0de5ed1bee2",
+    "src/search.rs": "4d073253ccc65cb4420b4164fb836ed795624ac67931aff9cdd2d60826b45d1c",
+    "src/browser.rs": "4bf08cddf944b6a1f7640b7350d69e88a5d9f93772099ea64f759dceb4ec807b",
+    "src/model.rs": "2ad61e944bf2495547d8d2d0097706224a49fc7a726962a613d327c0e16f2794",
+    "src/evidence_probe.rs": "4be45e9118fc627b53c9a2d819b3a5258cdf97e483eb777789e803ff2d6a7c4c",
+    "src/mcp.rs": "ecda6cc2625d3ba8158f2063be5fa7bad03aad8483bc2ee6e402389ba448694d",
+    "tests/mcp_stdio.rs": "32f34701d0272e1f4a5b7580b54b24f88820745890607c7fd4dedb38415b3a7e",
+    "feasibility/direct-coverage-cases-v1.json": "322eb6d6da47e8f05f64e32d50c7347f462e5ec31d4849330bcf3d3a5b010445",
+    "runs/direct-coverage-2026-10-30/retrieval/corpus.json": "645c05ed09d2874895874a617553dbf14a5bda4ca31e84254b684b94e254dbf8"
+  }
+}

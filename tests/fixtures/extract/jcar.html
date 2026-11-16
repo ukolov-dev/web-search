@@ -1,0 +1,137 @@
+<html><head><title>굴삭기 사이클 타임 추정을 위한 시뮬레이션 자동화 사례 연구</title><meta name="citation_title" content="Excavator Cycle Time Estimation"></head><body><div class="tab_area preview_content">
+        	
+        	
+        	
+	            
+	            <em class="tab01 on"><a href="#Abstract" class="tablink">Abstract</a></em>
+	            <div class="tab_cnt tc01">
+	                <div class="tc_pv">
+		                
+		                <div class="wrapper-abstract"><div class="metadata abstract lang-en"><p class="first">Efficient planning of earthworks is critical for the success of construction projects, accounting for approximately 30% of the project budget. However, traditional approaches, relying on managers' experience, or using standardized estimating systems and equipment manufacturer data, are regarded as inaccurate due to the fact that such methods may are limited in incorporating various site conditions that influence excavator operation, such as digging depth, swing angle, and terrain shape. This study proposes a reinforcement learning-based simulation approach for predicting the cycle time of an excavator given field conditions. For the training of an excavator agent, terrain point clouds of a site are collected and used to build a 3D virtual simulation environment representing a real site where the agent learns how to operate the excavation through trial and error processes. The proposed approach achieves a prediction accuracy of 88.89%, which is higher than that of a traditional method (77.06%). It is thus expected that the proposed approach may allow for improving the accuracy of cycle time estimation for earthmoving planning in practice.</p></div><div class="metadata-group keywords lang-en"><div class="xmlConTit keyword lang-en">Keywords</div><div class="metadata-area"><div class="metadata-chunk lang-en"><div class="metadata-entry xmlKeyword lang-en">Reinforcement Learning</div><div class="metadata-entry xmlKeyword lang-en">Earthwork Process</div><div class="metadata-entry xmlKeyword lang-en">Excavator</div><div class="metadata-entry xmlKeyword lang-en">Cycletime Estimation</div><div class="metadata-entry xmlKeyword lang-en">Pointcloud</div></div></div></div><div class="metadata abstract lang-ko"><p class="first">건설 프로젝트를 성공적으로 수행하기 위해서는 프로젝트 전체 예산의 약 30%를 차지하는 토공 작업을 효율적으로 계획하는 것이 필수적이다. 실무에서는 흔히 공정 관리자의 경험에 의존하거나 표준품셈 혹은 장비 제조사에서 제공되는 제원을 바탕으로 토공 공정 계획의 기초적인 자료가 되는 장비의 생산성을 추정하고 있다. 하지만, 경험적 데이터에는 관리자의 주관이 반영될 수 있으며, 표준품셈 및 제조사 데이터의 경우 굴착 깊이와 회전 각도, 지형의 형태 등 굴착 작업에 영향을 끼치는 다양한 현장 환경으로 인해 장비 사이클 타임을 정확히 예측하는데 어려움이 있다. 본 연구에서는 현장 작업 조건에 따른 굴삭기 사이클 타임 예측을 위한 강화학습 기반의 시뮬레이션 기술을 제안한다. 드론을 통해 수집된 현장 지형의 포인트클라우드를 기반으로 시뮬레이션 환경이 제작되었으며, 강화학습을 통해 가상환경 내에서 자동화된 굴삭기가 굴착 작업 시뮬레이션을 반복함으로써 사이클 타임이 예측되었다. 본 기술의 예측 정확도는 88.89%로, 전통적인 방식인 표준품셈 방식(77.06%)보다 높은 수치를 보였다. 제안된 기술을 통해 보다 정확한 토공 공정 계획을 수립하여 성공적인 프로젝트를 달성하는데 기여할 수 있을 것이라 기대된다.</p></div><div class="metadata-group keywords lang-ko"><div class="xmlConTit keyword lang-ko">키워드</div><div class="metadata-area"><div class="metadata-chunk lang-ko"><div class="metadata-entry xmlKeyword lang-ko">강화학습</div><div class="metadata-entry xmlKeyword lang-ko">토공 공정</div><div class="metadata-entry xmlKeyword lang-ko">굴삭기</div><div class="metadata-entry xmlKeyword lang-ko">사이클 타임 예측</div><div class="metadata-entry xmlKeyword lang-ko">포인트클라우드</div></div></div></div></div>
+	                </div>
+	            </div>
+				
+				
+	            <em class="tab02"><a href="#References" class="tablink">References</a></em>
+	            <div class="tab_cnt tc02">
+	                
+		                
+		                	<div class="section ref-list wrapper-references"><a id="idm45763305775512" class="anchor"></a><div class="ref-list table"><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r1"></a><div class="ref-label cell"><span class="ref-label"><span class="label">1</span><a id="ksarc_2023_021_13_r1" class="anchor"></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r1"><div class="citation"><a id="idm45763305774344" class="anchor"></a>Adi, T.N., Iskandar, Y.A., and Bae, H. (2020). Interterminal truck routing optimization using deep reinforcement learning. Sensors, 20(20), 5794.
+        <span class="pub-id  pub-id-type-doi">10.3390/s20205794</span><span class="pub-id  pub-id-type-pmid">33066280</span><span class="pub-id  pub-id-type-pmcid">PMC7602099</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r2"></a><div class="ref-label cell"><span class="ref-label"><span class="label">2</span><a id="ksarc_2023_021_13_r2" class="anchor"></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r2"><div class="citation"><a id="idm45763307721336" class="anchor"></a>Akhavian, R., and Behzadan, A. H. (2014). Evaluation of queuing systems for knowledge-based simulation of construction processes. Automation in Construction, 47, pp. 37-49.
+        <span class="pub-id  pub-id-type-doi">10.1016/j.autcon.2014.07.007</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r3"></a><div class="ref-label cell"><span class="ref-label"><span class="label">3</span><a id="ksarc_2023_021_13_r3" class="anchor"></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r3"><div class="citation"><a id="idm45763311175432" class="anchor"></a>Ali, D., and Frimpong, S. (2021). DeepHaul: a deep learning and reinforcement learning-based smart automation framework for dump trucks. Progress in Artificial Intelligence, 10(2), pp. 157-180.
+        <span class="pub-id  pub-id-type-doi">10.1007/s13748-021-00233-7</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r4"></a><div class="ref-label cell"><span class="ref-label"><span class="label">4</span><a id="ksarc_2023_021_13_r4" class="anchor"></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r4"><div class="citation"><a id="idm45763306707576" class="anchor"></a>Cho, S., and Han, S. (2022). Reinforcement learning-based simulation and automation for tower crane 3D lift planning. Automation in Construction, 144, 104620.
+        <span class="pub-id  pub-id-type-doi">10.1016/j.autcon.2022.104620</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r5"></a><div class="ref-label cell"><span class="ref-label"><span class="label">5</span><a id="ksarc_2023_021_13_r5" class="anchor"></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r5"><div class="citation"><a id="idm45763294652664" class="anchor"></a>Edwards, D., and Griffiths, I. (2000). Artificial intelligence approach to calculation of hydraulic excavator cycle time and output. Mining Technology, 109(1), pp. 23-29.
+        <span class="pub-id  pub-id-type-doi">10.1179/mnt.2000.109.1.23</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r6"></a><div class="ref-label cell"><span class="ref-label"><span class="label">6</span><a id="ksarc_2023_021_13_r6" class="anchor"></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r6"><div class="citation"><a id="idm45763302386440" class="anchor"></a>Edwards, D. J., and Holt, G. D. (2000). ESTIVATE: a model for calculating excavator productivity and output costs. Engineering, Construction and Architectural Management.
+        <span class="pub-id  pub-id-type-doi">10.1108/eb021132</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r7"></a><div class="ref-label cell"><span class="ref-label"><span class="label">7</span><a id="ksarc_2023_021_13_r7" class="anchor"></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r7"><div class="citation"><a id="idm45763307850040" class="anchor"></a>Egli, P., and Hutter, M. (2022). A general approach for the automation of hydraulic excavator arms using reinforcement learning. IEEE Robotics and Automation Letters, 7(2), pp. 5679-5686.
+        <span class="pub-id  pub-id-type-doi">10.1109/LRA.2022.3152865</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r8"></a><div class="ref-label cell"><span class="ref-label"><span class="label">8</span><a id="ksarc_2023_021_13_r8" class="anchor"></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r8"><div class="citation"><a id="idm45763311218072" class="anchor"></a>Egli, P., and Hutter, M. (2020). Towards RL-based hydraulic excavator automation. in 2020 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), IEEE.
+        <span class="pub-id  pub-id-type-doi">10.1109/IROS45743.2020.9341598</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r9"></a><div class="ref-label cell"><span class="ref-label"><span class="label">9</span><a id="ksarc_2023_021_13_r9" class="anchor"></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r9"><div class="citation"><a id="idm45763335151816" class="anchor"></a>Erharter, G. H., Hansen, T. F., Liu, Z., and Marcher, T. (2021). Reinforcement learning based process optimization and strategy development in conventional tunneling. Automation in Construction, 127, 103701.
+        <span class="pub-id  pub-id-type-doi">10.1016/j.autcon.2021.103701</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r10"></a><div class="ref-label cell"><span class="ref-label"><span class="label">10</span><a id="ksarc_2023_021_13_r10" class="anchor"></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r10"><div class="citation"><a id="idm45763310103384" class="anchor"></a>Genders, W., and Razavi, S. (2019). Asynchronous n-step Q-learning adaptive traffic signal control. Journal of Intelligent Transportation Systems, 23(4), pp. 319-331.
+        <span class="pub-id  pub-id-type-doi">10.1080/15472450.2018.1491003</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r11"></a><div class="ref-label cell"><span class="ref-label"><span class="label">11</span><a id="ksarc_2023_021_13_r11" class="anchor"></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r11"><div class="citation"><a id="idm45763307994072" class="anchor"></a>Hola, B., and Schabowicz, K. (2010). Estimation of earthworks execution time cost by means of artificial neural networks. Automation in Construction, 19(5), pp.570-579.
+        <span class="pub-id  pub-id-type-doi">10.1016/j.autcon.2010.02.004</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r12"></a><div class="ref-label cell"><span class="ref-label"><span class="label">12</span><a id="ksarc_2023_021_13_r12" class="anchor"></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r12"><div class="citation"><a id="idm45763275698616" class="anchor"></a>Holt, G.D., and Edwards, D. (2015). Analysis of interrelationships among excavator productivity modifying factors. International Journal of Productivity and Performance Management.
+        <span class="pub-id  pub-id-type-doi">10.1108/IJPPM-02-2014-0026</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r13"></a><div class="ref-label cell"><span class="ref-label"><span class="label">13</span><a id="ksarc_2023_021_13_r13" class="anchor"></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r13"><div class="citation"><a id="idm45763305248504" class="anchor"></a>Jaafaru, H., and Agbelie, B. (2022). Bridge maintenance planning framework using machine learning, multi-attribute utility theory and evolutionary optimization models. Automation in Construction, 141, 104460.
+        <span class="pub-id  pub-id-type-doi">10.1016/j.autcon.2022.104460</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r14"></a><div class="ref-label cell"><span class="ref-label"><span class="label">14</span><a id="ksarc_2023_021_13_r14" class="anchor"></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r14"><div class="citation"><a id="idm45763299809800" class="anchor"></a>Kassem, M., Mahamedi, E., Rogage, K., Duffy, K., and Huntingdon, J. (2021). Measuring and benchmarking the productivity of excavators in infrastructure projects: A deep neural network approach. Automation in Construction, 124, 103532.
+        <span class="pub-id  pub-id-type-doi">10.1016/j.autcon.2020.103532</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r15"></a><div class="ref-label cell"><span class="ref-label"><span class="label">15</span><a id="ksarc_2023_021_13_r15" class="anchor"></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r15"><div class="citation"><a id="idm45763306182024" class="anchor"></a>Kim, H., Ham, Y., Kim, W., Park, S., and Kim, H. (2019). Vision-based nonintrusive context documentation for earthmoving productivity simulation. Automation in Construction, 102, pp. 135-147.
+        <span class="pub-id  pub-id-type-doi">10.1016/j.autcon.2019.02.006</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r16"></a><div class="ref-label cell"><span class="ref-label"><span class="label">16</span><a id="ksarc_2023_021_13_r16" class="anchor"></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r16"><div class="citation"><a id="idm45763306398504" class="anchor"></a>Kim, J., Lee, D. E., and Seo, J. (2020). Task planning strategy and path similarity analysis for an autonomous excavator. Automation in Construction, 112, 103108.
+        <span class="pub-id  pub-id-type-doi">10.1016/j.autcon.2020.103108</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r17"></a><div class="ref-label cell"><span class="ref-label"><span class="label">17</span><a id="ksarc_2023_021_13_r17" class="anchor"></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r17"><div class="citation"><a id="idm45763297350152" class="anchor"></a>Kim, J., and Chi, S. (2020). Multi-camera vision-based productivity monitoring of earthmoving operations. Automation in Construction, 112, 103121.
+        <span class="pub-id  pub-id-type-doi">10.1016/j.autcon.2020.103121</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r18"></a><div class="ref-label cell"><span class="ref-label"><span class="label">18</span><a id="ksarc_2023_021_13_r18" class="anchor"></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r18"><div class="citation"><a id="idm45763296850216" class="anchor"></a>Kujundžić, T., Klanfar, M., Korman, T., and Briševac, Z. (2021). Influence of crushed rock properties on the productivity of a hydraulic excavator. Applied Sciences, 11(5), 2345.
+        <span class="pub-id  pub-id-type-doi">10.3390/app11052345</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r19"></a><div class="ref-label cell"><span class="ref-label"><span class="label">19</span><a id="ksarc_2023_021_13_r19" class="anchor"></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r19"><div class="citation"><a id="idm45763308816776" class="anchor"></a>Kurinov, I., Orzechowski, G., Hämäläinen, P., and Mikkola, A. (2020). Automated excavator based on reinforcement learning and multibody system dynamics. IEEE Access, 8, pp. 213998-214006.
+        <span class="pub-id  pub-id-type-doi">10.1109/ACCESS.2020.3040246</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r20"></a><div class="ref-label cell"><span class="ref-label"><span class="label">20</span><a id="ksarc_2023_021_13_r20" class="anchor"></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r20"><div class="citation"><a id="idm45763302153832" class="anchor"></a>Lee, S., Kim, G. N., and Seo, J. (2008). Analyzing effect factor in earthwork and skillful excavator operator's behavior. KSCE 2008 convention conference, pp. 1867-1870.
+        
+        
+        
+        </div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r21"></a><div class="ref-label cell"><span class="ref-label"><span class="label">21</span><a id="ksarc_2023_021_13_r21" class="anchor"></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r21"><div class="citation"><a id="idm45763302152040" class="anchor"></a>Lu, M., Chan, W. H., Zhang, J. P., and Cao, M. (2007). Generic process mapping and simulation methodology for integrating site layout and operations planning in construction. Journal of Computing in Civil Engineering, 21(6), pp. 453-462.
+        <span class="pub-id  pub-id-type-doi">10.1061/(ASCE)0887-3801(2007)21:6(453)</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r22"></a><div class="ref-label cell"><span class="ref-label"><span class="label">22</span><a id="ksarc_2023_021_13_r22" class="anchor"></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r22"><div class="citation"><a id="idm45763307543816" class="anchor"></a>Mahmood, B., Han, S., and Seo, J. (2022). Implementation experiments on convolutional neural network training using synthetic images for 3D pose estimation of an excavator on real images. Automation in Construction, 133, 103996.
+        <span class="pub-id  pub-id-type-doi">10.1016/j.autcon.2021.103996</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r23"></a><div class="ref-label cell"><span class="ref-label"><span class="label">23</span><a id="ksarc_2023_021_13_r23" class="anchor"></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r23"><div class="citation"><a id="idm45763306080072" class="anchor"></a>Nikas, A., Poulymenakou, A., and Kriaris, P. (2007). Investigating antecedents and drivers affecting the adoption of collaboration technologies in the construction industry. Automation in Construction, 16(5), pp. 632-641.
+        <span class="pub-id  pub-id-type-doi">10.1016/j.autcon.2006.10.003</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r24"></a><div class="ref-label cell"><span class="ref-label"><span class="label">24</span><a id="ksarc_2023_021_13_r24" class="anchor"></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r24"><div class="citation"><a id="idm45763309421688" class="anchor"></a>Parsakhoo, A., Hosseini, S. A., Jalilvand, H., and Lotfalian, M. (2008). Physical soil properties and slope treatments effects on hydraulic excavator productivity for forest road construction. Pakistan Journal of Biological Sciences, 11(11), pp. 1422-1428.
+        <span class="pub-id  pub-id-type-doi">10.3923/pjbs.2008.1422.1428</span><span class="pub-id  pub-id-type-pmid">18817241</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r25"></a><div class="ref-label cell"><span class="ref-label"><span class="label">25</span><a id="ksarc_2023_021_13_r25" class="anchor"></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r25"><div class="citation"><a id="idm45763307809128" class="anchor"></a>Parente, M., Correia, A. G., and Cortez, P. (2016). A novel integrated optimization system for earthwork tasks. Transportation Research Procedia, 14, pp. 3601-3610.
+        <span class="pub-id  pub-id-type-doi">10.1016/j.trpro.2016.05.428</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r26"></a><div class="ref-label cell"><span class="ref-label"><span class="label">26</span><a id="ksarc_2023_021_13_r26" class="anchor"></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r26"><div class="citation"><a id="idm45763307835656" class="anchor"></a>Rashidi, A., Nejad, H.R., and Maghiar, M. (2014). Productivity estimation of bulldozers using generalized linear mixed models. KSCE journal of civil engineering, 18(6), pp. 1580-1589.
+        <span class="pub-id  pub-id-type-doi">10.1007/s12205-014-0354-0</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r27"></a><div class="ref-label cell"><span class="ref-label"><span class="label">27</span><a id="ksarc_2023_021_13_r27" class="anchor"></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r27"><div class="citation"><a id="idm45763307524296" class="anchor"></a>Sağlam, B., and Bettemir, Ö. (2018). Estimation of duration of earthwork with backhoe excavator by Monte Carlo Simulation. Journal of Construction Engineering, 1(2), pp. 85-94.
+        <span class="pub-id  pub-id-type-doi">10.31462/jcemi.2018.01085094</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r28"></a><div class="ref-label cell"><span class="ref-label"><span class="label">28</span><a id="ksarc_2023_021_13_r28" class="anchor"></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r28"><div class="citation"><a id="idm45763307798168" class="anchor"></a>Schulman, J., Wolski, F., Dhariwal, P., Radford, A., and Klimov, O. (2017). Proximal policy optimization algorithms. arXiv preprint arXiv:1707.06347.
+        
+        
+        
+        </div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r29"></a><div class="ref-label cell"><span class="ref-label"><span class="label">29</span><a id="ksarc_2023_021_13_r29" class="anchor"></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r29"><div class="citation"><a id="idm45763307796280" class="anchor"></a>Shehadeh, A., Alshboul, O., Tatari, O., Alzubaidi, M. A., and Salama, A. H. E. S. (2022). Selection of heavy machinery for earthwork activities: A multi-objective optimization approach using a genetic algorithm. Alexandria Engineering Journal, 61(10), pp. 7555-7569.
+        <span class="pub-id  pub-id-type-doi">10.1016/j.aej.2022.01.010</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r30"></a><div class="ref-label cell"><span class="ref-label"><span class="label">30</span><a id="ksarc_2023_021_13_r30" class="anchor"></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r30"><div class="citation"><a id="idm45763309996040" class="anchor"></a>Tam, C. M., Tong, T. K., and Tse, S. L. (2002). Artificial neural networks model for predicting excavator productivity. Engineering Construction and Architectural Management, 9(5‐6), pp. 446-452.
+        <span class="pub-id  pub-id-type-doi">10.1108/eb021238</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r31"></a><div class="ref-label cell"><span class="ref-label"><span class="label">31</span><a id="ksarc_2023_021_13_r31" class="anchor"></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r31"><div class="citation"><a id="idm45763302491896" class="anchor"></a>Vahdatikhaki, F., A. Hammad, and Siddiqui, H. (2015). Optimization-based excavator pose estimation using real-time location systems. Automation in Construction, 56, pp. 76-92.
+        <span class="pub-id  pub-id-type-doi">10.1016/j.autcon.2015.03.006</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r32"></a><div class="ref-label cell"><span class="ref-label"><span class="label">32</span><a id="ksarc_2023_021_13_r32" class="anchor"></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r32"><div class="citation"><a id="idm45763308168008" class="anchor"></a>Woo, S., Yeon, J., Ji, M., Moon, I. C., and Park, J. (2018). Deep reinforcement learning with fully convolutional neural network to solve an earthwork scheduling problem. In 2018 IEEE international conference on systems, man, and cybernetics (SMC) (pp. 4236-4242). IEEE.
+        <span class="pub-id  pub-id-type-doi">10.1109/SMC.2018.00717</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r33"></a><div class="ref-label cell"><span class="ref-label"><span class="label">33</span><a id="ksarc_2023_021_13_r33" class="anchor"></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r33"><div class="citation"><a id="idm45763304472312" class="anchor"></a>Yang, J., Edwards, D.J., and Love, P.E. (2003). A computational intelligent fuzzy model approach for excavator cycle time simulation. Automation in construction, 12(6), pp. 725-735.
+        <span class="pub-id  pub-id-type-doi">10.1016/S0926-5805(03)00056-6</span></div></div></div></div></div>
+		                
+	                
+	            </div>
+			
+			
+			
+            <em class="tab03 "><a href="#Information" class="tablink">Information</a></em>
+            <div class="tab_cnt tc03" >
+                <ul class="tc_if">
+                    <li><em>Publisher :</em>Korean Society of Automation and Robotics in Construction</li>
+                    <li><em>Publisher(Ko) :</em>(사)한국건설자동화·로보틱스학회</li>
+                    <li><em>Journal Title :</em>Journal of Construction Automation and Robotics</li>
+                    
+                    
+                    	<li><em>Journal Title(Ko) :</em>건설자동화·로보틱스 논문집</li>
+                    
+                    
+                    
+	                    <li><em>Volume :</em> 2</li>
+	                    <li><em>No :</em>1</li>
+	                    <li><em>Pages :</em>13-19</li>
+	                
+	                
+	                
+	                	
+	                		
+	                		<li><em>Received Date :</em>
+	                			
+	                				2023-03-09
+	                			
+	                		</li>
+	                		
+	                	
+	                		
+	                		<li><em>Revised Date :</em>
+	                			
+	                				2023-03-17
+	                			
+	                		</li>
+	                		
+	                	
+	                		
+	                		<li><em>Accepted Date :</em>
+	                			
+	                				2023-03-22
+	                			
+	                		</li>
+	                		
+	                	
+
+						 
+							
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    
+                    
+	                    
+                    
+                    
+                    
+	                    
+	                    	<li class="link"><em>DOI :</em><a href="https://doi.org/10.55785/JCAR.2.1.13" target="_blank">https://doi.org/10.55785/JCAR.2.1.13</a></li>
+	                    
+                    
+                    
+                    
+                </ul>
+            </div>
+        </div></body></html>

@@ -1,0 +1,1511 @@
+{
+  "protocol": {
+    "author": "one separate source annotator blinded to branch labels/model outputs; not independent acceptance",
+    "freeze": "queries/code fixed before inference; source gold fixed after acquisition before branch predictions inspected",
+    "scope": "known relevant retrieved sources, not universal web recall; null unjudged and unknown direct reported separately",
+    "source_gold": "original retained HTML from raw acquisition union plus preselected source-only audits; not branch-extracted text",
+    "criteria": "grade2 requested relationship including material conditions;grade1 partial scope;grade0 clearly unrelated;short shell/challenge/unobserved source unknown",
+    "historical": "unsupported/superseded version without requested historical version is grade1",
+    "source_conflict": "n01C020 explicitly false key condition against official n01C011:primary grade1;source_relevance_grade2 retained for separate sensitivity,not merged into primary",
+    "offsets": "UTF-8 bytes in whitespace-normalized source_text(original HTML); script/style/template/noscript/svg text excluded",
+    "isolation": "no branch output, model labels or verdicts were read by annotator; gold-only audits never injected into branch inputs"
+  },
+  "cases": [
+    {
+      "id": "n01",
+      "query": "git stash pop apply conflict stash entry retained",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://www.atlassian.com/git/tutorials/saving-changes/git-stash",
+          "grade": 1,
+          "basis": "pop/apply and conflicts explained, but no witness that a conflicting pop retains the stash entry",
+          "support": [],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/c3130ee5e638e614e8b36ef03788cb3f69ed2e81458a237703a3013092dcd928.json",
+          "field": "raw_html_text",
+          "html_hash": "82c88666c20beea8163fe8cccc780a0bd1467b57d2baf494b7326d57658245de",
+          "normalized_text_hash": "df49af7b51778c7f9c5a32a6e4ed870aa08d18f8711a8c77ec1a334ab68219a3",
+          "source_chars": 26042,
+          "final_url": "https://www.atlassian.com/git/tutorials/saving-changes/git-stash"
+        },
+        {
+          "id": "C002",
+          "url": "https://betterstack.com/community/questions/git-stash-pop-and-git-stash-apply-difference/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://blog.naver.com/kgh9080/223982935381",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": [],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/763838034b6f7511266a984e8c3e48d06f2e5e540a5bc882f258354968268700.json",
+          "field": "raw_html_text",
+          "html_hash": "d009d19fa10b051d565faa97af0e6ea3aef7358c3f4adbc64276a7607828592c",
+          "normalized_text_hash": "8f5c22b8e3a48066623b88448b89d1d16b9da7f67d407dba9662807c3c5aad82",
+          "source_chars": 17,
+          "final_url": "https://blog.naver.com/kgh9080/223982935381"
+        },
+        {
+          "id": "C004",
+          "url": "https://blog.naver.com/kin412/224200751327",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://blog.naver.com/yangee88/224339147017",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://www.componentsource.com/product/gitkraken",
+          "grade": 0,
+          "basis": "Git GUI product overview, not stash conflict semantics",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://confluence.curvc.com/spaces/ASD/pages/51578321/git+stash",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://daleseo.com/git-stash/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://doheelab.github.io/github/gitStash/",
+          "grade": 1,
+          "basis": "pop/apply command summary without conflict-retention semantics",
+          "support": [],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/ee575fb985cb4b8217ec4b23235e1168137c3528ef1a2c9db0291ebb02512cee.json",
+          "field": "raw_html_text",
+          "html_hash": "cc92feed7a7879aee0dc46c91c3297f0f8ce0f63814358e477c41616d31b1ae0",
+          "normalized_text_hash": "c60ce3bc0eae9372be194012fe4691da7a5338755a31840e86ffa02f640f4dc9",
+          "source_chars": 1758,
+          "final_url": "https://doheelab.github.io/github/gitStash/"
+        },
+        {
+          "id": "C010",
+          "url": "https://dotgit.dev/git-stash",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://git-scm.com/docs/git-stash",
+          "grade": 2,
+          "basis": "concrete requested source relationship and material queried conditions, judged from retained original HTML",
+          "support": [
+            {
+              "quote": "can fail with conflicts",
+              "start": 7299,
+              "end": 7322
+            },
+            {
+              "quote": "not removed from the stash list",
+              "start": 7344,
+              "end": 7375
+            },
+            {
+              "quote": "but do not remove the state",
+              "start": 7522,
+              "end": 7549
+            }
+          ],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/da62d74f6038cb4faed6702673ad2b291556fea2d0ef70b38ca2d552b6667fd1.json",
+          "field": "raw_html_text",
+          "html_hash": "587645409b69b369be3e39888ad0d2a2fd2841b1e024fe825d3cbd907f758c10",
+          "normalized_text_hash": "d038e756c06c735bcdb4fedd7611cc64f6ff637b17b7fdd773d7f91488ddfcde",
+          "source_chars": 18823,
+          "final_url": "https://git-scm.com/docs/git-stash"
+        },
+        {
+          "id": "C012",
+          "url": "https://github.com/ivoleitao/stash",
+          "grade": 0,
+          "basis": "different stash: key-value library, not Git",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://www.lainyzine.com/ko/article/git-stash-usage-saving-changes-without-commit/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "Naver partner navigation card, unrelated source",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://opensource.com/article/21/4/git-stash",
+          "grade": 1,
+          "basis": "pop/apply and branch recovery described; conflicting-pop retention not established",
+          "support": [],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/6e646caa02116a0b64fc09a27e8d4c7988b65550b783bf63ea70173be7dd403b.json",
+          "field": "raw_html_text",
+          "html_hash": "ca261d3a4ace9faa73eb3a22ad5f96313854f001a26dd6fe94bb81ddd33b2d80",
+          "normalized_text_hash": "8fa5fcace7758ef57fcd0aea054d770a20963af1d29ee2bd74b51a7323c1ecad",
+          "source_chars": 11246,
+          "final_url": "https://opensource.com/article/21/4/git-stash"
+        },
+        {
+          "id": "C016",
+          "url": "https://www.positioniseverything.net/git-stash-pop/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://redreamer.wordpress.com/2016/07/18/git-stash-%EC%9E%84%EC%8B%9C%EC%A0%80%EC%9E%A5%EA%B8%B0%EB%8A%A5/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://themoderncoder.com/git-stash/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://www.theserverside.com/definition/git-stash",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C020",
+          "url": "https://velog.io/@overslept/Git-Stash-%EC%82%AC%EC%9A%A9-%EC%8B%9C-%EC%B6%A9%EB%8F%8C-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EB%B2%95",
+          "grade": 1,
+          "basis": "source_conflict: wrong material condition; says conflicting pop removes stash, contradicted by official Git retained-state rule",
+          "support": [],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/ffbdd11bcc5756100507478d69d7783aa5b4e875adb820c37a59991d102e1311.json",
+          "field": "raw_html_text",
+          "html_hash": "0a926156ee7c6379a84e4261ce4339f2e4e7cc46f3e534c58ccd365944fa636b",
+          "normalized_text_hash": "0ecd6b9498280fe3e357dadc466391effc20a4e673ae1f32fa5c16022733d606",
+          "source_chars": 1908,
+          "final_url": "https://velog.io/@overslept/Git-Stash-%EC%82%AC%EC%9A%A9-%EC%8B%9C-%EC%B6%A9%EB%8F%8C-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EB%B2%95",
+          "source_conflict": {
+            "claim": {
+              "quote": "충돌이 나면 stash가 사라져서 복구하기 어려울 수 있음",
+              "start": 999,
+              "end": 1071,
+              "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/ffbdd11bcc5756100507478d69d7783aa5b4e875adb820c37a59991d102e1311.json",
+              "field": "raw_html_text",
+              "url": "https://velog.io/@overslept/Git-Stash-%EC%82%AC%EC%9A%A9-%EC%8B%9C-%EC%B6%A9%EB%8F%8C-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EB%B2%95",
+              "normalized_text_hash": "0ecd6b9498280fe3e357dadc466391effc20a4e673ae1f32fa5c16022733d606"
+            },
+            "counter": {
+              "quote": "not removed from the stash list",
+              "start": 7344,
+              "end": 7375,
+              "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/da62d74f6038cb4faed6702673ad2b291556fea2d0ef70b38ca2d552b6667fd1.json",
+              "field": "raw_html_text",
+              "url": "https://git-scm.com/docs/git-stash",
+              "normalized_text_hash": "d038e756c06c735bcdb4fedd7611cc64f6ff637b17b7fdd773d7f91488ddfcde"
+            }
+          },
+          "source_relevance_grade": 2,
+          "warning": "material factual conflict with retrieved official Git documentation; primary grade1 decided before label inspection"
+        }
+      ]
+    },
+    {
+      "id": "n02",
+      "query": "Python itertools.groupby adjacent equal keys shared underlying iterator",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://docs.python.org/3/library/itertools.html",
+          "grade": 2,
+          "basis": "concrete requested source relationship and material queried conditions, judged from retained original HTML",
+          "support": [
+            {
+              "quote": "returns consecutive keys and groups",
+              "start": 13105,
+              "end": 13140
+            },
+            {
+              "quote": "shares the underlying iterable with groupby()",
+              "start": 13799,
+              "end": 13844
+            },
+            {
+              "quote": "the previous group is no longer visible",
+              "start": 13916,
+              "end": 13955
+            }
+          ],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/4a9248d3444ebce99752a9cafdb0151a5541f7e703bfbcd74abd6c54e63b56d7.json",
+          "field": "raw_html_text",
+          "html_hash": "7c0115de56fcdddf0f6f8180f597693f70aca8e6f97815b550a3945bc8b07b44",
+          "normalized_text_hash": "ab14604872c4525a05be3c9d0f397edb79bde1b5b450c934debfbf6111828434",
+          "source_chars": 39000,
+          "final_url": "https://docs.python.org/3/library/itertools.html"
+        },
+        {
+          "id": "C002",
+          "url": "https://www.geeksforgeeks.org/python/itertools-groupby-in-python/",
+          "grade": 1,
+          "basis": "consecutive groups explained; shared underlying iterator lifetime not established",
+          "support": [],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/2d80cd75fdd2d6f0f484dd99f9b7e657ec234966036200e6914b9eb7c93c2715.json",
+          "field": "raw_html_text",
+          "html_hash": "2c18e40b2febf9ab7214348183efcaef835bbb421d2ea90909b61d2566a66c6c",
+          "normalized_text_hash": "40a393d3d35548f1461065b0aeae80b37ee94993020ec1e9dd59dde7362badc2",
+          "source_chars": 5427,
+          "final_url": "https://www.geeksforgeeks.org/python/itertools-groupby-in-python/"
+        },
+        {
+          "id": "C003",
+          "url": "https://github.com/FDE-Deep/python",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://github.com/python/cpython/blob/main/Doc/library/itertools.rst?plain=1",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://karanparekh.dev/python-groupby-pitfalls",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://labex.io/pythoncheatsheet/modules/itertools-module",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://locutus.io/python/itertools/",
+          "grade": 0,
+          "basis": "TypeScript port rather than Python shared iterator semantics",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "Naver partner navigation card, unrelated source",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://more-itertools.readthedocs.io/en/latest/index.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://www.npmjs.com/package/itertools-ts",
+          "grade": 0,
+          "basis": "TypeScript/JavaScript package, not Python itertools",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://pynative.com/python-itertools-functools-exercises/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://pypi.org/project/more-itertools/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://python.land/deep-dives/python-iterator",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://www.pythonpool.com/python-sort-list-of-lists/",
+          "grade": 0,
+          "basis": "sorting lists, not groupby shared iterator",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://www.pythonpool.com/pythons-itertools-groupby/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://realpython.com/python-guitar-synthesizer/",
+          "grade": 0,
+          "basis": "guitar synthesis, no requested groupby relationship",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://realpython.com/python-itertools/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://www.tutorialspoint.com/python-group-concatenate-till-k",
+          "grade": 1,
+          "basis": "concrete groupby concatenation example; shared underlying iterator lifetime not established",
+          "support": [],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/ef02cd242c17f3b6ab632ee918270c10bb40d58bba669c1c69fe5a0ddd9b0480.json",
+          "field": "raw_html_text",
+          "html_hash": "586f7d4d7bd80300542c7e713ad350259b8e74b382b53ab6fe86b0dc2d673fd1",
+          "normalized_text_hash": "a939ebffb89b8346132b8dccfa4b742991bec3672924802158bc14576c7a4477",
+          "source_chars": 4315,
+          "final_url": "https://www.tutorialspoint.com/article/python-group-concatenate-till-k"
+        }
+      ]
+    },
+    {
+      "id": "n03",
+      "query": "Rust BufRead read_line read_until UTF-8 invalid data delimiter retained",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://doc.rust-lang.org/std/io/struct.BufWriter.html",
+          "grade": 0,
+          "basis": "BufWriter writes buffers; query concerns BufRead reading",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://doc.rust-lang.org/std/io/trait.BufRead.html",
+          "grade": 2,
+          "basis": "concrete requested source relationship and material queried conditions, judged from retained original HTML",
+          "support": [
+            {
+              "quote": "fn read_until",
+              "start": 526,
+              "end": 539
+            },
+            {
+              "quote": "fn read_line",
+              "start": 697,
+              "end": 709
+            },
+            {
+              "quote": "including, the delimiter (if found)",
+              "start": 4441,
+              "end": 4476
+            },
+            {
+              "quote": "error if the read bytes are not valid UTF-8",
+              "start": 8681,
+              "end": 8724
+            }
+          ],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/6ce58f9ed3b9bf676504481662739fbd69c2aed5cba2bb6583183a6a84dcf49f.json",
+          "field": "raw_html_text",
+          "html_hash": "b90cbb8673e47baeeb5bd66d85c3e585c1ea6fee5257dfbd4a2db36b6dda4145",
+          "normalized_text_hash": "ec654eb05605fb64e73a61e6d07f945f172a52131341efc7f3af46db32b2711c",
+          "source_chars": 12315,
+          "final_url": "https://doc.rust-lang.org/std/io/trait.BufRead.html"
+        },
+        {
+          "id": "C003",
+          "url": "https://doc.rust-lang.org/std/io/trait.Read.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://doc.rust-lang.org/std/os/fd/struct.BorrowedFd.html",
+          "grade": 0,
+          "basis": "BorrowedFd descriptor ownership, not BufRead delimiters",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://en.wikipedia.org/wiki/C++11",
+          "grade": 0,
+          "basis": "C++11 language overview, different language/API",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://gist.github.com/Migacz85/3d5887f878d6a2961aa04f9c7adef793",
+          "grade": 0,
+          "basis": "Vim configuration gist, not BufRead",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://github.com/nox/rust-rfcs/blob/master/text/0517-io-os-reform.md",
+          "grade": 1,
+          "basis": "pre-stabilization IO reform proposal with historical method signatures, not current BufRead contract",
+          "support": [],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/bf9cb5049e57698a103b4c7f59dd6cd95ebcdcfabffe3880669ff32e2d48d185.json",
+          "field": "raw_html_text",
+          "html_hash": "fa43781358ea59429e4bd498e65043c0d67ee63d2c47eb226e7e18a08f1c37a7",
+          "normalized_text_hash": "f4bb22c63518ea00d0b102c2861e78a4f14b6a749f6880e6350bc5aa102023b2",
+          "source_chars": 67428,
+          "final_url": "https://github.com/nox/rust-rfcs/blob/master/text/0517-io-os-reform.md"
+        },
+        {
+          "id": "C008",
+          "url": "https://github.com/rust-lang/rfcs/blob/master/text/0517-io-os-reform.md",
+          "grade": 1,
+          "basis": "pre-stabilization IO reform proposal with historical method signatures, not current BufRead contract",
+          "support": [],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/cfe7d9c0a247bb268f92e1ec206a2a7d8f28af088c8ec260b7cfb0f34068a188.json",
+          "field": "raw_html_text",
+          "html_hash": "4c4f7878f79cea831cc1605b1686ca99e3dfd7bc2db040ed73c239c5e53c9290",
+          "normalized_text_hash": "707e06aa6911c7b27268ea8944381e78fd05cb997d1ea17f158c9f9add4295d4",
+          "source_chars": 67420,
+          "final_url": "https://github.com/rust-lang/rfcs/blob/main/text/0517-io-os-reform.md"
+        },
+        {
+          "id": "C009",
+          "url": "https://libdivide.com/",
+          "grade": 0,
+          "basis": "integer division library, unrelated operation",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://man.openbsd.org/ntpd",
+          "grade": 0,
+          "basis": "OpenBSD clock daemon manual, unrelated operation",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "Naver partner navigation card, unrelated source",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://readrust.net/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://rust-lang.github.io/rfcs/0517-io-os-reform.html",
+          "grade": 1,
+          "basis": "pre-stabilization IO reform proposal with historical method signatures, not current BufRead contract",
+          "support": [],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/a52df8cbc518f3c01c060cc556d8747a86d67c7718c34afd77a300ccce4e03cd.json",
+          "field": "raw_html_text",
+          "html_hash": "94446c091b7f50751cb9f1e6c62fbd9b5d4718f89cee52461d24fa8171493942",
+          "normalized_text_hash": "1e953850ba241107836317cb2c8aea101fc2f79b5b29c91c7cab97ceb014f2f2",
+          "source_chars": 63790,
+          "final_url": "https://rust-lang.github.io/rfcs/0517-io-os-reform.html"
+        },
+        {
+          "id": "C014",
+          "url": "https://viruta.org/correctness-in-rust-building-strings.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "n04",
+      "query": "PostgreSQL DISTINCT ON ORDER BY first row unpredictable",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://blog.naver.com/uee8351773/224096997881",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://codingcomrade.com/efficient-way-to-select-the-first-row-from-each-group-in-postgresql/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://databasetorque.com/performance-of-distinct-queries/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax",
+          "grade": 0,
+          "basis": "BigQuery SQL dialect, not PostgreSQL DISTINCT ON",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://docs.cloud.google.com/spanner/docs/reference/standard-sql/query-syntax",
+          "grade": 0,
+          "basis": "Spanner SQL dialect, not PostgreSQL DISTINCT ON",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://en.wikipedia.org/wiki/Set_operations_(SQL)",
+          "grade": 1,
+          "basis": "UNION/INTERSECT/EXCEPT ordering, not DISTINCT ON first-row selection",
+          "support": [],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/2f3c384d68b5dfd056123ab5fad80cdb414d835965c1543e389845996eca1beb.json",
+          "field": "raw_html_text",
+          "html_hash": "30ddd21e8781fde3b464c42264c78650bdd57893e1d804a4a3a318fa642bf53a",
+          "normalized_text_hash": "79799397df605cab0758937d62f33e619e33119d7148a851e3ce43b64702307c",
+          "source_chars": 8608,
+          "final_url": "https://en.wikipedia.org/wiki/Set_operations_(SQL)"
+        },
+        {
+          "id": "C007",
+          "url": "https://estuary.dev/blog/postgresql-distinct-clause/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://www.geeksforgeeks.org/postgresql/postgresql-distinct-on-expression/",
+          "grade": 1,
+          "basis": "ORDER BY selecting a group representative explained, but absent/insufficient ordering unpredictability not established",
+          "support": [],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/c5c98bc18db6c22c23f2e9f4f6f899f03a8f9bb28e447f05bd5e414075d94799.json",
+          "field": "raw_html_text",
+          "html_hash": "14dac55755fa85641770b65daf8e52234998fc2c02a5ea410086c70c13692d1a",
+          "normalized_text_hash": "452437b53450a00c4cd0f59b030247f2cc36ade22cf857fc9aabf660665aa0fa",
+          "source_chars": 10183,
+          "final_url": "https://www.geeksforgeeks.org/postgresql/postgresql-distinct-on-expression/"
+        },
+        {
+          "id": "C009",
+          "url": "https://hasura.io/docs/2.0/queries/postgres/sorting/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "Naver partner navigation card, unrelated source",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://neon.com/postgresql/tutorial/distinct-on",
+          "grade": 2,
+          "basis": "concrete requested source relationship and material queried conditions, judged from retained original HTML",
+          "support": [
+            {
+              "quote": "without the ORDER BY clause, the “first” unique entry becomes unpredictable",
+              "start": 3371,
+              "end": 3450
+            }
+          ],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/d06cf83688ae92aef6b7606f4bce6d5e277dc90b82875e99dc143f5db86bea7f.json",
+          "field": "raw_html_text",
+          "html_hash": "a2139f9e8e6e55651c38a2cd7e97947fb4a6195b3088439c9471379b84e5a003",
+          "normalized_text_hash": "b6d45e1218ad46eb24638698eddde6457b3d39783c782acae56e2f2c7f0a0f1a",
+          "source_chars": 6251,
+          "final_url": "https://neon.com/postgresql/tutorial/distinct-on"
+        },
+        {
+          "id": "C012",
+          "url": "https://neon.com/postgresql/tutorial/select-distinct",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://neon.com/postgresql/tutorial/upsert",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://www.pgtutorial.com/postgresql-tutorial/postgresql-distinct-on/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://www.postgresql.kr/docs/9.3/sql-select.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://www.postgresql.org/docs/7.0/sql-select.htm",
+          "grade": 1,
+          "basis": "retrieved card explicitly labels PostgreSQL7.0 unsupported; no historical version requested",
+          "support": [],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/86e1e4168cddddcda9952b550b084de8fb1c16a80162e78eb8984c16814e1d6a.json",
+          "field": "raw_html_text",
+          "html_hash": "17388cd44f49ae2acd9590237c343ca514ffba4c4d7ad06bc205a43ad099b25b",
+          "normalized_text_hash": "dfe2f60b4f1bba36e121d3cdbc80aca2017fd8f8ce8068e37452954be8aae826",
+          "source_chars": 15423,
+          "final_url": "https://www.postgresql.org/docs/7.0/sql-select.htm"
+        },
+        {
+          "id": "C017",
+          "url": "https://refdock.kr/postgresql/postgresql-select-where-order",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://www.samlee.us/blog/2025-10-15-why-distinct-and-order-by-sometimes-need-a-subquery",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://www.tigerdata.com/learn/understanding-distinct-in-postgresql-with-examples",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C020",
+          "url": "https://vonng.com/en/pg/sql-distinct-on/",
+          "grade": 2,
+          "basis": "concrete requested source relationship and material queried conditions, judged from retained original HTML",
+          "support": [
+            {
+              "quote": "the “first row” of a set is unpredictable unless the query is sorted on enough columns",
+              "start": 1539,
+              "end": 1629
+            }
+          ],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/4a330dfd4580f01243e79b9ccd5350c9d6f57e459db2c3ea3ca0fe3e5279cdf0.json",
+          "field": "raw_html_text",
+          "html_hash": "4d2a69ff5ba8c7cbc5f1aa79b7e5ddc8be09e341847446412297995368f2b4ec",
+          "normalized_text_hash": "343494b23058a2604de230c748db365de33c14f7b5360d7f62631143f28cb5d5",
+          "source_chars": 6153,
+          "final_url": "https://vonng.com/en/pg/sql-distinct-on/"
+        }
+      ]
+    },
+    {
+      "id": "n05",
+      "query": "SQLite REPLACE delete triggers recursive_triggers update hook change counter",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://www.analyticsvidhya.com/blog/2025/05/sql-triggers/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://www.datacamp.com/tutorial/sql-triggers",
+          "grade": 0,
+          "basis": "MySQL/Oracle trigger tutorial, not SQLite REPLACE exceptions",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://docs.oracle.com/cd/B25329_01/doc/appdev.102/b25108/xedev_triggers.htm",
+          "grade": 0,
+          "basis": "Oracle database triggers, not SQLite",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://docs.oracle.com/en/database/oracle/oracle-database/18/lnpls/plsql-triggers.html",
+          "grade": 0,
+          "basis": "Oracle PL/SQL triggers, not SQLite",
+          "support": [],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/7940c1e84b57aa1111e047a29a8db6f3ffc5aacf1f19746030132356ed455de8.json",
+          "field": "raw_html_text",
+          "html_hash": "d43f6108f7c4d63fbff7f5c8abeee40c84c710d08b31f4571918f7ad27925022",
+          "normalized_text_hash": "20033c29972d15b74c93be39ecd31e8e6395300ce79888bf6174fc37bdc6c762",
+          "source_chars": 101301,
+          "final_url": "https://docs.oracle.com/en/database/oracle/oracle-database/18/lnpls/plsql-triggers.html"
+        },
+        {
+          "id": "C005",
+          "url": "https://gist.github.com/Oldes/a806110a64a0b44a136cdd3a25af1671",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://github.com/sqldelight/sqldelight/blob/main/CHANGELOG.md",
+          "grade": 1,
+          "basis": "library changelog and dialect features, no requested REPLACE behavioral exceptions",
+          "support": [],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/bc491b20c210e8da569209d88c71166c478e58b2c739adbc88614cd277788e12.json",
+          "field": "raw_html_text",
+          "html_hash": "e9120dbc544f44b92ed1ecd6071b83cdac128a8a59ad72f2130578e3835f2f12",
+          "normalized_text_hash": "b1b4d9d5afd02f88fb7f967290136733442df17b35e160ee109a12cb051082d3",
+          "source_chars": 75170,
+          "final_url": "https://github.com/sqldelight/sqldelight/blob/main/CHANGELOG.md"
+        },
+        {
+          "id": "C007",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "Naver partner navigation card, unrelated source",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://nodejs.org/api/sqlite.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://pgext.cloud/",
+          "grade": 0,
+          "basis": "PostgreSQL extension search, not SQLite",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://www.red-gate.com/simple-talk/databases/sql-server/database-administration-sql-server/sql-server-triggers-good-scary/",
+          "grade": 0,
+          "basis": "SQL Server trigger semantics, not SQLite",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://www.sqlite.org/c3ref/changes.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://www.sqlite.org/c3ref/update_hook.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://www.sqlite.org/lang_conflict.html",
+          "grade": 2,
+          "basis": "concrete requested source relationship and material queried conditions, judged from retained original HTML",
+          "support": [
+            {
+              "quote": "delete triggers fire if and only if recursive triggers are enabled.",
+              "start": 4144,
+              "end": 4211
+            },
+            {
+              "quote": "The update hook is not invoked",
+              "start": 4212,
+              "end": 4242
+            },
+            {
+              "quote": "Nor does REPLACE increment the change counter",
+              "start": 4314,
+              "end": 4359
+            }
+          ],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/6af82880e78f3c8986c63ac92f5e7911110865d8782c3a854e02cd9828f75db7.json",
+          "field": "raw_html_text",
+          "html_hash": "772b9b3f407bed4cdf59a32f1dd5828c3bc8293744bc40a3f25d07e15973b75f",
+          "normalized_text_hash": "3bd901f4cf102d8a9b074ab540fdb0f925b43ec0b875c23d4a6bcbf14139bb5c",
+          "source_chars": 4683,
+          "final_url": "https://www.sqlite.org/lang_conflict.html"
+        },
+        {
+          "id": "C014",
+          "url": "https://www.sqlite.org/lang_delete.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://www.sqlite.org/lang_update.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://www.sqlitetutor.com/update/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://www.sqltutorial.org/sql-triggers/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://til.simonwillison.net/sqlite/sqlite-triggers",
+          "grade": 1,
+          "basis": "trigger experiments include INSERT OR REPLACE, but recursive setting/update-hook/change-counter exceptions not established",
+          "support": [],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/239972800b9061fc52bf16ffe8287696ccf4f2ff05e10d061cc72ac19dce1821.json",
+          "field": "raw_html_text",
+          "html_hash": "1fc53d3fa9ddc83c16e134477bd4987d194ac40b469fb5fb4c7800df703ebe9c",
+          "normalized_text_hash": "d0c05ef0f7d08978a0be0d243ce6daf0ef73a0288ea010ea78b5966ecb206393",
+          "source_chars": 11324,
+          "final_url": "https://til.simonwillison.net/sqlite/sqlite-triggers"
+        },
+        {
+          "id": "C019",
+          "url": "https://tms-outsource.com/cs/swift-cheat-sheet/",
+          "grade": 0,
+          "basis": "Swift language cheat sheet, unrelated",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "n06",
+      "query": "Docker empty volume populate nocopy existing container files",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://www.baculasystems.com/docker-container-backup/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://betterstack.com/community/guides/scaling-docker/docker-volumes/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://blog.naver.com/nadyddns/223995869512",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": [],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/1c9047e02c7c271628f3a819d2e7c52f27caebf1e28d63e63ef5442fd325d8af.json",
+          "field": "raw_html_text",
+          "html_hash": "22d201dd14e21017b713c885cf38798d09de1ef9f5d877bc96ba0157c4d37dca",
+          "normalized_text_hash": "68b821355d16f566281e8df7d3f8da44bfcae08b49e27e135cc815dc9d18ebb3",
+          "source_chars": 27,
+          "final_url": "https://blog.naver.com/nadyddns/223995869512"
+        },
+        {
+          "id": "C004",
+          "url": "https://www.cisa.gov/news-events/bulletins/sb26-257",
+          "grade": 0,
+          "basis": "CISA security bulletin, no Docker volume copy behavior",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://www.datacamp.com/tutorial/docker-mount",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://docs.ansible.com/projects/ansible/latest/collections/community/docker/docker_container_module.html",
+          "grade": 1,
+          "basis": "Ansible Docker no_copy option described; empty-volume condition is not established",
+          "support": [],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/6332810f0f07edd03587f1f3ebd42b4c4f4fd0636a0997c9282473877c0ad6bc.json",
+          "field": "raw_html_text",
+          "html_hash": "91d28d620e186028095019824ef9879af5222f44439effa0b3d29f3df61c4e31",
+          "normalized_text_hash": "87338782e421f433db35d6f83093ffb04e8e4e0633f44298e33badf279dad77c",
+          "source_chars": 53743,
+          "final_url": "https://docs.ansible.com/projects/ansible/latest/collections/community/docker/docker_container_module.html"
+        },
+        {
+          "id": "C007",
+          "url": "https://docs.docker.com/engine/storage/volumes/",
+          "grade": 2,
+          "basis": "concrete requested source relationship and material queried conditions, judged from retained original HTML",
+          "support": [
+            {
+              "quote": "empty volume",
+              "start": 19232,
+              "end": 19244
+            },
+            {
+              "quote": "files or directories are propagated (copied) into the volume by default",
+              "start": 19861,
+              "end": 19932
+            },
+            {
+              "quote": "use the volume-nocopy option",
+              "start": 20213,
+              "end": 20241
+            }
+          ],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/ea5bbea450c9bfdd0c428c36c0330fed88f999e55067678c0f3f8aa756cfdfbb.json",
+          "field": "raw_html_text",
+          "html_hash": "64084a141356158c3437b9883605f3ac1a13b6b934266b9cfbb45eeabb039712",
+          "normalized_text_hash": "dbc9283e37fd486d05ece3ed4bf37aade03ba66f110596ecb038c8442d630035",
+          "source_chars": 41550,
+          "final_url": "https://docs.docker.com/engine/storage/volumes/"
+        },
+        {
+          "id": "C008",
+          "url": "https://docs.scrypted.app/scrypted-nvr/storage/docker.html",
+          "grade": 1,
+          "basis": "nocopy key appears in application config, but empty-volume copy/default suppression relationship not explained",
+          "support": [],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/514dba5283965ff4f07477f8ba0305dede9a698a37ac1695732d3f6622fa612d.json",
+          "field": "raw_html_text",
+          "html_hash": "8bd7bf966105145d3d91da2aa6c16c43df72729def6a95e1d0dc014d93e7449e",
+          "normalized_text_hash": "4742e665a46dab662bb1c30cce1147c618471389484d61c0022741b792061e7e",
+          "source_chars": 5286,
+          "final_url": "https://docs.scrypted.app/scrypted-nvr/storage/docker.html"
+        },
+        {
+          "id": "C009",
+          "url": "https://en.wikipedia.org/wiki/Docker_(software)",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://www.geeksforgeeks.org/devops/what-is-docker-volume/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://gist.github.com/notpushkin/37350bd2e46ef4d8ef6926668bf069e3",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://github.com/docker/compose/issues/4379",
+          "grade": 1,
+          "basis": "volume initialization is explained and nocopy appears in an example, but its effect is not established by source prose",
+          "support": [],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/65b20cedfd8cfff2a579bbc2accbf3d471ed7818debb2bfacc4f7c6fb6a205d6.json",
+          "field": "raw_html_text",
+          "html_hash": "1dfc17ead66ef370cfcff03b35181ea533d53f5881415c51d4d1bb0914a20707",
+          "normalized_text_hash": "9b91ccb2659761e319a12ba6d5a7aac1fa48009893ed8f6e798bf14bf6a4a169",
+          "source_chars": 27190,
+          "final_url": "https://github.com/docker/compose/issues/4379"
+        },
+        {
+          "id": "C013",
+          "url": "https://github.com/openclaw/openclaw/blob/main/Dockerfile",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://rclone.org/docker/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://selfhosting.sh/foundations/docker-volumes/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://www.skeema.io/docs/options/",
+          "grade": 0,
+          "basis": "Skeema schema options, not Docker volume copy behavior",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://stackoverflow.com/questions/tagged/docker-volume?tab=Newest",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://velog.io/@devparkk/Docker-Container-Storage",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "n07",
+      "query": "CSS overflow clip hidden scroll container programmatic scrolling",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://www.bram.us/2024/02/14/scroll-driven-animations-you-want-overflow-clip-not-overflow-hidden/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://codingeverybody.kr/css-overflow-%EC%86%8D%EC%84%B1/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://css-irl.info/oh-no-overflow/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://css-tip.com/overflow-detection/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://developer.apple.com/forums/tags/css",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Scroll_snap",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/overflow-x",
+          "grade": 2,
+          "basis": "concrete requested source relationship and material queried conditions, judged from retained original HTML",
+          "support": [
+            {
+              "quote": "The difference between clip and hidden is that the clip keyword also forbids all scrolling, including programmatic scrolling.",
+              "start": 3862,
+              "end": 3987
+            },
+            {
+              "quote": "not a scroll container.",
+              "start": 4131,
+              "end": 4154
+            }
+          ],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/2c0c0d3e31b1a991def52f5ce213a4bc25458d89dd051c4d680529972b8e88a2.json",
+          "field": "raw_html_text",
+          "html_hash": "f39b416ae138bd03308cf35d698bf18e9a4bd2dc642282818ffce27d88061ed2",
+          "normalized_text_hash": "f784fa311a01468ab9a5b44059dc22517ae41c3dae9d263fc8b0b2b11a23ef74",
+          "source_chars": 28263,
+          "final_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/overflow-x"
+        },
+        {
+          "id": "C008",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors",
+          "grade": 0,
+          "basis": "CSS selectors reference, different CSS operation",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Properties/overflow",
+          "grade": 2,
+          "basis": "concrete requested source relationship and material queried conditions, judged from retained original HTML",
+          "support": [
+            {
+              "quote": "スクロールバーのない スクロールコンテナー となります",
+              "start": 4403,
+              "end": 4480
+            },
+            {
+              "quote": "scrollTo() メソッドなどの他の方法によるスクロールはできます。",
+              "start": 4589,
+              "end": 4675
+            },
+            {
+              "quote": "要素ボックスはスクロールコンテナーにはならず、切り取られたコンテンツは表示されず、プログラムによるスクロールは対応していません。",
+              "start": 4844,
+              "end": 5036
+            }
+          ],
+          "snapshot": "runs/extraction-selection-2026-10-30/gold-audit/n07-C009.html",
+          "field": "raw_html_text",
+          "html_hash": "39b236fd72889ad693e026127662264ac68b6cdad89ab532b79836edcbccf602",
+          "normalized_text_hash": "3dd365ef2e4d247243435537ad1783790816c50ef8b58d174ad28566d0aee6db",
+          "source_chars": 32835,
+          "final_url": "https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Properties/overflow"
+        },
+        {
+          "id": "C010",
+          "url": "https://www.dofactory.com/css/overflows",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://www.framer.com/help/articles/overflow-clip/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://www.geeksforgeeks.org/css/css-overflow/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://github.com/w3c/csswg-drafts/blob/main/css-overflow-5/Overview.bs",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://github.com/w3c/csswg-drafts/issues/14018",
+          "grade": 1,
+          "basis": "single-axis scroll-snap propagation issue, not hidden-versus-clip programmatic scrolling",
+          "support": [],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/08a06c447504c6a1cee91ff94f9ceed6cbb88e67fa39d9b2e274621042446800.json",
+          "field": "raw_html_text",
+          "html_hash": "ef89a936ffd02c54e54a091c7cb7dbda67cde690a7018289c0e0a9f24bc198a5",
+          "normalized_text_hash": "b89272530dcc710c403b11b8f5f01533d6c8c68878437bf2609e3f574c05669f",
+          "source_chars": 9521,
+          "final_url": "https://github.com/w3c/csswg-drafts/issues/14018"
+        },
+        {
+          "id": "C015",
+          "url": "https://github.com/w3ctag/design-reviews/issues/579",
+          "grade": 1,
+          "basis": "historical design review of clip; comparison with hidden is unresolved and design marked unsatisfied",
+          "support": [],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/a13e4bbb0b42509db7ea9f551fefb6acf7a7ec61e474ac7bfd5ee8eab4a022b9.json",
+          "field": "raw_html_text",
+          "html_hash": "52e0796c2bbb965d03082152f409bc17c7a70f869f9a9956b808a6a042344f6f",
+          "normalized_text_hash": "5105b034bd480734ec2d47f8dc4ab7183742c7a76cf56af94cf1d196e2a2f1d7",
+          "source_chars": 13528,
+          "final_url": "https://github.com/w3ctag/design-reviews/issues/579"
+        },
+        {
+          "id": "C016",
+          "url": "https://www.htmlallthethings.com/blog-posts/how-to-disable-scrolling-in-css",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://www.linkedin.com/top-content/design/user-experience-design-trends/scroll-and-swipe-optimization/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "Naver partner navigation card, unrelated source",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://www.testmuai.com/learning-hub/css-overflow-browser-support/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C020",
+          "url": "https://www.w3.org/TR/css-scroll-snap-1/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "n08",
+      "query": "HTTP HEAD Content-Length response body GET semantics",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://advocacy.consumerreports.org/wp-content/uploads/2022/01/CR_Epic_FTCDataMinimization_012522_VF_.pdf",
+          "grade": 0,
+          "basis": "consumer privacy PDF, not HTTP HEAD semantics",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://blog.naver.com/big_booung/223914271626",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://blog.outsider.ne.kr/888",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://www.devdoc.net/web/developer.mozilla.org/en-US/docs/HTTP/Response_codes.html",
+          "grade": 0,
+          "basis": "status-code catalog, not HEAD Content-Length relationship",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/HEAD",
+          "grade": 2,
+          "basis": "concrete requested source relationship and material queried conditions, judged from retained original HTML",
+          "support": [
+            {
+              "quote": "Content-Length header to check the file size",
+              "start": 2316,
+              "end": 2360
+            },
+            {
+              "quote": "server shouldn't include a message body in the response",
+              "start": 3688,
+              "end": 3743
+            }
+          ],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/a3b26256bd0dd276276767fbadc44484f2cfed06f356c7dc3970aefaa37cc6f4.json",
+          "field": "raw_html_text",
+          "html_hash": "9815fee621460ae75b1d83a5f1a3405d40d9fa21e6b41172bc781f86b8563136",
+          "normalized_text_hash": "32cedfb0625b29d5a0991604b1d41941c8a4d02163265c7149f29e517783adb2",
+          "source_chars": 12190,
+          "final_url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/HEAD"
+        },
+        {
+          "id": "C008",
+          "url": "https://en.wikipedia.org/wiki/HTTP_WG",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://github.com/dedoc/scramble/discussions/985",
+          "grade": 2,
+          "basis": "concrete requested source relationship and material queried conditions, judged from retained original HTML",
+          "support": [
+            {
+              "quote": "HEAD response must not include a message body.",
+              "start": 2293,
+              "end": 2339
+            },
+            {
+              "quote": "processed like GET but returns only the headers",
+              "start": 2345,
+              "end": 2392
+            },
+            {
+              "quote": "Content-Length",
+              "start": 2418,
+              "end": 2432
+            }
+          ],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/7445abb516a797c6f0f0490aba69e62f7f30e87d4b5cb1d4a3e1dd4278320e53.json",
+          "field": "raw_html_text",
+          "html_hash": "e4ed15074712f7848ce8c0e57b8406debeb2d0cb98619bca7d6a63d53c8d9415",
+          "normalized_text_hash": "d721d4436fe35bad2389f4e56c1cdea85ed9d26d4283770f232911e2a94855bb",
+          "source_chars": 3334,
+          "final_url": "https://github.com/dedoc/scramble/discussions/985"
+        },
+        {
+          "id": "C010",
+          "url": "https://greenbytes.de/tech/webdav/draft-ietf-httpbis-p2-semantics-21.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://www.http-probe.com/docs/smuggling/head-cl-body.html",
+          "grade": 2,
+          "basis": "concrete requested source relationship and material queried conditions, judged from retained original HTML",
+          "support": [
+            {
+              "quote": "HEAD responses MUST NOT include a response body",
+              "start": 12560,
+              "end": 12607
+            },
+            {
+              "quote": "Content-Length indicating what the equivalent GET response would return",
+              "start": 12630,
+              "end": 12701
+            }
+          ],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/d64d02c7fe504ef79e61bf295ed36eafed7e7aef92855979e30a7528f7a1c361.json",
+          "field": "raw_html_text",
+          "html_hash": "f00e2717858a78840180242cebabb19110d7e46f9cbf0290d7de7ab25d30022a",
+          "normalized_text_hash": "f1e0a986834f975f98f89897455fd8f20fc6e3dd6d5fb785f9304904fb10d724",
+          "source_chars": 14109,
+          "final_url": "https://www.http-probe.com/docs/smuggling/head-cl-body.html"
+        },
+        {
+          "id": "C012",
+          "url": "https://http.dev/head",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://jc-rs.com/guides/curl-headers-to-json",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://joinframework.net/docs/modules/services/httprequest/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://www.linkedin.com/advice/3/how-does-http-support-restful-api-design-skills-programming-6zirf",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://runebook.dev/ko/docs/http/methods/head",
+          "grade": 2,
+          "basis": "concrete requested source relationship and material queried conditions, judged from retained original HTML",
+          "support": [
+            {
+              "quote": "GET 메서드와 거의 똑같지만, 서버가 응답 본문(Response Body)을 보내지 않고 헤더(Headers)만",
+              "start": 299,
+              "end": 414
+            },
+            {
+              "quote": "Content-Length (콘텐츠 크기)",
+              "start": 552,
+              "end": 585
+            }
+          ],
+          "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/ce54241477c9b7adfb9cf56d259d3288d9f579b200f85acbbb0569ac65f0b247.json",
+          "field": "raw_html_text",
+          "html_hash": "633a1a28e53135308a5c14f983086aae66f0a9d7516cc1f43eebc3e27fa7cf1d",
+          "normalized_text_hash": "d5293382657e3ea3b3a83ba66b2ed9341e98a32c901f364ebf8ce118c8ab7ae9",
+          "source_chars": 6238,
+          "final_url": "https://runebook.dev/ko/docs/http/methods/head"
+        },
+        {
+          "id": "C017",
+          "url": "https://stackoverflow.com/questions/79652801/correct-way-to-read-http-responses-without-body",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://www.w3.org/Protocols/HTTP/Object_Headers.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://www.w3.org/Protocols/rfc2616/rfc2616-sec14",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C020",
+          "url": "http://webdav.org/specs/rfc7231.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        }
+      ]
+    }
+  ]
+}

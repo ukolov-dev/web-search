@@ -1,0 +1,93 @@
+{
+  "version": "news-coverage-new8-v1",
+  "as_of": "2026-11-03",
+  "timezone": "Europe/Moscow",
+  "cases": [
+    {
+      "id": "nc01",
+      "query": "новости Воронежа сегодня",
+      "intent": "news",
+      "place": "Воронеж",
+      "topic": "городские новости",
+      "published_from": "2026-11-03",
+      "published_to": "2026-11-03",
+      "date_rule": "explicit today"
+    },
+    {
+      "id": "nc02",
+      "query": "новости Самары сегодня",
+      "intent": "news",
+      "place": "Самара",
+      "topic": "городские новости",
+      "published_from": "2026-11-03",
+      "published_to": "2026-11-03",
+      "date_rule": "explicit today"
+    },
+    {
+      "id": "nc03",
+      "query": "новости Нижнего Новгорода",
+      "intent": "news",
+      "place": "Нижний Новгород",
+      "topic": "городские новости",
+      "published_from": "2026-11-01",
+      "published_to": "2026-11-03",
+      "date_rule": "last three Moscow calendar days"
+    },
+    {
+      "id": "nc04",
+      "query": "новости Белгорода сегодня",
+      "intent": "news",
+      "place": "Белгород",
+      "topic": "городские новости",
+      "published_from": "2026-11-03",
+      "published_to": "2026-11-03",
+      "date_rule": "explicit today"
+    },
+    {
+      "id": "nc05",
+      "query": "новости Ростова-на-Дону сегодня",
+      "intent": "news",
+      "place": "Ростов-на-Дону",
+      "topic": "городские новости",
+      "published_from": "2026-11-03",
+      "published_to": "2026-11-03",
+      "date_rule": "explicit today"
+    },
+    {
+      "id": "nc06",
+      "query": "site:sgpress.ru новости Самары сегодня",
+      "intent": "news",
+      "place": "Самара",
+      "topic": "городские новости",
+      "published_from": "2026-11-03",
+      "published_to": "2026-11-03",
+      "date_rule": "explicit today",
+      "site": "sgpress.ru"
+    },
+    {
+      "id": "nc07",
+      "query": "новости Казани ноябрь 2025",
+      "intent": "news_archive",
+      "place": "Казань",
+      "topic": "городские новости",
+      "published_from": "2025-11-01",
+      "published_to": "2025-11-30",
+      "date_rule": "explicit historical publication month"
+    },
+    {
+      "id": "nc08",
+      "query": "новости Самары 3 ноября 2030",
+      "intent": "future_control",
+      "place": "Самара",
+      "topic": "городские новости",
+      "published_from": "2030-11-03",
+      "published_to": "2030-11-03",
+      "date_rule": "future publication is not verifiable as of 2026-11-03"
+    }
+  ],
+  "limits": [
+    "New exact queries, not guaranteed unseen domains/pages",
+    "Article overlap with prior sessions will be disclosed; not URL-heldout generalization",
+    "Today exact day, bare news recent3 calendar days, publication date distinct from event/modified/copyright"
+  ]
+}

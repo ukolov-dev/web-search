@@ -1,0 +1,44 @@
+{
+  "protocol": {
+    "date": "2026-10-30",
+    "cohort": "passage-coverage-confirm-v1",
+    "new_cases": 4,
+    "frozen_at_utc": "2026-10-30T16:51:26.189187+00:00",
+    "before_source_acquisition": true,
+    "before_model_inference": true,
+    "no_holdout_tuning": true,
+    "source_only_gold": "Author from acquired original source snapshots before viewing predictions. No labels or selected sources are specified by this query file.",
+    "forms_policy": "Single identical English form per query, shared across compared variants. No adaptive rewriting or post-freeze replacement.",
+    "independent_acceptance": false
+  },
+  "cases": [
+    {
+      "id": "h01",
+      "query": "Python str.rstrip removesuffix trailing character set exact suffix difference",
+      "forms": [
+        "Python str.rstrip removesuffix trailing character set exact suffix difference"
+      ]
+    },
+    {
+      "id": "h02",
+      "query": "Redis EXPIRE NX XX GT LT nonvolatile key infinite TTL mutually exclusive options",
+      "forms": [
+        "Redis EXPIRE NX XX GT LT nonvolatile key infinite TTL mutually exclusive options"
+      ]
+    },
+    {
+      "id": "h03",
+      "query": "JavaScript Object.freeze shallow nested object mutation strict mode TypeError",
+      "forms": [
+        "JavaScript Object.freeze shallow nested object mutation strict mode TypeError"
+      ]
+    },
+    {
+      "id": "h04",
+      "query": "POSIX dup dup2 shared open file description offset FD_CLOEXEC descriptor flag",
+      "forms": [
+        "POSIX dup dup2 shared open file description offset FD_CLOEXEC descriptor flag"
+      ]
+    }
+  ]
+}

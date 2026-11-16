@@ -1,0 +1,1793 @@
+{
+  "protocol": {
+    "date": "2026-10-30",
+    "mode": "offline CLI extract-file on identical retained HTML",
+    "scope": "all captured raw HTML; acquisition failures listed separately; git-clean fixture is historical development control, not fresh query quality",
+    "limitation": "more extracted characters do not establish relevance, completeness or correctness; no HTTP/status/navigation validation is re-run by extract-file; no network or models"
+  },
+  "binaries": {
+    "baseline": {
+      "path": "target/debug/web-search-baseline-extraction",
+      "sha256": "c561887d425d56c11c7fe52136b02bf5028d9c95a7f91db7b29d81ab54e31fa1"
+    },
+    "fixed": {
+      "path": "target/debug/web-search",
+      "sha256": "479c777c23220d20f582d736d0cf7433aaa93a18eb67a787e9d11003d6f91a55"
+    }
+  },
+  "source_outcomes": 36,
+  "html_inputs": 34,
+  "acquisition_failures": [
+    {
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/91731f2ce92df064ef656a614be640d76bb883118ce6c4a4932359d5524782aa.json",
+      "url": "https://www.bram.us/2024/02/14/scroll-driven-animations-you-want-overflow-clip-not-overflow-hidden/",
+      "error": "fetch_timeout"
+    },
+    {
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/9a5f6ccb4fdd109b1d249db850e2d1582a33e71af104d5914b1f4319d071ab62.json",
+      "url": "https://www.pythonpool.com/pythons-itertools-groupby/",
+      "error": "fetch_timeout"
+    }
+  ],
+  "same_extracted_text": 29,
+  "changed_extracted_text": 1,
+  "extraction_errors": {
+    "baseline": 4,
+    "fixed": 4
+  },
+  "declared_body_inputs": 2,
+  "method_counts": {
+    "baseline": {
+      "semantic_main": 24,
+      "error": 4,
+      "readability": 5,
+      "semantic_article": 1
+    },
+    "fixed": {
+      "semantic_main": 24,
+      "error": 4,
+      "readability": 4,
+      "semantic_article": 1,
+      "declared_body": 1
+    }
+  },
+  "rows": [
+    {
+      "id": "08a06c447504c6a1cee91ff94f9ceed6cbb88e67fa39d9b2e274621042446800",
+      "url": "https://github.com/w3c/csswg-drafts/issues/14018",
+      "html_hash": "ef89a936ffd02c54e54a091c7cb7dbda67cde690a7018289c0e0a9f24bc198a5",
+      "html_bytes": 305007,
+      "source_chars": 9521,
+      "pagefind_body_count": 0,
+      "branches": {
+        "baseline": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/08a06c447504c6a1cee91ff94f9ceed6cbb88e67fa39d9b2e274621042446800-baseline.json",
+          "text_hash": "668454519f8aa4956ad4a88c4e0a9f16e06945c10b50c8e8a5f2cf5a4bf49315",
+          "normalized_text_hash": "47592f0027db7aa5f3f683612b555bb541f88343730eae107154b908e5de2cb4",
+          "chars": 7055,
+          "normalized_chars": 6971,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        },
+        "fixed": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/08a06c447504c6a1cee91ff94f9ceed6cbb88e67fa39d9b2e274621042446800-fixed.json",
+          "text_hash": "668454519f8aa4956ad4a88c4e0a9f16e06945c10b50c8e8a5f2cf5a4bf49315",
+          "normalized_text_hash": "47592f0027db7aa5f3f683612b555bb541f88343730eae107154b908e5de2cb4",
+          "chars": 7055,
+          "normalized_chars": 6971,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        }
+      },
+      "same_extracted_text": true,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/08a06c447504c6a1cee91ff94f9ceed6cbb88e67fa39d9b2e274621042446800.json",
+      "requested_url": "https://github.com/w3c/csswg-drafts/issues/14018",
+      "http_status": 200,
+      "gold_support_quotes": 0
+    },
+    {
+      "id": "1c9047e02c7c271628f3a819d2e7c52f27caebf1e28d63e63ef5442fd325d8af",
+      "url": "https://blog.naver.com/nadyddns/223995869512",
+      "html_hash": "22d201dd14e21017b713c885cf38798d09de1ef9f5d877bc96ba0157c4d37dca",
+      "html_bytes": 2847,
+      "source_chars": 27,
+      "pagefind_body_count": 0,
+      "branches": {
+        "baseline": {
+          "exit_code": 1,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/1c9047e02c7c271628f3a819d2e7c52f27caebf1e28d63e63ef5442fd325d8af-baseline.json",
+          "error": "Error: failed to grab the article"
+        },
+        "fixed": {
+          "exit_code": 1,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/1c9047e02c7c271628f3a819d2e7c52f27caebf1e28d63e63ef5442fd325d8af-fixed.json",
+          "error": "Error: failed to grab the article"
+        }
+      },
+      "same_extracted_text": null,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/1c9047e02c7c271628f3a819d2e7c52f27caebf1e28d63e63ef5442fd325d8af.json",
+      "requested_url": "https://blog.naver.com/nadyddns/223995869512",
+      "http_status": 200,
+      "gold_support_quotes": 0
+    },
+    {
+      "id": "239972800b9061fc52bf16ffe8287696ccf4f2ff05e10d061cc72ac19dce1821",
+      "url": "https://til.simonwillison.net/sqlite/sqlite-triggers",
+      "html_hash": "1fc53d3fa9ddc83c16e134477bd4987d194ac40b469fb5fb4c7800df703ebe9c",
+      "html_bytes": 37785,
+      "source_chars": 11324,
+      "pagefind_body_count": 0,
+      "branches": {
+        "baseline": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/239972800b9061fc52bf16ffe8287696ccf4f2ff05e10d061cc72ac19dce1821-baseline.json",
+          "text_hash": "a66b2b87e27627d90ddf1818a9b3a9f8d2f49109bd53c6dce78c420c1a2d0c79",
+          "normalized_text_hash": "f560c0c1c7df116a05df90fb409d395608661b49d4bc59facd945ea8c6054fa7",
+          "chars": 12652,
+          "normalized_chars": 10558,
+          "extraction_method": "readability",
+          "content_scope": "inferred_article",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        },
+        "fixed": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/239972800b9061fc52bf16ffe8287696ccf4f2ff05e10d061cc72ac19dce1821-fixed.json",
+          "text_hash": "a66b2b87e27627d90ddf1818a9b3a9f8d2f49109bd53c6dce78c420c1a2d0c79",
+          "normalized_text_hash": "f560c0c1c7df116a05df90fb409d395608661b49d4bc59facd945ea8c6054fa7",
+          "chars": 12652,
+          "normalized_chars": 10558,
+          "extraction_method": "readability",
+          "content_scope": "inferred_article",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        }
+      },
+      "same_extracted_text": true,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/239972800b9061fc52bf16ffe8287696ccf4f2ff05e10d061cc72ac19dce1821.json",
+      "requested_url": "https://til.simonwillison.net/sqlite/sqlite-triggers",
+      "http_status": 200,
+      "gold_support_quotes": 0
+    },
+    {
+      "id": "2c0c0d3e31b1a991def52f5ce213a4bc25458d89dd051c4d680529972b8e88a2",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/overflow-x",
+      "html_hash": "f39b416ae138bd03308cf35d698bf18e9a4bd2dc642282818ffce27d88061ed2",
+      "html_bytes": 332103,
+      "source_chars": 28263,
+      "pagefind_body_count": 0,
+      "branches": {
+        "baseline": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/2c0c0d3e31b1a991def52f5ce213a4bc25458d89dd051c4d680529972b8e88a2-baseline.json",
+          "text_hash": "0f58aa736f2feed40db5b39b1357844ee4b5cd069861814c5deb7bc3ead09720",
+          "normalized_text_hash": "c4cc0896260fec8c76a47fd5397ceed7e69911870ff98f5607aa7c36a299c7e0",
+          "chars": 4892,
+          "normalized_chars": 4715,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 2
+        },
+        "fixed": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/2c0c0d3e31b1a991def52f5ce213a4bc25458d89dd051c4d680529972b8e88a2-fixed.json",
+          "text_hash": "0f58aa736f2feed40db5b39b1357844ee4b5cd069861814c5deb7bc3ead09720",
+          "normalized_text_hash": "c4cc0896260fec8c76a47fd5397ceed7e69911870ff98f5607aa7c36a299c7e0",
+          "chars": 4892,
+          "normalized_chars": 4715,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 2
+        }
+      },
+      "same_extracted_text": true,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/2c0c0d3e31b1a991def52f5ce213a4bc25458d89dd051c4d680529972b8e88a2.json",
+      "requested_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/overflow-x",
+      "http_status": 200,
+      "gold_support_quotes": 2
+    },
+    {
+      "id": "2d80cd75fdd2d6f0f484dd99f9b7e657ec234966036200e6914b9eb7c93c2715",
+      "url": "https://www.geeksforgeeks.org/python/itertools-groupby-in-python/",
+      "html_hash": "2c18e40b2febf9ab7214348183efcaef835bbb421d2ea90909b61d2566a66c6c",
+      "html_bytes": 224225,
+      "source_chars": 5427,
+      "pagefind_body_count": 0,
+      "branches": {
+        "baseline": {
+          "exit_code": 1,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/2d80cd75fdd2d6f0f484dd99f9b7e657ec234966036200e6914b9eb7c93c2715-baseline.json",
+          "error": "Error: failed to grab the article"
+        },
+        "fixed": {
+          "exit_code": 1,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/2d80cd75fdd2d6f0f484dd99f9b7e657ec234966036200e6914b9eb7c93c2715-fixed.json",
+          "error": "Error: failed to grab the article"
+        }
+      },
+      "same_extracted_text": null,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/2d80cd75fdd2d6f0f484dd99f9b7e657ec234966036200e6914b9eb7c93c2715.json",
+      "requested_url": "https://www.geeksforgeeks.org/python/itertools-groupby-in-python/",
+      "http_status": 200,
+      "gold_support_quotes": 0
+    },
+    {
+      "id": "2f3c384d68b5dfd056123ab5fad80cdb414d835965c1543e389845996eca1beb",
+      "url": "https://en.wikipedia.org/wiki/Set_operations_(SQL)",
+      "html_hash": "30ddd21e8781fde3b464c42264c78650bdd57893e1d804a4a3a318fa642bf53a",
+      "html_bytes": 116997,
+      "source_chars": 8608,
+      "pagefind_body_count": 0,
+      "branches": {
+        "baseline": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/2f3c384d68b5dfd056123ab5fad80cdb414d835965c1543e389845996eca1beb-baseline.json",
+          "text_hash": "543ce1ab08790063b91e6821c763e252698ca80ccb518d323a6757b8130b778f",
+          "normalized_text_hash": "23bcdaf930c385587a5e4d840810eece2d409663a147c55a095b7c4acec9203b",
+          "chars": 7006,
+          "normalized_chars": 6871,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        },
+        "fixed": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/2f3c384d68b5dfd056123ab5fad80cdb414d835965c1543e389845996eca1beb-fixed.json",
+          "text_hash": "543ce1ab08790063b91e6821c763e252698ca80ccb518d323a6757b8130b778f",
+          "normalized_text_hash": "23bcdaf930c385587a5e4d840810eece2d409663a147c55a095b7c4acec9203b",
+          "chars": 7006,
+          "normalized_chars": 6871,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        }
+      },
+      "same_extracted_text": true,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/2f3c384d68b5dfd056123ab5fad80cdb414d835965c1543e389845996eca1beb.json",
+      "requested_url": "https://en.wikipedia.org/wiki/Set_operations_(SQL)",
+      "http_status": 200,
+      "gold_support_quotes": 0
+    },
+    {
+      "id": "4a330dfd4580f01243e79b9ccd5350c9d6f57e459db2c3ea3ca0fe3e5279cdf0",
+      "url": "https://vonng.com/en/pg/sql-distinct-on/",
+      "html_hash": "4d2a69ff5ba8c7cbc5f1aa79b7e5ddc8be09e341847446412297995368f2b4ec",
+      "html_bytes": 81800,
+      "source_chars": 6153,
+      "pagefind_body_count": 0,
+      "branches": {
+        "baseline": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/4a330dfd4580f01243e79b9ccd5350c9d6f57e459db2c3ea3ca0fe3e5279cdf0-baseline.json",
+          "text_hash": "bc64b7680b866c3e923a4492e1bdc3805c2655ff768279fc62d62e18d08ed856",
+          "normalized_text_hash": "88a9a0306f3cd9bff74842743bd30850fc44260858152ec2724619e9cc67916f",
+          "chars": 4378,
+          "normalized_chars": 4342,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 1
+        },
+        "fixed": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/4a330dfd4580f01243e79b9ccd5350c9d6f57e459db2c3ea3ca0fe3e5279cdf0-fixed.json",
+          "text_hash": "bc64b7680b866c3e923a4492e1bdc3805c2655ff768279fc62d62e18d08ed856",
+          "normalized_text_hash": "88a9a0306f3cd9bff74842743bd30850fc44260858152ec2724619e9cc67916f",
+          "chars": 4378,
+          "normalized_chars": 4342,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 1
+        }
+      },
+      "same_extracted_text": true,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/4a330dfd4580f01243e79b9ccd5350c9d6f57e459db2c3ea3ca0fe3e5279cdf0.json",
+      "requested_url": "https://vonng.com/en/pg/sql-distinct-on/",
+      "http_status": 200,
+      "gold_support_quotes": 1
+    },
+    {
+      "id": "4a9248d3444ebce99752a9cafdb0151a5541f7e703bfbcd74abd6c54e63b56d7",
+      "url": "https://docs.python.org/3/library/itertools.html",
+      "html_hash": "7c0115de56fcdddf0f6f8180f597693f70aca8e6f97815b550a3945bc8b07b44",
+      "html_bytes": 175914,
+      "source_chars": 39000,
+      "pagefind_body_count": 0,
+      "branches": {
+        "baseline": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/4a9248d3444ebce99752a9cafdb0151a5541f7e703bfbcd74abd6c54e63b56d7-baseline.json",
+          "text_hash": "ebd1403107661fc806caf02e6e3dd287e15f1eee21e13f22b975c3a9e26ddbf1",
+          "normalized_text_hash": "c8a9aed7e00826c3c33b50052742b5fe58b2d0864f77ba7fe98ef793686006c0",
+          "chars": 39110,
+          "normalized_chars": 35612,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 3
+        },
+        "fixed": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/4a9248d3444ebce99752a9cafdb0151a5541f7e703bfbcd74abd6c54e63b56d7-fixed.json",
+          "text_hash": "ebd1403107661fc806caf02e6e3dd287e15f1eee21e13f22b975c3a9e26ddbf1",
+          "normalized_text_hash": "c8a9aed7e00826c3c33b50052742b5fe58b2d0864f77ba7fe98ef793686006c0",
+          "chars": 39110,
+          "normalized_chars": 35612,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 3
+        }
+      },
+      "same_extracted_text": true,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/4a9248d3444ebce99752a9cafdb0151a5541f7e703bfbcd74abd6c54e63b56d7.json",
+      "requested_url": "https://docs.python.org/3/library/itertools.html",
+      "http_status": 200,
+      "gold_support_quotes": 3
+    },
+    {
+      "id": "514dba5283965ff4f07477f8ba0305dede9a698a37ac1695732d3f6622fa612d",
+      "url": "https://docs.scrypted.app/scrypted-nvr/storage/docker.html",
+      "html_hash": "8bd7bf966105145d3d91da2aa6c16c43df72729def6a95e1d0dc014d93e7449e",
+      "html_bytes": 61686,
+      "source_chars": 5286,
+      "pagefind_body_count": 0,
+      "branches": {
+        "baseline": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/514dba5283965ff4f07477f8ba0305dede9a698a37ac1695732d3f6622fa612d-baseline.json",
+          "text_hash": "8018e55f9c4319a97b819f2eaa17c35b1cada26557aec9d2fcd9b827e2a6b71e",
+          "normalized_text_hash": "bc9237c471b27c91c0853c69bd57cb11191a3ae46d1854424e1f9ae5cbfb1331",
+          "chars": 4367,
+          "normalized_chars": 3986,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        },
+        "fixed": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/514dba5283965ff4f07477f8ba0305dede9a698a37ac1695732d3f6622fa612d-fixed.json",
+          "text_hash": "8018e55f9c4319a97b819f2eaa17c35b1cada26557aec9d2fcd9b827e2a6b71e",
+          "normalized_text_hash": "bc9237c471b27c91c0853c69bd57cb11191a3ae46d1854424e1f9ae5cbfb1331",
+          "chars": 4367,
+          "normalized_chars": 3986,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        }
+      },
+      "same_extracted_text": true,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/514dba5283965ff4f07477f8ba0305dede9a698a37ac1695732d3f6622fa612d.json",
+      "requested_url": "https://docs.scrypted.app/scrypted-nvr/storage/docker.html",
+      "http_status": 200,
+      "gold_support_quotes": 0
+    },
+    {
+      "id": "6332810f0f07edd03587f1f3ebd42b4c4f4fd0636a0997c9282473877c0ad6bc",
+      "url": "https://docs.ansible.com/projects/ansible/latest/collections/community/docker/docker_container_module.html",
+      "html_hash": "91d28d620e186028095019824ef9879af5222f44439effa0b3d29f3df61c4e31",
+      "html_bytes": 296327,
+      "source_chars": 53743,
+      "pagefind_body_count": 0,
+      "branches": {
+        "baseline": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/6332810f0f07edd03587f1f3ebd42b4c4f4fd0636a0997c9282473877c0ad6bc-baseline.json",
+          "text_hash": "bed39440e077b63243725fca40082a087bbd7b591ecc305d8c3edf0d7c769ba4",
+          "normalized_text_hash": "00f5804cbaefaf52cf3ac821f6de7e80831e91b71f612813bb2d83b8e2325e7c",
+          "chars": 50764,
+          "normalized_chars": 48795,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        },
+        "fixed": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/6332810f0f07edd03587f1f3ebd42b4c4f4fd0636a0997c9282473877c0ad6bc-fixed.json",
+          "text_hash": "bed39440e077b63243725fca40082a087bbd7b591ecc305d8c3edf0d7c769ba4",
+          "normalized_text_hash": "00f5804cbaefaf52cf3ac821f6de7e80831e91b71f612813bb2d83b8e2325e7c",
+          "chars": 50764,
+          "normalized_chars": 48795,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        }
+      },
+      "same_extracted_text": true,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/6332810f0f07edd03587f1f3ebd42b4c4f4fd0636a0997c9282473877c0ad6bc.json",
+      "requested_url": "https://docs.ansible.com/projects/ansible/latest/collections/community/docker/docker_container_module.html",
+      "http_status": 200,
+      "gold_support_quotes": 0
+    },
+    {
+      "id": "65b20cedfd8cfff2a579bbc2accbf3d471ed7818debb2bfacc4f7c6fb6a205d6",
+      "url": "https://github.com/docker/compose/issues/4379",
+      "html_hash": "1dfc17ead66ef370cfcff03b35181ea533d53f5881415c51d4d1bb0914a20707",
+      "html_bytes": 568257,
+      "source_chars": 27190,
+      "pagefind_body_count": 0,
+      "branches": {
+        "baseline": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/65b20cedfd8cfff2a579bbc2accbf3d471ed7818debb2bfacc4f7c6fb6a205d6-baseline.json",
+          "text_hash": "44e60013889b4c026ff2543a497a46344a0caac25e5080ba7532dcbaba915800",
+          "normalized_text_hash": "d0658aead73e59d86c6fb7058eaa92f870eb105ded827468edb3673cd8e8e73f",
+          "chars": 21522,
+          "normalized_chars": 20352,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        },
+        "fixed": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/65b20cedfd8cfff2a579bbc2accbf3d471ed7818debb2bfacc4f7c6fb6a205d6-fixed.json",
+          "text_hash": "44e60013889b4c026ff2543a497a46344a0caac25e5080ba7532dcbaba915800",
+          "normalized_text_hash": "d0658aead73e59d86c6fb7058eaa92f870eb105ded827468edb3673cd8e8e73f",
+          "chars": 21522,
+          "normalized_chars": 20352,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        }
+      },
+      "same_extracted_text": true,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/65b20cedfd8cfff2a579bbc2accbf3d471ed7818debb2bfacc4f7c6fb6a205d6.json",
+      "requested_url": "https://github.com/docker/compose/issues/4379",
+      "http_status": 200,
+      "gold_support_quotes": 0
+    },
+    {
+      "id": "6af82880e78f3c8986c63ac92f5e7911110865d8782c3a854e02cd9828f75db7",
+      "url": "https://www.sqlite.org/lang_conflict.html",
+      "html_hash": "772b9b3f407bed4cdf59a32f1dd5828c3bc8293744bc40a3f25d07e15973b75f",
+      "html_bytes": 15964,
+      "source_chars": 4683,
+      "pagefind_body_count": 0,
+      "branches": {
+        "baseline": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/6af82880e78f3c8986c63ac92f5e7911110865d8782c3a854e02cd9828f75db7-baseline.json",
+          "text_hash": "06a087cf1f6013dc3a82e34192b6ccc63d73f30454f70fe62d75eb61f7d3aaa8",
+          "normalized_text_hash": "3f3af1a6e5aceb7d5c62a82009aad4b143ee469d545612f5ce29a757339d531e",
+          "chars": 4522,
+          "normalized_chars": 4501,
+          "extraction_method": "readability",
+          "content_scope": "inferred_article",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 3
+        },
+        "fixed": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/6af82880e78f3c8986c63ac92f5e7911110865d8782c3a854e02cd9828f75db7-fixed.json",
+          "text_hash": "06a087cf1f6013dc3a82e34192b6ccc63d73f30454f70fe62d75eb61f7d3aaa8",
+          "normalized_text_hash": "3f3af1a6e5aceb7d5c62a82009aad4b143ee469d545612f5ce29a757339d531e",
+          "chars": 4522,
+          "normalized_chars": 4501,
+          "extraction_method": "readability",
+          "content_scope": "inferred_article",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 3
+        }
+      },
+      "same_extracted_text": true,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/6af82880e78f3c8986c63ac92f5e7911110865d8782c3a854e02cd9828f75db7.json",
+      "requested_url": "https://www.sqlite.org/lang_conflict.html",
+      "http_status": 200,
+      "gold_support_quotes": 3
+    },
+    {
+      "id": "6ce58f9ed3b9bf676504481662739fbd69c2aed5cba2bb6583183a6a84dcf49f",
+      "url": "https://doc.rust-lang.org/std/io/trait.BufRead.html",
+      "html_hash": "b90cbb8673e47baeeb5bd66d85c3e585c1ea6fee5257dfbd4a2db36b6dda4145",
+      "html_bytes": 51299,
+      "source_chars": 12315,
+      "pagefind_body_count": 0,
+      "branches": {
+        "baseline": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/6ce58f9ed3b9bf676504481662739fbd69c2aed5cba2bb6583183a6a84dcf49f-baseline.json",
+          "text_hash": "7f3d0898f5af9a79abf81bf61579413e1735cbd6ca2def3b2e3f2e5c5cfd40d8",
+          "normalized_text_hash": "1736e68aac937837876673812dddf268afaf152cd7c0657d53dadeed4a6a1066",
+          "chars": 12024,
+          "normalized_chars": 11715,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 4
+        },
+        "fixed": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/6ce58f9ed3b9bf676504481662739fbd69c2aed5cba2bb6583183a6a84dcf49f-fixed.json",
+          "text_hash": "7f3d0898f5af9a79abf81bf61579413e1735cbd6ca2def3b2e3f2e5c5cfd40d8",
+          "normalized_text_hash": "1736e68aac937837876673812dddf268afaf152cd7c0657d53dadeed4a6a1066",
+          "chars": 12024,
+          "normalized_chars": 11715,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 4
+        }
+      },
+      "same_extracted_text": true,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/6ce58f9ed3b9bf676504481662739fbd69c2aed5cba2bb6583183a6a84dcf49f.json",
+      "requested_url": "https://doc.rust-lang.org/std/io/trait.BufRead.html",
+      "http_status": 200,
+      "gold_support_quotes": 4
+    },
+    {
+      "id": "6e646caa02116a0b64fc09a27e8d4c7988b65550b783bf63ea70173be7dd403b",
+      "url": "https://opensource.com/article/21/4/git-stash",
+      "html_hash": "ca261d3a4ace9faa73eb3a22ad5f96313854f001a26dd6fe94bb81ddd33b2d80",
+      "html_bytes": 46409,
+      "source_chars": 11246,
+      "pagefind_body_count": 0,
+      "branches": {
+        "baseline": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/6e646caa02116a0b64fc09a27e8d4c7988b65550b783bf63ea70173be7dd403b-baseline.json",
+          "text_hash": "787983f60ca40bdbc9f831640d44b8269713b6be946eff3710ce1d92fe621c8b",
+          "normalized_text_hash": "3c9b6df77567aa4c2140dc4ce3592962620a084a2534078d941a073ad470bf00",
+          "chars": 9965,
+          "normalized_chars": 9847,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        },
+        "fixed": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/6e646caa02116a0b64fc09a27e8d4c7988b65550b783bf63ea70173be7dd403b-fixed.json",
+          "text_hash": "787983f60ca40bdbc9f831640d44b8269713b6be946eff3710ce1d92fe621c8b",
+          "normalized_text_hash": "3c9b6df77567aa4c2140dc4ce3592962620a084a2534078d941a073ad470bf00",
+          "chars": 9965,
+          "normalized_chars": 9847,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        }
+      },
+      "same_extracted_text": true,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/6e646caa02116a0b64fc09a27e8d4c7988b65550b783bf63ea70173be7dd403b.json",
+      "requested_url": "https://opensource.com/article/21/4/git-stash",
+      "http_status": 200,
+      "gold_support_quotes": 0
+    },
+    {
+      "id": "7445abb516a797c6f0f0490aba69e62f7f30e87d4b5cb1d4a3e1dd4278320e53",
+      "url": "https://github.com/dedoc/scramble/discussions/985",
+      "html_hash": "e4ed15074712f7848ce8c0e57b8406debeb2d0cb98619bca7d6a63d53c8d9415",
+      "html_bytes": 222995,
+      "source_chars": 3334,
+      "pagefind_body_count": 0,
+      "branches": {
+        "baseline": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/7445abb516a797c6f0f0490aba69e62f7f30e87d4b5cb1d4a3e1dd4278320e53-baseline.json",
+          "text_hash": "4d3650c011a48ba0fa679d942362bb4317c1fdbfaa05be5e5037f0b94f1d0f14",
+          "normalized_text_hash": "1239e7fb3f660c4caadb5267fdbd554b49c4e6bd11f1692590c654e2cf51b07f",
+          "chars": 920,
+          "normalized_chars": 893,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 3
+        },
+        "fixed": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/7445abb516a797c6f0f0490aba69e62f7f30e87d4b5cb1d4a3e1dd4278320e53-fixed.json",
+          "text_hash": "4d3650c011a48ba0fa679d942362bb4317c1fdbfaa05be5e5037f0b94f1d0f14",
+          "normalized_text_hash": "1239e7fb3f660c4caadb5267fdbd554b49c4e6bd11f1692590c654e2cf51b07f",
+          "chars": 920,
+          "normalized_chars": 893,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 3
+        }
+      },
+      "same_extracted_text": true,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/7445abb516a797c6f0f0490aba69e62f7f30e87d4b5cb1d4a3e1dd4278320e53.json",
+      "requested_url": "https://github.com/dedoc/scramble/discussions/985",
+      "http_status": 200,
+      "gold_support_quotes": 3
+    },
+    {
+      "id": "763838034b6f7511266a984e8c3e48d06f2e5e540a5bc882f258354968268700",
+      "url": "https://blog.naver.com/kgh9080/223982935381",
+      "html_hash": "d009d19fa10b051d565faa97af0e6ea3aef7358c3f4adbc64276a7607828592c",
+      "html_bytes": 2841,
+      "source_chars": 17,
+      "pagefind_body_count": 0,
+      "branches": {
+        "baseline": {
+          "exit_code": 1,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/763838034b6f7511266a984e8c3e48d06f2e5e540a5bc882f258354968268700-baseline.json",
+          "error": "Error: failed to grab the article"
+        },
+        "fixed": {
+          "exit_code": 1,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/763838034b6f7511266a984e8c3e48d06f2e5e540a5bc882f258354968268700-fixed.json",
+          "error": "Error: failed to grab the article"
+        }
+      },
+      "same_extracted_text": null,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/763838034b6f7511266a984e8c3e48d06f2e5e540a5bc882f258354968268700.json",
+      "requested_url": "https://blog.naver.com/kgh9080/223982935381",
+      "http_status": 200,
+      "gold_support_quotes": 0
+    },
+    {
+      "id": "7940c1e84b57aa1111e047a29a8db6f3ffc5aacf1f19746030132356ed455de8",
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/18/lnpls/plsql-triggers.html",
+      "html_hash": "d43f6108f7c4d63fbff7f5c8abeee40c84c710d08b31f4571918f7ad27925022",
+      "html_bytes": 286709,
+      "source_chars": 101301,
+      "pagefind_body_count": 0,
+      "branches": {
+        "baseline": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/7940c1e84b57aa1111e047a29a8db6f3ffc5aacf1f19746030132356ed455de8-baseline.json",
+          "text_hash": "13df582f80ccae41b362a291d786c69b6cf6382382fecf763b99a580542a4828",
+          "normalized_text_hash": "7fc5c6e850bc6ab61e1d2aa48e917aa222fe1ef8ebb151fb98e20b42721c5297",
+          "chars": 100000,
+          "normalized_chars": 95171,
+          "extraction_method": "semantic_article",
+          "content_scope": "article",
+          "truncated": true,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        },
+        "fixed": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/7940c1e84b57aa1111e047a29a8db6f3ffc5aacf1f19746030132356ed455de8-fixed.json",
+          "text_hash": "13df582f80ccae41b362a291d786c69b6cf6382382fecf763b99a580542a4828",
+          "normalized_text_hash": "7fc5c6e850bc6ab61e1d2aa48e917aa222fe1ef8ebb151fb98e20b42721c5297",
+          "chars": 100000,
+          "normalized_chars": 95171,
+          "extraction_method": "semantic_article",
+          "content_scope": "article",
+          "truncated": true,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        }
+      },
+      "same_extracted_text": true,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/7940c1e84b57aa1111e047a29a8db6f3ffc5aacf1f19746030132356ed455de8.json",
+      "requested_url": "https://docs.oracle.com/en/database/oracle/oracle-database/18/lnpls/plsql-triggers.html",
+      "http_status": 200,
+      "gold_support_quotes": 0
+    },
+    {
+      "id": "86e1e4168cddddcda9952b550b084de8fb1c16a80162e78eb8984c16814e1d6a",
+      "url": "https://www.postgresql.org/docs/7.0/sql-select.htm",
+      "html_hash": "17388cd44f49ae2acd9590237c343ca514ffba4c4d7ad06bc205a43ad099b25b",
+      "html_bytes": 30589,
+      "source_chars": 15423,
+      "pagefind_body_count": 0,
+      "branches": {
+        "baseline": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/86e1e4168cddddcda9952b550b084de8fb1c16a80162e78eb8984c16814e1d6a-baseline.json",
+          "text_hash": "a0f752e800929f293b67d6152a4f6305b210ee8ce51797bf88fe9c91d144477b",
+          "normalized_text_hash": "9f048b355a1705f34dca851f825d2eaeab35bca1a16aec9ae28c8de47fc72c9c",
+          "chars": 13702,
+          "normalized_chars": 12885,
+          "extraction_method": "readability",
+          "content_scope": "inferred_article",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        },
+        "fixed": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/86e1e4168cddddcda9952b550b084de8fb1c16a80162e78eb8984c16814e1d6a-fixed.json",
+          "text_hash": "a0f752e800929f293b67d6152a4f6305b210ee8ce51797bf88fe9c91d144477b",
+          "normalized_text_hash": "9f048b355a1705f34dca851f825d2eaeab35bca1a16aec9ae28c8de47fc72c9c",
+          "chars": 13702,
+          "normalized_chars": 12885,
+          "extraction_method": "readability",
+          "content_scope": "inferred_article",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        }
+      },
+      "same_extracted_text": true,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/86e1e4168cddddcda9952b550b084de8fb1c16a80162e78eb8984c16814e1d6a.json",
+      "requested_url": "https://www.postgresql.org/docs/7.0/sql-select.htm",
+      "http_status": 200,
+      "gold_support_quotes": 0
+    },
+    {
+      "id": "a13e4bbb0b42509db7ea9f551fefb6acf7a7ec61e474ac7bfd5ee8eab4a022b9",
+      "url": "https://github.com/w3ctag/design-reviews/issues/579",
+      "html_hash": "52e0796c2bbb965d03082152f409bc17c7a70f869f9a9956b808a6a042344f6f",
+      "html_bytes": 372747,
+      "source_chars": 13528,
+      "pagefind_body_count": 0,
+      "branches": {
+        "baseline": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/a13e4bbb0b42509db7ea9f551fefb6acf7a7ec61e474ac7bfd5ee8eab4a022b9-baseline.json",
+          "text_hash": "2214ca7474dffa9f341efa4f6b74131acbb7ebb62266c4950664efbc08233cd0",
+          "normalized_text_hash": "dd7264fcacbd4928d2e11e7762c75d8edbaa996602df6fa21c75ec692368c66e",
+          "chars": 9998,
+          "normalized_chars": 9846,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        },
+        "fixed": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/a13e4bbb0b42509db7ea9f551fefb6acf7a7ec61e474ac7bfd5ee8eab4a022b9-fixed.json",
+          "text_hash": "2214ca7474dffa9f341efa4f6b74131acbb7ebb62266c4950664efbc08233cd0",
+          "normalized_text_hash": "dd7264fcacbd4928d2e11e7762c75d8edbaa996602df6fa21c75ec692368c66e",
+          "chars": 9998,
+          "normalized_chars": 9846,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        }
+      },
+      "same_extracted_text": true,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/a13e4bbb0b42509db7ea9f551fefb6acf7a7ec61e474ac7bfd5ee8eab4a022b9.json",
+      "requested_url": "https://github.com/w3ctag/design-reviews/issues/579",
+      "http_status": 200,
+      "gold_support_quotes": 0
+    },
+    {
+      "id": "a3b26256bd0dd276276767fbadc44484f2cfed06f356c7dc3970aefaa37cc6f4",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/HEAD",
+      "html_hash": "9815fee621460ae75b1d83a5f1a3405d40d9fa21e6b41172bc781f86b8563136",
+      "html_bytes": 215371,
+      "source_chars": 12190,
+      "pagefind_body_count": 0,
+      "branches": {
+        "baseline": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/a3b26256bd0dd276276767fbadc44484f2cfed06f356c7dc3970aefaa37cc6f4-baseline.json",
+          "text_hash": "f003ec68f80874ca6a435c88048129346171a53761c0b60922a98a2d6871f19d",
+          "normalized_text_hash": "1492582cc0ccf8f08cf2710def9ab58038312b4ce9704fffa7842d31ce2a0e60",
+          "chars": 2663,
+          "normalized_chars": 2620,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 2
+        },
+        "fixed": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/a3b26256bd0dd276276767fbadc44484f2cfed06f356c7dc3970aefaa37cc6f4-fixed.json",
+          "text_hash": "f003ec68f80874ca6a435c88048129346171a53761c0b60922a98a2d6871f19d",
+          "normalized_text_hash": "1492582cc0ccf8f08cf2710def9ab58038312b4ce9704fffa7842d31ce2a0e60",
+          "chars": 2663,
+          "normalized_chars": 2620,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 2
+        }
+      },
+      "same_extracted_text": true,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/a3b26256bd0dd276276767fbadc44484f2cfed06f356c7dc3970aefaa37cc6f4.json",
+      "requested_url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/HEAD",
+      "http_status": 200,
+      "gold_support_quotes": 2
+    },
+    {
+      "id": "a52df8cbc518f3c01c060cc556d8747a86d67c7718c34afd77a300ccce4e03cd",
+      "url": "https://rust-lang.github.io/rfcs/0517-io-os-reform.html",
+      "html_hash": "94446c091b7f50751cb9f1e6c62fbd9b5d4718f89cee52461d24fa8171493942",
+      "html_bytes": 112781,
+      "source_chars": 63790,
+      "pagefind_body_count": 0,
+      "branches": {
+        "baseline": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/a52df8cbc518f3c01c060cc556d8747a86d67c7718c34afd77a300ccce4e03cd-baseline.json",
+          "text_hash": "c70aaa358a491f6b0a042dc3012e095a17a7e33208d7a7dc471fc32a56056790",
+          "normalized_text_hash": "2010a4dfd7d8d860e6c7a2e28c86d483c8f8a076851a7d42f027b78ce624dea1",
+          "chars": 65327,
+          "normalized_chars": 63299,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        },
+        "fixed": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/a52df8cbc518f3c01c060cc556d8747a86d67c7718c34afd77a300ccce4e03cd-fixed.json",
+          "text_hash": "c70aaa358a491f6b0a042dc3012e095a17a7e33208d7a7dc471fc32a56056790",
+          "normalized_text_hash": "2010a4dfd7d8d860e6c7a2e28c86d483c8f8a076851a7d42f027b78ce624dea1",
+          "chars": 65327,
+          "normalized_chars": 63299,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        }
+      },
+      "same_extracted_text": true,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/a52df8cbc518f3c01c060cc556d8747a86d67c7718c34afd77a300ccce4e03cd.json",
+      "requested_url": "https://rust-lang.github.io/rfcs/0517-io-os-reform.html",
+      "http_status": 200,
+      "gold_support_quotes": 0
+    },
+    {
+      "id": "bc491b20c210e8da569209d88c71166c478e58b2c739adbc88614cd277788e12",
+      "url": "https://github.com/sqldelight/sqldelight/blob/main/CHANGELOG.md",
+      "html_hash": "e9120dbc544f44b92ed1ecd6071b83cdac128a8a59ad72f2130578e3835f2f12",
+      "html_bytes": 898732,
+      "source_chars": 75170,
+      "pagefind_body_count": 0,
+      "branches": {
+        "baseline": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/bc491b20c210e8da569209d88c71166c478e58b2c739adbc88614cd277788e12-baseline.json",
+          "text_hash": "04fd38c885ace2033ae0be094e792e575306a00322fc2751053851cc9506f0b9",
+          "normalized_text_hash": "7591510c60ee6d059623fec728d9d591b91552294e4c3ad053a1432c1cb4f0f1",
+          "chars": 73159,
+          "normalized_chars": 72744,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        },
+        "fixed": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/bc491b20c210e8da569209d88c71166c478e58b2c739adbc88614cd277788e12-fixed.json",
+          "text_hash": "04fd38c885ace2033ae0be094e792e575306a00322fc2751053851cc9506f0b9",
+          "normalized_text_hash": "7591510c60ee6d059623fec728d9d591b91552294e4c3ad053a1432c1cb4f0f1",
+          "chars": 73159,
+          "normalized_chars": 72744,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        }
+      },
+      "same_extracted_text": true,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/bc491b20c210e8da569209d88c71166c478e58b2c739adbc88614cd277788e12.json",
+      "requested_url": "https://github.com/sqldelight/sqldelight/blob/main/CHANGELOG.md",
+      "http_status": 200,
+      "gold_support_quotes": 0
+    },
+    {
+      "id": "bf9cb5049e57698a103b4c7f59dd6cd95ebcdcfabffe3880669ff32e2d48d185",
+      "url": "https://github.com/nox/rust-rfcs/blob/master/text/0517-io-os-reform.md",
+      "html_hash": "fa43781358ea59429e4bd498e65043c0d67ee63d2c47eb226e7e18a08f1c37a7",
+      "html_bytes": 982213,
+      "source_chars": 67428,
+      "pagefind_body_count": 0,
+      "branches": {
+        "baseline": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/bf9cb5049e57698a103b4c7f59dd6cd95ebcdcfabffe3880669ff32e2d48d185-baseline.json",
+          "text_hash": "9a588383e9c32342b72ba6944c89f407514e82dfd6248db84211d13fc7b62685",
+          "normalized_text_hash": "9800ad921d9806fb8fd9d13a12d22410539ace913ce6001ed9bff9b65c37e3b2",
+          "chars": 65465,
+          "normalized_chars": 63429,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        },
+        "fixed": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/bf9cb5049e57698a103b4c7f59dd6cd95ebcdcfabffe3880669ff32e2d48d185-fixed.json",
+          "text_hash": "9a588383e9c32342b72ba6944c89f407514e82dfd6248db84211d13fc7b62685",
+          "normalized_text_hash": "9800ad921d9806fb8fd9d13a12d22410539ace913ce6001ed9bff9b65c37e3b2",
+          "chars": 65465,
+          "normalized_chars": 63429,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        }
+      },
+      "same_extracted_text": true,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/bf9cb5049e57698a103b4c7f59dd6cd95ebcdcfabffe3880669ff32e2d48d185.json",
+      "requested_url": "https://github.com/nox/rust-rfcs/blob/master/text/0517-io-os-reform.md",
+      "http_status": 200,
+      "gold_support_quotes": 0
+    },
+    {
+      "id": "c3130ee5e638e614e8b36ef03788cb3f69ed2e81458a237703a3013092dcd928",
+      "url": "https://www.atlassian.com/git/tutorials/saving-changes/git-stash",
+      "html_hash": "82c88666c20beea8163fe8cccc780a0bd1467b57d2baf494b7326d57658245de",
+      "html_bytes": 1961284,
+      "source_chars": 26042,
+      "pagefind_body_count": 0,
+      "branches": {
+        "baseline": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/c3130ee5e638e614e8b36ef03788cb3f69ed2e81458a237703a3013092dcd928-baseline.json",
+          "text_hash": "820354a4410cbc49736bdae1690f95b043bf22e4040ad7bcc604863a64bee621",
+          "normalized_text_hash": "a3b75ad36d72d1e4247c03ae0d9a23f5d963df3702357a43dc0226b8217e6128",
+          "chars": 10034,
+          "normalized_chars": 9811,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        },
+        "fixed": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/c3130ee5e638e614e8b36ef03788cb3f69ed2e81458a237703a3013092dcd928-fixed.json",
+          "text_hash": "820354a4410cbc49736bdae1690f95b043bf22e4040ad7bcc604863a64bee621",
+          "normalized_text_hash": "a3b75ad36d72d1e4247c03ae0d9a23f5d963df3702357a43dc0226b8217e6128",
+          "chars": 10034,
+          "normalized_chars": 9811,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        }
+      },
+      "same_extracted_text": true,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/c3130ee5e638e614e8b36ef03788cb3f69ed2e81458a237703a3013092dcd928.json",
+      "requested_url": "https://www.atlassian.com/git/tutorials/saving-changes/git-stash",
+      "http_status": 200,
+      "gold_support_quotes": 0
+    },
+    {
+      "id": "c5c98bc18db6c22c23f2e9f4f6f899f03a8f9bb28e447f05bd5e414075d94799",
+      "url": "https://www.geeksforgeeks.org/postgresql/postgresql-distinct-on-expression/",
+      "html_hash": "14dac55755fa85641770b65daf8e52234998fc2c02a5ea410086c70c13692d1a",
+      "html_bytes": 284082,
+      "source_chars": 10183,
+      "pagefind_body_count": 0,
+      "branches": {
+        "baseline": {
+          "exit_code": 1,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/c5c98bc18db6c22c23f2e9f4f6f899f03a8f9bb28e447f05bd5e414075d94799-baseline.json",
+          "error": "Error: failed to grab the article"
+        },
+        "fixed": {
+          "exit_code": 1,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/c5c98bc18db6c22c23f2e9f4f6f899f03a8f9bb28e447f05bd5e414075d94799-fixed.json",
+          "error": "Error: failed to grab the article"
+        }
+      },
+      "same_extracted_text": null,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/c5c98bc18db6c22c23f2e9f4f6f899f03a8f9bb28e447f05bd5e414075d94799.json",
+      "requested_url": "https://www.geeksforgeeks.org/postgresql/postgresql-distinct-on-expression/",
+      "http_status": 200,
+      "gold_support_quotes": 0
+    },
+    {
+      "id": "ce54241477c9b7adfb9cf56d259d3288d9f579b200f85acbbb0569ac65f0b247",
+      "url": "https://runebook.dev/ko/docs/http/methods/head",
+      "html_hash": "633a1a28e53135308a5c14f983086aae66f0a9d7516cc1f43eebc3e27fa7cf1d",
+      "html_bytes": 36357,
+      "source_chars": 6238,
+      "pagefind_body_count": 0,
+      "branches": {
+        "baseline": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/ce54241477c9b7adfb9cf56d259d3288d9f579b200f85acbbb0569ac65f0b247-baseline.json",
+          "text_hash": "4ce52ef4e48d6fbad86ce00d29d389d80a51a31104a37c7659eb89cd76d80493",
+          "normalized_text_hash": "4b6d28517bc22409769827111c5f9ac2567d5f4b7679b16473f2b4476a3bc91a",
+          "chars": 3901,
+          "normalized_chars": 3638,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 2
+        },
+        "fixed": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/ce54241477c9b7adfb9cf56d259d3288d9f579b200f85acbbb0569ac65f0b247-fixed.json",
+          "text_hash": "4ce52ef4e48d6fbad86ce00d29d389d80a51a31104a37c7659eb89cd76d80493",
+          "normalized_text_hash": "4b6d28517bc22409769827111c5f9ac2567d5f4b7679b16473f2b4476a3bc91a",
+          "chars": 3901,
+          "normalized_chars": 3638,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 2
+        }
+      },
+      "same_extracted_text": true,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/ce54241477c9b7adfb9cf56d259d3288d9f579b200f85acbbb0569ac65f0b247.json",
+      "requested_url": "https://runebook.dev/ko/docs/http/methods/head",
+      "http_status": 200,
+      "gold_support_quotes": 2
+    },
+    {
+      "id": "cfe7d9c0a247bb268f92e1ec206a2a7d8f28af088c8ec260b7cfb0f34068a188",
+      "url": "https://github.com/rust-lang/rfcs/blob/main/text/0517-io-os-reform.md",
+      "html_hash": "4c4f7878f79cea831cc1605b1686ca99e3dfd7bc2db040ed73c239c5e53c9290",
+      "html_bytes": 1020848,
+      "source_chars": 67420,
+      "pagefind_body_count": 0,
+      "branches": {
+        "baseline": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/cfe7d9c0a247bb268f92e1ec206a2a7d8f28af088c8ec260b7cfb0f34068a188-baseline.json",
+          "text_hash": "323c10d69ff5231c95bb42498e996ae810f1ed193bd6eebfe8451809ae9168dd",
+          "normalized_text_hash": "2e36b1699147b28da1dcabf9d2db33cae252ae9a24577816b6acb6351d5864d5",
+          "chars": 65458,
+          "normalized_chars": 63422,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        },
+        "fixed": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/cfe7d9c0a247bb268f92e1ec206a2a7d8f28af088c8ec260b7cfb0f34068a188-fixed.json",
+          "text_hash": "323c10d69ff5231c95bb42498e996ae810f1ed193bd6eebfe8451809ae9168dd",
+          "normalized_text_hash": "2e36b1699147b28da1dcabf9d2db33cae252ae9a24577816b6acb6351d5864d5",
+          "chars": 65458,
+          "normalized_chars": 63422,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        }
+      },
+      "same_extracted_text": true,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/cfe7d9c0a247bb268f92e1ec206a2a7d8f28af088c8ec260b7cfb0f34068a188.json",
+      "requested_url": "https://github.com/rust-lang/rfcs/blob/master/text/0517-io-os-reform.md",
+      "http_status": 200,
+      "gold_support_quotes": 0
+    },
+    {
+      "id": "d06cf83688ae92aef6b7606f4bce6d5e277dc90b82875e99dc143f5db86bea7f",
+      "url": "https://neon.com/postgresql/tutorial/distinct-on",
+      "html_hash": "a2139f9e8e6e55651c38a2cd7e97947fb4a6195b3088439c9471379b84e5a003",
+      "html_bytes": 300620,
+      "source_chars": 6251,
+      "pagefind_body_count": 0,
+      "branches": {
+        "baseline": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/d06cf83688ae92aef6b7606f4bce6d5e277dc90b82875e99dc143f5db86bea7f-baseline.json",
+          "text_hash": "e4fcfb5e47034a54875666cd6b4a9def52a174013048849de8ac1f14f7253fad",
+          "normalized_text_hash": "3a34be31634fd2b4a8f02480b4d8b04f92901244fddde5c1491b158a3f350209",
+          "chars": 3471,
+          "normalized_chars": 3366,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 1
+        },
+        "fixed": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/d06cf83688ae92aef6b7606f4bce6d5e277dc90b82875e99dc143f5db86bea7f-fixed.json",
+          "text_hash": "e4fcfb5e47034a54875666cd6b4a9def52a174013048849de8ac1f14f7253fad",
+          "normalized_text_hash": "3a34be31634fd2b4a8f02480b4d8b04f92901244fddde5c1491b158a3f350209",
+          "chars": 3471,
+          "normalized_chars": 3366,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 1
+        }
+      },
+      "same_extracted_text": true,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/d06cf83688ae92aef6b7606f4bce6d5e277dc90b82875e99dc143f5db86bea7f.json",
+      "requested_url": "https://neon.com/postgresql/tutorial/distinct-on",
+      "http_status": 200,
+      "gold_support_quotes": 1
+    },
+    {
+      "id": "d64d02c7fe504ef79e61bf295ed36eafed7e7aef92855979e30a7528f7a1c361",
+      "url": "https://www.http-probe.com/docs/smuggling/head-cl-body.html",
+      "html_hash": "f00e2717858a78840180242cebabb19110d7e46f9cbf0290d7de7ab25d30022a",
+      "html_bytes": 38860,
+      "source_chars": 14109,
+      "pagefind_body_count": 0,
+      "branches": {
+        "baseline": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/d64d02c7fe504ef79e61bf295ed36eafed7e7aef92855979e30a7528f7a1c361-baseline.json",
+          "text_hash": "81008f15351299896c54ac5c78ffa20d29f26761369e133adb5ac45f89ba1e2f",
+          "normalized_text_hash": "19f0b06fc5fae0060b97f9bb7f76706c3ad1b1cd93b6686c23b94437c28012f4",
+          "chars": 5119,
+          "normalized_chars": 5086,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 2
+        },
+        "fixed": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/d64d02c7fe504ef79e61bf295ed36eafed7e7aef92855979e30a7528f7a1c361-fixed.json",
+          "text_hash": "81008f15351299896c54ac5c78ffa20d29f26761369e133adb5ac45f89ba1e2f",
+          "normalized_text_hash": "19f0b06fc5fae0060b97f9bb7f76706c3ad1b1cd93b6686c23b94437c28012f4",
+          "chars": 5119,
+          "normalized_chars": 5086,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 2
+        }
+      },
+      "same_extracted_text": true,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/d64d02c7fe504ef79e61bf295ed36eafed7e7aef92855979e30a7528f7a1c361.json",
+      "requested_url": "https://www.http-probe.com/docs/smuggling/head-cl-body.html",
+      "http_status": 200,
+      "gold_support_quotes": 2
+    },
+    {
+      "id": "da62d74f6038cb4faed6702673ad2b291556fea2d0ef70b38ca2d552b6667fd1",
+      "url": "https://git-scm.com/docs/git-stash",
+      "html_hash": "587645409b69b369be3e39888ad0d2a2fd2841b1e024fe825d3cbd907f758c10",
+      "html_bytes": 89330,
+      "source_chars": 18823,
+      "pagefind_body_count": 1,
+      "branches": {
+        "baseline": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/da62d74f6038cb4faed6702673ad2b291556fea2d0ef70b38ca2d552b6667fd1-baseline.json",
+          "text_hash": "d7f35988aef6768ef14d2881f4553930796321de969befd177d27a512323f395",
+          "normalized_text_hash": "cc8b4b01516624aa6bc44ff1e2b4b81f7cc1f7809874039ad8ce021e54b0f4f6",
+          "chars": 4508,
+          "normalized_chars": 4454,
+          "extraction_method": "readability",
+          "content_scope": "inferred_article",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        },
+        "fixed": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/da62d74f6038cb4faed6702673ad2b291556fea2d0ef70b38ca2d552b6667fd1-fixed.json",
+          "text_hash": "67ce103b720e8e09d61c991aa958c83855684aa761f582fea3b979472610195c",
+          "normalized_text_hash": "2a2370718bf4b21e8a254c5304004362b8a0dba5f1e788b54ebea50ca4c9885d",
+          "chars": 16147,
+          "normalized_chars": 15887,
+          "extraction_method": "declared_body",
+          "content_scope": "declared_body",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 3
+        }
+      },
+      "same_extracted_text": false,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/da62d74f6038cb4faed6702673ad2b291556fea2d0ef70b38ca2d552b6667fd1.json",
+      "requested_url": "https://git-scm.com/docs/git-stash",
+      "http_status": 200,
+      "gold_support_quotes": 3
+    },
+    {
+      "id": "ea5bbea450c9bfdd0c428c36c0330fed88f999e55067678c0f3f8aa756cfdfbb",
+      "url": "https://docs.docker.com/engine/storage/volumes/",
+      "html_hash": "64084a141356158c3437b9883605f3ac1a13b6b934266b9cfbb45eeabb039712",
+      "html_bytes": 680552,
+      "source_chars": 41550,
+      "pagefind_body_count": 1,
+      "branches": {
+        "baseline": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/ea5bbea450c9bfdd0c428c36c0330fed88f999e55067678c0f3f8aa756cfdfbb-baseline.json",
+          "text_hash": "f2a8a8af901946aecb879f0de5970e783ab200767683bd42e93ceac047589db9",
+          "normalized_text_hash": "f83312338b735c1bd23a8496f317efbb1a4ab34708552161933e79ba9cf9dad1",
+          "chars": 24773,
+          "normalized_chars": 24020,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 3
+        },
+        "fixed": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/ea5bbea450c9bfdd0c428c36c0330fed88f999e55067678c0f3f8aa756cfdfbb-fixed.json",
+          "text_hash": "f2a8a8af901946aecb879f0de5970e783ab200767683bd42e93ceac047589db9",
+          "normalized_text_hash": "f83312338b735c1bd23a8496f317efbb1a4ab34708552161933e79ba9cf9dad1",
+          "chars": 24773,
+          "normalized_chars": 24020,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 3
+        }
+      },
+      "same_extracted_text": true,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/ea5bbea450c9bfdd0c428c36c0330fed88f999e55067678c0f3f8aa756cfdfbb.json",
+      "requested_url": "https://docs.docker.com/engine/storage/volumes/",
+      "http_status": 200,
+      "gold_support_quotes": 3
+    },
+    {
+      "id": "ee575fb985cb4b8217ec4b23235e1168137c3528ef1a2c9db0291ebb02512cee",
+      "url": "https://doheelab.github.io/github/gitStash/",
+      "html_hash": "cc92feed7a7879aee0dc46c91c3297f0f8ce0f63814358e477c41616d31b1ae0",
+      "html_bytes": 15818,
+      "source_chars": 1758,
+      "pagefind_body_count": 0,
+      "branches": {
+        "baseline": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/ee575fb985cb4b8217ec4b23235e1168137c3528ef1a2c9db0291ebb02512cee-baseline.json",
+          "text_hash": "b86c1e879e565eb3da666bd2ab07455e4a84cb8b52283c099ea42d5ca7fece1d",
+          "normalized_text_hash": "1477183c490cd4e36953f0146944e0ca14e6742f5cc9052e4792285331f671c4",
+          "chars": 1495,
+          "normalized_chars": 1463,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        },
+        "fixed": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/ee575fb985cb4b8217ec4b23235e1168137c3528ef1a2c9db0291ebb02512cee-fixed.json",
+          "text_hash": "b86c1e879e565eb3da666bd2ab07455e4a84cb8b52283c099ea42d5ca7fece1d",
+          "normalized_text_hash": "1477183c490cd4e36953f0146944e0ca14e6742f5cc9052e4792285331f671c4",
+          "chars": 1495,
+          "normalized_chars": 1463,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        }
+      },
+      "same_extracted_text": true,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/ee575fb985cb4b8217ec4b23235e1168137c3528ef1a2c9db0291ebb02512cee.json",
+      "requested_url": "https://doheelab.github.io/github/gitStash/",
+      "http_status": 200,
+      "gold_support_quotes": 0
+    },
+    {
+      "id": "ef02cd242c17f3b6ab632ee918270c10bb40d58bba669c1c69fe5a0ddd9b0480",
+      "url": "https://www.tutorialspoint.com/article/python-group-concatenate-till-k",
+      "html_hash": "586f7d4d7bd80300542c7e713ad350259b8e74b382b53ab6fe86b0dc2d673fd1",
+      "html_bytes": 50816,
+      "source_chars": 4315,
+      "pagefind_body_count": 0,
+      "branches": {
+        "baseline": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/ef02cd242c17f3b6ab632ee918270c10bb40d58bba669c1c69fe5a0ddd9b0480-baseline.json",
+          "text_hash": "e2b99a3fbd526dbc883c37544fdae3a8faec1845895d41da6b970012fd90ae15",
+          "normalized_text_hash": "4fc18f435073dc14cc0f0c00803916bddeb17a03b64a579259c71cfd0006f759",
+          "chars": 3779,
+          "normalized_chars": 3517,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        },
+        "fixed": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/ef02cd242c17f3b6ab632ee918270c10bb40d58bba669c1c69fe5a0ddd9b0480-fixed.json",
+          "text_hash": "e2b99a3fbd526dbc883c37544fdae3a8faec1845895d41da6b970012fd90ae15",
+          "normalized_text_hash": "4fc18f435073dc14cc0f0c00803916bddeb17a03b64a579259c71cfd0006f759",
+          "chars": 3779,
+          "normalized_chars": 3517,
+          "extraction_method": "semantic_main",
+          "content_scope": "main",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        }
+      },
+      "same_extracted_text": true,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/ef02cd242c17f3b6ab632ee918270c10bb40d58bba669c1c69fe5a0ddd9b0480.json",
+      "requested_url": "https://www.tutorialspoint.com/python-group-concatenate-till-k",
+      "http_status": 200,
+      "gold_support_quotes": 0
+    },
+    {
+      "id": "ffbdd11bcc5756100507478d69d7783aa5b4e875adb820c37a59991d102e1311",
+      "url": "https://velog.io/@overslept/Git-Stash-%EC%82%AC%EC%9A%A9-%EC%8B%9C-%EC%B6%A9%EB%8F%8C-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EB%B2%95",
+      "html_hash": "0a926156ee7c6379a84e4261ce4339f2e4e7cc46f3e534c58ccd365944fa636b",
+      "html_bytes": 101241,
+      "source_chars": 1908,
+      "pagefind_body_count": 0,
+      "branches": {
+        "baseline": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/ffbdd11bcc5756100507478d69d7783aa5b4e875adb820c37a59991d102e1311-baseline.json",
+          "text_hash": "533cd5ed9b4651af52b7642a88f97c6d59546fe2c7844f446dafd2f273b26a7d",
+          "normalized_text_hash": "386d28121edf2b35ec26c9a99ad85cdc97760ed72f8088604c0c436aada07700",
+          "chars": 1662,
+          "normalized_chars": 1623,
+          "extraction_method": "readability",
+          "content_scope": "inferred_article",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        },
+        "fixed": {
+          "exit_code": 0,
+          "output": "runs/extraction-selection-2026-10-30/extraction-comparison/ffbdd11bcc5756100507478d69d7783aa5b4e875adb820c37a59991d102e1311-fixed.json",
+          "text_hash": "533cd5ed9b4651af52b7642a88f97c6d59546fe2c7844f446dafd2f273b26a7d",
+          "normalized_text_hash": "386d28121edf2b35ec26c9a99ad85cdc97760ed72f8088604c0c436aada07700",
+          "chars": 1662,
+          "normalized_chars": 1623,
+          "extraction_method": "readability",
+          "content_scope": "inferred_article",
+          "truncated": false,
+          "warnings": [],
+          "flags": {
+            "-n": false,
+            "--dry-run": false,
+            "-x": false,
+            "-X": false
+          },
+          "gold_support_quotes_found": 0
+        }
+      },
+      "same_extracted_text": true,
+      "snapshot": "runs/extraction-selection-2026-10-30/raw-cache/ffbdd11bcc5756100507478d69d7783aa5b4e875adb820c37a59991d102e1311.json",
+      "requested_url": "https://velog.io/@overslept/Git-Stash-%EC%82%AC%EC%9A%A9-%EC%8B%9C-%EC%B6%A9%EB%8F%8C-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EB%B2%95",
+      "http_status": 200,
+      "gold_support_quotes": 0
+    }
+  ],
+  "development_control": {
+    "id": "development-git-clean",
+    "url": "https://git-scm.com/docs/git-clean",
+    "html_hash": "3ea826e21bb54c0ddf674cf8064a9f6acf66220900d3e1507b15a5140c89f9fe",
+    "html_bytes": 41970,
+    "source_chars": 6850,
+    "pagefind_body_count": 1,
+    "branches": {
+      "baseline": {
+        "exit_code": 0,
+        "output": "runs/extraction-selection-2026-10-30/extraction-comparison/development-git-clean-baseline.json",
+        "text_hash": "443eaf0ac0f1b730e410f2201d5a9f19e916a13b36c8b521a42b0fcd2350de58",
+        "normalized_text_hash": "e16ff2e5420be8bb1dcdcfb2caf20b15cd755872dd09254e4d9f46dca371d63b",
+        "chars": 1910,
+        "normalized_chars": 1838,
+        "extraction_method": "readability",
+        "content_scope": "inferred_article",
+        "truncated": false,
+        "warnings": [],
+        "flags": {
+          "-n": false,
+          "--dry-run": false,
+          "-x": false,
+          "-X": false
+        }
+      },
+      "fixed": {
+        "exit_code": 0,
+        "output": "runs/extraction-selection-2026-10-30/extraction-comparison/development-git-clean-fixed.json",
+        "text_hash": "4b23e00c912c36a2db1cc07dc65b66e64a913382bf517310d86337bbc86d7484",
+        "normalized_text_hash": "06e9e6e31c31106ae9ed18af13e48491dd8a78d146726c08ea90b58f84b2cd1b",
+        "chars": 4594,
+        "normalized_chars": 4488,
+        "extraction_method": "declared_body",
+        "content_scope": "declared_body",
+        "truncated": false,
+        "warnings": [],
+        "flags": {
+          "-n": true,
+          "--dry-run": true,
+          "-x": true,
+          "-X": true
+        }
+      }
+    },
+    "same_extracted_text": false
+  }
+}

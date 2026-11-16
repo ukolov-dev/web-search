@@ -1,0 +1,19 @@
+{
+  "code_commit": "9b7dc17433e305e8d33a5db90cbc367ac4ee60da",
+  "binary_sha256": "187d521098a25a347c93a9f9d7b99e236a0a26be81032aef690e4f296d89c8cf",
+  "source_sha256": {
+    "src/research.rs": "a1dd20862e11cee249a2b8246981df031eb4ab9d542cf2805df4e83370667fd0",
+    "src/research_tests.rs": "aa9d9ba5d5f2b34e9cae0ae3ed1db8c4b9f231d053940fb64222e17fc2460319",
+    "src/model.rs": "38083f9a1999aff9fca6e969da2dc75fdc02beaa996e1292f2dd3b5e780a0c61",
+    "src/reranker.rs": "116ed9e2231299ef00e0bb5bb828d15da40d28610489585bf95d0ba7f2045fe3"
+  },
+  "frozen_at": "2026-11-13T11:53:40.882132+00:00",
+  "startup_observation": {
+    "recorded_at": "2026-11-13T11:47:48.346900+00:00",
+    "settings_mtime_utc": "2026-11-13T07:30:53.781090+00:00",
+    "sanitized_settings_sha256": "837a307798f08648094ed4fab3e3b260f0364c63418c582119fed4b1fd5ba42d",
+    "driver_sha256": "5d7edc722ec4ff20c14d6960caf0cdcf3b1f3af1816ccf1449c5cfa7722a1040",
+    "limitation": "Recorded after baseline started (early cases already attempted); mtime predates run if verified but not cryptographic proof of pre-run freeze. Auth/settings content not retained in tracked metadata."
+  },
+  "note": "Runtime release built after integrated31719a2; subsequent commit only changes ignored probe error handling, not production. No further runtime edits during this arm."
+}

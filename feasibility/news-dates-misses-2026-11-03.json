@@ -1,0 +1,76 @@
+{
+  "task": "TASK-20261103-153636-001",
+  "scope": "Known errors by cohort; preserved prior gold/results, not used to retune completed cohorts.",
+  "NEW12_v12_v13": [
+    {
+      "case": "nd03",
+      "url": "https://xn--80acgfbsl1azdqr.xn--p1ai/news/102521-den-narodnogo-edinstva-kak-prazdnik-proydet-v-ekaterinburge",
+      "both": "FN",
+      "stage": "before coverage; untyped portal markup classified feed, date missing, not_article",
+      "own_publication": "2026-11-03 14:31, .news-one-date in div.news-one",
+      "event_date_is_not_publication": "Nov4 event, own Nov3 publication",
+      "fixed_in_this_task": false
+    }
+  ],
+  "supplement2_v12_v13": [
+    {
+      "case": "ds02",
+      "ids": [
+        "C021",
+        "C022"
+      ],
+      "both": "FN",
+      "stage": "coverage activecityR3missing; earlier3checks supported; no audit",
+      "reason": "Genericrecency/news consumed anchors; citywitness leftempty. Not titlecopy failure.",
+      "v14_development": "FinalC savedsourcecontrol recoversboth; NEW6 is separate confirmation."
+    }
+  ],
+  "initial_date_only_dev_fp": {
+    "url": "https://nnovgorod.bezformata.com/listnews/privolzhe-glavnie/165483239/",
+    "reason": "RegionalGorodets/oblast story treated as Nizhnycity; originalwrongquote ownbody, not justteaser",
+    "combined_fix": "Sharedownbody isolation + cityguidance + new modelcheck; cannot isolate onecause",
+    "final_v14C_control": "background"
+  },
+  "NEW6_v12_v14": {
+    "baseline_fn_to_candidate_tp": [
+      {
+        "case": "ca02",
+        "blind_id": "329a723bf6e0b229",
+        "url": "https://59.ru/text/gorod/2026/11/03/76741257/",
+        "before": "Date/article/Qwen eligible; activecityR3 alreadymissing with empty validatedquote; audit notcalled. One Perm ignored_non_support_quote cleared quote at alreadymissing status, not loss of a supported witness.",
+        "after": "Informativecityanchor supported, core supported, wholequeryaudit supported; finaldirect"
+      },
+      {
+        "case": "ca02",
+        "blind_id": "6f47db987010e6f2",
+        "url": "https://59.ru/text/criminal/2026/11/03/76741420/",
+        "before": "Date/article/Qwen eligible; activecityR3 alreadymissing with empty validatedquote; audit notcalled. One Perm ignored_non_support_quote cleared quote at alreadymissing status, not loss of a supported witness.",
+        "after": "Informativecityanchor supported, core supported, wholequeryaudit supported; finaldirect"
+      },
+      {
+        "case": "ca03",
+        "blind_id": "8d6e3f3b467b1cdc",
+        "url": "https://ufa1.ru/text/business/2026/11/03/76740975/",
+        "before": "Date/article/Qwen eligible; activecityR3 alreadymissing with empty validatedquote; audit notcalled. One Perm ignored_non_support_quote cleared quote at alreadymissing status, not loss of a supported witness.",
+        "after": "Informativecityanchor supported, core supported, wholequeryaudit supported; finaldirect"
+      },
+      {
+        "case": "ca03",
+        "blind_id": "f0b6054132d84433",
+        "url": "https://ufa1.ru/text/gorod/2026/11/02/76720417/",
+        "before": "Date/article/Qwen eligible; activecityR3 alreadymissing with empty validatedquote; audit notcalled. One Perm ignored_non_support_quote cleared quote at alreadymissing status, not loss of a supported witness.",
+        "after": "Informativecityanchor supported, core supported, wholequeryaudit supported; finaldirect"
+      }
+    ],
+    "candidate_known_fn": [],
+    "new_false_direct_ids": [],
+    "unknown_direct_ids": [],
+    "full_diagnostics": "runs/news-dates-2026-11-03/confirm/four-baseline-fn-diagnostics.json",
+    "limits": [
+      "v12->finalv14 cumulative source/prompt contrast, live source/extraction variants differ; do not attribute aggregate gain solely to anchor guidance.",
+      "No title-only core relaxation; active city obligation remains; noncore H/T factualheadline can bind same-event substantivebody.",
+      "One ignored_non_support_quote in baselinePerm verdict only discarded a quote whose declared status wasalready missing; it didnot cause or fix the underlying R3missing status.",
+      "Allprevious v13 flatmain/supplement scores and failedA/B development controls remain separate; no pooling or postNEW6 tuning."
+    ]
+  }
+}

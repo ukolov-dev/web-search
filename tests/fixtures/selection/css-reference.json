@@ -1,0 +1,215 @@
+{
+  "case": {
+    "forms": [
+      "CSS visibility hidden display none layout accessibility difference"
+    ],
+    "id": "h08",
+    "query": "CSS visibility hidden display none layout accessibility difference"
+  },
+  "candidates": [
+    {
+      "document_http_status": null,
+      "fetch_method": "unknown",
+      "id": "C001",
+      "snippet": "It’s also different than having display: none or visibility: hidden directly applied to the element itself, since for those properties the entire box isn’t visible, while for content-visibility its own box is generated and visible.",
+      "title": "CSS content-visibility | 12 Days of Web",
+      "url": "https://12daysofweb.dev/2024/css-content-visibility/"
+    },
+    {
+      "document_http_status": null,
+      "fetch_method": "unknown",
+      "id": "C002",
+      "snippet": "HTML5의 hidden 속성 — display:none과 동일한 효과 HTML5에서 추가된 hidden 속성은 CSS 없이도 요소를 숨길 수 있는 기능입니다. < > <> 동작 방식은 display:none과 100... visibility:hidden → 안 보이지만 공간은 있다 display:none → 안 보이고 공간도 없다 inline → 가로 배치, 크기 조절 X inline-block → 가로 배치, 크기 조절 O block → 세로 배치, 크기 조절 O... 새 창 열림",
+      "title": "HTML5의 hidden 속성 — display:none과 동일한 효과 HTML5에서 추가된 hidden 속성은 CSS 없이도 요소를 숨길 수 있는 기능입니다. < > <> 동작 방식은 display:none과 10",
+      "url": "https://blog.naver.com/khcwang/224102775739"
+    },
+    {
+      "document_http_status": null,
+      "fetch_method": "unknown",
+      "id": "C003",
+      "snippet": "display 속성이 none 값으로 설정된 요소는 화면에 해당 요소와 그 영역이 표시되지 않으며, 요소 안의 콘텐츠도 존재하지 않는 것처럼 렌더링됩니다. display: none이 적용되면, 해당 요소와 그 안의 콘텐츠는 화면에서 완전히 사라진 것처럼 렌더링됩니다. 공간을 차지하지 않으며, 주변 레이아웃에도 영향을 주지 않습니다. 또한 요소의 고유한 기능이나 의미도 제거되며, 스크린 리......새 창 열림",
+      "title": "display 속성이 none 값으로 설정된 요소는 화면에 해당 요소와 그 영역이 표시되지 않으며, 요소 안의 콘텐츠도 존재하지 않는 것처럼 렌더링됩니다. display: none이 적용되면, 해당 요소와 그 안의 ",
+      "url": "https://codingeverybody.kr/css-display-none/"
+    },
+    {
+      "document_http_status": null,
+      "fetch_method": "unknown",
+      "id": "C004",
+      "snippet": "Display をトランジションさせる場合その要素が最初のスタイル更新を受けたときにそのプロパティからトランジションさせるために要素に設定するプロパティ群の開始値を提供するために @starting-style が必要ですこれは予期しない動作を避けるために必要です既定ではCSS…",
+      "title": "CSS トランジションの使用 - CSS | MDN",
+      "url": "https://developer.mozilla.org/ja/docs/Web/CSS/Guides/Transitions/Using"
+    },
+    {
+      "document_http_status": null,
+      "fetch_method": "unknown",
+      "id": "C005",
+      "snippet": "This page was translated from English by the community. Learn more and join the MDN Web Docs community. View in English Always switch to English새 창 열림",
+      "title": "This page was translated from English by the community. Learn more and join the MDN Web Docs community. View in English ",
+      "url": "https://developer.mozilla.org/ko/docs/Web/CSS/Reference/Properties/visibility"
+    },
+    {
+      "document_http_status": null,
+      "fetch_method": "unknown",
+      "id": "C006",
+      "snippet": "Learn the key differences between CSS display:none and visibility:hidden, and when to use each for better performance, accessibility, and layout control.새 창 열림",
+      "title": "Learn the key differences between CSS display:none and visibility:hidden, and when to use each for better performance, a",
+      "url": "https://dzone.com/articles/css-display-none-vs-visibility-hidden"
+    },
+    {
+      "document_http_status": null,
+      "fetch_method": "unknown",
+      "id": "C007",
+      "snippet": "Answer: display: none removes the element completely from the Render Tree, so it occupies no physical space in layout and triggers reflow. visibility: hidden hides the element visually, but retains its physical geometry in the layout…",
+      "title": "GitHub - manthanank/learn-css: Complete CSS with all resources…",
+      "url": "https://github.com/manthanank/learn-css"
+    },
+    {
+      "document_http_status": null,
+      "fetch_method": "unknown",
+      "id": "C008",
+      "snippet": "One of the things I love about CSS is how some of the properties hide a lot of depth inside. For that reason, visibility was always one of my favorites. In this article, I will talk about one of its interesting aspects and will propose an idea: what if we would never use visibility: visible? CSS is ",
+      "title": "One of the things I love about CSS is how some of the properties hide a lot of depth inside. For that reason, visibility",
+      "url": "https://kizu.dev/restoring-visibility/"
+    },
+    {
+      "document_http_status": null,
+      "fetch_method": "unknown",
+      "id": "C009",
+      "snippet": "당신이 웹 페이지의 개발에 종사 할 때, 한 가지 이유나 다른 이유로 아이템의 특정 영역을 \"숨길\"필요가있을 수 있습니다. 물론 HTML 마크 업에서 질문의 항목을 제거 할 수는 있지만 코드에 남아 있기를 원하지만 어떤 이유로 브라우저 화면에 표시하지 않으려면 어떻게해야합니까? (그리고 우리는 이유를 검토 할 것입니다. 바로 이것을하십시오). HTML에 요소를 유지하면서 표시.....새 창 열림",
+      "title": "당신이 웹 페이지의 개발에 종사 할 때, 한 가지 이유나 다른 이유로 아이템의 특정 영역을 \"숨길\"필요가있을 수 있습니다. 물론 HTML 마크 업에서 질문의 항목을 제거 할 수는 있지만 코드에 남아 있기를 원하지만 ",
+      "url": "https://ko.eyewated.com/css%EC%9D%98-display-none%EA%B3%BC-visibility-hidden%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90/"
+    },
+    {
+      "document_http_status": null,
+      "fetch_method": "unknown",
+      "id": "C010",
+      "snippet": "네이버 메이트 바로가기새 창 열림",
+      "title": "네이버 메이트 바로가기새 창 열림",
+      "url": "https://mate.naver.com/#partners"
+    },
+    {
+      "document_http_status": null,
+      "fetch_method": "unknown",
+      "id": "C011",
+      "snippet": "Content hidden with display: none is still in the HTML that is served, so a crawler can read it. It is not visible to a reader without interaction, so treat it as supporting detail rather than the place to put the text you most want found.",
+      "title": "CSS Show / Hide Content, No JavaScript | Pure CSS",
+      "url": "https://purecss.com/examples/show-hide-content/"
+    },
+    {
+      "document_http_status": null,
+      "fetch_method": "unknown",
+      "id": "C012",
+      "snippet": "Using the CSS display:none and/or visibility:hidden in this case is an adequate and acceptable solution.",
+      "title": "When and How to Visually Hide Content — SitePoint",
+      "url": "https://www.sitepoint.com/when-and-how-to-visually-hide-content/"
+    },
+    {
+      "document_http_status": null,
+      "fetch_method": "unknown",
+      "id": "C013",
+      "snippet": "Visibility: hidden and display: none will be equally performant since they both re-trigger layout, paint and composite. However, opacity: 0 is functionality equivalent to visibility: hidden and does not re-trigger the layout step.",
+      "title": "css - What is the difference between visibility:hidden and…",
+      "url": "https://stackoverflow.com/questions/133051/what-is-the-difference-between-visibilityhidden-and-displaynone"
+    },
+    {
+      "document_http_status": null,
+      "fetch_method": "unknown",
+      "id": "C014",
+      "snippet": "Utilities for controlling the visibility of an element.",
+      "title": "visibility - Layout - Tailwind CSS",
+      "url": "https://tailwindcss.com/docs/visibility"
+    },
+    {
+      "document_http_status": null,
+      "fetch_method": "unknown",
+      "id": "C015",
+      "snippet": "Platform ; AI AGENTS · Kane CLI - Testing from terminal · KaneAI - End-to-end AI QA Agent · Agent Assurance · Chat, Voice, and Video Agent Testing · AI Test Management · AI Test Insights · Accessibility Testing Agent · SmartUI - Visual Testing ; AGENTIC CLOUD · HyperExecute - AI Test Orchestration ·",
+      "title": "Platform ; AI AGENTS · Kane CLI - Testing from terminal · KaneAI - End-to-end AI QA Agent · Agent Assurance · Chat, Voic",
+      "url": "https://www.testmuai.com/learning-hub/content-visibility-browser-support/"
+    },
+    {
+      "document_http_status": null,
+      "fetch_method": "unknown",
+      "id": "C016",
+      "snippet": "CSS 개념 퀴즈: CSS에서 visibility: hidden과 display: none의 차이점으로 올바른 것은?새 창 열림",
+      "title": "CSS 개념 퀴즈: CSS에서 visibility: hidden과 display: none의 차이점으로 올바른 것은?새 창 열림",
+      "url": "https://ttj.kr/story/quiz/question/css-visibility-hidden-display-none"
+    },
+    {
+      "document_http_status": null,
+      "fetch_method": "unknown",
+      "id": "C017",
+      "snippet": "그럼 단순히 안보여지는 것만 되는걸까? + 보조기기(스크린리더기)에서는? display: none display: none은 그 용어 그대로 정보를 표현하지 않겠다는 의미라, 보조기기에도 정보를 전달을 하지 않는다. visibility: hidden display: none 과 동일하게 정보를 표현하지 않겠다는 의미로 보조기기에도 정보를 전달하지 않는다.새 창 열림",
+      "title": "그럼 단순히 안보여지는 것만 되는걸까? + 보조기기(스크린리더기)에서는? display: none display: none은 그 용어 그대로 정보를 표현하지 않겠다는 의미라, 보조기기에도 정보를 전달을 하지 않는다.",
+      "url": "https://velog.io/@planic324/CSS-display-none-vs-visibility-hidden"
+    },
+    {
+      "document_http_status": null,
+      "fetch_method": "unknown",
+      "id": "C018",
+      "snippet": "Už víme, že cílem CSS containmentu (a vlastnosti contain) je umožnit vylepšení výkonu prohlížeče poskytnutím předvídatelné izolace části DOMu od zbytku stránky.",
+      "title": "CSS vlastnost content-visibility",
+      "url": "https://www.vzhurudolu.cz/prirucka/css-content-visibility"
+    },
+    {
+      "document_http_status": null,
+      "fetch_method": "unknown",
+      "id": "C019",
+      "snippet": "CSS transforms allows elements styled with CSS to be transformed in two-dimensional or three-dimensional space.",
+      "title": "CSS Transforms Module Level 2",
+      "url": "https://www.w3.org/TR/css-transforms-2/"
+    },
+    {
+      "document_http_status": null,
+      "fetch_method": "unknown",
+      "id": "C020",
+      "snippet": "The CSS content-visibility property enables web content rendering performance benefits by skipping rendering of off-screen content. This article shows you how to use this new CSS property for faster initial load times, using the auto…",
+      "title": "content-visibility: the new CSS property that boosts your…",
+      "url": "https://web.dev/articles/content-visibility"
+    }
+  ],
+  "kinds": {
+    "C001": 1,
+    "C002": 1,
+    "C003": 1,
+    "C004": 2,
+    "C005": 2,
+    "C006": 0,
+    "C007": 0,
+    "C008": 1,
+    "C009": 1,
+    "C010": 2,
+    "C011": 1,
+    "C012": 1,
+    "C013": 1,
+    "C014": 1,
+    "C015": 2,
+    "C016": 1,
+    "C017": 1,
+    "C018": 2,
+    "C019": 2,
+    "C020": 2
+  },
+  "rank": {
+    "12daysofweb.dev/2024/css-content-visibility": 10,
+    "blog.naver.com/khcwang/224102775739": 18,
+    "codingeverybody.kr/css-display-none": 6,
+    "developer.mozilla.org/ja/docs/Web/CSS/Guides/Transitions/Using": 8,
+    "developer.mozilla.org/ko/docs/Web/CSS/Reference/Properties/visibility": 11,
+    "dzone.com/articles/css-display-none-vs-visibility-hidden": 4,
+    "github.com/manthanank/learn-css": 2,
+    "kizu.dev/restoring-visibility": 14,
+    "ko.eyewated.com/css%EC%9D%98-display-none%EA%B3%BC-visibility-hidden%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90": 16,
+    "mate.naver.com/": 0,
+    "purecss.com/examples/show-hide-content": 5,
+    "sitepoint.com/when-and-how-to-visually-hide-content": 17,
+    "stackoverflow.com/questions/133051/what-is-the-difference-between-visibilityhidden-and-displaynone": 1,
+    "tailwindcss.com/docs/visibility": 19,
+    "testmuai.com/learning-hub/content-visibility-browser-support": 12,
+    "ttj.kr/story/quiz/question/css-visibility-hidden-display-none": 3,
+    "velog.io/@planic324/CSS-display-none-vs-visibility-hidden": 9,
+    "vzhurudolu.cz/prirucka/css-content-visibility": 13,
+    "w3.org/TR/css-transforms-2": 15,
+    "web.dev/articles/content-visibility": 7
+  }
+}

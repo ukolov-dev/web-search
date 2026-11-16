@@ -1,0 +1,16 @@
+{
+  "schema": "product-options-protocol-v1",
+  "frozen_before_inference": true,
+  "baseline_binary_sha256": "9b5eb024fe61f20777e8045aed15c9f9ede7afdfc4ba339e3a1efaca064139d8",
+  "cases_sha256": "e9f567357bdb68d3ca42a7d05ae3e1e0e0532470094916dde4485ff927a081b0",
+  "gold_preflight_sha256": "1db79e2015d54023d816f8d8e98c4a00cb9215414eac65a9796f0ea211ef7a76",
+  "startup_sha256": "4e7691f198e3fa9d6f2f955f89ffff66c675cf6b1df5fd452c50e0587cf03f48",
+  "cohorts": {
+    "fresh_questions": 6,
+    "known_controls": 5
+  },
+  "scope": "planner-only candidate da750a0 vs runtime46f8953; section/inference test-only; no Harness in this cohort",
+  "evaluation": "no new false/unknown and no supported-condition loss; N06 evaluated as safe-refusal, excluded from positive recall; F03 stricter than old cohort; no pooling",
+  "stop": "preserve cumulative refusals; no retry; separate initially empty caches",
+  "ordering": "baseline all11, candidate all11; no source reset"
+}

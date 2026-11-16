@@ -1,0 +1,72 @@
+{
+  "protocol": {
+    "date": "2026-10-30",
+    "cohort": "passage-coverage-final-v1",
+    "new_cases": 8,
+    "frozen_at_utc": "2026-10-30T16:25:07.595384+00:00",
+    "before_source_acquisition": true,
+    "before_model_inference": true,
+    "no_holdout_tuning": true,
+    "source_only_gold": "Must be authored from acquired source snapshots before predictions; this file contains queries only, no expected labels or source selections.",
+    "forms_policy": "Single identical English form per query; no adaptive rewriting or per-result query replacement.",
+    "independent_acceptance": false
+  },
+  "cases": [
+    {
+      "id": "f01",
+      "query": "Go closed buffered channel receive drain zero value ok false",
+      "forms": [
+        "Go closed buffered channel receive drain zero value ok false"
+      ]
+    },
+    {
+      "id": "f02",
+      "query": "Linux mmap MAP_PRIVATE msync private modifications written back underlying file guarantee",
+      "forms": [
+        "Linux mmap MAP_PRIVATE msync private modifications written back underlying file guarantee"
+      ]
+    },
+    {
+      "id": "f03",
+      "query": "C++ std::vector reserve size capacity reallocation iterator invalidation",
+      "forms": [
+        "C++ std::vector reserve size capacity reallocation iterator invalidation"
+      ]
+    },
+    {
+      "id": "f04",
+      "query": "Java ConcurrentHashMap computeIfAbsent atomic invocation null result absent mapping",
+      "forms": [
+        "Java ConcurrentHashMap computeIfAbsent atomic invocation null result absent mapping"
+      ]
+    },
+    {
+      "id": "f05",
+      "query": "MySQL InnoDB foreign_key_checks reenable validate rows inserted while disabled",
+      "forms": [
+        "MySQL InnoDB foreign_key_checks reenable validate rows inserted while disabled"
+      ]
+    },
+    {
+      "id": "f06",
+      "query": "Kubernetes startupProbe livenessProbe readinessProbe disabled until startup succeeds failure restart",
+      "forms": [
+        "Kubernetes startupProbe livenessProbe readinessProbe disabled until startup succeeds failure restart"
+      ]
+    },
+    {
+      "id": "f07",
+      "query": "MongoDB updateMany atomic whole operation concurrent writes interleave",
+      "forms": [
+        "MongoDB updateMany atomic whole operation concurrent writes interleave"
+      ]
+    },
+    {
+      "id": "f08",
+      "query": ".NET Enumerable.ToList immediate execution materialize cached copy repeated enumeration",
+      "forms": [
+        ".NET Enumerable.ToList immediate execution materialize cached copy repeated enumeration"
+      ]
+    }
+  ]
+}

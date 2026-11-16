@@ -1,0 +1,972 @@
+{
+  "protocol": {
+    "cases": 12,
+    "cards": 231,
+    "known_gold": 64,
+    "positive_gold": 18,
+    "unjudged_gold": 167,
+    "gold": {
+      "author": "one separate source annotator, blinded to model outputs/branch labels; not independent acceptance",
+      "freeze": "source gold fixed after acquisition and before prediction inspection; no source grades based on branch output",
+      "scope": "known relevant retrieved sources, not universal web recall; null unjudged and unknown direct separately reported",
+      "source_gold": "retained original HTML/raw acquisition and preselected source-only audits; never branch-extracted text",
+      "criteria": "grade2 concrete requested relationship with material conditions;grade1 partial/unresolved/wrong factual condition only with concrete counter-evidence;grade0 unrelated;unobserved/challenge/incomplete source unknown",
+      "proposals": "status/genre/date alone is not negative; conjecture is not shipped behavior; concrete current explanations in an issue remain assessable",
+      "offsets": "UTF-8 bytes in whitespace-normalized source_text(original HTML); visible text plus uniquely declared typed code-view JSON rawLines; other scripts/styles excluded",
+      "isolation": "annotator did not read new branch results, model calls, labels or logs; source-only audits not injected into model input"
+    },
+    "comparison": "full initial+coverage+audit+localQwen; identical frozen live SERP and raw acquisition; branch-specific extraction and document selection",
+    "timing": "sequential replay; raw/snapshot and provider cache differ; not isolated SLA",
+    "read_metrics": "selected includes host-disabled skips; attempted excludes those skips; success requires actual extracted document; ratios use known positive retrieved sources"
+  },
+  "branches": {
+    "baseline": {
+      "tp": 12,
+      "fp": 2,
+      "fn": 6,
+      "unjudged_direct": 0,
+      "recall": 0.6666666666666666,
+      "precision_judged": 0.8571428571428571,
+      "initial_valid": 12,
+      "initial_attempts": 12,
+      "initial_length": 0,
+      "initial_stop_empty": 0,
+      "initial_reasoning_tokens": 0,
+      "initial_elapsed_ms_median": 2555.0,
+      "elapsed_ms_median": 19562.5,
+      "elapsed_ms_sum": 315571,
+      "generative_calls": 35,
+      "known_cost_usd": 0.00620095,
+      "unpriced_generations": 0,
+      "prompt_tokens": 163345,
+      "completion_tokens": 16460,
+      "providers": {
+        "Morph": 35
+      },
+      "reads": 47,
+      "raw_snapshot_cache_hits": 0,
+      "known_positive": 18,
+      "positive_in_coverage_pool": 17,
+      "positive_read_selected": 16,
+      "positive_attempted": 16,
+      "positive_extracted": 16,
+      "read_recall": 0.8888888888888888,
+      "extracted_source_recall": 0.8888888888888888,
+      "reranker_calls": 39,
+      "reranker_pairs": 804,
+      "reranker_fallbacks": 0,
+      "proof_ranges_validated": 70,
+      "audit_conflicts_validated": 0,
+      "errors": {
+        "unsupported_direct_evidence_or_constraints": 5,
+        "evidence_verification": 9
+      },
+      "all_classes_recall_at10": 0.9444444444444444,
+      "relevant_returned_at10": 17
+    },
+    "fixed": {
+      "tp": 10,
+      "fp": 0,
+      "fn": 8,
+      "unjudged_direct": 0,
+      "recall": 0.5555555555555556,
+      "precision_judged": 1.0,
+      "initial_valid": 12,
+      "initial_attempts": 12,
+      "initial_length": 0,
+      "initial_stop_empty": 0,
+      "initial_reasoning_tokens": 0,
+      "initial_elapsed_ms_median": 2601.0,
+      "elapsed_ms_median": 15348.5,
+      "elapsed_ms_sum": 223702,
+      "generative_calls": 33,
+      "known_cost_usd": 0.006155584,
+      "unpriced_generations": 0,
+      "prompt_tokens": 159520,
+      "completion_tokens": 16662,
+      "providers": {
+        "Morph": 33
+      },
+      "reads": 47,
+      "raw_snapshot_cache_hits": 39,
+      "known_positive": 18,
+      "positive_in_coverage_pool": 17,
+      "positive_read_selected": 16,
+      "positive_attempted": 16,
+      "positive_extracted": 16,
+      "read_recall": 0.8888888888888888,
+      "extracted_source_recall": 0.8888888888888888,
+      "reranker_calls": 38,
+      "reranker_pairs": 876,
+      "reranker_fallbacks": 0,
+      "proof_ranges_validated": 50,
+      "audit_conflicts_validated": 0,
+      "errors": {
+        "unsupported_direct_evidence_or_constraints": 4,
+        "evidence_verification": 11
+      },
+      "all_classes_recall_at10": 0.9444444444444444,
+      "relevant_returned_at10": 17
+    }
+  },
+  "cases": [
+    {
+      "id": "p01",
+      "query": "Python pathlib Path resolve strict False symlinks missing path absolute difference",
+      "known_positive": 1,
+      "branches": {
+        "baseline": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "unjudged_direct": 0,
+          "recall": 1.0,
+          "precision_judged": 1.0,
+          "direct": [
+            "C004"
+          ],
+          "relevant_returned": 1,
+          "positive_in_coverage_pool": [
+            "C004"
+          ],
+          "positive_read_selected": [
+            "C004"
+          ],
+          "positive_attempted": [
+            "C004"
+          ],
+          "positive_extracted": [
+            "C004"
+          ],
+          "initial_valid": true,
+          "reads": 4,
+          "audit_conflicts_validated": 0,
+          "errors": [],
+          "status": "ok"
+        },
+        "fixed": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "unjudged_direct": 0,
+          "recall": 1.0,
+          "precision_judged": 1.0,
+          "direct": [
+            "C004"
+          ],
+          "relevant_returned": 1,
+          "positive_in_coverage_pool": [
+            "C004"
+          ],
+          "positive_read_selected": [
+            "C004"
+          ],
+          "positive_attempted": [
+            "C004"
+          ],
+          "positive_extracted": [
+            "C004"
+          ],
+          "initial_valid": true,
+          "reads": 4,
+          "audit_conflicts_validated": 0,
+          "errors": [],
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "id": "p02",
+      "query": "git reset --soft --mixed --hard index working tree changes",
+      "known_positive": 4,
+      "branches": {
+        "baseline": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "unjudged_direct": 0,
+          "recall": 1.0,
+          "precision_judged": 1.0,
+          "direct": [
+            "C003",
+            "C004",
+            "C006",
+            "C008"
+          ],
+          "relevant_returned": 4,
+          "positive_in_coverage_pool": [
+            "C003",
+            "C004",
+            "C006",
+            "C008"
+          ],
+          "positive_read_selected": [
+            "C003",
+            "C004",
+            "C006",
+            "C008"
+          ],
+          "positive_attempted": [
+            "C003",
+            "C004",
+            "C006",
+            "C008"
+          ],
+          "positive_extracted": [
+            "C003",
+            "C004",
+            "C006",
+            "C008"
+          ],
+          "initial_valid": true,
+          "reads": 4,
+          "audit_conflicts_validated": 0,
+          "errors": [
+            "unsupported_direct_evidence_or_constraints: 1 downgraded"
+          ],
+          "status": "partial"
+        },
+        "fixed": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "unjudged_direct": 0,
+          "recall": 1.0,
+          "precision_judged": 1.0,
+          "direct": [
+            "C003",
+            "C004",
+            "C006",
+            "C008"
+          ],
+          "relevant_returned": 4,
+          "positive_in_coverage_pool": [
+            "C003",
+            "C004",
+            "C006",
+            "C008"
+          ],
+          "positive_read_selected": [
+            "C003",
+            "C004",
+            "C006",
+            "C008"
+          ],
+          "positive_attempted": [
+            "C003",
+            "C004",
+            "C006",
+            "C008"
+          ],
+          "positive_extracted": [
+            "C003",
+            "C004",
+            "C006",
+            "C008"
+          ],
+          "initial_valid": true,
+          "reads": 4,
+          "audit_conflicts_validated": 0,
+          "errors": [
+            "unsupported_direct_evidence_or_constraints: 1 downgraded"
+          ],
+          "status": "partial"
+        }
+      }
+    },
+    {
+      "id": "p03",
+      "query": "Rust Iterator size_hint ExactSizeIterator lower upper bounds guarantees",
+      "known_positive": 1,
+      "branches": {
+        "baseline": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "relevant_returned": 1,
+          "positive_in_coverage_pool": [
+            "C002"
+          ],
+          "positive_read_selected": [],
+          "positive_attempted": [],
+          "positive_extracted": [],
+          "initial_valid": true,
+          "reads": 4,
+          "audit_conflicts_validated": 0,
+          "errors": [
+            "unsupported_direct_evidence_or_constraints: 1 downgraded"
+          ],
+          "status": "partial"
+        },
+        "fixed": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "relevant_returned": 1,
+          "positive_in_coverage_pool": [
+            "C002"
+          ],
+          "positive_read_selected": [],
+          "positive_attempted": [],
+          "positive_extracted": [],
+          "initial_valid": true,
+          "reads": 4,
+          "audit_conflicts_validated": 0,
+          "errors": [
+            "unsupported_direct_evidence_or_constraints: 1 downgraded"
+          ],
+          "status": "partial"
+        }
+      }
+    },
+    {
+      "id": "p04",
+      "query": "PostgreSQL row level security table owner FORCE ROW LEVEL SECURITY bypass",
+      "known_positive": 1,
+      "branches": {
+        "baseline": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "relevant_returned": 0,
+          "positive_in_coverage_pool": [],
+          "positive_read_selected": [],
+          "positive_attempted": [],
+          "positive_extracted": [],
+          "initial_valid": true,
+          "reads": 4,
+          "audit_conflicts_validated": 0,
+          "errors": [
+            "evidence_verification: C005: fetch_timeout",
+            "evidence_verification: C014: fetch_timeout",
+            "unsupported_direct_evidence_or_constraints: 1 downgraded"
+          ],
+          "status": "partial"
+        },
+        "fixed": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "relevant_returned": 0,
+          "positive_in_coverage_pool": [],
+          "positive_read_selected": [],
+          "positive_attempted": [],
+          "positive_extracted": [],
+          "initial_valid": true,
+          "reads": 4,
+          "audit_conflicts_validated": 0,
+          "errors": [
+            "evidence_verification: C005: fetch_timeout",
+            "evidence_verification: C014: fetch_timeout",
+            "unsupported_direct_evidence_or_constraints: 1 downgraded"
+          ],
+          "status": "partial"
+        }
+      }
+    },
+    {
+      "id": "p05",
+      "query": "SQLite UPSERT DO UPDATE excluded ABORT statement rollback",
+      "known_positive": 0,
+      "branches": {
+        "baseline": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "unjudged_direct": 0,
+          "recall": null,
+          "precision_judged": null,
+          "direct": [],
+          "relevant_returned": 0,
+          "positive_in_coverage_pool": [],
+          "positive_read_selected": [],
+          "positive_attempted": [],
+          "positive_extracted": [],
+          "initial_valid": true,
+          "reads": 4,
+          "audit_conflicts_validated": 0,
+          "errors": [
+            "evidence_verification: C017: fetch_timeout"
+          ],
+          "status": "partial"
+        },
+        "fixed": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "unjudged_direct": 0,
+          "recall": null,
+          "precision_judged": null,
+          "direct": [],
+          "relevant_returned": 0,
+          "positive_in_coverage_pool": [],
+          "positive_read_selected": [],
+          "positive_attempted": [],
+          "positive_extracted": [],
+          "initial_valid": true,
+          "reads": 4,
+          "audit_conflicts_validated": 0,
+          "errors": [
+            "evidence_verification: C017: fetch_timeout"
+          ],
+          "status": "partial"
+        }
+      }
+    },
+    {
+      "id": "p06",
+      "query": "Docker bind mount readonly recursive submounts Linux kernel 5.12",
+      "known_positive": 1,
+      "branches": {
+        "baseline": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "unjudged_direct": 0,
+          "recall": 1.0,
+          "precision_judged": 0.5,
+          "direct": [
+            "C005",
+            "C010"
+          ],
+          "relevant_returned": 1,
+          "positive_in_coverage_pool": [
+            "C005"
+          ],
+          "positive_read_selected": [
+            "C005"
+          ],
+          "positive_attempted": [
+            "C005"
+          ],
+          "positive_extracted": [
+            "C005"
+          ],
+          "initial_valid": true,
+          "reads": 4,
+          "audit_conflicts_validated": 0,
+          "errors": [
+            "evidence_verification: C001: failed to grab the article"
+          ],
+          "status": "partial"
+        },
+        "fixed": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "unjudged_direct": 0,
+          "recall": 1.0,
+          "precision_judged": 1.0,
+          "direct": [
+            "C005"
+          ],
+          "relevant_returned": 1,
+          "positive_in_coverage_pool": [
+            "C005"
+          ],
+          "positive_read_selected": [
+            "C005"
+          ],
+          "positive_attempted": [
+            "C005"
+          ],
+          "positive_extracted": [
+            "C005"
+          ],
+          "initial_valid": true,
+          "reads": 4,
+          "audit_conflicts_validated": 0,
+          "errors": [
+            "evidence_verification: C001: failed to grab the article"
+          ],
+          "status": "partial"
+        }
+      }
+    },
+    {
+      "id": "p07",
+      "query": "CSS position sticky nearest scrolling ancestor overflow hidden auto",
+      "known_positive": 4,
+      "branches": {
+        "baseline": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "unjudged_direct": 0,
+          "recall": 1.0,
+          "precision_judged": 1.0,
+          "direct": [
+            "C001",
+            "C004",
+            "C007",
+            "C009"
+          ],
+          "relevant_returned": 4,
+          "positive_in_coverage_pool": [
+            "C001",
+            "C004",
+            "C007",
+            "C009"
+          ],
+          "positive_read_selected": [
+            "C001",
+            "C004",
+            "C007",
+            "C009"
+          ],
+          "positive_attempted": [
+            "C001",
+            "C004",
+            "C007",
+            "C009"
+          ],
+          "positive_extracted": [
+            "C001",
+            "C004",
+            "C007",
+            "C009"
+          ],
+          "initial_valid": true,
+          "reads": 4,
+          "audit_conflicts_validated": 0,
+          "errors": [
+            "unsupported_direct_evidence_or_constraints: 1 downgraded"
+          ],
+          "status": "partial"
+        },
+        "fixed": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "unjudged_direct": 0,
+          "recall": 1.0,
+          "precision_judged": 1.0,
+          "direct": [
+            "C001",
+            "C004",
+            "C007",
+            "C009"
+          ],
+          "relevant_returned": 4,
+          "positive_in_coverage_pool": [
+            "C001",
+            "C004",
+            "C007",
+            "C009"
+          ],
+          "positive_read_selected": [
+            "C001",
+            "C004",
+            "C007",
+            "C009"
+          ],
+          "positive_attempted": [
+            "C001",
+            "C004",
+            "C007",
+            "C009"
+          ],
+          "positive_extracted": [
+            "C001",
+            "C004",
+            "C007",
+            "C009"
+          ],
+          "initial_valid": true,
+          "reads": 4,
+          "audit_conflicts_validated": 0,
+          "errors": [
+            "unsupported_direct_evidence_or_constraints: 1 downgraded"
+          ],
+          "status": "partial"
+        }
+      }
+    },
+    {
+      "id": "p08",
+      "query": "HTTP 304 Content-Length selected 200 response no message body",
+      "known_positive": 0,
+      "branches": {
+        "baseline": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "unjudged_direct": 0,
+          "recall": null,
+          "precision_judged": null,
+          "direct": [],
+          "relevant_returned": 0,
+          "positive_in_coverage_pool": [],
+          "positive_read_selected": [],
+          "positive_attempted": [],
+          "positive_extracted": [],
+          "initial_valid": true,
+          "reads": 4,
+          "audit_conflicts_validated": 0,
+          "errors": [
+            "evidence_verification: C003: failed to grab the article",
+            "evidence_verification: C020: unsupported_content: probe supports UTF-8 only"
+          ],
+          "status": "partial"
+        },
+        "fixed": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "unjudged_direct": 0,
+          "recall": null,
+          "precision_judged": null,
+          "direct": [],
+          "relevant_returned": 0,
+          "positive_in_coverage_pool": [],
+          "positive_read_selected": [],
+          "positive_attempted": [],
+          "positive_extracted": [],
+          "initial_valid": true,
+          "reads": 4,
+          "audit_conflicts_validated": 0,
+          "errors": [
+            "evidence_verification: C003: failed to grab the article",
+            "evidence_verification: C020: unsupported_content: probe supports UTF-8 only"
+          ],
+          "status": "partial"
+        }
+      }
+    },
+    {
+      "id": "p09",
+      "query": "Python functools lru_cache async coroutine await reuse limitations",
+      "known_positive": 1,
+      "branches": {
+        "baseline": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "relevant_returned": 1,
+          "positive_in_coverage_pool": [
+            "C002"
+          ],
+          "positive_read_selected": [
+            "C002"
+          ],
+          "positive_attempted": [
+            "C002"
+          ],
+          "positive_extracted": [
+            "C002"
+          ],
+          "initial_valid": true,
+          "reads": 3,
+          "audit_conflicts_validated": 0,
+          "errors": [
+            "evidence_verification: C018: host_disabled"
+          ],
+          "status": "partial"
+        },
+        "fixed": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "relevant_returned": 1,
+          "positive_in_coverage_pool": [
+            "C002"
+          ],
+          "positive_read_selected": [
+            "C002"
+          ],
+          "positive_attempted": [
+            "C002"
+          ],
+          "positive_extracted": [
+            "C002"
+          ],
+          "initial_valid": true,
+          "reads": 3,
+          "audit_conflicts_validated": 0,
+          "errors": [
+            "evidence_verification: C018: host_disabled"
+          ],
+          "status": "partial"
+        }
+      }
+    },
+    {
+      "id": "p10",
+      "query": "git sparse-checkout cone mode parent directories files included",
+      "known_positive": 2,
+      "branches": {
+        "baseline": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "unjudged_direct": 0,
+          "recall": 0.5,
+          "precision_judged": 1.0,
+          "direct": [
+            "C009"
+          ],
+          "relevant_returned": 2,
+          "positive_in_coverage_pool": [
+            "C006",
+            "C009"
+          ],
+          "positive_read_selected": [
+            "C006",
+            "C009"
+          ],
+          "positive_attempted": [
+            "C006",
+            "C009"
+          ],
+          "positive_extracted": [
+            "C006",
+            "C009"
+          ],
+          "initial_valid": true,
+          "reads": 4,
+          "audit_conflicts_validated": 0,
+          "errors": [],
+          "status": "ok"
+        },
+        "fixed": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "relevant_returned": 2,
+          "positive_in_coverage_pool": [
+            "C006",
+            "C009"
+          ],
+          "positive_read_selected": [
+            "C006",
+            "C009"
+          ],
+          "positive_attempted": [
+            "C006",
+            "C009"
+          ],
+          "positive_extracted": [
+            "C006",
+            "C009"
+          ],
+          "initial_valid": true,
+          "reads": 4,
+          "audit_conflicts_validated": 0,
+          "errors": [
+            "evidence_verification: C011: HTTP 404",
+            "evidence_verification: evidence title-only core"
+          ],
+          "status": "partial"
+        }
+      }
+    },
+    {
+      "id": "p11",
+      "query": "PostgreSQL CTE MATERIALIZED NOT MATERIALIZED side effect free multiple references",
+      "known_positive": 2,
+      "branches": {
+        "baseline": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "relevant_returned": 2,
+          "positive_in_coverage_pool": [
+            "C007",
+            "C014"
+          ],
+          "positive_read_selected": [
+            "C007",
+            "C014"
+          ],
+          "positive_attempted": [
+            "C007",
+            "C014"
+          ],
+          "positive_extracted": [
+            "C007",
+            "C014"
+          ],
+          "initial_valid": true,
+          "reads": 4,
+          "audit_conflicts_validated": 0,
+          "errors": [
+            "evidence_verification: C001: failed to grab the article",
+            "unsupported_direct_evidence_or_constraints: 2 downgraded"
+          ],
+          "status": "partial"
+        },
+        "fixed": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "relevant_returned": 2,
+          "positive_in_coverage_pool": [
+            "C007",
+            "C014"
+          ],
+          "positive_read_selected": [
+            "C007",
+            "C014"
+          ],
+          "positive_attempted": [
+            "C007",
+            "C014"
+          ],
+          "positive_extracted": [
+            "C007",
+            "C014"
+          ],
+          "initial_valid": true,
+          "reads": 4,
+          "audit_conflicts_validated": 0,
+          "errors": [
+            "evidence_verification: C002: fetch_timeout"
+          ],
+          "status": "partial"
+        }
+      }
+    },
+    {
+      "id": "p12",
+      "query": "Rust Arc clone deep copy underlying value reference count",
+      "known_positive": 1,
+      "branches": {
+        "baseline": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "unjudged_direct": 0,
+          "recall": 1.0,
+          "precision_judged": 0.5,
+          "direct": [
+            "C004",
+            "C005"
+          ],
+          "relevant_returned": 1,
+          "positive_in_coverage_pool": [
+            "C004"
+          ],
+          "positive_read_selected": [
+            "C004"
+          ],
+          "positive_attempted": [
+            "C004"
+          ],
+          "positive_extracted": [
+            "C004"
+          ],
+          "initial_valid": true,
+          "reads": 4,
+          "audit_conflicts_validated": 0,
+          "errors": [
+            "evidence_verification: C003: fetch_timeout"
+          ],
+          "status": "partial"
+        },
+        "fixed": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "relevant_returned": 1,
+          "positive_in_coverage_pool": [
+            "C004"
+          ],
+          "positive_read_selected": [
+            "C004"
+          ],
+          "positive_attempted": [
+            "C004"
+          ],
+          "positive_extracted": [
+            "C004"
+          ],
+          "initial_valid": true,
+          "reads": 4,
+          "audit_conflicts_validated": 0,
+          "errors": [
+            "evidence_verification: C003: fetch_timeout"
+          ],
+          "status": "partial"
+        }
+      }
+    }
+  ],
+  "false_direct_changes": {
+    "new": [],
+    "retained": [],
+    "removed": [
+      [
+        "p06",
+        "C010"
+      ],
+      [
+        "p12",
+        "C005"
+      ]
+    ]
+  },
+  "source_relevance_sensitivity": {
+    "baseline": {
+      "tp": 12,
+      "fp": 2,
+      "fn": 6,
+      "unjudged_direct": 0,
+      "recall": 0.6666666666666666,
+      "precision_judged": 0.8571428571428571
+    },
+    "fixed": {
+      "tp": 10,
+      "fp": 0,
+      "fn": 8,
+      "unjudged_direct": 0,
+      "recall": 0.5555555555555556,
+      "precision_judged": 1.0
+    }
+  },
+  "recall_delta_query_bootstrap95": [
+    -0.3125,
+    0.0
+  ],
+  "corpus_sha256": "7c1cf6476aa381682bd18bf893e3d51a0fc58fe778641d00fcc498ad2370c9ad",
+  "original20_sha256": "b67e3269830ae0e976aa9b4c5dc2f6b9c3e922ad1adda35738289d6b1b8325d6"
+}

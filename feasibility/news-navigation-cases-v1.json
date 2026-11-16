@@ -1,0 +1,88 @@
+{
+  "version": "news-navigation-new8-v1",
+  "as_of": "2026-11-03",
+  "timezone": "Europe/Moscow",
+  "cases": [
+    {
+      "id": "nn01",
+      "query": "новости Казани сегодня",
+      "intent": "news",
+      "place": "Казань",
+      "topic": "городские новости",
+      "published_from": "2026-11-03",
+      "published_to": "2026-11-03",
+      "date_rule": "explicit today: current Moscow calendar day; no previous-day substitution"
+    },
+    {
+      "id": "nn02",
+      "query": "новости Самары сегодня транспорт",
+      "intent": "news",
+      "place": "Самара",
+      "topic": "транспорт",
+      "published_from": "2026-11-03",
+      "published_to": "2026-11-03",
+      "date_rule": "explicit today: current Moscow calendar day; no previous-day substitution"
+    },
+    {
+      "id": "nn03",
+      "query": "новости Нижнего Новгорода сегодня",
+      "intent": "news",
+      "place": "Нижний Новгород",
+      "topic": "городские новости",
+      "published_from": "2026-11-03",
+      "published_to": "2026-11-03",
+      "date_rule": "explicit today: current Moscow calendar day; no previous-day substitution"
+    },
+    {
+      "id": "nn04",
+      "query": "новости Липецка 3 ноября 2026",
+      "intent": "news",
+      "place": "Липецк",
+      "topic": "городские новости",
+      "published_from": "2026-11-03",
+      "published_to": "2026-11-03",
+      "date_rule": "explicit publication day"
+    },
+    {
+      "id": "nn05",
+      "query": "site:riavrn.ru/news/ Воронеж новости ЖКХ сегодня",
+      "intent": "news",
+      "place": "Воронеж",
+      "topic": "ЖКХ",
+      "site": "riavrn.ru/news/",
+      "published_from": "2026-11-03",
+      "published_to": "2026-11-03",
+      "date_rule": "explicit today: current Moscow calendar day; no previous-day substitution"
+    },
+    {
+      "id": "nn06",
+      "query": "новости Воронежа ноябрь 2025",
+      "intent": "news_archive",
+      "place": "Воронеж",
+      "topic": "городские новости",
+      "published_from": "2025-11-01",
+      "published_to": "2025-11-30",
+      "date_rule": "explicit historical publication month"
+    },
+    {
+      "id": "nn07",
+      "query": "новости Воронежа за 3 ноября 2030",
+      "intent": "future_control",
+      "place": "Воронеж",
+      "topic": "городские новости",
+      "published_from": "2030-11-03",
+      "published_to": "2030-11-03",
+      "date_rule": "future publication cannot be established as of 2026-11-03; no news direct expected"
+    },
+    {
+      "id": "nn08",
+      "query": "новости Воронежа приложение скачать Android",
+      "intent": "explicit_application_control",
+      "place": "Воронеж",
+      "topic": "приложение новостей, загрузка Android",
+      "published_from": null,
+      "published_to": null,
+      "date_rule": "explicit application intent; app download is not false direct merely by page type; excluded from fresh-news total"
+    }
+  ]
+}

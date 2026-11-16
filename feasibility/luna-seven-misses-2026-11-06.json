@@ -1,0 +1,35 @@
+{
+  "false_claims": [
+    {
+      "case": "R01",
+      "claim_id": "A1",
+      "judgement": "false_normative_attribution",
+      "emitted_text": "RFC 6585 предписывает серверам SHOULD включать Retry-After, но не делает это обязательным.",
+      "exact_cited_quote": "RFC 6585 says servers SHOULD include Retry-After but does not make it mandatory.",
+      "reference_url": "https://www.rfc-editor.org/rfc/rfc6585.html#section-4",
+      "reference_fact": "Retry-After is MAY; SHOULD applies to explaining the condition, not to including that header.",
+      "citation_exact": true,
+      "separate_model_audit_accepted": true
+    }
+  ],
+  "false_directs": [],
+  "unknown_directs": [],
+  "read_good_evidence_lost": [
+    {
+      "case": "R03",
+      "source": "https://doc.rust-lang.org/std/iter/trait.Iterator.html",
+      "correct_witness_preserved_in_model_context": true,
+      "chunk": "S1P2",
+      "stage": "prune_invalid_claims",
+      "issue": "One exact primary witness and one malformed secondary quote cause the entire claim to be discarded.",
+      "raw_member": "R03-stage-audit.json"
+    },
+    {
+      "case": "R03",
+      "stage": "validate_draft",
+      "issue": "A valid technical array example with two exact witnesses is rejected because its text contains square brackets.",
+      "raw_member": "R03-stage-audit.json"
+    }
+  ],
+  "parent_assessment": "manual source-first, not an independent acceptance run"
+}

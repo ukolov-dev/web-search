@@ -1,0 +1,2642 @@
+{
+  "schema": "research-followup-results-v1",
+  "baseline": "b29fd97",
+  "snapshots": {
+    "snapshot-v5.json": {
+      "src/research.rs": "fe6c538faaecde50d22513a5be3ab02bd6177fbd0a47c4cc059a14308bec017f",
+      "src/research_tests.rs": "8964df4caaf7acb5a0eae81ce44db61f9a6a0b48be2524593879e7106a15632e",
+      "tests/fixtures/research/final-losses.json": "34fbec0cc7af2d20ec16871bed65dd784770e1d5c2bb30ebcbb685e697ca3628",
+      "tests/fixtures/research/rust-split-off.txt": "54c69ddd6146d1fb6d3e2f667ece28d14469b13f0e86add10875e3318f4019ed",
+      "binary_sha256": "0dc8f36ee317781d361f1c3946d89aeb35ec0c6d4abbb8b029ea0134a02a9a71"
+    },
+    "snapshot-v4.json": {
+      "src/research.rs": "0bc651481e64e1e1a8d5c9c8b5c2d2ddcd52906a3053045487e72dfd3afa0a61",
+      "src/research_tests.rs": "3d5fe7d0a1107b7034e4883189e55d4dc6aea7529d67a6e0cdcbbaa137b2fa58",
+      "tests/fixtures/research/final-losses.json": "34fbec0cc7af2d20ec16871bed65dd784770e1d5c2bb30ebcbb685e697ca3628",
+      "tests/fixtures/research/rust-split-off.txt": "54c69ddd6146d1fb6d3e2f667ece28d14469b13f0e86add10875e3318f4019ed",
+      "binary_sha256": "13770754c0cbc2d3012a0a439f9bfc4566e660c3b02438488b5ed8c041338909"
+    },
+    "snapshot-v3.json": {
+      "src/research.rs": "f9e7659b24393572944e670821a6e5dba4ef76ed73d2a2980040f8fd131dabef",
+      "src/research_tests.rs": "d8f7371d9359ecd854bc9ae20422dd3b5ba507c7e23c36068ba6a4e1438dac48",
+      "tests/fixtures/research/final-losses.json": "34fbec0cc7af2d20ec16871bed65dd784770e1d5c2bb30ebcbb685e697ca3628",
+      "tests/fixtures/research/rust-split-off.txt": "54c69ddd6146d1fb6d3e2f667ece28d14469b13f0e86add10875e3318f4019ed",
+      "binary_sha256": "7223b918ccdbef35d24101dd8f97452e0015dd56dae5cb0f039628783be26f4b"
+    },
+    "snapshot-v2.json": {
+      "src/research.rs": "f206df4ef533a284c0d96ae3994694231f995393a9688a62be21b8aa7b6a2dae",
+      "src/research_tests.rs": "d8f7371d9359ecd854bc9ae20422dd3b5ba507c7e23c36068ba6a4e1438dac48",
+      "tests/fixtures/research/final-losses.json": "34fbec0cc7af2d20ec16871bed65dd784770e1d5c2bb30ebcbb685e697ca3628",
+      "tests/fixtures/research/rust-split-off.txt": "54c69ddd6146d1fb6d3e2f667ece28d14469b13f0e86add10875e3318f4019ed",
+      "binary_sha256": "4016c55e068fb18a714d6e9cf11150f6ff2365f3a85df131a8f6454b8eeea078"
+    },
+    "snapshot.json": {
+      "src/research.rs": "1100da5fcd73fdad8e4c38726b738cbeee0baa2e2951640744923d4198a3b403",
+      "src/research_tests.rs": "dc5309cacde43ddd69056003238e0aed89e8bfcafe4982f56993c5594600e413",
+      "binary_sha256": "a62fad340a4696558b055bc693dd2051cdd21ec2e058ccc67ed31e5f63269562"
+    },
+    "snapshot-v3-repeat.json": {
+      "src/research.rs": "f9e7659b24393572944e670821a6e5dba4ef76ed73d2a2980040f8fd131dabef",
+      "src/research_tests.rs": "d8f7371d9359ecd854bc9ae20422dd3b5ba507c7e23c36068ba6a4e1438dac48",
+      "tests/fixtures/research/final-losses.json": "34fbec0cc7af2d20ec16871bed65dd784770e1d5c2bb30ebcbb685e697ca3628",
+      "tests/fixtures/research/rust-split-off.txt": "54c69ddd6146d1fb6d3e2f667ece28d14469b13f0e86add10875e3318f4019ed",
+      "binary_sha256": "7223b918ccdbef35d24101dd8f97452e0015dd56dae5cb0f039628783be26f4b"
+    },
+    "snapshot-v6.json": {
+      "src/research.rs": "61b53c73286927979e0bf0e191df7b60dd5e866d48c9873ee0184ad8a29cfe94",
+      "src/research_tests.rs": "8964df4caaf7acb5a0eae81ce44db61f9a6a0b48be2524593879e7106a15632e",
+      "tests/fixtures/research/final-losses.json": "34fbec0cc7af2d20ec16871bed65dd784770e1d5c2bb30ebcbb685e697ca3628",
+      "tests/fixtures/research/rust-split-off.txt": "54c69ddd6146d1fb6d3e2f667ece28d14469b13f0e86add10875e3318f4019ed",
+      "binary_sha256": "3c316c31ea558ac6b10b41d3ca6c45f38724785fa8042fd8ef8648ae3736a277"
+    }
+  },
+  "episodes": [
+    {
+      "path": "development/D02",
+      "status": "error",
+      "stop_reason": "sources_unavailable",
+      "claims": [],
+      "missing": [
+        0,
+        1
+      ],
+      "sources": [],
+      "budget": {
+        "limits": {
+          "browser": 0,
+          "documents": 4,
+          "forms": 2,
+          "generations": 6,
+          "output_bytes": 32768,
+          "qwen": 4,
+          "seconds": 180,
+          "serp": 4,
+          "source_context_chars": 24000
+        },
+        "remaining": {
+          "documents": 0,
+          "forms": 0,
+          "generations": 4,
+          "milliseconds": 115772,
+          "qwen": 4,
+          "serp": 2
+        },
+        "used": {
+          "documents": 4,
+          "forms": 2,
+          "generations": 2,
+          "qwen": 0,
+          "serp": 2
+        }
+      },
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 0,
+        "hits": 0,
+        "http_reads": 6,
+        "misses": 6,
+        "qwen_calls": 0,
+        "refresh": false,
+        "writes": 2
+      },
+      "actions": [
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 1,
+          "results": 9
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 1,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 1,
+          "error": "fetch_timeout",
+          "url": "https://www.rfc-editor.org/rfc/rfc2606.html"
+        },
+        {
+          "action": "read",
+          "attempt": 2,
+          "error": "fetch_timeout",
+          "url": "https://www.rfc-editor.org/rfc/rfc9140.html"
+        },
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 2,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 2,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 3,
+          "error": "fetch_timeout",
+          "url": "https://www.rfc-editor.org/rfc/rfc6761.html"
+        },
+        {
+          "action": "read",
+          "attempt": 4,
+          "error": "fetch_timeout",
+          "url": "https://www.rfc-editor.org/rfc/rfc5042.html"
+        }
+      ],
+      "witnesses_checked": 0,
+      "tool_payload_equal": [],
+      "non_json_tool_error_messages": 0,
+      "known_inner_cost_usd": 0.000100988,
+      "unknown_inner_cost_calls": 0,
+      "known_outer_cost_usd": 0,
+      "unknown_outer_cost_calls": 0,
+      "outer_status": "completed"
+    },
+    {
+      "path": "development/D04",
+      "status": "error",
+      "stop_reason": "sources_unavailable",
+      "claims": [],
+      "missing": [
+        0,
+        1
+      ],
+      "sources": [],
+      "budget": {
+        "limits": {
+          "browser": 0,
+          "documents": 4,
+          "forms": 2,
+          "generations": 6,
+          "output_bytes": 32768,
+          "qwen": 4,
+          "seconds": 180,
+          "serp": 4,
+          "source_context_chars": 24000
+        },
+        "remaining": {
+          "documents": 0,
+          "forms": 0,
+          "generations": 4,
+          "milliseconds": 114044,
+          "qwen": 4,
+          "serp": 2
+        },
+        "used": {
+          "documents": 4,
+          "forms": 2,
+          "generations": 2,
+          "qwen": 0,
+          "serp": 2
+        }
+      },
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 0,
+        "hits": 0,
+        "http_reads": 6,
+        "misses": 6,
+        "qwen_calls": 0,
+        "refresh": false,
+        "writes": 2
+      },
+      "actions": [
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 1,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 1,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 1,
+          "error": "fetch_timeout",
+          "url": "https://www.rfc-editor.org/rfc/rfc7519.html"
+        },
+        {
+          "action": "read",
+          "attempt": 2,
+          "error": "fetch_timeout",
+          "url": "https://www.rfc-editor.org/rfc/rfc9068.html"
+        },
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 2,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 2,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 3,
+          "error": "fetch_timeout",
+          "url": "https://www.rfc-editor.org/rfc/rfc4594.html"
+        },
+        {
+          "action": "read",
+          "attempt": 4,
+          "error": "fetch_timeout",
+          "url": "https://www.rfc-editor.org/rfc/rfc4004.html"
+        }
+      ],
+      "witnesses_checked": 0,
+      "tool_payload_equal": [],
+      "non_json_tool_error_messages": 0,
+      "known_inner_cost_usd": 8.8322e-05,
+      "unknown_inner_cost_calls": 0,
+      "known_outer_cost_usd": 0,
+      "unknown_outer_cost_calls": 0,
+      "outer_status": "completed"
+    },
+    {
+      "path": "harness/H01",
+      "status": "error",
+      "stop_reason": "sources_unavailable",
+      "claims": [],
+      "missing": [
+        0,
+        1
+      ],
+      "sources": [],
+      "budget": {
+        "limits": {
+          "browser": 0,
+          "documents": 4,
+          "forms": 2,
+          "generations": 6,
+          "output_bytes": 32768,
+          "qwen": 4,
+          "seconds": 180,
+          "serp": 4,
+          "source_context_chars": 24000
+        },
+        "remaining": {
+          "documents": 0,
+          "forms": 0,
+          "generations": 4,
+          "milliseconds": 116308,
+          "qwen": 4,
+          "serp": 2
+        },
+        "used": {
+          "documents": 4,
+          "forms": 2,
+          "generations": 2,
+          "qwen": 0,
+          "serp": 2
+        }
+      },
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 0,
+        "hits": 0,
+        "http_reads": 6,
+        "misses": 6,
+        "qwen_calls": 0,
+        "refresh": false,
+        "writes": 2
+      },
+      "actions": [
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 1,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 1,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 1,
+          "error": "fetch_timeout",
+          "url": "https://www.rfc-editor.org/rfc/rfc6585.html"
+        },
+        {
+          "action": "read",
+          "attempt": 2,
+          "error": "fetch_timeout",
+          "url": "https://www.rfc-editor.org/rfc/rfc9111.html"
+        },
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 2,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 2,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 3,
+          "error": "fetch_timeout",
+          "url": "https://www.rfc-editor.org/rfc/rfc2616.html"
+        },
+        {
+          "action": "read",
+          "attempt": 4,
+          "error": "fetch_timeout",
+          "url": "https://www.rfc-editor.org/rfc/rfc5985.html"
+        }
+      ],
+      "witnesses_checked": 0,
+      "tool_payload_equal": [],
+      "non_json_tool_error_messages": 1,
+      "known_inner_cost_usd": 8.1704e-05,
+      "unknown_inner_cost_calls": 0,
+      "known_outer_cost_usd": 0.000392352,
+      "unknown_outer_cost_calls": 0,
+      "outer_status": "completed"
+    },
+    {
+      "path": "harness/H02",
+      "status": "partial",
+      "stop_reason": "budget_exhausted",
+      "claims": [],
+      "missing": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794553542,
+            "etag": "W/\"8d4d897fb5a08e941b566991263381de\"",
+            "expires_at": 1794639942,
+            "fetched_at": 1794553542,
+            "hit": false,
+            "last_modified": "Thu, 12 Nov 2026 18:15:40 GMT",
+            "request_url": "https://doc.rust-lang.org/std/collections/"
+          },
+          "document_version": "65c7a6224c1d0c723f9c0afa048516456202581e19eff4fcc5f9baf1c15ade3c",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          },
+          "id": "S1",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "4b93df1d7a728c75fe9860a3d52eb6adaddaeb71c486b872de4c05c445b3e230",
+          "title": "Module collections Copy item path",
+          "url": "https://doc.rust-lang.org/std/collections/"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794553544,
+            "etag": "W/\"1deaf13c46d931829a7391f4ba0182bd\"",
+            "expires_at": 1794639944,
+            "fetched_at": 1794553544,
+            "hit": false,
+            "last_modified": "Fri, 13 Nov 2026 01:15:26 GMT",
+            "request_url": "https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html"
+          },
+          "document_version": "881271ad4d4bda463151211e80be3c7720f6b7af768c9c8b230027680ec8a66a",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": true
+          },
+          "id": "S2",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "3b712a2b8ff6f0a385a1ac7b1401356132312cdf819d0b7fa7ea70ef2331e084",
+          "title": "Struct Vec Copy item path",
+          "url": "https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794553547,
+            "etag": null,
+            "expires_at": 1794639947,
+            "fetched_at": 1794553547,
+            "hit": false,
+            "last_modified": null,
+            "request_url": "https://mathworld.wolfram.com/Vector.html"
+          },
+          "document_version": "d0de231481b98ac55a155cc9b0ec62e52d81e6ed48436201b21ea86528af8356",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          },
+          "id": "S3",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "57d96778fc08439e9fb752280399ad0889c3737ca85dab21280e64a4cf98b169",
+          "title": "Vector",
+          "url": "https://mathworld.wolfram.com/Vector.html"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794553548,
+            "etag": null,
+            "expires_at": 1794553548,
+            "fetched_at": 1794553548,
+            "hit": false,
+            "last_modified": "Thu, 05 Nov 2026 15:15:50 GMT",
+            "request_url": "https://en.wikipedia.org/wiki/File:Blank.png"
+          },
+          "document_version": "1a315251288d9afe32bad03c61758489dcca87a2fad5cd44bea44d7a3b73bb64",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          },
+          "id": "S4",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "feed",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "f2f7b6ef97935f6dc9f126c196a1698894349a9fbd23d4c4985e3cf5bd0a29c8",
+          "title": "File:Blank.png",
+          "url": "https://en.wikipedia.org/wiki/File:Blank.png"
+        }
+      ],
+      "budget": {
+        "limits": {
+          "browser": 0,
+          "documents": 4,
+          "forms": 2,
+          "generations": 6,
+          "output_bytes": 32768,
+          "qwen": 4,
+          "seconds": 180,
+          "serp": 4,
+          "source_context_chars": 24000
+        },
+        "remaining": {
+          "documents": 0,
+          "forms": 0,
+          "generations": 3,
+          "milliseconds": 170545,
+          "qwen": 3,
+          "serp": 2
+        },
+        "used": {
+          "documents": 4,
+          "forms": 2,
+          "generations": 3,
+          "qwen": 1,
+          "serp": 2
+        }
+      },
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 4,
+        "hits": 0,
+        "http_reads": 6,
+        "misses": 11,
+        "qwen_calls": 1,
+        "refresh": false,
+        "writes": 10
+      },
+      "actions": [
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 1,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 1,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 1,
+          "eligible": true,
+          "source_id": "S1"
+        },
+        {
+          "action": "qwen",
+          "source_id": "S1",
+          "status": "failed_lexical_fallback"
+        },
+        {
+          "action": "read",
+          "attempt": 2,
+          "eligible": true,
+          "source_id": "S2"
+        },
+        {
+          "action": "withhold_claim",
+          "draft_claim": "A1",
+          "generation": 2,
+          "reason": "invalid/duplicate answer text"
+        },
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 2,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 2,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 3,
+          "eligible": true,
+          "source_id": "S3"
+        },
+        {
+          "action": "read",
+          "attempt": 4,
+          "eligible": true,
+          "source_id": "S4"
+        },
+        {
+          "action": "withhold_claim",
+          "draft_claim": "A1",
+          "generation": 3,
+          "reason": "invalid/duplicate answer text"
+        }
+      ],
+      "witnesses_checked": 0,
+      "tool_payload_equal": [
+        true
+      ],
+      "non_json_tool_error_messages": 0,
+      "known_inner_cost_usd": 0.00048533,
+      "unknown_inner_cost_calls": 0,
+      "known_outer_cost_usd": 0.0005507660000000001,
+      "unknown_outer_cost_calls": 0,
+      "outer_status": "completed"
+    },
+    {
+      "path": "harness-v2/H02",
+      "status": "partial",
+      "stop_reason": "budget_exhausted",
+      "claims": [],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "sources": [
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794553797,
+            "etag": "W/\"2fb473868cafb9395e000fac8589eca3\"",
+            "expires_at": 1794640197,
+            "fetched_at": 1794553797,
+            "hit": false,
+            "last_modified": "Thu, 12 Nov 2026 18:15:44 GMT",
+            "request_url": "https://doc.rust-lang.org/std/vec/struct.Vec.html"
+          },
+          "document_version": "5131f8c02f4b7940d90aea5dfb229c14da93179e6bfe3558825dfcf1deb78abb",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": true
+          },
+          "id": "S1",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "b62511815ec00792ff9d11ec5751a01ad1b883ffeee7b0e700321200d2895bf9",
+          "title": "Struct Vec Copy item path",
+          "url": "https://doc.rust-lang.org/std/vec/struct.Vec.html"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794553799,
+            "etag": "W/\"bbaa707de82c52c907d3cfbc9b209703\"",
+            "expires_at": 1794640199,
+            "fetched_at": 1794553799,
+            "hit": false,
+            "last_modified": "Fri, 13 Nov 2026 01:17:20 GMT",
+            "request_url": "https://doc.rust-lang.org/nightly/core/primitive.str.html"
+          },
+          "document_version": "e1d9896d6ce4732c2790594e616beadefa874d27a876c8d2472c5c399e5c82dd",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          },
+          "id": "S2",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "750aaf069306a62d7a6fa35617d5fb7363adbd7cf1e4d4c9b97ede3625f18771",
+          "title": "Primitive Type str Copy item path",
+          "url": "https://doc.rust-lang.org/nightly/core/primitive.str.html"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794553801,
+            "etag": "W/\"0243888d34c4ac9c843bb5e5259c9575\"",
+            "expires_at": 1794640201,
+            "fetched_at": 1794553801,
+            "hit": false,
+            "last_modified": "Thu, 12 Nov 2026 18:15:43 GMT",
+            "request_url": "https://doc.rust-lang.org/std/ops/trait.Shl.html"
+          },
+          "document_version": "d34c3e94419fc6cec84d6e955efe27f3b194f1d548d3967b9cb9d1c4045fd218",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          },
+          "id": "S3",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "229ca7145081ecaf72c889f948956769004a76dae761c55232410669085b96bb",
+          "title": "Trait Shl Copy item path",
+          "url": "https://doc.rust-lang.org/std/ops/trait.Shl.html"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794553803,
+            "etag": "W/\"250ca9e17c4ccec533b0b16f06422091\"",
+            "expires_at": 1794640203,
+            "fetched_at": 1794553803,
+            "hit": false,
+            "last_modified": "Thu, 12 Nov 2026 18:15:43 GMT",
+            "request_url": "https://doc.rust-lang.org/stable/std/ptr/fn.copy_nonoverlapping.html"
+          },
+          "document_version": "594938d238e4a6b51ae1fc447b500d0c9875473700c0a60e9079e3ae59c9093f",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          },
+          "id": "S4",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "4a0eba49a1d263e74b05695bf69d82d42daafe2c2b9ebcfcff466dce2d9b3d29",
+          "title": "Function copy_nonoverlapping Copy item path",
+          "url": "https://doc.rust-lang.org/stable/std/ptr/fn.copy_nonoverlapping.html"
+        }
+      ],
+      "budget": {
+        "limits": {
+          "browser": 0,
+          "documents": 4,
+          "forms": 2,
+          "generations": 6,
+          "output_bytes": 32768,
+          "qwen": 4,
+          "seconds": 180,
+          "serp": 4,
+          "source_context_chars": 24000
+        },
+        "remaining": {
+          "documents": 0,
+          "forms": 1,
+          "generations": 3,
+          "milliseconds": 166273,
+          "qwen": 3,
+          "serp": 3
+        },
+        "used": {
+          "documents": 4,
+          "forms": 1,
+          "generations": 3,
+          "qwen": 1,
+          "serp": 1
+        }
+      },
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 4,
+        "hits": 0,
+        "http_reads": 5,
+        "misses": 10,
+        "qwen_calls": 1,
+        "refresh": false,
+        "writes": 9
+      },
+      "actions": [
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 1,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 1,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 1,
+          "eligible": true,
+          "source_id": "S1"
+        },
+        {
+          "action": "qwen",
+          "source_id": "S1",
+          "status": "failed_lexical_fallback"
+        },
+        {
+          "action": "read",
+          "attempt": 2,
+          "eligible": true,
+          "source_id": "S2"
+        },
+        {
+          "action": "withhold_claim",
+          "draft_claim": "A1",
+          "generation": 2,
+          "reason": "invalid/duplicate answer text"
+        },
+        {
+          "action": "read",
+          "attempt": 3,
+          "eligible": true,
+          "source_id": "S3"
+        },
+        {
+          "action": "read",
+          "attempt": 4,
+          "eligible": true,
+          "source_id": "S4"
+        },
+        {
+          "action": "withhold_claim",
+          "draft_claim": "A1",
+          "generation": 3,
+          "reason": "invalid/duplicate answer text"
+        },
+        {
+          "action": "withhold_claim",
+          "draft_claim": "A2",
+          "generation": 3,
+          "reason": "unknown facet"
+        },
+        {
+          "action": "withhold_claim",
+          "draft_claim": "A3",
+          "generation": 3,
+          "reason": "invalid/duplicate answer text"
+        }
+      ],
+      "witnesses_checked": 0,
+      "tool_payload_equal": [
+        true
+      ],
+      "non_json_tool_error_messages": 0,
+      "known_inner_cost_usd": 0.00061254,
+      "unknown_inner_cost_calls": 0,
+      "known_outer_cost_usd": 0.00035373200000000005,
+      "unknown_outer_cost_calls": 0,
+      "outer_status": "completed"
+    },
+    {
+      "path": "harness-v3/H02",
+      "status": "partial",
+      "stop_reason": "no_new_evidence",
+      "claims": [
+        {
+          "answer_end": 71,
+          "answer_start": 0,
+          "evidence": [
+            {
+              "chunk_id": "S1P1",
+              "document_version": "5131f8c02f4b7940d90aea5dfb229c14da93179e6bfe3558825dfcf1deb78abb",
+              "end": 55815,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "Returns a newly allocated vector containing the elements in the range [at, len).",
+              "source_id": "S1",
+              "start": 55735
+            }
+          ],
+          "facets": [
+            0
+          ],
+          "id": "A1",
+          "kind": "inference",
+          "rationale": "Общий контракт split_off(at) применён к at=2 и [1, 2, 3, 4]: диапазон [2, 4) даёт [3, 4].",
+          "text": "Для [1, 2, 3, 4] split_off(2) возвращает новый Vec с элементами [3, 4]."
+        },
+        {
+          "answer_end": 178,
+          "answer_start": 130,
+          "evidence": [
+            {
+              "chunk_id": "S1P1",
+              "document_version": "5131f8c02f4b7940d90aea5dfb229c14da93179e6bfe3558825dfcf1deb78abb",
+              "end": 55934,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "After the call, the original vector will be left containing the elements [0, at) with its previous capacity unchanged.",
+              "source_id": "S1",
+              "start": 55816
+            }
+          ],
+          "facets": [
+            1
+          ],
+          "id": "A2",
+          "kind": "inference",
+          "rationale": "Подстановка at=2 в правило [0, at) даёт [0, 2), то есть [1, 2].",
+          "text": "После split_off(2) исходный Vec содержит [1, 2]."
+        },
+        {
+          "answer_end": 323,
+          "answer_start": 237,
+          "evidence": [
+            {
+              "chunk_id": "S1P1",
+              "document_version": "5131f8c02f4b7940d90aea5dfb229c14da93179e6bfe3558825dfcf1deb78abb",
+              "end": 55934,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "After the call, the original vector will be left containing the elements [0, at) with its previous capacity unchanged.",
+              "source_id": "S1",
+              "start": 55816
+            }
+          ],
+          "facets": [
+            2
+          ],
+          "id": "A3",
+          "kind": "fact",
+          "rationale": "",
+          "text": "Документация гарантирует, что capacity исходного Vec после split_off остаётся прежней."
+        }
+      ],
+      "missing": [],
+      "sources": [
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794553797,
+            "etag": "W/\"2fb473868cafb9395e000fac8589eca3\"",
+            "expires_at": 1794640197,
+            "fetched_at": 1794553797,
+            "hit": true,
+            "last_modified": "Thu, 12 Nov 2026 18:15:44 GMT",
+            "request_url": "https://doc.rust-lang.org/std/vec/struct.Vec.html"
+          },
+          "document_version": "5131f8c02f4b7940d90aea5dfb229c14da93179e6bfe3558825dfcf1deb78abb",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": true
+          },
+          "id": "S1",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "b62511815ec00792ff9d11ec5751a01ad1b883ffeee7b0e700321200d2895bf9",
+          "title": "Struct Vec Copy item path",
+          "url": "https://doc.rust-lang.org/std/vec/struct.Vec.html"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794553799,
+            "etag": "W/\"bbaa707de82c52c907d3cfbc9b209703\"",
+            "expires_at": 1794640199,
+            "fetched_at": 1794553799,
+            "hit": true,
+            "last_modified": "Fri, 13 Nov 2026 01:17:20 GMT",
+            "request_url": "https://doc.rust-lang.org/nightly/core/primitive.str.html"
+          },
+          "document_version": "e1d9896d6ce4732c2790594e616beadefa874d27a876c8d2472c5c399e5c82dd",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          },
+          "id": "S2",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "750aaf069306a62d7a6fa35617d5fb7363adbd7cf1e4d4c9b97ede3625f18771",
+          "title": "Primitive Type str Copy item path",
+          "url": "https://doc.rust-lang.org/nightly/core/primitive.str.html"
+        }
+      ],
+      "budget": {
+        "limits": {
+          "browser": 0,
+          "documents": 4,
+          "forms": 2,
+          "generations": 6,
+          "output_bytes": 32768,
+          "qwen": 4,
+          "seconds": 180,
+          "serp": 4,
+          "source_context_chars": 24000
+        },
+        "remaining": {
+          "documents": 2,
+          "forms": 1,
+          "generations": 3,
+          "milliseconds": 176113,
+          "qwen": 3,
+          "serp": 3
+        },
+        "used": {
+          "documents": 2,
+          "forms": 1,
+          "generations": 3,
+          "qwen": 1,
+          "serp": 1
+        }
+      },
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 0,
+        "hits": 5,
+        "http_reads": 0,
+        "misses": 1,
+        "qwen_calls": 1,
+        "refresh": false,
+        "writes": 0
+      },
+      "actions": [
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 1,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 1,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 1,
+          "eligible": true,
+          "source_id": "S1"
+        },
+        {
+          "action": "qwen",
+          "source_id": "S1",
+          "status": "failed_lexical_fallback"
+        },
+        {
+          "action": "read",
+          "attempt": 2,
+          "eligible": true,
+          "source_id": "S2"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A1",
+          "generation": 2
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A2",
+          "draft_claim": "A2",
+          "generation": 2
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A3",
+          "draft_claim": "A3",
+          "generation": 2
+        }
+      ],
+      "witnesses_checked": 3,
+      "tool_payload_equal": [
+        true
+      ],
+      "non_json_tool_error_messages": 0,
+      "known_inner_cost_usd": 0.000587894,
+      "unknown_inner_cost_calls": 0,
+      "known_outer_cost_usd": 8.9756e-05,
+      "unknown_outer_cost_calls": 1,
+      "outer_status": "incomplete"
+    },
+    {
+      "path": "harness-v3-repeat/H02",
+      "status": "partial",
+      "stop_reason": "no_new_evidence",
+      "claims": [
+        {
+          "answer_end": 71,
+          "answer_start": 0,
+          "evidence": [
+            {
+              "chunk_id": "S1P1",
+              "document_version": "5131f8c02f4b7940d90aea5dfb229c14da93179e6bfe3558825dfcf1deb78abb",
+              "end": 55815,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "Returns a newly allocated vector containing the elements in the range [at, len).",
+              "source_id": "S1",
+              "start": 55735
+            }
+          ],
+          "facets": [
+            0
+          ],
+          "id": "A1",
+          "kind": "inference",
+          "rationale": "Общий контракт split_off(at) применён к at=2 и [1, 2, 3, 4]: диапазон [2, 4) даёт [3, 4].",
+          "text": "Для [1, 2, 3, 4] split_off(2) возвращает новый Vec с элементами [3, 4]."
+        },
+        {
+          "answer_end": 178,
+          "answer_start": 130,
+          "evidence": [
+            {
+              "chunk_id": "S1P1",
+              "document_version": "5131f8c02f4b7940d90aea5dfb229c14da93179e6bfe3558825dfcf1deb78abb",
+              "end": 55934,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "After the call, the original vector will be left containing the elements [0, at) with its previous capacity unchanged.",
+              "source_id": "S1",
+              "start": 55816
+            }
+          ],
+          "facets": [
+            1
+          ],
+          "id": "A2",
+          "kind": "inference",
+          "rationale": "Подстановка at=2 в контракт: остаются элементы [0, 2), то есть [1, 2].",
+          "text": "После split_off(2) исходный Vec содержит [1, 2]."
+        },
+        {
+          "answer_end": 307,
+          "answer_start": 237,
+          "evidence": [
+            {
+              "chunk_id": "S1P1",
+              "document_version": "5131f8c02f4b7940d90aea5dfb229c14da93179e6bfe3558825dfcf1deb78abb",
+              "end": 55934,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "After the call, the original vector will be left containing the elements [0, at) with its previous capacity unchanged.",
+              "source_id": "S1",
+              "start": 55816
+            }
+          ],
+          "facets": [
+            2
+          ],
+          "id": "A3",
+          "kind": "fact",
+          "rationale": ".",
+          "text": "Capacity исходного Vec после split_off не меняется — остаётся прежней."
+        }
+      ],
+      "missing": [],
+      "sources": [
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794553797,
+            "etag": "W/\"2fb473868cafb9395e000fac8589eca3\"",
+            "expires_at": 1794640197,
+            "fetched_at": 1794553797,
+            "hit": true,
+            "last_modified": "Thu, 12 Nov 2026 18:15:44 GMT",
+            "request_url": "https://doc.rust-lang.org/std/vec/struct.Vec.html"
+          },
+          "document_version": "5131f8c02f4b7940d90aea5dfb229c14da93179e6bfe3558825dfcf1deb78abb",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": true
+          },
+          "id": "S1",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "b62511815ec00792ff9d11ec5751a01ad1b883ffeee7b0e700321200d2895bf9",
+          "title": "Struct Vec Copy item path",
+          "url": "https://doc.rust-lang.org/std/vec/struct.Vec.html"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794553799,
+            "etag": "W/\"bbaa707de82c52c907d3cfbc9b209703\"",
+            "expires_at": 1794640199,
+            "fetched_at": 1794553799,
+            "hit": true,
+            "last_modified": "Fri, 13 Nov 2026 01:17:20 GMT",
+            "request_url": "https://doc.rust-lang.org/nightly/core/primitive.str.html"
+          },
+          "document_version": "e1d9896d6ce4732c2790594e616beadefa874d27a876c8d2472c5c399e5c82dd",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          },
+          "id": "S2",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "750aaf069306a62d7a6fa35617d5fb7363adbd7cf1e4d4c9b97ede3625f18771",
+          "title": "Primitive Type str Copy item path",
+          "url": "https://doc.rust-lang.org/nightly/core/primitive.str.html"
+        }
+      ],
+      "budget": {
+        "limits": {
+          "browser": 0,
+          "documents": 4,
+          "forms": 2,
+          "generations": 6,
+          "output_bytes": 32768,
+          "qwen": 4,
+          "seconds": 180,
+          "serp": 4,
+          "source_context_chars": 24000
+        },
+        "remaining": {
+          "documents": 2,
+          "forms": 1,
+          "generations": 3,
+          "milliseconds": 175836,
+          "qwen": 3,
+          "serp": 3
+        },
+        "used": {
+          "documents": 2,
+          "forms": 1,
+          "generations": 3,
+          "qwen": 1,
+          "serp": 1
+        }
+      },
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 0,
+        "hits": 5,
+        "http_reads": 0,
+        "misses": 1,
+        "qwen_calls": 1,
+        "refresh": false,
+        "writes": 0
+      },
+      "actions": [
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 1,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 1,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 1,
+          "eligible": true,
+          "source_id": "S1"
+        },
+        {
+          "action": "qwen",
+          "source_id": "S1",
+          "status": "failed_lexical_fallback"
+        },
+        {
+          "action": "read",
+          "attempt": 2,
+          "eligible": true,
+          "source_id": "S2"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A1",
+          "generation": 2
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A2",
+          "draft_claim": "A2",
+          "generation": 2
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A3",
+          "draft_claim": "A3",
+          "generation": 2
+        }
+      ],
+      "witnesses_checked": 3,
+      "tool_payload_equal": [
+        true
+      ],
+      "non_json_tool_error_messages": 0,
+      "known_inner_cost_usd": 0.000590008,
+      "unknown_inner_cost_calls": 0,
+      "known_outer_cost_usd": 0.0003541,
+      "unknown_outer_cost_calls": 0,
+      "outer_status": "completed"
+    },
+    {
+      "path": "harness-v4/H02",
+      "status": "partial",
+      "stop_reason": "no_new_evidence",
+      "claims": [],
+      "missing": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794553542,
+            "etag": "W/\"8d4d897fb5a08e941b566991263381de\"",
+            "expires_at": 1794639942,
+            "fetched_at": 1794553542,
+            "hit": true,
+            "last_modified": "Thu, 12 Nov 2026 18:15:40 GMT",
+            "request_url": "https://doc.rust-lang.org/std/collections/"
+          },
+          "document_version": "65c7a6224c1d0c723f9c0afa048516456202581e19eff4fcc5f9baf1c15ade3c",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          },
+          "id": "S1",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "4b93df1d7a728c75fe9860a3d52eb6adaddaeb71c486b872de4c05c445b3e230",
+          "title": "Module collections Copy item path",
+          "url": "https://doc.rust-lang.org/std/collections/"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794553544,
+            "etag": "W/\"1deaf13c46d931829a7391f4ba0182bd\"",
+            "expires_at": 1794639944,
+            "fetched_at": 1794553544,
+            "hit": true,
+            "last_modified": "Fri, 13 Nov 2026 01:15:26 GMT",
+            "request_url": "https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html"
+          },
+          "document_version": "881271ad4d4bda463151211e80be3c7720f6b7af768c9c8b230027680ec8a66a",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": true
+          },
+          "id": "S2",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "3b712a2b8ff6f0a385a1ac7b1401356132312cdf819d0b7fa7ea70ef2331e084",
+          "title": "Struct Vec Copy item path",
+          "url": "https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html"
+        }
+      ],
+      "budget": {
+        "limits": {
+          "browser": 0,
+          "documents": 4,
+          "forms": 2,
+          "generations": 6,
+          "output_bytes": 32768,
+          "qwen": 4,
+          "seconds": 180,
+          "serp": 4,
+          "source_context_chars": 24000
+        },
+        "remaining": {
+          "documents": 0,
+          "forms": 0,
+          "generations": 3,
+          "milliseconds": 157182,
+          "qwen": 3,
+          "serp": 2
+        },
+        "used": {
+          "documents": 4,
+          "forms": 2,
+          "generations": 3,
+          "qwen": 1,
+          "serp": 2
+        }
+      },
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 0,
+        "hits": 5,
+        "http_reads": 4,
+        "misses": 4,
+        "qwen_calls": 1,
+        "refresh": false,
+        "writes": 2
+      },
+      "actions": [
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 1,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 1,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 1,
+          "eligible": true,
+          "source_id": "S1"
+        },
+        {
+          "action": "qwen",
+          "source_id": "S1",
+          "status": "failed_lexical_fallback"
+        },
+        {
+          "action": "read",
+          "attempt": 2,
+          "eligible": true,
+          "source_id": "S2"
+        },
+        {
+          "action": "withhold_claim",
+          "draft_claim": "A1",
+          "generation": 2,
+          "reason": "invalid/duplicate answer text"
+        },
+        {
+          "action": "withhold_claim",
+          "draft_claim": "A2",
+          "generation": 2,
+          "reason": "invalid/duplicate answer text"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A3",
+          "generation": 2
+        },
+        {
+          "action": "withhold_claim",
+          "draft_claim": "A4",
+          "generation": 2,
+          "reason": "invalid/duplicate answer text"
+        },
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 2,
+          "results": 8
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 2,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 3,
+          "error": "unsupported_content",
+          "url": "https://www.mdssolution.cz/src/Frontend/Files/FileExtend/source/1_1614872542.pdf"
+        },
+        {
+          "action": "read",
+          "attempt": 4,
+          "error": "fetch_timeout",
+          "url": "https://rdrr.io/r/base/asplit.html"
+        }
+      ],
+      "witnesses_checked": 0,
+      "tool_payload_equal": [
+        true
+      ],
+      "non_json_tool_error_messages": 0,
+      "known_inner_cost_usd": 0.0005214659999999999,
+      "unknown_inner_cost_calls": 0,
+      "known_outer_cost_usd": 0.00035026999999999997,
+      "unknown_outer_cost_calls": 0,
+      "outer_status": "completed"
+    },
+    {
+      "path": "harness-v5/H02",
+      "status": "partial",
+      "stop_reason": "no_new_evidence",
+      "claims": [
+        {
+          "answer_end": 71,
+          "answer_start": 0,
+          "evidence": [
+            {
+              "chunk_id": "S1P1",
+              "document_version": "5131f8c02f4b7940d90aea5dfb229c14da93179e6bfe3558825dfcf1deb78abb",
+              "end": 55815,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "Returns a newly allocated vector containing the elements in the range [at, len).",
+              "source_id": "S1",
+              "start": 55735
+            }
+          ],
+          "facets": [
+            0
+          ],
+          "id": "A1",
+          "kind": "inference",
+          "rationale": "Документация задаёт общий контракт для диапазона [at, len); подстановка at=2, len=4 для [1, 2, 3, 4] даёт [3, 4].",
+          "text": "Для [1, 2, 3, 4] split_off(2) возвращает новый Vec с элементами [3, 4]."
+        },
+        {
+          "answer_end": 178,
+          "answer_start": 130,
+          "evidence": [
+            {
+              "chunk_id": "S1P1",
+              "document_version": "5131f8c02f4b7940d90aea5dfb229c14da93179e6bfe3558825dfcf1deb78abb",
+              "end": 55934,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "After the call, the original vector will be left containing the elements [0, at) with its previous capacity unchanged.",
+              "source_id": "S1",
+              "start": 55816
+            }
+          ],
+          "facets": [
+            1
+          ],
+          "id": "A2",
+          "kind": "inference",
+          "rationale": "Общий контракт [0, at) при at=2 для [1, 2, 3, 4] оставляет первые два элемента.",
+          "text": "После split_off(2) исходный Vec содержит [1, 2]."
+        },
+        {
+          "answer_end": 327,
+          "answer_start": 237,
+          "evidence": [
+            {
+              "chunk_id": "S1P1",
+              "document_version": "5131f8c02f4b7940d90aea5dfb229c14da93179e6bfe3558825dfcf1deb78abb",
+              "end": 55934,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "After the call, the original vector will be left containing the elements [0, at) with its previous capacity unchanged.",
+              "source_id": "S1",
+              "start": 55816
+            }
+          ],
+          "facets": [
+            2
+          ],
+          "id": "A3",
+          "kind": "fact",
+          "rationale": ".",
+          "text": "Документация прямо указывает, что capacity исходного Vec после split_off остаётся прежней."
+        }
+      ],
+      "missing": [],
+      "sources": [
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794553797,
+            "etag": "W/\"2fb473868cafb9395e000fac8589eca3\"",
+            "expires_at": 1794640197,
+            "fetched_at": 1794553797,
+            "hit": true,
+            "last_modified": "Thu, 12 Nov 2026 18:15:44 GMT",
+            "request_url": "https://doc.rust-lang.org/std/vec/struct.Vec.html"
+          },
+          "document_version": "5131f8c02f4b7940d90aea5dfb229c14da93179e6bfe3558825dfcf1deb78abb",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": true
+          },
+          "id": "S1",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "b62511815ec00792ff9d11ec5751a01ad1b883ffeee7b0e700321200d2895bf9",
+          "title": "Struct Vec Copy item path",
+          "url": "https://doc.rust-lang.org/std/vec/struct.Vec.html"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794553799,
+            "etag": "W/\"bbaa707de82c52c907d3cfbc9b209703\"",
+            "expires_at": 1794640199,
+            "fetched_at": 1794553799,
+            "hit": true,
+            "last_modified": "Fri, 13 Nov 2026 01:17:20 GMT",
+            "request_url": "https://doc.rust-lang.org/nightly/core/primitive.str.html"
+          },
+          "document_version": "e1d9896d6ce4732c2790594e616beadefa874d27a876c8d2472c5c399e5c82dd",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          },
+          "id": "S2",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "750aaf069306a62d7a6fa35617d5fb7363adbd7cf1e4d4c9b97ede3625f18771",
+          "title": "Primitive Type str Copy item path",
+          "url": "https://doc.rust-lang.org/nightly/core/primitive.str.html"
+        }
+      ],
+      "budget": {
+        "limits": {
+          "browser": 0,
+          "documents": 4,
+          "forms": 2,
+          "generations": 6,
+          "output_bytes": 32768,
+          "qwen": 4,
+          "seconds": 180,
+          "serp": 4,
+          "source_context_chars": 24000
+        },
+        "remaining": {
+          "documents": 2,
+          "forms": 1,
+          "generations": 3,
+          "milliseconds": 173833,
+          "qwen": 3,
+          "serp": 3
+        },
+        "used": {
+          "documents": 2,
+          "forms": 1,
+          "generations": 3,
+          "qwen": 1,
+          "serp": 1
+        }
+      },
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 0,
+        "hits": 4,
+        "http_reads": 1,
+        "misses": 2,
+        "qwen_calls": 1,
+        "refresh": false,
+        "writes": 1
+      },
+      "actions": [
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 1,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 1,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 1,
+          "eligible": true,
+          "source_id": "S1"
+        },
+        {
+          "action": "qwen",
+          "source_id": "S1",
+          "status": "failed_lexical_fallback"
+        },
+        {
+          "action": "read",
+          "attempt": 2,
+          "eligible": true,
+          "source_id": "S2"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A1",
+          "generation": 2
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A2",
+          "draft_claim": "A2",
+          "generation": 2
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A3",
+          "draft_claim": "A3",
+          "generation": 2
+        }
+      ],
+      "witnesses_checked": 3,
+      "tool_payload_equal": [
+        true
+      ],
+      "non_json_tool_error_messages": 0,
+      "known_inner_cost_usd": 0.000618284,
+      "unknown_inner_cost_calls": 0,
+      "known_outer_cost_usd": 0.00037506400000000004,
+      "unknown_outer_cost_calls": 0,
+      "outer_status": "completed"
+    },
+    {
+      "path": "harness-v6/H02",
+      "status": "partial",
+      "stop_reason": "no_new_evidence",
+      "claims": [
+        {
+          "answer_end": 71,
+          "answer_start": 0,
+          "evidence": [
+            {
+              "chunk_id": "S1P1",
+              "document_version": "5131f8c02f4b7940d90aea5dfb229c14da93179e6bfe3558825dfcf1deb78abb",
+              "end": 55815,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "Returns a newly allocated vector containing the elements in the range [at, len).",
+              "source_id": "S1",
+              "start": 55735
+            }
+          ],
+          "facets": [
+            0
+          ],
+          "id": "A1",
+          "kind": "inference",
+          "rationale": "Общий контракт split_off(at) применён к at=2 и [1, 2, 3, 4]: диапазон [2, 4) даёт [3, 4].",
+          "text": "Для [1, 2, 3, 4] split_off(2) возвращает новый Vec с элементами [3, 4]."
+        },
+        {
+          "answer_end": 172,
+          "answer_start": 130,
+          "evidence": [
+            {
+              "chunk_id": "S1P1",
+              "document_version": "5131f8c02f4b7940d90aea5dfb229c14da93179e6bfe3558825dfcf1deb78abb",
+              "end": 55934,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "After the call, the original vector will be left containing the elements [0, at) with its previous capacity unchanged.",
+              "source_id": "S1",
+              "start": 55816
+            }
+          ],
+          "facets": [
+            1
+          ],
+          "id": "A2",
+          "kind": "inference",
+          "rationale": "Контракт применён к at=2: диапазон [0, 2) даёт [1, 2].",
+          "text": "После вызова исходный Vec содержит [1, 2]."
+        },
+        {
+          "answer_end": 297,
+          "answer_start": 231,
+          "evidence": [
+            {
+              "chunk_id": "S1P1",
+              "document_version": "5131f8c02f4b7940d90aea5dfb229c14da93179e6bfe3558825dfcf1deb78abb",
+              "end": 55934,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "After the call, the original vector will be left containing the elements [0, at) with its previous capacity unchanged.",
+              "source_id": "S1",
+              "start": 55816
+            }
+          ],
+          "facets": [
+            2
+          ],
+          "id": "A3",
+          "kind": "fact",
+          "rationale": ".",
+          "text": "Ёмкость (capacity) исходного Vec после split_off остаётся прежней."
+        }
+      ],
+      "missing": [],
+      "sources": [
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794553797,
+            "etag": "W/\"2fb473868cafb9395e000fac8589eca3\"",
+            "expires_at": 1794640197,
+            "fetched_at": 1794553797,
+            "hit": true,
+            "last_modified": "Thu, 12 Nov 2026 18:15:44 GMT",
+            "request_url": "https://doc.rust-lang.org/std/vec/struct.Vec.html"
+          },
+          "document_version": "5131f8c02f4b7940d90aea5dfb229c14da93179e6bfe3558825dfcf1deb78abb",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": true
+          },
+          "id": "S1",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "b62511815ec00792ff9d11ec5751a01ad1b883ffeee7b0e700321200d2895bf9",
+          "title": "Struct Vec Copy item path",
+          "url": "https://doc.rust-lang.org/std/vec/struct.Vec.html"
+        },
+        {
+          "cache": {
+            "allowed": true,
+            "checked_at": 1794553799,
+            "etag": "W/\"bbaa707de82c52c907d3cfbc9b209703\"",
+            "expires_at": 1794640199,
+            "fetched_at": 1794553799,
+            "hit": true,
+            "last_modified": "Fri, 13 Nov 2026 01:17:20 GMT",
+            "request_url": "https://doc.rust-lang.org/nightly/core/primitive.str.html"
+          },
+          "document_version": "e1d9896d6ce4732c2790594e616beadefa874d27a876c8d2472c5c399e5c82dd",
+          "eligibility": "read_body",
+          "eligible": true,
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          },
+          "id": "S2",
+          "parent_url": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "text_hash": "750aaf069306a62d7a6fa35617d5fb7363adbd7cf1e4d4c9b97ede3625f18771",
+          "title": "Primitive Type str Copy item path",
+          "url": "https://doc.rust-lang.org/nightly/core/primitive.str.html"
+        }
+      ],
+      "budget": {
+        "limits": {
+          "browser": 0,
+          "documents": 4,
+          "forms": 2,
+          "generations": 6,
+          "output_bytes": 32768,
+          "qwen": 4,
+          "seconds": 180,
+          "serp": 4,
+          "source_context_chars": 24000
+        },
+        "remaining": {
+          "documents": 2,
+          "forms": 1,
+          "generations": 3,
+          "milliseconds": 176173,
+          "qwen": 3,
+          "serp": 3
+        },
+        "used": {
+          "documents": 2,
+          "forms": 1,
+          "generations": 3,
+          "qwen": 1,
+          "serp": 1
+        }
+      },
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 0,
+        "hits": 5,
+        "http_reads": 0,
+        "misses": 1,
+        "qwen_calls": 1,
+        "refresh": false,
+        "writes": 0
+      },
+      "actions": [
+        {
+          "action": "serp",
+          "engine": "seznam",
+          "error": null,
+          "form": 1,
+          "results": 10
+        },
+        {
+          "action": "serp",
+          "engine": "naver",
+          "form": 1,
+          "status": "source_disabled"
+        },
+        {
+          "action": "read",
+          "attempt": 1,
+          "eligible": true,
+          "source_id": "S1"
+        },
+        {
+          "action": "qwen",
+          "source_id": "S1",
+          "status": "failed_lexical_fallback"
+        },
+        {
+          "action": "read",
+          "attempt": 2,
+          "eligible": true,
+          "source_id": "S2"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A1",
+          "generation": 2
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A2",
+          "draft_claim": "A2",
+          "generation": 2
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A3",
+          "draft_claim": "A3",
+          "generation": 2
+        }
+      ],
+      "witnesses_checked": 3,
+      "tool_payload_equal": [
+        true
+      ],
+      "non_json_tool_error_messages": 0,
+      "known_inner_cost_usd": 0.000597482,
+      "unknown_inner_cost_calls": 0,
+      "known_outer_cost_usd": 0.000361226,
+      "unknown_outer_cost_calls": 0,
+      "outer_status": "completed"
+    }
+  ],
+  "components": [
+    {
+      "path": "range-model-replay",
+      "calls": 4,
+      "known_cost_usd": 0.000536704,
+      "results": [
+        {
+          "case": "D04-result.json",
+          "claims": [
+            {
+              "answer_end": 146,
+              "answer_start": 0,
+              "evidence": [
+                {
+                  "chunk_id": "S1P2",
+                  "document_version": "f0621d95c7f82f5a4845a799291870aea99c2ab57e194145fa3e98641cf87a06",
+                  "end": 19717,
+                  "field": "text",
+                  "offset_unit": "Unicode code points in original extracted text",
+                  "quote": "The\n   processing of the \"exp\" claim requires that the current date/time\n   MUST be before the expiration date/time listed in the \"exp\" claim.",
+                  "source_id": "S1",
+                  "start": 19575
+                }
+              ],
+              "facets": [
+                0
+              ],
+              "id": "A1",
+              "kind": "fact",
+              "rationale": "",
+              "text": "RFC 7519: The processing of the \"exp\" claim requires that the current date/time MUST be before the expiration date/time listed in the \"exp\" claim."
+            }
+          ],
+          "missing": [
+            1
+          ]
+        },
+        {
+          "case": "D02-result.json",
+          "claims": [
+            {
+              "answer_end": 156,
+              "answer_start": 0,
+              "evidence": [
+                {
+                  "chunk_id": "S1P3",
+                  "document_version": "8e16909ad070b9600a2b13dec8dffdec619415a15b4431550fe3fa78e4cd1dd9",
+                  "end": 3647,
+                  "field": "text",
+                  "offset_unit": "Unicode code points in original extracted text",
+                  "quote": "\".invalid\" is intended for use in online construction of domain\n      names that are sure to be invalid and which it is obvious at a\n      glance are invalid.",
+                  "source_id": "S1",
+                  "start": 3489
+                }
+              ],
+              "facets": [
+                0
+              ],
+              "id": "A1",
+              "kind": "fact",
+              "rationale": "",
+              "text": "RFC 2606: \".invalid\" is intended for use in online construction of domain names that are sure to be invalid and which it is obvious at a glance are invalid."
+            }
+          ],
+          "missing": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "path": "range-model-replay-v2",
+      "calls": 4,
+      "known_cost_usd": 0.00042794,
+      "results": [
+        {
+          "case": "D04-result.json",
+          "claims": [
+            {
+              "answer_end": 146,
+              "answer_start": 0,
+              "evidence": [
+                {
+                  "chunk_id": "S1P2",
+                  "document_version": "f0621d95c7f82f5a4845a799291870aea99c2ab57e194145fa3e98641cf87a06",
+                  "end": 19717,
+                  "field": "text",
+                  "offset_unit": "Unicode code points in original extracted text",
+                  "quote": "The\n   processing of the \"exp\" claim requires that the current date/time\n   MUST be before the expiration date/time listed in the \"exp\" claim.",
+                  "source_id": "S1",
+                  "start": 19575
+                }
+              ],
+              "facets": [
+                0
+              ],
+              "id": "A1",
+              "kind": "fact",
+              "rationale": "",
+              "text": "RFC 7519: The processing of the \"exp\" claim requires that the current date/time MUST be before the expiration date/time listed in the \"exp\" claim."
+            }
+          ],
+          "missing": [
+            1
+          ]
+        },
+        {
+          "case": "D02-result.json",
+          "claims": [
+            {
+              "answer_end": 156,
+              "answer_start": 0,
+              "evidence": [
+                {
+                  "chunk_id": "S1P3",
+                  "document_version": "8e16909ad070b9600a2b13dec8dffdec619415a15b4431550fe3fa78e4cd1dd9",
+                  "end": 3647,
+                  "field": "text",
+                  "offset_unit": "Unicode code points in original extracted text",
+                  "quote": "\".invalid\" is intended for use in online construction of domain\n      names that are sure to be invalid and which it is obvious at a\n      glance are invalid.",
+                  "source_id": "S1",
+                  "start": 3489
+                }
+              ],
+              "facets": [
+                0
+              ],
+              "id": "A1",
+              "kind": "fact",
+              "rationale": "",
+              "text": "RFC 2606: \".invalid\" is intended for use in online construction of domain names that are sure to be invalid and which it is obvious at a glance are invalid."
+            }
+          ],
+          "missing": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "path": "range-model-replay-v3",
+      "calls": 1,
+      "known_cost_usd": 0.000179368,
+      "results": []
+    },
+    {
+      "path": "range-model-replay-v4",
+      "calls": 4,
+      "known_cost_usd": 0.000509552,
+      "results": [
+        {
+          "case": "D04-result.json",
+          "claims": [
+            {
+              "answer_end": 146,
+              "answer_start": 0,
+              "evidence": [
+                {
+                  "chunk_id": "S1P2",
+                  "document_version": "f0621d95c7f82f5a4845a799291870aea99c2ab57e194145fa3e98641cf87a06",
+                  "end": 19717,
+                  "field": "text",
+                  "offset_unit": "Unicode code points in original extracted text",
+                  "quote": "The\n   processing of the \"exp\" claim requires that the current date/time\n   MUST be before the expiration date/time listed in the \"exp\" claim.",
+                  "source_id": "S1",
+                  "start": 19575
+                }
+              ],
+              "facets": [
+                0
+              ],
+              "id": "A1",
+              "kind": "fact",
+              "rationale": "",
+              "text": "RFC 7519: The processing of the \"exp\" claim requires that the current date/time MUST be before the expiration date/time listed in the \"exp\" claim."
+            },
+            {
+              "answer_end": 267,
+              "answer_start": 199,
+              "evidence": [
+                {
+                  "chunk_id": "S1P2",
+                  "document_version": "f0621d95c7f82f5a4845a799291870aea99c2ab57e194145fa3e98641cf87a06",
+                  "end": 20050,
+                  "field": "text",
+                  "offset_unit": "Unicode code points in original extracted text",
+                  "quote": "Its value MUST be a number\n   containing a NumericDate value.",
+                  "source_id": "S1",
+                  "start": 19989
+                }
+              ],
+              "facets": [
+                1
+              ],
+              "id": "A2",
+              "kind": "fact",
+              "rationale": "",
+              "text": "RFC 7519: Its value MUST be a number containing a NumericDate value."
+            }
+          ],
+          "missing": [
+            1
+          ]
+        },
+        {
+          "case": "D02-result.json",
+          "claims": [
+            {
+              "answer_end": 156,
+              "answer_start": 0,
+              "evidence": [
+                {
+                  "chunk_id": "S1P3",
+                  "document_version": "8e16909ad070b9600a2b13dec8dffdec619415a15b4431550fe3fa78e4cd1dd9",
+                  "end": 3647,
+                  "field": "text",
+                  "offset_unit": "Unicode code points in original extracted text",
+                  "quote": "\".invalid\" is intended for use in online construction of domain\n      names that are sure to be invalid and which it is obvious at a\n      glance are invalid.",
+                  "source_id": "S1",
+                  "start": 3489
+                }
+              ],
+              "facets": [
+                0
+              ],
+              "id": "A1",
+              "kind": "fact",
+              "rationale": "",
+              "text": "RFC 2606: \".invalid\" is intended for use in online construction of domain names that are sure to be invalid and which it is obvious at a glance are invalid."
+            },
+            {
+              "answer_end": 298,
+              "answer_start": 211,
+              "evidence": [
+                {
+                  "chunk_id": "S1P3",
+                  "document_version": "8e16909ad070b9600a2b13dec8dffdec619415a15b4431550fe3fa78e4cd1dd9",
+                  "end": 3407,
+                  "field": "text",
+                  "offset_unit": "Unicode code points in original extracted text",
+                  "quote": "\".test\" is recommended for use in testing of current or new DNS\n      related code.",
+                  "source_id": "S1",
+                  "start": 3324
+                }
+              ],
+              "facets": [
+                0
+              ],
+              "id": "A2",
+              "kind": "fact",
+              "rationale": "",
+              "text": "RFC 2606: \".test\" is recommended for use in testing of current or new DNS related code."
+            }
+          ],
+          "missing": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "path": "range-model-replay-v5",
+      "calls": 4,
+      "known_cost_usd": 0.0005327040000000001,
+      "results": [
+        {
+          "case": "D04-result.json",
+          "claims": [
+            {
+              "answer_end": 137,
+              "answer_start": 0,
+              "evidence": [
+                {
+                  "chunk_id": "S1P2",
+                  "document_version": "f0621d95c7f82f5a4845a799291870aea99c2ab57e194145fa3e98641cf87a06",
+                  "end": 19573,
+                  "field": "text",
+                  "offset_unit": "Unicode code points in original extracted text",
+                  "quote": "The \"exp\" (expiration time) claim identifies the expiration time on\n   or after which the JWT MUST NOT be accepted for processing.",
+                  "source_id": "S1",
+                  "start": 19443
+                }
+              ],
+              "facets": [
+                0
+              ],
+              "id": "A1",
+              "kind": "fact",
+              "rationale": "",
+              "text": "RFC 7519: The \"exp\" (expiration time) claim identifies the expiration time on or after which the JWT MUST NOT be accepted for processing."
+            },
+            {
+              "answer_end": 258,
+              "answer_start": 190,
+              "evidence": [
+                {
+                  "chunk_id": "S1P2",
+                  "document_version": "f0621d95c7f82f5a4845a799291870aea99c2ab57e194145fa3e98641cf87a06",
+                  "end": 20050,
+                  "field": "text",
+                  "offset_unit": "Unicode code points in original extracted text",
+                  "quote": "Its value MUST be a number\n   containing a NumericDate value.",
+                  "source_id": "S1",
+                  "start": 19989
+                }
+              ],
+              "facets": [
+                1
+              ],
+              "id": "A2",
+              "kind": "fact",
+              "rationale": "",
+              "text": "RFC 7519: Its value MUST be a number containing a NumericDate value."
+            }
+          ],
+          "missing": [
+            1
+          ]
+        },
+        {
+          "case": "D02-result.json",
+          "claims": [
+            {
+              "answer_end": 156,
+              "answer_start": 0,
+              "evidence": [
+                {
+                  "chunk_id": "S1P3",
+                  "document_version": "8e16909ad070b9600a2b13dec8dffdec619415a15b4431550fe3fa78e4cd1dd9",
+                  "end": 3647,
+                  "field": "text",
+                  "offset_unit": "Unicode code points in original extracted text",
+                  "quote": "\".invalid\" is intended for use in online construction of domain\n      names that are sure to be invalid and which it is obvious at a\n      glance are invalid.",
+                  "source_id": "S1",
+                  "start": 3489
+                }
+              ],
+              "facets": [
+                0
+              ],
+              "id": "A1",
+              "kind": "fact",
+              "rationale": "",
+              "text": "RFC 2606: \".invalid\" is intended for use in online construction of domain names that are sure to be invalid and which it is obvious at a glance are invalid."
+            },
+            {
+              "answer_end": 298,
+              "answer_start": 211,
+              "evidence": [
+                {
+                  "chunk_id": "S1P3",
+                  "document_version": "8e16909ad070b9600a2b13dec8dffdec619415a15b4431550fe3fa78e4cd1dd9",
+                  "end": 3407,
+                  "field": "text",
+                  "offset_unit": "Unicode code points in original extracted text",
+                  "quote": "\".test\" is recommended for use in testing of current or new DNS\n      related code.",
+                  "source_id": "S1",
+                  "start": 3324
+                }
+              ],
+              "facets": [
+                0
+              ],
+              "id": "A2",
+              "kind": "fact",
+              "rationale": "",
+              "text": "RFC 2606: \".test\" is recommended for use in testing of current or new DNS related code."
+            },
+            {
+              "answer_end": 429,
+              "answer_start": 353,
+              "evidence": [
+                {
+                  "chunk_id": "S1P3",
+                  "document_version": "8e16909ad070b9600a2b13dec8dffdec619415a15b4431550fe3fa78e4cd1dd9",
+                  "end": 3481,
+                  "field": "text",
+                  "offset_unit": "Unicode code points in original extracted text",
+                  "quote": "\".example\" is recommended for use in documentation or as examples.",
+                  "source_id": "S1",
+                  "start": 3415
+                }
+              ],
+              "facets": [
+                0
+              ],
+              "id": "A3",
+              "kind": "fact",
+              "rationale": "",
+              "text": "RFC 2606: \".example\" is recommended for use in documentation or as examples."
+            }
+          ],
+          "missing": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "path": "range-model-replay-v6",
+      "calls": 4,
+      "known_cost_usd": 0.00056342,
+      "results": [
+        {
+          "case": "D04-result.json",
+          "claims": [
+            {
+              "answer_end": 137,
+              "answer_start": 0,
+              "evidence": [
+                {
+                  "chunk_id": "S1P2",
+                  "document_version": "f0621d95c7f82f5a4845a799291870aea99c2ab57e194145fa3e98641cf87a06",
+                  "end": 19573,
+                  "field": "text",
+                  "offset_unit": "Unicode code points in original extracted text",
+                  "quote": "The \"exp\" (expiration time) claim identifies the expiration time on\n   or after which the JWT MUST NOT be accepted for processing.",
+                  "source_id": "S1",
+                  "start": 19443
+                }
+              ],
+              "facets": [
+                0
+              ],
+              "id": "A1",
+              "kind": "fact",
+              "rationale": "",
+              "text": "RFC 7519: The \"exp\" (expiration time) claim identifies the expiration time on or after which the JWT MUST NOT be accepted for processing."
+            },
+            {
+              "answer_end": 336,
+              "answer_start": 190,
+              "evidence": [
+                {
+                  "chunk_id": "S1P2",
+                  "document_version": "f0621d95c7f82f5a4845a799291870aea99c2ab57e194145fa3e98641cf87a06",
+                  "end": 19717,
+                  "field": "text",
+                  "offset_unit": "Unicode code points in original extracted text",
+                  "quote": "The\n   processing of the \"exp\" claim requires that the current date/time\n   MUST be before the expiration date/time listed in the \"exp\" claim.",
+                  "source_id": "S1",
+                  "start": 19575
+                }
+              ],
+              "facets": [
+                0
+              ],
+              "id": "A2",
+              "kind": "fact",
+              "rationale": "",
+              "text": "RFC 7519: The processing of the \"exp\" claim requires that the current date/time MUST be before the expiration date/time listed in the \"exp\" claim."
+            },
+            {
+              "answer_end": 509,
+              "answer_start": 389,
+              "evidence": [
+                {
+                  "chunk_id": "S1P2",
+                  "document_version": "f0621d95c7f82f5a4845a799291870aea99c2ab57e194145fa3e98641cf87a06",
+                  "end": 19987,
+                  "field": "text",
+                  "offset_unit": "Unicode code points in original extracted text",
+                  "quote": "Implementers MAY provide for some small leeway, usually no more than\n   a few minutes, to account for clock skew.",
+                  "source_id": "S1",
+                  "start": 19874
+                }
+              ],
+              "facets": [
+                1
+              ],
+              "id": "A3",
+              "kind": "fact",
+              "rationale": "",
+              "text": "RFC 7519: Implementers MAY provide for some small leeway, usually no more than a few minutes, to account for clock skew."
+            }
+          ],
+          "missing": []
+        },
+        {
+          "case": "D02-result.json",
+          "claims": [
+            {
+              "answer_end": 156,
+              "answer_start": 0,
+              "evidence": [
+                {
+                  "chunk_id": "S1P3",
+                  "document_version": "8e16909ad070b9600a2b13dec8dffdec619415a15b4431550fe3fa78e4cd1dd9",
+                  "end": 3647,
+                  "field": "text",
+                  "offset_unit": "Unicode code points in original extracted text",
+                  "quote": "\".invalid\" is intended for use in online construction of domain\n      names that are sure to be invalid and which it is obvious at a\n      glance are invalid.",
+                  "source_id": "S1",
+                  "start": 3489
+                }
+              ],
+              "facets": [
+                0,
+                1
+              ],
+              "id": "A1",
+              "kind": "fact",
+              "rationale": "",
+              "text": "RFC 2606: \".invalid\" is intended for use in online construction of domain names that are sure to be invalid and which it is obvious at a glance are invalid."
+            }
+          ],
+          "missing": []
+        }
+      ]
+    }
+  ],
+  "source_state_after": {
+    "blocked": {
+      "bing": "excluded from fixed protocol",
+      "ddg": "historical challenge; unqualified in this protocol",
+      "mwmbl": "excluded from fixed protocol",
+      "naver": "source_challenge: verification page; no retry"
+    },
+    "document_blocks": {
+      "devessentials.dev": "source_challenge: verification page; no retry",
+      "hermes-agent.nousresearch.com": "source_blocked: no retry in this probe",
+      "learn.microsoft.com": "source_challenge: verification page; no retry",
+      "parallelworks.com": "source_challenge: verification page; no retry",
+      "redis.io": "source_blocked: no retry in this probe",
+      "slice-master.co": "source_blocked: no retry in this probe",
+      "tfl.gov.uk": "source_blocked: no retry in this probe",
+      "www.atlantic.net": "source_blocked: no retry in this probe",
+      "www.ebay.com": "source_blocked: no retry in this probe",
+      "www.eracomp.cz": "source_challenge: verification widget; no retry",
+      "www.ltmuseum.co.uk": "source_blocked: no retry in this probe",
+      "www.mdpi.com": "source_blocked: no retry in this probe",
+      "www.mujrozhlas.cz": "source_blocked: no retry in this probe"
+    }
+  },
+  "refusals_preserved": true,
+  "acceptance": "pending / H01 transport failure; NEW12 not_run; no independent review",
+  "new12_frozen_sha256": "86b9a668487e722c9913d6a7e6ab36b56975dffdc5af235e371918c922b497d6",
+  "new12_status": "not_run",
+  "known_total_cost_usd": 0.009860971999999999,
+  "limitations": [
+    "Historical experiments separate; no pooling.",
+    "Early v3 Harness outer TRANSPORT failure preserved.",
+    "Final H02 uses a warm cache and lexical fallback; not an isolated latency or Qwen benchmark.",
+    "Intermediate failed component replay preserved; final replay targets D02/D04, not full no-loss."
+  ]
+}

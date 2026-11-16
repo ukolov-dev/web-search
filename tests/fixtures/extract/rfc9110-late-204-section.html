@@ -1,0 +1,37 @@
+<html><head><title>RFC 9110: HTTP Semantics</title><meta name="rfc.number" content="9110"><meta name="generator" content="xml2rfc 3.12.10"></head><body><h1 id="rfcnum">RFC 9110</h1><h1 id="title">HTTP Semantics</h1><nav><section id="section-toc"><h4>204 No Content</h4><p>TOC decoy</p></section></nav><aside><section id="section-sidebar"><h4>204 No Content</h4><p>Sidebar decoy</p></section></aside><!-- LARGE PREFIX --><section id="section-15.3.5">
+          <h4 id="name-204-no-content">
+<a href="#section-15.3.5" class="section-number selfRef">15.3.5. </a><a href="#name-204-no-content" class="section-name selfRef">204 No Content</a>
+          </h4>
+<span id="iref-204-no-content-status-code-" class="iref"></span>
+          <p id="section-15.3.5-1">
+   The 204 (No Content) status code indicates that the server
+   has successfully fulfilled the request and that there is no additional
+   content to send in the response content. Metadata in the response
+   header fields refer to the <a href="#target.resource" class="xref">target resource</a> and its
+   <a href="#selected.representation" class="xref">selected representation</a> after the requested action was applied.<a href="#section-15.3.5-1" class="pilcrow">¶</a></p>
+<p id="section-15.3.5-2">
+   For example, if a 204 status code is received in response to a PUT
+   request and the response contains an <a href="#field.etag" class="xref">ETag</a> field, then
+   the PUT was successful and the ETag field value contains the entity tag for
+   the new representation of that target resource.<a href="#section-15.3.5-2" class="pilcrow">¶</a></p>
+<p id="section-15.3.5-3">
+   The 204 response allows a server to indicate that the action has been
+   successfully applied to the target resource, while implying that the
+   user agent does not need to traverse away from its current "document view"
+   (if any).  The server assumes that the user agent will provide some
+   indication of the success to its user, in accord with its own interface,
+   and apply any new or updated metadata in the response to its active
+   representation.<a href="#section-15.3.5-3" class="pilcrow">¶</a></p>
+<p id="section-15.3.5-4">
+   For example, a 204 status code is commonly used with document editing
+   interfaces corresponding to a "save" action, such that the document
+   being saved remains available to the user for editing. It is also
+   frequently used with interfaces that expect automated data transfers
+   to be prevalent, such as within distributed version control systems.<a href="#section-15.3.5-4" class="pilcrow">¶</a></p>
+<p id="section-15.3.5-5">
+   A 204 response is terminated by the end of the header section;
+   it cannot contain content or trailers.<a href="#section-15.3.5-5" class="pilcrow">¶</a></p>
+<p id="section-15.3.5-6">
+   A 204 response is heuristically cacheable; i.e., unless otherwise indicated by
+   the method definition or explicit cache controls (see <span><a href="https://www.rfc-editor.org/rfc/rfc9111#section-4.2.2" class="relref">Section 4.2.2</a> of [<a href="#CACHING" class="xref">CACHING</a>]</span>).<a href="#section-15.3.5-6" class="pilcrow">¶</a></p>
+</section></body></html>

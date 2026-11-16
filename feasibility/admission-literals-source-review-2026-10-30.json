@@ -1,0 +1,2222 @@
+{
+  "kind": "posthoc-source-boundary-review",
+  "scope": "Offline diagnosis after both NEW24 arms completed; no changes to frozen grades/runtime or primary metrics. Development author review is not independent acceptance or an experimental replication.",
+  "provenance": {
+    "feasibility/admission-literals-gold-v1.json": "5dface55b01d5bea90969fa26d98cbcc444d0c67469c2c13fd35b664d894abad",
+    "feasibility/admission-literals-misses-2026-10-30.json": "b006d6c8be37a3ace58046d8b05a9ab503467a3e6f920bc9c121a25e23dffed3",
+    "runs/admission-literals-2026-10-30/gold-freeze.json": "724a2218f77fac2896735ad18c68ba1aabd06ce8ed7074a37cbe4d223926ace7",
+    "runs/admission-literals-2026-10-30/baseline/results.json": "96fd19c4bcdf42a7a68fd478397d40f3d3c7d7b841f1ddc0ef8fe22e9d2ed93b",
+    "runs/admission-literals-2026-10-30/fixed/results.json": "80ec2102171141cde152e21a9a77dc1f9f641b6ed977b420bb0b803bc3895f5b"
+  },
+  "inspected": [
+    {
+      "case": "l19",
+      "id": "C004",
+      "query": "git switch --orphan new branch tracked files removed index untracked files",
+      "frozen_criteria": "Bind switch --orphan to a new unborn branch with no initial commit. Establish the documented effect on tracked files/index and distinguish any claims about untracked files; do not invent untracked deletion.",
+      "url": "https://gist.github.com/seanbuscay/5877413",
+      "gold_grade": 1,
+      "gold_basis": "Full gist has a late explicit switch --orphan tracked-versus-untracked correction, but no explicit switch-created unborn/no-initial-commit state. Earlier no-commit/index examples are specifically checkout --orphan and cannot fill the different-operation contract.",
+      "raw_snapshot": "runs/admission-literals-2026-10-30/raw-cache/a2216bdef928cdf68e33fcaed58a55b3ad14f90a5f011e947b8d9bf1ee6c9cee.json",
+      "raw_snapshot_sha256": "9277790365a6b0f25f983076c907c215366cad6f5e689466feb15979e9c21aed",
+      "canonical_source_sha256": "a2e64cc5851dc4695f528d5df19df78d74c035e0fb3d71c8e17e62686abbf0df",
+      "kind": "new_known_false_direct",
+      "conclusion": "Frozen grade1 is confirmed. The source discusses switch tracked/untracked effects but does not explicitly supply switch index handling or its unborn/no-initial-commit state. The no-commits/index example belongs to checkout --orphan. Fixed R0-R2 cite the older ALL-files claim, while the later ALL-tracked/untracked correction is present in the very same supplied B3. Exact quotation checks therefore passed without establishing complete semantic support.",
+      "boundaries": [
+        "Baseline and fixed supplied identical C004 passages B1/B2/B3 to audit.",
+        "Both arms had C004 as an audit target. Baseline chose the corrected tracked-files quote and rejected missing index support; fixed chose the earlier ALL-files quote and accepted.",
+        "Other selected documents, coverage witnesses and audit inputs differ. This single paired output does not isolate a causal effect of admission or literal aliases.",
+        "The conflict guard records no candidate-pair conflict here; this is one candidate with several comments, and an absent material relation is not repaired by a valid quote."
+      ],
+      "branches": {
+        "baseline": {
+          "pool": [
+            "C004",
+            "C012",
+            "C005",
+            "C007",
+            "C008",
+            "C017",
+            "C001",
+            "C019",
+            "C014",
+            "C018"
+          ],
+          "reads": [
+            "C004",
+            "C012",
+            "C005",
+            "C007"
+          ],
+          "requirements": [
+            {
+              "anchor": "git switch --orphan new branch tracked files removed index untracked files",
+              "end": 74,
+              "id": "R0",
+              "start": 0
+            },
+            {
+              "anchor": "switch",
+              "end": 10,
+              "id": "R1",
+              "start": 4
+            },
+            {
+              "anchor": "--orphan",
+              "end": 19,
+              "id": "R2",
+              "start": 11
+            },
+            {
+              "anchor": "untracked",
+              "end": 68,
+              "id": "R3",
+              "start": 59
+            }
+          ],
+          "checks": [
+            {
+              "passages": [
+                "B3"
+              ],
+              "quote": "Note that git switch --orphan <branch name> automatically removes ALL tracked files from the working tree",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B3"
+              ],
+              "quote": "Note that git switch --orphan <branch name> automatically removes ALL tracked files from the working tree",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B3"
+              ],
+              "quote": "Note that git switch --orphan <branch name> automatically removes ALL tracked files from the working tree",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B3"
+              ],
+              "quote": "It will not remove untracked files",
+              "status": "supported"
+            }
+          ],
+          "audit_supported": false,
+          "audit_reason": "The supplied quote states that git switch --orphan removes tracked files from the working tree and does not remove untracked files, but it does not address the requested effect on the index.",
+          "final_classification": "background",
+          "extraction": {
+            "path": "runs/admission-literals-2026-10-30/baseline/l19-C004-document.json",
+            "sha256": "b81230c5c883ec23a4b6241705bc4900039fe4950342763f2920bd1f5903ec9f",
+            "method": "semantic_main",
+            "truncated": false,
+            "text_hash": "c8a38f85499e0a77a225b13ddd176d2f50936173cc87063dd608a51361204332"
+          },
+          "proof_footprints": [
+            {
+              "phrase": "git checkout --orphan orphan_name",
+              "canonical_raw": [
+                {
+                  "quote": "git checkout --orphan orphan_name",
+                  "start": 1502,
+                  "end": 1535,
+                  "context": "; Save seanbuscay/5877413 to your computer and use it in GitHub Desktop. Download ZIP Create an orphan branch in a repo. Raw git_create_orphan.sh cd repository git checkout --orphan orphan_name git rm -rf . rm ' .gitignore ' echo \" #Title of Readme \" > README.md git add README.md git commit -a -m \" Initial Commit \" git push origin orphan_name shadiakiki1986 commented Jan 7, 2020 Copy link Copy Markdown As a newcomer to git orphan"
+                },
+                {
+                  "quote": "git checkout --orphan orphan_name",
+                  "start": 2155,
+                  "end": 2188,
+                  "context": " this orphan branch is checkout'ed (is this even a word?) are automatically staged. To illustrate: cd repository ls # file1 file2 file3 git status # No changes git checkout --orphan orphan_name git status On branch orphan_name No commits yet Changes to be committed: (use \"git rm --cached <file>...\" to unstage) new file: file1 new file: file2 new file: file3 Sorry, something went wrong. Uh oh! There was an error while loading. Ple"
+                }
+              ],
+              "extracted": [
+                {
+                  "quote": "git checkout --orphan orphan_name",
+                  "start": 303,
+                  "end": 336,
+                  "context": "Learn more about clone URLs Select an option Learn more about clone URLs Download ZIP Create an orphan branch in a repo. Raw git_create_orphan.sh cd repository git checkout --orphan orphan_name git rm -rf . rm '.gitignore' echo \"#Title of Readme\" > README.md git add README.md git commit -a -m \"Initial Commit\" git push origin orphan_name shadiakiki1986 commented Jan 7, 2020 Copy link Copy Markdown As a newcomer to git orphan branc"
+                },
+                {
+                  "quote": "git checkout --orphan orphan_name",
+                  "start": 950,
+                  "end": 983,
+                  "context": " this orphan branch is checkout'ed (is this even a word?) are automatically staged. To illustrate: cd repository ls # file1 file2 file3 git status # No changes git checkout --orphan orphan_name git status On branch orphan_name No commits yet Changes to be committed: (use \"git rm --cached <file>...\" to unstage) new file: file1 new file: file2 new file: file3 robtimus commented May 3, 2020 Copy link Copy Markdown git reset --hard a"
+                }
+              ],
+              "supplied": {
+                "coverage": [],
+                "audit": []
+              }
+            },
+            {
+              "phrase": "Note that using git switch --orphan <branch name> automatically removes ALL files from the working tree.",
+              "canonical_raw": [
+                {
+                  "quote": "Note that using git switch --orphan <branch name> automatically removes ALL files from the working tree.",
+                  "start": 4684,
+                  "end": 4788,
+                  "context": "ex. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page . KartikSoneji commented Jul 15, 2020 Copy link Copy Markdown Note that using git switch --orphan <branch name> automatically removes ALL files from the working tree. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page . kurahaupo commented Aug 29, 2020 Copy link Copy Markdown @shadiakiki1986 perhaps you're looking for gist:7df6c8a50c04e5b80d84f28938b3e258 Sorry"
+                },
+                {
+                  "quote": "Note that using git switch --orphan <branch name> automatically removes ALL files from the working tree.",
+                  "start": 7862,
+                  "end": 7966,
+                  "context": "ase reload this page . MrSrv7 commented Sep 6, 2022 • edited Loading Uh oh! There was an error while loading. Please reload this page . Copy link Copy Markdown Note that using git switch --orphan <branch name> automatically removes ALL files from the working tree. Note that whatever is ignored by .gitignore won't be removed. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page . mralusw commented Mar 30, 2024 • edited Loading Uh oh! There was an error while l"
+                },
+                {
+                  "quote": "Note that using git switch --orphan <branch name> automatically removes ALL files from the working tree.",
+                  "start": 8266,
+                  "end": 8370,
+                  "context": "e reload this page . mralusw commented Mar 30, 2024 • edited Loading Uh oh! There was an error while loading. Please reload this page . Copy link Copy Markdown Note that using git switch --orphan <branch name> automatically removes ALL files from the working tree. Note that whatever is ignored by .gitignore won't be removed. Note that git switch --orphan <branch name> automatically removes ALL tracked files from the working tree (as it should, since we don't want files from other branches — it's an "
+                }
+              ],
+              "extracted": [
+                {
+                  "quote": "Note that using git switch --orphan <branch name> automatically removes ALL files from the working tree.",
+                  "start": 3095,
+                  "end": 3199,
+                  "context": "ked as a new file. Maybe that's why it didn't work on SO, because files were not part of the index. KartikSoneji commented Jul 15, 2020 Copy link Copy Markdown Note that using git switch --orphan <branch name> automatically removes ALL files from the working tree. kurahaupo commented Aug 29, 2020 Copy link Copy Markdown @shadiakiki1986 perhaps you're looking for gist:7df6c8a50c04e5b80d84f28938b3e258 anfxanfx commented Nov 10, 2020 Copy link Copy Markdown Commenting on KartikSoneji (Jul 15) above: gi"
+                },
+                {
+                  "quote": "Note that using git switch --orphan <branch name> automatically removes ALL files from the working tree.",
+                  "start": 5332,
+                  "end": 5436,
+                  "context": "guist brain, not coding brain xD. Very interesting (and thorough) discussion in the linked gist 👍 MrSrv7 commented Sep 6, 2022 • edited Copy link Copy Markdown Note that using git switch --orphan <branch name> automatically removes ALL files from the working tree. Note that whatever is ignored by .gitignore won't be removed. mralusw commented Mar 30, 2024 • edited Copy link Copy Markdown Note that using git switch --orphan <branch name> automatically removes ALL files from the working tree. Note tha"
+                },
+                {
+                  "quote": "Note that using git switch --orphan <branch name> automatically removes ALL files from the working tree.",
+                  "start": 5565,
+                  "end": 5669,
+                  "context": " ALL files from the working tree. Note that whatever is ignored by .gitignore won't be removed. mralusw commented Mar 30, 2024 • edited Copy link Copy Markdown Note that using git switch --orphan <branch name> automatically removes ALL files from the working tree. Note that whatever is ignored by .gitignore won't be removed. Note that git switch --orphan <branch name> automatically removes ALL tracked files from the working tree (as it should, since we don't want files from other branches — it's an "
+                }
+              ],
+              "supplied": {
+                "coverage": [
+                  "B1",
+                  "B2",
+                  "B3"
+                ],
+                "audit": [
+                  "B1",
+                  "B2",
+                  "B3"
+                ]
+              }
+            },
+            {
+              "phrase": "Note that git switch --orphan <branch name> automatically removes ALL tracked files from the working tree",
+              "canonical_raw": [
+                {
+                  "quote": "Note that git switch --orphan <branch name> automatically removes ALL tracked files from the working tree",
+                  "start": 8433,
+                  "end": 8538,
+                  "context": "at using git switch --orphan <branch name> automatically removes ALL files from the working tree. Note that whatever is ignored by .gitignore won't be removed. Note that git switch --orphan <branch name> automatically removes ALL tracked files from the working tree (as it should, since we don't want files from other branches — it's an orphan branch). It will not remove untracked files modified (not yet committed) tracked files (because it refuses to proceed in this scenario) This is independent of .g"
+                }
+              ],
+              "extracted": [
+                {
+                  "quote": "Note that git switch --orphan <branch name> automatically removes ALL tracked files from the working tree",
+                  "start": 5732,
+                  "end": 5837,
+                  "context": "at using git switch --orphan <branch name> automatically removes ALL files from the working tree. Note that whatever is ignored by .gitignore won't be removed. Note that git switch --orphan <branch name> automatically removes ALL tracked files from the working tree (as it should, since we don't want files from other branches — it's an orphan branch). It will not remove untracked files modified (not yet committed) tracked files (because it refuses to proceed in this scenario) This is independent of .g"
+                }
+              ],
+              "supplied": {
+                "coverage": [
+                  "B3"
+                ],
+                "audit": [
+                  "B3"
+                ]
+              }
+            },
+            {
+              "phrase": "It will not remove untracked files",
+              "canonical_raw": [
+                {
+                  "quote": "It will not remove untracked files",
+                  "start": 8628,
+                  "end": 8662,
+                  "context": "anch name> automatically removes ALL tracked files from the working tree (as it should, since we don't want files from other branches — it's an orphan branch). It will not remove untracked files modified (not yet committed) tracked files (because it refuses to proceed in this scenario) This is independent of .gitignore . However, there are many other ways to exclude files (e.g. .git/info/exclude , git update-index --skip-worktree "
+                }
+              ],
+              "extracted": [
+                {
+                  "quote": "It will not remove untracked files",
+                  "start": 5927,
+                  "end": 5961,
+                  "context": "anch name> automatically removes ALL tracked files from the working tree (as it should, since we don't want files from other branches — it's an orphan branch). It will not remove untracked files modified (not yet committed) tracked files (because it refuses to proceed in this scenario) This is independent of .gitignore. However, there are many other ways to exclude files (e.g. .git/info/exclude, git update-index --skip-worktree et"
+                }
+              ],
+              "supplied": {
+                "coverage": [
+                  "B3"
+                ],
+                "audit": [
+                  "B3"
+                ]
+              }
+            }
+          ],
+          "supplied_call_hashes": [
+            {
+              "index": 1,
+              "kind": "coverage",
+              "input_sha256": "59e7bc3500d8d55240ae07dfbfa0643977f3db582572c80445e2a2884983b4c4"
+            },
+            {
+              "index": 2,
+              "kind": "audit",
+              "input_sha256": "6d23da73b15abab7ba1007884f548fc9e4021c2febc3bf66d9765f82bfee6885"
+            }
+          ]
+        },
+        "fixed": {
+          "pool": [
+            "C004",
+            "C012",
+            "C005",
+            "C008",
+            "C020",
+            "C017",
+            "C001",
+            "C019",
+            "C014",
+            "C018"
+          ],
+          "reads": [
+            "C004",
+            "C012",
+            "C005",
+            "C008"
+          ],
+          "requirements": [
+            {
+              "anchor": "git switch --orphan new branch tracked files removed index untracked files",
+              "end": 74,
+              "id": "R0",
+              "start": 0
+            },
+            {
+              "anchor": "switch",
+              "end": 10,
+              "id": "R1",
+              "start": 4
+            },
+            {
+              "anchor": "--orphan",
+              "end": 19,
+              "id": "R2",
+              "start": 11
+            },
+            {
+              "anchor": "untracked",
+              "end": 68,
+              "id": "R3",
+              "start": 59
+            }
+          ],
+          "checks": [
+            {
+              "passages": [
+                "B1",
+                "B3"
+              ],
+              "quote": "Note that using git switch --orphan <branch name> automatically removes ALL files from the working tree.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1",
+                "B3"
+              ],
+              "quote": "Note that using git switch --orphan <branch name> automatically removes ALL files from the working tree.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1",
+                "B3"
+              ],
+              "quote": "Note that using git switch --orphan <branch name> automatically removes ALL files from the working tree.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B3"
+              ],
+              "quote": "It will not remove untracked files",
+              "status": "supported"
+            }
+          ],
+          "audit_supported": true,
+          "audit_reason": "",
+          "final_classification": "direct",
+          "extraction": {
+            "path": "runs/admission-literals-2026-10-30/fixed/l19-C004-document.json",
+            "sha256": "b81230c5c883ec23a4b6241705bc4900039fe4950342763f2920bd1f5903ec9f",
+            "method": "semantic_main",
+            "truncated": false,
+            "text_hash": "c8a38f85499e0a77a225b13ddd176d2f50936173cc87063dd608a51361204332"
+          },
+          "proof_footprints": [
+            {
+              "phrase": "git checkout --orphan orphan_name",
+              "canonical_raw": [
+                {
+                  "quote": "git checkout --orphan orphan_name",
+                  "start": 1502,
+                  "end": 1535,
+                  "context": "; Save seanbuscay/5877413 to your computer and use it in GitHub Desktop. Download ZIP Create an orphan branch in a repo. Raw git_create_orphan.sh cd repository git checkout --orphan orphan_name git rm -rf . rm ' .gitignore ' echo \" #Title of Readme \" > README.md git add README.md git commit -a -m \" Initial Commit \" git push origin orphan_name shadiakiki1986 commented Jan 7, 2020 Copy link Copy Markdown As a newcomer to git orphan"
+                },
+                {
+                  "quote": "git checkout --orphan orphan_name",
+                  "start": 2155,
+                  "end": 2188,
+                  "context": " this orphan branch is checkout'ed (is this even a word?) are automatically staged. To illustrate: cd repository ls # file1 file2 file3 git status # No changes git checkout --orphan orphan_name git status On branch orphan_name No commits yet Changes to be committed: (use \"git rm --cached <file>...\" to unstage) new file: file1 new file: file2 new file: file3 Sorry, something went wrong. Uh oh! There was an error while loading. Ple"
+                }
+              ],
+              "extracted": [
+                {
+                  "quote": "git checkout --orphan orphan_name",
+                  "start": 303,
+                  "end": 336,
+                  "context": "Learn more about clone URLs Select an option Learn more about clone URLs Download ZIP Create an orphan branch in a repo. Raw git_create_orphan.sh cd repository git checkout --orphan orphan_name git rm -rf . rm '.gitignore' echo \"#Title of Readme\" > README.md git add README.md git commit -a -m \"Initial Commit\" git push origin orphan_name shadiakiki1986 commented Jan 7, 2020 Copy link Copy Markdown As a newcomer to git orphan branc"
+                },
+                {
+                  "quote": "git checkout --orphan orphan_name",
+                  "start": 950,
+                  "end": 983,
+                  "context": " this orphan branch is checkout'ed (is this even a word?) are automatically staged. To illustrate: cd repository ls # file1 file2 file3 git status # No changes git checkout --orphan orphan_name git status On branch orphan_name No commits yet Changes to be committed: (use \"git rm --cached <file>...\" to unstage) new file: file1 new file: file2 new file: file3 robtimus commented May 3, 2020 Copy link Copy Markdown git reset --hard a"
+                }
+              ],
+              "supplied": {
+                "coverage": [],
+                "audit": []
+              }
+            },
+            {
+              "phrase": "Note that using git switch --orphan <branch name> automatically removes ALL files from the working tree.",
+              "canonical_raw": [
+                {
+                  "quote": "Note that using git switch --orphan <branch name> automatically removes ALL files from the working tree.",
+                  "start": 4684,
+                  "end": 4788,
+                  "context": "ex. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page . KartikSoneji commented Jul 15, 2020 Copy link Copy Markdown Note that using git switch --orphan <branch name> automatically removes ALL files from the working tree. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page . kurahaupo commented Aug 29, 2020 Copy link Copy Markdown @shadiakiki1986 perhaps you're looking for gist:7df6c8a50c04e5b80d84f28938b3e258 Sorry"
+                },
+                {
+                  "quote": "Note that using git switch --orphan <branch name> automatically removes ALL files from the working tree.",
+                  "start": 7862,
+                  "end": 7966,
+                  "context": "ase reload this page . MrSrv7 commented Sep 6, 2022 • edited Loading Uh oh! There was an error while loading. Please reload this page . Copy link Copy Markdown Note that using git switch --orphan <branch name> automatically removes ALL files from the working tree. Note that whatever is ignored by .gitignore won't be removed. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page . mralusw commented Mar 30, 2024 • edited Loading Uh oh! There was an error while l"
+                },
+                {
+                  "quote": "Note that using git switch --orphan <branch name> automatically removes ALL files from the working tree.",
+                  "start": 8266,
+                  "end": 8370,
+                  "context": "e reload this page . mralusw commented Mar 30, 2024 • edited Loading Uh oh! There was an error while loading. Please reload this page . Copy link Copy Markdown Note that using git switch --orphan <branch name> automatically removes ALL files from the working tree. Note that whatever is ignored by .gitignore won't be removed. Note that git switch --orphan <branch name> automatically removes ALL tracked files from the working tree (as it should, since we don't want files from other branches — it's an "
+                }
+              ],
+              "extracted": [
+                {
+                  "quote": "Note that using git switch --orphan <branch name> automatically removes ALL files from the working tree.",
+                  "start": 3095,
+                  "end": 3199,
+                  "context": "ked as a new file. Maybe that's why it didn't work on SO, because files were not part of the index. KartikSoneji commented Jul 15, 2020 Copy link Copy Markdown Note that using git switch --orphan <branch name> automatically removes ALL files from the working tree. kurahaupo commented Aug 29, 2020 Copy link Copy Markdown @shadiakiki1986 perhaps you're looking for gist:7df6c8a50c04e5b80d84f28938b3e258 anfxanfx commented Nov 10, 2020 Copy link Copy Markdown Commenting on KartikSoneji (Jul 15) above: gi"
+                },
+                {
+                  "quote": "Note that using git switch --orphan <branch name> automatically removes ALL files from the working tree.",
+                  "start": 5332,
+                  "end": 5436,
+                  "context": "guist brain, not coding brain xD. Very interesting (and thorough) discussion in the linked gist 👍 MrSrv7 commented Sep 6, 2022 • edited Copy link Copy Markdown Note that using git switch --orphan <branch name> automatically removes ALL files from the working tree. Note that whatever is ignored by .gitignore won't be removed. mralusw commented Mar 30, 2024 • edited Copy link Copy Markdown Note that using git switch --orphan <branch name> automatically removes ALL files from the working tree. Note tha"
+                },
+                {
+                  "quote": "Note that using git switch --orphan <branch name> automatically removes ALL files from the working tree.",
+                  "start": 5565,
+                  "end": 5669,
+                  "context": " ALL files from the working tree. Note that whatever is ignored by .gitignore won't be removed. mralusw commented Mar 30, 2024 • edited Copy link Copy Markdown Note that using git switch --orphan <branch name> automatically removes ALL files from the working tree. Note that whatever is ignored by .gitignore won't be removed. Note that git switch --orphan <branch name> automatically removes ALL tracked files from the working tree (as it should, since we don't want files from other branches — it's an "
+                }
+              ],
+              "supplied": {
+                "coverage": [
+                  "B1",
+                  "B2",
+                  "B3"
+                ],
+                "audit": [
+                  "B1",
+                  "B2",
+                  "B3"
+                ]
+              }
+            },
+            {
+              "phrase": "Note that git switch --orphan <branch name> automatically removes ALL tracked files from the working tree",
+              "canonical_raw": [
+                {
+                  "quote": "Note that git switch --orphan <branch name> automatically removes ALL tracked files from the working tree",
+                  "start": 8433,
+                  "end": 8538,
+                  "context": "at using git switch --orphan <branch name> automatically removes ALL files from the working tree. Note that whatever is ignored by .gitignore won't be removed. Note that git switch --orphan <branch name> automatically removes ALL tracked files from the working tree (as it should, since we don't want files from other branches — it's an orphan branch). It will not remove untracked files modified (not yet committed) tracked files (because it refuses to proceed in this scenario) This is independent of .g"
+                }
+              ],
+              "extracted": [
+                {
+                  "quote": "Note that git switch --orphan <branch name> automatically removes ALL tracked files from the working tree",
+                  "start": 5732,
+                  "end": 5837,
+                  "context": "at using git switch --orphan <branch name> automatically removes ALL files from the working tree. Note that whatever is ignored by .gitignore won't be removed. Note that git switch --orphan <branch name> automatically removes ALL tracked files from the working tree (as it should, since we don't want files from other branches — it's an orphan branch). It will not remove untracked files modified (not yet committed) tracked files (because it refuses to proceed in this scenario) This is independent of .g"
+                }
+              ],
+              "supplied": {
+                "coverage": [
+                  "B3"
+                ],
+                "audit": [
+                  "B3"
+                ]
+              }
+            },
+            {
+              "phrase": "It will not remove untracked files",
+              "canonical_raw": [
+                {
+                  "quote": "It will not remove untracked files",
+                  "start": 8628,
+                  "end": 8662,
+                  "context": "anch name> automatically removes ALL tracked files from the working tree (as it should, since we don't want files from other branches — it's an orphan branch). It will not remove untracked files modified (not yet committed) tracked files (because it refuses to proceed in this scenario) This is independent of .gitignore . However, there are many other ways to exclude files (e.g. .git/info/exclude , git update-index --skip-worktree "
+                }
+              ],
+              "extracted": [
+                {
+                  "quote": "It will not remove untracked files",
+                  "start": 5927,
+                  "end": 5961,
+                  "context": "anch name> automatically removes ALL tracked files from the working tree (as it should, since we don't want files from other branches — it's an orphan branch). It will not remove untracked files modified (not yet committed) tracked files (because it refuses to proceed in this scenario) This is independent of .gitignore. However, there are many other ways to exclude files (e.g. .git/info/exclude, git update-index --skip-worktree et"
+                }
+              ],
+              "supplied": {
+                "coverage": [
+                  "B3"
+                ],
+                "audit": [
+                  "B3"
+                ]
+              }
+            }
+          ],
+          "supplied_call_hashes": [
+            {
+              "index": 1,
+              "kind": "coverage",
+              "input_sha256": "f51f4fd2a4eb0ecff3e64743cca39f86e96accda1a4c8c0eb3f44aa7c50f54f8"
+            },
+            {
+              "index": 2,
+              "kind": "audit",
+              "input_sha256": "1ccea8eb09a9e0f2ab1fd28be8734329983e568997a91d8664d14927a23c6240"
+            }
+          ]
+        }
+      },
+      "identical_own_candidate_audit_passages": true
+    },
+    {
+      "case": "l02",
+      "id": "C003",
+      "query": "Python bisect_left bisect_right equal keys insertion point partition sorted sequence",
+      "frozen_criteria": "Explain left versus right insertion positions relative to existing equal keys in a sorted sequence. Bind the corresponding less-than/equal/greater-than partition direction to each requested function.",
+      "url": "https://docs.python.org/3/library/bisect.html",
+      "gold_grade": 2,
+      "gold_basis": "Full Python bisect reference binds left/right equal-entry positions and both exact partition inequalities.",
+      "raw_snapshot": "runs/admission-literals-2026-10-30/raw-cache/e1b9427f49a43250c7e029638d1572e1d1d208dad53b164ccd7ae797d3ed1c5b.json",
+      "raw_snapshot_sha256": "fbecd7d36ee63262c6296220922bb0c86a1503f996855bfdc143eeafdbf3492b",
+      "canonical_source_sha256": "0b7a7a1a6cd7bec2abcafdcf942a66da61a7a7d901279ceb0f2499101d4fc76f",
+      "kind": "known_positive_false_negative",
+      "conclusion": "Passage-selection loss is directly demonstrated: the right-insertion rule and <=/> partition survive complete extraction, but neither occurs in the supplied coverage/audit passages. Audit rejected the incomplete left-rule plus find_le example bundle. Weakening audit would admit unsupported bundles.",
+      "boundaries": [
+        "Automated earliest observed failing gate remains audit_rejected.",
+        "Full source grade2 and complete extracted document both contain the missing right-side rule; this is not an extraction failure for the inspected clauses.",
+        "Presence in full extracted text and absence from selected context establish a selection boundary, not proof that a rerun with more context must become direct."
+      ],
+      "branches": {
+        "baseline": {
+          "pool": [
+            "C003",
+            "C004",
+            "C015",
+            "C016",
+            "C014",
+            "C007",
+            "C005",
+            "C001"
+          ],
+          "reads": [
+            "C003",
+            "C004",
+            "C015",
+            "C016"
+          ],
+          "requirements": [
+            {
+              "anchor": "Python bisect_left bisect_right equal keys insertion point partition sorted sequence",
+              "end": 84,
+              "id": "R0",
+              "start": 0
+            },
+            {
+              "anchor": "bisect_left",
+              "end": 18,
+              "id": "R1",
+              "start": 7
+            },
+            {
+              "anchor": "bisect_right",
+              "end": 31,
+              "id": "R2",
+              "start": 19
+            },
+            {
+              "anchor": "equal",
+              "end": 37,
+              "id": "R3",
+              "start": 32
+            }
+          ],
+          "checks": [
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "If x is already present in a, the insertion point will be before (to the left of) any existing entries.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "bisect.bisect_left(a, x, lo=0, hi=len(a), *, key=None)¶ Locate the insertion point for x in a to maintain sorted order.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B2"
+              ],
+              "quote": "def find_le(a, x): 'Find rightmost value less than or equal to x' i = bisect_right(a, x)",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "The returned insertion point ip partitions the array a into two slices such that all(elem < x for elem in a[lo : ip]) is true for the left slice and all(elem >= x for elem in a[ip : hi]) is true for the right slice.",
+              "status": "supported"
+            }
+          ],
+          "audit_supported": false,
+          "audit_reason": "The bundle supports bisect_left's equal-key insertion point and partition, but does not directly establish bisect_right's equal-key insertion point or partition behavior; the bisect_right quote only shows find_le using bisect_right.",
+          "final_classification": "background",
+          "extraction": {
+            "path": "runs/admission-literals-2026-10-30/baseline/l02-C003-document.json",
+            "sha256": "2ea61c2d95e1bb2fea14fe42833c89b61ad1cab0fdb1309749f94ddd467bb698",
+            "method": "semantic_main",
+            "truncated": false,
+            "text_hash": "6cf7055c40277daf14063c7e598bbb9d208a1596faaf378e778769ed737c3a11"
+          },
+          "proof_footprints": [
+            {
+              "phrase": "returns an insertion point which comes after",
+              "canonical_raw": [
+                {
+                  "quote": "returns an insertion point which comes after",
+                  "start": 2974,
+                  "end": 3018,
+                  "context": "ect_right ( a , x , lo = 0 , hi = len(a) , * , key = None ) ¶ bisect. bisect ( a , x , lo = 0 , hi = len(a) , * , key = None ) ¶ Similar to bisect_left() , but returns an insertion point which comes after (to the right of) any existing entries of x in a . The returned insertion point ip partitions the array a into two slices such that all(elem <= x for elem in a[lo : ip]) is true for the left slice and all(elem > x for elem in a[ip : hi]) i"
+                }
+              ],
+              "extracted": [
+                {
+                  "quote": "returns an insertion point which comes after",
+                  "start": 2384,
+                  "end": 2428,
+                  "context": "ed the key parameter. bisect.bisect_right(a, x, lo=0, hi=len(a), *, key=None)¶ bisect.bisect(a, x, lo=0, hi=len(a), *, key=None)¶ Similar to bisect_left(), but returns an insertion point which comes after (to the right of) any existing entries of x in a. The returned insertion point ip partitions the array a into two slices such that all(elem <= x for elem in a[lo : ip]) is true for the left slice and all(elem > x for elem in a[ip : hi]) is"
+                }
+              ],
+              "supplied": {
+                "coverage": [],
+                "audit": []
+              }
+            },
+            {
+              "phrase": "all(elem <= x",
+              "canonical_raw": [
+                {
+                  "quote": "all(elem <= x",
+                  "start": 3151,
+                  "end": 3164,
+                  "context": "ion point which comes after (to the right of) any existing entries of x in a . The returned insertion point ip partitions the array a into two slices such that all(elem <= x for elem in a[lo : ip]) is true for the left slice and all(elem > x for elem in a[ip : hi]) is true for the right slice. Changed in version 3.10: Added the key parameter. bisect. insort_left ( a , x , lo = 0 , hi = len(a) , * , key = None "
+                }
+              ],
+              "extracted": [
+                {
+                  "quote": "all(elem <= x",
+                  "start": 2560,
+                  "end": 2573,
+                  "context": "tion point which comes after (to the right of) any existing entries of x in a. The returned insertion point ip partitions the array a into two slices such that all(elem <= x for elem in a[lo : ip]) is true for the left slice and all(elem > x for elem in a[ip : hi]) is true for the right slice. Changed in version 3.10: Added the key parameter. bisect.insort_left(a, x, lo=0, hi=len(a), *, key=None)¶ Insert x in "
+                }
+              ],
+              "supplied": {
+                "coverage": [],
+                "audit": []
+              }
+            }
+          ],
+          "supplied_call_hashes": [
+            {
+              "index": 1,
+              "kind": "coverage",
+              "input_sha256": "0cb97ac35d1f872a2b64bb0aeeba4e082f2781810dffa00d0b97a8a6e802b7a5"
+            },
+            {
+              "index": 2,
+              "kind": "audit",
+              "input_sha256": "9d431e81d12b106d1a5613ba62a1ff26e0df2321e0484ffead8307308790cfe1"
+            }
+          ]
+        },
+        "fixed": {
+          "pool": [
+            "C003",
+            "C004",
+            "C015",
+            "C016",
+            "C014",
+            "C007",
+            "C005",
+            "C001"
+          ],
+          "reads": [
+            "C003",
+            "C004",
+            "C015",
+            "C016"
+          ],
+          "requirements": [
+            {
+              "anchor": "Python bisect_left bisect_right equal keys insertion point partition sorted sequence",
+              "end": 84,
+              "id": "R0",
+              "start": 0
+            },
+            {
+              "anchor": "bisect_left",
+              "end": 18,
+              "id": "R1",
+              "start": 7
+            },
+            {
+              "anchor": "bisect_right",
+              "end": 31,
+              "id": "R2",
+              "start": 19
+            },
+            {
+              "anchor": "equal",
+              "end": 37,
+              "id": "R3",
+              "start": 32
+            }
+          ],
+          "checks": [
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "The returned insertion point ip partitions the array a into two slices such that all(elem < x for elem in a[lo : ip]) is true for the left slice and all(elem >= x for elem in a[ip : hi]) is true for the right slice.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "If x is already present in a, the insertion point will be before (to the left of) any existing entries.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B2"
+              ],
+              "quote": "def find_le(a, x): 'Find rightmost value less than or equal to x' i = bisect_right(a, x)",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "If x is already present in a, the insertion point will be before (to the left of) any existing entries.",
+              "status": "supported"
+            }
+          ],
+          "audit_supported": false,
+          "audit_reason": "The bundle directly explains bisect_left's equal-key insertion point and partition, but only shows bisect_right inside a find_le example; it does not state bisect_right's own equal-key insertion point or partition behavior.",
+          "final_classification": "background",
+          "extraction": {
+            "path": "runs/admission-literals-2026-10-30/fixed/l02-C003-document.json",
+            "sha256": "2ea61c2d95e1bb2fea14fe42833c89b61ad1cab0fdb1309749f94ddd467bb698",
+            "method": "semantic_main",
+            "truncated": false,
+            "text_hash": "6cf7055c40277daf14063c7e598bbb9d208a1596faaf378e778769ed737c3a11"
+          },
+          "proof_footprints": [
+            {
+              "phrase": "returns an insertion point which comes after",
+              "canonical_raw": [
+                {
+                  "quote": "returns an insertion point which comes after",
+                  "start": 2974,
+                  "end": 3018,
+                  "context": "ect_right ( a , x , lo = 0 , hi = len(a) , * , key = None ) ¶ bisect. bisect ( a , x , lo = 0 , hi = len(a) , * , key = None ) ¶ Similar to bisect_left() , but returns an insertion point which comes after (to the right of) any existing entries of x in a . The returned insertion point ip partitions the array a into two slices such that all(elem <= x for elem in a[lo : ip]) is true for the left slice and all(elem > x for elem in a[ip : hi]) i"
+                }
+              ],
+              "extracted": [
+                {
+                  "quote": "returns an insertion point which comes after",
+                  "start": 2384,
+                  "end": 2428,
+                  "context": "ed the key parameter. bisect.bisect_right(a, x, lo=0, hi=len(a), *, key=None)¶ bisect.bisect(a, x, lo=0, hi=len(a), *, key=None)¶ Similar to bisect_left(), but returns an insertion point which comes after (to the right of) any existing entries of x in a. The returned insertion point ip partitions the array a into two slices such that all(elem <= x for elem in a[lo : ip]) is true for the left slice and all(elem > x for elem in a[ip : hi]) is"
+                }
+              ],
+              "supplied": {
+                "coverage": [],
+                "audit": []
+              }
+            },
+            {
+              "phrase": "all(elem <= x",
+              "canonical_raw": [
+                {
+                  "quote": "all(elem <= x",
+                  "start": 3151,
+                  "end": 3164,
+                  "context": "ion point which comes after (to the right of) any existing entries of x in a . The returned insertion point ip partitions the array a into two slices such that all(elem <= x for elem in a[lo : ip]) is true for the left slice and all(elem > x for elem in a[ip : hi]) is true for the right slice. Changed in version 3.10: Added the key parameter. bisect. insort_left ( a , x , lo = 0 , hi = len(a) , * , key = None "
+                }
+              ],
+              "extracted": [
+                {
+                  "quote": "all(elem <= x",
+                  "start": 2560,
+                  "end": 2573,
+                  "context": "tion point which comes after (to the right of) any existing entries of x in a. The returned insertion point ip partitions the array a into two slices such that all(elem <= x for elem in a[lo : ip]) is true for the left slice and all(elem > x for elem in a[ip : hi]) is true for the right slice. Changed in version 3.10: Added the key parameter. bisect.insort_left(a, x, lo=0, hi=len(a), *, key=None)¶ Insert x in "
+                }
+              ],
+              "supplied": {
+                "coverage": [],
+                "audit": []
+              }
+            }
+          ],
+          "supplied_call_hashes": [
+            {
+              "index": 1,
+              "kind": "coverage",
+              "input_sha256": "0cb97ac35d1f872a2b64bb0aeeba4e082f2781810dffa00d0b97a8a6e802b7a5"
+            },
+            {
+              "index": 2,
+              "kind": "audit",
+              "input_sha256": "99eb2e6924464706818787661725884a9db7fd46e87e64f8d796fe569790ecaf"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case": "l07",
+      "id": "C002",
+      "query": "Java Optional orElse orElseGet eager argument lazy supplier empty present",
+      "frozen_criteria": "Contrast evaluation of an orElse argument with conditional invocation of the orElseGet supplier. Bind present/empty Optional behavior to when the supplied fallback is actually returned or invoked.",
+      "url": "https://www.baeldung.com/java-optional",
+      "gold_grade": 2,
+      "gold_basis": "Full Java Optional guide explicitly contrasts eager fallback creation even when a value is present with supplier non-invocation, and demonstrates that both compute/return defaults when empty.",
+      "raw_snapshot": "runs/admission-literals-2026-10-30/raw-cache/d1241014d0842815f2cbb3b3ac6a7086ab7954cb9c7d6a4bd563150704b66511.json",
+      "raw_snapshot_sha256": "00d053d6ee8702e19bfb84580ff11575dedfd5c55e383ca680697130d87553d9",
+      "canonical_source_sha256": "ff25779f6544b36ff7b87a919d00e2bd0499de442cf70b2b68482d361907505c",
+      "kind": "known_positive_false_negative",
+      "conclusion": "The full extracted article retains the explicit present-value eager/lazy contrast, but selected B3 stops during the introduction of that present-value test. Selected B2/B3 cover the empty-value case. R2 eager is ambiguous and no audit ran. The exact reason for model ambiguity is not recorded.",
+      "boundaries": [
+        "Automated stage correctly stays unknown_stage for an ambiguous verdict without a witness rejection.",
+        "The next substantive contrast is outside every supplied coverage passage despite existing in the extracted document.",
+        "No claim that a missing field proves a model error or a successful hypothetical fix."
+      ],
+      "branches": {
+        "baseline": {
+          "pool": [
+            "C011",
+            "C002",
+            "C014",
+            "C004",
+            "C012",
+            "C001",
+            "C007",
+            "C006",
+            "C015",
+            "C005"
+          ],
+          "reads": [
+            "C011",
+            "C002",
+            "C014",
+            "C004"
+          ],
+          "requirements": [
+            {
+              "anchor": "Java Optional orElse orElseGet eager argument lazy supplier empty present",
+              "end": 73,
+              "id": "R0",
+              "start": 0
+            },
+            {
+              "anchor": "orElseGet",
+              "end": 30,
+              "id": "R1",
+              "start": 21
+            },
+            {
+              "anchor": "eager",
+              "end": 36,
+              "id": "R2",
+              "start": 31
+            },
+            {
+              "anchor": "supplier",
+              "end": 59,
+              "id": "R3",
+              "start": 51
+            }
+          ],
+          "checks": [
+            {
+              "passages": [
+                "B2",
+                "B3"
+              ],
+              "quote": "The orElseGet() method is similar to orElse(). However, instead of taking a value to return if the Optional value is not present, it takes a supplier functional interface, which is invoked and returns the value of the invocation",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B3"
+              ],
+              "quote": "It so happens that when the wrapped value is not present, then both orElse() and orElseGet() work exactly the same way.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B2",
+                "B3"
+              ],
+              "quote": "instead of taking a value to return if the Optional value is not present, it takes a supplier functional interface, which is invoked and returns the value of the invocation",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B3"
+              ],
+              "quote": "",
+              "status": "ambiguous"
+            }
+          ],
+          "audit_supported": null,
+          "audit_reason": "",
+          "final_classification": "background",
+          "extraction": {
+            "path": "runs/admission-literals-2026-10-30/baseline/l07-C002-document.json",
+            "sha256": "fed64b131a55dbecebe7305fa24742b5bd8bc4a55a2bc840986772978b670cbb",
+            "method": "semantic_main",
+            "truncated": false,
+            "text_hash": "1f15c38c3a18af7a685c52c7a670bfaf42bd344321fa47e7769f8bb753d12757"
+          },
+          "proof_footprints": [
+            {
+              "phrase": "not even invoked",
+              "canonical_raw": [
+                {
+                  "quote": "not even invoked",
+                  "start": 13200,
+                  "end": 13216,
+                  "context": "is code: Using orElseGet: Using orElse: Getting default value... Notice that when using orElseGet() to retrieve the wrapped value, the getMyDefault() method is not even invoked since the contained value is present. However, when using orElse() , whether the wrapped value is present or not, the default object is created. So in this case, we have just created one redundant object that is never used. In this simple "
+                }
+              ],
+              "extracted": [
+                {
+                  "quote": "not even invoked",
+                  "start": 12068,
+                  "end": 12084,
+                  "context": "is code: Using orElseGet: Using orElse: Getting default value... Notice that when using orElseGet() to retrieve the wrapped value, the getMyDefault() method is not even invoked since the contained value is present. However, when using orElse(), whether the wrapped value is present or not, the default object is created. So in this case, we have just created one redundant object that is never used. In this simple e"
+                }
+              ],
+              "supplied": {
+                "coverage": []
+              }
+            },
+            {
+              "phrase": "whether the wrapped value is present or not",
+              "canonical_raw": [
+                {
+                  "quote": "whether the wrapped value is present or not",
+                  "start": 13286,
+                  "end": 13329,
+                  "context": "g orElseGet() to retrieve the wrapped value, the getMyDefault() method is not even invoked since the contained value is present. However, when using orElse() , whether the wrapped value is present or not, the default object is created. So in this case, we have just created one redundant object that is never used. In this simple example, there is no significant cost to creating a default object, as the JVM knows how to deal with such. Howev"
+                }
+              ],
+              "extracted": [
+                {
+                  "quote": "whether the wrapped value is present or not",
+                  "start": 12153,
+                  "end": 12196,
+                  "context": "ng orElseGet() to retrieve the wrapped value, the getMyDefault() method is not even invoked since the contained value is present. However, when using orElse(), whether the wrapped value is present or not, the default object is created. So in this case, we have just created one redundant object that is never used. In this simple example, there is no significant cost to creating a default object, as the JVM knows how to deal with such. Howev"
+                }
+              ],
+              "supplied": {
+                "coverage": []
+              }
+            },
+            {
+              "phrase": "default object is created",
+              "canonical_raw": [
+                {
+                  "quote": "default object is created",
+                  "start": 13335,
+                  "end": 13360,
+                  "context": "getMyDefault() method is not even invoked since the contained value is present. However, when using orElse() , whether the wrapped value is present or not, the default object is created. So in this case, we have just created one redundant object that is never used. In this simple example, there is no significant cost to creating a default object, as the JVM knows how to deal with such. However, when a method such as getMy"
+                }
+              ],
+              "extracted": [
+                {
+                  "quote": "default object is created",
+                  "start": 12202,
+                  "end": 12227,
+                  "context": " getMyDefault() method is not even invoked since the contained value is present. However, when using orElse(), whether the wrapped value is present or not, the default object is created. So in this case, we have just created one redundant object that is never used. In this simple example, there is no significant cost to creating a default object, as the JVM knows how to deal with such. However, when a method such as getMy"
+                }
+              ],
+              "supplied": {
+                "coverage": []
+              }
+            }
+          ],
+          "supplied_call_hashes": [
+            {
+              "index": 1,
+              "kind": "coverage",
+              "input_sha256": "7a8be2ea5a9e2d0714a6f4f43bcfa960cb8890354615740f25568fd294b7cffa"
+            }
+          ]
+        },
+        "fixed": {
+          "pool": [
+            "C011",
+            "C002",
+            "C014",
+            "C004",
+            "C012",
+            "C001",
+            "C007",
+            "C006",
+            "C015",
+            "C005"
+          ],
+          "reads": [
+            "C011",
+            "C002",
+            "C014",
+            "C004"
+          ],
+          "requirements": [
+            {
+              "anchor": "Java Optional orElse orElseGet eager argument lazy supplier empty present",
+              "end": 73,
+              "id": "R0",
+              "start": 0
+            },
+            {
+              "anchor": "orElseGet",
+              "end": 30,
+              "id": "R1",
+              "start": 21
+            },
+            {
+              "anchor": "eager",
+              "end": 36,
+              "id": "R2",
+              "start": 31
+            },
+            {
+              "anchor": "supplier",
+              "end": 59,
+              "id": "R3",
+              "start": 51
+            }
+          ],
+          "checks": [
+            {
+              "passages": [
+                "B2",
+                "B3"
+              ],
+              "quote": "The orElseGet() method is similar to orElse(). However, instead of taking a value to return if the Optional value is not present, it takes a supplier functional interface, which is invoked and returns the value of the invocation",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B2",
+                "B3"
+              ],
+              "quote": "The getMyDefault() method is called in each case. It so happens that when the wrapped value is not present, then both orElse() and orElseGet() work exactly the same way.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B3"
+              ],
+              "quote": "",
+              "status": "ambiguous"
+            },
+            {
+              "passages": [
+                "B2",
+                "B3"
+              ],
+              "quote": "it takes a supplier functional interface, which is invoked and returns the value of the invocation",
+              "status": "supported"
+            }
+          ],
+          "audit_supported": null,
+          "audit_reason": "",
+          "final_classification": "background",
+          "extraction": {
+            "path": "runs/admission-literals-2026-10-30/fixed/l07-C002-document.json",
+            "sha256": "fed64b131a55dbecebe7305fa24742b5bd8bc4a55a2bc840986772978b670cbb",
+            "method": "semantic_main",
+            "truncated": false,
+            "text_hash": "1f15c38c3a18af7a685c52c7a670bfaf42bd344321fa47e7769f8bb753d12757"
+          },
+          "proof_footprints": [
+            {
+              "phrase": "not even invoked",
+              "canonical_raw": [
+                {
+                  "quote": "not even invoked",
+                  "start": 13200,
+                  "end": 13216,
+                  "context": "is code: Using orElseGet: Using orElse: Getting default value... Notice that when using orElseGet() to retrieve the wrapped value, the getMyDefault() method is not even invoked since the contained value is present. However, when using orElse() , whether the wrapped value is present or not, the default object is created. So in this case, we have just created one redundant object that is never used. In this simple "
+                }
+              ],
+              "extracted": [
+                {
+                  "quote": "not even invoked",
+                  "start": 12068,
+                  "end": 12084,
+                  "context": "is code: Using orElseGet: Using orElse: Getting default value... Notice that when using orElseGet() to retrieve the wrapped value, the getMyDefault() method is not even invoked since the contained value is present. However, when using orElse(), whether the wrapped value is present or not, the default object is created. So in this case, we have just created one redundant object that is never used. In this simple e"
+                }
+              ],
+              "supplied": {
+                "coverage": []
+              }
+            },
+            {
+              "phrase": "whether the wrapped value is present or not",
+              "canonical_raw": [
+                {
+                  "quote": "whether the wrapped value is present or not",
+                  "start": 13286,
+                  "end": 13329,
+                  "context": "g orElseGet() to retrieve the wrapped value, the getMyDefault() method is not even invoked since the contained value is present. However, when using orElse() , whether the wrapped value is present or not, the default object is created. So in this case, we have just created one redundant object that is never used. In this simple example, there is no significant cost to creating a default object, as the JVM knows how to deal with such. Howev"
+                }
+              ],
+              "extracted": [
+                {
+                  "quote": "whether the wrapped value is present or not",
+                  "start": 12153,
+                  "end": 12196,
+                  "context": "ng orElseGet() to retrieve the wrapped value, the getMyDefault() method is not even invoked since the contained value is present. However, when using orElse(), whether the wrapped value is present or not, the default object is created. So in this case, we have just created one redundant object that is never used. In this simple example, there is no significant cost to creating a default object, as the JVM knows how to deal with such. Howev"
+                }
+              ],
+              "supplied": {
+                "coverage": []
+              }
+            },
+            {
+              "phrase": "default object is created",
+              "canonical_raw": [
+                {
+                  "quote": "default object is created",
+                  "start": 13335,
+                  "end": 13360,
+                  "context": "getMyDefault() method is not even invoked since the contained value is present. However, when using orElse() , whether the wrapped value is present or not, the default object is created. So in this case, we have just created one redundant object that is never used. In this simple example, there is no significant cost to creating a default object, as the JVM knows how to deal with such. However, when a method such as getMy"
+                }
+              ],
+              "extracted": [
+                {
+                  "quote": "default object is created",
+                  "start": 12202,
+                  "end": 12227,
+                  "context": " getMyDefault() method is not even invoked since the contained value is present. However, when using orElse(), whether the wrapped value is present or not, the default object is created. So in this case, we have just created one redundant object that is never used. In this simple example, there is no significant cost to creating a default object, as the JVM knows how to deal with such. However, when a method such as getMy"
+                }
+              ],
+              "supplied": {
+                "coverage": []
+              }
+            }
+          ],
+          "supplied_call_hashes": [
+            {
+              "index": 1,
+              "kind": "coverage",
+              "input_sha256": "7a8be2ea5a9e2d0714a6f4f43bcfa960cb8890354615740f25568fd294b7cffa"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case": "l10",
+      "id": "C017",
+      "query": "Go maps.Clone deep copy nested values shallow assignment map",
+      "frozen_criteria": "Bind Clone to the Go maps package and a new map result. Test the deep-copy premise: keys and values are copied using ordinary assignment, with nested references not recursively cloned.",
+      "url": "https://pkg.go.dev/golang.org/x/exp/maps",
+      "gold_grade": 2,
+      "gold_basis": "The Go package maps API explicitly defines Clone returning a map copy and shallow ordinary assignment of keys and values, refuting recursive deep copy.",
+      "raw_snapshot": "runs/admission-literals-2026-10-30/raw-cache/46455266de2836b18e02a178b96d9f2f78495ceb7c24586135dc4017f76fd0df.json",
+      "raw_snapshot_sha256": "de2fb394d4a70d6ae06fd520704f1fb4a787b1bfe62c9caa304712b8618094e1",
+      "canonical_source_sha256": "12f71b6e7399493a19710d9cffd18b28cefddb44783bacafa14b92d91adebce8",
+      "kind": "known_positive_false_negative",
+      "conclusion": "The complete shallow ordinary-assignment statement is present in both full extraction and supplied B2. R3 nested is nevertheless missing, so this inspected clause is not lost through extraction/selection. The recorded verdict establishes coverage rejection; the model rationale is absent.",
+      "boundaries": [
+        "The frozen criterion accepts explicit shallow assignment as refuting recursive deep copy.",
+        "Do not add an unstated stdlib-only restriction: the frozen query and criterion permit this Go maps package source.",
+        "Coverage diagnostics do not prove why the model treated the nested condition as missing."
+      ],
+      "branches": {
+        "baseline": {
+          "pool": [
+            "C017",
+            "C020",
+            "C010",
+            "C005",
+            "C019",
+            "C014",
+            "C018",
+            "C001",
+            "C007",
+            "C002"
+          ],
+          "reads": [
+            "C017",
+            "C020",
+            "C010",
+            "C005"
+          ],
+          "requirements": [
+            {
+              "anchor": "Go maps.Clone deep copy nested values shallow assignment map",
+              "end": 60,
+              "id": "R0",
+              "start": 0
+            },
+            {
+              "anchor": "maps.Clone",
+              "end": 13,
+              "id": "R1",
+              "start": 3
+            },
+            {
+              "anchor": "deep",
+              "end": 18,
+              "id": "R2",
+              "start": 14
+            },
+            {
+              "anchor": "nested",
+              "end": 30,
+              "id": "R3",
+              "start": 24
+            }
+          ],
+          "checks": [
+            {
+              "passages": [
+                "B1",
+                "B2"
+              ],
+              "quote": "Clone returns a copy of m. This is a shallow clone: the new keys and values are set using ordinary assignment.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B2"
+              ],
+              "quote": "This is a shallow clone: the new keys and values are set using ordinary assignment.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B2"
+              ],
+              "quote": "This is a shallow clone: the new keys and values are set using ordinary assignment.",
+              "status": "supported"
+            },
+            {
+              "passages": [],
+              "quote": "",
+              "status": "missing"
+            }
+          ],
+          "audit_supported": null,
+          "audit_reason": "",
+          "final_classification": "background",
+          "extraction": {
+            "path": "runs/admission-literals-2026-10-30/baseline/l10-C017-document.json",
+            "sha256": "6d61741f478eb82f53adbfa3aecd66def253c960b7c80188dd4eb85f5c851a80",
+            "method": "semantic_main",
+            "truncated": false,
+            "text_hash": "1214255608f75d30a08d0f6fb1d49ce11053bcbf34d31fcb1e35449d4f0a5867"
+          },
+          "proof_footprints": [
+            {
+              "phrase": "This is a shallow clone",
+              "canonical_raw": [
+                {
+                  "quote": "This is a shallow clone",
+                  "start": 3282,
+                  "end": 3305,
+                  "context": ", V any ](m M) Clear removes all entries from m, leaving it empty. func Clone ¶ func Clone[M ~map[K]V, K comparable , V any ](m M) M Clone returns a copy of m. This is a shallow clone: the new keys and values are set using ordinary assignment. func Copy ¶ func Copy[M1 ~map[K]V, M2 ~map[K]V, K comparable , V any ](dst M1, src M2) Copy copies all key/value pairs in src adding them to dst. When a key in src is already pres"
+                }
+              ],
+              "extracted": [
+                {
+                  "quote": "This is a shallow clone",
+                  "start": 1162,
+                  "end": 1185,
+                  "context": "ble, V any](m M) Clear removes all entries from m, leaving it empty. func Clone ¶ func Clone[M ~map[K]V, K comparable, V any](m M) M Clone returns a copy of m. This is a shallow clone: the new keys and values are set using ordinary assignment. func Copy ¶ func Copy[M1 ~map[K]V, M2 ~map[K]V, K comparable, V any](dst M1, src M2) Copy copies all key/value pairs in src adding them to dst. When a key in src is already presen"
+                }
+              ],
+              "supplied": {
+                "coverage": [
+                  "B1",
+                  "B2"
+                ]
+              }
+            },
+            {
+              "phrase": "ordinary assignment",
+              "canonical_raw": [
+                {
+                  "quote": "ordinary assignment",
+                  "start": 3345,
+                  "end": 3364,
+                  "context": "ty. func Clone ¶ func Clone[M ~map[K]V, K comparable , V any ](m M) M Clone returns a copy of m. This is a shallow clone: the new keys and values are set using ordinary assignment. func Copy ¶ func Copy[M1 ~map[K]V, M2 ~map[K]V, K comparable , V any ](dst M1, src M2) Copy copies all key/value pairs in src adding them to dst. When a key in src is already present in dst, the value in dst will be overwritten by the val"
+                }
+              ],
+              "extracted": [
+                {
+                  "quote": "ordinary assignment",
+                  "start": 1225,
+                  "end": 1244,
+                  "context": "mpty. func Clone ¶ func Clone[M ~map[K]V, K comparable, V any](m M) M Clone returns a copy of m. This is a shallow clone: the new keys and values are set using ordinary assignment. func Copy ¶ func Copy[M1 ~map[K]V, M2 ~map[K]V, K comparable, V any](dst M1, src M2) Copy copies all key/value pairs in src adding them to dst. When a key in src is already present in dst, the value in dst will be overwritten by the value"
+                }
+              ],
+              "supplied": {
+                "coverage": [
+                  "B2"
+                ]
+              }
+            }
+          ],
+          "supplied_call_hashes": [
+            {
+              "index": 1,
+              "kind": "coverage",
+              "input_sha256": "f41a155af9e81811b565ab8ead535b693efa6f824b6cbe8e7e54f582157627b4"
+            }
+          ]
+        },
+        "fixed": {
+          "pool": [
+            "C017",
+            "C020",
+            "C010",
+            "C005",
+            "C019",
+            "C014",
+            "C018",
+            "C001",
+            "C002",
+            "C006"
+          ],
+          "reads": [
+            "C017",
+            "C020",
+            "C010",
+            "C005"
+          ],
+          "requirements": [
+            {
+              "anchor": "Go maps.Clone deep copy nested values shallow assignment map",
+              "end": 60,
+              "id": "R0",
+              "start": 0
+            },
+            {
+              "anchor": "maps.Clone",
+              "end": 13,
+              "id": "R1",
+              "start": 3
+            },
+            {
+              "anchor": "deep",
+              "end": 18,
+              "id": "R2",
+              "start": 14
+            },
+            {
+              "anchor": "nested",
+              "end": 30,
+              "id": "R3",
+              "start": 24
+            }
+          ],
+          "checks": [
+            {
+              "passages": [
+                "B1",
+                "B2"
+              ],
+              "quote": "Clone returns a copy of m. This is a shallow clone: the new keys and values are set using ordinary assignment.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B2"
+              ],
+              "quote": "This is a shallow clone: the new keys and values are set using ordinary assignment.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B2"
+              ],
+              "quote": "This is a shallow clone: the new keys and values are set using ordinary assignment.",
+              "status": "supported"
+            },
+            {
+              "passages": [],
+              "quote": "",
+              "status": "missing"
+            }
+          ],
+          "audit_supported": null,
+          "audit_reason": "",
+          "final_classification": "background",
+          "extraction": {
+            "path": "runs/admission-literals-2026-10-30/fixed/l10-C017-document.json",
+            "sha256": "6d61741f478eb82f53adbfa3aecd66def253c960b7c80188dd4eb85f5c851a80",
+            "method": "semantic_main",
+            "truncated": false,
+            "text_hash": "1214255608f75d30a08d0f6fb1d49ce11053bcbf34d31fcb1e35449d4f0a5867"
+          },
+          "proof_footprints": [
+            {
+              "phrase": "This is a shallow clone",
+              "canonical_raw": [
+                {
+                  "quote": "This is a shallow clone",
+                  "start": 3282,
+                  "end": 3305,
+                  "context": ", V any ](m M) Clear removes all entries from m, leaving it empty. func Clone ¶ func Clone[M ~map[K]V, K comparable , V any ](m M) M Clone returns a copy of m. This is a shallow clone: the new keys and values are set using ordinary assignment. func Copy ¶ func Copy[M1 ~map[K]V, M2 ~map[K]V, K comparable , V any ](dst M1, src M2) Copy copies all key/value pairs in src adding them to dst. When a key in src is already pres"
+                }
+              ],
+              "extracted": [
+                {
+                  "quote": "This is a shallow clone",
+                  "start": 1162,
+                  "end": 1185,
+                  "context": "ble, V any](m M) Clear removes all entries from m, leaving it empty. func Clone ¶ func Clone[M ~map[K]V, K comparable, V any](m M) M Clone returns a copy of m. This is a shallow clone: the new keys and values are set using ordinary assignment. func Copy ¶ func Copy[M1 ~map[K]V, M2 ~map[K]V, K comparable, V any](dst M1, src M2) Copy copies all key/value pairs in src adding them to dst. When a key in src is already presen"
+                }
+              ],
+              "supplied": {
+                "coverage": [
+                  "B1",
+                  "B2"
+                ]
+              }
+            },
+            {
+              "phrase": "ordinary assignment",
+              "canonical_raw": [
+                {
+                  "quote": "ordinary assignment",
+                  "start": 3345,
+                  "end": 3364,
+                  "context": "ty. func Clone ¶ func Clone[M ~map[K]V, K comparable , V any ](m M) M Clone returns a copy of m. This is a shallow clone: the new keys and values are set using ordinary assignment. func Copy ¶ func Copy[M1 ~map[K]V, M2 ~map[K]V, K comparable , V any ](dst M1, src M2) Copy copies all key/value pairs in src adding them to dst. When a key in src is already present in dst, the value in dst will be overwritten by the val"
+                }
+              ],
+              "extracted": [
+                {
+                  "quote": "ordinary assignment",
+                  "start": 1225,
+                  "end": 1244,
+                  "context": "mpty. func Clone ¶ func Clone[M ~map[K]V, K comparable, V any](m M) M Clone returns a copy of m. This is a shallow clone: the new keys and values are set using ordinary assignment. func Copy ¶ func Copy[M1 ~map[K]V, M2 ~map[K]V, K comparable, V any](dst M1, src M2) Copy copies all key/value pairs in src adding them to dst. When a key in src is already present in dst, the value in dst will be overwritten by the value"
+                }
+              ],
+              "supplied": {
+                "coverage": [
+                  "B2"
+                ]
+              }
+            }
+          ],
+          "supplied_call_hashes": [
+            {
+              "index": 1,
+              "kind": "coverage",
+              "input_sha256": "1b65b9508c1cbe64b3e09312afc218bc0e9fd5bbc854b3f33a942a4aa75a9208"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case": "l20",
+      "id": "C015",
+      "query": "git commit --amend replaces tip commit same parents author committer --no-edit",
+      "frozen_criteria": "Bind --amend to replacement of the branch tip while preserving the documented parent relationship. Bind author preservation/committer change and --no-edit message reuse to the requested amend operation, preserving any explicit exceptions.",
+      "url": "https://www.kernel.org/pub/software/scm/git/docs/git-commit.html",
+      "gold_grade": 2,
+      "gold_basis": "Complete git-commit manual explicitly supplies same parents/author, replacement tip, reset-author exception and --no-edit reuse; current commit-information defaults supply committer metadata.",
+      "raw_snapshot": "runs/admission-literals-2026-10-30/raw-cache/3dc20c4564129c1a805a0dce65c108013c712c1c940dfa2c6ee25e412eeb7091.json",
+      "raw_snapshot_sha256": "e084a38b42c63f260f2acc7f5cd08506d2d12a949d7150f41e6b5ff563a17485",
+      "canonical_source_sha256": "6a0c21851ddc485d2bdc5abba25cb7c7645d52c6daf443da489ae259a5258316",
+      "kind": "known_positive_false_negative",
+      "conclusion": "There are two observed boundaries. Raw source contains the author/committer environment-default section, while the retained readability extraction and supplied context omit it. In addition, audit asks for committer preservation/sameness, whereas the frozen criterion asks author preservation and committer change. No claim that repairing one boundary alone would produce direct.",
+      "boundaries": [
+        "Amend replacement, same parents/author with reset-author exception, and no-edit message reuse are all supplied in B1.",
+        "Raw full source COMMIT INFORMATION includes GIT_COMMITTER_NAME; complete retained extraction contains neither that identifier nor the author-and-committer defaults sentence.",
+        "Audit reason explicitly requests committer preserved or same, which is not the requested direction in the frozen material criterion."
+      ],
+      "branches": {
+        "baseline": {
+          "pool": [
+            "C015",
+            "C010",
+            "C005",
+            "C001",
+            "C011",
+            "C006",
+            "C012",
+            "C002",
+            "C018",
+            "C016"
+          ],
+          "reads": [
+            "C015",
+            "C010",
+            "C005",
+            "C001"
+          ],
+          "requirements": [
+            {
+              "anchor": "git commit --amend replaces tip commit same parents author committer --no-edit",
+              "end": 78,
+              "id": "R0",
+              "start": 0
+            },
+            {
+              "anchor": "--amend",
+              "end": 18,
+              "id": "R1",
+              "start": 11
+            },
+            {
+              "anchor": "parents",
+              "end": 51,
+              "id": "R2",
+              "start": 44
+            },
+            {
+              "anchor": "--no-edit",
+              "end": 78,
+              "id": "R3",
+              "start": 69
+            }
+          ],
+          "checks": [
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "--amend Replace the tip of the current branch by creating a new commit.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "--amend Replace the tip of the current branch by creating a new commit.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "The new commit has the same parents and author as the current one",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "git commit --amend --no-edit amends a commit without changing its commit message",
+              "status": "supported"
+            }
+          ],
+          "audit_supported": false,
+          "audit_reason": "The source states the amended commit has the same parents and author, and supports --no-edit, but it does not address whether the committer is the same.",
+          "final_classification": "background",
+          "extraction": {
+            "path": "runs/admission-literals-2026-10-30/baseline/l20-C015-document.json",
+            "sha256": "069f7efce26bca54b030be7d92d8ae35a811cb695707564e809702b329e2f673",
+            "method": "readability",
+            "truncated": false,
+            "text_hash": "3a2388b6bff9638eb59790397e0f2613108ad5873eb5d9f6f547c932a60d7341"
+          },
+          "proof_footprints": [
+            {
+              "phrase": "same parents and author",
+              "canonical_raw": [
+                {
+                  "quote": "same parents and author",
+                  "start": 11536,
+                  "end": 11559,
+                  "context": "ing point, instead of an empty message, when no other message is specified from the command line via options such as -m , -F , -c , etc. The new commit has the same parents and author as the current one (the --reset-author option can countermand this). It is a rough equivalent for: $ git reset --soft HEAD^ $ ... do something else to come up with the right tree ... $ git commit -c ORIG_HEAD but can be used to amend a mer"
+                }
+              ],
+              "extracted": [
+                {
+                  "quote": "same parents and author",
+                  "start": 8981,
+                  "end": 9004,
+                  "context": "arting point, instead of an empty message, when no other message is specified from the command line via options such as -m, -F, -c, etc. The new commit has the same parents and author as the current one (the --reset-author option can countermand this). It is a rough equivalent for: $ git reset --soft HEAD^ $ ... do something else to come up with the right tree ... $ git commit -c ORIG_HEAD but can be used to amend a mer"
+                }
+              ],
+              "supplied": {
+                "coverage": [
+                  "B1"
+                ],
+                "audit": [
+                  "B1"
+                ]
+              }
+            },
+            {
+              "phrase": "Author and committer information is taken from the following environment variables",
+              "canonical_raw": [
+                {
+                  "quote": "Author and committer information is taken from the following environment variables",
+                  "start": 18792,
+                  "end": 18874,
+                  "context": "tted, because the merge should be recorded as a single commit. In fact, the command refuses to run when given pathnames (but see -i option). COMMIT INFORMATION Author and committer information is taken from the following environment variables, if set: GIT_AUTHOR_NAME GIT_AUTHOR_EMAIL GIT_AUTHOR_DATE GIT_COMMITTER_NAME GIT_COMMITTER_EMAIL GIT_COMMITTER_DATE (nb \"<\", \">\" and \"\\n\"s are stripped) The author and committer names are by convention some form of a personal name (that is"
+                }
+              ],
+              "extracted": [],
+              "supplied": {
+                "coverage": [],
+                "audit": []
+              }
+            },
+            {
+              "phrase": "GIT_COMMITTER_NAME",
+              "canonical_raw": [
+                {
+                  "quote": "GIT_COMMITTER_NAME",
+                  "start": 18933,
+                  "end": 18951,
+                  "context": "COMMIT INFORMATION Author and committer information is taken from the following environment variables, if set: GIT_AUTHOR_NAME GIT_AUTHOR_EMAIL GIT_AUTHOR_DATE GIT_COMMITTER_NAME GIT_COMMITTER_EMAIL GIT_COMMITTER_DATE (nb \"<\", \">\" and \"\\n\"s are stripped) The author and committer names are by convention some form of a personal name (that is, the name by which other humans refer to you), although Git does not enforce"
+                }
+              ],
+              "extracted": [],
+              "supplied": {
+                "coverage": [],
+                "audit": []
+              }
+            }
+          ],
+          "supplied_call_hashes": [
+            {
+              "index": 1,
+              "kind": "coverage",
+              "input_sha256": "a6a6347ae4b3bf9ae86ad2454a1974b4cc7dea36ab6a7c7b19ee58ebf8789638"
+            },
+            {
+              "index": 2,
+              "kind": "audit",
+              "input_sha256": "20b41691f72b4a76c09f58fac3984dd427168de143e5905452f21bbe60981582"
+            }
+          ]
+        },
+        "fixed": {
+          "pool": [
+            "C015",
+            "C010",
+            "C007",
+            "C013",
+            "C005",
+            "C001",
+            "C011",
+            "C006",
+            "C012",
+            "C002"
+          ],
+          "reads": [
+            "C015",
+            "C010",
+            "C007",
+            "C013"
+          ],
+          "requirements": [
+            {
+              "anchor": "git commit --amend replaces tip commit same parents author committer --no-edit",
+              "end": 78,
+              "id": "R0",
+              "start": 0
+            },
+            {
+              "anchor": "--amend",
+              "end": 18,
+              "id": "R1",
+              "start": 11
+            },
+            {
+              "anchor": "parents",
+              "end": 51,
+              "id": "R2",
+              "start": 44
+            },
+            {
+              "anchor": "--no-edit",
+              "end": 78,
+              "id": "R3",
+              "start": 69
+            }
+          ],
+          "checks": [
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "--amend Replace the tip of the current branch by creating a new commit.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "The new commit has the same parents and author as the current one (the --reset-author option can countermand this).",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "--no-edit Use the selected commit message without launching an editor. For example, git commit --amend --no-edit amends a commit without changing its commit message.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "The new commit has the same parents and author as the current one (the --reset-author option can countermand this).",
+              "status": "supported"
+            }
+          ],
+          "audit_supported": false,
+          "audit_reason": "The bundle supports that --amend replaces the tip and preserves parents/author, and that --no-edit keeps the commit message, but it does not state that the committer is preserved or the same.",
+          "final_classification": "background",
+          "extraction": {
+            "path": "runs/admission-literals-2026-10-30/fixed/l20-C015-document.json",
+            "sha256": "069f7efce26bca54b030be7d92d8ae35a811cb695707564e809702b329e2f673",
+            "method": "readability",
+            "truncated": false,
+            "text_hash": "3a2388b6bff9638eb59790397e0f2613108ad5873eb5d9f6f547c932a60d7341"
+          },
+          "proof_footprints": [
+            {
+              "phrase": "same parents and author",
+              "canonical_raw": [
+                {
+                  "quote": "same parents and author",
+                  "start": 11536,
+                  "end": 11559,
+                  "context": "ing point, instead of an empty message, when no other message is specified from the command line via options such as -m , -F , -c , etc. The new commit has the same parents and author as the current one (the --reset-author option can countermand this). It is a rough equivalent for: $ git reset --soft HEAD^ $ ... do something else to come up with the right tree ... $ git commit -c ORIG_HEAD but can be used to amend a mer"
+                }
+              ],
+              "extracted": [
+                {
+                  "quote": "same parents and author",
+                  "start": 8981,
+                  "end": 9004,
+                  "context": "arting point, instead of an empty message, when no other message is specified from the command line via options such as -m, -F, -c, etc. The new commit has the same parents and author as the current one (the --reset-author option can countermand this). It is a rough equivalent for: $ git reset --soft HEAD^ $ ... do something else to come up with the right tree ... $ git commit -c ORIG_HEAD but can be used to amend a mer"
+                }
+              ],
+              "supplied": {
+                "coverage": [
+                  "B1"
+                ],
+                "audit": [
+                  "B1"
+                ]
+              }
+            },
+            {
+              "phrase": "Author and committer information is taken from the following environment variables",
+              "canonical_raw": [
+                {
+                  "quote": "Author and committer information is taken from the following environment variables",
+                  "start": 18792,
+                  "end": 18874,
+                  "context": "tted, because the merge should be recorded as a single commit. In fact, the command refuses to run when given pathnames (but see -i option). COMMIT INFORMATION Author and committer information is taken from the following environment variables, if set: GIT_AUTHOR_NAME GIT_AUTHOR_EMAIL GIT_AUTHOR_DATE GIT_COMMITTER_NAME GIT_COMMITTER_EMAIL GIT_COMMITTER_DATE (nb \"<\", \">\" and \"\\n\"s are stripped) The author and committer names are by convention some form of a personal name (that is"
+                }
+              ],
+              "extracted": [],
+              "supplied": {
+                "coverage": [],
+                "audit": []
+              }
+            },
+            {
+              "phrase": "GIT_COMMITTER_NAME",
+              "canonical_raw": [
+                {
+                  "quote": "GIT_COMMITTER_NAME",
+                  "start": 18933,
+                  "end": 18951,
+                  "context": "COMMIT INFORMATION Author and committer information is taken from the following environment variables, if set: GIT_AUTHOR_NAME GIT_AUTHOR_EMAIL GIT_AUTHOR_DATE GIT_COMMITTER_NAME GIT_COMMITTER_EMAIL GIT_COMMITTER_DATE (nb \"<\", \">\" and \"\\n\"s are stripped) The author and committer names are by convention some form of a personal name (that is, the name by which other humans refer to you), although Git does not enforce"
+                }
+              ],
+              "extracted": [],
+              "supplied": {
+                "coverage": [],
+                "audit": []
+              }
+            }
+          ],
+          "supplied_call_hashes": [
+            {
+              "index": 1,
+              "kind": "coverage",
+              "input_sha256": "8a326ea9e4be0d94549be1340ac65083cd0b8a13a087183b9844b9673aa95c3c"
+            },
+            {
+              "index": 2,
+              "kind": "audit",
+              "input_sha256": "abe1cb62d83014cfe379d728489e0bd6ca1db3c225636912a24efc0dce92a086"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case": "l24",
+      "id": "C008",
+      "query": ".NET Interlocked.CompareExchange reference identity original value return comparand exchange",
+      "frozen_criteria": "Bind the requested reference overload to comparison by reference identity rather than value equality. Bind the returned value to the original location contents and exchange to the comparand match condition.",
+      "url": "https://learn.microsoft.com/en-us/dotnet/api/system.threading.interlocked.compareexchange?view=net-10.0",
+      "gold_grade": 2,
+      "gold_basis": "Complete target Object overload explicitly supplies reference versus value equality, replacement on reference match and original Object return. Numeric overload semantics are not used.",
+      "raw_snapshot": "runs/admission-literals-2026-10-30/raw-cache/f7fc0159bdf9a71a941ee161bfba3c71f347ff650fa425e39ae682b6fb7e6776.json",
+      "raw_snapshot_sha256": "5ea244829d81aa604c15e7006880cdcee86d670524cc99e4264cdd88b9b2f4d3",
+      "canonical_source_sha256": "58f0364d690c8d4b89bb16ed303c7eac307069f85e62b2c56b30288c47b33071",
+      "kind": "known_positive_false_negative",
+      "conclusion": "Relevant reference-equality and original-value facts are already supplied: B2 contains the Object-overload comparison versus value equality and replacement condition; B1 contains equal-by-reference comparison and original-value return. Coverage still marks R2 reference and R3 comparand missing, with no witness rejection. This is a coverage verdict despite relevant supplied evidence, not a demonstrated loss of those clauses.",
+      "boundaries": [
+        "Full source grade2 is bound to the Object overload; numerical overload facts cannot substitute for reference identity.",
+        "Supplied B2 crosses into the following numeric overload, but the inspected Object semantics are before that boundary and explicitly retained.",
+        "The model gives no per-check rationale, so the cause of the missing statuses remains unspecified."
+      ],
+      "branches": {
+        "baseline": {
+          "pool": [
+            "C008",
+            "C007",
+            "C009",
+            "C010",
+            "C013",
+            "C001",
+            "C014",
+            "C015",
+            "C016",
+            "C006"
+          ],
+          "reads": [
+            "C008",
+            "C007",
+            "C009",
+            "C010"
+          ],
+          "requirements": [
+            {
+              "anchor": ".NET Interlocked.CompareExchange reference identity original value return comparand exchange",
+              "end": 92,
+              "id": "R0",
+              "start": 0
+            },
+            {
+              "anchor": "Interlocked.CompareExchange",
+              "end": 32,
+              "id": "R1",
+              "start": 5
+            },
+            {
+              "anchor": "reference",
+              "end": 42,
+              "id": "R2",
+              "start": 33
+            },
+            {
+              "anchor": "comparand",
+              "end": 83,
+              "id": "R3",
+              "start": 74
+            }
+          ],
+          "checks": [
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "The return value of this method is the original value in location1, whether or not the exchange takes place.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "If comparand and the value in location1 are equal by reference, then value is stored in location1.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "",
+              "status": "missing"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "",
+              "status": "missing"
+            }
+          ],
+          "audit_supported": null,
+          "audit_reason": "",
+          "final_classification": "background",
+          "extraction": {
+            "path": "runs/admission-literals-2026-10-30/baseline/l24-C008-document.json",
+            "sha256": "e2528a80017cfffee1e31e19f78604120aab594edd031aac716fb99127352811",
+            "method": "semantic_main",
+            "truncated": false,
+            "text_hash": "cf8586e16d9e92407af0f459533387cc0f00a0505f48f4f026e4af41ca57722b"
+          },
+          "proof_footprints": [
+            {
+              "phrase": "The objects are compared for reference equality rather than value equality",
+              "canonical_raw": [
+                {
+                  "quote": "The objects are compared for reference equality rather than value equality",
+                  "start": 18144,
+                  "end": 18218,
+                  "context": "ns are performed as an atomic operation. The return value of CompareExchange is the original value in location1 , whether or not the exchange takes place. Note The objects are compared for reference equality rather than value equality. As a result, two boxed instances of the same value type (for example, the integer 3) always appear to be unequal and no operation is performed. Do not use this overload with value types. See also Managed Threading Overview of synchronizat"
+                }
+              ],
+              "extracted": [
+                {
+                  "quote": "The objects are compared for reference equality rather than value equality",
+                  "start": 17373,
+                  "end": 17447,
+                  "context": "ons are performed as an atomic operation. The return value of CompareExchange is the original value in location1, whether or not the exchange takes place. Note The objects are compared for reference equality rather than value equality. As a result, two boxed instances of the same value type (for example, the integer 3) always appear to be unequal and no operation is performed. Do not use this overload with value types. See also Managed Threading Overview of synchronizat"
+                }
+              ],
+              "supplied": {
+                "coverage": [
+                  "B2"
+                ]
+              }
+            },
+            {
+              "phrase": "If comparand and the object in location1 are equal by reference",
+              "canonical_raw": [
+                {
+                  "quote": "If comparand and the object in location1 are equal by reference",
+                  "start": 17812,
+                  "end": 17875,
+                  "context": "a null pointer. Remarks Important The CompareExchange<T>(T, T, T) method overload provides a generic alternative that can be used for concrete reference types. If comparand and the object in location1 are equal by reference, then value is stored in location1 . Otherwise, no operation is performed. The compare and exchange operations are performed as an atomic operation. The return value of CompareExchange is the original value in location1 , whether or not th"
+                }
+              ],
+              "extracted": [
+                {
+                  "quote": "If comparand and the object in location1 are equal by reference",
+                  "start": 17043,
+                  "end": 17106,
+                  "context": "a null pointer. Remarks Important The CompareExchange<T>(T, T, T) method overload provides a generic alternative that can be used for concrete reference types. If comparand and the object in location1 are equal by reference, then value is stored in location1. Otherwise, no operation is performed. The compare and exchange operations are performed as an atomic operation. The return value of CompareExchange is the original value in location1, whether or not the "
+                }
+              ],
+              "supplied": {
+                "coverage": [
+                  "B2"
+                ]
+              }
+            },
+            {
+              "phrase": "The return value of this method is the original value",
+              "canonical_raw": [
+                {
+                  "quote": "The return value of this method is the original value",
+                  "start": 37805,
+                  "end": 37858,
+                  "context": " are equal, then value is stored in location1 . Otherwise, no operation is performed. The compare and exchange operations are performed as an atomic operation. The return value of this method is the original value in location1 , whether or not the exchange takes place. Note IntPtr is a platform-specific type. See also Managed Threading Overview of synchronization primitives Applies to CompareExchange<T>(T, T, T) Source: Interlocked.cs Source: Interl"
+                },
+                {
+                  "quote": "The return value of this method is the original value",
+                  "start": 40306,
+                  "end": 40359,
+                  "context": "l by reference, then value is stored in location1 . Otherwise, no operation is performed. The comparison and the exchange are performed as an atomic operation. The return value of this method is the original value in location1 , whether or not the exchange takes place. Applies to Collaborate with us on GitHub The source for this content can be found on GitHub, where you can also create and review issues and pull requests. For more information, see o"
+                }
+              ],
+              "extracted": [
+                {
+                  "quote": "The return value of this method is the original value",
+                  "start": 36983,
+                  "end": 37036,
+                  "context": "1 are equal, then value is stored in location1. Otherwise, no operation is performed. The compare and exchange operations are performed as an atomic operation. The return value of this method is the original value in location1, whether or not the exchange takes place. Note IntPtr is a platform-specific type. See also Managed Threading Overview of synchronization primitives Applies to CompareExchange<T>(T, T, T) Source:Interlocked.cs Source:Interlock"
+                },
+                {
+                  "quote": "The return value of this method is the original value",
+                  "start": 39471,
+                  "end": 39524,
+                  "context": "al by reference, then value is stored in location1. Otherwise, no operation is performed. The comparison and the exchange are performed as an atomic operation. The return value of this method is the original value in location1, whether or not the exchange takes place. Applies to Feedback Was this page helpful? No Need help with this topic? Want to try using Ask Learn to clarify or guide you through this topic?"
+                }
+              ],
+              "supplied": {
+                "coverage": [
+                  "B1"
+                ]
+              }
+            }
+          ],
+          "supplied_call_hashes": [
+            {
+              "index": 1,
+              "kind": "coverage",
+              "input_sha256": "ae20db15fa42892973ef2c19a5cea687b63fe6a7ffe0f14262fa235be7c1a11d"
+            }
+          ]
+        },
+        "fixed": {
+          "pool": [
+            "C008",
+            "C007",
+            "C009",
+            "C010",
+            "C013",
+            "C001",
+            "C014",
+            "C016",
+            "C006"
+          ],
+          "reads": [
+            "C008",
+            "C007",
+            "C009",
+            "C010"
+          ],
+          "requirements": [
+            {
+              "anchor": ".NET Interlocked.CompareExchange reference identity original value return comparand exchange",
+              "end": 92,
+              "id": "R0",
+              "start": 0
+            },
+            {
+              "anchor": "Interlocked.CompareExchange",
+              "end": 32,
+              "id": "R1",
+              "start": 5
+            },
+            {
+              "anchor": "reference",
+              "end": 42,
+              "id": "R2",
+              "start": 33
+            },
+            {
+              "anchor": "comparand",
+              "end": 83,
+              "id": "R3",
+              "start": 74
+            }
+          ],
+          "checks": [
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "The return value of this method is the original value in location1, whether or not the exchange takes place.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "If comparand and the value in location1 are equal by reference, then value is stored in location1.",
+              "status": "supported"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "",
+              "status": "missing"
+            },
+            {
+              "passages": [
+                "B1"
+              ],
+              "quote": "",
+              "status": "missing"
+            }
+          ],
+          "audit_supported": null,
+          "audit_reason": "",
+          "final_classification": "background",
+          "extraction": {
+            "path": "runs/admission-literals-2026-10-30/fixed/l24-C008-document.json",
+            "sha256": "e2528a80017cfffee1e31e19f78604120aab594edd031aac716fb99127352811",
+            "method": "semantic_main",
+            "truncated": false,
+            "text_hash": "cf8586e16d9e92407af0f459533387cc0f00a0505f48f4f026e4af41ca57722b"
+          },
+          "proof_footprints": [
+            {
+              "phrase": "The objects are compared for reference equality rather than value equality",
+              "canonical_raw": [
+                {
+                  "quote": "The objects are compared for reference equality rather than value equality",
+                  "start": 18144,
+                  "end": 18218,
+                  "context": "ns are performed as an atomic operation. The return value of CompareExchange is the original value in location1 , whether or not the exchange takes place. Note The objects are compared for reference equality rather than value equality. As a result, two boxed instances of the same value type (for example, the integer 3) always appear to be unequal and no operation is performed. Do not use this overload with value types. See also Managed Threading Overview of synchronizat"
+                }
+              ],
+              "extracted": [
+                {
+                  "quote": "The objects are compared for reference equality rather than value equality",
+                  "start": 17373,
+                  "end": 17447,
+                  "context": "ons are performed as an atomic operation. The return value of CompareExchange is the original value in location1, whether or not the exchange takes place. Note The objects are compared for reference equality rather than value equality. As a result, two boxed instances of the same value type (for example, the integer 3) always appear to be unequal and no operation is performed. Do not use this overload with value types. See also Managed Threading Overview of synchronizat"
+                }
+              ],
+              "supplied": {
+                "coverage": [
+                  "B2"
+                ]
+              }
+            },
+            {
+              "phrase": "If comparand and the object in location1 are equal by reference",
+              "canonical_raw": [
+                {
+                  "quote": "If comparand and the object in location1 are equal by reference",
+                  "start": 17812,
+                  "end": 17875,
+                  "context": "a null pointer. Remarks Important The CompareExchange<T>(T, T, T) method overload provides a generic alternative that can be used for concrete reference types. If comparand and the object in location1 are equal by reference, then value is stored in location1 . Otherwise, no operation is performed. The compare and exchange operations are performed as an atomic operation. The return value of CompareExchange is the original value in location1 , whether or not th"
+                }
+              ],
+              "extracted": [
+                {
+                  "quote": "If comparand and the object in location1 are equal by reference",
+                  "start": 17043,
+                  "end": 17106,
+                  "context": "a null pointer. Remarks Important The CompareExchange<T>(T, T, T) method overload provides a generic alternative that can be used for concrete reference types. If comparand and the object in location1 are equal by reference, then value is stored in location1. Otherwise, no operation is performed. The compare and exchange operations are performed as an atomic operation. The return value of CompareExchange is the original value in location1, whether or not the "
+                }
+              ],
+              "supplied": {
+                "coverage": [
+                  "B2"
+                ]
+              }
+            },
+            {
+              "phrase": "The return value of this method is the original value",
+              "canonical_raw": [
+                {
+                  "quote": "The return value of this method is the original value",
+                  "start": 37805,
+                  "end": 37858,
+                  "context": " are equal, then value is stored in location1 . Otherwise, no operation is performed. The compare and exchange operations are performed as an atomic operation. The return value of this method is the original value in location1 , whether or not the exchange takes place. Note IntPtr is a platform-specific type. See also Managed Threading Overview of synchronization primitives Applies to CompareExchange<T>(T, T, T) Source: Interlocked.cs Source: Interl"
+                },
+                {
+                  "quote": "The return value of this method is the original value",
+                  "start": 40306,
+                  "end": 40359,
+                  "context": "l by reference, then value is stored in location1 . Otherwise, no operation is performed. The comparison and the exchange are performed as an atomic operation. The return value of this method is the original value in location1 , whether or not the exchange takes place. Applies to Collaborate with us on GitHub The source for this content can be found on GitHub, where you can also create and review issues and pull requests. For more information, see o"
+                }
+              ],
+              "extracted": [
+                {
+                  "quote": "The return value of this method is the original value",
+                  "start": 36983,
+                  "end": 37036,
+                  "context": "1 are equal, then value is stored in location1. Otherwise, no operation is performed. The compare and exchange operations are performed as an atomic operation. The return value of this method is the original value in location1, whether or not the exchange takes place. Note IntPtr is a platform-specific type. See also Managed Threading Overview of synchronization primitives Applies to CompareExchange<T>(T, T, T) Source:Interlocked.cs Source:Interlock"
+                },
+                {
+                  "quote": "The return value of this method is the original value",
+                  "start": 39471,
+                  "end": 39524,
+                  "context": "al by reference, then value is stored in location1. Otherwise, no operation is performed. The comparison and the exchange are performed as an atomic operation. The return value of this method is the original value in location1, whether or not the exchange takes place. Applies to Feedback Was this page helpful? No Need help with this topic? Want to try using Ask Learn to clarify or guide you through this topic?"
+                }
+              ],
+              "supplied": {
+                "coverage": [
+                  "B1"
+                ]
+              }
+            }
+          ],
+          "supplied_call_hashes": [
+            {
+              "index": 1,
+              "kind": "coverage",
+              "input_sha256": "e16c7588e59a3d18ce6c4272e4e804bd1b04f5c34a25f8685f291a54015fd827"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "network_calls": 0,
+  "model_calls": 0,
+  "runtime_edits": 0,
+  "gold_edits": 0,
+  "unknown_direct_review": {
+    "case": "l17",
+    "id": "C014",
+    "url": "https://prestodb.io/docs/current/functions/comparison.html",
+    "gold_grade": null,
+    "acquisition_error": "fetch_timeout",
+    "basis": "Frozen full source acquisition timed out. Both arms published a snippet-only direct after the read error. This remains unknown and is excluded from known FP/precision denominators; neither factual correctness nor error is inferred from the snippet.",
+    "raw_snapshot": "runs/admission-literals-2026-10-30/raw-cache/8f106dda0e6aa8a008360067ffae37ee8ad6431f4d06d42f840de5ba5e901fd8.json",
+    "raw_snapshot_sha256": "d207451797301ef06e810252e17ffbb997e97e237473d751f30708168902367b"
+  }
+}

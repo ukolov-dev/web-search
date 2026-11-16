@@ -1,0 +1,184 @@
+{
+  "protocol": {
+    "date": "2026-10-30",
+    "cohort": "admission-literals-v1",
+    "new_cases": 24,
+    "frozen_at_utc": "2026-10-30T18:26:59.588471+00:00",
+    "before_source_acquisition": true,
+    "before_model_inference": true,
+    "no_holdout_tuning": true,
+    "source_only_gold": "Research criteria are predeclared in the separate plan; labels are derived only from retained original retrieved source snapshots and peer-reviewed before model inference. No gold labels enter product inputs or document selection.",
+    "forms_policy": "One identical English form per query, shared across variants. No adaptive rewriting or replacement after capture.",
+    "independent_acceptance": false
+  },
+  "cases": [
+    {
+      "id": "l01",
+      "query": "Python shutil.copyfile metadata copying guarantee copy2 follow_symlinks False source symlink",
+      "forms": [
+        "Python shutil.copyfile metadata copying guarantee copy2 follow_symlinks False source symlink"
+      ]
+    },
+    {
+      "id": "l02",
+      "query": "Python bisect_left bisect_right equal keys insertion point partition sorted sequence",
+      "forms": [
+        "Python bisect_left bisect_right equal keys insertion point partition sorted sequence"
+      ]
+    },
+    {
+      "id": "l03",
+      "query": "Rust HashMap entry or_insert_with closure vacant occupied mutable reference value",
+      "forms": [
+        "Rust HashMap entry or_insert_with closure vacant occupied mutable reference value"
+      ]
+    },
+    {
+      "id": "l04",
+      "query": "Rust Option take replace original option None return previous value",
+      "forms": [
+        "Rust Option take replace original option None return previous value"
+      ]
+    },
+    {
+      "id": "l05",
+      "query": "JavaScript Array.from sparse array holes undefined mapper Array.map skips holes",
+      "forms": [
+        "JavaScript Array.from sparse array holes undefined mapper Array.map skips holes"
+      ]
+    },
+    {
+      "id": "l06",
+      "query": "JavaScript String.replaceAll non-global RegExp TypeError string pattern literal",
+      "forms": [
+        "JavaScript String.replaceAll non-global RegExp TypeError string pattern literal"
+      ]
+    },
+    {
+      "id": "l07",
+      "query": "Java Optional orElse orElseGet eager argument lazy supplier empty present",
+      "forms": [
+        "Java Optional orElse orElseGet eager argument lazy supplier empty present"
+      ]
+    },
+    {
+      "id": "l08",
+      "query": "Java List.of Set.of null elements duplicate elements unmodifiable collections",
+      "forms": [
+        "Java List.of Set.of null elements duplicate elements unmodifiable collections"
+      ]
+    },
+    {
+      "id": "l09",
+      "query": "Go context.WithoutCancel parent cancellation propagation Done nil deadline Err",
+      "forms": [
+        "Go context.WithoutCancel parent cancellation propagation Done nil deadline Err"
+      ]
+    },
+    {
+      "id": "l10",
+      "query": "Go maps.Clone deep copy nested values shallow assignment map",
+      "forms": [
+        "Go maps.Clone deep copy nested values shallow assignment map"
+      ]
+    },
+    {
+      "id": "l11",
+      "query": "POSIX lseek beyond end file size hole zero bytes subsequent write",
+      "forms": [
+        "POSIX lseek beyond end file size hole zero bytes subsequent write"
+      ]
+    },
+    {
+      "id": "l12",
+      "query": "Linux accept4 SOCK_CLOEXEC SOCK_NONBLOCK accepted socket file status descriptor flags",
+      "forms": [
+        "Linux accept4 SOCK_CLOEXEC SOCK_NONBLOCK accepted socket file status descriptor flags"
+      ]
+    },
+    {
+      "id": "l13",
+      "query": "HTTP If-None-Match weak comparison GET HEAD 304 other methods 412",
+      "forms": [
+        "HTTP If-None-Match weak comparison GET HEAD 304 other methods 412"
+      ]
+    },
+    {
+      "id": "l14",
+      "query": "HTTP Vary header cache key selecting request fields asterisk reuse cached response",
+      "forms": [
+        "HTTP Vary header cache key selecting request fields asterisk reuse cached response"
+      ]
+    },
+    {
+      "id": "l15",
+      "query": "CSS pointer-events none prevents keyboard focus event propagation descendant target",
+      "forms": [
+        "CSS pointer-events none prevents keyboard focus event propagation descendant target"
+      ]
+    },
+    {
+      "id": "l16",
+      "query": "CSS grid minmax maximum smaller minimum flex value invalid minimum",
+      "forms": [
+        "CSS grid minmax maximum smaller minimum flex value invalid minimum"
+      ]
+    },
+    {
+      "id": "l17",
+      "query": "PostgreSQL GREATEST LEAST any NULL result all NULL arguments SQL standard difference",
+      "forms": [
+        "PostgreSQL GREATEST LEAST any NULL result all NULL arguments SQL standard difference"
+      ]
+    },
+    {
+      "id": "l18",
+      "query": "SQLite BETWEEN expression evaluated once equivalent greater equal less equal",
+      "forms": [
+        "SQLite BETWEEN expression evaluated once equivalent greater equal less equal"
+      ]
+    },
+    {
+      "id": "l19",
+      "query": "git switch --orphan new branch tracked files removed index untracked files",
+      "forms": [
+        "git switch --orphan new branch tracked files removed index untracked files"
+      ]
+    },
+    {
+      "id": "l20",
+      "query": "git commit --amend replaces tip commit same parents author committer --no-edit",
+      "forms": [
+        "git commit --amend replaces tip commit same parents author committer --no-edit"
+      ]
+    },
+    {
+      "id": "l21",
+      "query": "Docker run --rm anonymous named volumes automatically removed container exit",
+      "forms": [
+        "Docker run --rm anonymous named volumes automatically removed container exit"
+      ]
+    },
+    {
+      "id": "l22",
+      "query": "Kubernetes Job backoffLimit restartPolicy Never OnFailure retry count failed Pods container restarts",
+      "forms": [
+        "Kubernetes Job backoffLimit restartPolicy Never OnFailure retry count failed Pods container restarts"
+      ]
+    },
+    {
+      "id": "l23",
+      "query": "C++ std::string_view substr owns copied storage temporary lifetime dangling",
+      "forms": [
+        "C++ std::string_view substr owns copied storage temporary lifetime dangling"
+      ]
+    },
+    {
+      "id": "l24",
+      "query": ".NET Interlocked.CompareExchange reference identity original value return comparand exchange",
+      "forms": [
+        ".NET Interlocked.CompareExchange reference identity original value return comparand exchange"
+      ]
+    }
+  ]
+}

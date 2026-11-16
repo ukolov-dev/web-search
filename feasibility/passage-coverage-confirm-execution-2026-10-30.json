@@ -1,0 +1,267 @@
+{
+  "task": "TASK-20261030-184909-001",
+  "stages": {
+    "v7_development_core_only_rejected": {
+      "cases": 10,
+      "generative_calls": 29,
+      "priced_generations": 29,
+      "reported_cost_usd": 0.004632336,
+      "unpriced_generations": 0,
+      "reads": 40,
+      "reranker_calls": 36,
+      "reranker_pairs": 430
+    },
+    "v7_development_atomic": {
+      "cases": 8,
+      "generative_calls": 24,
+      "priced_generations": 24,
+      "reported_cost_usd": 0.004182368,
+      "unpriced_generations": 0,
+      "reads": 32,
+      "reranker_calls": 28,
+      "reranker_pairs": 319
+    },
+    "v7_fresh_baseline": {
+      "cases": 12,
+      "generative_calls": 35,
+      "priced_generations": 35,
+      "reported_cost_usd": 0.00620095,
+      "unpriced_generations": 0,
+      "reads": 47,
+      "reranker_calls": 39,
+      "reranker_pairs": 804
+    },
+    "v7_fresh_fixed": {
+      "cases": 12,
+      "generative_calls": 33,
+      "priced_generations": 33,
+      "reported_cost_usd": 0.006155584,
+      "unpriced_generations": 0,
+      "reads": 47,
+      "reranker_calls": 38,
+      "reranker_pairs": 876
+    },
+    "v7_release_mcp": {
+      "generative_calls": 3,
+      "unpriced_generations": 3,
+      "reported_cost_usd": null,
+      "reads": 4,
+      "reranker_calls": 4,
+      "reranker_pairs": 61,
+      "status": "partial",
+      "errors": [
+        "unsupported_direct_evidence_or_constraints: 1 downgraded"
+      ]
+    },
+    "v8_development": {
+      "cases": 6,
+      "generative_calls": 17,
+      "priced_generations": 17,
+      "reported_cost_usd": 0.0030858220000000002,
+      "unpriced_generations": 0,
+      "reads": 24,
+      "reranker_calls": 21,
+      "reranker_pairs": 375
+    },
+    "v8_comparison_development": {
+      "cases": 1,
+      "generative_calls": 3,
+      "priced_generations": 3,
+      "reported_cost_usd": 0.000459374,
+      "unpriced_generations": 0,
+      "reads": 4,
+      "reranker_calls": 3,
+      "reranker_pairs": 67
+    },
+    "final8_baseline": {
+      "cases": 8,
+      "generative_calls": 21,
+      "priced_generations": 21,
+      "reported_cost_usd": 0.00323023,
+      "unpriced_generations": 0,
+      "reads": 31,
+      "reranker_calls": 22,
+      "reranker_pairs": 416
+    },
+    "final8_fixed": {
+      "cases": 8,
+      "generative_calls": 19,
+      "priced_generations": 19,
+      "reported_cost_usd": 0.003068878,
+      "unpriced_generations": 0,
+      "reads": 28,
+      "reranker_calls": 22,
+      "reranker_pairs": 428
+    },
+    "v8_release_mcp": {
+      "generative_calls": 3,
+      "unpriced_generations": 3,
+      "reported_cost_usd": null,
+      "reads": 4,
+      "reranker_calls": 4,
+      "reranker_pairs": 61,
+      "status": "ok",
+      "errors": []
+    },
+    "v9_development_none": {
+      "cases": 13,
+      "generative_calls": 38,
+      "priced_generations": 38,
+      "unpriced_generations": 0,
+      "reported_cost_usd": 0.006639512,
+      "reasoning_tokens": 0,
+      "reads": 52,
+      "reranker_calls": 45,
+      "reranker_pairs": 661
+    },
+    "v9_quote_audit_none": {
+      "cases": 1,
+      "generative_calls": 3,
+      "priced_generations": 3,
+      "unpriced_generations": 0,
+      "reported_cost_usd": 0.00049652,
+      "reasoning_tokens": 0,
+      "reads": 4,
+      "reranker_calls": 4,
+      "reranker_pairs": 163
+    },
+    "v9_first_reasoned_audit": {
+      "cases": 1,
+      "generative_calls": 3,
+      "priced_generations": 3,
+      "unpriced_generations": 0,
+      "reported_cost_usd": 0.000808412,
+      "reasoning_tokens": 1354,
+      "reads": 4,
+      "reranker_calls": 4,
+      "reranker_pairs": 163
+    },
+    "v9_final_controls": {
+      "cases": 5,
+      "generative_calls": 15,
+      "priced_generations": 15,
+      "unpriced_generations": 0,
+      "reported_cost_usd": 0.0033436439999999998,
+      "reasoning_tokens": 4485,
+      "reads": 20,
+      "reranker_calls": 16,
+      "reranker_pairs": 308
+    },
+    "new4_baseline": {
+      "cases": 4,
+      "generative_calls": 11,
+      "priced_generations": 11,
+      "unpriced_generations": 0,
+      "reported_cost_usd": 0.001698466,
+      "reasoning_tokens": 0,
+      "reads": 13,
+      "reranker_calls": 10,
+      "reranker_pairs": 148
+    },
+    "new4_fixed": {
+      "cases": 4,
+      "generative_calls": 11,
+      "priced_generations": 11,
+      "unpriced_generations": 0,
+      "reported_cost_usd": 0.002003762,
+      "reasoning_tokens": 1684,
+      "reads": 14,
+      "reranker_calls": 11,
+      "reranker_pairs": 161
+    },
+    "v9_release_mcp": {
+      "generative_calls": 3,
+      "unpriced_generations": 3,
+      "reported_cost_usd": null,
+      "reads": 4,
+      "reranker_calls": 4,
+      "reranker_pairs": 61,
+      "status": "ok",
+      "errors": []
+    }
+  },
+  "totals": {
+    "priced_generations": 262,
+    "unpriced_generations": 9,
+    "generative_calls": 271,
+    "reported_cost_usd": 0.046005858000000004
+  },
+  "primary_new_queries": 24,
+  "primary_cards": 441,
+  "primary_retrieval_logical_calls": 48,
+  "extra_mcp_logical_calls": 6,
+  "gold_only_additional_reads": 9,
+  "verification": {
+    "ordinary_tests": 75,
+    "unit": 70,
+    "stdio": 5,
+    "release_stdio": 5,
+    "fmt": "passed",
+    "clippy": "passed",
+    "release_build": "passed",
+    "live_mcp": {
+      "status": "ok",
+      "errors": [],
+      "budget": {
+        "classification_calls": 3,
+        "document_reads": 4,
+        "logical_search_calls": 2,
+        "reranker_calls": 4,
+        "reranker_pairs": 61,
+        "source_context_max": 14962
+      }
+    },
+    "independent_acceptance": false
+  },
+  "audit_configuration": {
+    "model": "deepseek/deepseek-v4.1-flash-1017",
+    "initial": {
+      "reasoning": "none",
+      "max_tokens": 4096
+    },
+    "coverage": {
+      "reasoning": "none",
+      "max_tokens": 6000
+    },
+    "audit": {
+      "reasoning": "low",
+      "exclude": true,
+      "max_tokens": 6000
+    },
+    "model_calls": 3,
+    "reads": 4,
+    "reranks": 4,
+    "deadline_seconds": 180,
+    "source_context_chars": 24000
+  },
+  "final_code_frozen_before_both_new4_branches": true,
+  "new4_gold": "source gold after botharms, beforepredictioninspection;two-person blind peer review; plannedbeforeinference timingdeviationdisclosed",
+  "limits": [
+    "Three sequential exploratory cohorts; firsttwo became development after unseal",
+    "Provider-reported cost, not invoice;9 MCP generations price unknown",
+    "Same generative model audits its own coverage; not a truth oracle",
+    "No MiMo/day2/load/VPS/independent ready_to_merge acceptance"
+  ],
+  "protocol_deviation": "confirm-plan requested goldbeforeinference; actualfreeze afterinference beforeauthor/peer/root predictioninspection. Cases/criteria/codewerefixedbeforeinference; no frozeninputtimestampschanged.",
+  "observed_result": {
+    "recall_before": 0.0,
+    "recall_after": 0.3333333333333333,
+    "tp_before": 0,
+    "tp_after": 2,
+    "fp_before": 1,
+    "fp_after": 0,
+    "fn_before": 6,
+    "fn_after": 4,
+    "unknown_direct": 0,
+    "new_fp_ids": 0
+  },
+  "gold_blind_review": {
+    "known": 14,
+    "positive": 6,
+    "unknown": 56,
+    "proofs": 33,
+    "freeze_after_inference_before_prediction_inspection": true,
+    "peer_grade_changes": 0,
+    "formal_independent_acceptance": false
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "status": "FAILED_NEW_FALSE_ACCEPTS",
+  "cases": [
+    {
+      "id": "J01_entity",
+      "expected": false,
+      "baseline": false,
+      "candidate": true
+    },
+    {
+      "id": "J01_negation",
+      "expected": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "id": "J01_number",
+      "expected": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "id": "J01_original",
+      "expected": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "id": "J01_rule_removed",
+      "expected": false,
+      "baseline": false,
+      "candidate": true
+    },
+    {
+      "id": "J01_rule_restored",
+      "expected": true,
+      "baseline": false,
+      "candidate": true
+    },
+    {
+      "id": "J01_version",
+      "expected": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "id": "pop_no_rule",
+      "expected": false,
+      "baseline": false,
+      "candidate": false
+    },
+    {
+      "id": "pop_transfer",
+      "expected": true,
+      "baseline": false,
+      "candidate": true
+    },
+    {
+      "id": "pop_wrong_input",
+      "expected": false,
+      "baseline": false,
+      "candidate": false
+    }
+  ],
+  "baseline": {
+    "calls": 10,
+    "matched": 8,
+    "false_ids": [],
+    "lost_positive": [
+      "J01_rule_restored",
+      "pop_transfer"
+    ],
+    "cost_usd": 0.000591692
+  },
+  "candidate": {
+    "matched": 8,
+    "false_ids": [
+      "J01_entity",
+      "J01_rule_removed"
+    ]
+  },
+  "limitations": [
+    "Post-hoc baseline on unchanged frozen10; no randomization.",
+    "Test-only normalized schema versus original audit schema: component comparison, not full runtime replay.",
+    "Baseline context has no rejection background; original quote-bound prompt unchanged.",
+    "Generic inference rationale, not original J01 rationale; disclosed component input."
+  ],
+  "archive": {
+    "path": "feasibility/inference-baseline-corpus-2026-11-16.tar.gz",
+    "bytes": 7120,
+    "sha256": "d3f72b8dbe271c01deb82b5ceb6b9063fc471a1767d114e84b2e057ee3dbf7bc"
+  }
+}

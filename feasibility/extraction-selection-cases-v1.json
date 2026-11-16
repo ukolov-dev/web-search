@@ -1,0 +1,69 @@
+{
+  "protocol": {
+    "date": "2026-10-30",
+    "baseline": "current audited v4,old extraction+selection",
+    "fixed": "v5 reference read slot+declared source body extraction,same model/audit/reranker",
+    "frozen_before_inference": true,
+    "gold": "blind source assessment before predicted labels inspected; unknowns separate; no independent acceptance",
+    "budgets": "3generations/4reads/4localreranks within180s",
+    "no_new_holdout_tuning": true
+  },
+  "cases": [
+    {
+      "id": "n01",
+      "query": "git stash pop apply conflict stash entry retained",
+      "forms": [
+        "git stash pop apply conflict stash entry retained"
+      ]
+    },
+    {
+      "id": "n02",
+      "query": "Python itertools.groupby adjacent equal keys shared underlying iterator",
+      "forms": [
+        "Python itertools.groupby adjacent equal keys shared underlying iterator"
+      ]
+    },
+    {
+      "id": "n03",
+      "query": "Rust BufRead read_line read_until UTF-8 invalid data delimiter retained",
+      "forms": [
+        "Rust BufRead read_line read_until UTF-8 invalid data delimiter retained"
+      ]
+    },
+    {
+      "id": "n04",
+      "query": "PostgreSQL DISTINCT ON ORDER BY first row unpredictable",
+      "forms": [
+        "PostgreSQL DISTINCT ON ORDER BY first row unpredictable"
+      ]
+    },
+    {
+      "id": "n05",
+      "query": "SQLite REPLACE delete triggers recursive_triggers update hook change counter",
+      "forms": [
+        "SQLite REPLACE delete triggers recursive_triggers update hook change counter"
+      ]
+    },
+    {
+      "id": "n06",
+      "query": "Docker empty volume populate nocopy existing container files",
+      "forms": [
+        "Docker empty volume populate nocopy existing container files"
+      ]
+    },
+    {
+      "id": "n07",
+      "query": "CSS overflow clip hidden scroll container programmatic scrolling",
+      "forms": [
+        "CSS overflow clip hidden scroll container programmatic scrolling"
+      ]
+    },
+    {
+      "id": "n08",
+      "query": "HTTP HEAD Content-Length response body GET semantics",
+      "forms": [
+        "HTTP HEAD Content-Length response body GET semantics"
+      ]
+    }
+  ]
+}

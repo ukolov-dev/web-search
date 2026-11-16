@@ -1,0 +1,238 @@
+{
+  "schema": "research-gates-final12-v1",
+  "frozen_before_inference": true,
+  "reason": "V1 NEW12 and V2 CONFIRM12 both retained as failed quality gates; final source-header correction must be checked on this separate untouched set. No pooling.",
+  "cases": [
+    {
+      "id": "D01",
+      "group": "RFC",
+      "tool": "research",
+      "question": "According to RFC 5737, SHOULD NOT TEST-NET-1, TEST-NET-2 and TEST-NET-3 addresses appear on the public Internet?",
+      "gold_aspects": [
+        "all three TEST-NET blocks SHOULD NOT appear on public Internet"
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc5737.html#section-4"
+      ],
+      "false_claim_controls": [
+        "TEST-NET approved for public production routing"
+      ]
+    },
+    {
+      "id": "D02",
+      "group": "RFC",
+      "tool": "research",
+      "question": "По RFC 2606 для чего зарезервирован домен верхнего уровня .invalid? Должны ли конструируемые с ним имена быть заведомо недействительными?",
+      "gold_aspects": [
+        ".invalid intended for constructing obviously invalid domain names"
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc2606.html#section-2"
+      ],
+      "false_claim_controls": [
+        ".invalid reserved for ordinary public service hosting"
+      ]
+    },
+    {
+      "id": "D03",
+      "group": "RFC",
+      "tool": "research",
+      "question": "RFC 6238 recommends a default TOTP time-step size of 30 seconds. Is it a recommendation or a requirement that every implementation MUST use exactly30?",
+      "gold_aspects": [
+        "30 seconds recommended default",
+        "not a universal MUST exactly30 from this recommendation"
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc6238.html#section-5.2"
+      ],
+      "false_claim_controls": [
+        "every TOTP implementation MUST use exactly30 seconds"
+      ]
+    },
+    {
+      "id": "D04",
+      "group": "RFC",
+      "tool": "research",
+      "question": "По RFC 7519 что требуется от текущего времени при проверке exp в JWT и разрешён ли небольшой leeway на clock skew?",
+      "gold_aspects": [
+        "current time MUST be before expiration time when processing exp",
+        "small clock-skew leeway MAY be provided"
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc7519.html#section-4.1.4"
+      ],
+      "false_claim_controls": [
+        "exp valid when current time unconditionally after exp"
+      ]
+    },
+    {
+      "id": "D05",
+      "group": "technical",
+      "tool": "research",
+      "question": "What happens to vectors x=[1] and y=[2, 3] after Rust std::mem::swap(&mut x, &mut y)?",
+      "gold_aspects": [
+        "x becomes [2,3]",
+        "y becomes [1]"
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/mem/fn.swap.html"
+      ],
+      "false_claim_controls": [
+        "swap discards one vector"
+      ]
+    },
+    {
+      "id": "D06",
+      "group": "technical",
+      "tool": "research",
+      "question": "Для Rust Vec [3, 4], что делает clear() с длиной и capacity? Обязан ли clear освобождать выделенную память?",
+      "gold_aspects": [
+        "length becomes zero",
+        "capacity unchanged by clear"
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/vec/struct.Vec.html#method.clear"
+      ],
+      "false_claim_controls": [
+        "clear must set capacity to zero"
+      ]
+    },
+    {
+      "id": "D07",
+      "group": "technical",
+      "tool": "research",
+      "question": "For a Rust iterator over [9, 8, 7, 6], what does skip(2) retain and are the first two items skipped?",
+      "gold_aspects": [
+        "first two items skipped",
+        "remaining [7,6]"
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.skip"
+      ],
+      "false_claim_controls": [
+        "skip returns first two values as retained result"
+      ]
+    },
+    {
+      "id": "D08",
+      "group": "technical",
+      "tool": "research",
+      "question": "Rust slice::split_last для [4, 5, 6]: какой последний элемент и какой остаток возвращаются? Что для пустого slice?",
+      "gold_aspects": [
+        "last is 6 and remaining [4,5]",
+        "empty slice returns None"
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/primitive.slice.html#method.split_last"
+      ],
+      "false_claim_controls": [
+        "empty slice panics"
+      ]
+    },
+    {
+      "id": "D09",
+      "group": "scope",
+      "tool": "research",
+      "question": "Does RFC 7519 itself require every JWT to contain an exp claim, or is use of exp optional? Separate presence from validation when it is present.",
+      "gold_aspects": [
+        "presence of exp OPTIONAL in base RFC7519",
+        "when present its expiration processing rule applies"
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc7519.html#section-4.1.4"
+      ],
+      "false_claim_controls": [
+        "base RFC7519 mandates exp in every JWT"
+      ]
+    },
+    {
+      "id": "D10",
+      "group": "scope",
+      "tool": "research",
+      "question": "Если f паникует в Rust std::cell::OnceCell::get_or_init, паника превращается в возвращаемый Err или передаётся вызывающему? Остаётся ли ячейка неинициализированной?",
+      "gold_aspects": [
+        "initializer panic propagates, not returned Err",
+        "cell remains uninitialized"
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/cell/struct.OnceCell.html#method.get_or_init"
+      ],
+      "false_claim_controls": [
+        "get_or_init converts panic into returned Err"
+      ]
+    },
+    {
+      "id": "D11",
+      "group": "scope",
+      "tool": "research",
+      "question": "The docs of Rust std::mem::replace show1.0.0 and const1.83.0. Does that mean ordinary replace was unavailable on stable Rust1.70, or only that const use needs the later version?",
+      "gold_aspects": [
+        "ordinary replace stable since1.0 available in1.70",
+        "const form since1.83, not stable const on1.70"
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/mem/fn.replace.html"
+      ],
+      "false_claim_controls": [
+        "normal replace function introduced only1.83"
+      ]
+    },
+    {
+      "id": "D12",
+      "group": "scope",
+      "tool": "research",
+      "question": "Найди официальную функцию Rust std::mem::swap_without_touching и объясни гарантии. Если эта функция не подтверждена, не подменяй её обычным swap и не выдумывай поведение.",
+      "gold_aspects": [
+        "Explicit insufficiency for unconfirmed API without substituting swap"
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/mem/index.html"
+      ],
+      "false_claim_controls": [
+        "invented swap_without_touching semantics",
+        "silent substitution of swap"
+      ]
+    }
+  ],
+  "harness": [
+    {
+      "id": "H01",
+      "prompt": "Проверь по RFC 6585: ответ HTTP 511 можно сохранить в кэше или он MUST NOT кэшироваться? Укажи прочитанную норму, не додумывай.\nВызови research ровно один раз с question, равным вопросу выше без этой инструкции, language=ru. Ответ только по его проверенным утверждениям; пропуски обозначь явно.",
+      "gold_aspects": [
+        "511 response MUST NOT be stored by cache"
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc6585.html#section-6"
+      ]
+    },
+    {
+      "id": "H02",
+      "prompt": "Проверь в документации Rust результат Vec::split_off(2) для [1, 2, 3, 4]: что возвращается, что остаётся в исходном Vec и меняется ли его capacity? Покажи значения с квадратными скобками.\nВызови research ровно один раз с question, равным вопросу выше без этой инструкции, language=ru. Ответ только по его проверенным утверждениям; пропуски обозначь явно.",
+      "gold_aspects": [
+        "returns [3,4]",
+        "original contains [1,2]",
+        "original capacity unchanged"
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/vec/struct.Vec.html#method.split_off"
+      ]
+    }
+  ],
+  "protocol": {
+    "baseline_git": "0744c73",
+    "product_source_git": "82a37561b6882bc16724a53f803c7f9d6cc53293",
+    "holdout_no_tuning": true,
+    "old_replay_separate": true,
+    "judgement": "source-first claim IDs; exact quote is provenance only; missing target evidence never counted as success",
+    "new_false_claim_id_blocks_acceptance": true,
+    "unknown_claim_id_blocks_acceptance": true,
+    "live_pairing": "same model/Qwen/budgets/ledger/cache; record source hashes/cache and separate drift from validator effect",
+    "language": "Questions RU/EN, research answer ru for both arms to match existing driver; Harness final ru",
+    "no_more_runtime_tuning_on_final12": true,
+    "zero_factual_claims_has_undefined_precision": true,
+    "scope_assessment": "A true unrelated/substitute claim does not cover requested gold. False/unknown/API-scope transfer IDs separate.",
+    "abstention_case": "D12: empty claims with nonempty missing+partial is honest insufficiency, not a factual recall true positive",
+    "factual_aspects": 20,
+    "abstention_conditions": 1
+  }
+}

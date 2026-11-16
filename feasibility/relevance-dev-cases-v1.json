@@ -1,0 +1,103 @@
+{
+  "version": 1,
+  "frozen_before_capture": true,
+  "purpose": "New12 diagnostic validation. Prompt/fix choices use previous original20 only; no tuning after new12 results. Not independent blind holdout.",
+  "cases": [
+    {
+      "id": "d01",
+      "query": "PostgreSQL SELECT FOR UPDATE SKIP LOCKED очередь задач документация",
+      "forms": [
+        "PostgreSQL SELECT FOR UPDATE SKIP LOCKED очередь задач документация"
+      ],
+      "required_aspects": "Queue consumers, row locking and SKIP LOCKED; general PostgreSQL is background"
+    },
+    {
+      "id": "d02",
+      "query": "HTTP 412 If-Match optimistic concurrency documentation",
+      "forms": [
+        "HTTP 412 If-Match optimistic concurrency documentation"
+      ],
+      "required_aspects": "Precondition failure and If-Match for optimistic concurrency"
+    },
+    {
+      "id": "d03",
+      "query": "CSS container queries media queries сравнение",
+      "forms": [
+        "CSS container queries media queries сравнение"
+      ],
+      "required_aspects": "Explicit comparison of container and media queries, not a list of CSS features"
+    },
+    {
+      "id": "d04",
+      "query": "site:docs.python.org/3/library asyncio TaskGroup ExceptionGroup",
+      "forms": [
+        "site:docs.python.org/3/library asyncio TaskGroup ExceptionGroup"
+      ],
+      "required_aspects": "Both TaskGroup and exception grouping on required domain/path"
+    },
+    {
+      "id": "d05",
+      "query": "Python 3.13 free threading GIL release October 2024",
+      "forms": [
+        "Python 3.13 free threading GIL release October 2024"
+      ],
+      "required_aspects": "Dated 3.13 release/experimental free threading; current undated latest is insufficient"
+    },
+    {
+      "id": "d06",
+      "query": "robots.txt RFC 9309 crawl delay supported specification",
+      "forms": [
+        "robots.txt RFC 9309 crawl delay supported specification"
+      ],
+      "required_aspects": "Whether Crawl-delay belongs to RFC9309; generic robots guide incomplete"
+    },
+    {
+      "id": "d07",
+      "query": "JSON Lines NDJSON CSV сравнение потоковая обработка",
+      "forms": [
+        "JSON Lines NDJSON CSV сравнение потоковая обработка"
+      ],
+      "required_aspects": "Explicit format comparison for streaming, not one format alone"
+    },
+    {
+      "id": "d08",
+      "query": "Brotli gzip compression comparison static web assets",
+      "forms": [
+        "Brotli gzip compression comparison static web assets"
+      ],
+      "required_aspects": "Comparison applied to web static assets"
+    },
+    {
+      "id": "d09",
+      "query": "git worktree remove locked force документация",
+      "forms": [
+        "git worktree remove locked force документация"
+      ],
+      "required_aspects": "Removal of locked worktree and force semantics"
+    },
+    {
+      "id": "d10",
+      "query": "PostgreSQL 17 release September 2024 official announcement",
+      "forms": [
+        "PostgreSQL 17 release September 2024 official announcement"
+      ],
+      "required_aspects": "Version17 announcement with September2024 date, not latest unspecified"
+    },
+    {
+      "id": "d11",
+      "query": "HTTP Retry-After 429 503 документация",
+      "forms": [
+        "HTTP Retry-After 429 503 документация"
+      ],
+      "required_aspects": "Retry-After semantics linked to 429/503 response handling"
+    },
+    {
+      "id": "d12",
+      "query": "site:developer.mozilla.org structuredClone transferable ArrayBuffer",
+      "forms": [
+        "site:developer.mozilla.org structuredClone transferable ArrayBuffer"
+      ],
+      "required_aspects": "Structured clone transfer/detach for ArrayBuffer on constrained host"
+    }
+  ]
+}

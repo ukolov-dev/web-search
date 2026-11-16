@@ -1,0 +1,65 @@
+{
+  "taskId": "TASK-20261029-123418-001",
+  "project": {
+    "id": "PROJECT-20261029-124155-001",
+    "path": ".project-context/active/projects/PROJECT-20261029-124155-001.md",
+    "title": "web-search: состояние пилота и владельцы источников"
+  },
+  "decisions": [
+    {
+      "id": "DECISION-20261029-124155-001",
+      "path": ".project-context/active/decisions/DECISION-20261029-124155-001.md",
+      "title": "Rust, локальный агентский MCP и отложенный VPS"
+    },
+    {
+      "id": "DECISION-20261029-124155-002",
+      "path": ".project-context/active/decisions/DECISION-20261029-124155-002.md",
+      "title": "Обычный HTML-поиск без внешних поисковых API"
+    },
+    {
+      "id": "DECISION-20261029-124155-003",
+      "path": ".project-context/active/decisions/DECISION-20261029-124155-003.md",
+      "title": "Проверка site и SSRF обязательна; публичный браузер пока закрыт"
+    },
+    {
+      "id": "DECISION-20261029-124155-004",
+      "path": ".project-context/active/decisions/DECISION-20261029-124155-004.md",
+      "title": "Достаточность доказательств не равна статусу модели"
+    }
+  ],
+  "research": {
+    "id": "RESEARCH-20261029-124155-001",
+    "path": ".project-context/active/research/RESEARCH-20261029-124155-001.md",
+    "title": "Как повысить надёжность живого поиска и достаточности ответа"
+  },
+  "backlog": [
+    {
+      "id": "BACKLOG-RASSHIRIT-NEZAVISIMYE-STSENARII-DOSTATOCHNOSTI-I-OTKAZA-9B",
+      "path": ".project-context/active/backlog/BACKLOG-RASSHIRIT-NEZAVISIMYE-STSENARII-DOSTATOCHNOSTI-I-OTKAZA-9B.md",
+      "title": "Расширить независимые сценарии достаточности и отказа 9B",
+      "key": "evidence",
+      "status": "proposed"
+    },
+    {
+      "id": "BACKLOG-KVALIFITSIROVAT-DVA-HTML-ISTOCHNIKA-NA-ISHODNOM-RU-EN-NABORE",
+      "path": ".project-context/active/backlog/BACKLOG-KVALIFITSIROVAT-DVA-HTML-ISTOCHNIKA-NA-ISHODNOM-RU-EN-NABORE.md",
+      "title": "Квалифицировать два HTML-источника на исходном RU/EN наборе",
+      "key": "sources",
+      "status": "proposed"
+    },
+    {
+      "id": "BACKLOG-PROVERIT-SHLYUZ-CHROMIUM-DLYA-RAZRESHENNOGO-PUBLICHNOGO-CHTENIYA",
+      "path": ".project-context/active/backlog/BACKLOG-PROVERIT-SHLYUZ-CHROMIUM-DLYA-RAZRESHENNOGO-PUBLICHNOGO-CHTENIYA.md",
+      "title": "Проверить шлюз Chromium для разрешённого публичного чтения",
+      "key": "browser",
+      "status": "proposed"
+    },
+    {
+      "id": "BACKLOG-SOGLASOVAT-I-REALIZOVAT-OGRANICHENNYY-RUNTIME-RESEARCH-S-DOKAZATELSTVAMI",
+      "path": ".project-context/active/backlog/BACKLOG-SOGLASOVAT-I-REALIZOVAT-OGRANICHENNYY-RUNTIME-RESEARCH-S-DOKAZATELSTVAMI.md",
+      "title": "Согласовать и реализовать ограниченный runtime research с доказательствами",
+      "key": "research",
+      "status": "proposed"
+    }
+  ]
+}

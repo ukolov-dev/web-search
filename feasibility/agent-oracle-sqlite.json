@@ -1,0 +1,11 @@
+{
+  "id": "oracle-en-sqlite-wal",
+  "stage": "diagnostic_oracle",
+  "counts_toward_search_or_e2e_acceptance": false,
+  "question": "In SQLite WAL mode, can readers run concurrently with a writer, can two writers commit at the same time, and does an already open read transaction immediately see new commits? Support each point with official SQLite documentation.",
+  "provided_urls": [
+    "https://sqlite.org/wal.html",
+    "https://sqlite.org/isolation.html"
+  ],
+  "purpose": "Separate retrieval failure from extraction/generation; sources supplied after failed end-to-end case"
+}

@@ -1,0 +1,271 @@
+{
+  "date": "2026-10-28",
+  "purpose": "Development-only paired locale hypothesis probe, not acceptance",
+  "upstream_issue": "https://github.com/searxng/searxng/issues/4964",
+  "upstream_fix": "https://github.com/searxng/searxng/pull/6671",
+  "current_upstream_source": "https://raw.githubusercontent.com/searxng/searxng/master/searx/engines/bing.py",
+  "comparison": "q only versus q plus setlang=en/ru; no cc/mkt; not a full reproduction of SearXNG",
+  "serp_requests": 4,
+  "records": [
+    {
+      "case_id": "locale-dev-en",
+      "query": "Python asyncio TaskGroup exception handling documentation",
+      "variant": "q_only",
+      "http_status": 200,
+      "request_hops": [
+        "https://www.bing.com/search?q=Python+asyncio+TaskGroup+exception+handling+documentation"
+      ],
+      "result_count": 10,
+      "directly_relevant_count": 0,
+      "meets_three_direct_candidates": false,
+      "manual_serp_assessment": [
+        {
+          "position": 1,
+          "url": "https://www.python.org/",
+          "title": "Welcome to Python.org",
+          "grade": 1
+        },
+        {
+          "position": 2,
+          "url": "https://www.python.org/downloads/",
+          "title": "Download Python | Python.org",
+          "grade": 1
+        },
+        {
+          "position": 3,
+          "url": "https://www.w3schools.com/python/",
+          "title": "Python Tutorial - W3Schools",
+          "grade": 0
+        },
+        {
+          "position": 4,
+          "url": "https://www.online-python.com/",
+          "title": "Online Python - IDE, Editor, Compiler, Interpreter",
+          "grade": 0
+        },
+        {
+          "position": 5,
+          "url": "https://www.programiz.com/python-programming/online-compiler/",
+          "title": "Online Python Compiler (Editor) - Programiz",
+          "grade": 0
+        },
+        {
+          "position": 6,
+          "url": "https://en.wikipedia.org/wiki/Python_(programming_language)",
+          "title": "Python (programming language) - Wikipedia",
+          "grade": 1
+        },
+        {
+          "position": 7,
+          "url": "https://docs.python.org/",
+          "title": "Python 3.15.2 documentation",
+          "grade": 1
+        },
+        {
+          "position": 8,
+          "url": "https://docs.python.org/3/tutorial/index.html",
+          "title": "The Python Tutorial — Python 3.15.2 documentation",
+          "grade": 1
+        },
+        {
+          "position": 9,
+          "url": "https://www.python.org/?hl=de",
+          "title": "Welcome to Python.org",
+          "grade": 1
+        },
+        {
+          "position": 10,
+          "url": "https://www.python.org/about/gettingstarted/",
+          "title": "Python For Beginners | Python.org",
+          "grade": 1
+        }
+      ],
+      "reason": "General Python pages; no title/snippet explicitly addresses TaskGroup exception handling."
+    },
+    {
+      "case_id": "locale-dev-en",
+      "query": "Python asyncio TaskGroup exception handling documentation",
+      "variant": "q_and_setlang",
+      "http_status": 200,
+      "request_hops": [
+        "https://www.bing.com/search?q=Python+asyncio+TaskGroup+exception+handling+documentation&setlang=en"
+      ],
+      "result_count": 10,
+      "directly_relevant_count": 0,
+      "meets_three_direct_candidates": false,
+      "manual_serp_assessment": [
+        {
+          "position": 1,
+          "url": "https://www.python.org/",
+          "title": "Welcome to Python.org",
+          "grade": 1
+        },
+        {
+          "position": 2,
+          "url": "https://www.python.org/downloads/",
+          "title": "Download Python | Python.org",
+          "grade": 1
+        },
+        {
+          "position": 3,
+          "url": "https://www.w3schools.com/python/",
+          "title": "Python Tutorial - W3Schools",
+          "grade": 0
+        },
+        {
+          "position": 4,
+          "url": "https://www.online-python.com/",
+          "title": "Online Python - IDE, Editor, Compiler, Interpreter",
+          "grade": 0
+        },
+        {
+          "position": 5,
+          "url": "https://www.programiz.com/python-programming/online-compiler/",
+          "title": "Online Python Compiler (Editor) - Programiz",
+          "grade": 0
+        },
+        {
+          "position": 6,
+          "url": "https://en.wikipedia.org/wiki/Python_(programming_language)",
+          "title": "Python (programming language) - Wikipedia",
+          "grade": 1
+        },
+        {
+          "position": 7,
+          "url": "https://docs.python.org/",
+          "title": "Python 3.15.2 documentation",
+          "grade": 1
+        },
+        {
+          "position": 8,
+          "url": "https://docs.python.org/3/tutorial/index.html",
+          "title": "The Python Tutorial — Python 3.15.2 documentation",
+          "grade": 1
+        },
+        {
+          "position": 9,
+          "url": "https://www.python.org/?hl=de",
+          "title": "Welcome to Python.org",
+          "grade": 1
+        },
+        {
+          "position": 10,
+          "url": "https://www.python.org/about/gettingstarted/",
+          "title": "Python For Beginners | Python.org",
+          "grade": 1
+        }
+      ],
+      "reason": "General Python pages; no title/snippet explicitly addresses TaskGroup exception handling."
+    },
+    {
+      "case_id": "locale-dev-ru",
+      "query": "site:sqlite.org PRAGMA foreign_keys внешние ключи",
+      "variant": "q_only",
+      "http_status": 200,
+      "request_hops": [
+        "https://www.bing.com/search?q=site%3Asqlite.org+PRAGMA+foreign_keys+%D0%B2%D0%BD%D0%B5%D1%88%D0%BD%D0%B8%D0%B5+%D0%BA%D0%BB%D1%8E%D1%87%D0%B8"
+      ],
+      "result_count": 10,
+      "directly_relevant_count": 0,
+      "meets_three_direct_candidates": false,
+      "manual_serp_assessment": [
+        {
+          "position": 1,
+          "url": "https://www.123recht.de/ratgeber/strafrecht/Welche-Verjaehrungsfristen-gelten-im-Steuerstrafrecht-__a138168.html",
+          "title": "Welche Verjährungsfristen gelten im Steuerstrafrecht?",
+          "grade": 0
+        },
+        {
+          "position": 2,
+          "url": "https://www.123recht.de/forum/nachbarschaftsrecht/Laermbelaestigung-durch-Trampeln,-Handwerksarbeiten,-Moebelruecken-und-Poltern,-auch-am-Sonntag-__f545221.html",
+          "title": "Lärmbelästigung durch Trampeln, Handwerksarbeiten, Möbelrücken …",
+          "grade": 0
+        },
+        {
+          "position": 3,
+          "url": "https://www.123recht.de/forum/verwaltungsrecht/Schulrecht-Attestpflicht-und-Unterrichtsbefreiung-aufgrund-akuter-Erkrankung-__f567948.html",
+          "title": "Schulrecht: Attestpflicht und Unterrichtsbefreiung aufgrund akuter ...",
+          "grade": 0
+        },
+        {
+          "position": 4,
+          "url": "https://www.123recht.de/forum/familienrecht/Nachweis-Unterhaltsanspruch-Schulbescheinigung-__f164035.html",
+          "title": "Nachweis Unterhaltsanspruch- Schulbescheinigung",
+          "grade": 0
+        },
+        {
+          "position": 5,
+          "url": "https://www.123recht.de/ratgeber/immobilienrecht-wohnungseigentum/Instandsetzung-bei-Sondernutzungsrechten-__a106752.html",
+          "title": "Instandsetzung bei Sondernutzungsrechten",
+          "grade": 0
+        },
+        {
+          "position": 6,
+          "url": "https://www.123recht.de/ratgeber/sozialrecht/Woechentliche-Vorsprache-beim-Jobcenter-zum-Nachweis-der-Eigenbemuehungen-ist-nicht-zumutbar-__a158091.html",
+          "title": "Wöchentliche Vorsprache beim Jobcenter zum Nachweis der …",
+          "grade": 0
+        },
+        {
+          "position": 7,
+          "url": "https://www.123recht.de/ratgeber/medizinrecht-arztrecht/Rechte-und-Pflichten-zwischen-Arzt-und-Patient-__a1887.html",
+          "title": "Rechte und Pflichten zwischen Arzt und Patient",
+          "grade": 0
+        },
+        {
+          "position": 8,
+          "url": "https://www.123recht.de/ratgeber/haftpflicht-schadensersatz/Wann-haftet-ein-Verein-oder-sein-Mitglied-fuer-Schaeden-__a11817.html",
+          "title": "Wann haftet ein Verein oder sein Mitglied für Schäden?",
+          "grade": 0
+        },
+        {
+          "position": 9,
+          "url": "https://www.123recht.de/ratgeber/allgemein/BKA-Neue-Betrugsmasche-im-Zusammenhang-mit-Timesharing-__a2971.html",
+          "title": "BKA: Neue Betrugsmasche im Zusammenhang mit \"Timesharing\"",
+          "grade": 0
+        },
+        {
+          "position": 10,
+          "url": "https://www.123recht.de/forum/inkasso/PRA-Group-Forderungsverkauf-und-Lohnpfaendung-__f503394.html",
+          "title": "PRA-Group Forderungsverkauf und Lohnpfändung Inkasso",
+          "grade": 0
+        }
+      ],
+      "reason": "All returned URLs are foreign to sqlite.org and unrelated to the requested topic."
+    },
+    {
+      "case_id": "locale-dev-ru",
+      "query": "site:sqlite.org PRAGMA foreign_keys внешние ключи",
+      "variant": "q_and_setlang",
+      "http_status": 200,
+      "request_hops": [
+        "https://www.bing.com/search?q=site%3Asqlite.org+PRAGMA+foreign_keys+%D0%B2%D0%BD%D0%B5%D1%88%D0%BD%D0%B8%D0%B5+%D0%BA%D0%BB%D1%8E%D1%87%D0%B8&setlang=ru"
+      ],
+      "result_count": 0,
+      "directly_relevant_count": 0,
+      "meets_three_direct_candidates": false,
+      "manual_serp_assessment": [],
+      "reason": "Raw HTML explicitly reports no results in Russian; no organic results parsed."
+    }
+  ],
+  "en_url_order_identical": true,
+  "conclusion": "No topical relevance improvement observed on these two development cases. Production parameters unchanged; no broader claim about locale or cause.",
+  "limitations": [
+    "Single small run with fixed baseline-before-candidate order; temporal/carryover effects uncontrolled.",
+    "Manual assistant SERP grading, no independent human labels and no destination-page verification.",
+    "Not the original 20-case set, not a fresh blind acceptance run.",
+    "No CAPTCHA, source challenge or HTTP block was observed; no retry performed."
+  ],
+  "sha256": {
+    "feasibility/locale-research-cases.json": "ee3a6ca2abb7435e5a46d480435d62a7548db71aa4855c1e2a61594c9b9ecc15",
+    "runs/research-locale-2026-10-28/results.json": "71ddb9993ea192ac1cdc58102a603c2b42b59863c855f852f530e66a2cbe17c8",
+    "runs/research-locale-2026-10-28/locale-dev-en-q_and_setlang.html": "2731332d2c3058085df7039ac01da2948ffe5aeb44a19239051b59548da0ef1c",
+    "runs/research-locale-2026-10-28/locale-dev-en-q_only.html": "16e73f0af6113a88d22c703425149d09eafe173edfd1c0b7aba6b7ba037a29b6",
+    "runs/research-locale-2026-10-28/locale-dev-ru-q_and_setlang.html": "dfc16510f7ac1740dbe4bfaa1af7e5f0bc257f88d34d6b8dfaad33ff752fa672",
+    "runs/research-locale-2026-10-28/locale-dev-ru-q_only.html": "bf0fac9700e7b0a238462ae3e8186d01213cd00007146e663a196a22f938c259"
+  },
+  "offline_checks": {
+    "cargo_test": "14 passed, 8 ignored, 0 failed",
+    "cargo_fmt_check": "passed",
+    "cargo_clippy_locked_offline_all_targets_deny_warnings": "passed"
+  }
+}

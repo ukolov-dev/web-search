@@ -1,0 +1,586 @@
+{
+  "protocol": {
+    "new_cases": 12,
+    "classifier_bypass": false,
+    "same_reranker": "Qwen3-Reranker-0.6B-4bit, oMLX0.7.0",
+    "comparison": "full classifier+coverage+Qwen, frozen live SERP; shared URL snapshots/failures; different normal document selection is allowed",
+    "gold": "53 known/228cards, single blinded author;16known-positive sources; unknown direct separate; no independent acceptance",
+    "timing": "sequential branch replay; raw search not repeated; document snapshot cache and provider cache may differ; not isolated real-time SLA",
+    "excluded_trial": "wrong binary identity run saved separately, NOT baseline; cost/network disclosed separately"
+  },
+  "branches": {
+    "baseline": {
+      "tp": 6,
+      "fp": 5,
+      "fn": 10,
+      "tn": 32,
+      "unjudged_direct": 0,
+      "recall": 0.375,
+      "precision_judged": 0.5454545454545454,
+      "initial_valid": 9,
+      "initial_attempts": 12,
+      "initial_length": 3,
+      "initial_stop_empty": 0,
+      "initial_reasoning_tokens": 16947,
+      "initial_elapsed_ms_median": 16777.0,
+      "generative_calls": 30,
+      "known_cost_usd": 0.007054528,
+      "unpriced_generations": 0,
+      "reads": 35,
+      "snapshot_cache_hits": 15,
+      "reranker_calls": 27,
+      "reranker_fallbacks": 0,
+      "reranker_pairs": 444,
+      "proof_ranges_validated": 26,
+      "errors": {
+        "evidence_verification": 9,
+        "classifier_invalid": 3
+      },
+      "review_finishes": {
+        "stop": 18
+      },
+      "providers": {
+        "Morph": 30
+      }
+    },
+    "fixed": {
+      "tp": 0,
+      "fp": 1,
+      "fn": 16,
+      "tn": 36,
+      "unjudged_direct": 0,
+      "recall": 0.0,
+      "precision_judged": 0.0,
+      "initial_valid": 12,
+      "initial_attempts": 12,
+      "initial_length": 0,
+      "initial_stop_empty": 0,
+      "initial_reasoning_tokens": 0,
+      "initial_elapsed_ms_median": 2187.5,
+      "generative_calls": 34,
+      "known_cost_usd": 0.005130926,
+      "unpriced_generations": 0,
+      "reads": 38,
+      "snapshot_cache_hits": 35,
+      "reranker_calls": 31,
+      "reranker_fallbacks": 0,
+      "reranker_pairs": 393,
+      "proof_ranges_validated": 4,
+      "errors": {
+        "evidence_verification": 11,
+        "unsupported_direct_evidence_or_constraints": 3
+      },
+      "review_finishes": {
+        "stop": 22
+      },
+      "providers": {
+        "Morph": 34
+      }
+    }
+  },
+  "cases": [
+    {
+      "id": "s01",
+      "query": "git diff --exit-code --quiet exit status differences",
+      "branches": {
+        "baseline": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "tn": 3,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "initial_valid": true,
+          "model_calls": 3,
+          "reads": 4,
+          "status": "partial",
+          "errors": [
+            "evidence_verification: C014: source_blocked: no retry in this probe"
+          ]
+        },
+        "fixed": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "tn": 3,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "initial_valid": true,
+          "model_calls": 3,
+          "reads": 4,
+          "status": "ok",
+          "errors": []
+        }
+      }
+    },
+    {
+      "id": "s02",
+      "query": "Python contextlib.suppress BaseExceptionGroup Python 3.12 behavior",
+      "branches": {
+        "baseline": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "tn": 5,
+          "unjudged_direct": 0,
+          "recall": 1.0,
+          "precision_judged": 0.5,
+          "direct": [
+            "C008",
+            "C009"
+          ],
+          "initial_valid": true,
+          "model_calls": 3,
+          "reads": 4,
+          "status": "ok",
+          "errors": []
+        },
+        "fixed": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "tn": 6,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "initial_valid": true,
+          "model_calls": 3,
+          "reads": 4,
+          "status": "ok",
+          "errors": []
+        }
+      }
+    },
+    {
+      "id": "s03",
+      "query": "PostgreSQL NULLS NOT DISTINCT unique index duplicate nulls",
+      "branches": {
+        "baseline": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "tn": 0,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "initial_valid": false,
+          "model_calls": 1,
+          "reads": 0,
+          "status": "partial",
+          "errors": [
+            "classifier_invalid: classifier incomplete finish"
+          ]
+        },
+        "fixed": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "tn": 0,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "initial_valid": true,
+          "model_calls": 3,
+          "reads": 4,
+          "status": "partial",
+          "errors": [
+            "evidence_verification: C002: failed to grab the article",
+            "unsupported_direct_evidence_or_constraints: 2 downgraded"
+          ]
+        }
+      }
+    },
+    {
+      "id": "s04",
+      "query": "SQLite recursive_triggers foreign key cascade PRAGMA distinction",
+      "branches": {
+        "baseline": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "tn": 6,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "initial_valid": true,
+          "model_calls": 3,
+          "reads": 4,
+          "status": "partial",
+          "errors": [
+            "evidence_verification: C012: fetch_timeout",
+            "evidence_verification: C011: fetch_timeout"
+          ]
+        },
+        "fixed": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "tn": 6,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "initial_valid": true,
+          "model_calls": 3,
+          "reads": 4,
+          "status": "partial",
+          "errors": [
+            "evidence_verification: C012: fetch_timeout"
+          ]
+        }
+      }
+    },
+    {
+      "id": "s05",
+      "query": "Docker --init PID 1 signal forwarding zombie reaping",
+      "branches": {
+        "baseline": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "tn": 1,
+          "unjudged_direct": 0,
+          "recall": 0.5,
+          "precision_judged": 1.0,
+          "direct": [
+            "C001"
+          ],
+          "initial_valid": true,
+          "model_calls": 3,
+          "reads": 4,
+          "status": "partial",
+          "errors": [
+            "evidence_verification: C004: unsupported_content"
+          ]
+        },
+        "fixed": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "tn": 1,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "initial_valid": true,
+          "model_calls": 3,
+          "reads": 4,
+          "status": "partial",
+          "errors": [
+            "evidence_verification: C004: unsupported_content",
+            "unsupported_direct_evidence_or_constraints: 2 downgraded"
+          ]
+        }
+      }
+    },
+    {
+      "id": "s06",
+      "query": "Rust AtomicUsize compare_exchange failure ordering Release AcqRel panic",
+      "branches": {
+        "baseline": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 3,
+          "unjudged_direct": 0,
+          "recall": null,
+          "precision_judged": null,
+          "direct": [],
+          "initial_valid": false,
+          "model_calls": 1,
+          "reads": 0,
+          "status": "partial",
+          "errors": [
+            "classifier_invalid: classifier incomplete finish"
+          ]
+        },
+        "fixed": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 3,
+          "unjudged_direct": 0,
+          "recall": null,
+          "precision_judged": null,
+          "direct": [],
+          "initial_valid": true,
+          "model_calls": 2,
+          "reads": 0,
+          "status": "partial",
+          "errors": [
+            "evidence_verification: evidence anchor must be unique query text",
+            "unsupported_direct_evidence_or_constraints: 2 downgraded"
+          ]
+        }
+      }
+    },
+    {
+      "id": "s07",
+      "query": "HTTP If-Match weak ETag strong comparison wildcard existing resource",
+      "branches": {
+        "baseline": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "tn": 3,
+          "unjudged_direct": 0,
+          "recall": 1.0,
+          "precision_judged": 0.5,
+          "direct": [
+            "C009",
+            "C014"
+          ],
+          "initial_valid": true,
+          "model_calls": 3,
+          "reads": 4,
+          "status": "partial",
+          "errors": [
+            "evidence_verification: C012: source_blocked: no retry in this probe"
+          ]
+        },
+        "fixed": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "tn": 4,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "initial_valid": true,
+          "model_calls": 3,
+          "reads": 3,
+          "status": "partial",
+          "errors": [
+            "evidence_verification: C012: host_disabled"
+          ]
+        }
+      }
+    },
+    {
+      "id": "s08",
+      "query": "JavaScript Promise.all rejection cancels remaining promises behavior",
+      "branches": {
+        "baseline": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "tn": 0,
+          "unjudged_direct": 0,
+          "recall": 0.3333333333333333,
+          "precision_judged": 1.0,
+          "direct": [
+            "C001"
+          ],
+          "initial_valid": true,
+          "model_calls": 3,
+          "reads": 4,
+          "status": "partial",
+          "errors": [
+            "evidence_verification: C005: failed to grab the article"
+          ]
+        },
+        "fixed": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "tn": 0,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "initial_valid": true,
+          "model_calls": 3,
+          "reads": 4,
+          "status": "partial",
+          "errors": [
+            "evidence_verification: C005: failed to grab the article"
+          ]
+        }
+      }
+    },
+    {
+      "id": "s09",
+      "query": "CSS contain paint overflow clipping stacking context",
+      "branches": {
+        "baseline": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "tn": 3,
+          "unjudged_direct": 0,
+          "recall": null,
+          "precision_judged": 0.0,
+          "direct": [
+            "C007",
+            "C013"
+          ],
+          "initial_valid": true,
+          "model_calls": 3,
+          "reads": 4,
+          "status": "ok",
+          "errors": []
+        },
+        "fixed": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 5,
+          "unjudged_direct": 0,
+          "recall": null,
+          "precision_judged": null,
+          "direct": [],
+          "initial_valid": true,
+          "model_calls": 3,
+          "reads": 4,
+          "status": "ok",
+          "errors": []
+        }
+      }
+    },
+    {
+      "id": "s10",
+      "query": "Linux open O_NOFOLLOW final component symbolic links earlier components",
+      "branches": {
+        "baseline": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "tn": 1,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "initial_valid": false,
+          "model_calls": 1,
+          "reads": 0,
+          "status": "partial",
+          "errors": [
+            "classifier_invalid: classifier incomplete finish"
+          ]
+        },
+        "fixed": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "tn": 1,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "initial_valid": true,
+          "model_calls": 2,
+          "reads": 0,
+          "status": "partial",
+          "errors": [
+            "evidence_verification: evidence anchor must be unique query text"
+          ]
+        }
+      }
+    },
+    {
+      "id": "s11",
+      "query": "Python functools.cached_property Python 3.12 concurrent calls lock removed",
+      "branches": {
+        "baseline": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "tn": 4,
+          "unjudged_direct": 0,
+          "recall": 1.0,
+          "precision_judged": 1.0,
+          "direct": [
+            "C006"
+          ],
+          "initial_valid": true,
+          "model_calls": 3,
+          "reads": 4,
+          "status": "partial",
+          "errors": [
+            "evidence_verification: C001: failed to grab the article"
+          ]
+        },
+        "fixed": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "tn": 4,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "initial_valid": true,
+          "model_calls": 3,
+          "reads": 4,
+          "status": "partial",
+          "errors": [
+            "evidence_verification: C001: failed to grab the article",
+            "evidence_verification: C002: HTTP 503"
+          ]
+        }
+      }
+    },
+    {
+      "id": "s12",
+      "query": "nginx proxy_pass trailing slash URI replacement regex location",
+      "branches": {
+        "baseline": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "tn": 3,
+          "unjudged_direct": 0,
+          "recall": 1.0,
+          "precision_judged": 0.5,
+          "direct": [
+            "C008",
+            "C019"
+          ],
+          "initial_valid": true,
+          "model_calls": 3,
+          "reads": 3,
+          "status": "partial",
+          "errors": [
+            "evidence_verification: C003: fetch_timeout",
+            "evidence_verification: C016: host_disabled"
+          ]
+        },
+        "fixed": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "tn": 3,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": 0.0,
+          "direct": [
+            "C008"
+          ],
+          "initial_valid": true,
+          "model_calls": 3,
+          "reads": 3,
+          "status": "partial",
+          "errors": [
+            "evidence_verification: C003: fetch_timeout",
+            "evidence_verification: C016: host_disabled"
+          ]
+        }
+      }
+    }
+  ],
+  "recall_delta_query_bootstrap95": [
+    -0.6666666666666666,
+    -0.16666666666666666
+  ],
+  "corpus_sha256": "e7a96bfa4f67659f50cdf1bd4278e10c593a3b5d392985585b2651cd7c9838fb",
+  "original20_sha256": "b67e3269830ae0e976aa9b4c5dc2f6b9c3e922ad1adda35738289d6b1b8325d6"
+}

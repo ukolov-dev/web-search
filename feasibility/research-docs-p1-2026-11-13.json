@@ -1,0 +1,57 @@
+{
+  "task": "TASK-20261113-144124-001",
+  "base": "35765fe",
+  "classification": "FIX_PROVEN (offline queue property only)",
+  "cause": "G07 SERP contained Rust str reference at rank3, after GitHub releases and TensorFlow API. Existing queue preserved SERP ordering with no documentation/API-container preference.",
+  "replay": "Reduced historical URLs/order, no live retrieval or semantic sufficiency claim.",
+  "checks": [
+    {
+      "command": "CARGO_HOME=\"$PWD/.cache/cargo\" cargo test --locked --offline documentation_queue_preserves_api_container_before_unrelated_results",
+      "red": "1 failed: GitHub release selected instead of Rust str reference",
+      "green": "1 passed"
+    },
+    {
+      "command": "CARGO_HOME=\"$PWD/.cache/cargo\" cargo test --locked --offline",
+      "result": "157 unit passed,35ignored;6stdio passed,10ignored"
+    },
+    {
+      "command": "CARGO_HOME=\"$PWD/.cache/cargo\" cargo clippy --locked --offline --all-targets -- -D warnings",
+      "result": "passed"
+    },
+    {
+      "command": "cargo fmt --check",
+      "result": "passed"
+    }
+  ],
+  "historical_errors": [
+    "Initial implementation used url::Url though only reqwest::Url is available; compile failure fixed without new dependencies.",
+    "First explicit-site test fake returned unfiltered SERP and triggered source_query_mismatch; corrected mock to respect explicit site; original G07 red assertion unchanged."
+  ],
+  "limitations": [
+    "No fresh Qwen/model/public HTTP/Harness or independent acceptance; root coordinates paired frozen suite.",
+    "Reference-looking URL is only retrieval preference, never source authority or evidence support.",
+    "No generic official-domain discovery; no docs query rewrite change. Rust namespace token additionally required for Rust documentation request; broad docs mode for other languages remains limited.",
+    "Version, body extraction, strongest Qwen/news selection, URL/DNS/site/refusal guards unchanged.",
+    "Release build and fresh release stdio deferred to root integration."
+  ],
+  "sha256": {
+    "src/research.rs": "a4be3707b69d66c739abaf61ac545a058a10f1e9f2e42eb943560799b8e87dd2",
+    "src/research_tests.rs": "fd3b2c2a15786db878328dcfd2af997e1ef157a4414986ce39d3d82672082f8e"
+  },
+  "review_followup": {
+    "finding": "Rust language namespace hint was lost with Rust: or Rust, punctuation; foreign-framework documentation URL could receive preference.",
+    "red_command": "CARGO_HOME=\"$PWD/.cache/cargo\" cargo test --locked --offline documentation_language_hint_survives_punctuation",
+    "red": "1 failed on foreign.example/docs/vec/insert",
+    "fix": "Reuse existing alphanumeric tokens for question language detection.",
+    "green_command": "CARGO_HOME=\"$PWD/.cache/cargo\" cargo test --locked --offline documentation_",
+    "green": "4 passed (three new documentation regressions plus existing matching test)",
+    "checks": [
+      "cargo fmt --check",
+      "CARGO_HOME=\"$PWD/.cache/cargo\" cargo clippy --locked --offline --all-targets -- -D warnings"
+    ],
+    "sha256": {
+      "src/research.rs": "9955a33b7f04b4f906c901657d9cf47155030555301eefde884703945498fb75",
+      "src/research_tests.rs": "5dadea801edc1641c7758da6b3708cd793ea1846b8dafe3a755845c11782b42f"
+    }
+  }
+}

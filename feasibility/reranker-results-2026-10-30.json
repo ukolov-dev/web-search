@@ -1,0 +1,1004 @@
+{
+  "protocol": {
+    "comparison": "coverage lexical vs coverage local Qwen, not legacy default",
+    "full": "original classifier preserved; 5/12 valid; 5 topics overlap earlier suites",
+    "component": "8 fresh distinct-mechanism queries; provisional background upstream, not end-to-end",
+    "known_recall": "retrieved known relevant captured sources only; unjudged separately",
+    "passage_hit": "successful runtime-read positive pages with at least one complete gold anchor in top3",
+    "all_support": "every annotated gold anchor contained in some top3 window",
+    "timing": "shared model+document elapsed + replay branch wall, excluding retrieval and cache I/O gap; diagnostic, not isolated end-to-end latency",
+    "concurrency": "full and component comparison jobs overlapped; local/server/provider contention possible",
+    "gold_author": "single author blinded to branch outputs; neither independent holdout acceptance nor universal corpus labels"
+  },
+  "sets": {
+    "component": {
+      "queries": 8,
+      "candidates": 114,
+      "known_judgments": 37,
+      "initial_valid": 8,
+      "case_results": [
+        {
+          "id": "h01",
+          "query": "site:docs.python.org weakref.finalize atexit exception interpreter shutdown",
+          "branches": {
+            "lexical": {
+              "direct": [
+                "C009"
+              ],
+              "judged": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "tn": 4,
+                "unjudged_direct": 0,
+                "recall": 1.0,
+                "precision_judged": 1.0
+              },
+              "passage_hit": 0,
+              "passage_all": 0,
+              "passage_eligible": 0,
+              "logical_ms": 6518,
+              "errors": []
+            },
+            "qwen": {
+              "direct": [
+                "C009"
+              ],
+              "judged": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "tn": 4,
+                "unjudged_direct": 0,
+                "recall": 1.0,
+                "precision_judged": 1.0
+              },
+              "passage_hit": 0,
+              "passage_all": 0,
+              "passage_eligible": 0,
+              "logical_ms": 10987,
+              "errors": []
+            }
+          }
+        },
+        {
+          "id": "h02",
+          "query": "site:doc.rust-lang.org Condvar wait spurious wakeups wait_while predicate",
+          "branches": {
+            "lexical": {
+              "direct": [
+                "C002",
+                "C006",
+                "C007"
+              ],
+              "judged": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "tn": 1,
+                "unjudged_direct": 0,
+                "recall": 1.0,
+                "precision_judged": 1.0
+              },
+              "passage_hit": 3,
+              "passage_all": 1,
+              "passage_eligible": 3,
+              "logical_ms": 7715,
+              "errors": []
+            },
+            "qwen": {
+              "direct": [
+                "C002",
+                "C006",
+                "C007"
+              ],
+              "judged": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "tn": 1,
+                "unjudged_direct": 0,
+                "recall": 1.0,
+                "precision_judged": 1.0
+              },
+              "passage_hit": 3,
+              "passage_all": 1,
+              "passage_eligible": 3,
+              "logical_ms": 15511,
+              "errors": []
+            }
+          }
+        },
+        {
+          "id": "h03",
+          "query": "site:postgresql.org CREATE INDEX CONCURRENTLY transaction block invalid index failure",
+          "branches": {
+            "lexical": {
+              "direct": [
+                "C007"
+              ],
+              "judged": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "tn": 4,
+                "unjudged_direct": 0,
+                "recall": 1.0,
+                "precision_judged": 1.0
+              },
+              "passage_hit": 1,
+              "passage_all": 0,
+              "passage_eligible": 1,
+              "logical_ms": 7861,
+              "errors": []
+            },
+            "qwen": {
+              "direct": [
+                "C007"
+              ],
+              "judged": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "tn": 4,
+                "unjudged_direct": 0,
+                "recall": 1.0,
+                "precision_judged": 1.0
+              },
+              "passage_hit": 1,
+              "passage_all": 1,
+              "passage_eligible": 1,
+              "logical_ms": 8984,
+              "errors": []
+            }
+          }
+        },
+        {
+          "id": "h04",
+          "query": "site:sqlite.org journal_size_limit WAL checkpoint truncate size limit",
+          "branches": {
+            "lexical": {
+              "direct": [],
+              "judged": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 2,
+                "tn": 1,
+                "unjudged_direct": 0,
+                "recall": 0.0,
+                "precision_judged": null
+              },
+              "passage_hit": 2,
+              "passage_all": 1,
+              "passage_eligible": 2,
+              "logical_ms": 6613,
+              "errors": []
+            },
+            "qwen": {
+              "direct": [],
+              "judged": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 2,
+                "tn": 1,
+                "unjudged_direct": 0,
+                "recall": 0.0,
+                "precision_judged": null
+              },
+              "passage_hit": 2,
+              "passage_all": 2,
+              "passage_eligible": 2,
+              "logical_ms": 13667,
+              "errors": []
+            }
+          }
+        },
+        {
+          "id": "h05",
+          "query": "site:docs.docker.com tmpfs mount reboot memory swap persistence",
+          "branches": {
+            "lexical": {
+              "direct": [],
+              "judged": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 1,
+                "tn": 3,
+                "unjudged_direct": 0,
+                "recall": 0.0,
+                "precision_judged": null
+              },
+              "passage_hit": 1,
+              "passage_all": 0,
+              "passage_eligible": 1,
+              "logical_ms": 5769,
+              "errors": []
+            },
+            "qwen": {
+              "direct": [],
+              "judged": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 1,
+                "tn": 3,
+                "unjudged_direct": 0,
+                "recall": 0.0,
+                "precision_judged": null
+              },
+              "passage_hit": 1,
+              "passage_all": 1,
+              "passage_eligible": 1,
+              "logical_ms": 8559,
+              "errors": []
+            }
+          }
+        },
+        {
+          "id": "h06",
+          "query": "site:developer.mozilla.org flex item min-width auto min-content shrink",
+          "branches": {
+            "lexical": {
+              "direct": [],
+              "judged": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 3,
+                "tn": 2,
+                "unjudged_direct": 0,
+                "recall": 0.0,
+                "precision_judged": null
+              },
+              "passage_hit": 1,
+              "passage_all": 1,
+              "passage_eligible": 3,
+              "logical_ms": 7398,
+              "errors": []
+            },
+            "qwen": {
+              "direct": [],
+              "judged": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 3,
+                "tn": 2,
+                "unjudged_direct": 0,
+                "recall": 0.0,
+                "precision_judged": null
+              },
+              "passage_hit": 2,
+              "passage_all": 2,
+              "passage_eligible": 3,
+              "logical_ms": 7754,
+              "errors": []
+            }
+          }
+        },
+        {
+          "id": "h07",
+          "query": "site:git-scm.com git restore staged worktree source restore index difference",
+          "branches": {
+            "lexical": {
+              "direct": [
+                "C006",
+                "C007",
+                "C009"
+              ],
+              "judged": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "tn": 2,
+                "unjudged_direct": 0,
+                "recall": 1.0,
+                "precision_judged": 1.0
+              },
+              "passage_hit": 3,
+              "passage_all": 3,
+              "passage_eligible": 3,
+              "logical_ms": 6545,
+              "errors": []
+            },
+            "qwen": {
+              "direct": [
+                "C006",
+                "C007",
+                "C009"
+              ],
+              "judged": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "tn": 2,
+                "unjudged_direct": 0,
+                "recall": 1.0,
+                "precision_judged": 1.0
+              },
+              "passage_hit": 3,
+              "passage_all": 3,
+              "passage_eligible": 3,
+              "logical_ms": 9062,
+              "errors": []
+            }
+          }
+        },
+        {
+          "id": "h08",
+          "query": "site:developer.mozilla.org If-Range strong ETag weak validator range request",
+          "branches": {
+            "lexical": {
+              "direct": [
+                "C002",
+                "C009",
+                "C010"
+              ],
+              "judged": {
+                "tp": 0,
+                "fp": 3,
+                "fn": 1,
+                "tn": 2,
+                "unjudged_direct": 0,
+                "recall": 0.0,
+                "precision_judged": 0.0
+              },
+              "passage_hit": 0,
+              "passage_all": 0,
+              "passage_eligible": 0,
+              "logical_ms": 6280,
+              "errors": []
+            },
+            "qwen": {
+              "direct": [
+                "C002",
+                "C009",
+                "C010"
+              ],
+              "judged": {
+                "tp": 0,
+                "fp": 3,
+                "fn": 1,
+                "tn": 2,
+                "unjudged_direct": 0,
+                "recall": 0.0,
+                "precision_judged": 0.0
+              },
+              "passage_hit": 0,
+              "passage_all": 0,
+              "passage_eligible": 0,
+              "logical_ms": 7541,
+              "errors": []
+            }
+          }
+        }
+      ],
+      "lexical": {
+        "tp": 8,
+        "fp": 3,
+        "fn": 7,
+        "tn": 19,
+        "unjudged_direct": 0,
+        "recall": 0.5333333333333333,
+        "precision_judged": 0.7272727272727273,
+        "passage_hits": 11,
+        "passage_all": 6,
+        "passage_eligible": 13,
+        "passage_hit_at3": 0.8461538461538461,
+        "passage_all_at3": 0.46153846153846156,
+        "anchor_hits": 15,
+        "anchor_count": 22,
+        "anchor_recall_at3": 0.6818181818181818,
+        "logical_ms_median": 6579.0,
+        "logical_ms_mean": 6837.375
+      },
+      "qwen": {
+        "tp": 8,
+        "fp": 3,
+        "fn": 7,
+        "tn": 19,
+        "unjudged_direct": 0,
+        "recall": 0.5333333333333333,
+        "precision_judged": 0.7272727272727273,
+        "passage_hits": 12,
+        "passage_all": 10,
+        "passage_eligible": 13,
+        "passage_hit_at3": 0.9230769230769231,
+        "passage_all_at3": 0.7692307692307693,
+        "anchor_hits": 19,
+        "anchor_count": 22,
+        "anchor_recall_at3": 0.8636363636363636,
+        "logical_ms_median": 9023.0,
+        "logical_ms_mean": 10258.125
+      },
+      "recall_delta_95pct_query_bootstrap": [
+        0.0,
+        0.0
+      ],
+      "reranker": {
+        "calls": 30,
+        "fallbacks": 0,
+        "pairs": 661,
+        "elapsed_ms_median": 532.0,
+        "elapsed_ms_total": 24166,
+        "tokens": 243792
+      },
+      "physical_generations": 24,
+      "known_cost_usd": 0.003359202,
+      "source_attempts": 16,
+      "runtime_read_attempts": 32,
+      "runtime_documents": 30,
+      "source_errors": {
+        "ok": 15,
+        "parser_changed": 1
+      }
+    },
+    "full": {
+      "queries": 12,
+      "candidates": 228,
+      "known_judgments": 31,
+      "initial_valid": 5,
+      "case_results": [
+        {
+          "id": "r01",
+          "query": "Python pathlib Path resolve strict symlink loop behavior",
+          "branches": {
+            "lexical": {
+              "direct": [
+                "C008"
+              ],
+              "judged": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 1,
+                "tn": 1,
+                "unjudged_direct": 0,
+                "recall": 0.0,
+                "precision_judged": 0.0
+              },
+              "passage_hit": 0,
+              "passage_all": 0,
+              "passage_eligible": 0,
+              "logical_ms": 18453,
+              "errors": []
+            },
+            "qwen": {
+              "direct": [
+                "C008"
+              ],
+              "judged": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 1,
+                "tn": 1,
+                "unjudged_direct": 0,
+                "recall": 0.0,
+                "precision_judged": 0.0
+              },
+              "passage_hit": 0,
+              "passage_all": 0,
+              "passage_eligible": 0,
+              "logical_ms": 25171,
+              "errors": []
+            }
+          }
+        },
+        {
+          "id": "r02",
+          "query": "Rust std sync Mutex poisoning lock recovery into_inner",
+          "branches": {
+            "lexical": {
+              "direct": [],
+              "judged": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 1,
+                "tn": 0,
+                "unjudged_direct": 0,
+                "recall": 0.0,
+                "precision_judged": null
+              },
+              "passage_hit": 0,
+              "passage_all": 0,
+              "passage_eligible": 0,
+              "logical_ms": 23512,
+              "errors": []
+            },
+            "qwen": {
+              "direct": [],
+              "judged": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 1,
+                "tn": 0,
+                "unjudged_direct": 0,
+                "recall": 0.0,
+                "precision_judged": null
+              },
+              "passage_hit": 0,
+              "passage_all": 0,
+              "passage_eligible": 0,
+              "logical_ms": 23512,
+              "errors": []
+            }
+          }
+        },
+        {
+          "id": "r03",
+          "query": "PostgreSQL VACUUM FULL exclusive lock disk space",
+          "branches": {
+            "lexical": {
+              "direct": [],
+              "judged": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 1,
+                "tn": 1,
+                "unjudged_direct": 0,
+                "recall": 0.0,
+                "precision_judged": null
+              },
+              "passage_hit": 0,
+              "passage_all": 0,
+              "passage_eligible": 0,
+              "logical_ms": 21227,
+              "errors": []
+            },
+            "qwen": {
+              "direct": [],
+              "judged": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 1,
+                "tn": 1,
+                "unjudged_direct": 0,
+                "recall": 0.0,
+                "precision_judged": null
+              },
+              "passage_hit": 0,
+              "passage_all": 0,
+              "passage_eligible": 0,
+              "logical_ms": 21227,
+              "errors": []
+            }
+          }
+        },
+        {
+          "id": "r04",
+          "query": "SQLite foreign_keys pragma transaction no op",
+          "branches": {
+            "lexical": {
+              "direct": [
+                "C008",
+                "C016"
+              ],
+              "judged": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "tn": 3,
+                "unjudged_direct": 1,
+                "recall": 1.0,
+                "precision_judged": 1.0
+              },
+              "passage_hit": 1,
+              "passage_all": 1,
+              "passage_eligible": 1,
+              "logical_ms": 17286,
+              "errors": []
+            },
+            "qwen": {
+              "direct": [
+                "C008",
+                "C016"
+              ],
+              "judged": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "tn": 3,
+                "unjudged_direct": 1,
+                "recall": 1.0,
+                "precision_judged": 1.0
+              },
+              "passage_hit": 1,
+              "passage_all": 1,
+              "passage_eligible": 1,
+              "logical_ms": 18085,
+              "errors": []
+            }
+          }
+        },
+        {
+          "id": "r05",
+          "query": "Docker bind mount obscures existing container files",
+          "branches": {
+            "lexical": {
+              "direct": [],
+              "judged": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 1,
+                "tn": 1,
+                "unjudged_direct": 0,
+                "recall": 0.0,
+                "precision_judged": null
+              },
+              "passage_hit": 0,
+              "passage_all": 0,
+              "passage_eligible": 0,
+              "logical_ms": 9789,
+              "errors": []
+            },
+            "qwen": {
+              "direct": [],
+              "judged": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 1,
+                "tn": 1,
+                "unjudged_direct": 0,
+                "recall": 0.0,
+                "precision_judged": null
+              },
+              "passage_hit": 0,
+              "passage_all": 0,
+              "passage_eligible": 0,
+              "logical_ms": 9789,
+              "errors": []
+            }
+          }
+        },
+        {
+          "id": "r06",
+          "query": "CSS box-sizing border-box padding margin width",
+          "branches": {
+            "lexical": {
+              "direct": [],
+              "judged": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 1,
+                "tn": 1,
+                "unjudged_direct": 0,
+                "recall": 0.0,
+                "precision_judged": null
+              },
+              "passage_hit": 0,
+              "passage_all": 0,
+              "passage_eligible": 0,
+              "logical_ms": 24983,
+              "errors": []
+            },
+            "qwen": {
+              "direct": [],
+              "judged": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 1,
+                "tn": 1,
+                "unjudged_direct": 0,
+                "recall": 0.0,
+                "precision_judged": null
+              },
+              "passage_hit": 0,
+              "passage_all": 0,
+              "passage_eligible": 0,
+              "logical_ms": 24983,
+              "errors": []
+            }
+          }
+        },
+        {
+          "id": "r07",
+          "query": "git reset soft mixed hard index working tree difference",
+          "branches": {
+            "lexical": {
+              "direct": [],
+              "judged": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 1,
+                "tn": 0,
+                "unjudged_direct": 0,
+                "recall": 0.0,
+                "precision_judged": null
+              },
+              "passage_hit": 0,
+              "passage_all": 0,
+              "passage_eligible": 0,
+              "logical_ms": 24997,
+              "errors": []
+            },
+            "qwen": {
+              "direct": [],
+              "judged": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 1,
+                "tn": 0,
+                "unjudged_direct": 0,
+                "recall": 0.0,
+                "precision_judged": null
+              },
+              "passage_hit": 0,
+              "passage_all": 0,
+              "passage_eligible": 0,
+              "logical_ms": 24997,
+              "errors": []
+            }
+          }
+        },
+        {
+          "id": "r08",
+          "query": "HTTP 307 303 redirect POST method difference",
+          "branches": {
+            "lexical": {
+              "direct": [],
+              "judged": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "tn": 1,
+                "unjudged_direct": 0,
+                "recall": null,
+                "precision_judged": null
+              },
+              "passage_hit": 0,
+              "passage_all": 0,
+              "passage_eligible": 0,
+              "logical_ms": 23932,
+              "errors": []
+            },
+            "qwen": {
+              "direct": [],
+              "judged": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "tn": 1,
+                "unjudged_direct": 0,
+                "recall": null,
+                "precision_judged": null
+              },
+              "passage_hit": 0,
+              "passage_all": 0,
+              "passage_eligible": 0,
+              "logical_ms": 23932,
+              "errors": []
+            }
+          }
+        },
+        {
+          "id": "r09",
+          "query": "JavaScript structuredClone transferable ArrayBuffer detached",
+          "branches": {
+            "lexical": {
+              "direct": [],
+              "judged": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "tn": 2,
+                "unjudged_direct": 0,
+                "recall": null,
+                "precision_judged": null
+              },
+              "passage_hit": 0,
+              "passage_all": 0,
+              "passage_eligible": 0,
+              "logical_ms": 20419,
+              "errors": []
+            },
+            "qwen": {
+              "direct": [],
+              "judged": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "tn": 2,
+                "unjudged_direct": 0,
+                "recall": null,
+                "precision_judged": null
+              },
+              "passage_hit": 0,
+              "passage_all": 0,
+              "passage_eligible": 0,
+              "logical_ms": 20419,
+              "errors": []
+            }
+          }
+        },
+        {
+          "id": "r10",
+          "query": "Python asyncio TaskGroup gather exception cancellation difference",
+          "branches": {
+            "lexical": {
+              "direct": [
+                "C012",
+                "C018",
+                "C020"
+              ],
+              "judged": {
+                "tp": 1,
+                "fp": 1,
+                "fn": 1,
+                "tn": 1,
+                "unjudged_direct": 1,
+                "recall": 0.5,
+                "precision_judged": 0.5
+              },
+              "passage_hit": 0,
+              "passage_all": 0,
+              "passage_eligible": 1,
+              "logical_ms": 23072,
+              "errors": []
+            },
+            "qwen": {
+              "direct": [
+                "C012",
+                "C018",
+                "C020"
+              ],
+              "judged": {
+                "tp": 1,
+                "fp": 1,
+                "fn": 1,
+                "tn": 1,
+                "unjudged_direct": 1,
+                "recall": 0.5,
+                "precision_judged": 0.5
+              },
+              "passage_hit": 0,
+              "passage_all": 0,
+              "passage_eligible": 1,
+              "logical_ms": 26653,
+              "errors": []
+            }
+          }
+        },
+        {
+          "id": "r11",
+          "query": "Rust std sync Mutex guaranteed fairness FIFO acquisition",
+          "branches": {
+            "lexical": {
+              "direct": [
+                "C001"
+              ],
+              "judged": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "tn": 4,
+                "unjudged_direct": 1,
+                "recall": null,
+                "precision_judged": null
+              },
+              "passage_hit": 0,
+              "passage_all": 0,
+              "passage_eligible": 0,
+              "logical_ms": 24388,
+              "errors": []
+            },
+            "qwen": {
+              "direct": [
+                "C001"
+              ],
+              "judged": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "tn": 4,
+                "unjudged_direct": 1,
+                "recall": null,
+                "precision_judged": null
+              },
+              "passage_hit": 0,
+              "passage_all": 0,
+              "passage_eligible": 0,
+              "logical_ms": 26855,
+              "errors": []
+            }
+          }
+        },
+        {
+          "id": "r12",
+          "query": "PostgreSQL VACUUM FULL without exclusive lock guaranteed",
+          "branches": {
+            "lexical": {
+              "direct": [],
+              "judged": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 4,
+                "tn": 1,
+                "unjudged_direct": 0,
+                "recall": 0.0,
+                "precision_judged": null
+              },
+              "passage_hit": 1,
+              "passage_all": 1,
+              "passage_eligible": 3,
+              "logical_ms": 27947,
+              "errors": []
+            },
+            "qwen": {
+              "direct": [],
+              "judged": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 4,
+                "tn": 1,
+                "unjudged_direct": 0,
+                "recall": 0.0,
+                "precision_judged": null
+              },
+              "passage_hit": 3,
+              "passage_all": 3,
+              "passage_eligible": 3,
+              "logical_ms": 30034,
+              "errors": []
+            }
+          }
+        }
+      ],
+      "lexical": {
+        "tp": 2,
+        "fp": 2,
+        "fn": 11,
+        "tn": 16,
+        "unjudged_direct": 3,
+        "recall": 0.15384615384615385,
+        "precision_judged": 0.5,
+        "passage_hits": 2,
+        "passage_all": 2,
+        "passage_eligible": 5,
+        "passage_hit_at3": 0.4,
+        "passage_all_at3": 0.4,
+        "anchor_hits": 2,
+        "anchor_count": 5,
+        "anchor_recall_at3": 0.4,
+        "logical_ms_median": 23292.0,
+        "logical_ms_mean": 21667.083333333332
+      },
+      "qwen": {
+        "tp": 2,
+        "fp": 2,
+        "fn": 11,
+        "tn": 16,
+        "unjudged_direct": 3,
+        "recall": 0.15384615384615385,
+        "precision_judged": 0.5,
+        "passage_hits": 4,
+        "passage_all": 4,
+        "passage_eligible": 5,
+        "passage_hit_at3": 0.8,
+        "passage_all_at3": 0.8,
+        "anchor_hits": 4,
+        "anchor_count": 5,
+        "anchor_recall_at3": 0.8,
+        "logical_ms_median": 24457.5,
+        "logical_ms_mean": 22971.416666666668
+      },
+      "recall_delta_95pct_query_bootstrap": [
+        0.0,
+        0.0
+      ],
+      "reranker": {
+        "calls": 15,
+        "fallbacks": 0,
+        "pairs": 300,
+        "elapsed_ms_median": 585,
+        "elapsed_ms_total": 14298,
+        "tokens": 102575
+      },
+      "physical_generations": 27,
+      "known_cost_usd": 0.007074458,
+      "source_attempts": 24,
+      "runtime_read_attempts": 20,
+      "runtime_documents": 15,
+      "source_errors": {
+        "ok": 24
+      }
+    }
+  },
+  "original20_sha256": "b67e3269830ae0e976aa9b4c5dc2f6b9c3e922ad1adda35738289d6b1b8325d6",
+  "corpus_sha256": "2f0d9401a360c1af79b01bedb317991cda34845a58e066c7fd172e192de7cf88"
+}

@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "purpose": "Development-only paired probe of the public SearXNG #6671 locale hypothesis; not acceptance",
+  "max_serp_requests": 4,
+  "variants": ["q_only", "q_and_setlang"],
+  "cases": [
+    {
+      "id": "locale-dev-en",
+      "query": "Python asyncio TaskGroup exception handling documentation",
+      "setlang": "en",
+      "expected_host": "docs.python.org",
+      "expected_topic": "asyncio TaskGroup and exception handling"
+    },
+    {
+      "id": "locale-dev-ru",
+      "query": "site:sqlite.org PRAGMA foreign_keys внешние ключи",
+      "setlang": "ru",
+      "expected_host": "sqlite.org",
+      "expected_topic": "SQLite foreign key enforcement and PRAGMA foreign_keys"
+    }
+  ],
+  "interpretation": "Manually review original SERP titles/snippets/URLs; a matching domain or HTTP 200 alone is not relevance. A positive outcome only supports testing on held-out queries."
+}

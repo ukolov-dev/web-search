@@ -1,0 +1,30 @@
+{
+  "schema": "research-p1-protocol-v1",
+  "frozen_before_inference": true,
+  "baseline_commit": "40fa7f9",
+  "baseline_binary_sha256": "69213f41f86e44cd4ce50775e0da65b0a16e15fd0d3403b65af5091090952752",
+  "cases_sha256": "9731beee8317e59d8f8e5822a99c261fb4f5fb13bbb1710adcbc8028db1d0649",
+  "gold_preflight_sha256": "8648b7f4dceb4d2853fc3133d2ab8c271dbb63c269f585064a249e8b8ffd2220",
+  "cohorts": {
+    "fresh_questions": 8,
+    "known_controls": 4,
+    "harness_known_tasks": 2
+  },
+  "ordering": "baseline all cases now; candidate after integration freeze; Harness baseline/candidate after case pair",
+  "source_policy": "one cumulative refusal ledger, distinct initially empty per-arm caches; paired source sets/hashes disclosed; no blocked source retry",
+  "evaluation": "Per mandatory condition truth/completeness and exact returned witness subject-scope; new false/unknown-as-cited or lost baseline supported condition => FAILED. Own semantic audit plus separate independent reviewer; all historical cohorts retained separate.",
+  "stop": "Model refusal/auth/rate block => preserve refusal stop, never retry. No runtime edits during arm inference.",
+  "limits": {
+    "forms": 2,
+    "serp": 4,
+    "documents": 4,
+    "qwen": 4,
+    "generations": 6,
+    "seconds": 180,
+    "context_chars": 24000,
+    "response_bytes": 32768
+  },
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "reranker": "trusted local Qwen3-Reranker-0.6B-4bit; capture real scoring/fallback",
+  "qualification": "Scoped development/acceptance only; original20/two-day qualification not replaced"
+}

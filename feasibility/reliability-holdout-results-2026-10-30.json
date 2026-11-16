@@ -1,0 +1,458 @@
+{
+  "protocol": {
+    "new_cases": 8,
+    "classifier_bypass": false,
+    "same_reranker": "Qwen3-Reranker-0.6B-4bit, oMLX0.7.0",
+    "comparison": "full classifier+coverage+Qwen, frozen live SERP; shared URL snapshots/failures; different normal document selection is allowed",
+    "gold": {
+      "author": "single author blinded to both branches predicted labels; not independent acceptance",
+      "freeze": "queries/code frozen before inference; gold frozen after inference but before inspecting predictions",
+      "scope": "known relevant retrieved sources; NOT universal web recall; null remains unjudged",
+      "criteria": "grade2 concrete requested relationship with material conditions; grade1 partial topic; grade0 unrelated; short/failed snapshots unknown unless positive witness",
+      "source_gold": "union of retained extracted snapshots plus two gold-only primary fetches; h07 official retained HTML manually inspected because extraction lost flags",
+      "isolation": "gold and gold-only documents never passed to branches; normal page selection and budgets retained"
+    },
+    "timing": "sequential branch replay; raw search not repeated; document snapshot cache and provider cache may differ; not isolated real-time SLA",
+    "excluded_trial": "wrong binary identity development run saved separately, NOT baseline; cost/network disclosed separately"
+  },
+  "branches": {
+    "baseline": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 15,
+      "tn": 9,
+      "unjudged_direct": 0,
+      "recall": 0.0625,
+      "precision_judged": 1.0,
+      "initial_valid": 2,
+      "initial_attempts": 8,
+      "initial_length": 5,
+      "initial_stop_empty": 1,
+      "initial_reasoning_tokens": 17337,
+      "initial_elapsed_ms_median": 25118.0,
+      "generative_calls": 12,
+      "known_cost_usd": 0.00449771,
+      "unpriced_generations": 0,
+      "reads": 7,
+      "snapshot_cache_hits": 0,
+      "reranker_calls": 5,
+      "reranker_fallbacks": 0,
+      "reranker_pairs": 154,
+      "proof_ranges_validated": 1,
+      "errors": {
+        "classifier_invalid": 6,
+        "evidence_verification": 3
+      },
+      "review_finishes": {
+        "stop": 4
+      },
+      "providers": {
+        "Morph": 12
+      },
+      "all_classes_recall_at10": 0.875,
+      "relevant_returned_at10": 14
+    },
+    "fixed": {
+      "tp": 9,
+      "fp": 0,
+      "fn": 7,
+      "tn": 9,
+      "unjudged_direct": 0,
+      "recall": 0.5625,
+      "precision_judged": 1.0,
+      "initial_valid": 8,
+      "initial_attempts": 8,
+      "initial_length": 0,
+      "initial_stop_empty": 0,
+      "initial_reasoning_tokens": 0,
+      "initial_elapsed_ms_median": 2556.5,
+      "generative_calls": 22,
+      "known_cost_usd": 0.003802792,
+      "unpriced_generations": 0,
+      "reads": 30,
+      "snapshot_cache_hits": 5,
+      "reranker_calls": 22,
+      "reranker_fallbacks": 0,
+      "reranker_pairs": 306,
+      "proof_ranges_validated": 45,
+      "errors": {
+        "evidence_verification": 11,
+        "unsupported_direct_evidence_or_constraints": 1
+      },
+      "review_finishes": {
+        "stop": 14
+      },
+      "providers": {
+        "Morph": 22
+      },
+      "all_classes_recall_at10": 0.9375,
+      "relevant_returned_at10": 15
+    }
+  },
+  "cases": [
+    {
+      "id": "h01",
+      "query": "HTTP 202 Accepted processing completed guarantee response status",
+      "branches": {
+        "baseline": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "tn": 0,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "initial_valid": false,
+          "model_calls": 1,
+          "reads": 0,
+          "status": "partial",
+          "errors": [
+            "classifier_invalid: classifier incomplete finish"
+          ],
+          "retrieved_relevant_returned": 2
+        },
+        "fixed": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "tn": 0,
+          "unjudged_direct": 0,
+          "recall": 0.3333333333333333,
+          "precision_judged": 1.0,
+          "direct": [
+            "C002"
+          ],
+          "initial_valid": true,
+          "model_calls": 3,
+          "reads": 4,
+          "status": "partial",
+          "errors": [
+            "evidence_verification: C015: fetch_timeout"
+          ],
+          "retrieved_relevant_returned": 3
+        }
+      }
+    },
+    {
+      "id": "h02",
+      "query": "PostgreSQL sequence nextval rollback gaps cache transaction",
+      "branches": {
+        "baseline": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "tn": 0,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "initial_valid": false,
+          "model_calls": 1,
+          "reads": 0,
+          "status": "partial",
+          "errors": [
+            "classifier_invalid: classifier incomplete finish"
+          ],
+          "retrieved_relevant_returned": 2
+        },
+        "fixed": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "tn": 0,
+          "unjudged_direct": 0,
+          "recall": 0.5,
+          "precision_judged": 1.0,
+          "direct": [
+            "C019"
+          ],
+          "initial_valid": true,
+          "model_calls": 3,
+          "reads": 4,
+          "status": "partial",
+          "errors": [
+            "evidence_verification: C002: source_blocked: no retry in this probe",
+            "evidence_verification: C009: failed to grab the article"
+          ],
+          "retrieved_relevant_returned": 2
+        }
+      }
+    },
+    {
+      "id": "h03",
+      "query": "Python zip strict ValueError iterators consumed length mismatch",
+      "branches": {
+        "baseline": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "tn": 1,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "initial_valid": false,
+          "model_calls": 1,
+          "reads": 0,
+          "status": "partial",
+          "errors": [
+            "classifier_invalid: classifier incomplete finish"
+          ],
+          "retrieved_relevant_returned": 3
+        },
+        "fixed": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "tn": 1,
+          "unjudged_direct": 0,
+          "recall": 1.0,
+          "precision_judged": 1.0,
+          "direct": [
+            "C011",
+            "C015",
+            "C017"
+          ],
+          "initial_valid": true,
+          "model_calls": 3,
+          "reads": 4,
+          "status": "partial",
+          "errors": [
+            "unsupported_direct_evidence_or_constraints: 1 downgraded"
+          ],
+          "retrieved_relevant_returned": 3
+        }
+      }
+    },
+    {
+      "id": "h04",
+      "query": "Rust std fs rename cross filesystem existing target replacement",
+      "branches": {
+        "baseline": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "tn": 3,
+          "unjudged_direct": 0,
+          "recall": 1.0,
+          "precision_judged": 1.0,
+          "direct": [
+            "C005"
+          ],
+          "initial_valid": true,
+          "model_calls": 3,
+          "reads": 4,
+          "status": "partial",
+          "errors": [
+            "evidence_verification: C003: unsupported_content"
+          ],
+          "retrieved_relevant_returned": 1
+        },
+        "fixed": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "tn": 3,
+          "unjudged_direct": 0,
+          "recall": 1.0,
+          "precision_judged": 1.0,
+          "direct": [
+            "C005"
+          ],
+          "initial_valid": true,
+          "model_calls": 3,
+          "reads": 4,
+          "status": "partial",
+          "errors": [
+            "evidence_verification: C003: unsupported_content"
+          ],
+          "retrieved_relevant_returned": 1
+        }
+      }
+    },
+    {
+      "id": "h05",
+      "query": "Docker restart on-failure daemon restart unless-stopped difference",
+      "branches": {
+        "baseline": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "tn": 0,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "initial_valid": false,
+          "model_calls": 1,
+          "reads": 0,
+          "status": "partial",
+          "errors": [
+            "classifier_invalid: missing classifier content"
+          ],
+          "retrieved_relevant_returned": 3
+        },
+        "fixed": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 2,
+          "tn": 0,
+          "unjudged_direct": 0,
+          "recall": 0.5,
+          "precision_judged": 1.0,
+          "direct": [
+            "C008",
+            "C015"
+          ],
+          "initial_valid": true,
+          "model_calls": 3,
+          "reads": 4,
+          "status": "partial",
+          "errors": [
+            "evidence_verification: C004: failed to grab the article"
+          ],
+          "retrieved_relevant_returned": 4
+        }
+      }
+    },
+    {
+      "id": "h06",
+      "query": "SQLite INTEGER PRIMARY KEY AUTOINCREMENT ROWID reuse overhead",
+      "branches": {
+        "baseline": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "tn": 2,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "initial_valid": false,
+          "model_calls": 1,
+          "reads": 0,
+          "status": "partial",
+          "errors": [
+            "classifier_invalid: classifier incomplete finish"
+          ],
+          "retrieved_relevant_returned": 1
+        },
+        "fixed": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2,
+          "unjudged_direct": 0,
+          "recall": 1.0,
+          "precision_judged": 1.0,
+          "direct": [
+            "C014"
+          ],
+          "initial_valid": true,
+          "model_calls": 3,
+          "reads": 4,
+          "status": "partial",
+          "errors": [
+            "evidence_verification: C015: fetch_timeout"
+          ],
+          "retrieved_relevant_returned": 1
+        }
+      }
+    },
+    {
+      "id": "h07",
+      "query": "git clean -n -x -X ignored files directories difference",
+      "branches": {
+        "baseline": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "tn": 1,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "initial_valid": false,
+          "model_calls": 1,
+          "reads": 0,
+          "status": "partial",
+          "errors": [
+            "classifier_invalid: classifier incomplete finish"
+          ],
+          "retrieved_relevant_returned": 1
+        },
+        "fixed": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "tn": 1,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "initial_valid": true,
+          "model_calls": 2,
+          "reads": 4,
+          "status": "partial",
+          "errors": [
+            "evidence_verification: C006: fetch_timeout",
+            "evidence_verification: C013: fetch_timeout",
+            "evidence_verification: evidence title-only core"
+          ],
+          "retrieved_relevant_returned": 1
+        }
+      }
+    },
+    {
+      "id": "h08",
+      "query": "CSS visibility hidden display none layout accessibility difference",
+      "branches": {
+        "baseline": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "tn": 2,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "initial_valid": true,
+          "model_calls": 3,
+          "reads": 3,
+          "status": "partial",
+          "errors": [
+            "evidence_verification: C006: source_blocked: no retry in this probe",
+            "evidence_verification: C013: host_disabled"
+          ],
+          "retrieved_relevant_returned": 1
+        },
+        "fixed": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "tn": 2,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "initial_valid": true,
+          "model_calls": 2,
+          "reads": 2,
+          "status": "partial",
+          "errors": [
+            "evidence_verification: C006: host_disabled",
+            "evidence_verification: C013: host_disabled"
+          ],
+          "retrieved_relevant_returned": 0
+        }
+      }
+    }
+  ],
+  "recall_delta_query_bootstrap95": [
+    0.23076923076923078,
+    0.75
+  ],
+  "corpus_sha256": "d3ec3954b680e70ba7c640daa72d77c8a40f7c42fb3b95f3c2e3ce69395bb41c",
+  "original20_sha256": "b67e3269830ae0e976aa9b4c5dc2f6b9c3e922ad1adda35738289d6b1b8325d6"
+}

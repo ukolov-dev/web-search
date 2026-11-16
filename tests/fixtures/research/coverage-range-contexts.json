@@ -1,0 +1,312 @@
+{
+  "F02": {
+    "context": {
+      "budget": {
+        "limits": {
+          "browser": 0,
+          "documents": 4,
+          "forms": 2,
+          "generations": 6,
+          "output_bytes": 32768,
+          "qwen": 4,
+          "seconds": 180,
+          "serp": 4,
+          "source_context_chars": 24000
+        },
+        "remaining": {
+          "documents": 2,
+          "forms": 1,
+          "generations": 5,
+          "milliseconds": 171599,
+          "qwen": 2,
+          "serp": 3
+        },
+        "used": {
+          "documents": 2,
+          "forms": 1,
+          "generations": 1,
+          "qwen": 2,
+          "serp": 1
+        }
+      },
+      "chunks": [
+        {
+          "document_version": "2dd135dd105cab756caf7c19af7ecf983c5f6d0276cc18548467c00e0f757911",
+          "end": 80200,
+          "field": "text",
+          "id": "S1P1",
+          "source_id": "S1",
+          "start": 79000,
+          "text": "ody containing multiple parts of that representation, as described in Section 15.3.7.¶\n\nResponse messages with an error status code usually contain content that represents the error condition, such that the content describes the error state and what steps are suggested for resolving it.¶\n\nResponses to the HEAD request method (Section 9.3.2) never include content; the associated response header fields indicate only what their values would have been if the request method had been GET (Section 9.3.1).¶\n\n2xx (Successful) responses to a CONNECT request method (Section 9.3.6) switch the connection to tunnel mode instead of having content.¶\n\nAll 1xx (Informational), 204 (No Content), and 304 (Not Modified) responses do not include content.¶\n\nAll other responses do include content, although that content might be of zero length.¶\n\n6.4.2. Identifying Content\n\nWhen a complete or partial representation is transferred as message content, it is often desirable for the sender to supply, or the recipient to determine, an identifier for a resource corresponding to that specific representation. For example, a client making a GET request on a resource for \"the current weather report\" might want an id"
+        },
+        {
+          "document_version": "2dd135dd105cab756caf7c19af7ecf983c5f6d0276cc18548467c00e0f757911",
+          "end": 72200,
+          "field": "text",
+          "id": "S1P2",
+          "source_id": "S1",
+          "start": 71000,
+          "text": "e, and capacity for conveying semantics. This abstraction is used to define requirements on senders and recipients that are independent of the HTTP version, such that a message in one version can be relayed through other versions without changing its meaning.¶\n\nA \"message\" consists of the following:¶\n\ncontrol data to describe and route the message,¶\na headers lookup table of name/value pairs for extending that control data and conveying additional information about the sender, message, content, or context,¶\na potentially unbounded stream of content, and¶\na trailers lookup table of name/value pairs for communicating information obtained while sending the content.¶\n\n\nFraming and control data is sent first, followed by a header section containing fields for the headers table. When a message includes content, the content is sent after the header section, potentially followed by a trailer section that might contain fields for the trailers table.¶\n\nMessages are expected to be processed as a stream, wherein the purpose of that stream and its continued processing is revealed while being read. Hence, control data describes what the recipient needs to know immediately, header fields describe"
+        },
+        {
+          "document_version": "2dd135dd105cab756caf7c19af7ecf983c5f6d0276cc18548467c00e0f757911",
+          "end": 82200,
+          "field": "text",
+          "id": "S1P3",
+          "source_id": "S1",
+          "start": 81000,
+          "text": "e applied in order until a match is found:¶\n\nIf the request method is HEAD or the response status code is 204 (No Content) or 304 (Not Modified), there is no content in the response.¶\nIf the request method is GET and the response status code is 200 (OK), the content is a representation of the target resource (Section 7.1).¶\nIf the request method is GET and the response status code is 203 (Non-Authoritative Information), the content is a potentially modified or enhanced representation of the target resource as provided by an intermediary.¶\nIf the request method is GET and the response status code is 206 (Partial Content), the content is one or more parts of a representation of the target resource.¶\nIf the response has a Content-Location header field and its field value is a reference to the same URI as the target URI, the content is a representation of the target resource.¶\nIf the response has a Content-Location header field and its field value is a reference to a URI different from the target URI, then the sender asserts that the content is a representation of the resource identified by the Content-Location field value. However, such an assertion cannot be trusted unless it can be "
+        },
+        {
+          "document_version": "27cd508417967bc8c1ff04b3ee7d751ad0790cd0dadd8b6ad40f9fb74624fc0f",
+          "end": 34200,
+          "field": "text",
+          "id": "S2P1",
+          "source_id": "S2",
+          "start": 33000,
+          "text": "esponse with a 1xx (Informational), 204 (No Content), or 304 (Not Modified) status code is always terminated by the first empty line after the header fields, regardless of the header fields present in the message, and thus cannot contain a message body or trailer section.¶\nAny 2xx (Successful) response to a CONNECT request implies that the connection will become a tunnel immediately after the empty line that concludes the header fields. A client MUST ignore any Content-Length or Transfer-Encoding header fields received in such a message.¶\nIf a message is received with both a Transfer-Encoding and a Content-Length header field, the Transfer-Encoding overrides the Content-Length. Such a message might indicate an attempt to perform request smuggling (Section 11.2) or response splitting (Section 11.1) and ought to be handled as an error. An intermediary that chooses to forward the message MUST first remove the received Content-Length field and process the Transfer-Encoding (as described below) prior to forwarding the message downstream.¶\n\nIf a Transfer-Encoding header field is present and the chunked transfer coding (Section 7.1) is the final encoding, the message body length is determ"
+        },
+        {
+          "document_version": "27cd508417967bc8c1ff04b3ee7d751ad0790cd0dadd8b6ad40f9fb74624fc0f",
+          "end": 33200,
+          "field": "text",
+          "id": "S2P2",
+          "source_id": "S2",
+          "start": 32000,
+          "text": "d close the connection after processing the message. The message sender might have retained a portion of the message, in buffer, that could be misinterpreted by further use of the connection.¶\n\n6.2. Content-Length\n\nWhen a message does not have a Transfer-Encoding header field, a Content-Length header field (Section 8.6 of [HTTP]) can provide the anticipated size, as a decimal number of octets, for potential content. For messages that do include content, the Content-Length field value provides the framing information necessary for determining where the data (and message) ends. For messages that do not include content, the Content-Length indicates the size of the selected representation (Section 8.6 of [HTTP]).¶\n\nA sender MUST NOT send a Content-Length header field in any message that contains a Transfer-Encoding header field.¶\n\n6.3. Message Body Length\n\nThe length of a message body is determined by one of the following (in order of precedence):¶\n\nAny response to a HEAD request and any response with a 1xx (Informational), 204 (No Content), or 304 (Not Modified) status code is always terminated by the first empty line after the header fields, regardless of the header fields present in"
+        },
+        {
+          "document_version": "27cd508417967bc8c1ff04b3ee7d751ad0790cd0dadd8b6ad40f9fb74624fc0f",
+          "end": 30200,
+          "field": "text",
+          "id": "S2P3",
+          "source_id": "S2",
+          "start": 29000,
+          "text": "er coding(s) to the message body, assuming that corresponding changes are made to the Transfer-Encoding field value. Additional information about the encoding parameters can be provided by other header fields not defined by this specification.¶\n\nTransfer-Encoding MAY be sent in a response to a HEAD request or in a 304 (Not Modified) response (Section 15.4.5 of [HTTP]) to a GET request, neither of which includes a message body, to indicate that the origin server would have applied a transfer coding to the message body if the request had been an unconditional GET. This indication is not required, however, because any recipient on the response chain (including the origin server) can remove transfer codings when they are not needed.¶\n\nA server MUST NOT send a Transfer-Encoding header field in any response with a status code of 1xx (Informational) or 204 (No Content). A server MUST NOT send a Transfer-Encoding header field in any 2xx (Successful) response to a CONNECT request (Section 9.3.6 of [HTTP]).¶\n\nA server that receives a request message with a transfer coding it does not understand SHOULD respond with 501 (Not Implemented).¶\n\nTransfer-Encoding was added in HTTP/1.1. It is genera"
+        }
+      ],
+      "claims": [],
+      "facet_indices": [
+        0,
+        1,
+        2
+      ],
+      "facets": [
+        "Может ли ответ 204 содержать content (тело сообщения)?",
+        "Может ли ответ 204 содержать trailers (трейлеры)?",
+        "Проверить, что RFC 9110 — актуальная нормативная спецификация для 204"
+      ],
+      "language": "ru",
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "news_window": null,
+      "question": "RFC 9110: может ли ответ 204 содержать content или trailers?",
+      "quote_ranges": {},
+      "rfc_literal_mode": true,
+      "sources": [
+        {
+          "eligible": true,
+          "id": "S1",
+          "primary_rfc": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "title": "RFC 9110: HTTP Semantics",
+          "url_preview": "https://www.rfc-editor.org/rfc/rfc9110.html"
+        },
+        {
+          "eligible": true,
+          "id": "S2",
+          "primary_rfc": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "title": "RFC 9112: HTTP/1.1",
+          "url_preview": "https://www.rfc-editor.org/rfc/rfc9112.html"
+        }
+      ],
+      "unresolved_conflicts": []
+    },
+    "context_text": "{\"budget\":{\"limits\":{\"browser\":0,\"documents\":4,\"forms\":2,\"generations\":6,\"output_bytes\":32768,\"qwen\":4,\"seconds\":180,\"serp\":4,\"source_context_chars\":24000},\"remaining\":{\"documents\":2,\"forms\":1,\"generations\":5,\"milliseconds\":171599,\"qwen\":2,\"serp\":3},\"used\":{\"documents\":2,\"forms\":1,\"generations\":1,\"qwen\":2,\"serp\":1}},\"chunks\":[{\"document_version\":\"2dd135dd105cab756caf7c19af7ecf983c5f6d0276cc18548467c00e0f757911\",\"end\":80200,\"field\":\"text\",\"id\":\"S1P1\",\"source_id\":\"S1\",\"start\":79000,\"text\":\"ody containing multiple parts of that representation, as described in Section 15.3.7.¶\\n\\nResponse messages with an error status code usually contain content that represents the error condition, such that the content describes the error state and what steps are suggested for resolving it.¶\\n\\nResponses to the HEAD request method (Section 9.3.2) never include content; the associated response header fields indicate only what their values would have been if the request method had been GET (Section 9.3.1).¶\\n\\n2xx (Successful) responses to a CONNECT request method (Section 9.3.6) switch the connection to tunnel mode instead of having content.¶\\n\\nAll 1xx (Informational), 204 (No Content), and 304 (Not Modified) responses do not include content.¶\\n\\nAll other responses do include content, although that content might be of zero length.¶\\n\\n6.4.2. Identifying Content\\n\\nWhen a complete or partial representation is transferred as message content, it is often desirable for the sender to supply, or the recipient to determine, an identifier for a resource corresponding to that specific representation. For example, a client making a GET request on a resource for \\\"the current weather report\\\" might want an id\"},{\"document_version\":\"2dd135dd105cab756caf7c19af7ecf983c5f6d0276cc18548467c00e0f757911\",\"end\":72200,\"field\":\"text\",\"id\":\"S1P2\",\"source_id\":\"S1\",\"start\":71000,\"text\":\"e, and capacity for conveying semantics. This abstraction is used to define requirements on senders and recipients that are independent of the HTTP version, such that a message in one version can be relayed through other versions without changing its meaning.¶\\n\\nA \\\"message\\\" consists of the following:¶\\n\\ncontrol data to describe and route the message,¶\\na headers lookup table of name/value pairs for extending that control data and conveying additional information about the sender, message, content, or context,¶\\na potentially unbounded stream of content, and¶\\na trailers lookup table of name/value pairs for communicating information obtained while sending the content.¶\\n\\n\\nFraming and control data is sent first, followed by a header section containing fields for the headers table. When a message includes content, the content is sent after the header section, potentially followed by a trailer section that might contain fields for the trailers table.¶\\n\\nMessages are expected to be processed as a stream, wherein the purpose of that stream and its continued processing is revealed while being read. Hence, control data describes what the recipient needs to know immediately, header fields describe\"},{\"document_version\":\"2dd135dd105cab756caf7c19af7ecf983c5f6d0276cc18548467c00e0f757911\",\"end\":82200,\"field\":\"text\",\"id\":\"S1P3\",\"source_id\":\"S1\",\"start\":81000,\"text\":\"e applied in order until a match is found:¶\\n\\nIf the request method is HEAD or the response status code is 204 (No Content) or 304 (Not Modified), there is no content in the response.¶\\nIf the request method is GET and the response status code is 200 (OK), the content is a representation of the target resource (Section 7.1).¶\\nIf the request method is GET and the response status code is 203 (Non-Authoritative Information), the content is a potentially modified or enhanced representation of the target resource as provided by an intermediary.¶\\nIf the request method is GET and the response status code is 206 (Partial Content), the content is one or more parts of a representation of the target resource.¶\\nIf the response has a Content-Location header field and its field value is a reference to the same URI as the target URI, the content is a representation of the target resource.¶\\nIf the response has a Content-Location header field and its field value is a reference to a URI different from the target URI, then the sender asserts that the content is a representation of the resource identified by the Content-Location field value. However, such an assertion cannot be trusted unless it can be \"},{\"document_version\":\"27cd508417967bc8c1ff04b3ee7d751ad0790cd0dadd8b6ad40f9fb74624fc0f\",\"end\":34200,\"field\":\"text\",\"id\":\"S2P1\",\"source_id\":\"S2\",\"start\":33000,\"text\":\"esponse with a 1xx (Informational), 204 (No Content), or 304 (Not Modified) status code is always terminated by the first empty line after the header fields, regardless of the header fields present in the message, and thus cannot contain a message body or trailer section.¶\\nAny 2xx (Successful) response to a CONNECT request implies that the connection will become a tunnel immediately after the empty line that concludes the header fields. A client MUST ignore any Content-Length or Transfer-Encoding header fields received in such a message.¶\\nIf a message is received with both a Transfer-Encoding and a Content-Length header field, the Transfer-Encoding overrides the Content-Length. Such a message might indicate an attempt to perform request smuggling (Section 11.2) or response splitting (Section 11.1) and ought to be handled as an error. An intermediary that chooses to forward the message MUST first remove the received Content-Length field and process the Transfer-Encoding (as described below) prior to forwarding the message downstream.¶\\n\\nIf a Transfer-Encoding header field is present and the chunked transfer coding (Section 7.1) is the final encoding, the message body length is determ\"},{\"document_version\":\"27cd508417967bc8c1ff04b3ee7d751ad0790cd0dadd8b6ad40f9fb74624fc0f\",\"end\":33200,\"field\":\"text\",\"id\":\"S2P2\",\"source_id\":\"S2\",\"start\":32000,\"text\":\"d close the connection after processing the message. The message sender might have retained a portion of the message, in buffer, that could be misinterpreted by further use of the connection.¶\\n\\n6.2. Content-Length\\n\\nWhen a message does not have a Transfer-Encoding header field, a Content-Length header field (Section 8.6 of [HTTP]) can provide the anticipated size, as a decimal number of octets, for potential content. For messages that do include content, the Content-Length field value provides the framing information necessary for determining where the data (and message) ends. For messages that do not include content, the Content-Length indicates the size of the selected representation (Section 8.6 of [HTTP]).¶\\n\\nA sender MUST NOT send a Content-Length header field in any message that contains a Transfer-Encoding header field.¶\\n\\n6.3. Message Body Length\\n\\nThe length of a message body is determined by one of the following (in order of precedence):¶\\n\\nAny response to a HEAD request and any response with a 1xx (Informational), 204 (No Content), or 304 (Not Modified) status code is always terminated by the first empty line after the header fields, regardless of the header fields present in\"},{\"document_version\":\"27cd508417967bc8c1ff04b3ee7d751ad0790cd0dadd8b6ad40f9fb74624fc0f\",\"end\":30200,\"field\":\"text\",\"id\":\"S2P3\",\"source_id\":\"S2\",\"start\":29000,\"text\":\"er coding(s) to the message body, assuming that corresponding changes are made to the Transfer-Encoding field value. Additional information about the encoding parameters can be provided by other header fields not defined by this specification.¶\\n\\nTransfer-Encoding MAY be sent in a response to a HEAD request or in a 304 (Not Modified) response (Section 15.4.5 of [HTTP]) to a GET request, neither of which includes a message body, to indicate that the origin server would have applied a transfer coding to the message body if the request had been an unconditional GET. This indication is not required, however, because any recipient on the response chain (including the origin server) can remove transfer codings when they are not needed.¶\\n\\nA server MUST NOT send a Transfer-Encoding header field in any response with a status code of 1xx (Informational) or 204 (No Content). A server MUST NOT send a Transfer-Encoding header field in any 2xx (Successful) response to a CONNECT request (Section 9.3.6 of [HTTP]).¶\\n\\nA server that receives a request message with a transfer coding it does not understand SHOULD respond with 501 (Not Implemented).¶\\n\\nTransfer-Encoding was added in HTTP/1.1. It is genera\"}],\"claims\":[],\"facet_indices\":[0,1,2],\"facets\":[\"Может ли ответ 204 содержать content (тело сообщения)?\",\"Может ли ответ 204 содержать trailers (трейлеры)?\",\"Проверить, что RFC 9110 — актуальная нормативная спецификация для 204\"],\"language\":\"ru\",\"missing\":[0,1,2],\"news_window\":null,\"question\":\"RFC 9110: может ли ответ 204 содержать content или trailers?\",\"quote_ranges\":{},\"rfc_literal_mode\":true,\"sources\":[{\"eligible\":true,\"id\":\"S1\",\"primary_rfc\":null,\"publication\":{\"date_status\":\"missing\",\"kind\":\"unknown\",\"published_date\":null,\"witness_count\":0,\"witnesses\":[],\"witnesses_limited\":false},\"title\":\"RFC 9110: HTTP Semantics\",\"url_preview\":\"https://www.rfc-editor.org/rfc/rfc9110.html\"},{\"eligible\":true,\"id\":\"S2\",\"primary_rfc\":null,\"publication\":{\"date_status\":\"missing\",\"kind\":\"unknown\",\"published_date\":null,\"witness_count\":0,\"witnesses\":[],\"witnesses_limited\":false},\"title\":\"RFC 9112: HTTP/1.1\",\"url_preview\":\"https://www.rfc-editor.org/rfc/rfc9112.html\"}],\"unresolved_conflicts\":[]}",
+    "documents": [
+      {
+        "source_id": "S1",
+        "path": "F02/capture/0000-research/document-01.json",
+        "text_hash": "2d60c6d00d890e37fbad416c35e21644cea3e72d220e2acec6307540f4081a39"
+      },
+      {
+        "source_id": "S2",
+        "path": "F02/capture/0000-research/document-02.json",
+        "text_hash": "35611f3890c956fb462e45f9137f0aea03d35c22294b8211bf22c8fa1f725136"
+      }
+    ]
+  },
+  "F03": {
+    "context": {
+      "budget": {
+        "limits": {
+          "browser": 0,
+          "documents": 4,
+          "forms": 2,
+          "generations": 6,
+          "output_bytes": 32768,
+          "qwen": 4,
+          "seconds": 180,
+          "serp": 4,
+          "source_context_chars": 24000
+        },
+        "remaining": {
+          "documents": 2,
+          "forms": 1,
+          "generations": 5,
+          "milliseconds": 173777,
+          "qwen": 2,
+          "serp": 3
+        },
+        "used": {
+          "documents": 2,
+          "forms": 1,
+          "generations": 1,
+          "qwen": 2,
+          "serp": 1
+        }
+      },
+      "chunks": [
+        {
+          "document_version": "699bcb6270b3eb7f01ba6ea36903e0e51162fb64a7ff7ae0421dace0d900e734",
+          "end": 9200,
+          "field": "text",
+          "id": "S1P1",
+          "source_id": "S1",
+          "start": 8000,
+          "text": "(Not Found)), incomplete results (e.g., 206 (Partial Content)), and responses to methods other than GET if the method's definition allows such caching and defines something suitable for use as a cache key.¶\n\nA cache is \"disconnected\" when it cannot contact the origin server or otherwise find a forward path for a request. A disconnected cache can serve stale responses in some circumstances (Section 4.2.4).¶\n\n3. Storing Responses in Caches\n\nA cache MUST NOT store a response to a request unless:¶\n\nthe request method is understood by the cache;¶\n\nthe response status code is final (see Section 15 of [HTTP]);¶\n\nif the response status code is 206 or 304, or the must-understand cache directive (see Section 5.2.2.3) is present: the cache understands the response status code;¶\n\nthe no-store cache directive is not present in the response (see Section 5.2.2.5);¶\n\nif the cache is shared: the private response directive is either not present or allows a shared cache to store a modified response; see Section 5.2.2.7);¶\n\nif the cache is shared: the Authorization header field is not present in the request (see Section 11.6.2 of [HTTP]) or a response directive is present that explicitly allows shared"
+        },
+        {
+          "document_version": "699bcb6270b3eb7f01ba6ea36903e0e51162fb64a7ff7ae0421dace0d900e734",
+          "end": 11200,
+          "field": "text",
+          "id": "S1P2",
+          "source_id": "S1",
+          "start": 10000,
+          "text": "ior.¶\n\nNote that, in normal operation, some caches will not store a response that has neither a cache validator nor an explicit expiration time, as such responses are not usually useful to store. However, caches are not prohibited from storing such responses.¶\n\n3.1. Storing Header and Trailer Fields\n\nCaches MUST include all received response header fields -- including unrecognized ones -- when storing a response; this assures that new HTTP header fields can be successfully deployed. However, the following exceptions are made:¶\n\nThe Connection header field and fields whose names are listed in it are required by Section 7.6.1 of [HTTP] to be removed before forwarding the message. This MAY be implemented by doing so before storage.¶\nLikewise, some fields' semantics require them to be removed before forwarding the message, and this MAY be implemented by doing so before storage; see Section 7.6.1 of [HTTP] for some examples.¶\nThe no-cache (Section 5.2.2.4) and private (Section 5.2.2.7) cache directives can have arguments that prevent storage of header fields by all caches and shared caches, respectively.¶\nHeader fields that are specific to the proxy that a cache uses when forwarding a r"
+        },
+        {
+          "document_version": "699bcb6270b3eb7f01ba6ea36903e0e51162fb64a7ff7ae0421dace0d900e734",
+          "end": 10350,
+          "field": "text",
+          "id": "S1P3",
+          "source_id": "S1",
+          "start": 9150,
+          "text": "directive is present that explicitly allows shared caching (see Section 3.5); and¶\n\nthe response contains at least one of the following:¶\n\na public response directive (see Section 5.2.2.9);¶\na private response directive, if the cache is not shared (see Section 5.2.2.7);¶\nan Expires header field (see Section 5.3);¶\na max-age response directive (see Section 5.2.2.1);¶\nif the cache is shared: an s-maxage response directive (see Section 5.2.2.10);¶\na cache extension that allows it to be cached (see Section 5.2.3); or¶\na status code that is defined as heuristically cacheable (see Section 4.2.2).¶\n\n\nNote that a cache extension can override any of the requirements listed; see Section 5.2.3.¶\n\nIn this context, a cache has \"understood\" a request method or a response status code if it recognizes it and implements all specified caching-related behavior.¶\n\nNote that, in normal operation, some caches will not store a response that has neither a cache validator nor an explicit expiration time, as such responses are not usually useful to store. However, caches are not prohibited from storing such responses.¶\n\n3.1. Storing Header and Trailer Fields\n\nCaches MUST include all received response header"
+        },
+        {
+          "document_version": "27cd508417967bc8c1ff04b3ee7d751ad0790cd0dadd8b6ad40f9fb74624fc0f",
+          "end": 72200,
+          "field": "text",
+          "id": "S2P1",
+          "source_id": "S2",
+          "start": 71000,
+          "text": "7.2\n\n\n12.4. ALPN Protocol ID Registration\n\nIANA has updated the \"TLS Application-Layer Protocol Negotiation (ALPN) Protocol IDs\" registry at <https://www.iana.org/assignments/tls-extensiontype-values/> with the registration below:¶\n\nTable 3 Protocol Identification Sequence Reference\nHTTP/1.1 0x68 0x74 0x74 0x70 0x2f 0x31 0x2e 0x31 (\"http/1.1\") RFC 9112\n\n\n13. References\n\n13.1. Normative References\n\n[CACHING] Fielding, R., Ed., Nottingham, M., Ed., and J. Reschke, Ed., \"HTTP Caching\", STD 98, RFC 9111, DOI 10.17487/RFC9111, June 2022, <https://www.rfc-editor.org/info/rfc9111>. [HTTP] Fielding, R., Ed., Nottingham, M., Ed., and J. Reschke, Ed., \"HTTP Semantics\", STD 97, RFC 9110, DOI 10.17487/RFC9110, June 2022, <https://www.rfc-editor.org/info/rfc9110>. [RFC1950] Deutsch, P. and J-L. Gailly, \"ZLIB Compressed Data Format Specification version 3.3\", RFC 1950, DOI 10.17487/RFC1950, May 1996, <https://www.rfc-editor.org/info/rfc1950>. [RFC1951] Deutsch, P., \"DEFLATE Compressed Data Format Specification version 1.3\", RFC 1951, DOI 10.17487/RFC1951, May 1996, <https://www.rfc-editor.org/info/rfc1951>. [RFC1952] Deutsch, P., \"GZIP file format specification version 4.3\", RFC 1952, DOI 10.174"
+        },
+        {
+          "document_version": "27cd508417967bc8c1ff04b3ee7d751ad0790cd0dadd8b6ad40f9fb74624fc0f",
+          "end": 66200,
+          "field": "text",
+          "id": "S2P2",
+          "source_id": "S2",
+          "start": 65000,
+          "text": "t side.¶\n\n11. Security Considerations\n\nThis section is meant to inform developers, information providers, and users about known security considerations relevant to HTTP message syntax and parsing. Security considerations about HTTP semantics, content, and routing are addressed in [HTTP].¶\n\n11.1. Response Splitting\n\nResponse splitting (a.k.a. CRLF injection) is a common technique, used in various attacks on Web usage, that exploits the line-based nature of HTTP message framing and the ordered association of requests to responses on persistent connections [Klein]. This technique can be particularly damaging when the requests pass through a shared cache.¶\n\nResponse splitting exploits a vulnerability in servers (usually within an application server) where an attacker can send encoded data within some parameter of the request that is later decoded and echoed within any of the response header fields of the response. If the decoded data is crafted to look like the response has ended and a subsequent response has begun, the response has been split, and the content within the apparent second response is controlled by the attacker. The attacker can then make any other request on the same per"
+        },
+        {
+          "document_version": "27cd508417967bc8c1ff04b3ee7d751ad0790cd0dadd8b6ad40f9fb74624fc0f",
+          "end": 1200,
+          "field": "text",
+          "id": "S2P3",
+          "source_id": "S2",
+          "start": 0,
+          "text": "RFC 9112 HTTP/1.1 June 2022\nFielding, et al. Standards Track [Page]\n\n\nHTTP/1.1\n\nAbstract\n\nThe Hypertext Transfer Protocol (HTTP) is a stateless application-level protocol for distributed, collaborative, hypertext information systems. This document specifies the HTTP/1.1 message syntax, message parsing, connection management, and related security concerns.¶\n\nThis document obsoletes portions of RFC 7230.¶\n\nStatus of This Memo\n\nThis is an Internet Standards Track document.¶\n\nThis document is a product of the Internet Engineering Task Force (IETF). It represents the consensus of the IETF community. It has received public review and has been approved for publication by the Internet Engineering Steering Group (IESG). Further information on Internet Standards is available in Section 2 of RFC 7841.¶\n\nInformation about the current status of this document, any errata, and how to provide feedback on it may be obtained at https://www.rfc-editor.org/info/rfc9112.¶\n\nCopyright Notice\n\nCopyright (c) 2022 IETF Trust and the persons identified as the document authors. All rights reserved.¶\n\nThis document is subject to BCP 78 and the IETF Trust's Legal Provisions Relating to IETF Documents (https://t"
+        }
+      ],
+      "claims": [],
+      "facet_indices": [
+        0,
+        1,
+        2
+      ],
+      "facets": [
+        "Что RFC 9111 определяет для директивы ответа no-store в отношении shared caches",
+        "Что RFC 9111 определяет для директивы ответа no-store в отношении private caches",
+        "Проверить, не является ли формулировка вопроса ложной предпосылкой о запрете (no-store как запрет хранения)"
+      ],
+      "language": "ru",
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "news_window": null,
+      "question": "RFC 9111: что запрещает response directive no-store для shared и private caches?",
+      "quote_ranges": {},
+      "rfc_literal_mode": true,
+      "sources": [
+        {
+          "eligible": true,
+          "id": "S1",
+          "primary_rfc": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "title": "RFC 9111: HTTP Caching",
+          "url_preview": "https://www.rfc-editor.org/rfc/rfc9111.html"
+        },
+        {
+          "eligible": true,
+          "id": "S2",
+          "primary_rfc": null,
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "title": "RFC 9112: HTTP/1.1",
+          "url_preview": "https://www.rfc-editor.org/rfc/rfc9112.html"
+        }
+      ],
+      "unresolved_conflicts": []
+    },
+    "context_text": "{\"budget\":{\"limits\":{\"browser\":0,\"documents\":4,\"forms\":2,\"generations\":6,\"output_bytes\":32768,\"qwen\":4,\"seconds\":180,\"serp\":4,\"source_context_chars\":24000},\"remaining\":{\"documents\":2,\"forms\":1,\"generations\":5,\"milliseconds\":173777,\"qwen\":2,\"serp\":3},\"used\":{\"documents\":2,\"forms\":1,\"generations\":1,\"qwen\":2,\"serp\":1}},\"chunks\":[{\"document_version\":\"699bcb6270b3eb7f01ba6ea36903e0e51162fb64a7ff7ae0421dace0d900e734\",\"end\":9200,\"field\":\"text\",\"id\":\"S1P1\",\"source_id\":\"S1\",\"start\":8000,\"text\":\"(Not Found)), incomplete results (e.g., 206 (Partial Content)), and responses to methods other than GET if the method's definition allows such caching and defines something suitable for use as a cache key.¶\\n\\nA cache is \\\"disconnected\\\" when it cannot contact the origin server or otherwise find a forward path for a request. A disconnected cache can serve stale responses in some circumstances (Section 4.2.4).¶\\n\\n3. Storing Responses in Caches\\n\\nA cache MUST NOT store a response to a request unless:¶\\n\\nthe request method is understood by the cache;¶\\n\\nthe response status code is final (see Section 15 of [HTTP]);¶\\n\\nif the response status code is 206 or 304, or the must-understand cache directive (see Section 5.2.2.3) is present: the cache understands the response status code;¶\\n\\nthe no-store cache directive is not present in the response (see Section 5.2.2.5);¶\\n\\nif the cache is shared: the private response directive is either not present or allows a shared cache to store a modified response; see Section 5.2.2.7);¶\\n\\nif the cache is shared: the Authorization header field is not present in the request (see Section 11.6.2 of [HTTP]) or a response directive is present that explicitly allows shared\"},{\"document_version\":\"699bcb6270b3eb7f01ba6ea36903e0e51162fb64a7ff7ae0421dace0d900e734\",\"end\":11200,\"field\":\"text\",\"id\":\"S1P2\",\"source_id\":\"S1\",\"start\":10000,\"text\":\"ior.¶\\n\\nNote that, in normal operation, some caches will not store a response that has neither a cache validator nor an explicit expiration time, as such responses are not usually useful to store. However, caches are not prohibited from storing such responses.¶\\n\\n3.1. Storing Header and Trailer Fields\\n\\nCaches MUST include all received response header fields -- including unrecognized ones -- when storing a response; this assures that new HTTP header fields can be successfully deployed. However, the following exceptions are made:¶\\n\\nThe Connection header field and fields whose names are listed in it are required by Section 7.6.1 of [HTTP] to be removed before forwarding the message. This MAY be implemented by doing so before storage.¶\\nLikewise, some fields' semantics require them to be removed before forwarding the message, and this MAY be implemented by doing so before storage; see Section 7.6.1 of [HTTP] for some examples.¶\\nThe no-cache (Section 5.2.2.4) and private (Section 5.2.2.7) cache directives can have arguments that prevent storage of header fields by all caches and shared caches, respectively.¶\\nHeader fields that are specific to the proxy that a cache uses when forwarding a r\"},{\"document_version\":\"699bcb6270b3eb7f01ba6ea36903e0e51162fb64a7ff7ae0421dace0d900e734\",\"end\":10350,\"field\":\"text\",\"id\":\"S1P3\",\"source_id\":\"S1\",\"start\":9150,\"text\":\"directive is present that explicitly allows shared caching (see Section 3.5); and¶\\n\\nthe response contains at least one of the following:¶\\n\\na public response directive (see Section 5.2.2.9);¶\\na private response directive, if the cache is not shared (see Section 5.2.2.7);¶\\nan Expires header field (see Section 5.3);¶\\na max-age response directive (see Section 5.2.2.1);¶\\nif the cache is shared: an s-maxage response directive (see Section 5.2.2.10);¶\\na cache extension that allows it to be cached (see Section 5.2.3); or¶\\na status code that is defined as heuristically cacheable (see Section 4.2.2).¶\\n\\n\\nNote that a cache extension can override any of the requirements listed; see Section 5.2.3.¶\\n\\nIn this context, a cache has \\\"understood\\\" a request method or a response status code if it recognizes it and implements all specified caching-related behavior.¶\\n\\nNote that, in normal operation, some caches will not store a response that has neither a cache validator nor an explicit expiration time, as such responses are not usually useful to store. However, caches are not prohibited from storing such responses.¶\\n\\n3.1. Storing Header and Trailer Fields\\n\\nCaches MUST include all received response header\"},{\"document_version\":\"27cd508417967bc8c1ff04b3ee7d751ad0790cd0dadd8b6ad40f9fb74624fc0f\",\"end\":72200,\"field\":\"text\",\"id\":\"S2P1\",\"source_id\":\"S2\",\"start\":71000,\"text\":\"7.2\\n\\n\\n12.4. ALPN Protocol ID Registration\\n\\nIANA has updated the \\\"TLS Application-Layer Protocol Negotiation (ALPN) Protocol IDs\\\" registry at <https://www.iana.org/assignments/tls-extensiontype-values/> with the registration below:¶\\n\\nTable 3 Protocol Identification Sequence Reference\\nHTTP/1.1 0x68 0x74 0x74 0x70 0x2f 0x31 0x2e 0x31 (\\\"http/1.1\\\") RFC 9112\\n\\n\\n13. References\\n\\n13.1. Normative References\\n\\n[CACHING] Fielding, R., Ed., Nottingham, M., Ed., and J. Reschke, Ed., \\\"HTTP Caching\\\", STD 98, RFC 9111, DOI 10.17487/RFC9111, June 2022, <https://www.rfc-editor.org/info/rfc9111>. [HTTP] Fielding, R., Ed., Nottingham, M., Ed., and J. Reschke, Ed., \\\"HTTP Semantics\\\", STD 97, RFC 9110, DOI 10.17487/RFC9110, June 2022, <https://www.rfc-editor.org/info/rfc9110>. [RFC1950] Deutsch, P. and J-L. Gailly, \\\"ZLIB Compressed Data Format Specification version 3.3\\\", RFC 1950, DOI 10.17487/RFC1950, May 1996, <https://www.rfc-editor.org/info/rfc1950>. [RFC1951] Deutsch, P., \\\"DEFLATE Compressed Data Format Specification version 1.3\\\", RFC 1951, DOI 10.17487/RFC1951, May 1996, <https://www.rfc-editor.org/info/rfc1951>. [RFC1952] Deutsch, P., \\\"GZIP file format specification version 4.3\\\", RFC 1952, DOI 10.174\"},{\"document_version\":\"27cd508417967bc8c1ff04b3ee7d751ad0790cd0dadd8b6ad40f9fb74624fc0f\",\"end\":66200,\"field\":\"text\",\"id\":\"S2P2\",\"source_id\":\"S2\",\"start\":65000,\"text\":\"t side.¶\\n\\n11. Security Considerations\\n\\nThis section is meant to inform developers, information providers, and users about known security considerations relevant to HTTP message syntax and parsing. Security considerations about HTTP semantics, content, and routing are addressed in [HTTP].¶\\n\\n11.1. Response Splitting\\n\\nResponse splitting (a.k.a. CRLF injection) is a common technique, used in various attacks on Web usage, that exploits the line-based nature of HTTP message framing and the ordered association of requests to responses on persistent connections [Klein]. This technique can be particularly damaging when the requests pass through a shared cache.¶\\n\\nResponse splitting exploits a vulnerability in servers (usually within an application server) where an attacker can send encoded data within some parameter of the request that is later decoded and echoed within any of the response header fields of the response. If the decoded data is crafted to look like the response has ended and a subsequent response has begun, the response has been split, and the content within the apparent second response is controlled by the attacker. The attacker can then make any other request on the same per\"},{\"document_version\":\"27cd508417967bc8c1ff04b3ee7d751ad0790cd0dadd8b6ad40f9fb74624fc0f\",\"end\":1200,\"field\":\"text\",\"id\":\"S2P3\",\"source_id\":\"S2\",\"start\":0,\"text\":\"RFC 9112 HTTP/1.1 June 2022\\nFielding, et al. Standards Track [Page]\\n\\n\\nHTTP/1.1\\n\\nAbstract\\n\\nThe Hypertext Transfer Protocol (HTTP) is a stateless application-level protocol for distributed, collaborative, hypertext information systems. This document specifies the HTTP/1.1 message syntax, message parsing, connection management, and related security concerns.¶\\n\\nThis document obsoletes portions of RFC 7230.¶\\n\\nStatus of This Memo\\n\\nThis is an Internet Standards Track document.¶\\n\\nThis document is a product of the Internet Engineering Task Force (IETF). It represents the consensus of the IETF community. It has received public review and has been approved for publication by the Internet Engineering Steering Group (IESG). Further information on Internet Standards is available in Section 2 of RFC 7841.¶\\n\\nInformation about the current status of this document, any errata, and how to provide feedback on it may be obtained at https://www.rfc-editor.org/info/rfc9112.¶\\n\\nCopyright Notice\\n\\nCopyright (c) 2022 IETF Trust and the persons identified as the document authors. All rights reserved.¶\\n\\nThis document is subject to BCP 78 and the IETF Trust's Legal Provisions Relating to IETF Documents (https://t\"}],\"claims\":[],\"facet_indices\":[0,1,2],\"facets\":[\"Что RFC 9111 определяет для директивы ответа no-store в отношении shared caches\",\"Что RFC 9111 определяет для директивы ответа no-store в отношении private caches\",\"Проверить, не является ли формулировка вопроса ложной предпосылкой о запрете (no-store как запрет хранения)\"],\"language\":\"ru\",\"missing\":[0,1,2],\"news_window\":null,\"question\":\"RFC 9111: что запрещает response directive no-store для shared и private caches?\",\"quote_ranges\":{},\"rfc_literal_mode\":true,\"sources\":[{\"eligible\":true,\"id\":\"S1\",\"primary_rfc\":null,\"publication\":{\"date_status\":\"missing\",\"kind\":\"unknown\",\"published_date\":null,\"witness_count\":0,\"witnesses\":[],\"witnesses_limited\":false},\"title\":\"RFC 9111: HTTP Caching\",\"url_preview\":\"https://www.rfc-editor.org/rfc/rfc9111.html\"},{\"eligible\":true,\"id\":\"S2\",\"primary_rfc\":null,\"publication\":{\"date_status\":\"missing\",\"kind\":\"unknown\",\"published_date\":null,\"witness_count\":0,\"witnesses\":[],\"witnesses_limited\":false},\"title\":\"RFC 9112: HTTP/1.1\",\"url_preview\":\"https://www.rfc-editor.org/rfc/rfc9112.html\"}],\"unresolved_conflicts\":[]}",
+    "documents": [
+      {
+        "source_id": "S1",
+        "path": "F03/capture/0000-research/document-01.json",
+        "text_hash": "a963d72942010375b16efbc64f37589bab26b3ef3ab441ac10cbb0693bdffd62"
+      },
+      {
+        "source_id": "S2",
+        "path": "F03/capture/0000-research/document-02.json",
+        "text_hash": "35611f3890c956fb462e45f9137f0aea03d35c22294b8211bf22c8fa1f725136"
+      }
+    ]
+  }
+}

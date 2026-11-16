@@ -1,0 +1,39 @@
+<html><head><title>RFC 9111: HTTP Caching</title><meta name="rfc.number" content="9111"><meta name="generator" content="xml2rfc 3.12.10"></head><body><h1 id="rfcnum">RFC 9111</h1><h1 id="title">HTTP Caching</h1><div id="cache-response-directive.no-store"><section id="section-5.2.2.5">
+            <h5 id="name-no-store-2">
+<a href="#section-5.2.2.5" class="section-number selfRef">5.2.2.5. </a><a href="#name-no-store-2" class="section-name selfRef">no-store</a>
+            </h5>
+<span id="iref-no-store-cache-directive-39" class="iref"></span>
+            <p id="section-5.2.2.5-1">
+   The no-store response directive indicates that a cache <span class="bcp14">MUST NOT</span> store
+   any part of either the immediate request or the response and <span class="bcp14">MUST NOT</span> use
+   the response to satisfy any other request.<a href="#section-5.2.2.5-1" class="pilcrow">¶</a></p>
+<p id="section-5.2.2.5-2">
+   This directive applies to both private and shared caches. "MUST NOT
+   store" in this context means that the cache <span class="bcp14">MUST NOT</span> intentionally store
+   the information in non-volatile storage and <span class="bcp14">MUST</span> make a best-effort
+   attempt to remove the information from volatile storage as promptly as
+   possible after forwarding it.<a href="#section-5.2.2.5-2" class="pilcrow">¶</a></p>
+<p id="section-5.2.2.5-3">
+   This directive is not a reliable or sufficient mechanism for ensuring
+   privacy. In particular, malicious or compromised caches might not
+   recognize or obey this directive, and communications networks might be
+   vulnerable to eavesdropping.<a href="#section-5.2.2.5-3" class="pilcrow">¶</a></p>
+<p id="section-5.2.2.5-4">
+   Note that the must-understand cache directive overrides no-store in certain
+   circumstances; see <a href="#cache-response-directive.must-understand" class="xref">Section 5.2.2.3</a>.<a href="#section-5.2.2.5-4" class="pilcrow">¶</a></p>
+</section></div><div id="cache-response-directive.must-understand"><section id="section-5.2.2.3">
+            <h5 id="name-must-understand">
+<a href="#section-5.2.2.3" class="section-number selfRef">5.2.2.3. </a><a href="#name-must-understand" class="section-name selfRef">must-understand</a>
+            </h5>
+<span id="iref-must-understand-cache-direc" class="iref"></span>
+            <p id="section-5.2.2.3-1">
+   The must-understand response directive limits caching of the response to
+   a cache that understands and conforms to the requirements for that
+   response's status code.<a href="#section-5.2.2.3-1" class="pilcrow">¶</a></p>
+<p id="section-5.2.2.3-2">
+   A response that contains the must-understand directive <span class="bcp14">SHOULD</span> 
+   also contain the no-store directive. When a cache that implements the
+   must-understand directive receives a response that includes it, 
+   the cache <span class="bcp14">SHOULD</span> ignore the no-store directive if it 
+   understands and implements the status code's caching requirements.<a href="#section-5.2.2.3-2" class="pilcrow">¶</a></p>
+</section></div></body></html>

@@ -1,0 +1,101 @@
+{
+  "protocol": {
+    "frozen_before_implementation": true,
+    "date": "2026-10-30",
+    "purpose": "full search pipeline comparison, no classifier bypass",
+    "baseline": "current classifier high/max2400 + coveragev2 + local Qwen4bit",
+    "treatment": "fixed classifier and coveragev3 + same local Qwen4bit",
+    "retrieval": "once shared public HTML Seznam/Naver original query forms; no oracle URL injected",
+    "documents": "shared URL-versioned snapshots; candidate selection may differ; up to4 reads per branch",
+    "gold": "blind source judgments before prediction analysis; unknowns separate, never silently correct; source snapshots available for verification",
+    "budgets": "max3generativecalls/4reads/180s;additional4local scoring calls,30s/call;remote physical cap$2;no provider refusal retries",
+    "no_evaluation_tuning": true,
+    "original20_unchanged": true
+  },
+  "cases": [
+    {
+      "id": "s01",
+      "query": "git diff --exit-code --quiet exit status differences",
+      "forms": [
+        "git diff --exit-code --quiet exit status differences"
+      ]
+    },
+    {
+      "id": "s02",
+      "query": "Python contextlib.suppress BaseExceptionGroup Python 3.12 behavior",
+      "forms": [
+        "Python contextlib.suppress BaseExceptionGroup Python 3.12 behavior"
+      ]
+    },
+    {
+      "id": "s03",
+      "query": "PostgreSQL NULLS NOT DISTINCT unique index duplicate nulls",
+      "forms": [
+        "PostgreSQL NULLS NOT DISTINCT unique index duplicate nulls"
+      ]
+    },
+    {
+      "id": "s04",
+      "query": "SQLite recursive_triggers foreign key cascade PRAGMA distinction",
+      "forms": [
+        "SQLite recursive_triggers foreign key cascade PRAGMA distinction"
+      ]
+    },
+    {
+      "id": "s05",
+      "query": "Docker --init PID 1 signal forwarding zombie reaping",
+      "forms": [
+        "Docker --init PID 1 signal forwarding zombie reaping"
+      ]
+    },
+    {
+      "id": "s06",
+      "query": "Rust AtomicUsize compare_exchange failure ordering Release AcqRel panic",
+      "forms": [
+        "Rust AtomicUsize compare_exchange failure ordering Release AcqRel panic"
+      ]
+    },
+    {
+      "id": "s07",
+      "query": "HTTP If-Match weak ETag strong comparison wildcard existing resource",
+      "forms": [
+        "HTTP If-Match weak ETag strong comparison wildcard existing resource"
+      ]
+    },
+    {
+      "id": "s08",
+      "query": "JavaScript Promise.all rejection cancels remaining promises behavior",
+      "forms": [
+        "JavaScript Promise.all rejection cancels remaining promises behavior"
+      ]
+    },
+    {
+      "id": "s09",
+      "query": "CSS contain paint overflow clipping stacking context",
+      "forms": [
+        "CSS contain paint overflow clipping stacking context"
+      ]
+    },
+    {
+      "id": "s10",
+      "query": "Linux open O_NOFOLLOW final component symbolic links earlier components",
+      "forms": [
+        "Linux open O_NOFOLLOW final component symbolic links earlier components"
+      ]
+    },
+    {
+      "id": "s11",
+      "query": "Python functools.cached_property Python 3.12 concurrent calls lock removed",
+      "forms": [
+        "Python functools.cached_property Python 3.12 concurrent calls lock removed"
+      ]
+    },
+    {
+      "id": "s12",
+      "query": "nginx proxy_pass trailing slash URI replacement regex location",
+      "forms": [
+        "nginx proxy_pass trailing slash URI replacement regex location"
+      ]
+    }
+  ]
+}

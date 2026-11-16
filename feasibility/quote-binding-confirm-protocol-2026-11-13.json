@@ -1,0 +1,18 @@
+{
+  "schema": "quote-binding-confirm-protocol-v1",
+  "baseline_commit": "c42fc3c",
+  "candidate": "V7 frozen source SHA256 5923069353fc80325c2a5755a0273c4b75a7030f5ca1cafa658c4ea6fdf0a0ed",
+  "binary_sha256": {
+    "baseline": "3c316c31ea558ac6b10b41d3ca6c45f38724785fa8042fd8ef8648ae3736a277",
+    "candidate": "69213f41f86e44cd4ce50775e0da65b0a16e15fd0d3403b65af5091090952752"
+  },
+  "cases_sha256": "d04979a6d37b152c7c316a22d2cc259e7917a4bdb117ae14ecc9f389784df6d7",
+  "protocol": "Eight new questions plus four known controls; never pooled with failed F01-F12. Alternate baseline then candidate per question. Separate initially empty caches, shared cumulative refusal ledger. Runtime receives only question/language. No code, gold or prompts changed after freeze. Own source-first assessment, not independent review.",
+  "cases": 12,
+  "arms": [
+    "baseline",
+    "candidate"
+  ],
+  "quality_gate": "No new false/unknown-as-cited claims, no loss of baseline-supported requested conditions; unsupported API control preserved. Exact Unicode/provenance and source-scope binding required.",
+  "source_seed": "feasibility/qwen-acceptance-results-2026-11-13.json:source_state_after"
+}

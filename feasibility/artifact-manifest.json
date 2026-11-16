@@ -1,0 +1,141 @@
+{
+  "schema": 1,
+  "scope": "Local raw corpora excluded from Git; preserve these files separately for historical experiment replay. Source build and ordinary offline tests use tracked fixtures.",
+  "artifacts": [
+    {
+      "path": "feasibility/admission-literals-corpus-2026-10-30.json",
+      "bytes": 136093069,
+      "sha256": "1b0c62526d43b7a20066ec8b61f2879a67a834b1d4c69069166d92567cff9616"
+    },
+    {
+      "path": "feasibility/classifier-relation-corpus-2026-10-30.json",
+      "bytes": 5257747,
+      "sha256": "e7a96bfa4f67659f50cdf1bd4278e10c593a3b5d392985585b2651cd7c9838fb"
+    },
+    {
+      "path": "feasibility/direct-coverage-corpus-2026-10-30.json",
+      "bytes": 12163200,
+      "sha256": "3d389e8ad8599b9f34438b1b3105e62722e07c7bebc08e9c3f10c63140ff4fca"
+    },
+    {
+      "path": "feasibility/evidence-layer-corpus-2026-10-30.json",
+      "bytes": 731507,
+      "sha256": "669f11a40b76048a9b40123a041af071d1e0e5fa66da6260ba0d24391f6054e0"
+    },
+    {
+      "path": "feasibility/extraction-selection-corpus-2026-10-30.json",
+      "bytes": 15720519,
+      "sha256": "2f39751d0a8210b1fd99835434eba2682820e407212e7ba9386c0dfc4f4b8f7e"
+    },
+    {
+      "path": "feasibility/firecrawl-corpus-2026-11-05.json",
+      "bytes": 7003393,
+      "sha256": "dc9ba918d43296710c5445d86a805e15c8ee80ea582bc9b9dfc82aea62fbbbb1"
+    },
+    {
+      "path": "feasibility/harness-cache-corpus-2026-11-05.tar.gz",
+      "bytes": 23559070,
+      "sha256": "91b4fd46839e216e0e62078c779a04de8673aa246a1bae74da1b1b65dfb13b70"
+    },
+    {
+      "path": "feasibility/passage-coverage-confirm-corpus-2026-10-30.json",
+      "bytes": 5466248,
+      "sha256": "d4e75f7ac673f537f240fc1ad49c669af74a65215c715afe7f0e04f5980b8627"
+    },
+    {
+      "path": "feasibility/passage-coverage-corpus-2026-10-30.json",
+      "bytes": 24267919,
+      "sha256": "7c1cf6476aa381682bd18bf893e3d51a0fc58fe778641d00fcc498ad2370c9ad"
+    },
+    {
+      "path": "feasibility/passage-coverage-final-corpus-2026-10-30.json",
+      "bytes": 12092427,
+      "sha256": "7c13565394540e15b84d9f6e4ded4bcc0a3a68f2fc0925c91f9124e1aa373cc2"
+    },
+    {
+      "path": "feasibility/qwen-firecrawl-corpus-2026-11-05.json",
+      "bytes": 7250976,
+      "sha256": "8f52d3b292ae3c61f06f83cd2fc34f85b2cef776306251d8b0f7a9de2d5d7675"
+    },
+    {
+      "path": "feasibility/reliability-holdout-corpus-2026-10-30.json",
+      "bytes": 3089637,
+      "sha256": "d3ec3954b680e70ba7c640daa72d77c8a40f7c42fb3b95f3c2e3ce69395bb41c"
+    },
+    {
+      "path": "feasibility/reranker-corpus-2026-10-30.json",
+      "bytes": 5677511,
+      "sha256": "2f0d9401a360c1af79b01bedb317991cda34845a58e066c7fd172e192de7cf88"
+    },
+    {
+      "path": "feasibility/research-mvp-corpus-2026-11-05.tar.gz",
+      "bytes": 4144536,
+      "sha256": "ad28e8c31a52b2176f1b0673d4f7eb4942d39a47161c10072afe522ab858f114"
+    },
+    {
+      "path": "feasibility/core-scenario-corpus-2026-11-05.tar.gz",
+      "bytes": 26742,
+      "sha256": "a9e43e477806223bd7225bfae574e772bd91986e141035efbf3c88da85e5b621"
+    },
+    {
+      "path": "feasibility/luna-seven-corpus-2026-11-06.tar.gz",
+      "bytes": 3488557,
+      "sha256": "cb2fa396d7de2981d53b8d017311b6c26c2085ce5b65ea39d14088d492a3445e"
+    },
+    {
+      "path": "feasibility/research-gates-corpus-2026-11-06.tar.gz",
+      "bytes": 30877576,
+      "sha256": "cbda89ca9b397218a4d1ed9e378ec84d78680c3bf24d6cfabd960ba799a83d1c"
+    },
+    {
+      "path": "feasibility/research-followup-corpus-2026-11-13.tar.gz",
+      "bytes": 2207942,
+      "sha256": "0c7376092bc8a79c779b722a1aef781c53728cc88b9ba1fa7dc325af6d4159fe"
+    },
+    {
+      "path": "feasibility/qwen-acceptance-corpus-2026-11-13.tar.gz",
+      "bytes": 8896821,
+      "sha256": "93a7b3c40f44b1a0fa5ec6677cce99faeb3bf92eede4a333c9ef398abca74e17"
+    },
+    {
+      "path": "feasibility/quote-binding-confirm-corpus-2026-11-13.tar.gz",
+      "bytes": 7441244,
+      "sha256": "2bc22e19b87929874ecfac649f3acf333d8232758fb9940c5359ad265e983edd"
+    },
+    {
+      "path": "feasibility/research-backlog-plan-corpus-2026-11-13.tar.gz",
+      "bytes": 374864,
+      "sha256": "ec3687081d29c81df20990a53192b4f8125c8b8215c7e9652132fc758abc05c7"
+    },
+    {
+      "path": "feasibility/github-research-solutions-corpus-2026-11-13.tar.gz",
+      "bytes": 1749756,
+      "sha256": "b88173688996d2f7cd428333b36bcd9d2cfe60367ecb146cf1cbe813f8ef80e3"
+    },
+    {
+      "path": "feasibility/research-p1-team-corpus-2026-11-13.tar.gz",
+      "bytes": 13959424,
+      "sha256": "a513f96399ff87f005340ec16254124cd75237d8bc3804169ffdc9e731689664"
+    },
+    {
+      "path": "feasibility/inference-obligations-corpus-2026-11-16.tar.gz",
+      "bytes": 14701,
+      "sha256": "5205655d14a6e6d12c2c0a63c4d02443e341a3ad483968445147a4f539a9db2b"
+    },
+    {
+      "path": "feasibility/inference-baseline-corpus-2026-11-16.tar.gz",
+      "bytes": 7120,
+      "sha256": "d3f72b8dbe271c01deb82b5ceb6b9063fc471a1767d114e84b2e057ee3dbf7bc"
+    },
+    {
+      "path": "feasibility/product-options-corpus-2026-11-16.tar.gz",
+      "bytes": 5353102,
+      "sha256": "bade9365684ab409373c1b810c92595d53161280456a57cd1d24ed5baefb0621"
+    },
+    {
+      "path": "feasibility/product-options-followup-corpus-2026-11-16.tar.gz",
+      "bytes": 321037,
+      "sha256": "963dd1d9504b4cfb0bba91c407816edb81244aec44aa73f54d93f5c0367b2e0f"
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "version": "news-dates-new12-v1",
+  "as_of": "2026-11-03",
+  "timezone": "Europe/Moscow",
+  "cases": [
+    {
+      "id": "nd01",
+      "query": "новости Нижнего Новгорода 3 ноября 2026",
+      "intent": "news",
+      "place": "Нижний Новгород",
+      "topic": "городские новости",
+      "published_from": "2026-11-03",
+      "published_to": "2026-11-03",
+      "date_rule": "explicit Moscow publication day"
+    },
+    {
+      "id": "nd02",
+      "query": "новости Казани 3 ноября 2026",
+      "intent": "news",
+      "place": "Казань",
+      "topic": "городские новости",
+      "published_from": "2026-11-03",
+      "published_to": "2026-11-03",
+      "date_rule": "explicit Moscow publication day"
+    },
+    {
+      "id": "nd03",
+      "query": "новости Екатеринбурга сегодня",
+      "intent": "news",
+      "place": "Екатеринбург",
+      "topic": "городские новости",
+      "published_from": "2026-11-03",
+      "published_to": "2026-11-03",
+      "date_rule": "explicit Moscow publication day"
+    },
+    {
+      "id": "nd04",
+      "query": "новости Тулы сегодня",
+      "intent": "news",
+      "place": "Тула",
+      "topic": "городские новости",
+      "published_from": "2026-11-03",
+      "published_to": "2026-11-03",
+      "date_rule": "explicit Moscow publication day"
+    },
+    {
+      "id": "nd05",
+      "query": "новости Перми сегодня",
+      "intent": "news",
+      "place": "Пермь",
+      "topic": "городские новости",
+      "published_from": "2026-11-03",
+      "published_to": "2026-11-03",
+      "date_rule": "explicit Moscow publication day"
+    },
+    {
+      "id": "nd06",
+      "query": "новости Уфы сегодня",
+      "intent": "news",
+      "place": "Уфа",
+      "topic": "городские новости",
+      "published_from": "2026-11-03",
+      "published_to": "2026-11-03",
+      "date_rule": "explicit Moscow publication day"
+    },
+    {
+      "id": "nd07",
+      "query": "новости Нижнего Новгорода 2 ноября 2026",
+      "intent": "news",
+      "place": "Нижний Новгород",
+      "topic": "городские новости",
+      "published_from": "2026-11-02",
+      "published_to": "2026-11-02",
+      "date_rule": "explicit Moscow publication day"
+    },
+    {
+      "id": "nd08",
+      "query": "site:nnovgorod.bezformata.com новости Нижнего Новгорода транспорт 3 ноября 2026",
+      "intent": "targeted_news",
+      "place": "Нижний Новгород",
+      "topic": "общественный транспорт",
+      "published_from": "2026-11-03",
+      "published_to": "2026-11-03",
+      "date_rule": "explicit Moscow publication day",
+      "site": "nnovgorod.bezformata.com"
+    },
+    {
+      "id": "nd09",
+      "query": "новости Нижнего Новгорода ноябрь 2025",
+      "intent": "news_archive",
+      "place": "Нижний Новгород",
+      "topic": "городские новости",
+      "published_from": "2025-11-01",
+      "published_to": "2025-11-30",
+      "date_rule": "explicit historical publication month"
+    },
+    {
+      "id": "nd10",
+      "query": "новости Казани 3 ноября 2030",
+      "intent": "future_control",
+      "place": "Казань",
+      "topic": "городские новости",
+      "published_from": "2030-11-03",
+      "published_to": "2030-11-03",
+      "date_rule": "future publication cannot be verified as of 2026-11-03"
+    },
+    {
+      "id": "nd11",
+      "query": "site:fckhimki.com новости Воронежа сегодня",
+      "intent": "irrelevant_site_control",
+      "place": "Воронеж",
+      "topic": "городские новости",
+      "published_from": "2026-11-03",
+      "published_to": "2026-11-03",
+      "date_rule": "explicit Moscow publication day",
+      "site": "fckhimki.com"
+    },
+    {
+      "id": "nd12",
+      "query": "новости Екатеринбурга 2 ноября 2026",
+      "intent": "news",
+      "place": "Екатеринбург",
+      "topic": "городские новости",
+      "published_from": "2026-11-02",
+      "published_to": "2026-11-02",
+      "date_rule": "explicit Moscow publication day"
+    }
+  ],
+  "limits": [
+    "Exact query-heldout only; not URL/domain/article heldout.",
+    "nd01 can return old development URLs; nd08 is source-aware targeted sensitivity, not independent generalization.",
+    "nd11 may return zero and must not be substituted.",
+    "Case/URL metrics pooled; distinct event and publisher clusters reported separately."
+  ]
+}

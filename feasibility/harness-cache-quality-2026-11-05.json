@@ -1,0 +1,593 @@
+{
+  "schema": "harness-cache-manual-quality-v1",
+  "review": "Same-author semantic answer/source review, not independent acceptance. No model judge. Technical gold48 only; news existence unknown, scored fulfillment/safe abstention separately. C=correct with supporting evidence in the saved reader corpus or valid inference; U=correct/plausible with insufficient source evidence; W=wrong; M=missing. C does NOT prove the witness survived Harness spill or that the answer cited the right section. Report factual coverage C+U separately from corpus support, named attribution/extra errors and transport failures. URL read coverage only means successful reader capture; it is not semantic citation precision or agent-visible evidence recall.",
+  "direct_rubric": "Sufficient substantive answer to the ranked query with its named constraints. A related bug report alone is background. Target body not captured in that episode remains unknown; snippets are not full-page proof. Task-level direct coverage denominator16 known-answer technical tasks, not document/whole-web recall.",
+  "direct_verdicts": {
+    "H05": {
+      "https://docs.rs/tokio/latest/tokio/sync/watch/": "positive",
+      "https://fettblog.eu/rust-tokio-guide/channels/": "positive"
+    },
+    "H06": {
+      "https://docs.python.org/3/library/contextvars.html": "positive",
+      "https://github.com/python/cpython/issues/140947": "negative"
+    },
+    "H07": {
+      "https://docs.docker.com/engine/storage/bind-mounts": "positive",
+      "https://dumbarr.com/deployment/dockge/": "negative"
+    },
+    "H08": {
+      "https://www.delightfuldev.com/grid-auto-fit-calculator/": "positive"
+    },
+    "H09": {
+      "https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-9.html": "positive",
+      "https://mimo.org/glossary/typescript/satisfies": "positive",
+      "https://marekhonzal.com/blog/immutable-by-default-typescript": "unknown",
+      "https://betterstack.com/community/guides/scaling-nodejs/satisfies-operator/": "positive",
+      "https://schpet.com/linklog/typescript-satisfies-operator": "positive"
+    },
+    "H15": {
+      "https://github.com/JohnLinotte/atomic-json-io": "positive"
+    },
+    "H19": {
+      "https://ahmet.im/blog/kubernetes-evictions/": "positive"
+    },
+    "H20": {
+      "https://www.postgresql.org/docs/current/datatype-json.html": "positive",
+      "https://jsonlint.com/json-vs-jsonb": "positive"
+    },
+    "H14": {
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness": "positive"
+    }
+  },
+  "direct_notes": {
+    "H06/https://github.com/python/cpython/issues/140947": "Task context leakage reproducer for a specific asyncio/uvicorn defect; does not give general Task default-copy/thread semantics requested by the query. Cannot treat substring contextvars/copy_context/main-thread as full relation proof.",
+    "H09/unknown": "Baseline and warm each return two direct targets without target body reads. Cold reads schpet; missing target body in another arm remains unknown even if URL is the same. Other valid H09 directs do not erase these unknowns.",
+    "H07/https://dumbarr.com/deployment/dockge/": "Practical mount configuration example, does not explain recursive r semantics or both propagation directions. Related background; new cold false direct."
+  },
+  "answers": {
+    "baseline": {
+      "H01": {
+        "facts": [],
+        "news_articles": 0,
+        "news_complete": false,
+        "safe_abstention": true,
+        "errors": []
+      },
+      "H02": {
+        "facts": [],
+        "news_articles": 0,
+        "news_complete": false,
+        "safe_abstention": true,
+        "errors": []
+      },
+      "H03": {
+        "facts": [],
+        "news_articles": 0,
+        "news_complete": false,
+        "safe_abstention": true,
+        "errors": []
+      },
+      "H04": {
+        "facts": [],
+        "news_articles": 0,
+        "news_complete": false,
+        "safe_abstention": true,
+        "errors": [],
+        "note": "Adds an unrequested exclusion of NASA as publisher; incomplete news retrieval."
+      },
+      "H05": {
+        "facts": [
+          "C",
+          "C",
+          "W"
+        ],
+        "errors": [
+          "tokio-race-without-intervening-send"
+        ],
+        "note": "changed already marks current version seen. Duplicate processing requires a new send between changed readiness and read; answer omits that condition and claims borrow alone leaves already-seen value unseen."
+      },
+      "H06": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": [],
+        "note": "Read official contextvars and asyncio-task. Wording about Context.run rollback is imprecise; current-context restoration, not deletion of saved context values."
+      },
+      "H07": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": []
+      },
+      "H08": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": []
+      },
+      "H09": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": []
+      },
+      "H10": {
+        "facts": [
+          "C",
+          "C",
+          "U"
+        ],
+        "errors": [],
+        "note": "autoupdate is correct but explicitly from prior knowledge; not in any read target body."
+      },
+      "H11": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": [],
+        "citation_issue": "Correct ETag/content-coding evidence in read RFC7232 is not cited; linked RFC9110 extraction stops before the relevant section. Quotes attributed to unobserved RFC9110 section are not verified quotations."
+      },
+      "H12": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": [],
+        "note": "OFD locks synchronize threads only if they use distinct open file descriptions; shared description is a shared lock.",
+        "qualification_gap": "Thread synchronization requires distinct open file descriptions; answer gives capability without this usage detail."
+      },
+      "H13": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": []
+      },
+      "H14": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": []
+      },
+      "H15": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": []
+      },
+      "H16": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": []
+      },
+      "H17": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": [],
+        "note": "Uses Valkey documentation and Redis secondary documentation. redis.io read failure is asserted without an actual attempt in the tool trace."
+      },
+      "H18": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": [
+          "systemd-all-signals-treated-as-failure"
+        ],
+        "note": "Table omits clean-signal exceptions to on-failure. Relevant Restart section is actually present in read man page."
+      },
+      "H19": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": []
+      },
+      "H20": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": []
+      }
+    },
+    "cold": {
+      "H01": {
+        "facts": [],
+        "errors": [],
+        "news_articles": 0,
+        "news_complete": false,
+        "safe_abstention": true
+      },
+      "H02": {
+        "facts": [],
+        "errors": [],
+        "news_articles": 0,
+        "news_complete": false,
+        "safe_abstention": true
+      },
+      "H03": {
+        "facts": [],
+        "errors": [],
+        "news_articles": 0,
+        "news_complete": false,
+        "safe_abstention": true
+      },
+      "H04": {
+        "facts": [],
+        "errors": [],
+        "news_articles": 0,
+        "news_complete": false,
+        "safe_abstention": true
+      },
+      "H05": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": []
+      },
+      "H06": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": [],
+        "note": "Blanket statement that a normal new thread begins empty ignores Python thread context configuration/free-threaded builds. Core three gold facts are correct.",
+        "qualification_gap": "Default inheritance of new threads depends on thread context/build flags in modern Python; blanket empty-context wording is incomplete."
+      },
+      "H07": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": []
+      },
+      "H08": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": []
+      },
+      "H09": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": []
+      },
+      "H10": {
+        "facts": [
+          "C",
+          "C",
+          "U"
+        ],
+        "errors": [],
+        "note": "autoupdate is correct but explicitly from prior knowledge; not in any read target body."
+      },
+      "H11": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": [],
+        "citation_issue": "Correct ETag/content-coding evidence in read RFC7232 is not cited; linked RFC9110 extraction stops before the relevant section. Quotes attributed to unobserved RFC9110 section are not verified quotations."
+      },
+      "H12": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": []
+      },
+      "H13": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": []
+      },
+      "H14": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": []
+      },
+      "H15": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": []
+      },
+      "H16": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": []
+      },
+      "H17": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": []
+      },
+      "H18": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": [],
+        "note": "Table is simplified but following quote explicitly excludes four clean signals; they are not named. Three requested core facts correct."
+      },
+      "H19": {
+        "facts": [
+          "M",
+          "M",
+          "M"
+        ],
+        "errors": [],
+        "note": "No final answer: Harness OpenRouter transport URLError. Preserved as primary failure, not silently replaced by recovery."
+      },
+      "H20": {
+        "facts": [
+          "M",
+          "M",
+          "M"
+        ],
+        "errors": [],
+        "note": "No final answer: Harness OpenRouter transport URLError. Preserved as primary failure, not silently replaced by recovery."
+      }
+    },
+    "warm": {
+      "H01": {
+        "facts": [],
+        "errors": [],
+        "news_articles": 0,
+        "news_complete": false,
+        "safe_abstention": true
+      },
+      "H02": {
+        "facts": [],
+        "errors": [],
+        "news_articles": 0,
+        "news_complete": false,
+        "safe_abstention": true
+      },
+      "H03": {
+        "facts": [],
+        "errors": [],
+        "news_articles": 0,
+        "news_complete": false,
+        "safe_abstention": true
+      },
+      "H04": {
+        "facts": [],
+        "errors": [],
+        "news_articles": 0,
+        "news_complete": false,
+        "safe_abstention": true
+      },
+      "H05": {
+        "facts": [
+          "C",
+          "C",
+          "W"
+        ],
+        "errors": [
+          "tokio-race-without-intervening-send"
+        ]
+      },
+      "H06": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": [],
+        "note": "Blanket statement that a normal new thread begins empty ignores Python thread context configuration/free-threaded builds. Core three gold facts are correct.",
+        "qualification_gap": "Default inheritance of new threads depends on thread context/build flags in modern Python; blanket empty-context wording is incomplete."
+      },
+      "H07": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": []
+      },
+      "H08": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": []
+      },
+      "H09": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": []
+      },
+      "H10": {
+        "facts": [
+          "C",
+          "C",
+          "U"
+        ],
+        "errors": [],
+        "note": "autoupdate is correct but explicitly from prior knowledge; not in any read target body."
+      },
+      "H11": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": [],
+        "citation_issue": "Correct ETag/content-coding evidence in read RFC7232 is not cited; linked RFC9110 extraction stops before the relevant section. Quotes attributed to unobserved RFC9110 section are not verified quotations."
+      },
+      "H12": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": []
+      },
+      "H13": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": [
+          "sequence-annotation-implies-runtime-immutability"
+        ],
+        "note": "Sequence[int] is an annotation/read-only interface, not runtime freezing; mutable list can remain underneath."
+      },
+      "H14": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": []
+      },
+      "H15": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": []
+      },
+      "H16": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": []
+      },
+      "H17": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": [],
+        "citation_issue": "One source link contains literal .../ rather than the URL actually read. Citation read coverage counts this as unobserved, although the proper URL is present in tool trace."
+      },
+      "H18": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": [
+          "systemd-all-signals-treated-as-failure"
+        ],
+        "note": "Table treats every signal as failure. Cold quote mentions four exceptions but does not name them or reconcile the table; warm omits them."
+      },
+      "H19": {
+        "facts": [
+          "M",
+          "M",
+          "M"
+        ],
+        "errors": [],
+        "note": "No final answer: Harness OpenRouter transport URLError. Preserved as primary failure, not silently replaced by recovery."
+      },
+      "H20": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": []
+      }
+    },
+    "recovery-cold": {
+      "H19": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": []
+      },
+      "H20": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": []
+      }
+    },
+    "recovery-warm": {
+      "H19": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": []
+      },
+      "H20": {
+        "facts": [
+          "C",
+          "C",
+          "C"
+        ],
+        "errors": []
+      }
+    }
+  }
+}

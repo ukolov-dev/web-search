@@ -1,0 +1,82 @@
+{
+  "context": {
+    "question": "По документации Rust str::split_once: что возвращается, если delimiter в строке не найден?",
+    "facets": [
+      "Что возвращает str::split_once, если разделитель не найден в строке?",
+      "Проверить по официальной документации Rust для str::split_once тип возвращаемого значения и случай отсутствия разделителя."
+    ],
+    "chunks": [
+      {
+        "document_version": "07dd00026a58f4e52756b249de7fe506ecc8fafc07a9cd1f34d91b048d268069",
+        "end": 40200,
+        "field": "text",
+        "id": "S4P1",
+        "source_id": "S4",
+        "start": 39000,
+        "text": "gerXleopard\".rsplitn(3, 'X').collect();\nassert_eq!(v, [\"leopard\", \"tiger\", \"lionX\"]);\n\nlet v: Vec<&str> = \"lion::tiger::leopard\".rsplitn(2, \"::\").collect();\nassert_eq!(v, [\"leopard\", \"lion::tiger\"]);\n\nA more complex pattern, using a closure:\n\nlet v: Vec<&str> = \"abc1defXghi\".rsplitn(2, |c| c == '1' || c == 'X').collect();\nassert_eq!(v, [\"ghi\", \"abc1def\"]);\n\n1.52.0 · Source\npub fn split_once<P>(&self, delimiter: P) -> Option<(&str, &str)>\nwhere P: Pattern,\n\nSplits the string on the first occurrence of the specified delimiter and returns prefix before delimiter and suffix after delimiter.\n\n§Examples\n\nassert_eq!(\"cfg\".split_once('='), None);\nassert_eq!(\"cfg=\".split_once('='), Some((\"cfg\", \"\")));\nassert_eq!(\"cfg=foo\".split_once('='), Some((\"cfg\", \"foo\")));\nassert_eq!(\"cfg=foo=bar\".split_once('='), Some((\"cfg\", \"foo=bar\")));\n\n1.52.0 · Source\npub fn rsplit_once<P>(&self, delimiter: P) -> Option<(&str, &str)>\nwhere P: Pattern, <P as Pattern>::Searcher<'a>: for<'a> ReverseSearcher<'a>,\n\nSplits the string on the last occurrence of the specified delimiter and returns prefix before delimiter and suffix after delimiter.\n\n§Examples\n\nassert_eq!(\"cfg\".rsplit_once('='), None);\nassert_eq!(\"cfg=\".rs"
+      },
+      {
+        "document_version": "07dd00026a58f4e52756b249de7fe506ecc8fafc07a9cd1f34d91b048d268069",
+        "end": 32200,
+        "field": "text",
+        "id": "S4P2",
+        "source_id": "S4",
+        "start": 31000,
+        "text": ", \"23\", \"59\"]);\n\nA more complex pattern, using a closure:\n\nlet v: Vec<&str> = \"abc1defXghi\".split(|c| c == '1' || c == 'X').collect();\nassert_eq!(v, [\"abc\", \"def\", \"ghi\"]);\n\nIf a string contains multiple contiguous separators, you will end up with empty strings in the output:\n\nlet x = \"||||a||b|c\".to_string();\nlet d: Vec<_> = x.split('|').collect();\n\nassert_eq!(d, &[\"\", \"\", \"\", \"\", \"a\", \"\", \"b\", \"c\"]);\n\nContiguous separators are separated by the empty string.\n\nlet x = \"(///)\".to_string();\nlet d: Vec<_> = x.split('/').collect();\n\nassert_eq!(d, &[\"(\", \"\", \"\", \")\"]);\n\nSeparators at the start or end of a string are neighbored by empty strings.\n\nlet d: Vec<_> = \"010\".split(\"0\").collect();\nassert_eq!(d, &[\"\", \"1\", \"\"]);\n\nWhen the empty string is used as a separator, it separates every character in the string, along with the beginning and end of the string.\n\nlet f: Vec<_> = \"rust\".split(\"\").collect();\nassert_eq!(f, &[\"\", \"r\", \"u\", \"s\", \"t\", \"\"]);\n\nContiguous separators can lead to possibly surprising behavior when whitespace is used as the separator. This code is correct:\n\nlet x = \"    a  b c\".to_string();\nlet d: Vec<_> = x.split(' ').collect();\n\nassert_eq!(d, &[\"\", \"\", \"\", \"\", \"a\", \"\", \""
+      },
+      {
+        "document_version": "07dd00026a58f4e52756b249de7fe506ecc8fafc07a9cd1f34d91b048d268069",
+        "end": 41200,
+        "field": "text",
+        "id": "S4P3",
+        "source_id": "S4",
+        "start": 40000,
+        "text": " the string on the last occurrence of the specified delimiter and returns prefix before delimiter and suffix after delimiter.\n\n§Examples\n\nassert_eq!(\"cfg\".rsplit_once('='), None);\nassert_eq!(\"cfg=\".rsplit_once('='), Some((\"cfg\", \"\")));\nassert_eq!(\"cfg=foo\".rsplit_once('='), Some((\"cfg\", \"foo\")));\nassert_eq!(\"cfg=foo=bar\".rsplit_once('='), Some((\"cfg=foo\", \"bar\")));\n\n1.2.0 · Source\npub fn matches<P>(&self, pat: P) -> Matches<'_, P> ⓘ\nwhere P: Pattern,\n\nReturns an iterator over the disjoint matches of a pattern within the given string slice.\n\nThe pattern can be a &str, char, a slice of chars, or a function or closure that determines if a character matches.\n\n§Iterator behavior\n\nThe returned iterator will be a DoubleEndedIterator if the pattern allows a reverse search and forward/reverse search yields the same elements. This is true for, e.g., char, but not for &str.\n\nIf the pattern allows a reverse search but its results might differ from a forward search, the rmatches method can be used.\n\n§Examples\n\nlet v: Vec<&str> = \"abcXXXabcYYYabc\".matches(\"abc\").collect();\nassert_eq!(v, [\"abc\", \"abc\", \"abc\"]);\n\nlet v: Vec<&str> = \"1abc2abc3\".matches(char::is_numeric).collect();\nassert_eq!(v, [\"1"
+      }
+    ],
+    "sources": [
+      {
+        "eligible": true,
+        "id": "S4",
+        "primary_rfc": null,
+        "publication": {
+          "date_status": "missing",
+          "kind": "unknown",
+          "published_date": null,
+          "witness_count": 0,
+          "witnesses": [],
+          "witnesses_limited": false
+        },
+        "title": "Primitive Type str Copy item path",
+        "url_preview": "https://doc.rust-lang.org/nightly/std/primitive.str.html"
+      }
+    ]
+  },
+  "draft": {
+    "claims": [
+      {
+        "evidence": [
+          {
+            "chunk_id": "S4P1",
+            "quote": "Splits the string on the first occurrence of the specified delimiter and returns prefix before delimiter and suffix after delimiter."
+          },
+          {
+            "chunk_id": "S4P1",
+            "quote": "assert_eq!(\"cfg\".split_once('='), None);"
+          }
+        ],
+        "facets": [
+          0,
+          1
+        ],
+        "kind": "fact",
+        "rationale": "",
+        "text": "str::split_once возвращает Option<(&str, &str)>: при отсутствии разделителя результат — None (пример: split_once('=') для строки без '=')."
+      }
+    ],
+    "next": {
+      "facet": 1,
+      "query": ""
+    }
+  }
+}

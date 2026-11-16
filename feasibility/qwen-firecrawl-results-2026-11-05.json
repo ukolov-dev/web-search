@@ -1,0 +1,1533 @@
+{
+  "scope": "URL-disjoint relative to previous Firecrawl12; historical source-aware component, no retrieval or initial classifier",
+  "cohort_complete": true,
+  "pages": 12,
+  "positive_pages": 8,
+  "negative_background_pages": 4,
+  "gold_sha256": "66945d57545425368c536cd5f3cc08368467cf1d5eb7b80eda0fd47481864855",
+  "arms": {
+    "baseline": {
+      "quality": {
+        "tp_ids": [
+          "P01",
+          "P02",
+          "P04",
+          "P05",
+          "P07",
+          "P08",
+          "P11"
+        ],
+        "fn_ids": [
+          "P10"
+        ],
+        "fp_ids": [],
+        "unknown_direct_ids": [],
+        "direct_recall": 0.875
+      },
+      "reranked_pages": 8,
+      "body_witnesses_present": 21,
+      "body_witnesses_total": 21,
+      "selected_witnesses_retained": 12,
+      "selected_witnesses_eligible_total": 16,
+      "positive_selected_witnesses_retained": 10,
+      "positive_selected_witnesses_eligible_total": 14,
+      "positive_witnesses_total": 16,
+      "model_calls": 8,
+      "qwen_calls": 8,
+      "qwen_pairs": 57,
+      "verification_stage_latency": {
+        "n": 4,
+        "min_ms": 7351.0,
+        "p50_ms": 11850.0,
+        "p95_ms": 17479.0,
+        "max_ms": 17479.0
+      },
+      "qwen_call_latency": {
+        "n": 8,
+        "min_ms": 108.0,
+        "p50_ms": 314.5,
+        "p95_ms": 3150.0,
+        "max_ms": 3150.0
+      },
+      "generation_call_latency": {
+        "n": 8,
+        "min_ms": 2123.0,
+        "p50_ms": 5014.0,
+        "p95_ms": 9185.0,
+        "max_ms": 9185.0
+      }
+    },
+    "fixed": {
+      "quality": {
+        "tp_ids": [
+          "P01",
+          "P02",
+          "P04",
+          "P05",
+          "P07",
+          "P08",
+          "P11"
+        ],
+        "fn_ids": [
+          "P10"
+        ],
+        "fp_ids": [],
+        "unknown_direct_ids": [],
+        "direct_recall": 0.875
+      },
+      "reranked_pages": 8,
+      "body_witnesses_present": 21,
+      "body_witnesses_total": 21,
+      "selected_witnesses_retained": 14,
+      "selected_witnesses_eligible_total": 16,
+      "positive_selected_witnesses_retained": 12,
+      "positive_selected_witnesses_eligible_total": 14,
+      "positive_witnesses_total": 16,
+      "model_calls": 8,
+      "qwen_calls": 8,
+      "qwen_pairs": 57,
+      "verification_stage_latency": {
+        "n": 4,
+        "min_ms": 7056.0,
+        "p50_ms": 9492.0,
+        "p95_ms": 30193.0,
+        "max_ms": 30193.0
+      },
+      "qwen_call_latency": {
+        "n": 8,
+        "min_ms": 102.0,
+        "p50_ms": 252.5,
+        "p95_ms": 901.0,
+        "max_ms": 901.0
+      },
+      "generation_call_latency": {
+        "n": 8,
+        "min_ms": 1917.0,
+        "p50_ms": 4110.5,
+        "p95_ms": 25431.0,
+        "max_ms": 25431.0
+      }
+    }
+  },
+  "per_group": {
+    "Q01": {
+      "baseline": {
+        "tp_ids": [
+          "P01",
+          "P02"
+        ],
+        "fn_ids": [],
+        "fp_ids": [],
+        "unknown_direct_ids": [],
+        "direct_recall": 1.0,
+        "direct_ids": [
+          "P01",
+          "P02"
+        ],
+        "model_calls": 2,
+        "qwen_calls": 2,
+        "qwen_pairs": 9,
+        "verification_stage_ms": 17479,
+        "qwen_elapsed_ms": [
+          3150,
+          209
+        ],
+        "generation_elapsed_ms": [
+          4917,
+          9185
+        ]
+      },
+      "fixed": {
+        "tp_ids": [
+          "P01",
+          "P02"
+        ],
+        "fn_ids": [],
+        "fp_ids": [],
+        "unknown_direct_ids": [],
+        "direct_recall": 1.0,
+        "direct_ids": [
+          "P01",
+          "P02"
+        ],
+        "model_calls": 2,
+        "qwen_calls": 2,
+        "qwen_pairs": 9,
+        "verification_stage_ms": 8710,
+        "qwen_elapsed_ms": [
+          249,
+          169
+        ],
+        "generation_elapsed_ms": [
+          3091,
+          5180
+        ]
+      }
+    },
+    "Q02": {
+      "baseline": {
+        "tp_ids": [
+          "P04",
+          "P05"
+        ],
+        "fn_ids": [],
+        "fp_ids": [],
+        "unknown_direct_ids": [],
+        "direct_recall": 1.0,
+        "direct_ids": [
+          "P04",
+          "P05"
+        ],
+        "model_calls": 2,
+        "qwen_calls": 3,
+        "qwen_pairs": 36,
+        "verification_stage_ms": 13774,
+        "qwen_elapsed_ms": [
+          198,
+          936,
+          420
+        ],
+        "generation_elapsed_ms": [
+          4289,
+          7893
+        ]
+      },
+      "fixed": {
+        "tp_ids": [
+          "P04",
+          "P05"
+        ],
+        "fn_ids": [],
+        "fp_ids": [],
+        "unknown_direct_ids": [],
+        "direct_recall": 1.0,
+        "direct_ids": [
+          "P04",
+          "P05"
+        ],
+        "model_calls": 2,
+        "qwen_calls": 3,
+        "qwen_pairs": 36,
+        "verification_stage_ms": 30193,
+        "qwen_elapsed_ms": [
+          256,
+          901,
+          372
+        ],
+        "generation_elapsed_ms": [
+          3190,
+          25431
+        ]
+      }
+    },
+    "Q03": {
+      "baseline": {
+        "tp_ids": [
+          "P07",
+          "P08"
+        ],
+        "fn_ids": [],
+        "fp_ids": [],
+        "unknown_direct_ids": [],
+        "direct_recall": 1.0,
+        "direct_ids": [
+          "P07",
+          "P08"
+        ],
+        "model_calls": 2,
+        "qwen_calls": 2,
+        "qwen_pairs": 10,
+        "verification_stage_ms": 9926,
+        "qwen_elapsed_ms": [
+          815,
+          169
+        ],
+        "generation_elapsed_ms": [
+          2621,
+          6302
+        ]
+      },
+      "fixed": {
+        "tp_ids": [
+          "P07",
+          "P08"
+        ],
+        "fn_ids": [],
+        "fp_ids": [],
+        "unknown_direct_ids": [],
+        "direct_recall": 1.0,
+        "direct_ids": [
+          "P07",
+          "P08"
+        ],
+        "model_calls": 2,
+        "qwen_calls": 2,
+        "qwen_pairs": 10,
+        "verification_stage_ms": 10274,
+        "qwen_elapsed_ms": [
+          260,
+          180
+        ],
+        "generation_elapsed_ms": [
+          1952,
+          7864
+        ]
+      }
+    },
+    "Q04": {
+      "baseline": {
+        "tp_ids": [
+          "P11"
+        ],
+        "fn_ids": [
+          "P10"
+        ],
+        "fp_ids": [],
+        "unknown_direct_ids": [],
+        "direct_recall": 0.5,
+        "direct_ids": [
+          "P11"
+        ],
+        "model_calls": 2,
+        "qwen_calls": 1,
+        "qwen_pairs": 2,
+        "verification_stage_ms": 7351,
+        "qwen_elapsed_ms": [
+          108
+        ],
+        "generation_elapsed_ms": [
+          2123,
+          5111
+        ]
+      },
+      "fixed": {
+        "tp_ids": [
+          "P11"
+        ],
+        "fn_ids": [
+          "P10"
+        ],
+        "fp_ids": [],
+        "unknown_direct_ids": [],
+        "direct_recall": 0.5,
+        "direct_ids": [
+          "P11"
+        ],
+        "model_calls": 2,
+        "qwen_calls": 1,
+        "qwen_pairs": 2,
+        "verification_stage_ms": 7056,
+        "qwen_elapsed_ms": [
+          102
+        ],
+        "generation_elapsed_ms": [
+          1917,
+          5031
+        ]
+      }
+    }
+  },
+  "per_page": [
+    {
+      "page_id": "P01",
+      "group": "Q01",
+      "url": "https://59.ru/text/gorod/2026/11/03/76741257/",
+      "grade": 2,
+      "body_chars": 3504,
+      "witnesses": [
+        "В Орджоникидзевском районе Перми продолжают благоустраивать сквер на улице Трясолобова.",
+        "Объект готов на 70%."
+      ],
+      "body_witnesses": [
+        true,
+        true
+      ],
+      "date_applicable": true,
+      "expected_date": "2026-11-03",
+      "parsed_date": "2026-11-03",
+      "own_date_preserved": true,
+      "arms": {
+        "baseline": {
+          "direct": true,
+          "date_check": {
+            "eligible": true,
+            "published_date": "2026-11-03",
+            "reason": "verified_publication_date",
+            "status": "verified",
+            "window": {
+              "as_of": "2026-11-03",
+              "as_of_timestamp": "2026-11-03T12:48:44.707451+00:00",
+              "basis": "last_3_calendar_days",
+              "end": "2026-11-03",
+              "start": "2026-11-01",
+              "status": "valid",
+              "timezone": "Europe/Moscow"
+            }
+          },
+          "reranked": true,
+          "selector": "query-feature-cover-v2-operation-context",
+          "selected_ranges": [
+            [
+              1849,
+              3992
+            ],
+            [
+              0,
+              2213
+            ],
+            [
+              3633,
+              5817
+            ]
+          ],
+          "selected_witnesses": [
+            true,
+            true
+          ],
+          "check_statuses": [
+            "supported",
+            "missing",
+            "missing",
+            "missing"
+          ],
+          "audit_supported": true
+        },
+        "fixed": {
+          "direct": true,
+          "date_check": {
+            "eligible": true,
+            "published_date": "2026-11-03",
+            "reason": "verified_publication_date",
+            "status": "verified",
+            "window": {
+              "as_of": "2026-11-03",
+              "as_of_timestamp": "2026-11-03T12:48:44.707451+00:00",
+              "basis": "last_3_calendar_days",
+              "end": "2026-11-03",
+              "start": "2026-11-01",
+              "status": "valid",
+              "timezone": "Europe/Moscow"
+            }
+          },
+          "reranked": true,
+          "selector": "query-feature-cover-v3-news-lead",
+          "selected_ranges": [
+            [
+              1849,
+              3992
+            ],
+            [
+              0,
+              2213
+            ],
+            [
+              3633,
+              5817
+            ]
+          ],
+          "selected_witnesses": [
+            true,
+            true
+          ],
+          "check_statuses": [
+            "supported",
+            "missing",
+            "missing",
+            "missing"
+          ],
+          "audit_supported": true
+        }
+      },
+      "qwen_score_vectors_identical": true
+    },
+    {
+      "page_id": "P02",
+      "group": "Q01",
+      "url": "https://59.ru/text/criminal/2026/11/03/76741420/",
+      "grade": 2,
+      "body_chars": 4797,
+      "witnesses": [
+        "В Перми суд приговорил мошенницу к пяти годам колонии.",
+        "Всего за такие услуги 470 пермяков заплатили больше 41 миллиона рублей."
+      ],
+      "body_witnesses": [
+        true,
+        true
+      ],
+      "date_applicable": true,
+      "expected_date": "2026-11-03",
+      "parsed_date": "2026-11-03",
+      "own_date_preserved": true,
+      "arms": {
+        "baseline": {
+          "direct": true,
+          "date_check": {
+            "eligible": true,
+            "published_date": "2026-11-03",
+            "reason": "verified_publication_date",
+            "status": "verified",
+            "window": {
+              "as_of": "2026-11-03",
+              "as_of_timestamp": "2026-11-03T12:48:44.707451+00:00",
+              "basis": "last_3_calendar_days",
+              "end": "2026-11-03",
+              "start": "2026-11-01",
+              "status": "valid",
+              "timezone": "Europe/Moscow"
+            }
+          },
+          "reranked": true,
+          "selector": "query-feature-cover-v2-operation-context",
+          "selected_ranges": [
+            [
+              5421,
+              7580
+            ],
+            [
+              3634,
+              5768
+            ],
+            [
+              1825,
+              3995
+            ]
+          ],
+          "selected_witnesses": [
+            false,
+            true
+          ],
+          "check_statuses": [
+            "supported",
+            "missing",
+            "missing",
+            "missing"
+          ],
+          "audit_supported": true
+        },
+        "fixed": {
+          "direct": true,
+          "date_check": {
+            "eligible": true,
+            "published_date": "2026-11-03",
+            "reason": "verified_publication_date",
+            "status": "verified",
+            "window": {
+              "as_of": "2026-11-03",
+              "as_of_timestamp": "2026-11-03T12:48:44.707451+00:00",
+              "basis": "last_3_calendar_days",
+              "end": "2026-11-03",
+              "start": "2026-11-01",
+              "status": "valid",
+              "timezone": "Europe/Moscow"
+            }
+          },
+          "reranked": true,
+          "selector": "query-feature-cover-v3-news-lead",
+          "selected_ranges": [
+            [
+              5421,
+              7580
+            ],
+            [
+              3634,
+              5768
+            ],
+            [
+              0,
+              2183
+            ]
+          ],
+          "selected_witnesses": [
+            true,
+            true
+          ],
+          "check_statuses": [
+            "supported",
+            "missing",
+            "missing",
+            "missing"
+          ],
+          "audit_supported": true
+        }
+      },
+      "qwen_score_vectors_identical": true
+    },
+    {
+      "page_id": "P03",
+      "group": "Q01",
+      "url": "https://59.ru/text/longread/2026/05/21/76426099/",
+      "grade": 0,
+      "body_chars": 5640,
+      "witnesses": [
+        "В 2026 году, объявленном в Перми Годом промышленности"
+      ],
+      "body_witnesses": [
+        true
+      ],
+      "date_applicable": true,
+      "expected_date": "2026-05-21",
+      "parsed_date": null,
+      "own_date_preserved": false,
+      "arms": {
+        "baseline": {
+          "direct": false,
+          "date_check": {
+            "eligible": false,
+            "published_date": null,
+            "reason": "not_article",
+            "status": "rejected",
+            "window": {
+              "as_of": "2026-11-03",
+              "as_of_timestamp": "2026-11-03T12:48:44.707451+00:00",
+              "basis": "last_3_calendar_days",
+              "end": "2026-11-03",
+              "start": "2026-11-01",
+              "status": "valid",
+              "timezone": "Europe/Moscow"
+            }
+          },
+          "reranked": false,
+          "selector": null,
+          "selected_ranges": [],
+          "selected_witnesses": [
+            false
+          ],
+          "check_statuses": [],
+          "audit_supported": null
+        },
+        "fixed": {
+          "direct": false,
+          "date_check": {
+            "eligible": false,
+            "published_date": null,
+            "reason": "not_article",
+            "status": "rejected",
+            "window": {
+              "as_of": "2026-11-03",
+              "as_of_timestamp": "2026-11-03T12:48:44.707451+00:00",
+              "basis": "last_3_calendar_days",
+              "end": "2026-11-03",
+              "start": "2026-11-01",
+              "status": "valid",
+              "timezone": "Europe/Moscow"
+            }
+          },
+          "reranked": false,
+          "selector": null,
+          "selected_ranges": [],
+          "selected_witnesses": [
+            false
+          ],
+          "check_statuses": [],
+          "audit_supported": null
+        }
+      },
+      "qwen_score_vectors_identical": null
+    },
+    {
+      "page_id": "P04",
+      "group": "Q02",
+      "url": "https://ufa1.ru/text/business/2026/11/03/76740975/",
+      "grade": 2,
+      "body_chars": 4470,
+      "witnesses": [
+        "Торговцы очередного «народного рынка» в Уфе жалуются на его закрытие.",
+        "Оснований для отмены предписаний нет"
+      ],
+      "body_witnesses": [
+        true,
+        true
+      ],
+      "date_applicable": true,
+      "expected_date": "2026-11-03",
+      "parsed_date": "2026-11-03",
+      "own_date_preserved": true,
+      "arms": {
+        "baseline": {
+          "direct": true,
+          "date_check": {
+            "eligible": true,
+            "published_date": "2026-11-03",
+            "reason": "verified_publication_date",
+            "status": "verified",
+            "window": {
+              "as_of": "2026-11-03",
+              "as_of_timestamp": "2026-11-03T12:48:44.707451+00:00",
+              "basis": "last_3_calendar_days",
+              "end": "2026-11-03",
+              "start": "2026-11-01",
+              "status": "valid",
+              "timezone": "Europe/Moscow"
+            }
+          },
+          "reranked": true,
+          "selector": "query-feature-cover-v2-operation-context",
+          "selected_ranges": [
+            [
+              0,
+              2174
+            ],
+            [
+              3638,
+              5706
+            ],
+            [
+              5367,
+              7522
+            ]
+          ],
+          "selected_witnesses": [
+            true,
+            false
+          ],
+          "check_statuses": [
+            "supported",
+            "supported",
+            "missing",
+            "missing"
+          ],
+          "audit_supported": true
+        },
+        "fixed": {
+          "direct": true,
+          "date_check": {
+            "eligible": true,
+            "published_date": "2026-11-03",
+            "reason": "verified_publication_date",
+            "status": "verified",
+            "window": {
+              "as_of": "2026-11-03",
+              "as_of_timestamp": "2026-11-03T12:48:44.707451+00:00",
+              "basis": "last_3_calendar_days",
+              "end": "2026-11-03",
+              "start": "2026-11-01",
+              "status": "valid",
+              "timezone": "Europe/Moscow"
+            }
+          },
+          "reranked": true,
+          "selector": "query-feature-cover-v3-news-lead",
+          "selected_ranges": [
+            [
+              0,
+              2174
+            ],
+            [
+              3638,
+              5706
+            ],
+            [
+              5367,
+              7522
+            ]
+          ],
+          "selected_witnesses": [
+            true,
+            false
+          ],
+          "check_statuses": [
+            "supported",
+            "supported",
+            "missing",
+            "missing"
+          ],
+          "audit_supported": true
+        }
+      },
+      "qwen_score_vectors_identical": true
+    },
+    {
+      "page_id": "P05",
+      "group": "Q02",
+      "url": "https://ufa1.ru/text/gorod/2026/11/02/76720417/",
+      "grade": 2,
+      "body_chars": 19192,
+      "witnesses": [
+        "Следующая часть нашего обзора о депутатах Горсовета",
+        "Сейчас он заместитель председателя Горсовета Уфы"
+      ],
+      "body_witnesses": [
+        true,
+        true
+      ],
+      "date_applicable": true,
+      "expected_date": "2026-11-02",
+      "parsed_date": "2026-11-02",
+      "own_date_preserved": true,
+      "arms": {
+        "baseline": {
+          "direct": true,
+          "date_check": {
+            "eligible": true,
+            "published_date": "2026-11-02",
+            "reason": "verified_publication_date",
+            "status": "verified",
+            "window": {
+              "as_of": "2026-11-03",
+              "as_of_timestamp": "2026-11-03T12:48:44.707451+00:00",
+              "basis": "last_3_calendar_days",
+              "end": "2026-11-03",
+              "start": "2026-11-01",
+              "status": "valid",
+              "timezone": "Europe/Moscow"
+            }
+          },
+          "reranked": true,
+          "selector": "query-feature-cover-v2-operation-context",
+          "selected_ranges": [
+            [
+              25203,
+              27353
+            ],
+            [
+              32366,
+              34213
+            ],
+            [
+              9051,
+              11226
+            ]
+          ],
+          "selected_witnesses": [
+            false,
+            false
+          ],
+          "check_statuses": [
+            "supported",
+            "supported",
+            "missing",
+            "missing"
+          ],
+          "audit_supported": true
+        },
+        "fixed": {
+          "direct": true,
+          "date_check": {
+            "eligible": true,
+            "published_date": "2026-11-02",
+            "reason": "verified_publication_date",
+            "status": "verified",
+            "window": {
+              "as_of": "2026-11-03",
+              "as_of_timestamp": "2026-11-03T12:48:44.707451+00:00",
+              "basis": "last_3_calendar_days",
+              "end": "2026-11-03",
+              "start": "2026-11-01",
+              "status": "valid",
+              "timezone": "Europe/Moscow"
+            }
+          },
+          "reranked": true,
+          "selector": "query-feature-cover-v3-news-lead",
+          "selected_ranges": [
+            [
+              25203,
+              27353
+            ],
+            [
+              32366,
+              34213
+            ],
+            [
+              0,
+              2190
+            ]
+          ],
+          "selected_witnesses": [
+            true,
+            false
+          ],
+          "check_statuses": [
+            "supported",
+            "supported",
+            "missing",
+            "missing"
+          ],
+          "audit_supported": true
+        }
+      },
+      "qwen_score_vectors_identical": true
+    },
+    {
+      "page_id": "P06",
+      "group": "Q02",
+      "url": "https://ufa1.ru/text/world/2026/11/02/76740698/",
+      "grade": 0,
+      "body_chars": 11428,
+      "witnesses": [
+        "Сегодня подводим итоги 2 ноября.",
+        "Министерство финансов подготовило законопроект"
+      ],
+      "body_witnesses": [
+        true,
+        true
+      ],
+      "date_applicable": true,
+      "expected_date": "2026-11-02",
+      "parsed_date": "2026-11-02",
+      "own_date_preserved": true,
+      "arms": {
+        "baseline": {
+          "direct": false,
+          "date_check": {
+            "eligible": true,
+            "published_date": "2026-11-02",
+            "reason": "verified_publication_date",
+            "status": "verified",
+            "window": {
+              "as_of": "2026-11-03",
+              "as_of_timestamp": "2026-11-03T12:48:44.707451+00:00",
+              "basis": "last_3_calendar_days",
+              "end": "2026-11-03",
+              "start": "2026-11-01",
+              "status": "valid",
+              "timezone": "Europe/Moscow"
+            }
+          },
+          "reranked": true,
+          "selector": "query-feature-cover-v2-operation-context",
+          "selected_ranges": [
+            [
+              0,
+              2164
+            ],
+            [
+              18246,
+              20422
+            ],
+            [
+              16493,
+              18611
+            ]
+          ],
+          "selected_witnesses": [
+            true,
+            true
+          ],
+          "check_statuses": [
+            "missing",
+            "missing",
+            "missing",
+            "missing"
+          ],
+          "audit_supported": null
+        },
+        "fixed": {
+          "direct": false,
+          "date_check": {
+            "eligible": true,
+            "published_date": "2026-11-02",
+            "reason": "verified_publication_date",
+            "status": "verified",
+            "window": {
+              "as_of": "2026-11-03",
+              "as_of_timestamp": "2026-11-03T12:48:44.707451+00:00",
+              "basis": "last_3_calendar_days",
+              "end": "2026-11-03",
+              "start": "2026-11-01",
+              "status": "valid",
+              "timezone": "Europe/Moscow"
+            }
+          },
+          "reranked": true,
+          "selector": "query-feature-cover-v3-news-lead",
+          "selected_ranges": [
+            [
+              0,
+              2164
+            ],
+            [
+              18246,
+              20422
+            ],
+            [
+              16493,
+              18611
+            ]
+          ],
+          "selected_witnesses": [
+            true,
+            true
+          ],
+          "check_statuses": [
+            "missing",
+            "missing",
+            "missing",
+            "missing"
+          ],
+          "audit_supported": null
+        }
+      },
+      "qwen_score_vectors_identical": true
+    },
+    {
+      "page_id": "P07",
+      "group": "Q03",
+      "url": "https://www.e1.ru/text/incidents/2026/11/03/76741416/",
+      "grade": 2,
+      "body_chars": 4744,
+      "witnesses": [
+        "Появилось видео момента утреннего ДТП, произошедшего у кольца на улице Малышева.",
+        "К счастью, в аварии никто не пострадал."
+      ],
+      "body_witnesses": [
+        true,
+        true
+      ],
+      "date_applicable": true,
+      "expected_date": "2026-11-03",
+      "parsed_date": "2026-11-03",
+      "own_date_preserved": true,
+      "arms": {
+        "baseline": {
+          "direct": true,
+          "date_check": {
+            "eligible": true,
+            "published_date": "2026-11-03",
+            "reason": "verified_publication_date",
+            "status": "verified",
+            "window": {
+              "as_of": "2026-11-03",
+              "as_of_timestamp": "2026-11-03T12:48:44.707451+00:00",
+              "basis": "last_3_calendar_days",
+              "end": "2026-11-03",
+              "start": "2026-11-01",
+              "status": "valid",
+              "timezone": "Europe/Moscow"
+            }
+          },
+          "reranked": true,
+          "selector": "query-feature-cover-v2-operation-context",
+          "selected_ranges": [
+            [
+              5321,
+              7501
+            ],
+            [
+              3567,
+              5687
+            ],
+            [
+              0,
+              2149
+            ]
+          ],
+          "selected_witnesses": [
+            true,
+            true
+          ],
+          "check_statuses": [
+            "supported",
+            "supported",
+            "missing",
+            "missing"
+          ],
+          "audit_supported": true
+        },
+        "fixed": {
+          "direct": true,
+          "date_check": {
+            "eligible": true,
+            "published_date": "2026-11-03",
+            "reason": "verified_publication_date",
+            "status": "verified",
+            "window": {
+              "as_of": "2026-11-03",
+              "as_of_timestamp": "2026-11-03T12:48:44.707451+00:00",
+              "basis": "last_3_calendar_days",
+              "end": "2026-11-03",
+              "start": "2026-11-01",
+              "status": "valid",
+              "timezone": "Europe/Moscow"
+            }
+          },
+          "reranked": true,
+          "selector": "query-feature-cover-v3-news-lead",
+          "selected_ranges": [
+            [
+              5321,
+              7501
+            ],
+            [
+              3567,
+              5687
+            ],
+            [
+              0,
+              2149
+            ]
+          ],
+          "selected_witnesses": [
+            true,
+            true
+          ],
+          "check_statuses": [
+            "supported",
+            "supported",
+            "missing",
+            "missing"
+          ],
+          "audit_supported": true
+        }
+      },
+      "qwen_score_vectors_identical": true
+    },
+    {
+      "page_id": "P08",
+      "group": "Q03",
+      "url": "https://www.e1.ru/text/realty/2026/11/03/76741060/",
+      "grade": 2,
+      "body_chars": 4731,
+      "witnesses": [
+        "Госкорпорация «Дом.рф» выставила на торги еще один памятник в Екатеринбурге.",
+        "Аукцион за него начнется с начальной цены в 15 275 000 рублей."
+      ],
+      "body_witnesses": [
+        true,
+        true
+      ],
+      "date_applicable": true,
+      "expected_date": "2026-11-03",
+      "parsed_date": "2026-11-03",
+      "own_date_preserved": true,
+      "arms": {
+        "baseline": {
+          "direct": true,
+          "date_check": {
+            "eligible": true,
+            "published_date": "2026-11-03",
+            "reason": "verified_publication_date",
+            "status": "verified",
+            "window": {
+              "as_of": "2026-11-03",
+              "as_of_timestamp": "2026-11-03T12:48:44.707451+00:00",
+              "basis": "last_3_calendar_days",
+              "end": "2026-11-03",
+              "start": "2026-11-01",
+              "status": "valid",
+              "timezone": "Europe/Moscow"
+            }
+          },
+          "reranked": true,
+          "selector": "query-feature-cover-v2-operation-context",
+          "selected_ranges": [
+            [
+              3611,
+              5721
+            ],
+            [
+              0,
+              2184
+            ],
+            [
+              1812,
+              3961
+            ]
+          ],
+          "selected_witnesses": [
+            true,
+            true
+          ],
+          "check_statuses": [
+            "supported",
+            "supported",
+            "missing",
+            "missing"
+          ],
+          "audit_supported": true
+        },
+        "fixed": {
+          "direct": true,
+          "date_check": {
+            "eligible": true,
+            "published_date": "2026-11-03",
+            "reason": "verified_publication_date",
+            "status": "verified",
+            "window": {
+              "as_of": "2026-11-03",
+              "as_of_timestamp": "2026-11-03T12:48:44.707451+00:00",
+              "basis": "last_3_calendar_days",
+              "end": "2026-11-03",
+              "start": "2026-11-01",
+              "status": "valid",
+              "timezone": "Europe/Moscow"
+            }
+          },
+          "reranked": true,
+          "selector": "query-feature-cover-v3-news-lead",
+          "selected_ranges": [
+            [
+              3611,
+              5721
+            ],
+            [
+              0,
+              2184
+            ],
+            [
+              1812,
+              3961
+            ]
+          ],
+          "selected_witnesses": [
+            true,
+            true
+          ],
+          "check_statuses": [
+            "supported",
+            "supported",
+            "missing",
+            "missing"
+          ],
+          "audit_supported": true
+        }
+      },
+      "qwen_score_vectors_identical": true
+    },
+    {
+      "page_id": "P09",
+      "group": "Q03",
+      "url": "https://www.e1.ru/",
+      "grade": 1,
+      "body_chars": 3954,
+      "witnesses": [
+        "В Екатеринбурге скандальный стример прокатил полуголую пассажирку"
+      ],
+      "body_witnesses": [
+        true
+      ],
+      "date_applicable": false,
+      "expected_date": null,
+      "parsed_date": null,
+      "own_date_preserved": null,
+      "arms": {
+        "baseline": {
+          "direct": false,
+          "date_check": {
+            "eligible": false,
+            "published_date": null,
+            "reason": "not_article",
+            "status": "rejected",
+            "window": {
+              "as_of": "2026-11-03",
+              "as_of_timestamp": "2026-11-03T12:48:44.707451+00:00",
+              "basis": "last_3_calendar_days",
+              "end": "2026-11-03",
+              "start": "2026-11-01",
+              "status": "valid",
+              "timezone": "Europe/Moscow"
+            }
+          },
+          "reranked": false,
+          "selector": null,
+          "selected_ranges": [],
+          "selected_witnesses": [
+            false
+          ],
+          "check_statuses": [],
+          "audit_supported": null
+        },
+        "fixed": {
+          "direct": false,
+          "date_check": {
+            "eligible": false,
+            "published_date": null,
+            "reason": "not_article",
+            "status": "rejected",
+            "window": {
+              "as_of": "2026-11-03",
+              "as_of_timestamp": "2026-11-03T12:48:44.707451+00:00",
+              "basis": "last_3_calendar_days",
+              "end": "2026-11-03",
+              "start": "2026-11-01",
+              "status": "valid",
+              "timezone": "Europe/Moscow"
+            }
+          },
+          "reranked": false,
+          "selector": null,
+          "selected_ranges": [],
+          "selected_witnesses": [
+            false
+          ],
+          "check_statuses": [],
+          "audit_supported": null
+        }
+      },
+      "qwen_score_vectors_identical": null
+    },
+    {
+      "page_id": "P10",
+      "group": "Q04",
+      "url": "https://superomsk.ru/news/167842-v_omske_rastet_chislo_ofitsialnykh_teatrov/",
+      "grade": 2,
+      "body_chars": 3734,
+      "witnesses": [
+        "Основание юрлица омского театра оказалось с нюансом.",
+        "театр обрел в год, когда Омск стал культурной столицей страны."
+      ],
+      "body_witnesses": [
+        true,
+        true
+      ],
+      "date_applicable": true,
+      "expected_date": "2026-11-03",
+      "parsed_date": "2026-11-03",
+      "own_date_preserved": true,
+      "arms": {
+        "baseline": {
+          "direct": false,
+          "date_check": {
+            "eligible": false,
+            "published_date": "2026-11-03",
+            "reason": "future_publication",
+            "status": "rejected",
+            "window": {
+              "as_of": "2026-11-03",
+              "as_of_timestamp": "2026-11-03T12:48:44.707451+00:00",
+              "basis": "last_3_calendar_days",
+              "end": "2026-11-03",
+              "start": "2026-11-01",
+              "status": "valid",
+              "timezone": "Europe/Moscow"
+            }
+          },
+          "reranked": false,
+          "selector": null,
+          "selected_ranges": [],
+          "selected_witnesses": [
+            false,
+            false
+          ],
+          "check_statuses": [],
+          "audit_supported": null
+        },
+        "fixed": {
+          "direct": false,
+          "date_check": {
+            "eligible": false,
+            "published_date": "2026-11-03",
+            "reason": "future_publication",
+            "status": "rejected",
+            "window": {
+              "as_of": "2026-11-03",
+              "as_of_timestamp": "2026-11-03T12:48:44.707451+00:00",
+              "basis": "last_3_calendar_days",
+              "end": "2026-11-03",
+              "start": "2026-11-01",
+              "status": "valid",
+              "timezone": "Europe/Moscow"
+            }
+          },
+          "reranked": false,
+          "selector": null,
+          "selected_ranges": [],
+          "selected_witnesses": [
+            false,
+            false
+          ],
+          "check_statuses": [],
+          "audit_supported": null
+        }
+      },
+      "qwen_score_vectors_identical": null
+    },
+    {
+      "page_id": "P11",
+      "group": "Q04",
+      "url": "https://superomsk.ru/news/167820-nazvany_daty_reisov_iz_omska_v_krasnodar_na_zimnie_kanikuly/",
+      "grade": 2,
+      "body_chars": 2087,
+      "witnesses": [
+        "Дополнительные рейсы будут выполняться по понедельникам и вторникам.",
+        "По вторникам – 22 и 29 декабря, 5 и 12 января планируются рейсы из Омска в Норильск."
+      ],
+      "body_witnesses": [
+        true,
+        true
+      ],
+      "date_applicable": true,
+      "expected_date": "2026-11-03",
+      "parsed_date": "2026-11-03",
+      "own_date_preserved": true,
+      "arms": {
+        "baseline": {
+          "direct": true,
+          "date_check": {
+            "eligible": true,
+            "published_date": "2026-11-03",
+            "reason": "verified_publication_date",
+            "status": "verified",
+            "window": {
+              "as_of": "2026-11-03",
+              "as_of_timestamp": "2026-11-03T12:48:44.707451+00:00",
+              "basis": "last_3_calendar_days",
+              "end": "2026-11-03",
+              "start": "2026-11-01",
+              "status": "valid",
+              "timezone": "Europe/Moscow"
+            }
+          },
+          "reranked": true,
+          "selector": "query-feature-cover-v2-operation-context",
+          "selected_ranges": [
+            [
+              1690,
+              3573
+            ],
+            [
+              0,
+              2058
+            ]
+          ],
+          "selected_witnesses": [
+            true,
+            true
+          ],
+          "check_statuses": [
+            "supported",
+            "supported",
+            "missing",
+            "missing"
+          ],
+          "audit_supported": true
+        },
+        "fixed": {
+          "direct": true,
+          "date_check": {
+            "eligible": true,
+            "published_date": "2026-11-03",
+            "reason": "verified_publication_date",
+            "status": "verified",
+            "window": {
+              "as_of": "2026-11-03",
+              "as_of_timestamp": "2026-11-03T12:48:44.707451+00:00",
+              "basis": "last_3_calendar_days",
+              "end": "2026-11-03",
+              "start": "2026-11-01",
+              "status": "valid",
+              "timezone": "Europe/Moscow"
+            }
+          },
+          "reranked": true,
+          "selector": "query-feature-cover-v3-news-lead",
+          "selected_ranges": [
+            [
+              1690,
+              3573
+            ],
+            [
+              0,
+              2058
+            ]
+          ],
+          "selected_witnesses": [
+            true,
+            true
+          ],
+          "check_statuses": [
+            "supported",
+            "supported",
+            "missing",
+            "missing"
+          ],
+          "audit_supported": true
+        }
+      },
+      "qwen_score_vectors_identical": true
+    },
+    {
+      "page_id": "P12",
+      "group": "Q04",
+      "url": "https://www1.ru/articles/2026/11/03/ii-razognal-rovery-iandeksa-na-43-kak-ustroeny-roboty-dostavshhiki-i-kto-reguliruet-ix-dvizenie.html",
+      "grade": 0,
+      "body_chars": 9403,
+      "witnesses": [
+        "роверы «Яндекса» увеличили среднюю скорость с 3,5 до 5 км/ч"
+      ],
+      "body_witnesses": [
+        true
+      ],
+      "date_applicable": true,
+      "expected_date": "2026-11-03",
+      "parsed_date": "2026-11-03",
+      "own_date_preserved": true,
+      "arms": {
+        "baseline": {
+          "direct": false,
+          "date_check": {
+            "eligible": false,
+            "published_date": "2026-11-03",
+            "reason": "future_publication",
+            "status": "rejected",
+            "window": {
+              "as_of": "2026-11-03",
+              "as_of_timestamp": "2026-11-03T12:48:44.707451+00:00",
+              "basis": "last_3_calendar_days",
+              "end": "2026-11-03",
+              "start": "2026-11-01",
+              "status": "valid",
+              "timezone": "Europe/Moscow"
+            }
+          },
+          "reranked": false,
+          "selector": null,
+          "selected_ranges": [],
+          "selected_witnesses": [
+            false
+          ],
+          "check_statuses": [],
+          "audit_supported": null
+        },
+        "fixed": {
+          "direct": false,
+          "date_check": {
+            "eligible": false,
+            "published_date": "2026-11-03",
+            "reason": "future_publication",
+            "status": "rejected",
+            "window": {
+              "as_of": "2026-11-03",
+              "as_of_timestamp": "2026-11-03T12:48:44.707451+00:00",
+              "basis": "last_3_calendar_days",
+              "end": "2026-11-03",
+              "start": "2026-11-01",
+              "status": "valid",
+              "timezone": "Europe/Moscow"
+            }
+          },
+          "reranked": false,
+          "selector": null,
+          "selected_ranges": [],
+          "selected_witnesses": [
+            false
+          ],
+          "check_statuses": [],
+          "audit_supported": null
+        }
+      },
+      "qwen_score_vectors_identical": null
+    }
+  ],
+  "dates": {
+    "preserved": 10,
+    "applicable": 11
+  },
+  "shared_reader_latency": {
+    "n": 36,
+    "min_ms": 64.721,
+    "p50_ms": 171.2565,
+    "p95_ms": 230.67,
+    "max_ms": 234.801
+  },
+  "reader_errors": [],
+  "gained_tp_ids": [],
+  "lost_tp_ids": [],
+  "new_false_direct_ids": [],
+  "limits": [
+    "Historical prior-reviewed pages, new URLs only relative to previous Firecrawl12, not fresh web holdout.",
+    "Same own metadata/rawHtml and Firecrawl r0 text in both arms; no initial classifier/retrieval.",
+    "One paired generative pass per group; model latency and final labels have variability.",
+    "Reader latency measured separately; verification walltime loads cached reader documents. No CPU-only speed claim."
+  ]
+}

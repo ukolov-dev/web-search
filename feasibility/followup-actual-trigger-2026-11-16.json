@@ -1,0 +1,48 @@
+{
+  "runtime": "bda65f3",
+  "stage": "source-aware decision replay; noHTTP/model",
+  "actual_case": "N01 baseline research-gates2026-11-06",
+  "first_form": "RFC 6585 428 Precondition Required caching MUST NOT",
+  "missing": [
+    0,
+    1
+  ],
+  "next": {
+    "facet": 0,
+    "query": "RFC 6585 428 Precondition Required caching MUST NOT"
+  },
+  "new_query": "RFC 6585 428 Precondition Required caching MUST NOT Что RFC 6585 говорит о кэшировании ответа 428 Precondition Required: разрешает или MUST NOT?",
+  "snapshot_used_before_new_network": true,
+  "current_source_state": "source-state-frozen.json",
+  "cache": "historicalcontextcache metadata retained; no reads/cache mutations in this replay",
+  "stop": "before unrecorded focused-query SERP; original queue not captured exactly",
+  "baseline_behavior": "duplicate search returnsfalse noextraSERP; historical nonempty queue continued to read",
+  "acceptance": "real trigger reachability and safe decision divergence only; no improvement claim",
+  "result": "1passed0failed, 215filtered",
+  "baseline_additional_backend_calls": 0,
+  "candidate_additional_backend_calls": 0,
+  "forms_before_after": 1,
+  "serp_before_after": 1,
+  "documents_before_after": 2,
+  "generations_before_after": 2,
+  "claims_before_after": 0,
+  "code_unchanged": true,
+  "trigger_search": {
+    "parsed_model_responses": 882,
+    "naive_duplicates": 16,
+    "real_first_round_emptydraft_cases": [
+      "baseline/N01",
+      "candidate/N12"
+    ],
+    "closedfacet_found": false,
+    "other_hits": "mostly final-round unused followups, not eligible trigger proof"
+  },
+  "command": "FOLLOWUP_TRIGGER_FIXTURE=\"$PWD/.cache/actual-trigger.json\" CARGO_HOME=\"$PWD/.cache/cargo\" CARGO_TARGET_DIR=/path/to/web-search/target cargo test --locked --offline actual_n01_duplicate_followup_decision_replay -- --nocapture",
+  "artifacts": {
+    "runs/product-options-followup-2026-11-16/actual-N01/reproducer.rs": "b55d95f111f9f831bd335808d61da850ad85058126399123f765fa1fd8b535b3",
+    "runs/product-options-followup-2026-11-16/actual-N01/source-state-frozen.json": "b700c3626f55d745fc175197c26dce43e9ad8fccfbb3612e108d1a49c6a3c7c1",
+    "runs/product-options-followup-2026-11-16/actual-N01/trigger-search-index.json": "c073e5965ec0fc668db4101204440d193a75b4229bb3f4c016e564719b58605a",
+    "runs/product-options-followup-2026-11-16/actual-N01/frozen-trigger.json": "2a58dc4a98c32e784a53d9bb9ccbc4e1771f320349285d20401cc16276fb393b",
+    "runs/product-options-followup-2026-11-16/actual-N01/decision.log": "46fd06bb1a8071b01be1099a9a26260bbe4bac8e117cfd0a530cb35a94fe7c46"
+  }
+}

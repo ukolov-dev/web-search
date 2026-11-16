@@ -1,0 +1,2267 @@
+{
+  "scope": "returned URL union NEW8; source-only annotations before prediction join, not web-wide gold",
+  "frozen_utc": "2026-11-03T11:31:57.239149+00:00",
+  "parts": [
+    {
+      "path": "runs/news-navigation-2026-11-03/benchmark/blind/gold-nn01-04-v2.json",
+      "sha256": "43ba618e0b92b76473da8656ec4914ac983b829df0ff3f3608a4b642c4c47fca"
+    },
+    {
+      "path": "runs/news-navigation-2026-11-03/benchmark/blind/gold-nn05-08-v2.json",
+      "sha256": "87f554996b1e01099e30e44fca04682f6f47eb3cb0587edef9558195dfc46840"
+    }
+  ],
+  "rows": [
+    {
+      "blind_id": "1c481a7b37b51b9c",
+      "case_id": "nn01",
+      "url": "https://tnv.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "kind_manual": "site_navigation",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "full_body_available": false,
+      "judgment_basis": "source_card_only_provisional",
+      "reason": "Тематически подходящая главная/рубрика/навигация к местному источнику; отдельная публикация и её полная дата по карточке не подтверждены.",
+      "quotes": [
+        {
+          "quote": "Официальная информация о телеканале ТНВ. История, команда, миссия, контакты и реквизиты. Главный источник новостей Татар",
+          "field": "title",
+          "source": "source-cards.json",
+          "url": "https://tnv.ru/"
+        },
+        {
+          "quote": "Официальная информация о телеканале ТНВ. История, команда, миссия, контакты и реквизиты. Главный источник новостей Татарстана.새 창 열림",
+          "field": "snippet",
+          "source": "source-cards.json",
+          "url": "https://tnv.ru/"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#1c481a7b37b51b9c"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": false,
+      "annotation_kind": "site_navigation"
+    },
+    {
+      "blind_id": "422da49665422f3c",
+      "case_id": "nn01",
+      "url": "https://russia24.pro/kazan/",
+      "grade": 1,
+      "kind": "feed",
+      "kind_manual": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "full_body_available": false,
+      "judgment_basis": "source_card_only_provisional",
+      "reason": "Тематически подходящая главная/рубрика/навигация к местному источнику; отдельная публикация и её полная дата по карточке не подтверждены.",
+      "quotes": [
+        {
+          "quote": "Казань и Татарстан в новостях от Россия24.pro открыто, быстро, честно, официально, ежедневно 24 часа в сутки (Россия, Пу",
+          "field": "title",
+          "source": "source-cards.json",
+          "url": "https://russia24.pro/kazan/"
+        },
+        {
+          "quote": "Казань и Татарстан в новостях от Россия24.pro открыто, быстро, честно, официально, ежедневно 24 часа в сутки (Россия, Путин)새 창 열림",
+          "field": "snippet",
+          "source": "source-cards.json",
+          "url": "https://russia24.pro/kazan/"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#422da49665422f3c"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": false
+    },
+    {
+      "blind_id": "528884a818cebc80",
+      "case_id": "nn01",
+      "url": "https://ria.ru/location_Kazan/",
+      "grade": 1,
+      "kind": "feed",
+      "kind_manual": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "full_body_available": false,
+      "judgment_basis": "source_card_only_provisional",
+      "reason": "Тематически подходящая главная/рубрика/навигация к местному источнику; отдельная публикация и её полная дата по карточке не подтверждены.",
+      "quotes": [
+        {
+          "quote": "День Казанской иконы Божией Матери: когда празднуют и как отмечают21 июля, 11:34새 창 열림",
+          "field": "title",
+          "source": "source-cards.json",
+          "url": "https://ria.ru/location_Kazan/"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#528884a818cebc80"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": false
+    },
+    {
+      "blind_id": "562e16a07f5ebed9",
+      "case_id": "nn01",
+      "url": "https://www.tatar-inform.ru/news/na-kapo-im-gorbunova-ispytali-novyy-seriynyy-tu-160",
+      "grade": 1,
+      "kind": "feed",
+      "kind_manual": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": true,
+      "full_body_available": true,
+      "judgment_basis": "native_original_review",
+      "reason": "ExactURL статьи проТу160 фактически отдаёт общую новостную ленту Татарстана/Казани с несколькими teaserсюжетами, без собственного Article/datePublished. Это полезная навигация, но не отдельная новость заданного дня. Даты соседних карточек и og:type=article не датируют этот URL.",
+      "quotes": [
+        {
+          "quote": "Новости Татарстана и Казани - Татар-информ",
+          "field": "title",
+          "source": "source-native-documents.json",
+          "url": "https://www.tatar-inform.ru/news/na-kapo-im-gorbunova-ispytali-novyy-seriynyy-tu-160"
+        },
+        {
+          "quote": "Фестивали, концерты и этнодиктант: как Казань отметит День народного единства",
+          "field": "full_text",
+          "source": "source-native-documents.json",
+          "url": "https://www.tatar-inform.ru/news/na-kapo-im-gorbunova-ispytali-novyy-seriynyy-tu-160"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#562e16a07f5ebed9",
+        "runs/news-navigation-2026-11-03/benchmark/blind/nn01-04-open-originals.json",
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-native-documents.json#https://www.tatar-inform.ru/news/na-kapo-im-gorbunova-ispytali-novyy-seriynyy-tu-160",
+        "runs/news-navigation-2026-11-03/benchmark/source-originals-extra/source-00.html"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": true,
+      "prior_annotation": {
+        "grade": null,
+        "published_date": null,
+        "date_verified": false,
+        "source_reviewed": false,
+        "full_body_available": false,
+        "judgment_basis": "source_card_only_original_unavailable",
+        "reason": "Статья по URL и текст карточки расходятся по сюжету; оригинал web-open недоступен (cache miss), публикационная дата и содержание не проверены."
+      },
+      "raw_html_path": "runs/news-navigation-2026-11-03/benchmark/source-originals-extra/source-00.html",
+      "raw_html_sha256": "f1de546dbf172d1eb907c1be920ef6407f246d6d471be3030a49357aa05f27e1",
+      "revision_reason": "Новый полный nativeoriginal разрешил расхождение SERP/URL: вместо конкретной статьи обнаружена лента; unknown→grade1, без предположения старой даты поURL."
+    },
+    {
+      "blind_id": "7bd111873fc51ce6",
+      "case_id": "nn01",
+      "url": "https://www.tnv.ru/news/",
+      "grade": 1,
+      "kind": "feed",
+      "kind_manual": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "full_body_available": false,
+      "judgment_basis": "source_card_only_provisional",
+      "reason": "Тематически подходящая главная/рубрика/навигация к местному источнику; отдельная публикация и её полная дата по карточке не подтверждены.",
+      "quotes": [
+        {
+          "quote": "Свежие новости Татарстана и Казани за сегодня. Главные события, политика, экономика, происшествия и культура республики.",
+          "field": "title",
+          "source": "source-cards.json",
+          "url": "https://www.tnv.ru/news/"
+        },
+        {
+          "quote": "Свежие новости Татарстана и Казани за сегодня. Главные события, политика, экономика, происшествия и культура республики. Смотрите новости на ТНВ – всегда первым",
+          "field": "snippet",
+          "source": "source-cards.json",
+          "url": "https://www.tnv.ru/news/"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#7bd111873fc51ce6"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": false
+    },
+    {
+      "blind_id": "93f30b51f7415aea",
+      "case_id": "nn01",
+      "url": "https://rt.rbc.ru/tatarstan",
+      "grade": 1,
+      "kind": "feed",
+      "kind_manual": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "full_body_available": false,
+      "judgment_basis": "source_card_only_provisional",
+      "reason": "Тематически подходящая главная/рубрика/навигация к местному источнику; отдельная публикация и её полная дата по карточке не подтверждены.",
+      "quotes": [
+        {
+          "quote": "✅Новости Казани и Татарстана ⚡Свежие события и происшествия на РБК새 창 열림",
+          "field": "title",
+          "source": "source-cards.json",
+          "url": "https://rt.rbc.ru/tatarstan"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#93f30b51f7415aea"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": false
+    },
+    {
+      "blind_id": "9569d95eaae0de5d",
+      "case_id": "nn01",
+      "url": "https://e-kazan.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "kind_manual": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "full_body_available": false,
+      "judgment_basis": "source_card_only_provisional",
+      "reason": "Тематически подходящая главная/рубрика/навигация к местному источнику; отдельная публикация и её полная дата по карточке не подтверждены.",
+      "quotes": [
+        {
+          "quote": "Новости Казани сегодня, развлечения Казани, отдых в Казани, казанская афиша, пресс-релизы, пользовательский контент, авт",
+          "field": "title",
+          "source": "source-cards.json",
+          "url": "https://e-kazan.ru/"
+        },
+        {
+          "quote": "Новости Казани сегодня, развлечения Казани, отдых в Казани, казанская афиша, пресс-релизы, пользовательский контент, авто, недвижимость, новостройки, отдых с де",
+          "field": "snippet",
+          "source": "source-cards.json",
+          "url": "https://e-kazan.ru/"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#9569d95eaae0de5d"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": false
+    },
+    {
+      "blind_id": "afac9e808946771a",
+      "case_id": "nn01",
+      "url": "https://trt-tv.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "kind_manual": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "full_body_available": false,
+      "judgment_basis": "source_card_only_provisional",
+      "reason": "Тематически подходящая главная/рубрика/навигация к местному источнику; отдельная публикация и её полная дата по карточке не подтверждены.",
+      "quotes": [
+        {
+          "quote": "Новости Казани и Татарстана. Читайте и смотрите актуальные новости Казани, Татарстана и России. Следите за важными новос",
+          "field": "title",
+          "source": "source-cards.json",
+          "url": "https://trt-tv.ru/"
+        },
+        {
+          "quote": "Новости Казани и Татарстана. Читайте и смотрите актуальные новости Казани, Татарстана и России. Следите за важными новостями Казани.새 창 열림",
+          "field": "snippet",
+          "source": "source-cards.json",
+          "url": "https://trt-tv.ru/"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#afac9e808946771a"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": false
+    },
+    {
+      "blind_id": "b68880efd430c8c4",
+      "case_id": "nn01",
+      "url": "https://www.kazan.kp.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "kind_manual": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": true,
+      "full_body_available": true,
+      "judgment_basis": "native_original_review",
+      "reason": "Полный nativeHTML/текст показывает главную новостного источника с несколькими сюжетами/ссылками; релевантная навигация grade1, собственной публикационной даты статьи у этого URL нет. Часть full_text extraction теряет ленту, поэтому дополнительно проверен видимый текст rawHTML.",
+      "quotes": [
+        {
+          "quote": "Новости Казани и республики Татарстан: главные новости на сегодня | Комсомольская Правда в Казани",
+          "field": "title",
+          "source": "source-native-documents.json",
+          "url": "https://www.kazan.kp.ru/"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#b68880efd430c8c4",
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-native-documents.json#https://www.kazan.kp.ru/",
+        "runs/news-navigation-2026-11-03/benchmark/source-originals/source-00.html"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": true,
+      "prior_annotation": {
+        "grade": 1,
+        "published_date": null,
+        "date_verified": false,
+        "source_reviewed": false,
+        "full_body_available": false,
+        "judgment_basis": "source_card_only_provisional",
+        "reason": "Тематически подходящая главная/рубрика/навигация к местному источнику; отдельная публикация и её полная дата по карточке не подтверждены."
+      },
+      "raw_html_path": "runs/news-navigation-2026-11-03/benchmark/source-originals/source-00.html",
+      "raw_html_sha256": "2af941b92e5621210896206216649cf4b2b659b9862ba39d3d709f0a9634eec7",
+      "revision_reason": "Получен и прочитан nativeoriginal; предварительная навигационная1 сохранена: это главная/лента, не отдельная датированная статья."
+    },
+    {
+      "blind_id": "bb38a9a6fcb4fb3a",
+      "case_id": "nn01",
+      "url": "https://116.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "kind_manual": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": true,
+      "full_body_available": true,
+      "judgment_basis": "native_original_review",
+      "reason": "Полный nativeHTML/текст показывает главную новостного источника с несколькими сюжетами/ссылками; релевантная навигация grade1, собственной публикационной даты статьи у этого URL нет. Часть full_text extraction теряет ленту, поэтому дополнительно проверен видимый текст rawHTML.",
+      "quotes": [
+        {
+          "quote": "Новости Казани и Республики Татарстан | 116.ру",
+          "field": "title",
+          "source": "source-native-documents.json",
+          "url": "https://116.ru/"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#bb38a9a6fcb4fb3a",
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-native-documents.json#https://116.ru/",
+        "runs/news-navigation-2026-11-03/benchmark/source-originals/source-01.html"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": true,
+      "prior_annotation": {
+        "grade": 1,
+        "published_date": null,
+        "date_verified": false,
+        "source_reviewed": false,
+        "full_body_available": false,
+        "judgment_basis": "source_card_only_provisional",
+        "reason": "Тематически подходящая главная/рубрика/навигация к местному источнику; отдельная публикация и её полная дата по карточке не подтверждены."
+      },
+      "raw_html_path": "runs/news-navigation-2026-11-03/benchmark/source-originals/source-01.html",
+      "raw_html_sha256": "87f1123b2bff87d59ac1d57ba722edb8e72a2fddf950affb8c29949b727031dc",
+      "revision_reason": "Получен и прочитан nativeoriginal; предварительная навигационная1 сохранена: это главная/лента, не отдельная датированная статья."
+    },
+    {
+      "blind_id": "077fa5df09503c84",
+      "case_id": "nn02",
+      "url": "https://v1.ru/",
+      "grade": 0,
+      "kind": "feed",
+      "kind_manual": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "full_body_available": false,
+      "judgment_basis": "source_card_only_provisional",
+      "reason": "Карточка относится к Волгограду, требуется Самара.",
+      "quotes": [
+        {
+          "quote": "Новости Волгограда и Волгоградской области | V1.ру",
+          "field": "title",
+          "source": "source-cards.json",
+          "url": "https://v1.ru/"
+        },
+        {
+          "quote": "Последние свежие новости Волгограда и Волгоградской области за сегодня. Все новости региона на сайте В1.ру: происшествия, последние события региона | V1.ру",
+          "field": "snippet",
+          "source": "source-cards.json",
+          "url": "https://v1.ru/"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#077fa5df09503c84"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": false
+    },
+    {
+      "blind_id": "19186fd4c2c73a70",
+      "case_id": "nn02",
+      "url": "https://volga.news/",
+      "grade": 1,
+      "kind": "feed",
+      "kind_manual": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": true,
+      "full_body_available": true,
+      "judgment_basis": "native_original_review",
+      "reason": "Полный nativeHTML/текст показывает главную новостного источника с несколькими сюжетами/ссылками; релевантная навигация grade1, собственной публикационной даты статьи у этого URL нет. Часть full_text extraction теряет ленту, поэтому дополнительно проверен видимый текст rawHTML.",
+      "quotes": [
+        {
+          "quote": "Новости Самары и Самарской области на сегодня: все последние новости на портале Волга Ньюс",
+          "field": "title",
+          "source": "source-native-documents.json",
+          "url": "https://volga.news/"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#19186fd4c2c73a70",
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-native-documents.json#https://volga.news/",
+        "runs/news-navigation-2026-11-03/benchmark/source-originals/source-02.html"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": true,
+      "prior_annotation": {
+        "grade": 1,
+        "published_date": null,
+        "date_verified": false,
+        "source_reviewed": false,
+        "full_body_available": false,
+        "judgment_basis": "source_card_only_provisional",
+        "reason": "Тематически подходящая главная/рубрика/навигация к местному источнику; отдельная публикация и её полная дата по карточке не подтверждены."
+      },
+      "raw_html_path": "runs/news-navigation-2026-11-03/benchmark/source-originals/source-02.html",
+      "raw_html_sha256": "9f436887babd800724fd729c9124f34395bce17e74c694b70235f38640c1b7bb",
+      "revision_reason": "Получен и прочитан nativeoriginal; предварительная навигационная1 сохранена: это главная/лента, не отдельная датированная статья."
+    },
+    {
+      "blind_id": "1babdaf6aa974fdf",
+      "case_id": "nn02",
+      "url": "https://sgpress.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "kind_manual": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "full_body_available": false,
+      "judgment_basis": "source_card_only_provisional",
+      "reason": "Тематически подходящая главная/рубрика/навигация к местному источнику; отдельная публикация и её полная дата по карточке не подтверждены.",
+      "quotes": [
+        {
+          "quote": "Последние новости Самары и Самарской области: события города, общество, транспорт, культура, спорт и полезная информация",
+          "field": "title",
+          "source": "source-cards.json",
+          "url": "https://sgpress.ru/"
+        },
+        {
+          "quote": "Последние новости Самары и Самарской области: события города, общество, транспорт, культура, спорт и полезная информация.새 창 열림",
+          "field": "snippet",
+          "source": "source-cards.json",
+          "url": "https://sgpress.ru/"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#1babdaf6aa974fdf"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": false
+    },
+    {
+      "blind_id": "207b0d54fd839384",
+      "case_id": "nn02",
+      "url": "https://71.ru/",
+      "grade": 0,
+      "kind": "feed",
+      "kind_manual": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "full_body_available": false,
+      "judgment_basis": "source_card_only_provisional",
+      "reason": "Карточка относится к Туле, требуется Самара.",
+      "quotes": [
+        {
+          "quote": "Последние свежие новости Тулы и Тульской области за сегодня. Все новости региона на сайте Тула онлайн: происшествия, пос",
+          "field": "title",
+          "source": "source-cards.json",
+          "url": "https://71.ru/"
+        },
+        {
+          "quote": "Последние свежие новости Тулы и Тульской области за сегодня. Все новости региона на сайте Тула онлайн: происшествия, последние события региона | 71.ру새 창 열림",
+          "field": "snippet",
+          "source": "source-cards.json",
+          "url": "https://71.ru/"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#207b0d54fd839384"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": false
+    },
+    {
+      "blind_id": "40ef1359b5d44dbd",
+      "case_id": "nn02",
+      "url": "https://sgpress.ru/news/597247",
+      "grade": 2,
+      "kind": "article",
+      "kind_manual": "article",
+      "published_date": "2026-11-03",
+      "date_verified": true,
+      "source_reviewed": true,
+      "full_body_available": true,
+      "judgment_basis": "native_original_review",
+      "reason": "Полный оригинал — конкретная транспортная новость Самары, опубликована3ноября2026. OwnNewsArticle mainEntityOfPage иheadline совпадают с этой страницей, datePublished отдельноотdateModified. Август2026 описывает дату инцидента, не дату публикации.",
+      "quotes": [
+        {
+          "quote": "Пассажиров задержанного рейса из Самары в Москву продержали в Курумоче 10 часов без еды и воды.",
+          "field": "full_text",
+          "source": "source-native-documents.json",
+          "url": "https://sgpress.ru/news/597247"
+        },
+        {
+          "quote": "2026-11-03T14:10:37+04:00",
+          "field": "raw_jsonld.NewsArticle.datePublished",
+          "source": "runs/news-navigation-2026-11-03/benchmark/source-originals/source-08.html",
+          "url": "https://sgpress.ru/news/597247"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#40ef1359b5d44dbd",
+        "runs/news-navigation-2026-11-03/benchmark/blind/nn01-04-open-originals.json",
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-documents.json#https://sgpress.ru/news/597247",
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-native-documents.json#https://sgpress.ru/news/597247",
+        "runs/news-navigation-2026-11-03/benchmark/source-originals/source-08.html"
+      ],
+      "raw_publication_declarations": [
+        {
+          "source": "jsonld.datePublished",
+          "raw": "2026-11-03T14:10:37+04:00"
+        },
+        {
+          "source": "meta.article:published_time",
+          "raw": "2026-11-03T14:10:37+04:00"
+        }
+      ],
+      "publication_declarations_original_frame_reviewed": true,
+      "prior_annotation": {
+        "grade": null,
+        "published_date": null,
+        "date_verified": false,
+        "source_reviewed": false,
+        "full_body_available": false,
+        "judgment_basis": "source_card_only_original_unavailable",
+        "reason": "Тематически подходит транспортному запросу Самары, но оригинал web-open недоступен; событие в августе не является датой публикации. Raw publication declarations из MCP не заменяют независимое чтение."
+      },
+      "raw_html_path": "runs/news-navigation-2026-11-03/benchmark/source-originals/source-08.html",
+      "raw_html_sha256": "207ec3c900df1401f26625163d40c090b9421baf886a9958a290680ef33456ef",
+      "revision_reason": "Недоступный web-tooloriginal заменён новым source-only nativeoriginal; содержание и собственная полная дата подтверждены доjoinпредсказаний."
+    },
+    {
+      "blind_id": "77c880ffc7adb14f",
+      "case_id": "nn02",
+      "url": "https://450media.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "kind_manual": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "full_body_available": false,
+      "judgment_basis": "source_card_only_provisional",
+      "reason": "Тематически подходящая главная/рубрика/навигация к местному источнику; отдельная публикация и её полная дата по карточке не подтверждены.",
+      "quotes": [
+        {
+          "quote": "Новости Самары и области – последние новости за сегодня",
+          "field": "title",
+          "source": "source-cards.json",
+          "url": "https://450media.ru/"
+        },
+        {
+          "quote": "Главные новости Самары и Самарской области на сегодня онлайн. Мы публикуем свежую информацию о последних событиях города: происшествия, новости политики, эконом",
+          "field": "snippet",
+          "source": "source-cards.json",
+          "url": "https://450media.ru/"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#77c880ffc7adb14f"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": false
+    },
+    {
+      "blind_id": "b400245ba78373a2",
+      "case_id": "nn02",
+      "url": "https://ngs22.ru/",
+      "grade": 0,
+      "kind": "feed",
+      "kind_manual": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "full_body_available": false,
+      "judgment_basis": "source_card_only_provisional",
+      "reason": "Карточка относится к Барнаулу и Алтайскому краю, требуется Самара.",
+      "quotes": [
+        {
+          "quote": "Последние свежие новости Барнаула и Алтайского края за сегодня. Все новости региона на сайте Барнаул онлайн: происшестви",
+          "field": "title",
+          "source": "source-cards.json",
+          "url": "https://ngs22.ru/"
+        },
+        {
+          "quote": "Последние свежие новости Барнаула и Алтайского края за сегодня. Все новости региона на сайте Барнаул онлайн: происшествия, последние события региона | НГС22.ру새",
+          "field": "snippet",
+          "source": "source-cards.json",
+          "url": "https://ngs22.ru/"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#b400245ba78373a2"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": false
+    },
+    {
+      "blind_id": "b6818b1a70a727e6",
+      "case_id": "nn02",
+      "url": "https://63.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "kind_manual": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": true,
+      "full_body_available": true,
+      "judgment_basis": "native_original_review",
+      "reason": "Полный nativeHTML/текст показывает главную новостного источника с несколькими сюжетами/ссылками; релевантная навигация grade1, собственной публикационной даты статьи у этого URL нет. Часть full_text extraction теряет ленту, поэтому дополнительно проверен видимый текст rawHTML.",
+      "quotes": [
+        {
+          "quote": "Новости Самары и Самарской области | 63.ру",
+          "field": "title",
+          "source": "source-native-documents.json",
+          "url": "https://63.ru/"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#b6818b1a70a727e6",
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-native-documents.json#https://63.ru/",
+        "runs/news-navigation-2026-11-03/benchmark/source-originals/source-03.html"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": true,
+      "prior_annotation": {
+        "grade": 1,
+        "published_date": null,
+        "date_verified": false,
+        "source_reviewed": false,
+        "full_body_available": false,
+        "judgment_basis": "source_card_only_provisional",
+        "reason": "Тематически подходящая главная/рубрика/навигация к местному источнику; отдельная публикация и её полная дата по карточке не подтверждены."
+      },
+      "raw_html_path": "runs/news-navigation-2026-11-03/benchmark/source-originals/source-03.html",
+      "raw_html_sha256": "de3f836fb9f0e6e916bdeb59caaafe378783997f6cc2d550053aceae2190affc",
+      "revision_reason": "Получен и прочитан nativeoriginal; предварительная навигационная1 сохранена: это главная/лента, не отдельная датированная статья."
+    },
+    {
+      "blind_id": "ba533c86ddd101ae",
+      "case_id": "nn02",
+      "url": "https://regions.ru/",
+      "grade": 0,
+      "kind": "feed",
+      "kind_manual": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "full_body_available": false,
+      "judgment_basis": "source_card_only_provisional",
+      "reason": "Карточка относится к Москве/Подмосковью, требуется Самара.",
+      "quotes": [
+        {
+          "quote": "Новости Московской области сегодня: самые свежие, актуальные и…",
+          "field": "title",
+          "source": "source-cards.json",
+          "url": "https://regions.ru/"
+        },
+        {
+          "quote": "Читайте свежие новости Москвы и Московской области: будьте в курсе последних событий городов Подмосковья; агрегатор самой оперативной информации круглосуточно",
+          "field": "snippet",
+          "source": "source-cards.json",
+          "url": "https://regions.ru/"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#ba533c86ddd101ae"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": false
+    },
+    {
+      "blind_id": "fadbe4182fdb324c",
+      "case_id": "nn02",
+      "url": "https://hubsinfo.com/samara/today",
+      "grade": 1,
+      "kind": "feed",
+      "kind_manual": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "full_body_available": false,
+      "judgment_basis": "source_card_only_provisional",
+      "reason": "Тематически подходящая главная/рубрика/навигация к местному источнику; отдельная публикация и её полная дата по карточке не подтверждены.",
+      "quotes": [
+        {
+          "quote": "Главные новости Самары сегодня",
+          "field": "title",
+          "source": "source-cards.json",
+          "url": "https://hubsinfo.com/samara/today"
+        },
+        {
+          "quote": "Главные новости Самары. Свежие сообщения о событиях города. Кратко.",
+          "field": "snippet",
+          "source": "source-cards.json",
+          "url": "https://hubsinfo.com/samara/today"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#fadbe4182fdb324c"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": false
+    },
+    {
+      "blind_id": "fc5a562d3f2e2f3d",
+      "case_id": "nn02",
+      "url": "https://ircity.ru/",
+      "grade": 0,
+      "kind": "feed",
+      "kind_manual": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "full_body_available": false,
+      "judgment_basis": "source_card_only_provisional",
+      "reason": "Карточка относится к Иркутску, требуется Самара.",
+      "quotes": [
+        {
+          "quote": "Последние свежие новости Иркутска и Иркутской области за сегодня. Все новости региона на сайте Ирсити.ру: происшествия, ",
+          "field": "title",
+          "source": "source-cards.json",
+          "url": "https://ircity.ru/"
+        },
+        {
+          "quote": "Последние свежие новости Иркутска и Иркутской области за сегодня. Все новости региона на сайте Ирсити.ру: происшествия, последние события региона | ИРСИТИ.ру새 창",
+          "field": "snippet",
+          "source": "source-cards.json",
+          "url": "https://ircity.ru/"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#fc5a562d3f2e2f3d"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": false
+    },
+    {
+      "blind_id": "0fdd66bf596cb847",
+      "case_id": "nn03",
+      "url": "https://webrate.org/site/pravda-nn.ru/",
+      "grade": 1,
+      "kind": "other",
+      "kind_manual": "site_profile",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "full_body_available": false,
+      "judgment_basis": "source_card_only_provisional",
+      "reason": "Сторонняя карточка/профиль сайта местного издания; полезна лишь как указатель на источник, отдельной свежей новости нет.",
+      "quotes": [
+        {
+          "quote": "Pravda-nn.ru Новости Нижнего Новгорода — Главные нижегородские новости сегодня | Нижегородская Правда Cайт газеты «Нижег",
+          "field": "title",
+          "source": "source-cards.json",
+          "url": "https://webrate.org/site/pravda-nn.ru/"
+        },
+        {
+          "quote": "Pravda-nn.ru Новости Нижнего Новгорода — Главные нижегородские новости сегодня | Нижегородская Правда Cайт газеты «Нижегородская правда» - новости Нижнего Новго",
+          "field": "snippet",
+          "source": "source-cards.json",
+          "url": "https://webrate.org/site/pravda-nn.ru/"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#0fdd66bf596cb847",
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-native-documents.json#https://webrate.org/site/pravda-nn.ru/"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": false,
+      "prior_annotation": {
+        "grade": 1,
+        "published_date": null,
+        "date_verified": false,
+        "source_reviewed": false,
+        "full_body_available": false,
+        "judgment_basis": "source_card_only_provisional",
+        "reason": "Сторонняя карточка/профиль сайта местного издания; полезна лишь как указатель на источник, отдельной свежей новости нет."
+      },
+      "native_original_error": "fetch_timeout",
+      "revision_reason": "Новая попытка nativeoriginal далаfetch_timeout; исходная навигационная grade1 остаётся предварительной, не full-body validation.",
+      "annotation_kind": "site_profile"
+    },
+    {
+      "blind_id": "3d97e1a9ac9ac93a",
+      "case_id": "nn03",
+      "url": "https://livennov.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "kind_manual": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "full_body_available": false,
+      "judgment_basis": "source_card_only_provisional",
+      "reason": "Тематически подходящая главная/рубрика/навигация к местному источнику; отдельная публикация и её полная дата по карточке не подтверждены.",
+      "quotes": [
+        {
+          "quote": "Читайте самые свежие новости Нижнего Новгорода и Нижегородской области на новостном портале Живем в Нижнем.새 창 열림",
+          "field": "title",
+          "source": "source-cards.json",
+          "url": "https://livennov.ru/"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#3d97e1a9ac9ac93a"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": false
+    },
+    {
+      "blind_id": "6ad1cf810469d592",
+      "case_id": "nn03",
+      "url": "https://nn.mk.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "kind_manual": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "full_body_available": false,
+      "judgment_basis": "source_card_only_provisional",
+      "reason": "Тематически подходящая главная/рубрика/навигация к местному источнику; отдельная публикация и её полная дата по карточке не подтверждены.",
+      "quotes": [
+        {
+          "quote": "Новости Нижнего Новгорода и Нижегородской области - МК в Нижнем…",
+          "field": "title",
+          "source": "source-cards.json",
+          "url": "https://nn.mk.ru/"
+        },
+        {
+          "quote": "Московский Комсомолец в Нижнем Новгороде - все местные и федеральные новости, статьи, обзоры, видео.",
+          "field": "snippet",
+          "source": "source-cards.json",
+          "url": "https://nn.mk.ru/"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#6ad1cf810469d592"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": false
+    },
+    {
+      "blind_id": "7abba1fe037ae656",
+      "case_id": "nn03",
+      "url": "https://www.vgoroden.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "kind_manual": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": true,
+      "full_body_available": true,
+      "judgment_basis": "native_original_review",
+      "reason": "Полный nativeHTML/текст показывает главную новостного источника с несколькими сюжетами/ссылками; релевантная навигация grade1, собственной публикационной даты статьи у этого URL нет. Часть full_text extraction теряет ленту, поэтому дополнительно проверен видимый текст rawHTML.",
+      "quotes": [
+        {
+          "quote": "Новости Нижнего Новгорода сегодня — В городе N",
+          "field": "title",
+          "source": "source-native-documents.json",
+          "url": "https://www.vgoroden.ru/"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#7abba1fe037ae656",
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-native-documents.json#https://www.vgoroden.ru/",
+        "runs/news-navigation-2026-11-03/benchmark/source-originals/source-04.html"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": true,
+      "prior_annotation": {
+        "grade": 1,
+        "published_date": null,
+        "date_verified": false,
+        "source_reviewed": false,
+        "full_body_available": false,
+        "judgment_basis": "source_card_only_provisional",
+        "reason": "Тематически подходящая главная/рубрика/навигация к местному источнику; отдельная публикация и её полная дата по карточке не подтверждены."
+      },
+      "raw_html_path": "runs/news-navigation-2026-11-03/benchmark/source-originals/source-04.html",
+      "raw_html_sha256": "62b397aa7c940e26926145eb76bc9aad4facbd5524e1d86ef4b56d9bbae0c13a",
+      "revision_reason": "Получен и прочитан nativeoriginal; предварительная навигационная1 сохранена: это главная/лента, не отдельная датированная статья."
+    },
+    {
+      "blind_id": "827f85b9a829dcf9",
+      "case_id": "nn03",
+      "url": "https://www.nnov.kp.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "kind_manual": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": true,
+      "full_body_available": true,
+      "judgment_basis": "native_original_review",
+      "reason": "Полный nativeHTML/текст показывает главную новостного источника с несколькими сюжетами/ссылками; релевантная навигация grade1, собственной публикационной даты статьи у этого URL нет. Часть full_text extraction теряет ленту, поэтому дополнительно проверен видимый текст rawHTML.",
+      "quotes": [
+        {
+          "quote": "Новости Нижнего Новгорода и Нижегородской области: главные новости на сегодня | Комсомольская Правда в Нижнем Новгороде",
+          "field": "title",
+          "source": "source-native-documents.json",
+          "url": "https://www.nnov.kp.ru/"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#827f85b9a829dcf9",
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-native-documents.json#https://www.nnov.kp.ru/",
+        "runs/news-navigation-2026-11-03/benchmark/source-originals/source-05.html"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": true,
+      "prior_annotation": {
+        "grade": 1,
+        "published_date": null,
+        "date_verified": false,
+        "source_reviewed": false,
+        "full_body_available": false,
+        "judgment_basis": "source_card_only_provisional",
+        "reason": "Тематически подходящая главная/рубрика/навигация к местному источнику; отдельная публикация и её полная дата по карточке не подтверждены."
+      },
+      "raw_html_path": "runs/news-navigation-2026-11-03/benchmark/source-originals/source-05.html",
+      "raw_html_sha256": "6382eb487b4571ace102ab3806a6fe52c2b5a80f51b6187bd9d6a9dab67d6e36",
+      "revision_reason": "Получен и прочитан nativeoriginal; предварительная навигационная1 сохранена: это главная/лента, не отдельная датированная статья."
+    },
+    {
+      "blind_id": "9b8ea465a596f303",
+      "case_id": "nn03",
+      "url": "https://www.vgoroden.ru/novosti/aeroport-nizhnego-novgoroda-zakryvali-iz-za-ugrozy-ataki-bpla-3-noyabrya-id439461",
+      "grade": 2,
+      "kind": "article",
+      "kind_manual": "article",
+      "published_date": "2026-11-03",
+      "date_verified": true,
+      "source_reviewed": true,
+      "full_body_available": true,
+      "judgment_basis": "native_original_review",
+      "reason": "Полный оригинал — конкретная городская новость Нижнего Новгорода. Полная дата3ноября2026 видна у заголовка и в ownNewsArticle.datePublished, @id/mainEntityOfPage соответствуют URL; dateModified не использован.",
+      "quotes": [
+        {
+          "quote": "Аэропорт Нижнего Новгорода закрывали из-за угрозы атаки БПЛА. Об этом сообщили в Росавиации.",
+          "field": "full_text",
+          "source": "source-native-documents.json",
+          "url": "https://www.vgoroden.ru/novosti/aeroport-nizhnego-novgoroda-zakryvali-iz-za-ugrozy-ataki-bpla-3-noyabrya-id439461"
+        },
+        {
+          "quote": "2026-11-03T07:21:00+03:00",
+          "field": "raw_jsonld.NewsArticle.datePublished",
+          "source": "runs/news-navigation-2026-11-03/benchmark/source-originals/source-15.html",
+          "url": "https://www.vgoroden.ru/novosti/aeroport-nizhnego-novgoroda-zakryvali-iz-za-ugrozy-ataki-bpla-3-noyabrya-id439461"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#9b8ea465a596f303",
+        "runs/news-navigation-2026-11-03/benchmark/blind/nn01-04-open-originals.json",
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-documents.json#https://www.vgoroden.ru/novosti/aeroport-nizhnego-novgoroda-zakryvali-iz-za-ugrozy-ataki-bpla-3-noyabrya-id439461",
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-native-documents.json#https://www.vgoroden.ru/novosti/aeroport-nizhnego-novgoroda-zakryvali-iz-za-ugrozy-ataki-bpla-3-noyabrya-id439461",
+        "runs/news-navigation-2026-11-03/benchmark/source-originals/source-15.html"
+      ],
+      "raw_publication_declarations": [
+        {
+          "source": "jsonld.datePublished",
+          "raw": "2026-11-03T07:21:00+03:00"
+        }
+      ],
+      "publication_declarations_original_frame_reviewed": true,
+      "prior_annotation": {
+        "grade": null,
+        "published_date": null,
+        "date_verified": false,
+        "source_reviewed": false,
+        "full_body_available": false,
+        "judgment_basis": "source_card_only_original_unavailable",
+        "reason": "По карточке это конкретная новость Нижнего Новгорода с датой3ноября2026, но оригинал web-open недоступен; grade2 карточке не ставится."
+      },
+      "raw_html_path": "runs/news-navigation-2026-11-03/benchmark/source-originals/source-15.html",
+      "raw_html_sha256": "f131d2ace1694dda5662734ad6dbfad1de7d7d49888c8ca3506fe72646acc35f",
+      "revision_reason": "Недоступный web-tooloriginal заменён новым source-only nativeoriginal; содержание и собственная полная дата подтверждены доjoinпредсказаний.",
+      "same_event_cluster": "nizhny-airport-2026-11-03 (related closure/delay coverage; not independent publishers)"
+    },
+    {
+      "blind_id": "a758d99d211b17c1",
+      "case_id": "nn03",
+      "url": "https://www.youtube.com/@SetiNNstation",
+      "grade": 1,
+      "kind": "feed",
+      "kind_manual": "channel",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "full_body_available": false,
+      "judgment_basis": "source_card_only_provisional",
+      "reason": "Официальный видеоканал местных новостей как навигация; отдельная публикация заданного дня в карточке не показана.",
+      "quotes": [
+        {
+          "quote": "Кстати Новости Нижнего Новгорода - YouTube",
+          "field": "title",
+          "source": "source-cards.json",
+          "url": "https://www.youtube.com/@SetiNNstation"
+        },
+        {
+          "quote": "\"Кстати... новости Нижнего НовгородаОфициальный сайт: http://setinn.tvОфициальная группа в вк: https://vk.com/kstatinnОфициальный канал в Telegram: https://",
+          "field": "snippet",
+          "source": "source-cards.json",
+          "url": "https://www.youtube.com/@SetiNNstation"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#a758d99d211b17c1"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": false,
+      "annotation_kind": "channel"
+    },
+    {
+      "blind_id": "af16779acdb8407f",
+      "case_id": "nn03",
+      "url": "https://newsnn.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "kind_manual": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": true,
+      "full_body_available": false,
+      "judgment_basis": "source_card_only_provisional_native_shell",
+      "reason": "Получен HTML-shell без видимого новостного текста; навигационная1 сохраняется по карточке/URL, full-body или публикационная дата не подтверждены.",
+      "quotes": [
+        {
+          "quote": "Последние новости главных событий и происшествий Нижнего Новгорода и Нижегородской области на сегодня, новости политики,",
+          "field": "title",
+          "source": "source-cards.json",
+          "url": "https://newsnn.ru/"
+        },
+        {
+          "quote": "Последние новости главных событий и происшествий Нижнего Новгорода и Нижегородской области на сегодня, новости политики, экономики, культуры и спорта, свежие ре",
+          "field": "snippet",
+          "source": "source-cards.json",
+          "url": "https://newsnn.ru/"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#af16779acdb8407f",
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-native-documents.json#https://newsnn.ru/",
+        "runs/news-navigation-2026-11-03/benchmark/source-originals/source-06.html"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": true,
+      "prior_annotation": {
+        "grade": 1,
+        "published_date": null,
+        "date_verified": false,
+        "source_reviewed": false,
+        "full_body_available": false,
+        "judgment_basis": "source_card_only_provisional",
+        "reason": "Тематически подходящая главная/рубрика/навигация к местному источнику; отдельная публикация и её полная дата по карточке не подтверждены."
+      },
+      "raw_html_path": "runs/news-navigation-2026-11-03/benchmark/source-originals/source-06.html",
+      "raw_html_sha256": "d0db68a344d1ad23628a7baec8bdbdf58a763073717bd3cf01ebba3d3478e8ef",
+      "revision_reason": "Получен и прочитан nativeoriginal; предварительная навигационная1 сохранена: это главная/лента, не отдельная датированная статья."
+    },
+    {
+      "blind_id": "af2663c97f52c700",
+      "case_id": "nn03",
+      "url": "https://www.kommersant.ru/regions/52",
+      "grade": 1,
+      "kind": "feed",
+      "kind_manual": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "full_body_available": false,
+      "judgment_basis": "source_card_only_provisional",
+      "reason": "Тематически подходящая главная/рубрика/навигация к местному источнику; отдельная публикация и её полная дата по карточке не подтверждены.",
+      "quotes": [
+        {
+          "quote": "Профессор МГТУ назначен директором нижегородского университета «Неймарк»새 창 열림",
+          "field": "title",
+          "source": "source-cards.json",
+          "url": "https://www.kommersant.ru/regions/52"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#af2663c97f52c700"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": false
+    },
+    {
+      "blind_id": "d287d1522444459c",
+      "case_id": "nn03",
+      "url": "https://www.vgoroden.ru/novosti/tri-reysa-v-moskvu-zaderzhany-v-nizhegorodskom-aeroportu-3-noyabrya-id439464",
+      "grade": 2,
+      "kind": "article",
+      "kind_manual": "article",
+      "published_date": "2026-11-03",
+      "date_verified": true,
+      "source_reviewed": true,
+      "full_body_available": true,
+      "judgment_basis": "native_original_review",
+      "reason": "Полный оригинал — конкретная городская новость Нижнего Новгорода о задержке рейсов. Полная дата3ноября2026 видна у заголовка и в ownNewsArticle.datePublished, @id/mainEntityOfPage соответствуют URL; дата события отдельно не подменяет публикацию.",
+      "quotes": [
+        {
+          "quote": "Три авиарейса в Москву задержали в аэропорту Нижнего Новгорода утром 3 ноября.",
+          "field": "full_text",
+          "source": "source-native-documents.json",
+          "url": "https://www.vgoroden.ru/novosti/tri-reysa-v-moskvu-zaderzhany-v-nizhegorodskom-aeroportu-3-noyabrya-id439464"
+        },
+        {
+          "quote": "2026-11-03T08:45:00+03:00",
+          "field": "raw_jsonld.NewsArticle.datePublished",
+          "source": "runs/news-navigation-2026-11-03/benchmark/source-originals/source-14.html",
+          "url": "https://www.vgoroden.ru/novosti/tri-reysa-v-moskvu-zaderzhany-v-nizhegorodskom-aeroportu-3-noyabrya-id439464"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#d287d1522444459c",
+        "runs/news-navigation-2026-11-03/benchmark/blind/nn01-04-open-originals.json",
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-documents.json#https://www.vgoroden.ru/novosti/tri-reysa-v-moskvu-zaderzhany-v-nizhegorodskom-aeroportu-3-noyabrya-id439464",
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-native-documents.json#https://www.vgoroden.ru/novosti/tri-reysa-v-moskvu-zaderzhany-v-nizhegorodskom-aeroportu-3-noyabrya-id439464",
+        "runs/news-navigation-2026-11-03/benchmark/source-originals/source-14.html"
+      ],
+      "raw_publication_declarations": [
+        {
+          "source": "jsonld.datePublished",
+          "raw": "2026-11-03T08:45:00+03:00"
+        }
+      ],
+      "publication_declarations_original_frame_reviewed": true,
+      "prior_annotation": {
+        "grade": null,
+        "published_date": null,
+        "date_verified": false,
+        "source_reviewed": false,
+        "full_body_available": false,
+        "judgment_basis": "source_card_only_original_unavailable",
+        "reason": "По карточке это конкретная транспортная новость Нижнего Новгорода с датой3ноября2026, но оригинал web-open недоступен; grade2 карточке не ставится."
+      },
+      "raw_html_path": "runs/news-navigation-2026-11-03/benchmark/source-originals/source-14.html",
+      "raw_html_sha256": "bdf4cee14a1bd9a6487b29b2b89f385a8759fd43e26425f89f109023403924a9",
+      "revision_reason": "Недоступный web-tooloriginal заменён новым source-only nativeoriginal; содержание и собственная полная дата подтверждены доjoinпредсказаний.",
+      "same_event_cluster": "nizhny-airport-2026-11-03 (related closure/delay coverage; not independent publishers)"
+    },
+    {
+      "blind_id": "d6d27ef938a2cf83",
+      "case_id": "nn03",
+      "url": "https://hubsinfo.com/nn/today",
+      "grade": 1,
+      "kind": "feed",
+      "kind_manual": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "full_body_available": false,
+      "judgment_basis": "source_card_only_provisional",
+      "reason": "Тематически подходящая главная/рубрика/навигация к местному источнику; отдельная публикация и её полная дата по карточке не подтверждены.",
+      "quotes": [
+        {
+          "quote": "Главные новости Нижнего Новгорода сегодня",
+          "field": "title",
+          "source": "source-cards.json",
+          "url": "https://hubsinfo.com/nn/today"
+        },
+        {
+          "quote": "Скульптуру оленя установили на улице Варварской в Нижнем Новгороде В центре Нижнего Новгорода появилась новая скульптура оленя. Фото с символом города на улице ",
+          "field": "snippet",
+          "source": "source-cards.json",
+          "url": "https://hubsinfo.com/nn/today"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#d6d27ef938a2cf83"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": false
+    },
+    {
+      "blind_id": "f97929c444f655f9",
+      "case_id": "nn03",
+      "url": "https://apps.apple.com/cz/app/nn-ru-%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8-%D0%BD-%D0%BD%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B0/id1489281213",
+      "grade": 0,
+      "kind": "application",
+      "kind_manual": "application",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "full_body_available": false,
+      "judgment_basis": "source_card_only_provisional",
+      "reason": "Карточка App Store явно предлагает скачать приложение, а не прочитать городскую новость; приложение не запрошено.",
+      "quotes": [
+        {
+          "quote": "‎NN.ru — Новости Н. Новгорода App - App Store",
+          "field": "title",
+          "source": "source-cards.json",
+          "url": "https://apps.apple.com/cz/app/nn-ru-%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8-%D0%BD-%D0%BD%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B0/id1489281213"
+        },
+        {
+          "quote": "Download NN.ru — Новости Н. Новгорода by Городские порталы on the App Store. See screenshots, ratings and reviews, user tips and more games like NN.ru — Новости",
+          "field": "snippet",
+          "source": "source-cards.json",
+          "url": "https://apps.apple.com/cz/app/nn-ru-%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8-%D0%BD-%D0%BD%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B0/id1489281213"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#f97929c444f655f9"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": false
+    },
+    {
+      "blind_id": "0917f685aefd6c71",
+      "case_id": "nn04",
+      "url": "https://www.happymodel.cz/kdy-letos/3-2026/",
+      "grade": 0,
+      "kind": "other",
+      "kind_manual": "other",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "full_body_available": false,
+      "judgment_basis": "source_card_only_provisional",
+      "reason": "Карточка чешского сайта с заголовком3/2026 не представляет новость Липецка3ноября; оценка только по наблюдаемой карточке.",
+      "quotes": [
+        {
+          "quote": "3/2026 – Happymodel.cz",
+          "field": "title",
+          "source": "source-cards.json",
+          "url": "https://www.happymodel.cz/kdy-letos/3-2026/"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#0917f685aefd6c71"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": false
+    },
+    {
+      "blind_id": "271c3ec31f0a325e",
+      "case_id": "nn04",
+      "url": "https://www.lsrgroup.ru/pressroom/novosti",
+      "grade": 0,
+      "kind": "feed",
+      "kind_manual": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "full_body_available": false,
+      "judgment_basis": "source_card_only_provisional",
+      "reason": "Лента корпоративных купонных выплат Группы ЛСР; карточка не связывает материал с Липецком.",
+      "quotes": [
+        {
+          "quote": "Группа ЛСР» выплатила доход по тридцать первому купону биржевых облигаций серии 001Р-09Группа ЛСР» выплатила доход по де",
+          "field": "title",
+          "source": "source-cards.json",
+          "url": "https://www.lsrgroup.ru/pressroom/novosti"
+        },
+        {
+          "quote": "Группа ЛСР» выплатила доход по тридцать первому купону биржевых облигаций серии 001Р-09Группа ЛСР» выплатила доход по девятнадцатому купону биржевых облигаций с",
+          "field": "snippet",
+          "source": "source-cards.json",
+          "url": "https://www.lsrgroup.ru/pressroom/novosti"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#271c3ec31f0a325e"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": false
+    },
+    {
+      "blind_id": "2b29703ecccee75c",
+      "case_id": "nn04",
+      "url": "https://ngs42.ru/",
+      "grade": 0,
+      "kind": "feed",
+      "kind_manual": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "full_body_available": false,
+      "judgment_basis": "source_card_only_provisional",
+      "reason": "Карточка относится к Кузбассу/Кемеровской области, требуется Липецк.",
+      "quotes": [
+        {
+          "quote": "Последние свежие новости Кузбасса и Кемеровской области за сегодня. Все новости региона на сайте NGS42.RU: происшествия,",
+          "field": "title",
+          "source": "source-cards.json",
+          "url": "https://ngs42.ru/"
+        },
+        {
+          "quote": "Последние свежие новости Кузбасса и Кемеровской области за сегодня. Все новости региона на сайте NGS42.RU: происшествия, последние события региона | НГС42.ру새 창",
+          "field": "snippet",
+          "source": "source-cards.json",
+          "url": "https://ngs42.ru/"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#2b29703ecccee75c"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": false
+    },
+    {
+      "blind_id": "2d4a9f46f5ac770d",
+      "case_id": "nn04",
+      "url": "https://www.lipetsk.kp.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "kind_manual": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "full_body_available": false,
+      "judgment_basis": "source_card_only_provisional",
+      "reason": "Тематически подходящая главная/рубрика/навигация к местному источнику; отдельная публикация и её полная дата по карточке не подтверждены.",
+      "quotes": [
+        {
+          "quote": "Главные новости Липецка и Липецкой области на сегодня. Мы ежедневно публикуем самую актуальную информацию города. Репорт",
+          "field": "title",
+          "source": "source-cards.json",
+          "url": "https://www.lipetsk.kp.ru/"
+        },
+        {
+          "quote": "Главные новости Липецка и Липецкой области на сегодня. Мы ежедневно публикуем самую актуальную информацию города. Репортажи, аналитика, мнение экспертов, происш",
+          "field": "snippet",
+          "source": "source-cards.json",
+          "url": "https://www.lipetsk.kp.ru/"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#2d4a9f46f5ac770d"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": false
+    },
+    {
+      "blind_id": "766475c4e20bfbd0",
+      "case_id": "nn04",
+      "url": "https://cbonds.ru/news/",
+      "grade": 0,
+      "kind": "feed",
+      "kind_manual": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "full_body_available": false,
+      "judgment_basis": "source_card_only_provisional",
+      "reason": "Финансовая лента облигаций и инвестиционных рэнкингов; в наблюдаемой карточке нет связи с городскими новостями Липецка.",
+      "quotes": [
+        {
+          "quote": "Поиск облигаций & Карты рынкаСпециальные разделыРэнкинги инвест. банков и юр. консультантов새 창 열림",
+          "field": "title",
+          "source": "source-cards.json",
+          "url": "https://cbonds.ru/news/"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#766475c4e20bfbd0"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": false
+    },
+    {
+      "blind_id": "7e5519b9ae629ff6",
+      "case_id": "nn04",
+      "url": "https://www.radostpromaminku.cz/category/2026/leden-2026/268",
+      "grade": 0,
+      "kind": "feed",
+      "kind_manual": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "full_body_available": false,
+      "judgment_basis": "source_card_only_provisional",
+      "reason": "Категорияleden2026 (январь), не3ноября; связи с Липецком в карточке нет.",
+      "quotes": [
+        {
+          "quote": "leden 2026",
+          "field": "title",
+          "source": "source-cards.json",
+          "url": "https://www.radostpromaminku.cz/category/2026/leden-2026/268"
+        },
+        {
+          "quote": "Leden 2026",
+          "field": "snippet",
+          "source": "source-cards.json",
+          "url": "https://www.radostpromaminku.cz/category/2026/leden-2026/268"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#7e5519b9ae629ff6"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": false
+    },
+    {
+      "blind_id": "8abbe8ece45e630a",
+      "case_id": "nn04",
+      "url": "https://lipetsknews.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "kind_manual": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "full_body_available": false,
+      "judgment_basis": "source_card_only_provisional",
+      "reason": "Тематически подходящая главная/рубрика/навигация к местному источнику; отдельная публикация и её полная дата по карточке не подтверждены.",
+      "quotes": [
+        {
+          "quote": "Последние новости города Липецк и Липецкой области на сегодня, происшествия, бизнес, политика, спорт, культура - актуаль",
+          "field": "title",
+          "source": "source-cards.json",
+          "url": "https://lipetsknews.ru/"
+        },
+        {
+          "quote": "Последние новости города Липецк и Липецкой области на сегодня, происшествия, бизнес, политика, спорт, культура - актуальная информация о жизни в городе | Новост",
+          "field": "snippet",
+          "source": "source-cards.json",
+          "url": "https://lipetsknews.ru/"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#8abbe8ece45e630a"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": false
+    },
+    {
+      "blind_id": "99545a68cec55c30",
+      "case_id": "nn04",
+      "url": "https://cbonds.ru/news/4149795/",
+      "grade": 0,
+      "kind": "article",
+      "kind_manual": "article",
+      "published_date": "2026-11-03",
+      "date_verified": true,
+      "source_reviewed": true,
+      "full_body_available": true,
+      "judgment_basis": "native_original_review",
+      "reason": "Полный publisherarticleBody — корпоративная финансовая отчётность Мосэнергосбыта без связи с Липецком. Собственная публикация3ноября2026 подтверждена mainEntityOfPage/datePublished, но дата не восполняет неверную городскую тему.",
+      "quotes": [
+        {
+          "quote": "Мосэнергосбыт публикует отчетность за 9 месяцев 2026 г., составленную в соответствии с российскими стандартами бухгалтерского учета (РСБУ).",
+          "field": "raw_jsonld.NewsArticle.articleBody",
+          "source": "runs/news-navigation-2026-11-03/benchmark/source-originals/source-19.html",
+          "url": "https://cbonds.ru/news/4149795/"
+        },
+        {
+          "quote": "2026-11-03T09:08:27.000000Z",
+          "field": "raw_jsonld.NewsArticle.datePublished",
+          "source": "runs/news-navigation-2026-11-03/benchmark/source-originals/source-19.html",
+          "url": "https://cbonds.ru/news/4149795/"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#99545a68cec55c30",
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-documents.json#https://cbonds.ru/news/4149795/",
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-native-documents.json#https://cbonds.ru/news/4149795/",
+        "runs/news-navigation-2026-11-03/benchmark/source-originals/source-19.html"
+      ],
+      "raw_publication_declarations": [
+        {
+          "source": "jsonld.datePublished",
+          "raw": "2026-11-03T09:08:27.000000Z"
+        }
+      ],
+      "publication_declarations_original_frame_reviewed": true,
+      "prior_annotation": {
+        "grade": 0,
+        "published_date": null,
+        "date_verified": false,
+        "source_reviewed": false,
+        "full_body_available": false,
+        "judgment_basis": "source_card_only_provisional",
+        "reason": "Корпоративная отчётность Мосэнергосбыта за9месяцев; в карточке не установлена связь с Липецком. Декларация даты не восполняет географию."
+      },
+      "raw_html_path": "runs/news-navigation-2026-11-03/benchmark/source-originals/source-19.html",
+      "raw_html_sha256": "32efc974d4574f269dc5939df0ff646697cdade1d23defbaf1cebec6e59be459",
+      "revision_reason": "Исходная предварительная0 подтверждена полным nativeoriginal (articleBody доступен внутри собственных JSONLD), дата отдельно проверена."
+    },
+    {
+      "blind_id": "adad01d12186d33f",
+      "case_id": "nn04",
+      "url": "https://cbonds.ru/news/4149791/",
+      "grade": 0,
+      "kind": "article",
+      "kind_manual": "article",
+      "published_date": "2026-11-03",
+      "date_verified": true,
+      "source_reviewed": true,
+      "full_body_available": true,
+      "judgment_basis": "native_original_review",
+      "reason": "Полный publisherarticleBody — корпоративная финансовая отчётность ЮСК Девелопмент без связи с Липецком. Собственная публикация3ноября2026 подтверждена mainEntityOfPage/datePublished, но дата не восполняет неверную городскую тему.",
+      "quotes": [
+        {
+          "quote": "ЮСК Девелопмент публикует отчетность за 9 месяцев 2026 г., составленную в соответствии с российскими стандартами бухгалтерского учета (РСБУ).",
+          "field": "raw_jsonld.NewsArticle.articleBody",
+          "source": "runs/news-navigation-2026-11-03/benchmark/source-originals/source-18.html",
+          "url": "https://cbonds.ru/news/4149791/"
+        },
+        {
+          "quote": "2026-11-03T09:08:27.000000Z",
+          "field": "raw_jsonld.NewsArticle.datePublished",
+          "source": "runs/news-navigation-2026-11-03/benchmark/source-originals/source-18.html",
+          "url": "https://cbonds.ru/news/4149791/"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#adad01d12186d33f",
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-documents.json#https://cbonds.ru/news/4149791/",
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-native-documents.json#https://cbonds.ru/news/4149791/",
+        "runs/news-navigation-2026-11-03/benchmark/source-originals/source-18.html"
+      ],
+      "raw_publication_declarations": [
+        {
+          "source": "jsonld.datePublished",
+          "raw": "2026-11-03T09:08:27.000000Z"
+        }
+      ],
+      "publication_declarations_original_frame_reviewed": true,
+      "prior_annotation": {
+        "grade": 0,
+        "published_date": null,
+        "date_verified": false,
+        "source_reviewed": false,
+        "full_body_available": false,
+        "judgment_basis": "source_card_only_provisional",
+        "reason": "Корпоративная отчётность ЮСК Девелопмент за9месяцев; в карточке не установлена связь с Липецком. Декларация даты не восполняет географию."
+      },
+      "raw_html_path": "runs/news-navigation-2026-11-03/benchmark/source-originals/source-18.html",
+      "raw_html_sha256": "9df20e2bc0db549699ac0aa51c5d95e2913d9b81fd26eabb368e4d822cb10302",
+      "revision_reason": "Исходная предварительная0 подтверждена полным nativeoriginal (articleBody доступен внутри собственных JSONLD), дата отдельно проверена."
+    },
+    {
+      "blind_id": "bb431c857f7fe9d4",
+      "case_id": "nn04",
+      "url": "https://vesti.kz/link/liga-chempionov-52/",
+      "grade": 0,
+      "kind": "feed",
+      "kind_manual": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "full_body_available": false,
+      "judgment_basis": "source_card_only_provisional",
+      "reason": "Тематическая лента Лиги чемпионов; не новости Липецка заданного дня.",
+      "quotes": [
+        {
+          "quote": "Новости по теме: Лига чемпионов ; Свежие и последние новости Лиги чемпионов 2026 года! В Лиге чемпионов УЕФА участвуют л",
+          "field": "title",
+          "source": "source-cards.json",
+          "url": "https://vesti.kz/link/liga-chempionov-52/"
+        },
+        {
+          "quote": "Новости по теме: Лига чемпионов ; Свежие и последние новости Лиги чемпионов 2026 года! В Лиге чемпионов УЕФА участвуют лучшие футбольные клубы Европы. Подписыва",
+          "field": "snippet",
+          "source": "source-cards.json",
+          "url": "https://vesti.kz/link/liga-chempionov-52/"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#bb431c857f7fe9d4"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": false
+    },
+    {
+      "blind_id": "ef0a16174e08fcfe",
+      "case_id": "nn04",
+      "url": "https://www.mojemedunka.cz/index.php/2026/02/25/obsah-cisla-3-2026/",
+      "grade": 0,
+      "kind": "article",
+      "kind_manual": "article",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "full_body_available": false,
+      "judgment_basis": "source_card_only_provisional",
+      "reason": "Чешское содержание мартовского выпуска с подготовкой к весне; не новость Липецка3ноября.",
+      "quotes": [
+        {
+          "quote": "Obsah čísla 3/2026",
+          "field": "title",
+          "source": "source-cards.json",
+          "url": "https://www.mojemedunka.cz/index.php/2026/02/25/obsah-cisla-3-2026/"
+        },
+        {
+          "quote": "Milí čtenáři,před začátkem jara se setkáváme u březnové Meduňky – vítejte u ní!Letošní zima nám nadílkou sněhu, mrazu a ledu po letech připravila téměř „ladovsk",
+          "field": "snippet",
+          "source": "source-cards.json",
+          "url": "https://www.mojemedunka.cz/index.php/2026/02/25/obsah-cisla-3-2026/"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#ef0a16174e08fcfe"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": false
+    },
+    {
+      "blind_id": "fcf726b787208e86",
+      "case_id": "nn04",
+      "url": "https://showjanakrause.cz/tv-premiera-11-3-2026/",
+      "grade": 0,
+      "kind": "article",
+      "kind_manual": "article",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "full_body_available": false,
+      "judgment_basis": "source_card_only_provisional",
+      "reason": "Чешская телевизионная программа с премьерой11марта2026; не новость Липецка3ноября.",
+      "quotes": [
+        {
+          "quote": "TV premiéra 11. 3. 2026 | Show Jana Krause",
+          "field": "title",
+          "source": "source-cards.json",
+          "url": "https://showjanakrause.cz/tv-premiera-11-3-2026/"
+        },
+        {
+          "quote": "Bývalá první dáma Livia Klausová, herci Ema Businská a Filip Březina a milovnice psů Petra Hoch Nová a její výjimečný svěřenec pes Eddie, který šokuje svým zbar",
+          "field": "snippet",
+          "source": "source-cards.json",
+          "url": "https://showjanakrause.cz/tv-premiera-11-3-2026/"
+        }
+      ],
+      "source_refs": [
+        "runs/news-navigation-2026-11-03/benchmark/blind/source-cards.json#fcf726b787208e86"
+      ],
+      "raw_publication_declarations": [],
+      "publication_declarations_original_frame_reviewed": false
+    },
+    {
+      "blind_id": "034d3999fa4308b6",
+      "case_id": "nn07",
+      "url": "https://dddinfo.cz/index.php/casopis/casopis-on-line/casopis-on-line-4-2040",
+      "grade": 0,
+      "kind": "other",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "reason": "Карточка чешского журнала3/2024; не городские новости Воронежа за заданный день. Только видимый тип/тема карточки.",
+      "evidence": [
+        "Časopis 3/2024"
+      ],
+      "source_refs": [
+        "source-cards.json#034d3999fa4308b6"
+      ],
+      "judgment_basis": "visible_source_card_or_unknown_original"
+    },
+    {
+      "blind_id": "09f086d62e653162",
+      "case_id": "nn07",
+      "url": "https://www.sbepl.in/e37/",
+      "grade": null,
+      "kind": "unknown",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "reason": "Общее рекламное описание без города, конкретной новости и наблюдаемой даты; оригинал не прочитан.",
+      "evidence": [
+        "Этот информативный текст отличается привлекательным содержанием"
+      ],
+      "source_refs": [
+        "source-cards.json#09f086d62e653162"
+      ],
+      "judgment_basis": "visible_source_card_or_unknown_original"
+    },
+    {
+      "blind_id": "1bb8a12554b75ff0",
+      "case_id": "nn07",
+      "url": "https://www.mk.ru/places/nizhegorodskaya-oblast/",
+      "grade": 0,
+      "kind": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "reason": "Рубрика другого региона — Нижегородской области; обязательный город Воронеж не соблюдён по карточке/URL.",
+      "evidence": [
+        "Субъект Российской Федерации в центре европейской части России."
+      ],
+      "source_refs": [
+        "source-cards.json#1bb8a12554b75ff0"
+      ],
+      "judgment_basis": "visible_source_card_or_unknown_original"
+    },
+    {
+      "blind_id": "22c1883e32802e2f",
+      "case_id": "nn06",
+      "url": "https://chr.aif.ru/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "reason": "Главная регионального СМИ — полезная навигация, но не отдельная публикация ноября2025; полного текста не предоставлено.",
+      "evidence": [
+        "Аргументы и факты в Черноземье: последние новости"
+      ],
+      "source_refs": [
+        "source-cards.json#22c1883e32802e2f",
+        "source-documents.json#https://chr.aif.ru/"
+      ],
+      "judgment_basis": "visible_source_card_or_unknown_original"
+    },
+    {
+      "blind_id": "27aec0b2265c29dd",
+      "case_id": "nn06",
+      "url": "http://government.ru/news/46277/",
+      "grade": null,
+      "kind": "article",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "reason": "Есть конкретное выступление на форуме, но полный текст/публикационная дата не доступны. Единственный web-open завершился timeout; дату и связь с городом не подставляю.",
+      "evidence": [
+        "Михаил Мишустин принял участие в работе пленарной сессии"
+      ],
+      "source_refs": [
+        "source-cards.json#27aec0b2265c29dd",
+        "gold-nn05-08-open-01-02.json"
+      ],
+      "judgment_basis": "visible_source_card_or_unknown_original"
+    },
+    {
+      "blind_id": "28b3f556925d9155",
+      "case_id": "nn08",
+      "url": "https://andro.io/sitemap-apps-42.html",
+      "grade": null,
+      "kind": "unknown",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "reason": "Хост andro.io заблокирован; не открывался. Видна только карточка общего каталога, нужное приложение/его загрузка не проверены.",
+      "evidence": [
+        "App Directory — Page 42"
+      ],
+      "source_refs": [
+        "source-cards.json#28b3f556925d9155",
+        "source-documents.json#https://andro.io/sitemap-apps-42.html"
+      ],
+      "judgment_basis": "visible_source_card_or_unknown_original"
+    },
+    {
+      "blind_id": "4939f3e204713c7f",
+      "case_id": "nn08",
+      "url": "https://www.stahuj.cz/magazin/android/",
+      "grade": 1,
+      "kind": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "reason": "Общий Android-раздел программного портала: навигация/фон для загрузки, не подтверждение конкретного приложения новостей Воронежа. Только карточка.",
+      "evidence": [
+        "Android - Stahuj.cz"
+      ],
+      "source_refs": [
+        "source-cards.json#4939f3e204713c7f",
+        "source-documents.json#https://www.stahuj.cz/magazin/android/"
+      ],
+      "judgment_basis": "visible_source_card_or_unknown_original"
+    },
+    {
+      "blind_id": "5131957be6215877",
+      "case_id": "nn06",
+      "url": "https://en.wikipedia.org/wiki/2025",
+      "grade": 0,
+      "kind": "other",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "reason": "Энциклопедическая статья о календарном2025годе; не конкретные новости города. Это оценка видимого предмета карточки.",
+      "evidence": [
+        "2025 - Wikipedia"
+      ],
+      "source_refs": [
+        "source-cards.json#5131957be6215877"
+      ],
+      "judgment_basis": "visible_source_card_or_unknown_original"
+    },
+    {
+      "blind_id": "51ea7cba3b18b6d3",
+      "case_id": "nn07",
+      "url": "https://intercadet.ru/",
+      "grade": 0,
+      "kind": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "reason": "Карточка общероссийского кадетского сообщества, не новостная публикация заданного города/периода.",
+      "evidence": [
+        "Российское Кадетcкое братство. Общекадетский информационный портал"
+      ],
+      "source_refs": [
+        "source-cards.json#51ea7cba3b18b6d3"
+      ],
+      "judgment_basis": "visible_source_card_or_unknown_original"
+    },
+    {
+      "blind_id": "66eeb4470a4b8105",
+      "case_id": "nn06",
+      "url": "https://www.linkedin.com/posts/tihobanov_2025-%D0%B1%D0%B5%D1%88%D0%B5-%D0%B3%D0%BE%D0%B4%D0%B8%D0%BD%D0%B0-%D0%BD%D0%B0-%D0%BF%D1%80%D0%B5%D0%BB%D0%BE%D0%BC%D0%B0-%D0%B3%D0%BE%D0%B4%D0%B8%D0%BD%D0%B0%D1%82%D0%B0-%D0%B2-activity-7412144432239693824-bXGb",
+      "grade": 0,
+      "kind": "other",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "reason": "Пост об ИИ/итогах2025 на болгарском, а не городские новости Воронежа. По видимому содержимому карточки.",
+      "evidence": [
+        "2025 беше година на прелома."
+      ],
+      "source_refs": [
+        "source-cards.json#66eeb4470a4b8105"
+      ],
+      "judgment_basis": "visible_source_card_or_unknown_original"
+    },
+    {
+      "blind_id": "7eb0f8c76cc5f955",
+      "case_id": "nn07",
+      "url": "https://buh.ru/",
+      "grade": 0,
+      "kind": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "reason": "Бухгалтерский портал/законодательство по карточке; не конкретные городские новости Воронежа за2030. Полного текста нет.",
+      "evidence": [
+        "Бухгалтерский учет, налогообложение, отчетность, МСФО"
+      ],
+      "source_refs": [
+        "source-cards.json#7eb0f8c76cc5f955",
+        "source-documents.json#https://buh.ru/"
+      ],
+      "judgment_basis": "visible_source_card_or_unknown_original"
+    },
+    {
+      "blind_id": "7ff3aea0c692f8a3",
+      "case_id": "nn08",
+      "url": "https://chrome-stats.com/d/app.bevsa.rus_r36",
+      "grade": null,
+      "kind": "application",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "reason": "Карточка обещает приложение местных новостей, но оригинал недоступен web-open; нужное приложение и реальная загрузка не подтверждены. Не считаю ошибкой сам тип приложения в nn08.",
+      "evidence": [
+        "Local news: Voronezh, Rossosh, Borisoglebsk, Liski, Ostrogozhsk, Novovoronezh"
+      ],
+      "source_refs": [
+        "source-cards.json#7ff3aea0c692f8a3",
+        "source-documents.json#https://chrome-stats.com/d/app.bevsa.rus_r36",
+        "gold-nn05-08-open-01-02.json"
+      ],
+      "judgment_basis": "visible_source_card_or_unknown_original"
+    },
+    {
+      "blind_id": "80b1306dcff9c30d",
+      "case_id": "nn06",
+      "url": "https://avtodor-tr.ru/road/m-4/",
+      "grade": 0,
+      "kind": "other",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "reason": "Карточка оплаты проезда/счёта, без конкретного новостного материала о городе. Оценивается видимое назначение страницы.",
+      "evidence": [
+        "Оплата проезда по номеру автомобиляПополнение лицевого счетаМобильное приложение"
+      ],
+      "source_refs": [
+        "source-cards.json#80b1306dcff9c30d"
+      ],
+      "judgment_basis": "visible_source_card_or_unknown_original"
+    },
+    {
+      "blind_id": "859b4f52a57c36bc",
+      "case_id": "nn08",
+      "url": "http://addons-guru.ru/help/programmy_dlja_android_kachat.html",
+      "grade": 0,
+      "kind": "other",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "reason": "Карточка клиента для обновления/загрузки аддонов, а не приложения новостей города.",
+      "evidence": [
+        "Этот клиент предназначен для автоматического обновление и загрузки аддонов."
+      ],
+      "source_refs": [
+        "source-cards.json#859b4f52a57c36bc"
+      ],
+      "judgment_basis": "visible_source_card_or_unknown_original"
+    },
+    {
+      "blind_id": "864014c3b629f45b",
+      "case_id": "nn08",
+      "url": "https://play.google.com/store/apps/details?id=ru.ivi.client&hl=cs",
+      "grade": 0,
+      "kind": "application",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "reason": "Карточка другого конкретного приложения — Иви, кино/сериалы/ТВ; не приложение новостей Воронежа. Этот hl=cs вариант полностью не читался.",
+      "evidence": [
+        "Иви: сериалы, фильмы и ТВ"
+      ],
+      "source_refs": [
+        "source-cards.json#864014c3b629f45b"
+      ],
+      "judgment_basis": "visible_source_card_or_unknown_original"
+    },
+    {
+      "blind_id": "895af10dd53aaad9",
+      "case_id": "nn07",
+      "url": "https://www.mojemedunka.cz/index.php/2022/02/23/obsah-cisla-3-2022/",
+      "grade": 0,
+      "kind": "other",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "reason": "Содержание чешского журнала3/2022, не новости заданного города/периода. Только карточка.",
+      "evidence": [
+        "Obsah čísla 3/2022"
+      ],
+      "source_refs": [
+        "source-cards.json#895af10dd53aaad9"
+      ],
+      "judgment_basis": "visible_source_card_or_unknown_original"
+    },
+    {
+      "blind_id": "8c74720bb73258df",
+      "case_id": "nn08",
+      "url": "https://play.google.com/store/apps/details?id=ru.ivi.client&hl=en_US",
+      "grade": 0,
+      "kind": "application",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": true,
+      "reason": "Открытая страница подтверждает Иви как онлайн-кинотеатр. Упомянуты общие ТВ-новости, но описание не демонстрирует приложение именно новостей Воронежа. Ни тип приложения, ни отсутствие даты сами по себе здесь не причина0.",
+      "evidence": [
+        "Иви: онлайн-кинотеатр"
+      ],
+      "source_refs": [
+        "source-cards.json#8c74720bb73258df",
+        "gold-nn05-08-open-03-04.json"
+      ],
+      "judgment_basis": "opened_source_text"
+    },
+    {
+      "blind_id": "9b98500bfd411c80",
+      "case_id": "nn07",
+      "url": "https://distr.cz/cs/323-informatika-a-vypocetni-technika-3-rocnik",
+      "grade": 0,
+      "kind": "other",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "reason": "Карточка учебной/книжной категории по информатике, не городские новости.",
+      "evidence": [
+        "3. ročník"
+      ],
+      "source_refs": [
+        "source-cards.json#9b98500bfd411c80"
+      ],
+      "judgment_basis": "visible_source_card_or_unknown_original"
+    },
+    {
+      "blind_id": "9c3cb12f9c996abf",
+      "case_id": "nn07",
+      "url": "http://novozoloto.ru/kniga-otzyvov",
+      "grade": 0,
+      "kind": "other",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "reason": "Гостевая книга ювелирного магазина: отзыв о доставке, а не новостная публикация. HTTP200 не заменяет чтение полного текста; оценка по видимой карточке.",
+      "evidence": [
+        "Гостевая Книга Отзывов"
+      ],
+      "source_refs": [
+        "source-cards.json#9c3cb12f9c996abf",
+        "source-documents.json#http://novozoloto.ru/kniga-otzyvov"
+      ],
+      "judgment_basis": "visible_source_card_or_unknown_original"
+    },
+    {
+      "blind_id": "9eaaa6ac16cf39a3",
+      "case_id": "nn07",
+      "url": "https://knihovna.vspj.cz/cs/soubor/stahnout/ca61bc14-0026-4976-9661-fc8b15cb5f55",
+      "grade": 0,
+      "kind": "other",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "reason": "Карточка библиотечного журнала/выпуска2023, не городские новости Воронежа.",
+      "evidence": [
+        "2023 Ročník 14 Číslo 3"
+      ],
+      "source_refs": [
+        "source-cards.json#9eaaa6ac16cf39a3"
+      ],
+      "judgment_basis": "visible_source_card_or_unknown_original"
+    },
+    {
+      "blind_id": "a61fd62373ed9e62",
+      "case_id": "nn08",
+      "url": "https://support.google.com/android/answer/9457058?hl=cs",
+      "grade": 1,
+      "kind": "other",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": true,
+      "reason": "Открыта общая официальная инструкция по загрузке приложений Android. Полезный фон для установки, но нужного приложения новостей города не показывает.",
+      "evidence": [
+        "Stahování aplikací do zařízení Android"
+      ],
+      "source_refs": [
+        "source-cards.json#a61fd62373ed9e62",
+        "source-documents.json#https://support.google.com/android/answer/9457058?hl=cs",
+        "gold-nn05-08-open-03-04.json"
+      ],
+      "judgment_basis": "opened_source_text"
+    },
+    {
+      "blind_id": "ab2f934107e7d525",
+      "case_id": "nn08",
+      "url": "https://play.google.com/store/apps/details?id=com.twitter.android&hl=cs",
+      "grade": 1,
+      "kind": "application",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "reason": "Карточка X показывает общее приложение новостей/соцсетей Android; локальная новостная привязка Воронежа/специальное приложение не установлены. Только карточка, не grade2.",
+      "evidence": [
+        "Nejnovější zprávy a sociální média"
+      ],
+      "source_refs": [
+        "source-cards.json#ab2f934107e7d525"
+      ],
+      "judgment_basis": "visible_source_card_or_unknown_original"
+    },
+    {
+      "blind_id": "b284bbcb71b3fde5",
+      "case_id": "nn08",
+      "url": "https://www.sbepl.in/e37/",
+      "grade": null,
+      "kind": "unknown",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "reason": "Общее описание без города и приложения; оригинал не прочитан, назначение источника неизвестно.",
+      "evidence": [
+        "Этот информативный текст отличается привлекательным содержанием"
+      ],
+      "source_refs": [
+        "source-cards.json#b284bbcb71b3fde5"
+      ],
+      "judgment_basis": "visible_source_card_or_unknown_original"
+    },
+    {
+      "blind_id": "b2e3109611e8b591",
+      "case_id": "nn06",
+      "url": "http://www.radio.ru/",
+      "grade": 0,
+      "kind": "other",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "reason": "Карточка подписки на журнал Радио, а не городской новостной статьи; полнотекстовое чтение не удалось из-за кодировки. Тема0 только по явному предмету карточки.",
+      "evidence": [
+        "Подписка на электронный журнал \"Радио\""
+      ],
+      "source_refs": [
+        "source-cards.json#b2e3109611e8b591",
+        "source-documents.json#http://www.radio.ru/"
+      ],
+      "judgment_basis": "visible_source_card_or_unknown_original"
+    },
+    {
+      "blind_id": "b902948f490cde38",
+      "case_id": "nn08",
+      "url": "https://ru.wikipedia.org/wiki/Android",
+      "grade": 1,
+      "kind": "other",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "reason": "Энциклопедическая справка об Android может быть общим фоном платформы, но конкретного приложения новостей не предоставляет. Только карточка.",
+      "evidence": [
+        "Android — Википедия"
+      ],
+      "source_refs": [
+        "source-cards.json#b902948f490cde38"
+      ],
+      "judgment_basis": "visible_source_card_or_unknown_original"
+    },
+    {
+      "blind_id": "c084944b58e3a22c",
+      "case_id": "nn06",
+      "url": "https://www.zbozi.cz/kancelar/kancelarske-potreby/kalendare/?pro-rok=2025",
+      "grade": 0,
+      "kind": "other",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "reason": "Карточка магазина календарей на2025, а не новостная статья.",
+      "evidence": [
+        "Kalendáře 2025 - Zbozi.cz"
+      ],
+      "source_refs": [
+        "source-cards.json#c084944b58e3a22c"
+      ],
+      "judgment_basis": "visible_source_card_or_unknown_original"
+    },
+    {
+      "blind_id": "d7d4688591e350b6",
+      "case_id": "nn07",
+      "url": "https://antimaf.pro/news",
+      "grade": null,
+      "kind": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "reason": "Оригинал недоступен: fetch_timeout. Видимый заголовок о Польше/Китае не устанавливает полный состав ленты или дату; не превращаю недоступность в FP.",
+      "evidence": [
+        "Посол Польши в Китае Якуб Кумох"
+      ],
+      "source_refs": [
+        "source-cards.json#d7d4688591e350b6",
+        "source-documents.json#https://antimaf.pro/news"
+      ],
+      "judgment_basis": "visible_source_card_or_unknown_original"
+    },
+    {
+      "blind_id": "e14623a165c878a2",
+      "case_id": "nn06",
+      "url": "https://voda235.webnode.cz/rok-2025-udalosti/",
+      "grade": 0,
+      "kind": "other",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "reason": "Карточка хроники2025 о Трампе/Макроне, а не конкретных новостей Воронежа.",
+      "evidence": [
+        "Rok 2025 události"
+      ],
+      "source_refs": [
+        "source-cards.json#e14623a165c878a2"
+      ],
+      "judgment_basis": "visible_source_card_or_unknown_original"
+    },
+    {
+      "blind_id": "e50ab4f6751f2da8",
+      "case_id": "nn06",
+      "url": "https://www.chelzea.cz/ze-zivota/zacatek-roku-2025/",
+      "grade": 0,
+      "kind": "other",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "reason": "Карточка театральной/культурной страницы другого контекста в Чехии; не новости Воронежа заданного месяца.",
+      "evidence": [
+        "Začátek roku 2025 - Chelzea.cz"
+      ],
+      "source_refs": [
+        "source-cards.json#e50ab4f6751f2da8"
+      ],
+      "judgment_basis": "visible_source_card_or_unknown_original"
+    },
+    {
+      "blind_id": "edfeb782af6e5878",
+      "case_id": "nn07",
+      "url": "http://government.ru/news/46277/",
+      "grade": null,
+      "kind": "article",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "reason": "Оригинал выступления на правительственном форуме не прочитан: web-open timeout. Полная дата публикации не известна; будущая публикация2030 не подтверждена.",
+      "evidence": [
+        "Михаил Мишустин принял участие в работе пленарной сессии"
+      ],
+      "source_refs": [
+        "source-cards.json#edfeb782af6e5878",
+        "gold-nn05-08-open-01-02.json"
+      ],
+      "judgment_basis": "visible_source_card_or_unknown_original"
+    },
+    {
+      "blind_id": "f2997d54929d82ab",
+      "case_id": "nn06",
+      "url": "https://zody.woman.ru/",
+      "grade": 0,
+      "kind": "feed",
+      "published_date": null,
+      "date_verified": false,
+      "source_reviewed": false,
+      "reason": "Астрологический портал/гороскопы по явной карточке; не городские новости Воронежа. Полный текст отсутствует (ошибка extraction).",
+      "evidence": [
+        "Гороскопы для любых знаков зодиака"
+      ],
+      "source_refs": [
+        "source-cards.json#f2997d54929d82ab",
+        "source-documents.json#https://zody.woman.ru/"
+      ],
+      "judgment_basis": "visible_source_card_or_unknown_original"
+    }
+  ],
+  "limits": [
+    "31card grades remain provisional when no readable original; source_reviewed field retained",
+    "7unknown originals remain unknown; not negative",
+    "native source phase after primary inference, before join; annotators blind to model labels",
+    "same-team review; not formal independent acceptance",
+    "two Nizhny Novgorod articles share one event cluster"
+  ],
+  "schema_normalization": {
+    "at_utc": "2026-11-03T11:32:27.787137+00:00",
+    "reason": "First analyzer join rejected three subtype names outside agreed enum; no successful score existed. Grades/date/source evidence unchanged. Original annotator parts and combined snapshot retained.",
+    "changes": [
+      {
+        "blind_id": "1c481a7b37b51b9c",
+        "from": "site_navigation",
+        "to": "feed"
+      },
+      {
+        "blind_id": "0fdd66bf596cb847",
+        "from": "site_profile",
+        "to": "other"
+      },
+      {
+        "blind_id": "a758d99d211b17c1",
+        "from": "channel",
+        "to": "feed"
+      }
+    ]
+  }
+}

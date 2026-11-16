@@ -1,0 +1,457 @@
+{
+  "source_root_hint": "../research/outputs/research/2026-10-29-continuous-web-search/experiments/round-30/B17",
+  "source_date": "2026-10-29",
+  "fixture_sha256": "b67e3269830ae0e976aa9b4c5dc2f6b9c3e922ad1adda35738289d6b1b8325d6",
+  "frozen_files_sha256": {
+    "capture.py": "b41cdb000846a2043eb4211041803bf391cf67f2a7e1e762695b5eab6552a7c3",
+    "dom_guard.py": "7c3b64158e64d79c6b45461795ce0e544e5afe3eccfc51aaf944fd07d01e2b90",
+    "parse.py": "36b9d6baaed9a1fc76988a3b8e50acafe4a97d58678e81f3f40fe9110feb04f2",
+    "parser.py": "20ac662a51f205622fec20778e43cd5b8ea7c22db58617231b737c031b45c7e4",
+    "enrich.py": "8a6eb3fef810b9e82db911cba31760d1dc2f23ef8524ccb2d4029946b1791745",
+    "export.py": "aa99d7fc46e383974721a545afb7ccb655ed962d82a735546fac0e8abc7766f3",
+    "extract.py": "396bc81402d564c814490d9f1c6d82f9930b45e16672e46ec8b8d31e6a6d8fab",
+    "rrf.py": "4bea734c675175953b0576a44ba1df5984f396c101fe3dad37ce1ccae423da90",
+    "classify.py": "aa9945c287f04bb817fae0dfa23c233972b8ddd32008e3ba4c875528a8f7509f",
+    "evaluate.py": "531568f4882619763a22b0c51b178b932b3d64e5a249c03dbb699a77dd28bed1",
+    "fresh-schedule.json": "c3a2f747482bec54aaf668359e1c07350d2ac0bcb6f0389a4f9ad8af858aa021",
+    "fresh-trace.json": "b0f5eae9433c5efcd5209685d5bb06c5f185e602abbdcba8870ef351276c1c5f"
+  },
+  "expected_enriched_sha256": "e374eca387eec3d70fa5cefa88d5e36dbee3cfda52fe3021d730bf07714d8d51",
+  "captures": [
+    {
+      "request_id": "R001",
+      "engine": "seznam",
+      "internal_query": "Rust владение borrowing документация",
+      "url": "https://search.seznam.cz/?q=Rust+%D0%B2%D0%BB%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5+borrowing+%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F",
+      "html_sha256": "0228aad259ec06e2441ba179aad2ee7b410c9579d356ba8425c3a0a9dab4a740"
+    },
+    {
+      "request_id": "R002",
+      "engine": "naver",
+      "internal_query": "Rust владение borrowing документация",
+      "url": "https://search.naver.com/search.naver?where=web&query=Rust+%D0%B2%D0%BB%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5+borrowing+%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F",
+      "html_sha256": "85a0485a85cc865512b09699f6e6645775680a103acfc1a692828e6ecfa0edaa"
+    },
+    {
+      "request_id": "R003",
+      "engine": "seznam",
+      "internal_query": "Rust ownership borrowing documentation",
+      "url": "https://search.seznam.cz/?q=Rust+ownership+borrowing+documentation",
+      "html_sha256": "38d037e94c09b6887d3d9386ccac673c2543c622b59836ba5302e52d6b13884e"
+    },
+    {
+      "request_id": "R004",
+      "engine": "naver",
+      "internal_query": "Rust ownership borrowing documentation",
+      "url": "https://search.naver.com/search.naver?where=web&query=Rust+ownership+borrowing+documentation",
+      "html_sha256": "82f02265e8369b239f91e17df7ad1e93d8519a04381979c6e20f5a8d247c1de1"
+    },
+    {
+      "request_id": "R005",
+      "engine": "seznam",
+      "internal_query": "SQLite транзакции WAL документация",
+      "url": "https://search.seznam.cz/?q=SQLite+%D1%82%D1%80%D0%B0%D0%BD%D0%B7%D0%B0%D0%BA%D1%86%D0%B8%D0%B8+WAL+%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F",
+      "html_sha256": "d36cc607bd402b19c9e1577124e8745af2e3a07299153fa21531a3e167e9c71c"
+    },
+    {
+      "request_id": "R006",
+      "engine": "naver",
+      "internal_query": "SQLite транзакции WAL документация",
+      "url": "https://search.naver.com/search.naver?where=web&query=SQLite+%D1%82%D1%80%D0%B0%D0%BD%D0%B7%D0%B0%D0%BA%D1%86%D0%B8%D0%B8+WAL+%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F",
+      "html_sha256": "ad5ae0a49cc02f3e04a1946678e2b2b6c1cfc8029be08be9db1423ffadb00ed6"
+    },
+    {
+      "request_id": "R007",
+      "engine": "seznam",
+      "internal_query": "SQLite transactions WAL documentation",
+      "url": "https://search.seznam.cz/?q=SQLite+transactions+WAL+documentation",
+      "html_sha256": "e2e429242b85a7a05223bc9a61605120cbc51bb4329e1cad2469c668d44fc5b1"
+    },
+    {
+      "request_id": "R008",
+      "engine": "naver",
+      "internal_query": "SQLite transactions WAL documentation",
+      "url": "https://search.naver.com/search.naver?where=web&query=SQLite+transactions+WAL+documentation",
+      "html_sha256": "d220fffd0d8ada59c948f6de663be6adc619fe0836830348fa356cf3b51ace0c"
+    },
+    {
+      "request_id": "R009",
+      "engine": "seznam",
+      "internal_query": "HTTP статус 304 Last-Modified ETag",
+      "url": "https://search.seznam.cz/?q=HTTP+%D1%81%D1%82%D0%B0%D1%82%D1%83%D1%81+304+Last-Modified+ETag",
+      "html_sha256": "6aa3375675c580cf32e7a57272169253a73deda05147502dbf329264d4c93ba0"
+    },
+    {
+      "request_id": "R010",
+      "engine": "naver",
+      "internal_query": "HTTP статус 304 Last-Modified ETag",
+      "url": "https://search.naver.com/search.naver?where=web&query=HTTP+%D1%81%D1%82%D0%B0%D1%82%D1%83%D1%81+304+Last-Modified+ETag",
+      "html_sha256": "a54b34254ec3dcc58cc24d9b5cf75658226c0a232d2db36d27e7b281e24d9cde"
+    },
+    {
+      "request_id": "R011",
+      "engine": "seznam",
+      "internal_query": "HTTP status 304 Last-Modified ETag",
+      "url": "https://search.seznam.cz/?q=HTTP+status+304+Last-Modified+ETag",
+      "html_sha256": "1c3b2b8a8e11349bb7f9e644bad5985b9eabe2361b2ee2b9309f2611ddaded1e"
+    },
+    {
+      "request_id": "R012",
+      "engine": "naver",
+      "internal_query": "HTTP status 304 Last-Modified ETag",
+      "url": "https://search.naver.com/search.naver?where=web&query=HTTP+status+304+Last-Modified+ETag",
+      "html_sha256": "7db2cd2cb44ee3b339804da4477b2133a14a16303235f2cc6e936317c012135a"
+    },
+    {
+      "request_id": "R013",
+      "engine": "seznam",
+      "internal_query": "Tokio асинхронный Rust руководство",
+      "url": "https://search.seznam.cz/?q=Tokio+%D0%B0%D1%81%D0%B8%D0%BD%D1%85%D1%80%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9+Rust+%D1%80%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE",
+      "html_sha256": "6cc84c036ff2f1c8d8e7679f99f848ba27f7b5eeeac2a9d993e93ffd6edd911b"
+    },
+    {
+      "request_id": "R014",
+      "engine": "naver",
+      "internal_query": "Tokio асинхронный Rust руководство",
+      "url": "https://search.naver.com/search.naver?where=web&query=Tokio+%D0%B0%D1%81%D0%B8%D0%BD%D1%85%D1%80%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9+Rust+%D1%80%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE",
+      "html_sha256": "214b933737c2f3f59069248a565bcd736093df935b8d0893dff35e06f228c7bb"
+    },
+    {
+      "request_id": "R015",
+      "engine": "seznam",
+      "internal_query": "Tokio async Rust guide",
+      "url": "https://search.seznam.cz/?q=Tokio+async+Rust+guide",
+      "html_sha256": "16692d35f49c54860d427edaaaab8c8973821395711db661af664f40306fbeb1"
+    },
+    {
+      "request_id": "R016",
+      "engine": "naver",
+      "internal_query": "Tokio async Rust guide",
+      "url": "https://search.naver.com/search.naver?where=web&query=Tokio+async+Rust+guide",
+      "html_sha256": "ca802dd9eef3f4247c9f327b78bf34f0e86bbdb8cd619a0c1baea43a921c378c"
+    },
+    {
+      "request_id": "R017",
+      "engine": "seznam",
+      "internal_query": "экскаватор рабочий цикл перемещение грунта",
+      "url": "https://search.seznam.cz/?q=%D1%8D%D0%BA%D1%81%D0%BA%D0%B0%D0%B2%D0%B0%D1%82%D0%BE%D1%80+%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9+%D1%86%D0%B8%D0%BA%D0%BB+%D0%BF%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D0%B5+%D0%B3%D1%80%D1%83%D0%BD%D1%82%D0%B0",
+      "html_sha256": "830f03d4a16220cfffc8bf268773f57696c1ccc2c52b492a63c6fec87818ceb4"
+    },
+    {
+      "request_id": "R018",
+      "engine": "naver",
+      "internal_query": "экскаватор рабочий цикл перемещение грунта",
+      "url": "https://search.naver.com/search.naver?where=web&query=%D1%8D%D0%BA%D1%81%D0%BA%D0%B0%D0%B2%D0%B0%D1%82%D0%BE%D1%80+%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9+%D1%86%D0%B8%D0%BA%D0%BB+%D0%BF%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D0%B5+%D0%B3%D1%80%D1%83%D0%BD%D1%82%D0%B0",
+      "html_sha256": "f12c0a869a5f3a199c9aa70ab248b19f63acd033447610ac5e2090b4fbbc4bb0"
+    },
+    {
+      "request_id": "R019",
+      "engine": "seznam",
+      "internal_query": "excavator working cycle soil movement",
+      "url": "https://search.seznam.cz/?q=excavator+working+cycle+soil+movement",
+      "html_sha256": "7230a4eed6b945e1a9137a179ebb031425716c0a23211a5b2d35e974114c6dc9"
+    },
+    {
+      "request_id": "R020",
+      "engine": "naver",
+      "internal_query": "excavator working cycle soil movement",
+      "url": "https://search.naver.com/search.naver?where=web&query=excavator+working+cycle+soil+movement",
+      "html_sha256": "de4cfd78d8222ac8586c282d9aa60c1e63812d24f21de471b990186a1d967ed6"
+    },
+    {
+      "request_id": "R021",
+      "engine": "seznam",
+      "internal_query": "excavator working cycle digging swing dumping return",
+      "url": "https://search.seznam.cz/?q=excavator+working+cycle+digging+swing+dumping+return",
+      "html_sha256": "8d1b70071c184f786f35953cad124b6c3dc5d601d800328a800b096696067cce"
+    },
+    {
+      "request_id": "R022",
+      "engine": "naver",
+      "internal_query": "excavator working cycle digging swing dumping return",
+      "url": "https://search.naver.com/search.naver?where=web&query=excavator+working+cycle+digging+swing+dumping+return",
+      "html_sha256": "1a8db043325ec56a9ab15a3e812164754a7166a0dc939d4580ddaa2a3b80a4a3"
+    },
+    {
+      "request_id": "R023",
+      "engine": "seznam",
+      "internal_query": "excavator cycle time stages digging swinging dumping return",
+      "url": "https://search.seznam.cz/?q=excavator+cycle+time+stages+digging+swinging+dumping+return",
+      "html_sha256": "c347f65487ff35582dc2c2859fee70a22a0f6907e5e6a47f8059f4807dcb4335"
+    },
+    {
+      "request_id": "R024",
+      "engine": "naver",
+      "internal_query": "excavator cycle time stages digging swinging dumping return",
+      "url": "https://search.naver.com/search.naver?where=web&query=excavator+cycle+time+stages+digging+swinging+dumping+return",
+      "html_sha256": "2eb4d3d53fd9e2dcbc7f441110735eb4a1c3b62be8fd906e9b89be36182aa7a3"
+    },
+    {
+      "request_id": "R025",
+      "engine": "seznam",
+      "internal_query": "site:doc.rust-lang.org владение ownership",
+      "url": "https://search.seznam.cz/?q=site%3Adoc.rust-lang.org+%D0%B2%D0%BB%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5+ownership",
+      "html_sha256": "a692f8fb0ffa63a4f0bd5dda0630b73c47705e5d7f7bcf96b8d1e491193c1040"
+    },
+    {
+      "request_id": "R026",
+      "engine": "naver",
+      "internal_query": "site:doc.rust-lang.org владение ownership",
+      "url": "https://search.naver.com/search.naver?where=web&query=site%3Adoc.rust-lang.org+%D0%B2%D0%BB%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5+ownership",
+      "html_sha256": "1b6006fe4133772fbc800789e554f49e61da2d3770d1a32b947dc70947423676"
+    },
+    {
+      "request_id": "R027",
+      "engine": "seznam",
+      "internal_query": "site:doc.rust-lang.org ownership",
+      "url": "https://search.seznam.cz/?q=site%3Adoc.rust-lang.org+ownership",
+      "html_sha256": "466985778c015548f1e6fcce9755a6c436c2b3d8c338a9f60a341d3f27bdb10e"
+    },
+    {
+      "request_id": "R028",
+      "engine": "naver",
+      "internal_query": "site:doc.rust-lang.org ownership",
+      "url": "https://search.naver.com/search.naver?where=web&query=site%3Adoc.rust-lang.org+ownership",
+      "html_sha256": "5ff78c53dd6263032641e54b2aee7d27b6df7517e6600d7963009c5ee94a8523"
+    },
+    {
+      "request_id": "R029",
+      "engine": "seznam",
+      "internal_query": "Rust Python обработка HTML сравнение",
+      "url": "https://search.seznam.cz/?q=Rust+Python+%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0+HTML+%D1%81%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5",
+      "html_sha256": "dfe3be38a372d5defb7e35ef6f67d9fe0425c41a5f735e80e1f0ff1c425231af"
+    },
+    {
+      "request_id": "R030",
+      "engine": "naver",
+      "internal_query": "Rust Python обработка HTML сравнение",
+      "url": "https://search.naver.com/search.naver?where=web&query=Rust+Python+%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0+HTML+%D1%81%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5",
+      "html_sha256": "bf8ac570c01c32e18bcaf3aab7f2fa8ba9e2d15f93f70f101d02ddd0a3b1977a"
+    },
+    {
+      "request_id": "R031",
+      "engine": "seznam",
+      "internal_query": "Rust Python HTML processing comparison",
+      "url": "https://search.seznam.cz/?q=Rust+Python+HTML+processing+comparison",
+      "html_sha256": "a529347149c74a399c06c15aa05e3da0c6b20f7b3dde78c7f9721d919a6daa8d"
+    },
+    {
+      "request_id": "R032",
+      "engine": "naver",
+      "internal_query": "Rust Python HTML processing comparison",
+      "url": "https://search.naver.com/search.naver?where=web&query=Rust+Python+HTML+processing+comparison",
+      "html_sha256": "8cdee968596dfc4dcb5946ccbd85cb9563896fee99331e09fcb2f86b3984bb31"
+    },
+    {
+      "request_id": "R033",
+      "engine": "seznam",
+      "internal_query": "последняя стабильная версия Rust октябрь 2026",
+      "url": "https://search.seznam.cz/?q=%D0%BF%D0%BE%D1%81%D0%BB%D0%B5%D0%B4%D0%BD%D1%8F%D1%8F+%D1%81%D1%82%D0%B0%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F+%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F+Rust+%D0%BE%D0%BA%D1%82%D1%8F%D0%B1%D1%80%D1%8C+2026",
+      "html_sha256": "1ee819ef1b0c3364fe3a65c9b6adcfa8b6e25b94a39216307c945f9e25e4a51f"
+    },
+    {
+      "request_id": "R034",
+      "engine": "naver",
+      "internal_query": "последняя стабильная версия Rust октябрь 2026",
+      "url": "https://search.naver.com/search.naver?where=web&query=%D0%BF%D0%BE%D1%81%D0%BB%D0%B5%D0%B4%D0%BD%D1%8F%D1%8F+%D1%81%D1%82%D0%B0%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F+%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F+Rust+%D0%BE%D0%BA%D1%82%D1%8F%D0%B1%D1%80%D1%8C+2026",
+      "html_sha256": "50e59f448db265883e23d54e6c595402cff86f7d17eba55541401ca3990020db"
+    },
+    {
+      "request_id": "R035",
+      "engine": "seznam",
+      "internal_query": "latest stable Rust version October 2026",
+      "url": "https://search.seznam.cz/?q=latest+stable+Rust+version+October+2026",
+      "html_sha256": "fd765f54d32f15871a1385a66b859e38a2565e880a683a2227e6e6515e321f79"
+    },
+    {
+      "request_id": "R036",
+      "engine": "naver",
+      "internal_query": "latest stable Rust version October 2026",
+      "url": "https://search.naver.com/search.naver?where=web&query=latest+stable+Rust+version+October+2026",
+      "html_sha256": "fbee7e4d32934ba19b0e8b5ee324cb4cf7342b5f5946594c4f20a175ec65f01f"
+    },
+    {
+      "request_id": "R037",
+      "engine": "seznam",
+      "internal_query": "Unicode графема кодовая точка разница",
+      "url": "https://search.seznam.cz/?q=Unicode+%D0%B3%D1%80%D0%B0%D1%84%D0%B5%D0%BC%D0%B0+%D0%BA%D0%BE%D0%B4%D0%BE%D0%B2%D0%B0%D1%8F+%D1%82%D0%BE%D1%87%D0%BA%D0%B0+%D1%80%D0%B0%D0%B7%D0%BD%D0%B8%D1%86%D0%B0",
+      "html_sha256": "82a3ffd8dce2a79456b7e8acc7538d4d31b6174b825d57fda232fadaa0b61857"
+    },
+    {
+      "request_id": "R038",
+      "engine": "naver",
+      "internal_query": "Unicode графема кодовая точка разница",
+      "url": "https://search.naver.com/search.naver?where=web&query=Unicode+%D0%B3%D1%80%D0%B0%D1%84%D0%B5%D0%BC%D0%B0+%D0%BA%D0%BE%D0%B4%D0%BE%D0%B2%D0%B0%D1%8F+%D1%82%D0%BE%D1%87%D0%BA%D0%B0+%D1%80%D0%B0%D0%B7%D0%BD%D0%B8%D1%86%D0%B0",
+      "html_sha256": "2a238c96101597d4ddc0328e516b4000ebc322c177e0c962d51bbaa14dc6d0b9"
+    },
+    {
+      "request_id": "R039",
+      "engine": "seznam",
+      "internal_query": "Unicode grapheme code point difference",
+      "url": "https://search.seznam.cz/?q=Unicode+grapheme+code+point+difference",
+      "html_sha256": "e79ade7211529b5b184dfae2cd169819510fbae77269f53d4a9c18cabc37d25f"
+    },
+    {
+      "request_id": "R040",
+      "engine": "naver",
+      "internal_query": "Unicode grapheme code point difference",
+      "url": "https://search.naver.com/search.naver?where=web&query=Unicode+grapheme+code+point+difference",
+      "html_sha256": "eecdcb19354c28872f427d174bf365d5169129657dace170799aacf64ca6deb0"
+    },
+    {
+      "request_id": "R041",
+      "engine": "seznam",
+      "internal_query": "DNS rebinding SSRF IPv6 защита",
+      "url": "https://search.seznam.cz/?q=DNS+rebinding+SSRF+IPv6+%D0%B7%D0%B0%D1%89%D0%B8%D1%82%D0%B0",
+      "html_sha256": "2452ea7d2f4788053be540d522836af3d8f7a0c23e61be12a53e8a746e308621"
+    },
+    {
+      "request_id": "R042",
+      "engine": "naver",
+      "internal_query": "DNS rebinding SSRF IPv6 защита",
+      "url": "https://search.naver.com/search.naver?where=web&query=DNS+rebinding+SSRF+IPv6+%D0%B7%D0%B0%D1%89%D0%B8%D1%82%D0%B0",
+      "html_sha256": "e60955533d4f64d5b837f19fd76ebab25c638222b8340fd336efb1bbdb25c3b0"
+    },
+    {
+      "request_id": "R043",
+      "engine": "seznam",
+      "internal_query": "DNS rebinding SSRF IPv6 protection",
+      "url": "https://search.seznam.cz/?q=DNS+rebinding+SSRF+IPv6+protection",
+      "html_sha256": "3d81ba468231de086ead70820b9c8e180f3dbe9d69782763cdd8860fb1a57da9"
+    },
+    {
+      "request_id": "R044",
+      "engine": "naver",
+      "internal_query": "DNS rebinding SSRF IPv6 protection",
+      "url": "https://search.naver.com/search.naver?where=web&query=DNS+rebinding+SSRF+IPv6+protection",
+      "html_sha256": "38597e22631f046177dc23b3264e9d8367ff3ed78d211856af78114acf64d3fb"
+    },
+    {
+      "request_id": "R045",
+      "engine": "seznam",
+      "internal_query": "SSRF DNS rebinding IPv6 prevention",
+      "url": "https://search.seznam.cz/?q=SSRF+DNS+rebinding+IPv6+prevention",
+      "html_sha256": "b9cd29eb71e8b9295931d78a51785237b036e4c02e96ce959649a3e8f62a9aa7"
+    },
+    {
+      "request_id": "R046",
+      "engine": "naver",
+      "internal_query": "SSRF DNS rebinding IPv6 prevention",
+      "url": "https://search.naver.com/search.naver?where=web&query=SSRF+DNS+rebinding+IPv6+prevention",
+      "html_sha256": "9f601d8ab321aa55af98a886425dea0eb27bba36793b4e5681f4cad8a6dff4ed"
+    },
+    {
+      "request_id": "R047",
+      "engine": "seznam",
+      "internal_query": "OWASP CheatSheetSeries SSRF IPv6 allowlist validation GitHub",
+      "url": "https://search.seznam.cz/?q=OWASP+CheatSheetSeries+SSRF+IPv6+allowlist+validation+GitHub",
+      "html_sha256": "cc4cf2f9edbb0b365676b388648ccadcb3a215f6b4756ee5be539454ede0786d"
+    },
+    {
+      "request_id": "R048",
+      "engine": "naver",
+      "internal_query": "OWASP CheatSheetSeries SSRF IPv6 allowlist validation GitHub",
+      "url": "https://search.naver.com/search.naver?where=web&query=OWASP+CheatSheetSeries+SSRF+IPv6+allowlist+validation+GitHub",
+      "html_sha256": "326f6492322a70def56d23e8f6c2e7277a4c45a57db1589141a9ced401b98a68"
+    },
+    {
+      "request_id": "R049",
+      "engine": "seznam",
+      "internal_query": "SQLite WAL transactions documentation",
+      "url": "https://search.seznam.cz/?q=SQLite+WAL+transactions+documentation",
+      "html_sha256": "49ad499496d1b4f4baa9356250b92013cc7cba030cadf9e9a7a50e45040af46a"
+    },
+    {
+      "request_id": "R050",
+      "engine": "naver",
+      "internal_query": "SQLite WAL transactions documentation",
+      "url": "https://search.naver.com/search.naver?where=web&query=SQLite+WAL+transactions+documentation",
+      "html_sha256": "a155b28f3f518905ca9360d8ebf074636c40ae265bae63f2bd2f1ec627331799"
+    },
+    {
+      "request_id": "R051",
+      "engine": "seznam",
+      "internal_query": "HTTP 304 ETag Last-Modified conditional requests",
+      "url": "https://search.seznam.cz/?q=HTTP+304+ETag+Last-Modified+conditional+requests",
+      "html_sha256": "ae8868025a24385f06525e7a8f0b6ec5d13430a86b017bd31aa243d08e8b58da"
+    },
+    {
+      "request_id": "R052",
+      "engine": "naver",
+      "internal_query": "HTTP 304 ETag Last-Modified conditional requests",
+      "url": "https://search.naver.com/search.naver?where=web&query=HTTP+304+ETag+Last-Modified+conditional+requests",
+      "html_sha256": "258b2f86526d7a6b1de2bda7a01c1f30634fd79f2daf9f578f38d9aebf34870f"
+    },
+    {
+      "request_id": "R053",
+      "engine": "seznam",
+      "internal_query": "Tokio Rust asynchronous programming tutorial",
+      "url": "https://search.seznam.cz/?q=Tokio+Rust+asynchronous+programming+tutorial",
+      "html_sha256": "c1d80c93af96621baed5bd8fd83157822c67c475cbd131af4855d629eb48970b"
+    },
+    {
+      "request_id": "R054",
+      "engine": "naver",
+      "internal_query": "Tokio Rust asynchronous programming tutorial",
+      "url": "https://search.naver.com/search.naver?where=web&query=Tokio+Rust+asynchronous+programming+tutorial",
+      "html_sha256": "ee4f36355556649331707b3bf4731b2bb08291a83558f59736482c72900b68df"
+    },
+    {
+      "request_id": "R055",
+      "engine": "seznam",
+      "internal_query": "excavator working cycle digging loading travel",
+      "url": "https://search.seznam.cz/?q=excavator+working+cycle+digging+loading+travel",
+      "html_sha256": "dabf6382358bc417ce7096d8d5fbe765986c8d1b854c3621ece8322a9764cf2f"
+    },
+    {
+      "request_id": "R056",
+      "engine": "naver",
+      "internal_query": "excavator working cycle digging loading travel",
+      "url": "https://search.naver.com/search.naver?where=web&query=excavator+working+cycle+digging+loading+travel",
+      "html_sha256": "09be6e86337e757b4bdb45001930efd2ed2ccbe65c06bcb98a8c7eea7f0dd420"
+    },
+    {
+      "request_id": "R057",
+      "engine": "seznam",
+      "internal_query": "Rust Python HTML extraction comparison",
+      "url": "https://search.seznam.cz/?q=Rust+Python+HTML+extraction+comparison",
+      "html_sha256": "1166de43f155d567eb1882ab316f2c6619ef2d046f549c1938fa6d1c2d963327"
+    },
+    {
+      "request_id": "R058",
+      "engine": "naver",
+      "internal_query": "Rust Python HTML extraction comparison",
+      "url": "https://search.naver.com/search.naver?where=web&query=Rust+Python+HTML+extraction+comparison",
+      "html_sha256": "f5d61c2078095125ea4c67eef38022b24a557a4a277dcabbf6a40c4a6eab5bb7"
+    },
+    {
+      "request_id": "R059",
+      "engine": "seznam",
+      "internal_query": "latest stable Rust release October 2026",
+      "url": "https://search.seznam.cz/?q=latest+stable+Rust+release+October+2026",
+      "html_sha256": "2bb85e3a16214b0c2ee256d1d549179e4f065ed9e4a5aa588efe628d2a56a034"
+    },
+    {
+      "request_id": "R060",
+      "engine": "naver",
+      "internal_query": "latest stable Rust release October 2026",
+      "url": "https://search.naver.com/search.naver?where=web&query=latest+stable+Rust+release+October+2026",
+      "html_sha256": "77d513239ecfc5a4dead5971c209f46c9595e20a781a416c609e8080f59e692c"
+    },
+    {
+      "request_id": "R061",
+      "engine": "seznam",
+      "internal_query": "Unicode grapheme cluster code point difference",
+      "url": "https://search.seznam.cz/?q=Unicode+grapheme+cluster+code+point+difference",
+      "html_sha256": "39a27fdf492c31dca4e721272d04220c7ef2e61ebbff5006f33df145a3ad5173"
+    },
+    {
+      "request_id": "R062",
+      "engine": "naver",
+      "internal_query": "Unicode grapheme cluster code point difference",
+      "url": "https://search.naver.com/search.naver?where=web&query=Unicode+grapheme+cluster+code+point+difference",
+      "html_sha256": "94af2ea86dd2ba7abe6971b16b2585ee51921971497d64c84889951dea8ab05b"
+    }
+  ],
+  "scope": "Offline parser replay only, no model predictions/gold or new requests. Upstream 16/20 is a reported combined policy result, not native adapter qualification."
+}

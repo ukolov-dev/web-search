@@ -1,0 +1,16 @@
+{
+  "schema": "research-gates-package-v1",
+  "archive": "feasibility/research-gates-corpus-2026-11-06.tar.gz",
+  "bytes": 30877576,
+  "sha256": "cbda89ca9b397218a4d1ed9e378ec84d78680c3bf24d6cfabd960ba799a83d1c",
+  "regular_members_including_manifest": 2388,
+  "all_member_hashes_verified": true,
+  "exact_private_credentials_detected": 0,
+  "excluded": [
+    "binaries",
+    "SDK homes/config/workspace",
+    "SQLite/cache/vendor",
+    "credentials"
+  ],
+  "not_standalone_installer": true
+}

@@ -1,0 +1,40 @@
+{
+  "base": "7a252a8",
+  "case": "F02",
+  "exact_original_range": {
+    "chunk": "S1P1",
+    "local_start": 643,
+    "local_end": 742,
+    "document_start": 79643,
+    "document_end": 79742,
+    "following": "¶\n\nAll"
+  },
+  "checks": [
+    {
+      "command": "CARGO_HOME=\"$PWD/.cache/cargo\" cargo test --locked --offline pilcrow",
+      "baseline": "2failed: sentence range absent and RFC literal rejected",
+      "candidate": "2passed; raw marker, malformed and inline-continuation controls"
+    },
+    {
+      "command": "CARGO_HOME=\"$PWD/.cache/cargo\" cargo test --locked --offline",
+      "status": "passed",
+      "results": [
+        "test result: ok. 163 passed; 0 failed; 37 ignored; 0 measured; 0 filtered out; finished in 1.99s",
+        "test result: ok. 6 passed; 0 failed; 10 ignored; 0 measured; 0 filtered out; finished in 0.74s"
+      ]
+    },
+    {
+      "command": "cargo fmt --check",
+      "status": "passed"
+    },
+    {
+      "command": "CARGO_HOME=\"$PWD/.cache/cargo\" cargo clippy --locked --offline --all-targets -- -D warnings",
+      "status": "passed"
+    }
+  ],
+  "limits": [
+    "No HTTP/model/Qwen calls",
+    "Model gains and independent acceptance untested",
+    "Long100000character extraction cap remains"
+  ]
+}

@@ -1,0 +1,1569 @@
+{
+  "protocol": {
+    "author": "one separate source annotator, blinded to model outputs/branch labels; not independent acceptance",
+    "freeze": "queries/code fixed before inference; source gold fixed after acquisition and before prediction inspection",
+    "scope": "known relevant retrieved sources, not universal web recall; null unjudged and unknown direct separately reported",
+    "source_gold": "retained original HTML from raw acquisition union and preselected source-only audits; never branch-extracted text",
+    "criteria": "grade2 concrete requested relationship with material conditions;grade1 partial/unresolved/wrong factual condition only with concrete evidence;grade0 unrelated;short challenge/unobserved source unknown",
+    "proposals": "status/genre alone is insufficient to reject source; unresolved conjecture is not current-behavior evidence, concrete current behavior remains assessable",
+    "offsets": "UTF-8 bytes in whitespace-normalized source_text(original HTML); scripts/styles/templates/noscript/svg excluded",
+    "isolation": "annotator did not read branch results, model calls, labels or logs; gold-only audits never injected into model inputs"
+  },
+  "cases": [
+    {
+      "id": "c01",
+      "query": "git cherry-pick --no-commit multiple commits initial index state",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://www.atlassian.com/ko/git/tutorials/cherry-pick",
+          "grade": 1,
+          "basis": "--no-commit explained, but multiple-commit accumulation against the initial index state is not established",
+          "support": [],
+          "snapshot": "runs/direct-coverage-2026-10-30/raw-cache/c21b4d5f56b7c2c2c69e43653467cad284f598397eea08b964e2a6cfecdcb26e.json",
+          "field": "raw_html_text",
+          "html_hash": "3067c1f14a8eeb9035dea36823f2edb09f580c11ded13fbd0461fabeb23b794b",
+          "normalized_text_hash": "870d350e6b478f2c1948e74d603a44528dfeaad2140d8b5e2f8d9787df6a2cf9",
+          "source_chars": 12338,
+          "final_url": "https://www.atlassian.com/ko/git/tutorials/cherry-pick"
+        },
+        {
+          "id": "C002",
+          "url": "https://blog.naver.com/chicken_kangjung/224271083054",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://blog.naver.com/devops_log/224043761517",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://blog.naver.com/hahaha11kr/224345141343",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://www.datacamp.com/tutorial/git-cherry-pick",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://devblogs.microsoft.com/oldnewthing/",
+          "grade": 0,
+          "basis": "Windows development blog index, not cherry-pick index-state semantics",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://docs.github.com/en/desktop/managing-commits/cherry-picking-a-commit-in-github-desktop",
+          "grade": 1,
+          "basis": "GitHub Desktop multi-commit cherry-pick workflow, not --no-commit or its initial-index semantics",
+          "support": [],
+          "snapshot": "runs/direct-coverage-2026-10-30/raw-cache/944a6b65e63a97e3b07e4a50ab271c61ff5c39c55133f32c44eaa3bf695c29ee.json",
+          "field": "raw_html_text",
+          "html_hash": "4bcb7f2bded8f232b8172fead4bfdb1ba7378b6ca1fca779919ab1bcf074673d",
+          "normalized_text_hash": "72d71e9fde38ec0a8e1d634047a3434435a1388745513ed33a8854825f5ca5c6",
+          "source_chars": 3629,
+          "final_url": "https://docs.github.com/en/desktop/managing-commits/cherry-picking-a-commit-in-github-desktop"
+        },
+        {
+          "id": "C008",
+          "url": "https://git-scm.com/book/mk/v2/Git-%d0%b8-%d0%b4%d1%80%d1%83%d0%b3%d0%b8-%d1%81%d0%b8%d1%81%d1%82%d0%b5%d0%bc%d0%b8-Git-%d0%ba%d0%b0%d0%ba%d0%be-%d0%9a%d0%bb%d0%b8%d0%b5%d0%bd%d1%82",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://git-scm.com/docs/git-cherry-pick",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "This flag applies the changes necessary to cherry-pick each named commit to your working tree and the index, without making any commit.",
+              "start": 5634,
+              "end": 5769
+            },
+            {
+              "quote": "your index does not have to match the HEAD commit.",
+              "start": 5809,
+              "end": 5859
+            },
+            {
+              "quote": "The cherry-pick is done against the beginning state of your index.",
+              "start": 5860,
+              "end": 5926
+            },
+            {
+              "quote": "This is useful when cherry-picking more than one commits' effect to your index in a row.",
+              "start": 5927,
+              "end": 6015
+            }
+          ],
+          "snapshot": "runs/direct-coverage-2026-10-30/gold-audit/c01-C009.html",
+          "field": "raw_html_text",
+          "html_hash": "3eb2c974152a02b6a675d0096f08180ab307e807a423d7b270868123781d7f65",
+          "normalized_text_hash": "3ff7696674c7324da5de6de799163608b6d6be6657ec4e3fb318bc42ee16696f",
+          "source_chars": 12127,
+          "final_url": "https://git-scm.com/docs/git-cherry-pick"
+        },
+        {
+          "id": "C010",
+          "url": "https://github.com/git/git/blob/master/Documentation/SubmittingPatches",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://gitkraken.com/learn/git/cherry-pick",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://www.golinuxcloud.com/git-cherry-pick-examples/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://initialcommit.com/blog/git-cherry-pick",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://www.kernel.org/pub/software/scm/git/docs/git.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://learn.microsoft.com/cs-cz/azure/devops/repos/git/command-prompt?view=azure-devops",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://stackoverflow.com/questions/9339429/what-does-cherry-picking-a-commit-with-git-mean",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://thecodeforge.io/devops/git-stash-cherry-pick/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://velog.io/@youyoung2774/git-cherry-pick%EC%9D%B4-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80",
+          "grade": 1,
+          "basis": "--no-commit mention without multiple-commit or initial-index behavior",
+          "support": [],
+          "snapshot": "runs/direct-coverage-2026-10-30/raw-cache/ca3d63739a93727880a8319796b43a694823fdcbc6d17c461ecaac3876fc0ad7.json",
+          "field": "raw_html_text",
+          "html_hash": "65e5a9bdc001baebb2b68d1999fd32afcecb8437b867d3296519c000decfa7f3",
+          "normalized_text_hash": "80c97a1f23cc332ecac478d707d6540cdabd2d748f701efe40be8c6405b2e30d",
+          "source_chars": 1186,
+          "final_url": "https://velog.io/@youyoung2774/git-cherry-pick%EC%9D%B4-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80"
+        },
+        {
+          "id": "C019",
+          "url": "https://wikidocs.net/154072",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C020",
+          "url": "https://wp-kama.com/note/git-cheatsheet",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "c02",
+      "query": "Python dataclasses asdict recursive deepcopy nested objects",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://www.attrs.org/en/stable/changelog.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://bugs.python.org/issue14010",
+          "grade": 0,
+          "basis": "itertools crash issue, not dataclasses.asdict copying",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://death.andgravity.com/stable-hashing",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://fuchsia.googlesource.com/third_party/github.com/pydantic/pydantic/+show/refs/heads/main/HISTORY.md",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://github.com/python/cpython/blob/main/Doc/library/dataclasses.rst?plain=1",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "function :: asdict(obj, *, dict_factory=dict)",
+              "start": 21808,
+              "end": 21853
+            },
+            {
+              "quote": "dataclasses, dicts, frozendicts, lists, and tuples are recursed into.",
+              "start": 22026,
+              "end": 22095
+            },
+            {
+              "quote": "Other objects are copied with :func: ` copy.deepcopy `.",
+              "start": 22096,
+              "end": 22151
+            },
+            {
+              "quote": "assert asdict(c) == {'mylist': [{'x': 0, 'y': 0}, {'x': 10, 'y': 4}]}",
+              "start": 22382,
+              "end": 22451
+            }
+          ],
+          "snapshot": "runs/direct-coverage-2026-10-30/raw-cache/9d651bd08445a1212d045875cf535f9d08b8922154ac9dae758e496d38265404.json",
+          "field": "raw_html_text",
+          "html_hash": "16d4a4cff5b27569089ee85bd6e48cd547ef2a9066b4d125d89c46b9bb4115d5",
+          "normalized_text_hash": "dcd95f1cb0238b722d2e32e9c0149e92778fa8ed6130d1468a5c1d30aa4ae84e",
+          "source_chars": 39189,
+          "final_url": "https://github.com/python/cpython/blob/main/Doc/library/dataclasses.rst?plain=1"
+        },
+        {
+          "id": "C006",
+          "url": "https://github.com/python/cpython/blob/main/Lib/dataclasses.py",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": [],
+          "snapshot": "runs/direct-coverage-2026-10-30/raw-cache/15f08f2c283a95c698f6fc542171a053e20c627e4d13bcf03cf6e027a4c500aa.json",
+          "field": "raw_html_text",
+          "html_hash": "b7b32684a0d4c4881c70f83559d671d7a1658c076fdeb7a52cde00a46305cc73",
+          "normalized_text_hash": "3b8c917b1760b99d111657951de9935f44e981139a54763774fd8f42640d6470",
+          "source_chars": 39298,
+          "final_url": "https://github.com/python/cpython/blob/main/Lib/dataclasses.py",
+          "inspection_limit": "captured GitHub HTML ends before the asdict implementation; not evidence that the full source file is irrelevant"
+        },
+        {
+          "id": "C007",
+          "url": "https://github.com/rnag/dataclass-wizard",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://huggingface.co/docs/datasets/v1.17.0/_modules/datasets/arrow_dataset.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://www.knihydobrovsky.cz/kniha/python-data-science-handbook-803174242",
+          "grade": 0,
+          "basis": "bookstore Python data-science listing, no requested object-copy relationship",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://www.nejlevnejsi-knihy.cz/kniha/python-data-science-learn-python-in-a-week-and-master-it-an-hands-on-introduction-to-big-data-analysis-and-mining-a-project-based-guide_32542752.html",
+          "grade": 0,
+          "basis": "bookstore Python data-science listing, no requested object-copy relationship",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://netacad.fel.cvut.cz/kurz/python-pro-data-science/",
+          "grade": 0,
+          "basis": "Python data-science course schedule, not dataclasses.asdict behavior",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://pocketpy.dev/modules/dataclasses/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://pocketpy.github.io/modules/dataclasses/",
+          "grade": 1,
+          "basis": "PocketPy explicitly documents shallow asdict without recursive conversion, different implementation scope from the requested standard dataclasses behavior",
+          "support": [],
+          "snapshot": "runs/direct-coverage-2026-10-30/raw-cache/786d0d8ba28f728cc8c1ebe52476194adff2e2b642d611fd46c50b65f1871c70.json",
+          "field": "raw_html_text",
+          "html_hash": "d6635c567edd598af074c51a7135501b65ea4f900a1122b12541199947d6232e",
+          "normalized_text_hash": "48c40a2f938f7a754987bc101f30c93f0c26ff00754fdda8228b093977967e41",
+          "source_chars": 1257,
+          "final_url": "https://pocketpy.github.io/modules/dataclasses/"
+        },
+        {
+          "id": "C014",
+          "url": "https://pydantic.dev/docs/validation/latest/get-started/changelog/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://pypi.org/project/py2dataclasses/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://python.flowdas.com/genindex-all.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://pythoncomplexity.com/stdlib/dataclasses/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://pythontutorial.org/oop/python-dataclasses/",
+          "grade": 1,
+          "basis": "recursive nested-dataclass conversion explained, but deepcopy of other objects not established",
+          "support": [],
+          "snapshot": "runs/direct-coverage-2026-10-30/raw-cache/b20d7af0de178cdaf1fd4ec115f304e888511d5d07a95adccccf531b05136551.json",
+          "field": "raw_html_text",
+          "html_hash": "6ba68d97c3407d096e7bed7aa1a3728d02a9c9713e8225f93030f94f47b22b1d",
+          "normalized_text_hash": "7b0965a695fd9d1b2a1e6f9b308729f7234dd7b81db96237632139273b7fe533",
+          "source_chars": 6668,
+          "final_url": "https://pythontutorial.org/oop/python-dataclasses/"
+        },
+        {
+          "id": "C019",
+          "url": "https://realpython.com/ref/stdlib/dataclasses/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C020",
+          "url": "https://velog.io/@devkingsejong/Python-dataclass-%EC%82%AC%EC%9A%A9%EC%8B%9C-asdict-Error",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "c03",
+      "query": "Rust Rc Weak upgrade strong count dropped allocation",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://artichoke.github.io/cactusref/cactusref/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://www.barodaetrade.com/research-Details/SSR",
+          "grade": 0,
+          "basis": "equity research and weak financial margins, different subject",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://www.chessvariants.com/play/erf/ChessVar.html",
+          "grade": 0,
+          "basis": "chess variant applets, unrelated dropped allocation",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://daleseo.com/rust-weak/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://doc.rust-lang.org/std/rc/",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "When the last Rc pointer to a given allocation is destroyed, the value stored in that allocation (often referred to as “inner value”) is also dropped.",
+              "start": 482,
+              "end": 636
+            },
+            {
+              "quote": "this will return None if the value stored in the allocation has already been dropped.",
+              "start": 1357,
+              "end": 1442
+            },
+            {
+              "quote": "Weak pointers do not keep the value inside the allocation alive; however, they do keep the allocation (the backing store for the inner value) alive.",
+              "start": 1459,
+              "end": 1607
+            }
+          ],
+          "snapshot": "runs/direct-coverage-2026-10-30/raw-cache/877ad83dd8e11c8ea0f74390a3037c7b788733ad86385f2d3e165a1b4d030aeb.json",
+          "field": "raw_html_text",
+          "html_hash": "845b666f4240b5771c27069d886f96e9a97b8fd0581e251019fbbf3177546645",
+          "normalized_text_hash": "271eab2891b674d5e189d57766fd98e610dc971540a86feb682dd9779291fa5d",
+          "source_chars": 7910,
+          "final_url": "https://doc.rust-lang.org/std/rc/"
+        },
+        {
+          "id": "C006",
+          "url": "https://doc.rust-lang.org/std/rc/struct.Rc.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://doc.rust-lang.org/std/rc/struct.Weak.html",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "a Weak reference does prevent the allocation itself (the backing store) from being deallocated.",
+              "start": 1187,
+              "end": 1282
+            },
+            {
+              "quote": "Returns None in the following cases: The inner value has since been dropped or moved out.",
+              "start": 8172,
+              "end": 8261
+            },
+            {
+              "quote": "Destroy all strong pointers. drop(strong_five); drop(five); assert! (weak_five.upgrade().is_none());",
+              "start": 8604,
+              "end": 8704
+            }
+          ],
+          "snapshot": "runs/direct-coverage-2026-10-30/raw-cache/746cdd8cfdb336556922aab3fe4ad646fced643731fdc35abc6abd734b9c0e54.json",
+          "field": "raw_html_text",
+          "html_hash": "7cab8b1a30f5849a8882a52a02b5f701f68e3c5acf7f597db02992ca9b0ffec0",
+          "normalized_text_hash": "79d9c0551abb2f09b9dc59615afa346c9671576f1a0013a764dda19299dc70d7",
+          "source_chars": 14368,
+          "final_url": "https://doc.rust-lang.org/std/rc/struct.Weak.html"
+        },
+        {
+          "id": "C008",
+          "url": "https://www.electronicdesign.com/technologies/embedded/software/article/55242983/adacore-pointers-in-rust-whacking-the-mole-part-4handling-weak-references",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://en.wikipedia.org/wiki/Airbus_A380",
+          "grade": 0,
+          "basis": "aircraft article, unrelated Rc allocation",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://www.freshports.org/sanity_test_failures.php",
+          "grade": 0,
+          "basis": "package build failures, not Rc/Weak semantics",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://github.com/s-b-repo/rustsploit/releases",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://gitlab.com/cg909/rust-hybrid-rc",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://ifactoryapp.com/industries/infrastructure-management/",
+          "grade": 0,
+          "basis": "infrastructure asset-management product, not Rust pointers",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://jacksonshi.vercel.app/blog/rust/rc-weak-rust",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://www.linkedin.com/pulse/mastering-safe-pointers-rust-deep-dive-box-rc-arc-george-phd-burlakov-iqite",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://news.ycombinator.com/item?id=43824640",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://parallelworks.com/changelog",
+          "grade": 0,
+          "basis": "cloud job-allocation changelog, different allocation subject",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://stdrs.dev/nightly/x86_64-unknown-linux-gnu/std/rc/index.html",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "When the last Rc pointer to a given allocation is destroyed, the value stored in that allocation (often referred to as “inner value”) is also dropped.",
+              "start": 359,
+              "end": 513
+            },
+            {
+              "quote": "this will return None if the value stored in the allocation has already been dropped.",
+              "start": 1234,
+              "end": 1319
+            },
+            {
+              "quote": "Weak pointers do not keep the value inside the allocation alive; however, they do keep the allocation (the backing store for the inner value) alive.",
+              "start": 1336,
+              "end": 1484
+            }
+          ],
+          "snapshot": "runs/direct-coverage-2026-10-30/raw-cache/d5409c946cae1f1b9e1e7ebe28b02140c452ff8b818dac2fabf64f65329fae38.json",
+          "field": "raw_html_text",
+          "html_hash": "9efce0e4a2ad5127cd8c20f8228539ac4c4855c1ddf059629b5df103bf5b03d3",
+          "normalized_text_hash": "0e7151caefe77bb2a3f8687d2bac4ca7d97b88147080620d81fc2b3819e02e23",
+          "source_chars": 7896,
+          "final_url": "https://stdrs.dev/nightly/x86_64-unknown-linux-gnu/std/rc/index.html"
+        },
+        {
+          "id": "C019",
+          "url": "https://users.rust-lang.org/t/upgrading-dead-weak-unsafecell-maybeuninit-t-to-rc-t/97192",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "c04",
+      "query": "PostgreSQL NOT IN NULL NOT EXISTS three valued logic",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://blog.naver.com/idcfa/224291002421",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://blog.naver.com/it-path-finder/224386852804",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://boringsql.com/posts/not-in-null/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://en.wikipedia.org/wiki/Null_(SQL)",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://explainextended.com/2009/09/16/not-in-vs-not-exists-vs-left-join-is-null-postgresql/",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "NOT IN , which is semantically different since its logic is trivalent and it can return NULL",
+              "start": 6098,
+              "end": 6190
+            },
+            {
+              "quote": "this condition is semantically equivalent to NOT EXISTS (but not to NOT IN )",
+              "start": 5779,
+              "end": 5855
+            }
+          ],
+          "snapshot": "runs/direct-coverage-2026-10-30/gold-audit/c04-C005.html",
+          "field": "raw_html_text",
+          "html_hash": "0c698030d8049de3e08a871ddc28ae2533e415f80ad926b3aba6500abd1f90b4",
+          "normalized_text_hash": "e8e06492ac1d7119135174cc29645f9d80f10dc653076f46fb33edebdd787e36",
+          "source_chars": 9365,
+          "final_url": "https://explainextended.com/2009/09/16/not-in-vs-not-exists-vs-left-join-is-null-postgresql/",
+          "scope_warning": "positive applies to explicit PostgreSQL NULL/NOT IN/NOT EXISTS semantics, corroborated by current acquired c04 sources; PostgreSQL8.4 execution-plan/performance advice is not validated as current"
+        },
+        {
+          "id": "C006",
+          "url": "https://www.freecodecamp.org/news/what-are-database-triggers-practical-intro-with-postgresql-examples/",
+          "grade": 1,
+          "basis": "PostgreSQL trigger tutorial without NOT IN/NOT EXISTS relationship",
+          "support": [],
+          "snapshot": "runs/direct-coverage-2026-10-30/raw-cache/c8e82fe50d98cefbf5e70927e04097bffcc2fabc74019441f5d8d3f807785d87.json",
+          "field": "raw_html_text",
+          "html_hash": "9deb3ec5414732c7d77aac78f5146b027f44943978fba58ac7148e738d0d5e40",
+          "normalized_text_hash": "4db0a8ee9ba591e82d96d4dc4a6823d2c6b5ecbda7b7d9498a6de9aa9a6cd127",
+          "source_chars": 17661,
+          "final_url": "https://www.freecodecamp.org/news/what-are-database-triggers-practical-intro-with-postgresql-examples/"
+        },
+        {
+          "id": "C007",
+          "url": "https://lists.postgresql.org/",
+          "grade": 0,
+          "basis": "mailing-list index, not the requested NULL relationship",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "partner navigation card, unrelated source",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://microsoft.github.io/pg_durable/",
+          "grade": 0,
+          "basis": "durable workflow SQL library, not requested predicate semantics",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://modern-sql.com/concept/three-valued-logic",
+          "grade": 1,
+          "basis": "generic SQL three-valued logic and NOT EXISTS alternative described; applicability to named PostgreSQL context not established in source text",
+          "support": [],
+          "snapshot": "runs/direct-coverage-2026-10-30/raw-cache/4ef087fe95fef37f29ef68c36806258656cffa9d016bdc1a02fe346f0b6d9be1.json",
+          "field": "raw_html_text",
+          "html_hash": "1c916c793b0c56a15598645b7d9d1c18fed7b67441fedb38181a6ce95d6b5338",
+          "normalized_text_hash": "e6742a285ccc82b948fcee3839b0f7b08a39febf4794841bc08d89d95a6321c0",
+          "source_chars": 15651,
+          "final_url": "https://modern-sql.com/concept/three-valued-logic"
+        },
+        {
+          "id": "C011",
+          "url": "https://neon.com/postgresql/tutorial",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://neon.com/postgresql/tutorial/not-null-constraint",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://ozairwebs.com/technologies/postgresql/",
+          "grade": 0,
+          "basis": "application-development service, not requested predicate semantics",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://provsql.org/docs/user/nulls.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://refdock.kr/postgresql/postgresql-null-coalesce-and-three-valued-logic",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://www.runxbuild.com/blog/postgresql-not-in/",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "NOT IN with NULLs returns no rows.",
+              "start": 993,
+              "end": 1027
+            },
+            {
+              "quote": "SQL’s three-valued logic treats NULL as “unknown”, and NOT IN with an unknown returns unknown.",
+              "start": 1191,
+              "end": 1291
+            },
+            {
+              "quote": "The fix: use NOT EXISTS:",
+              "start": 1292,
+              "end": 1316
+            },
+            {
+              "quote": "NOT EXISTS is NULL-safe",
+              "start": 1417,
+              "end": 1440
+            }
+          ],
+          "snapshot": "runs/direct-coverage-2026-10-30/raw-cache/a0e55d1da90035e83460cb2e0f52e0af2f152b2ec667c1cdfb09ea20ee3c37d4.json",
+          "field": "raw_html_text",
+          "html_hash": "0331a3bdc77b67c0008133ffdf4b910f54faf29383896453c4a2373e8dcedecd",
+          "normalized_text_hash": "e9587936d8aa29c218ed645e73f71fcd9cb8bf35d9726f20ee589dd2a72a0b1b",
+          "source_chars": 8215,
+          "final_url": "https://www.runxbuild.com/blog/postgresql-not-in/"
+        },
+        {
+          "id": "C017",
+          "url": "https://theartofpostgresql.com/yesql/sql-foundations/null-in-sql",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "WHERE x NOT IN (SELECT y …) returns zero rows the moment the subquery produces any NULL, because x <> NULL evaluates to NULL (unknown), not true",
+              "start": 7686,
+              "end": 7832
+            },
+            {
+              "quote": "Fix 1 — NOT EXISTS: correlated subquery, NULL-safe by design",
+              "start": 8091,
+              "end": 8153
+            }
+          ],
+          "snapshot": "runs/direct-coverage-2026-10-30/raw-cache/2628f2af0b6b8c3936f8383a70edef043b1b2516f41f1593ec8ce24833470293.json",
+          "field": "raw_html_text",
+          "html_hash": "85ef54533691c864b577e4c94d7377d928a7ef65e6cad8ea9d69a00330bdb63c",
+          "normalized_text_hash": "c8f79d5bdd91df57b2032a95ee4099996bc81307d41c63d092bab0591a1eb783",
+          "source_chars": 15182,
+          "final_url": "https://theartofpostgresql.com/yesql/sql-foundations/null-in-sql/"
+        },
+        {
+          "id": "C018",
+          "url": "https://tms-outsource.com/cs/mysql-cheat-sheet/",
+          "grade": 0,
+          "basis": "MySQL cheat sheet, different database and no requested relationship",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://velog.io/@gnu_coding_god/SQL-%EC%BD%94%EC%96%B4-%ED%8C%8C%ED%97%A4%EC%B9%98%EA%B8%B0-NOT-IN%EA%B3%BC-NULL%EC%9D%98-%EC%B9%98%EB%AA%85%EC%A0%81-%ED%95%A8%EC%A0%95-3%EA%B0%92-%EB%85%BC%EB%A6%ACThree-Valued-Logic",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "c05",
+      "query": "SQLite ALTER TABLE ADD COLUMN NOT NULL default existing rows",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://blog.naver.com/dbtxxothy/224188129809",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://blog.naver.com/khcwang/224132122596",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://blog.naver.com/suyon7097/224329068497",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://blog.naver.com/thecolin18/224284031267",
+          "grade": 0,
+          "basis": "card explicitly describes Oracle/MySQL changes, not SQLite",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://bloomberg.github.io/comdb2/sql.html",
+          "grade": 0,
+          "basis": "Comdb2 SQL dialect, different database",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://www.code24x7.com/technologies/sqlite",
+          "grade": 0,
+          "basis": "SQLite commercial development service, no requested schema-change rule",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://docs.databricks.com/gcp/en/sql/language-manual/sql-ref-syntax-ddl-alter-table-manage-column",
+          "grade": 0,
+          "basis": "Databricks/Delta SQL dialect, not SQLite",
+          "support": [],
+          "snapshot": "runs/direct-coverage-2026-10-30/raw-cache/ffdebfccde01805ba282e9158d971e003984a8da578385812155333413317967.json",
+          "field": "raw_html_text",
+          "html_hash": "e0868e2a67731663169118afd9449eae441944815a5b2894f0e62e1622bc0054",
+          "normalized_text_hash": "af72aca0bd3ae06764b63e8cf4e824586099771ce537fb641c3de6c3b76ad70d",
+          "source_chars": 13451,
+          "final_url": "https://docs.databricks.com/gcp/en/sql/language-manual/sql-ref-syntax-ddl-alter-table-manage-column"
+        },
+        {
+          "id": "C008",
+          "url": "https://docs.snowflake.com/en/sql-reference/sql/alter-table",
+          "grade": 0,
+          "basis": "Snowflake SQL dialect, not SQLite",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://github.com/asg017/sqlite-vec/blob/main/sqlite-vec-ivf.c",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://learn.microsoft.com/en-us/sql/t-sql/statements/alter-table-transact-sql?view=sql-server-ver17",
+          "grade": 0,
+          "basis": "SQL Server/T-SQL dialect, not SQLite",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "partner navigation card, unrelated source",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://neon.com/postgresql/tutorial/add-column",
+          "grade": 0,
+          "basis": "PostgreSQL ADD COLUMN, different database",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://sqlite-utils.datasette.io/en/3.36/reference.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://www.sqlite.org/lang_altertable.html",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "The ADD COLUMN syntax is used to add a new column to an existing table.",
+              "start": 3658,
+              "end": 3729
+            },
+            {
+              "quote": "If a NOT NULL constraint is specified, then the column must have a default value other than NULL.",
+              "start": 4173,
+              "end": 4270
+            },
+            {
+              "quote": "No changes are made to table content for renames or column addition without constraints.",
+              "start": 4940,
+              "end": 5028
+            }
+          ],
+          "snapshot": "runs/direct-coverage-2026-10-30/raw-cache/ea2a39fa56649580d31dcb2bbbd4345cd059ba240e2d2200b72ed2f8334db5cf.json",
+          "field": "raw_html_text",
+          "html_hash": "540366b0fa89257467497780e78538a992b5865a70d23180dac2aa7d2ef4e03d",
+          "normalized_text_hash": "97494def6cf46294b52092ffc73eda3f134e3a9ea703b42fafa2490e5f7959ba",
+          "source_chars": 16324,
+          "final_url": "https://www.sqlite.org/lang_altertable.html"
+        },
+        {
+          "id": "C015",
+          "url": "https://sqlite.org/releaselog/3_37_0.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://www.sqlitetutor.com/alter-table/",
+          "grade": 1,
+          "basis": "NOT NULL DEFAULT syntax recipe, but non-NULL default requirement and existing-row behavior are not established",
+          "support": [],
+          "snapshot": "runs/direct-coverage-2026-10-30/raw-cache/316d43272e1e2375c453dad324878c5650de50891890fa754d846439a3f5e48c.json",
+          "field": "raw_html_text",
+          "html_hash": "e4e714a3c3da594addc49a470181b82b63efb11a1682b55b62f6ddf1d6f112c7",
+          "normalized_text_hash": "94a78122bf2e26232b6caefbbb17870fc53c81b160bfb06173e24fab59632f87",
+          "source_chars": 4058,
+          "final_url": "https://www.sqlitetutor.com/alter-table/"
+        },
+        {
+          "id": "C017",
+          "url": "https://www.sqlitetutorial.net/sqlite-alter-table/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://stackoverflow.com/questions/3604310/alter-table-add-column-if-not-exists-in-sqlite",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "c06",
+      "query": "Docker build ARG ENV scope multi-stage inheritance persistence",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://ajjoona-git.github.io/posts/doongzi-docker-environment-and-security/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://blog.naver.com/japkey/224040709579",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": [],
+          "snapshot": "runs/direct-coverage-2026-10-30/raw-cache/a7b214eeef7b02230be118e0e468bb0d5efce1dab4349867113e2add16b3bc05.json",
+          "field": "raw_html_text",
+          "html_hash": "853d61494df74004bae7ca495fcd6d4008783aaf58fcdb298d2a4baa83178dd4",
+          "normalized_text_hash": "5d202296f52b330d5d800ed9641c43f8d5bdde0013dcc0db1a298e8bf82caf0b",
+          "source_chars": 22,
+          "final_url": "https://blog.naver.com/japkey/224040709579"
+        },
+        {
+          "id": "C003",
+          "url": "https://codereviewvideos.com/multi-stage-docker-build-arg-example/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://www.docker.com/blog/docker-best-practices-using-arg-and-env-in-your-dockerfiles/",
+          "grade": 1,
+          "basis": "ARG build-only versus ENV runtime persistence explained; multi-stage inheritance/scoping not established",
+          "support": [],
+          "snapshot": "runs/direct-coverage-2026-10-30/raw-cache/c0588aaf96276db9003021c9e92eb7f26aadaeb687122783ccbaf3019d326e8d.json",
+          "field": "raw_html_text",
+          "html_hash": "93d82443d8337e6c9d41b3604e425649159d7bc0fef5cfdb92bdc8a7cdc7bf35",
+          "normalized_text_hash": "178189c7e54a37c87b8e8469a78fde2397fb9cc0cd20dcbe4c54b5d127ab91c5",
+          "source_chars": 13836,
+          "final_url": "https://www.docker.com/blog/docker-best-practices-using-arg-and-env-in-your-dockerfiles/"
+        },
+        {
+          "id": "C005",
+          "url": "https://docs.docker.com/build/building/variables",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "Build arguments declared in the global scope of a Dockerfile aren't automatically inherited into the build stages.",
+              "start": 21668,
+              "end": 21782
+            },
+            {
+              "quote": "Once a build argument is declared or consumed in a stage, it's automatically inherited by child stages.",
+              "start": 22497,
+              "end": 22600
+            },
+            {
+              "quote": "Environment variables are passed through to the build execution environment, and persist in containers instantiated from the image.",
+              "start": 18077,
+              "end": 18208
+            }
+          ],
+          "snapshot": "runs/direct-coverage-2026-10-30/raw-cache/7233cf5961c6fd1224fc2f60491af4374ccfee990ef30bcfa4704869cea15eb7.json",
+          "field": "raw_html_text",
+          "html_hash": "c4894981990a161cf9c207285564d3fa622f8e168363b60dce9af2b98c6a7ca3",
+          "normalized_text_hash": "6e084e81b366c2f8b93bd63a47f9b092c05974e257bd31176eaeab8d6b0bbe57",
+          "source_chars": 42243,
+          "final_url": "https://docs.docker.com/build/building/variables"
+        },
+        {
+          "id": "C006",
+          "url": "https://docs.openclaw.ai/install/docker",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://docs.triliumnotes.org/user-guide/setup/server/installation/docker",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://github.com/nklip/Anki/blob/main/java/Docker.%20Best%20practices/Readme.md",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP/blob/main/install-docker.ps1",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://gofr.dev/docs/guides/dockerizing-gofr-services",
+          "grade": 1,
+          "basis": "concrete multistage Dockerfile and argument redeclaration, but ARG/ENV inheritance/persistence distinction not established",
+          "support": [],
+          "snapshot": "runs/direct-coverage-2026-10-30/raw-cache/2e1b47822d5b3d2b654a1f9417b9dcfa00fcc95ac88af4520317a7e1a3e222c7.json",
+          "field": "raw_html_text",
+          "html_hash": "575088b30605554ea530b7754e23ceec484ba66c737804f4330b3da79cd354fa",
+          "normalized_text_hash": "c605c39dd324e79f00228586df0eee4ceea684172ec37f56cd11af96d2457d43",
+          "source_chars": 10943,
+          "final_url": "https://gofr.dev/docs/guides/dockerizing-gofr-services"
+        },
+        {
+          "id": "C011",
+          "url": "https://jaegukim.github.io/posts/multi-stage-build%EC%97%90%EC%84%9C-arg-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://www.linkedin.com/learning/docker-essential-training",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://medium.com/@smahak59/mastering-docker-beyond-the-basics-an-intermediate-guide-1ff4dd169851",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://nesoy.github.io/blog/Docker-multi-stage-build",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://nubenetes.com/docker/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://sangheon.com/ko/docker%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://skaffold.dev/docs/builders/builder-types/docker/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://velog.io/@jihwooon/Docker-Multi-stage-build-%ED%95%98%EA%B8%B0",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://vsupalov.com/docker-arg-env-variable-guide/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C020",
+          "url": "https://www.yeonjoong.dev/posts/develop/docker-multi-stage-build",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "c07",
+      "query": "CSS flex order visual order keyboard tab order accessibility",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://adrianroselli.com/2015/10/html-source-order-vs-css-display-order.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://www.aph.org/",
+          "grade": 0,
+          "basis": "nonprofit home page, not CSS order behavior",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://www.bhphotovideo.com/find/HelpCenter/StoreInfo.jsp",
+          "grade": 0,
+          "basis": "retail store information, unrelated order",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://blogs.windows.com/msedgedev/2020/09/15/source-order-viewer-edge-devtools/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=812687",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://chromewebstore.google.com/detail/hoverify-all-in-one-exten/bbpokcagpggnekcmamgdieebhpkjmljm",
+          "grade": 0,
+          "basis": "browser-extension storefront, no requested CSS/focus relationship",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "Using order changes the order in which items are painted, and the order in which they appear visually. It does not change the sequential navigation order of the items.",
+              "start": 8283,
+              "end": 8450
+            },
+            {
+              "quote": "The tabbing order and speech order follow the order of the source code.",
+              "start": 3151,
+              "end": 3222
+            }
+          ],
+          "snapshot": "runs/direct-coverage-2026-10-30/raw-cache/713d07468eb8c68e56fb4db7ca1eba6420235961f5acca08a0fe8cbf2db9f87b.json",
+          "field": "raw_html_text",
+          "html_hash": "6a6c44245d17098bf640ed4035febef98e3bb2541074dbaebd614e3d3d63181e",
+          "normalized_text_hash": "cc7b603d1dbd7815a46840f6dfbfe31838870dfa00fa337c5beaf8f930ef1a63",
+          "source_chars": 33109,
+          "final_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items"
+        },
+        {
+          "id": "C008",
+          "url": "https://www.displayfusion.com/Compare/",
+          "grade": 0,
+          "basis": "desktop window-management product comparison, unrelated order",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://www.drupal.org/node/1757550",
+          "grade": 0,
+          "basis": "Drupal template migration issue, unrelated CSS/focus ordering",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://funnelkit.com/whats-new/",
+          "grade": 0,
+          "basis": "checkout-marketing product changelog, unrelated order",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://github.com/w3c/csswg-drafts/issues/7387",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "The grid and flexbox specifications detail that reordering caused by these methods is only visual, and note that use of order or grid placement to do logical ordering is non-conforming.",
+              "start": 2706,
+              "end": 2891
+            },
+            {
+              "quote": "if the author has reordered content using grid or flexbox, then the tab order of the document for keyboard users who are referencing the visual display can become disconnected, as it follows the document order.",
+              "start": 3476,
+              "end": 3686
+            }
+          ],
+          "snapshot": "runs/direct-coverage-2026-10-30/raw-cache/ae6ee2f1bea2b9b894367083c5e523726954afa167bea07fe210caf275da4ac6.json",
+          "field": "raw_html_text",
+          "html_hash": "44e2d395ec97bd8b80f0e740211957071150e33db55dbe3ab59002c6c567d551",
+          "normalized_text_hash": "2c5deb1164bf0c70119eb9ef1830ca481a5e41afbb3534f7cd4bc58d5246bc11",
+          "source_chars": 46940,
+          "final_url": "https://github.com/w3c/csswg-drafts/issues/7387",
+          "scope_warning": "positive applies only to explicit existing visual-versus-tab/document-order behavior in the issue introduction; rejected/new visual-order or reading-order proposals are not treated as shipped features"
+        },
+        {
+          "id": "C012",
+          "url": "https://www.mapsmarker.com/kb/references/changelog-pro",
+          "grade": 0,
+          "basis": "map-plugin changelog, not CSS flex focus order",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://penpot.app/blog/the-ultimate-guide-to-penpot-layouts/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://rachelandrew.co.uk/archives/2019/06/04/grid-content-re-ordering-and-accessibility/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://www.shopify.com/partners/blog/keyboard-accessibility",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "While the order property affects the visual sequence of flex items, it does not update their arrangement in the source code.",
+              "start": 9671,
+              "end": 9795
+            },
+            {
+              "quote": "when a user presses the Tab key to navigate between each button, the “Update tags” button will still receive focus before “Update description,” even though they’re displayed in reverse order on the screen.",
+              "start": 9809,
+              "end": 10024
+            }
+          ],
+          "snapshot": "runs/direct-coverage-2026-10-30/raw-cache/3fa5d11fa2cdfe24cec74d4fd060355d9c7e476d7f4521d179f0ae4cb9571984.json",
+          "field": "raw_html_text",
+          "html_hash": "a99dc9495c8fd7c275831c69799ca05cc5a3dfa384233bb068b689baa9e45131",
+          "normalized_text_hash": "7654141c45e0f271d5d0ddc1597e7dc80f0906fb751b9723e4b50ff5c33c3e4f",
+          "source_chars": 18746,
+          "final_url": "https://www.shopify.com/partners/blog/keyboard-accessibility"
+        },
+        {
+          "id": "C016",
+          "url": "https://tink.uk/flexbox-the-keyboard-navigation-disconnect/",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "With flexbox it is possible to display content in a different visual order, without changing the DOM order.",
+              "start": 951,
+              "end": 1058
+            },
+            {
+              "quote": "When you use the tab key to move through the content, there is a disconnect between the visual order and the keyboard navigation (DOM) order.",
+              "start": 1400,
+              "end": 1541
+            }
+          ],
+          "snapshot": "runs/direct-coverage-2026-10-30/raw-cache/474be0606867c6a6e60ebd2648a4f92cab5898dcca33d7021da52eb5339347a0.json",
+          "field": "raw_html_text",
+          "html_hash": "9ca6d8eb4f5e03b6b16eff40a27a41087bd196131d5c7a21fbb2e55aac28262f",
+          "normalized_text_hash": "2088516c499658d7710b2487953edd5bbdd93390363d118e38105a867a8f7b6a",
+          "source_chars": 6220,
+          "final_url": "https://tink.uk/flexbox-the-keyboard-navigation-disconnect/"
+        },
+        {
+          "id": "C017",
+          "url": "https://www.useragentman.com/blog/2017/01/28/flex-layout-fail-fixing-firefox-keyboard-accessibility-with-the-css-order-property/",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "it allows developers to make the visual order of elements on the page different than their DOM order.",
+              "start": 1462,
+              "end": 1563
+            },
+            {
+              "quote": "The order property does not affect ordering in non-visual media (such as speech). Likewise, order does not affect the default traversal order of sequential navigation modes",
+              "start": 5350,
+              "end": 5522
+            }
+          ],
+          "snapshot": "runs/direct-coverage-2026-10-30/raw-cache/268c50bddf31df7290ceb058f65a0e1f265eba7a0f6bf356865eb537f8341653.json",
+          "field": "raw_html_text",
+          "html_hash": "0abccd447b7156d8d03bdffebd30a44e2c182973a29d884df8d702a7aee41ca4",
+          "normalized_text_hash": "ff540e14bcd8b210783e4cb4f0d45f5239c4b16a93fffac4d801350a80982258",
+          "source_chars": 8817,
+          "final_url": "https://www.useragentman.com/blog/2017/01/28/flex-layout-fail-fixing-firefox-keyboard-accessibility-with-the-css-order-property/",
+          "scope_warning": "positive applies to quoted normative CSS order/traversal relationship; historical Firefox bug/workaround claims are not validated as current"
+        },
+        {
+          "id": "C018",
+          "url": "https://velog.io/@ehdgus8054/Flexible-box-layoutOrdering-flex-items",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://www.w3.org/TR/2014/WD-css-flexbox-1-20140325/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "c08",
+      "query": "HTTP 421 Misdirected Request retry different connection non-idempotent",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://blog.enyou.net/ko/archives/318",
+          "grade": 1,
+          "basis": "SNI/connection mismatch and server-configuration fix, no non-idempotent retry permission",
+          "support": [],
+          "snapshot": "runs/direct-coverage-2026-10-30/raw-cache/174da786e70c6f19b2454144f0cf5457fe8f6e13d99ec3234eb81afe6a6604b2.json",
+          "field": "raw_html_text",
+          "html_hash": "c8b06e294934170f64c7b3a3e050bc49bdbef1a14665cfd2ab5051845bde66d6",
+          "normalized_text_hash": "558c11a2577efc9cb8bf9ad41fc79d692a494e9de630087a812308815293af31",
+          "source_chars": 1857,
+          "final_url": "https://blog.enyou.net/ko/archives/318"
+        },
+        {
+          "id": "C002",
+          "url": "https://blog.naver.com/skiel83/224285470048",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://www.cssportal.com/http-status-codes/421.php",
+          "grade": 1,
+          "basis": "421 retry and connection troubleshooting described; non-idempotent exception not established",
+          "support": [],
+          "snapshot": "runs/direct-coverage-2026-10-30/raw-cache/d33fa8166badc0b282ea5ead32067950deeaa163263df222aaf929b32a5386f7.json",
+          "field": "raw_html_text",
+          "html_hash": "ae1c7068c86ebacb01a3614867eab323341bf1d75f446039b5420dc07d76fe04",
+          "normalized_text_hash": "81773ab1b7eff46822b477e806fe71f658432f1d5a782b7c85c6f57bebd60a4e",
+          "source_chars": 9238,
+          "final_url": "https://www.cssportal.com/http-status-codes/421.php"
+        },
+        {
+          "id": "C004",
+          "url": "https://dechonet.com/ko/guides/http-421-misdirected-request",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/421",
+          "grade": 1,
+          "basis": "different-connection retry described without the materially requested non-idempotent exception",
+          "support": [],
+          "snapshot": "runs/direct-coverage-2026-10-30/raw-cache/d2e6600bf5168eb534ae6c7483b6d93fab55ca5aec75b5d6feb377f769845c08.json",
+          "field": "raw_html_text",
+          "html_hash": "4425b091dd63a5c243a44bba953077a5049261e8d2c52f5cc4924a8d7aae5b5f",
+          "normalized_text_hash": "8b148dc1a15bbb5f9055a53d0dabef7ab421e7ba304fa596d70a85b14b154cb4",
+          "source_chars": 10815,
+          "final_url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/421"
+        },
+        {
+          "id": "C006",
+          "url": "https://en.wikipedia.org/wiki/Idempotence",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://en.wikipedia.org/wiki/List_of_HTTP_status_codes?visit_id=639264254140642955-3672744385&rd=1",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://github.com/CoplayDev/unity-mcp/issues/795",
+          "grade": 0,
+          "basis": "MCP reload retry bug, not HTTP421 retry rule",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://github.com/apache/apisix/issues/14008",
+          "grade": 1,
+          "basis": "concrete APISIX coalesced-connection failure and421 fix, but no non-idempotent retry condition",
+          "support": [],
+          "snapshot": "runs/direct-coverage-2026-10-30/raw-cache/7c09c2f3ff2041b9b2145c40ed0b52cfeb797c5527138f362e2eb256b0548056.json",
+          "field": "raw_html_text",
+          "html_hash": "c56c263c26fd8c80ce893d0d4a24a200bb8ea627016870711593c6bd772ad385",
+          "normalized_text_hash": "f45248700b62ed6c1dc65e43327690223787913faabd50ccf9f88a4e52e456c8",
+          "source_chars": 6033,
+          "final_url": "https://github.com/apache/apisix/issues/14008"
+        },
+        {
+          "id": "C010",
+          "url": "https://github.com/flexdinesh/axios-retry-interceptor",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/issues/3394",
+          "grade": 0,
+          "basis": "MCP mutation retry issue, not HTTP421 retry rule",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://github.com/temporalio/sdk-go/issues/2370",
+          "grade": 0,
+          "basis": "Temporal payload-codec retry feature request, not HTTP421 retry rule",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://www.hostinger.com/my/tutorials/http-status-codes/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://http.cat/status/421",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://httpcats.com/421",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://www.linkedin.com/top-content/technology/cloud-computing-solutions/data-transfer-protocols/",
+          "grade": 0,
+          "basis": "LinkedIn protocol-topic listing, no HTTP421 retry behavior",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://reliqus.com/what-is-http-421-status-code/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://support.cpanel.net/hc/en-us/articles/1500004701722-421-Misdirected-Request",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://wheregoes.com/http-status-codes/421/",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "Clients receiving a 421 (Misdirected Request) response from a server MAY retry the request — whether the request method is idempotent or not — over a different connection.",
+              "start": 407,
+              "end": 582
+            }
+          ],
+          "snapshot": "runs/direct-coverage-2026-10-30/gold-audit/c08-C019.html",
+          "field": "raw_html_text",
+          "html_hash": "e3fbb8cd7a36cc717f1afec476aaf0b5c28d80e280435e8a7d5c304298e3b84a",
+          "normalized_text_hash": "9d9258e5715ec750da6e457fca801801004632befea6608e0b03233389cd1d8c",
+          "source_chars": 2148,
+          "final_url": "https://wheregoes.com/http-status-codes/421/",
+          "scope_warning": "positive applies to the requested retry condition only; unrelated cacheability statements and legacy RFC references are not evaluated as current"
+        }
+      ]
+    }
+  ]
+}

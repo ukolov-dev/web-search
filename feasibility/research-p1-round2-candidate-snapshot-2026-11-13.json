@@ -1,0 +1,14 @@
+{
+  "code_commit": "46f8953072c1694abacdee255fce6d08a7c0c895",
+  "binary_sha256": "9b5eb024fe61f20777e8045aed15c9f9ede7afdfc4ba339e3a1efaca064139d8",
+  "source_sha256": {
+    "src/main.rs": "36c2963cec68eea206d7bcff46f3157011ce04ffd21728327dfabf4d5f443160",
+    "src/research.rs": "61d6af611c7c443779c295baee06029b2e4f87f6ccc961b811ac2894d29f1b96",
+    "src/research_tests.rs": "575415dbc5f887b5091461c52149d4134537386bbe5fd8bc1e220fa2712d877a",
+    "src/model.rs": "38083f9a1999aff9fca6e969da2dc75fdc02beaa996e1292f2dd3b5e780a0c61",
+    "src/reranker.rs": "116ed9e2231299ef00e0bb5bb828d15da40d28610489585bf95d0ba7f2045fe3"
+  },
+  "frozen_at": "2026-11-13T12:22:34.721658+00:00",
+  "startup_sha256": "8253acc055fb3c8a6eacfc4f3e0b9a1820bb40f66fff78b1cb9936bfec158d90",
+  "runtime_notes": "quote-bound audit; separate conflict visibility; public witness unchanged; no global coordinates in generative chunks; modernRFCdeclaredbody/cacheextract-v2;pilcrowboundary;sharedformatrepair;docsqueue; unchangedbudgets/cap100k"
+}

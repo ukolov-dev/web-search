@@ -1,0 +1,12 @@
+{
+  "base": "ebdcc83",
+  "scope": "experiment3 duplicate/closed-facet followup repair only",
+  "targeted": "3passed",
+  "baseline": "repeated_followup_query_targets_missing_facet -> no_new_evidence instead of evidence_sufficient",
+  "candidate": "2forms5generations evidence_sufficient",
+  "live": "not_run, root coordinates frozen paired evaluation",
+  "files": {
+    "src/research.rs": "9b90c34421c1509d8e5f9e82fc5901a2be5fb87091fa7d55e4ef356a50ac8605",
+    "src/research_tests.rs": "d963db49e1bf9b9b41ab879e61b784f2b4ef16ac2c529dd7e860837c8f18493e"
+  }
+}

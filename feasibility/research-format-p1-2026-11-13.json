@@ -1,0 +1,42 @@
+{
+  "task_id": "TASK-20261113-144112-001",
+  "base": "35765fe",
+  "scope": "format-only application admission repair; offline controller/component evidence",
+  "snapshot": {
+    "src/research.rs": "e86b77ee4cc2aee0b424f8ba1dcebf453776abe0a7df0d3fbef127597c99efc7",
+    "src/research_tests.rs": "ac2df7899bb8992fb3dcafa6f7e5ebf6d9bf6ff578f38a89915442b13011dc4e",
+    "tests/fixtures/research/g07-format.json": "c4eae8090206ecbdf47ec80935f2822633b4f91864ce7f5d0db7a08f9a47145f"
+  },
+  "reproduction": {
+    "command": "CARGO_HOME=\"$PWD/.cache/cargo\" cargo test --locked --offline format_repair_recovers_type_text_without_weakening_witness_gates",
+    "baseline": "FAILED: stop_reason no_new_evidence != evidence_sufficient",
+    "fixed": "passed; same command included in final full suite"
+  },
+  "checks": [
+    {
+      "command": "CARGO_HOME=\"$PWD/.cache/cargo\" cargo test --locked --offline format_repair",
+      "status": "passed",
+      "reason": "3 focused tests; saved G07 original body/draft, shared repair/time/gen gates, good-claim preservation/HTML negative."
+    },
+    {
+      "command": "CARGO_HOME=\"$PWD/.cache/cargo\" cargo test --locked --offline",
+      "status": "passed",
+      "reason": "158 unit passed,35 ignored;6 stdio passed,10 ignored."
+    },
+    {
+      "command": "cargo fmt --check",
+      "status": "passed"
+    },
+    {
+      "command": "CARGO_HOME=\"$PWD/.cache/cargo\" cargo clippy --locked --offline --all-targets -- -D warnings",
+      "status": "passed"
+    }
+  ],
+  "limitations": [
+    "Fake model responses test controller flow, not model ability or factual correctness.",
+    "Saved G07 component recovery preserves original exact quotes; repair reply supplied deterministically; independent semantic acceptance still required.",
+    "No live/model/Qwen/Harness probes; no independent acceptance/release.",
+    "Release build and release stdio deferred to root integrated snapshot.",
+    "No claim of improved fresh paired no-loss score."
+  ]
+}

@@ -1,0 +1,220 @@
+within_capacity(value);
+        }
+    }
+    Ok(vec)
+}
+assert_eq!(from_iter_fallible(0..100), Ok(Vec::from_iter(0..100)));
+
+§Time complexity
+
+Takes O(1) time.
+
+1.0.0 · Source
+pub fn pop(&mut self) -> Option<T>
+
+Removes the last element from a vector and returns it, or None if it is empty.
+
+If you’d like to pop the first element, consider using VecDeque::pop_front instead.
+
+§Examples
+
+let mut vec = vec![1, 2, 3];
+assert_eq!(vec.pop(), Some(3));
+assert_eq!(vec, [1, 2]);
+
+§Time complexity
+
+Takes O(1) time.
+
+1.86.0 · Source
+pub fn pop_if(&mut self, predicate: impl FnOnce(&mut T) -> bool) -> Option<T>
+
+Removes and returns the last element from a vector if the predicate returns true, or None if the predicate returns false or the vector is empty (the predicate will not be called in that case).
+
+§Examples
+
+let mut vec = vec![1, 2, 3, 4];
+let pred = |x: &mut i32| *x % 2 == 0;
+
+assert_eq!(vec.pop_if(pred), Some(4));
+assert_eq!(vec, [1, 2, 3]);
+assert_eq!(vec.pop_if(pred), None);
+
+Source
+pub fn peek_mut(&mut self) -> Option<PeekMut<'_, T, A>>
+where A: AllocatorNightly,
+
+🔬This is a nightly-only experimental API. (vec_peek_mut #122742)
+
+Returns a mutable reference to the last item in the vector, or None if it is empty.
+
+§Examples
+
+Basic usage:
+
+#![feature(vec_peek_mut)]
+let mut vec = Vec::new();
+assert!(vec.peek_mut().is_none());
+
+vec.push(1);
+vec.push(5);
+vec.push(2);
+assert_eq!(vec.last(), Some(&2));
+if let Some(mut val) = vec.peek_mut() {
+    *val = 0;
+}
+assert_eq!(vec.last(), Some(&0));
+
+1.4.0 · Source
+pub fn append(&mut self, other: &mut Self)
+
+Moves all the elements of other into self, leaving other empty.
+
+§Panics
+
+Panics if the new capacity exceeds isize::MAX bytes.
+
+§Examples
+
+let mut vec = vec![1, 2, 3];
+let mut vec2 = vec![4, 5, 6];
+vec.append(&mut vec2);
+assert_eq!(vec, [1, 2, 3, 4, 5, 6]);
+assert_eq!(vec2, []);
+
+1.6.0 · Source
+pub fn drain<R>(&mut self, range: R) -> Drain<'_, T, A> ⓘ
+where A: AllocatorNightly, R: RangeBounds<usize>,
+
+Removes the subslice indicated by the given range from the vector, returning a double-ended iterator over the removed subslice.
+
+If the iterator is dropped before being fully consumed, it drops the remaining removed elements.
+
+The returned iterator keeps a mutable borrow on the vector to optimize its implementation.
+
+§Panics
+
+Panics if the range has start_bound > end_bound, or, if the range is bounded on either end and past the length of the vector.
+
+§Leaking
+
+If the returned iterator goes out of scope without being dropped (due to mem::forget, for example), the vector may have lost and leaked elements arbitrarily, including elements outside the range.
+
+§Examples
+
+let mut v = vec![1, 2, 3];
+let u: Vec<_> = v.drain(1..).collect();
+assert_eq!(v, &[1]);
+assert_eq!(u, &[2, 3]);
+
+// A full range clears the vector, like `clear()` does
+v.drain(..);
+assert_eq!(v, &[]);
+
+1.0.0 · Source
+pub fn clear(&mut self)
+
+Clears the vector, removing all values.
+
+Note that this method has no effect on the allocated capacity of the vector.
+
+§Examples
+
+let mut v = vec![1, 2, 3];
+
+v.clear();
+
+assert!(v.is_empty());
+
+1.0.0 (const: 1.87.0) · Source
+pub const fn len(&self) -> usize
+
+Returns the number of elements in the vector, also referred to as its ‘length’.
+
+§Examples
+
+let a = vec![1, 2, 3];
+assert_eq!(a.len(), 3);
+
+1.0.0 (const: 1.87.0) · Source
+pub const fn is_empty(&self) -> bool
+
+Returns true if the vector contains no elements.
+
+§Examples
+
+let mut v = Vec::new();
+assert!(v.is_empty());
+
+v.push(1);
+assert!(!v.is_empty());
+
+1.4.0 · Source
+pub fn split_off(&mut self, at: usize) -> Self
+where A: Clone,
+
+Splits the collection into two at the given index.
+
+Returns a newly allocated vector containing the elements in the range [at, len). After the call, the original vector will be left containing the elements [0, at) with its previous capacity unchanged.
+
+If you want to take ownership of the entire contents and capacity of the vector, see mem::take or mem::replace.
+If you don’t need the returned vector at all, see Vec::truncate.
+If you want to take ownership of an arbitrary subslice, or you don’t necessarily want to store the removed items in a vector, see Vec::drain.
+
+
+§Panics
+
+Panics if at > len.
+
+§Examples
+
+let mut vec = vec!['a', 'b', 'c'];
+let vec2 = vec.split_off(1);
+assert_eq!(vec, ['a']);
+assert_eq!(vec2, ['b', 'c']);
+
+1.33.0 · Source
+pub fn resize_with<F>(&mut self, new_len: usize, f: F)
+where F: FnMut() -> T,
+
+Resizes the Vec in-place so that len is equal to new_len.
+
+If new_len is greater than len, the Vec is extended by the difference, with each additional slot filled with the result of calling the closure f. The return values from f will end up in the Vec in the order they have been generated.
+
+If new_len is less than or equal to len, the Vec is simply truncated.
+
+This method uses a closure to create new values on every push. If you’d rather Clone a given value, use Vec::resize. If you want to use the Default trait to generate values, you can pass Default::default as the second argument.
+
+§Panics
+
+Panics if the new capacity exceeds isize::MAX bytes.
+
+§Examples
+
+let mut vec = vec![1, 2, 3];
+vec.resize_with(5, Default::default);
+assert_eq!(vec, [1, 2, 3, 0, 0]);
+
+let mut vec = vec![];
+let mut p = 1;
+vec.resize_with(4, || { p *= 2; p });
+assert_eq!(vec, [2, 4, 8, 16]);
+
+1.47.0 · Source
+pub fn leak<'a>(self) -> &'a mut [T]
+where A: 'a,
+
+Consumes and leaks the Vec, returning a mutable reference to the contents, &'a mut [T].
+
+Note that the type T must outlive the chosen lifetime 'a. If the type has only static references, or none at all, then this may be chosen to be 'static.
+
+As of Rust 1.57, this method does not reallocate or shrink the Vec, so the leaked allocation may include unused capacity that is not part of the returned slice.
+
+This function is mainly useful for data that lives for the remainder of the program’s life. Dropping the returned reference will cause a memory leak.
+
+§Examples
+
+Simple usage:
+
+let x = vec![1, 2, 3];
+let static_ref: &'static mut [usize] = x.leak();

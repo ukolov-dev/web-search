@@ -1,0 +1,14 @@
+{
+  "path": "feasibility/quote-binding-confirm-corpus-2026-11-13.tar.gz",
+  "bytes": 7441244,
+  "sha256": "2bc22e19b87929874ecfac649f3acf333d8232758fb9940c5359ad265e983edd",
+  "members": 607,
+  "all_hashes_verified": true,
+  "credentials_detected": 0,
+  "excluded": [
+    "SDK homes/config/workspace",
+    "keys",
+    "binaries",
+    "cache"
+  ]
+}

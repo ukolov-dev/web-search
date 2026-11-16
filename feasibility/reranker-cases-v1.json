@@ -1,0 +1,101 @@
+{
+  "protocol": {
+    "frozen_before_predictions": true,
+    "date": "2026-10-30",
+    "comparison": "coverage-v2 lexical vs same coverage-v2 Qwen3-Reranker-0.6B-4bit; identical retrieved pool, initial classifier, first review, pages and gate",
+    "models": "DeepSeek V4.1 Flash 1017 unchanged, local Qwen3 MLX affine4bit",
+    "budgets": "same up to10 candidates,3 body passages of1200chars,4reads,3generationcalls; rerank separate up to4 calls x128windows x1200chars,30s/call within180s",
+    "gold": "author blinded snapshot source labels and exact normalized support quotes frozen before A/B; no independent acceptance",
+    "controls": [
+      "r11 asks unsupported guaranteed FIFO",
+      "r12 asks impossible VACUUM FULL without exclusive lock"
+    ],
+    "no_holdout_tuning": true
+  },
+  "cases": [
+    {
+      "id": "r01",
+      "query": "Python pathlib Path resolve strict symlink loop behavior",
+      "forms": [
+        "Python pathlib Path resolve strict symlink loop behavior"
+      ]
+    },
+    {
+      "id": "r02",
+      "query": "Rust std sync Mutex poisoning lock recovery into_inner",
+      "forms": [
+        "Rust std sync Mutex poisoning lock recovery into_inner"
+      ]
+    },
+    {
+      "id": "r03",
+      "query": "PostgreSQL VACUUM FULL exclusive lock disk space",
+      "forms": [
+        "PostgreSQL VACUUM FULL exclusive lock disk space"
+      ]
+    },
+    {
+      "id": "r04",
+      "query": "SQLite foreign_keys pragma transaction no op",
+      "forms": [
+        "SQLite foreign_keys pragma transaction no op"
+      ]
+    },
+    {
+      "id": "r05",
+      "query": "Docker bind mount obscures existing container files",
+      "forms": [
+        "Docker bind mount obscures existing container files"
+      ]
+    },
+    {
+      "id": "r06",
+      "query": "CSS box-sizing border-box padding margin width",
+      "forms": [
+        "CSS box-sizing border-box padding margin width"
+      ]
+    },
+    {
+      "id": "r07",
+      "query": "git reset soft mixed hard index working tree difference",
+      "forms": [
+        "git reset soft mixed hard index working tree difference"
+      ]
+    },
+    {
+      "id": "r08",
+      "query": "HTTP 307 303 redirect POST method difference",
+      "forms": [
+        "HTTP 307 303 redirect POST method difference"
+      ]
+    },
+    {
+      "id": "r09",
+      "query": "JavaScript structuredClone transferable ArrayBuffer detached",
+      "forms": [
+        "JavaScript structuredClone transferable ArrayBuffer detached"
+      ]
+    },
+    {
+      "id": "r10",
+      "query": "Python asyncio TaskGroup gather exception cancellation difference",
+      "forms": [
+        "Python asyncio TaskGroup gather exception cancellation difference"
+      ]
+    },
+    {
+      "id": "r11",
+      "query": "Rust std sync Mutex guaranteed fairness FIFO acquisition",
+      "forms": [
+        "Rust std sync Mutex guaranteed fairness FIFO acquisition"
+      ]
+    },
+    {
+      "id": "r12",
+      "query": "PostgreSQL VACUUM FULL without exclusive lock guaranteed",
+      "forms": [
+        "PostgreSQL VACUUM FULL without exclusive lock guaranteed"
+      ]
+    }
+  ]
+}

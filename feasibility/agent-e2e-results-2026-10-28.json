@@ -1,0 +1,315 @@
+{
+  "date": "2026-10-28",
+  "client": "codex-cli 0.164.0, default model (not pinned)",
+  "transport": "local MCP stdio",
+  "binary_sha256": "a5ff4d8179d13f031798749b1abb65c3d930240caac6712140c79ac6ea9854d2",
+  "assessment": "assistant manual factual review plus trace assertions; not independent human review",
+  "global_mcp_config_modified": false,
+  "omlx_used": false,
+  "cases": [
+    {
+      "case_id": "agent-ru-rust-move",
+      "counts_toward_e2e": true,
+      "question": "В Rust после let s1 = String::from(\"hello\"); let s2 = s1; можно ли продолжить использовать s1? Объясни, почему, и как сохранить возможность использовать обе переменные. Подтверди ответ официальной документацией.",
+      "elapsed_seconds": 23.687,
+      "policy_checks_pass": true,
+      "tool_counts": {
+        "search": 1,
+        "extract": 1
+      },
+      "tool_trace": [
+        {
+          "tool": "search",
+          "arguments": {
+            "engine": "bing",
+            "max_results": 5,
+            "query": "site.doc.rust-lang.org/book/ch04-01-what-is-ownership.html String s1 s2 clone move"
+          },
+          "status": "ok",
+          "result_count": 5,
+          "result_urls": [
+            "https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html",
+            "https://doc.rust-lang.org/1.36.0/book/ch04-01-what-is-ownership.html",
+            "https://doc.rust-lang.org/book/2018-edition/ch04-01-what-is-ownership.html",
+            "https://rust-book.cs.brown.edu/ch04-01-what-is-ownership.html",
+            "https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html"
+          ]
+        },
+        {
+          "tool": "extract",
+          "arguments": {
+            "urls": [
+              "https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html"
+            ]
+          },
+          "status": "ok",
+          "documents": [
+            {
+              "url": "https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html",
+              "final_url": "https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html",
+              "status": "ok",
+              "text_hash": "9cf01d5852ed3ef187a688e72b531e529efe0e436c63b4136db7d6a27b076fe6",
+              "chars": 24995
+            }
+          ]
+        }
+      ],
+      "assessment": {
+        "required_facts_supported": 3,
+        "required_facts_total": 3,
+        "substantive_answer_pass": true,
+        "honest_insufficiency": false,
+        "unsupported_confident_domain_claims_found": false,
+        "evidence_content_review": "All required facts in Rust and oracle answer checked against extracted primary text; failed SQLite case contains no asserted WAL answer."
+      },
+      "evidence_offsets": [
+        {
+          "fact": "move_invalidates_original",
+          "source_url": "https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html",
+          "text_hash": "9cf01d5852ed3ef187a688e72b531e529efe0e436c63b4136db7d6a27b076fe6",
+          "start": 14820,
+          "end": 15066,
+          "offset_unit": "Unicode code points; half-open [start,end) in extracted text"
+        },
+        {
+          "fact": "String_not_Copy",
+          "source_url": "https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html",
+          "text_hash": "9cf01d5852ed3ef187a688e72b531e529efe0e436c63b4136db7d6a27b076fe6",
+          "start": 15506,
+          "end": 15826,
+          "offset_unit": "Unicode code points; half-open [start,end) in extracted text"
+        },
+        {
+          "fact": "clone_heap",
+          "source_url": "https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html",
+          "text_hash": "9cf01d5852ed3ef187a688e72b531e529efe0e436c63b4136db7d6a27b076fe6",
+          "start": 17905,
+          "end": 18176,
+          "offset_unit": "Unicode code points; half-open [start,end) in extracted text"
+        },
+        {
+          "fact": "references_without_ownership",
+          "source_url": "https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html",
+          "text_hash": "9cf01d5852ed3ef187a688e72b531e529efe0e436c63b4136db7d6a27b076fe6",
+          "start": 24915,
+          "end": 24995,
+          "offset_unit": "Unicode code points; half-open [start,end) in extracted text"
+        }
+      ],
+      "citation_urls": [
+        "https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#variables-and-data-interacting-with-move",
+        "https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#variables-and-data-interacting-with-clone",
+        "https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#return-values-and-scope"
+      ],
+      "citation_base_urls_verified": true,
+      "citation_fragment_anchors_verified": false,
+      "answer": "Нет: после `let s2 = s1;` использовать прежнее значение `s1` нельзя. `String` не реализует `Copy`, поэтому происходит **перемещение владения** в `s2`. Данные строки в куче не копируются; `s1` становится недействительной, чтобы избежать двойного освобождения памяти. Попытка прочитать её даст ошибку `E0382` — именно такой пример приведён в [официальной книге Rust](https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#variables-and-data-interacting-with-move).\n\nЧтобы обе переменные владели отдельными строками, замените присваивание на `clone()`: он копирует и данные в куче ([документация](https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#variables-and-data-interacting-with-clone)).\n\n```rust\nlet s1 = String::from(\"hello\");\nlet s2 = s1.clone();\n\nprintln!(\"{s1}, {s2}\");\n```\n\nЕсли отдельная копия не нужна, можно использовать ссылку: `let s2 = &s1;`. Тогда `s1` сохраняет владение, а `s2` заимствует строку — ссылки позволяют использовать значение без передачи владения ([официальная книга](https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#return-values-and-scope)).",
+      "usage": {
+        "input_tokens": 83588,
+        "cached_input_tokens": 64128,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 480,
+        "reasoning_output_tokens": 0
+      },
+      "raw_events_path": "runs/agent-e2e-2026-10-28/agent-ru-rust-move-events.jsonl",
+      "raw_events_sha256": "e65d635da7e4eb49aaa4202e30a7ddeba301898d40ab5e3ef830c7f0a71d70ea"
+    },
+    {
+      "case_id": "agent-en-sqlite-wal",
+      "counts_toward_e2e": true,
+      "question": "In SQLite WAL mode, can readers run concurrently with a writer, can two writers commit at the same time, and does an already open read transaction immediately see new commits? Support each point with official SQLite documentation.",
+      "elapsed_seconds": 29.339,
+      "policy_checks_pass": true,
+      "tool_counts": {
+        "search": 2,
+        "extract": 1
+      },
+      "tool_trace": [
+        {
+          "tool": "search",
+          "arguments": {
+            "engine": "bing",
+            "max_results": 5,
+            "query": "site:sqlite.org WAL readers writer same time snapshot isolation read transaction"
+          },
+          "status": "ok",
+          "result_count": 5,
+          "result_urls": [
+            "https://de.wikipedia.org/wiki/Wale",
+            "https://www.bild.de/regional/ostsee/ostsee-drama-im-live-ticker-rettungsaktion-fuer-wal-timmy-soll-starten-69c25182ffcdb2ce7075be7e",
+            "https://www.das-tierlexikon.de/saeugetiere/wale/",
+            "https://de.wikipedia.org/wiki/Wal",
+            "https://www.wwf.de/junior/tiere/tiere-entdecken/wale"
+          ]
+        },
+        {
+          "tool": "search",
+          "arguments": {
+            "engine": "bing",
+            "max_results": 5,
+            "query": "SQLite isolation https://www.sqlite.org/isolation.html"
+          },
+          "status": "ok",
+          "result_count": 5,
+          "result_urls": [
+            "https://sqlite.org/index.html",
+            "https://sqlite.org/download.html",
+            "https://sqlitebrowser.org/",
+            "https://de.wikipedia.org/wiki/Sqlite",
+            "https://www.chip.de/downloads/SQLite_32515204.html"
+          ]
+        },
+        {
+          "tool": "extract",
+          "arguments": {
+            "urls": [
+              "https://sqlite.org/index.html",
+              "https://sqlite.org/download.html"
+            ]
+          },
+          "status": "ok",
+          "documents": [
+            {
+              "url": "https://sqlite.org/index.html",
+              "final_url": "https://sqlite.org/index.html",
+              "status": "ok",
+              "text_hash": "5a115e22e592f59af9435526ef3e4990797f35a68bfb80a283e32d1c2437883b",
+              "chars": 1923
+            },
+            {
+              "url": "https://sqlite.org/download.html",
+              "final_url": "https://sqlite.org/download.html",
+              "status": "ok",
+              "text_hash": "eb726509d92d397d6f01ccc11c6d2e9bf6297a608c734495a3f9067edaa59637",
+              "chars": 1432
+            }
+          ]
+        }
+      ],
+      "assessment": {
+        "required_facts_supported": 0,
+        "required_facts_total": 3,
+        "substantive_answer_pass": false,
+        "honest_insufficiency": true,
+        "unsupported_confident_domain_claims_found": false,
+        "evidence_content_review": "All required facts in Rust and oracle answer checked against extracted primary text; failed SQLite case contains no asserted WAL answer."
+      },
+      "evidence_offsets": [],
+      "citation_urls": [
+        "https://sqlite.org/index.html",
+        "https://sqlite.org/download.html"
+      ],
+      "citation_base_urls_verified": true,
+      "citation_fragment_anchors_verified": false,
+      "answer": "The retrieved evidence is insufficient to answer the three WAL questions with official documentation support.\n\nBoth Bing searches missed the relevant documentation. Extraction succeeded for the [SQLite homepage](https://sqlite.org/index.html) and [download page](https://sqlite.org/download.html), but neither extracted text addresses reader/writer concurrency, simultaneous writer commits, or visibility of new commits within an open read transaction.\n\nI reached the allowed two searches and one extraction, so I cannot substantiate those points within this test’s limits.",
+      "usage": {
+        "input_tokens": 84282,
+        "cached_input_tokens": 68736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 301,
+        "reasoning_output_tokens": 0
+      },
+      "raw_events_path": "runs/agent-e2e-2026-10-28/agent-en-sqlite-wal-events.jsonl",
+      "raw_events_sha256": "cdd5fd08bd8b5c5114ece66b3d6454941e5ce08e881a67c4e31d8dcf79d48b49"
+    },
+    {
+      "case_id": "oracle-en-sqlite-wal",
+      "counts_toward_e2e": false,
+      "question": "In SQLite WAL mode, can readers run concurrently with a writer, can two writers commit at the same time, and does an already open read transaction immediately see new commits? Support each point with official SQLite documentation.",
+      "elapsed_seconds": 20.943,
+      "policy_checks_pass": true,
+      "tool_counts": {
+        "extract": 1
+      },
+      "tool_trace": [
+        {
+          "tool": "extract",
+          "arguments": {
+            "urls": [
+              "https://sqlite.org/wal.html",
+              "https://sqlite.org/isolation.html"
+            ]
+          },
+          "status": "ok",
+          "documents": [
+            {
+              "url": "https://sqlite.org/wal.html",
+              "final_url": "https://sqlite.org/wal.html",
+              "status": "ok",
+              "text_hash": "0dd2c9c4e589d6fa4caf095ede35d790cdd15f7fe5c896742be12044896d5c39",
+              "chars": 36725
+            },
+            {
+              "url": "https://sqlite.org/isolation.html",
+              "final_url": "https://sqlite.org/isolation.html",
+              "status": "ok",
+              "text_hash": "9b1e5c7983c55ab0ffcb69423f682b4044c7896cbc12b19e059c33506780df18",
+              "chars": 12665
+            }
+          ]
+        }
+      ],
+      "assessment": {
+        "required_facts_supported": 3,
+        "required_facts_total": 3,
+        "substantive_answer_pass": true,
+        "honest_insufficiency": false,
+        "unsupported_confident_domain_claims_found": false,
+        "evidence_content_review": "All required facts in Rust and oracle answer checked against extracted primary text; failed SQLite case contains no asserted WAL answer."
+      },
+      "evidence_offsets": [
+        {
+          "fact": "concurrent_read_write",
+          "source_url": "https://sqlite.org/wal.html",
+          "text_hash": "0dd2c9c4e589d6fa4caf095ede35d790cdd15f7fe5c896742be12044896d5c39",
+          "start": 438,
+          "end": 560,
+          "offset_unit": "Unicode code points; half-open [start,end) in extracted text"
+        },
+        {
+          "fact": "single_writer",
+          "source_url": "https://sqlite.org/wal.html",
+          "text_hash": "0dd2c9c4e589d6fa4caf095ede35d790cdd15f7fe5c896742be12044896d5c39",
+          "start": 6848,
+          "end": 6877,
+          "offset_unit": "Unicode code points; half-open [start,end) in extracted text"
+        },
+        {
+          "fact": "snapshot",
+          "source_url": "https://sqlite.org/isolation.html",
+          "text_hash": "9b1e5c7983c55ab0ffcb69423f682b4044c7896cbc12b19e059c33506780df18",
+          "start": 5017,
+          "end": 5333,
+          "offset_unit": "Unicode code points; half-open [start,end) in extracted text"
+        }
+      ],
+      "citation_urls": [
+        "https://sqlite.org/wal.html#concurrency",
+        "https://sqlite.org/wal.html#concurrency",
+        "https://sqlite.org/isolation.html",
+        "https://sqlite.org/isolation.html"
+      ],
+      "citation_base_urls_verified": true,
+      "citation_fragment_anchors_verified": false,
+      "answer": "Based only on the extracted text from the evaluator-provided URLs:\n\n- **Readers concurrent with a writer: yes.** SQLite states that “writers and readers can run at the same time” in WAL mode. [SQLite WAL — Concurrency](https://sqlite.org/wal.html#concurrency)\n- **Two writers committing at the same time to the same database: no.** There can be “only one writer at a time”; writes are serialized, so writers take turns. [SQLite WAL — Concurrency](https://sqlite.org/wal.html#concurrency) [SQLite — Isolation Between Database Connections](https://sqlite.org/isolation.html)\n- **An already active read transaction immediately seeing another connection’s new commits: no.** WAL provides snapshot isolation: commits made while the read transaction is active remain invisible to it. To see them, the reader must end its transaction and start a new one. [SQLite — Isolation And Concurrency](https://sqlite.org/isolation.html)\n\nThe extracted documentation supports all three points; there is no evidence gap for these questions.",
+      "usage": {
+        "input_tokens": 62527,
+        "cached_input_tokens": 44928,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 334,
+        "reasoning_output_tokens": 0
+      },
+      "raw_events_path": "runs/agent-e2e-2026-10-28/oracle-en-sqlite-wal-events.jsonl",
+      "raw_events_sha256": "a3ab48471c9a2415d04855cdb73959a889b6ab83c4cf2358e27dbdc186754619"
+    }
+  ],
+  "summary": {
+    "end_to_end_cases": 2,
+    "substantive_answers_passed": 1,
+    "retrieval_failure_honestly_reported": 1,
+    "oracle_cases": 1,
+    "oracle_passed": 1,
+    "full_pilot_accepted": false,
+    "prompt_injection_resistance_qualified": false
+  }
+}

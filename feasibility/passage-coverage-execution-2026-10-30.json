@@ -1,0 +1,95 @@
+{
+  "task": "TASK-20261030-184909-001",
+  "created_at_utc": "2026-10-30T16:22:19.360122+00:00",
+  "stages": {
+    "development_core_only_rejected": {
+      "cases": 10,
+      "generative_calls": 29,
+      "priced_generations": 29,
+      "reported_cost_usd": 0.004632336,
+      "unpriced_generations": 0,
+      "reads": 40,
+      "reranker_calls": 36,
+      "reranker_pairs": 430
+    },
+    "development_atomic": {
+      "cases": 8,
+      "generative_calls": 24,
+      "priced_generations": 24,
+      "reported_cost_usd": 0.004182368,
+      "unpriced_generations": 0,
+      "reads": 32,
+      "reranker_calls": 28,
+      "reranker_pairs": 319
+    },
+    "fresh_baseline": {
+      "cases": 12,
+      "generative_calls": 35,
+      "priced_generations": 35,
+      "reported_cost_usd": 0.00620095,
+      "unpriced_generations": 0,
+      "reads": 47,
+      "reranker_calls": 39,
+      "reranker_pairs": 804
+    },
+    "fresh_fixed": {
+      "cases": 12,
+      "generative_calls": 33,
+      "priced_generations": 33,
+      "reported_cost_usd": 0.006155584,
+      "unpriced_generations": 0,
+      "reads": 47,
+      "reranker_calls": 38,
+      "reranker_pairs": 876
+    },
+    "release_mcp": {
+      "generative_calls": 3,
+      "unpriced_generations": 3,
+      "reported_cost_usd": null,
+      "reads": 4,
+      "reranker_calls": 4,
+      "reranker_pairs": 61,
+      "status": "partial",
+      "errors": [
+        "unsupported_direct_evidence_or_constraints: 1 downgraded"
+      ]
+    }
+  },
+  "totals": {
+    "priced_generations": 121,
+    "reported_cost_usd": 0.021171238000000002,
+    "unpriced_generations": 3,
+    "generative_calls": 124
+  },
+  "retrieval_logical_calls": 24,
+  "fresh_raw_acquisitions": 50,
+  "gold_only_reads": 3,
+  "gold_only_success": 2,
+  "gold_only_failures": [
+    {
+      "case": "p05",
+      "candidate": "C015",
+      "error": "fetch_timeout"
+    }
+  ],
+  "source_blocks_preserved": true,
+  "code_freeze_exact": true,
+  "changes_after_primary_freeze": false,
+  "original20_sha256": "b67e3269830ae0e976aa9b4c5dc2f6b9c3e922ad1adda35738289d6b1b8325d6",
+  "b17_unchanged": true,
+  "verification": {
+    "ordinary_tests": 69,
+    "unit": 64,
+    "stdio": 5,
+    "release_stdio": 5,
+    "clippy": "passed",
+    "release_build": "passed",
+    "source_review": "peer code review with authored-component disclosure, not acceptance",
+    "independent_acceptance": false
+  },
+  "limits": [
+    "Reported provider cost, not a billing receipt; MCP usage price unavailable",
+    "Sequential replay has differing raw/provider cache hits, not an SLA comparison",
+    "No source grades changed from branch outputs"
+  ]
+}

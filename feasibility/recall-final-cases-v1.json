@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "frozen_at": "2026-10-29T18:45:57.729875+00:00",
+  "purpose": "Fresh8 after initial fresh6 failed to recover direct pages; frozen before page-ID verifier and head-title changes. Do not tune on this final set.",
+  "cases": [
+    {
+      "id": "f01",
+      "query": "HTTP 301 302 307 308 redirects request method preservation difference",
+      "forms": [
+        "HTTP 301 302 307 308 redirects request method preservation difference"
+      ]
+    },
+    {
+      "id": "f02",
+      "query": "PostgreSQL CTE MATERIALIZED NOT MATERIALIZED optimization fence documentation",
+      "forms": [
+        "PostgreSQL CTE MATERIALIZED NOT MATERIALIZED optimization fence documentation"
+      ]
+    },
+    {
+      "id": "f03",
+      "query": "Python asyncio.TaskGroup ExceptionGroup cancellation documentation",
+      "forms": [
+        "Python asyncio.TaskGroup ExceptionGroup cancellation documentation"
+      ]
+    },
+    {
+      "id": "f04",
+      "query": "CSS box-sizing border-box content-box padding border difference",
+      "forms": [
+        "CSS box-sizing border-box content-box padding border difference"
+      ]
+    },
+    {
+      "id": "f05",
+      "query": "site:docs.python.org tempfile NamedTemporaryFile delete_on_close Windows documentation",
+      "forms": [
+        "site:docs.python.org tempfile NamedTemporaryFile delete_on_close Windows documentation"
+      ]
+    },
+    {
+      "id": "f06",
+      "query": "Rust std::sync::Mutex poison PoisonError recovery documentation",
+      "forms": [
+        "Rust std::sync::Mutex poison PoisonError recovery documentation"
+      ]
+    },
+    {
+      "id": "f07",
+      "query": "Go 1.23 release August 2024 range over functions iteration",
+      "forms": [
+        "Go 1.23 release August 2024 range over functions iteration"
+      ]
+    },
+    {
+      "id": "f08",
+      "query": "git reset --soft --mixed --hard HEAD index working tree differences",
+      "forms": [
+        "git reset --soft --mixed --hard HEAD index working tree differences"
+      ]
+    }
+  ]
+}

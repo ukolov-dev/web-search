@@ -1,0 +1,1163 @@
+{
+  "protocol": {
+    "date": "2026-10-30",
+    "purpose": "Historical development outcome on the existing v6 cohort; not the fresh evaluation cohort and not an independent acceptance.",
+    "input_artifacts": {
+      "historical_miss_ledger": {
+        "path": "feasibility/passage-coverage-misses-2026-10-30.json",
+        "sha256": "99860f3287f59b5a25e2ed40131b1212f66345e2212738aa6e69515de8152291"
+      },
+      "frozen_v6_corpus": {
+        "path": "feasibility/direct-coverage-corpus-2026-10-30.json",
+        "sha256": "3d389e8ad8599b9f34438b1b3105e62722e07c7bebc08e9c3f10c63140ff4fca"
+      },
+      "frozen_v6_gold": {
+        "path": "feasibility/direct-coverage-gold-v1.json",
+        "sha256": "d8ca1da7f220e074cda47dd4fe652b6e632efe8a651939399065efa6258b3189"
+      },
+      "frozen_control_gold": {
+        "path": "feasibility/extraction-selection-gold-v1.json",
+        "sha256": "1175120d23d192c8d97db12eba92d4a5d3595336d476bc85861cb7fdd589f45e"
+      },
+      "rejected_core_only_results": {
+        "path": "runs/passage-coverage-2026-10-30/development/fixed/results.json",
+        "sha256": "862e47946102c073f648b1cf2b2219c4c77079308b9e9b88ba5991b20e9a9932"
+      },
+      "atomic_results": {
+        "path": "runs/passage-coverage-2026-10-30/development/atomic/results.json",
+        "sha256": "1b0c7f6cb247e17a890559d0833d621af310ac831ef1131b18ea2f77a537c49c"
+      }
+    },
+    "label_policy": "Use frozen grade 2 as positive, frozen known grades 0/1 as negative, and null/missing grades as unjudged. No relabeling from model outputs.",
+    "prediction_policy": "Only final results[].classification == direct counts as a prediction. Intermediate relation/check/audit claims do not count.",
+    "main_comparison_scope": "The same six executed historical cases c02,c03,c05,c06,c07,c08. c01/c04 are not run in the final atomic branch. n01/n07 are separate old false-direct controls.",
+    "baseline_branch": "feasibility/direct-coverage-corpus-2026-10-30.json: branches.fixed (v6)",
+    "atomic_branch": "runs/passage-coverage-2026-10-30/development/atomic/results.json",
+    "rejected_branch": "runs/passage-coverage-2026-10-30/development/fixed/results.json (core-only development, rejected after a new known false direct)",
+    "judged_direct_precision_definition": "TP/(TP+known FP); unjudged directs are reported separately and do not establish precision for the whole output.",
+    "execution_note": "Read existing saved local artifacts only. This summary does not run models, network, or runtime code. Fresh p01..p12 gold/results were not inspected."
+  },
+  "same_six_comparison": {
+    "case_ids": [
+      "c02",
+      "c03",
+      "c05",
+      "c06",
+      "c07",
+      "c08"
+    ],
+    "baseline_v6": {
+      "case_count": 6,
+      "known_gold_positive_count": 12,
+      "final_direct_count": 3,
+      "known_true_direct_count": 3,
+      "known_false_direct_count": 0,
+      "known_false_negative_count": 9,
+      "unjudged_direct_count": 0,
+      "known_direct_recall": 0.25,
+      "judged_direct_precision": 1.0,
+      "true_direct": [
+        {
+          "case": "c03",
+          "id": "C007"
+        },
+        {
+          "case": "c07",
+          "id": "C007"
+        },
+        {
+          "case": "c07",
+          "id": "C016"
+        }
+      ],
+      "false_direct": [],
+      "false_negative": [
+        {
+          "case": "c02",
+          "id": "C005"
+        },
+        {
+          "case": "c03",
+          "id": "C005"
+        },
+        {
+          "case": "c03",
+          "id": "C018"
+        },
+        {
+          "case": "c05",
+          "id": "C014"
+        },
+        {
+          "case": "c06",
+          "id": "C005"
+        },
+        {
+          "case": "c07",
+          "id": "C011"
+        },
+        {
+          "case": "c07",
+          "id": "C015"
+        },
+        {
+          "case": "c07",
+          "id": "C017"
+        },
+        {
+          "case": "c08",
+          "id": "C019"
+        }
+      ],
+      "unjudged_direct": []
+    },
+    "atomic": {
+      "case_count": 6,
+      "known_gold_positive_count": 12,
+      "final_direct_count": 7,
+      "known_true_direct_count": 6,
+      "known_false_direct_count": 0,
+      "known_false_negative_count": 6,
+      "unjudged_direct_count": 1,
+      "known_direct_recall": 0.5,
+      "judged_direct_precision": 1.0,
+      "true_direct": [
+        {
+          "case": "c02",
+          "id": "C005"
+        },
+        {
+          "case": "c07",
+          "id": "C007"
+        },
+        {
+          "case": "c07",
+          "id": "C015"
+        },
+        {
+          "case": "c07",
+          "id": "C016"
+        },
+        {
+          "case": "c07",
+          "id": "C017"
+        },
+        {
+          "case": "c08",
+          "id": "C019"
+        }
+      ],
+      "false_direct": [],
+      "false_negative": [
+        {
+          "case": "c03",
+          "id": "C005"
+        },
+        {
+          "case": "c03",
+          "id": "C007"
+        },
+        {
+          "case": "c03",
+          "id": "C018"
+        },
+        {
+          "case": "c05",
+          "id": "C014"
+        },
+        {
+          "case": "c06",
+          "id": "C005"
+        },
+        {
+          "case": "c07",
+          "id": "C011"
+        }
+      ],
+      "unjudged_direct": [
+        {
+          "case": "c02",
+          "id": "C006"
+        }
+      ]
+    },
+    "per_case": [
+      {
+        "case": "c02",
+        "baseline_v6": {
+          "case_count": 1,
+          "known_gold_positive_count": 1,
+          "final_direct_count": 0,
+          "known_true_direct_count": 0,
+          "known_false_direct_count": 0,
+          "known_false_negative_count": 1,
+          "unjudged_direct_count": 0,
+          "known_direct_recall": 0.0,
+          "judged_direct_precision": null,
+          "true_direct": [],
+          "false_direct": [],
+          "false_negative": [
+            {
+              "case": "c02",
+              "id": "C005"
+            }
+          ],
+          "unjudged_direct": []
+        },
+        "atomic": {
+          "case_count": 1,
+          "known_gold_positive_count": 1,
+          "final_direct_count": 2,
+          "known_true_direct_count": 1,
+          "known_false_direct_count": 0,
+          "known_false_negative_count": 0,
+          "unjudged_direct_count": 1,
+          "known_direct_recall": 1.0,
+          "judged_direct_precision": 1.0,
+          "true_direct": [
+            {
+              "case": "c02",
+              "id": "C005"
+            }
+          ],
+          "false_direct": [],
+          "false_negative": [],
+          "unjudged_direct": [
+            {
+              "case": "c02",
+              "id": "C006"
+            }
+          ]
+        },
+        "atomic_status": "ok",
+        "atomic_errors": []
+      },
+      {
+        "case": "c03",
+        "baseline_v6": {
+          "case_count": 1,
+          "known_gold_positive_count": 3,
+          "final_direct_count": 1,
+          "known_true_direct_count": 1,
+          "known_false_direct_count": 0,
+          "known_false_negative_count": 2,
+          "unjudged_direct_count": 0,
+          "known_direct_recall": 0.3333333333333333,
+          "judged_direct_precision": 1.0,
+          "true_direct": [
+            {
+              "case": "c03",
+              "id": "C007"
+            }
+          ],
+          "false_direct": [],
+          "false_negative": [
+            {
+              "case": "c03",
+              "id": "C005"
+            },
+            {
+              "case": "c03",
+              "id": "C018"
+            }
+          ],
+          "unjudged_direct": []
+        },
+        "atomic": {
+          "case_count": 1,
+          "known_gold_positive_count": 3,
+          "final_direct_count": 0,
+          "known_true_direct_count": 0,
+          "known_false_direct_count": 0,
+          "known_false_negative_count": 3,
+          "unjudged_direct_count": 0,
+          "known_direct_recall": 0.0,
+          "judged_direct_precision": null,
+          "true_direct": [],
+          "false_direct": [],
+          "false_negative": [
+            {
+              "case": "c03",
+              "id": "C005"
+            },
+            {
+              "case": "c03",
+              "id": "C007"
+            },
+            {
+              "case": "c03",
+              "id": "C018"
+            }
+          ],
+          "unjudged_direct": []
+        },
+        "atomic_status": "partial",
+        "atomic_errors": [
+          "evidence_verification: C014: fetch_timeout"
+        ]
+      },
+      {
+        "case": "c05",
+        "baseline_v6": {
+          "case_count": 1,
+          "known_gold_positive_count": 1,
+          "final_direct_count": 0,
+          "known_true_direct_count": 0,
+          "known_false_direct_count": 0,
+          "known_false_negative_count": 1,
+          "unjudged_direct_count": 0,
+          "known_direct_recall": 0.0,
+          "judged_direct_precision": null,
+          "true_direct": [],
+          "false_direct": [],
+          "false_negative": [
+            {
+              "case": "c05",
+              "id": "C014"
+            }
+          ],
+          "unjudged_direct": []
+        },
+        "atomic": {
+          "case_count": 1,
+          "known_gold_positive_count": 1,
+          "final_direct_count": 0,
+          "known_true_direct_count": 0,
+          "known_false_direct_count": 0,
+          "known_false_negative_count": 1,
+          "unjudged_direct_count": 0,
+          "known_direct_recall": 0.0,
+          "judged_direct_precision": null,
+          "true_direct": [],
+          "false_direct": [],
+          "false_negative": [
+            {
+              "case": "c05",
+              "id": "C014"
+            }
+          ],
+          "unjudged_direct": []
+        },
+        "atomic_status": "partial",
+        "atomic_errors": [
+          "evidence_verification: C017: fetch_timeout"
+        ]
+      },
+      {
+        "case": "c06",
+        "baseline_v6": {
+          "case_count": 1,
+          "known_gold_positive_count": 1,
+          "final_direct_count": 0,
+          "known_true_direct_count": 0,
+          "known_false_direct_count": 0,
+          "known_false_negative_count": 1,
+          "unjudged_direct_count": 0,
+          "known_direct_recall": 0.0,
+          "judged_direct_precision": null,
+          "true_direct": [],
+          "false_direct": [],
+          "false_negative": [
+            {
+              "case": "c06",
+              "id": "C005"
+            }
+          ],
+          "unjudged_direct": []
+        },
+        "atomic": {
+          "case_count": 1,
+          "known_gold_positive_count": 1,
+          "final_direct_count": 0,
+          "known_true_direct_count": 0,
+          "known_false_direct_count": 0,
+          "known_false_negative_count": 1,
+          "unjudged_direct_count": 0,
+          "known_direct_recall": 0.0,
+          "judged_direct_precision": null,
+          "true_direct": [],
+          "false_direct": [],
+          "false_negative": [
+            {
+              "case": "c06",
+              "id": "C005"
+            }
+          ],
+          "unjudged_direct": []
+        },
+        "atomic_status": "partial",
+        "atomic_errors": [
+          "evidence_verification: C002: failed to grab the article"
+        ]
+      },
+      {
+        "case": "c07",
+        "baseline_v6": {
+          "case_count": 1,
+          "known_gold_positive_count": 5,
+          "final_direct_count": 2,
+          "known_true_direct_count": 2,
+          "known_false_direct_count": 0,
+          "known_false_negative_count": 3,
+          "unjudged_direct_count": 0,
+          "known_direct_recall": 0.4,
+          "judged_direct_precision": 1.0,
+          "true_direct": [
+            {
+              "case": "c07",
+              "id": "C007"
+            },
+            {
+              "case": "c07",
+              "id": "C016"
+            }
+          ],
+          "false_direct": [],
+          "false_negative": [
+            {
+              "case": "c07",
+              "id": "C011"
+            },
+            {
+              "case": "c07",
+              "id": "C015"
+            },
+            {
+              "case": "c07",
+              "id": "C017"
+            }
+          ],
+          "unjudged_direct": []
+        },
+        "atomic": {
+          "case_count": 1,
+          "known_gold_positive_count": 5,
+          "final_direct_count": 4,
+          "known_true_direct_count": 4,
+          "known_false_direct_count": 0,
+          "known_false_negative_count": 1,
+          "unjudged_direct_count": 0,
+          "known_direct_recall": 0.8,
+          "judged_direct_precision": 1.0,
+          "true_direct": [
+            {
+              "case": "c07",
+              "id": "C007"
+            },
+            {
+              "case": "c07",
+              "id": "C015"
+            },
+            {
+              "case": "c07",
+              "id": "C016"
+            },
+            {
+              "case": "c07",
+              "id": "C017"
+            }
+          ],
+          "false_direct": [],
+          "false_negative": [
+            {
+              "case": "c07",
+              "id": "C011"
+            }
+          ],
+          "unjudged_direct": []
+        },
+        "atomic_status": "partial",
+        "atomic_errors": [
+          "unsupported_direct_evidence_or_constraints: 1 downgraded"
+        ]
+      },
+      {
+        "case": "c08",
+        "baseline_v6": {
+          "case_count": 1,
+          "known_gold_positive_count": 1,
+          "final_direct_count": 0,
+          "known_true_direct_count": 0,
+          "known_false_direct_count": 0,
+          "known_false_negative_count": 1,
+          "unjudged_direct_count": 0,
+          "known_direct_recall": 0.0,
+          "judged_direct_precision": null,
+          "true_direct": [],
+          "false_direct": [],
+          "false_negative": [
+            {
+              "case": "c08",
+              "id": "C019"
+            }
+          ],
+          "unjudged_direct": []
+        },
+        "atomic": {
+          "case_count": 1,
+          "known_gold_positive_count": 1,
+          "final_direct_count": 1,
+          "known_true_direct_count": 1,
+          "known_false_direct_count": 0,
+          "known_false_negative_count": 0,
+          "unjudged_direct_count": 0,
+          "known_direct_recall": 1.0,
+          "judged_direct_precision": 1.0,
+          "true_direct": [
+            {
+              "case": "c08",
+              "id": "C019"
+            }
+          ],
+          "false_direct": [],
+          "false_negative": [],
+          "unjudged_direct": []
+        },
+        "atomic_status": "partial",
+        "atomic_errors": [
+          "unsupported_direct_evidence_or_constraints: 1 downgraded"
+        ]
+      }
+    ],
+    "retained_previous_true_direct": [
+      {
+        "case": "c07",
+        "id": "C007"
+      },
+      {
+        "case": "c07",
+        "id": "C016"
+      }
+    ],
+    "new_known_true_direct": [
+      {
+        "case": "c02",
+        "id": "C005"
+      },
+      {
+        "case": "c07",
+        "id": "C015"
+      },
+      {
+        "case": "c07",
+        "id": "C017"
+      },
+      {
+        "case": "c08",
+        "id": "C019"
+      }
+    ],
+    "lost_previous_true_direct": [
+      {
+        "case": "c03",
+        "id": "C007",
+        "final_classification": "background",
+        "current_stage": "audit_rejection",
+        "current_rejection": "unverified or uncovered requirements: audit:Covers Weak::upgrade returning None when value dropped and from_raw with strong count 0, but does not directly state the relationship between upgrade and strong count being zero for the allocation.",
+        "read_attempted": true,
+        "document_record": {
+          "content_scope": "main",
+          "final_url": "https://doc.rust-lang.org/std/rc/struct.Weak.html",
+          "hops": [
+            "https://doc.rust-lang.org/std/rc/struct.Weak.html"
+          ],
+          "html_hash": "7cab8b1a30f5849a8882a52a02b5f701f68e3c5acf7f597db02992ca9b0ffec0",
+          "http_status": 200,
+          "id": "C007",
+          "raw_snapshot_cache_hit": true,
+          "text_hash": "d300c5e9a15f9d2b063c016e5fb72aaa6cc4c2354df625d25a2997e51991df4e",
+          "truncated": false,
+          "url": "https://doc.rust-lang.org/std/rc/struct.Weak.html"
+        },
+        "coverage_check_statuses": [
+          "supported",
+          "supported",
+          "supported",
+          "supported"
+        ],
+        "audit_supported": false,
+        "audit_reason": "Covers Weak::upgrade returning None when value dropped and from_raw with strong count 0, but does not directly state the relationship between upgrade and strong count being zero for the allocation."
+      }
+    ],
+    "interpretation": "Known direct recall rises from 3/12 to 6/12 with known FP 0 to 0, but one previous true direct is lost and one final direct remains unjudged. This is a development comparison, not fresh qualification."
+  },
+  "original_eleven_misses": {
+    "total": 11,
+    "executed": 9,
+    "recovered": 4,
+    "not_recovered": 5,
+    "not_run": 2,
+    "rows": [
+      {
+        "case": "c01",
+        "id": "C009",
+        "url": "https://git-scm.com/docs/git-cherry-pick",
+        "frozen_grade": 2,
+        "historical_stage": "document_selection",
+        "historical_cause": "Source is in coverage pool but not in four reads; card lacks --no-commit/initial-index witnesses.",
+        "historical_rejection": "unverified or uncovered requirements: R0,R1,R2,R3,audit:not accepted,literal:--no-commit",
+        "historical_support_count": 4,
+        "outcome": "not_run",
+        "current_stage": "not_run",
+        "current_rejection": null,
+        "final_classification": null,
+        "reason": "Case not rerun in the final atomic development branch; core-only outputs are not substituted."
+      },
+      {
+        "case": "c02",
+        "id": "C005",
+        "url": "https://github.com/python/cpython/blob/main/Doc/library/dataclasses.rst?plain=1",
+        "frozen_grade": 2,
+        "historical_stage": "extraction",
+        "historical_cause": "semantic_main produced128chars of GitHub header/navigation while actual rendered .react-code-lines contains886lines and complete asdict/deepcopy source.",
+        "historical_rejection": "unverified or uncovered requirements: R0,R1,R2,R3,audit:not accepted",
+        "historical_support_count": 4,
+        "final_classification": "direct",
+        "current_stage": "accepted_direct",
+        "current_rejection": null,
+        "read_attempted": true,
+        "document_record": {
+          "content_scope": "file_source",
+          "final_url": "https://github.com/python/cpython/blob/main/Doc/library/dataclasses.rst?plain=1",
+          "hops": [
+            "https://github.com/python/cpython/blob/main/Doc/library/dataclasses.rst?plain=1"
+          ],
+          "html_hash": "16d4a4cff5b27569089ee85bd6e48cd547ef2a9066b4d125d89c46b9bb4115d5",
+          "http_status": 200,
+          "id": "C005",
+          "raw_snapshot_cache_hit": true,
+          "text_hash": "a945013d25a170a4db6b64fe21b8fcb1fbc6a8e1510ae2ff6a6196ad929aaf13",
+          "truncated": false,
+          "url": "https://github.com/python/cpython/blob/main/Doc/library/dataclasses.rst?plain=1"
+        },
+        "coverage_check_statuses": [
+          "supported",
+          "supported",
+          "supported",
+          "supported"
+        ],
+        "audit_supported": true,
+        "audit_reason": "",
+        "outcome": "recovered"
+      },
+      {
+        "case": "c03",
+        "id": "C005",
+        "url": "https://doc.rust-lang.org/std/rc/",
+        "frozen_grade": 2,
+        "historical_stage": "coverage_requirements",
+        "historical_cause": "B1 lastRc drop +B2 upgradeNone/value-versus-allocation +B3 no strongRc jointly support query; overlapping anchors upgrade strong count/strong count dropped marked missing.",
+        "historical_rejection": "unverified or uncovered requirements: R2,R3,audit:not accepted",
+        "historical_support_count": 3,
+        "final_classification": "background",
+        "current_stage": "audit_rejection",
+        "current_rejection": "unverified or uncovered requirements: audit:Module-level overview states Weak::upgrade returns None if the value was dropped, but does not address the 'strong count' aspect of the query (behavior when strong count is zero).",
+        "read_attempted": true,
+        "document_record": {
+          "content_scope": "main",
+          "final_url": "https://doc.rust-lang.org/std/rc/",
+          "hops": [
+            "https://doc.rust-lang.org/std/rc/"
+          ],
+          "html_hash": "845b666f4240b5771c27069d886f96e9a97b8fd0581e251019fbbf3177546645",
+          "http_status": 200,
+          "id": "C005",
+          "raw_snapshot_cache_hit": true,
+          "text_hash": "c8ef4070043644d8aabfe41ed8cff44c673c4a5cca91b961904cacd36c73b655",
+          "truncated": false,
+          "url": "https://doc.rust-lang.org/std/rc/"
+        },
+        "coverage_check_statuses": [
+          "supported",
+          "supported",
+          "supported",
+          "supported"
+        ],
+        "audit_supported": false,
+        "audit_reason": "Module-level overview states Weak::upgrade returns None if the value was dropped, but does not address the 'strong count' aspect of the query (behavior when strong count is zero).",
+        "outcome": "not_recovered"
+      },
+      {
+        "case": "c03",
+        "id": "C018",
+        "url": "https://stdrs.dev/nightly/x86_64-unknown-linux-gnu/std/rc/index.html",
+        "frozen_grade": 2,
+        "historical_stage": "coverage_requirements",
+        "historical_cause": "Mirror has same complete relation inB1/B2/B3;R2/R3 missing due over-specific overlapping query anchors, not missing source.",
+        "historical_rejection": "unverified or uncovered requirements: R2,R3,audit:not accepted",
+        "historical_support_count": 3,
+        "final_classification": "background",
+        "current_stage": "audit_rejection",
+        "current_rejection": "unverified or uncovered requirements: audit:Module overview states upgrade returns None if value dropped, but does not address the 'strong count' aspect of the query.",
+        "read_attempted": true,
+        "document_record": {
+          "content_scope": "main",
+          "final_url": "https://stdrs.dev/nightly/x86_64-unknown-linux-gnu/std/rc/index.html",
+          "hops": [
+            "https://stdrs.dev/nightly/x86_64-unknown-linux-gnu/std/rc/index.html"
+          ],
+          "html_hash": "9efce0e4a2ad5127cd8c20f8228539ac4c4855c1ddf059629b5df103bf5b03d3",
+          "http_status": 200,
+          "id": "C018",
+          "raw_snapshot_cache_hit": true,
+          "text_hash": "54b8fefaada6076e0382e7c634e1c76b46506b26e811290d6be2470e5aab8b0d",
+          "truncated": false,
+          "url": "https://stdrs.dev/nightly/x86_64-unknown-linux-gnu/std/rc/index.html"
+        },
+        "coverage_check_statuses": [
+          "supported",
+          "supported",
+          "supported",
+          "supported"
+        ],
+        "audit_supported": false,
+        "audit_reason": "Module overview states upgrade returns None if value dropped, but does not address the 'strong count' aspect of the query.",
+        "outcome": "not_recovered"
+      },
+      {
+        "case": "c04",
+        "id": "C005",
+        "url": "https://explainextended.com/2009/09/16/not-in-vs-not-exists-vs-left-join-is-null-postgresql/",
+        "frozen_grade": 2,
+        "historical_stage": "initial_grounding_and_document_selection",
+        "historical_cause": "Rawinitial saiddirect, but PostgreSQL only in URL, absent truncatedT/S, so correct initial literal demotion; RRFbackground outside10coveragepool and notread.",
+        "historical_rejection": null,
+        "historical_support_count": 2,
+        "outcome": "not_run",
+        "current_stage": "not_run",
+        "current_rejection": null,
+        "final_classification": null,
+        "reason": "Case not rerun in the final atomic development branch; core-only outputs are not substituted."
+      },
+      {
+        "case": "c05",
+        "id": "C014",
+        "url": "https://www.sqlite.org/lang_altertable.html",
+        "frozen_grade": 2,
+        "historical_stage": "fragment_selection",
+        "historical_cause": "Critical ADDCOLUMN introduction andNOTNULL/default clause exist at~2856/~3371normalizedchars but Qwen top3 chose4/0/6;neededwindows2/3 ranked6/5.",
+        "historical_rejection": "unverified or uncovered requirements: R1,R2,audit:not accepted",
+        "historical_support_count": 3,
+        "final_classification": "background",
+        "current_stage": "audit_rejection",
+        "current_rejection": "unverified or uncovered requirements: audit:The passages state that a NOT NULL added column must have a non-NULL default and that CHECK/NOT NULL-on-generated constraints are tested against preexisting rows, but they do not explain how the default value is applied to existing rows for",
+        "read_attempted": true,
+        "document_record": {
+          "content_scope": "inferred_article",
+          "final_url": "https://www.sqlite.org/lang_altertable.html",
+          "hops": [
+            "https://www.sqlite.org/lang_altertable.html"
+          ],
+          "html_hash": "540366b0fa89257467497780e78538a992b5865a70d23180dac2aa7d2ef4e03d",
+          "http_status": 200,
+          "id": "C014",
+          "raw_snapshot_cache_hit": true,
+          "text_hash": "34c596f51c5323771720f9d2b4bc181883532f4274976afa6a2c40871d1163e5",
+          "truncated": false,
+          "url": "https://www.sqlite.org/lang_altertable.html"
+        },
+        "coverage_check_statuses": [
+          "supported",
+          "supported",
+          "supported",
+          "supported"
+        ],
+        "audit_supported": false,
+        "audit_reason": "The passages state that a NOT NULL added column must have a non-NULL default and that CHECK/NOT NULL-on-generated constraints are tested against preexisting rows, but they do not explain how the default value is applied to existing rows for",
+        "outcome": "not_recovered"
+      },
+      {
+        "case": "c06",
+        "id": "C005",
+        "url": "https://docs.docker.com/build/building/variables",
+        "frozen_grade": 2,
+        "historical_stage": "fragment_selection",
+        "historical_cause": "Three windows5/6/7 repeat ARGscoping; ENV persistence at~1630chars/window1rank5 omitted. Audit correctly rejected missingENV.",
+        "historical_rejection": "unverified or uncovered requirements: audit:No evidence on ENV scope or ENV inheritance/persistence across multi-stage builds; only ARG scoping and inheritance are explained.",
+        "historical_support_count": 3,
+        "final_classification": "background",
+        "current_stage": "audit_rejection",
+        "current_rejection": "unverified or uncovered requirements: audit:No direct evidence that ENV variables are inherited across multi-stage builds; the multi-stage inheritance passages cover only ARG, and the ENV passage addresses runtime persistence, not stage inheritance.",
+        "read_attempted": true,
+        "document_record": {
+          "content_scope": "main",
+          "final_url": "https://docs.docker.com/build/building/variables",
+          "hops": [
+            "https://docs.docker.com/build/building/variables"
+          ],
+          "html_hash": "c4894981990a161cf9c207285564d3fa622f8e168363b60dce9af2b98c6a7ca3",
+          "http_status": 200,
+          "id": "C005",
+          "raw_snapshot_cache_hit": true,
+          "text_hash": "6ade5ba23e29f4a00a15483be49ab2b3292a0d33be1a2a3009dfb07ef93cd916",
+          "truncated": false,
+          "url": "https://docs.docker.com/build/building/variables"
+        },
+        "coverage_check_statuses": [
+          "supported",
+          "supported",
+          "supported",
+          "supported"
+        ],
+        "audit_supported": false,
+        "audit_reason": "No direct evidence that ENV variables are inherited across multi-stage builds; the multi-stage inheritance passages cover only ARG, and the ENV passage addresses runtime persistence, not stage inheritance.",
+        "outcome": "not_recovered"
+      },
+      {
+        "case": "c07",
+        "id": "C011",
+        "url": "https://github.com/w3c/csswg-drafts/issues/7387",
+        "frozen_grade": 2,
+        "historical_stage": "fragment_selection_and_coverage",
+        "historical_cause": "Full keyboard/tab-order paragraph begins1281chars/window1rank5, just afterB1;selected0/3/12. Coverage also made phrase anchors CSSflexorder/keyboardtaborder missing.",
+        "historical_rejection": "unverified or uncovered requirements: R1,R3,audit:not accepted",
+        "historical_support_count": 2,
+        "final_classification": "background",
+        "current_stage": "document_selection",
+        "current_rejection": "unverified or uncovered requirements: R0,R1,R2,R3,audit:not accepted",
+        "read_attempted": false,
+        "document_record": null,
+        "coverage_check_statuses": [
+          "missing",
+          "missing",
+          "missing",
+          "missing"
+        ],
+        "audit_supported": null,
+        "audit_reason": "",
+        "outcome": "not_recovered"
+      },
+      {
+        "case": "c07",
+        "id": "C015",
+        "url": "https://www.shopify.com/partners/blog/keyboard-accessibility",
+        "frozen_grade": 2,
+        "historical_stage": "document_selection",
+        "historical_cause": "In coveragepool but no bodyread; snippet ends before fullTabexample, so coverage gaps are justified.",
+        "historical_rejection": "unverified or uncovered requirements: R1,R2,R3,audit:not accepted",
+        "historical_support_count": 2,
+        "final_classification": "direct",
+        "current_stage": "accepted_direct",
+        "current_rejection": null,
+        "read_attempted": true,
+        "document_record": {
+          "content_scope": "main",
+          "final_url": "https://www.shopify.com/partners/blog/keyboard-accessibility",
+          "hops": [
+            "https://www.shopify.com/partners/blog/keyboard-accessibility"
+          ],
+          "html_hash": "a99dc9495c8fd7c275831c69799ca05cc5a3dfa384233bb068b689baa9e45131",
+          "http_status": 200,
+          "id": "C015",
+          "raw_snapshot_cache_hit": true,
+          "text_hash": "463eef953c2475c4b550a38fd0b905dd3b88ffdf43ad0e40d217a73534320dba",
+          "truncated": false,
+          "url": "https://www.shopify.com/partners/blog/keyboard-accessibility"
+        },
+        "coverage_check_statuses": [
+          "supported",
+          "supported",
+          "supported",
+          "supported"
+        ],
+        "audit_supported": true,
+        "audit_reason": "",
+        "outcome": "recovered"
+      },
+      {
+        "case": "c07",
+        "id": "C017",
+        "url": "https://www.useragentman.com/blog/2017/01/28/flex-layout-fail-fixing-firefox-keyboard-accessibility-with-the-css-order-property/",
+        "frozen_grade": 2,
+        "historical_stage": "fragment_selection_and_coverage",
+        "historical_cause": "SelectedB2 already says tabbingorderDOMnotvisual butR3missing; selectedB3acknowledgements instead of normative standardquote window4rank5. HistoricalFirefoxclaim is not current guarantee.",
+        "historical_rejection": "unverified or uncovered requirements: R3,audit:not accepted",
+        "historical_support_count": 2,
+        "final_classification": "direct",
+        "current_stage": "accepted_direct",
+        "current_rejection": null,
+        "read_attempted": true,
+        "document_record": {
+          "content_scope": "main",
+          "final_url": "https://www.useragentman.com/blog/2017/01/28/flex-layout-fail-fixing-firefox-keyboard-accessibility-with-the-css-order-property/",
+          "hops": [
+            "https://www.useragentman.com/blog/2017/01/28/flex-layout-fail-fixing-firefox-keyboard-accessibility-with-the-css-order-property/"
+          ],
+          "html_hash": "0abccd447b7156d8d03bdffebd30a44e2c182973a29d884df8d702a7aee41ca4",
+          "http_status": 200,
+          "id": "C017",
+          "raw_snapshot_cache_hit": true,
+          "text_hash": "992108c797962a5fef9f2c80137c9d89818592a87e854bf91a4272185690055b",
+          "truncated": false,
+          "url": "https://www.useragentman.com/blog/2017/01/28/flex-layout-fail-fixing-firefox-keyboard-accessibility-with-the-css-order-property/"
+        },
+        "coverage_check_statuses": [
+          "supported",
+          "supported",
+          "supported",
+          "supported"
+        ],
+        "audit_supported": true,
+        "audit_reason": "",
+        "outcome": "recovered"
+      },
+      {
+        "case": "c08",
+        "id": "C019",
+        "url": "https://wheregoes.com/http-status-codes/421/",
+        "frozen_grade": 2,
+        "historical_stage": "typed_literal_negation",
+        "historical_cause": "Complete normativeSquote supports allfourchecks; onlyblockedliteral non-idempotent, although source says whethermethodidempotentornot. Bodyread not necessary for this card.",
+        "historical_rejection": "unverified or uncovered requirements: audit:not accepted,literal:non-idempotent",
+        "historical_support_count": 1,
+        "final_classification": "direct",
+        "current_stage": "accepted_direct",
+        "current_rejection": null,
+        "read_attempted": false,
+        "document_record": null,
+        "coverage_check_statuses": [
+          "supported",
+          "supported",
+          "supported",
+          "supported"
+        ],
+        "audit_supported": true,
+        "audit_reason": "",
+        "outcome": "recovered"
+      }
+    ]
+  },
+  "old_false_direct_controls": {
+    "scope": "Two targeted historical false-direct controls are kept separate from the six-case recall denominator.",
+    "passed": 2,
+    "total": 2,
+    "rows": [
+      {
+        "case": "n01",
+        "id": "C020",
+        "frozen_grade": 1,
+        "frozen_basis": "source_conflict: wrong material condition; says conflicting pop removes stash, contradicted by official Git retained-state rule",
+        "historical_false_direct_control": true,
+        "control_passed": true,
+        "final_classification": "background",
+        "current_stage": "audit_rejection",
+        "current_rejection": "unverified or uncovered requirements: audit:Claims pop loses the stash on conflict, contradicting the official documentation that says it is not removed from the stash list on conflict.",
+        "read_attempted": true,
+        "document_record": {
+          "content_scope": "inferred_article",
+          "final_url": "https://velog.io/@overslept/Git-Stash-%EC%82%AC%EC%9A%A9-%EC%8B%9C-%EC%B6%A9%EB%8F%8C-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EB%B2%95",
+          "hops": [
+            "https://velog.io/@overslept/Git-Stash-%EC%82%AC%EC%9A%A9-%EC%8B%9C-%EC%B6%A9%EB%8F%8C-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EB%B2%95"
+          ],
+          "html_hash": "0a926156ee7c6379a84e4261ce4339f2e4e7cc46f3e534c58ccd365944fa636b",
+          "http_status": 200,
+          "id": "C020",
+          "raw_snapshot_cache_hit": true,
+          "text_hash": "533cd5ed9b4651af52b7642a88f97c6d59546fe2c7844f446dafd2f273b26a7d",
+          "truncated": false,
+          "url": "https://velog.io/@overslept/Git-Stash-%EC%82%AC%EC%9A%A9-%EC%8B%9C-%EC%B6%A9%EB%8F%8C-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EB%B2%95"
+        },
+        "coverage_check_statuses": [
+          "supported",
+          "supported",
+          "supported",
+          "supported"
+        ],
+        "audit_supported": false,
+        "audit_reason": "Claims pop loses the stash on conflict, contradicting the official documentation that says it is not removed from the stash list on conflict.",
+        "case_metrics": {
+          "case_count": 1,
+          "known_gold_positive_count": 1,
+          "final_direct_count": 1,
+          "known_true_direct_count": 1,
+          "known_false_direct_count": 0,
+          "known_false_negative_count": 0,
+          "unjudged_direct_count": 0,
+          "known_direct_recall": 1.0,
+          "judged_direct_precision": 1.0,
+          "true_direct": [
+            {
+              "case": "n01",
+              "id": "C011"
+            }
+          ],
+          "false_direct": [],
+          "false_negative": [],
+          "unjudged_direct": []
+        }
+      },
+      {
+        "case": "n07",
+        "id": "C015",
+        "frozen_grade": 1,
+        "frozen_basis": "historical design review of clip; comparison with hidden is unresolved and design marked unsatisfied",
+        "historical_false_direct_control": true,
+        "control_passed": true,
+        "final_classification": "background",
+        "current_stage": "source_status_gate",
+        "current_rejection": "unverified or uncovered requirements: audit:not accepted,source_status:resolution: unsatisfied",
+        "read_attempted": true,
+        "document_record": {
+          "content_scope": "main",
+          "final_url": "https://github.com/w3ctag/design-reviews/issues/579",
+          "hops": [
+            "https://github.com/w3ctag/design-reviews/issues/579"
+          ],
+          "html_hash": "52e0796c2bbb965d03082152f409bc17c7a70f869f9a9956b808a6a042344f6f",
+          "http_status": 200,
+          "id": "C015",
+          "raw_snapshot_cache_hit": true,
+          "text_hash": "2214ca7474dffa9f341efa4f6b74131acbb7ebb62266c4950664efbc08233cd0",
+          "truncated": false,
+          "url": "https://github.com/w3ctag/design-reviews/issues/579"
+        },
+        "coverage_check_statuses": [
+          "supported",
+          "supported",
+          "supported",
+          "supported"
+        ],
+        "audit_supported": null,
+        "audit_reason": "",
+        "case_metrics": {
+          "case_count": 1,
+          "known_gold_positive_count": 2,
+          "final_direct_count": 0,
+          "known_true_direct_count": 0,
+          "known_false_direct_count": 0,
+          "known_false_negative_count": 2,
+          "unjudged_direct_count": 0,
+          "known_direct_recall": 0.0,
+          "judged_direct_precision": null,
+          "true_direct": [],
+          "false_direct": [],
+          "false_negative": [
+            {
+              "case": "n07",
+              "id": "C007"
+            },
+            {
+              "case": "n07",
+              "id": "C009"
+            }
+          ],
+          "unjudged_direct": []
+        }
+      }
+    ]
+  },
+  "rejected_core_only_development": {
+    "reason": "A new direct prediction c02C018 has frozen grade 1. The branch cannot be accepted as zero-false-direct improvement.",
+    "same_six_metrics": {
+      "case_count": 6,
+      "known_gold_positive_count": 12,
+      "final_direct_count": 10,
+      "known_true_direct_count": 8,
+      "known_false_direct_count": 1,
+      "known_false_negative_count": 4,
+      "unjudged_direct_count": 1,
+      "known_direct_recall": 0.6666666666666666,
+      "judged_direct_precision": 0.8888888888888888,
+      "true_direct": [
+        {
+          "case": "c02",
+          "id": "C005"
+        },
+        {
+          "case": "c03",
+          "id": "C005"
+        },
+        {
+          "case": "c03",
+          "id": "C007"
+        },
+        {
+          "case": "c03",
+          "id": "C018"
+        },
+        {
+          "case": "c07",
+          "id": "C007"
+        },
+        {
+          "case": "c07",
+          "id": "C015"
+        },
+        {
+          "case": "c07",
+          "id": "C016"
+        },
+        {
+          "case": "c07",
+          "id": "C017"
+        }
+      ],
+      "false_direct": [
+        {
+          "case": "c02",
+          "id": "C018"
+        }
+      ],
+      "false_negative": [
+        {
+          "case": "c05",
+          "id": "C014"
+        },
+        {
+          "case": "c06",
+          "id": "C005"
+        },
+        {
+          "case": "c07",
+          "id": "C011"
+        },
+        {
+          "case": "c08",
+          "id": "C019"
+        }
+      ],
+      "unjudged_direct": [
+        {
+          "case": "c02",
+          "id": "C006"
+        }
+      ]
+    },
+    "new_known_false_direct": {
+      "case": "c02",
+      "id": "C018",
+      "frozen_grade": 1,
+      "frozen_basis": "recursive nested-dataclass conversion explained, but deepcopy of other objects not established",
+      "core_only_final_classification": "direct",
+      "atomic_outcome": {
+        "final_classification": "background",
+        "current_stage": "coverage_requirements",
+        "current_rejection": "unverified or uncovered requirements: R2,audit:not accepted",
+        "read_attempted": true,
+        "document_record": {
+          "content_scope": "main",
+          "final_url": "https://pythontutorial.org/oop/python-dataclasses/",
+          "hops": [
+            "https://pythontutorial.org/oop/python-dataclasses/"
+          ],
+          "html_hash": "6ba68d97c3407d096e7bed7aa1a3728d02a9c9713e8225f93030f94f47b22b1d",
+          "http_status": 200,
+          "id": "C018",
+          "raw_snapshot_cache_hit": true,
+          "text_hash": "e528a7c1a4a78595aa3a7682b9aab41db2f477dc2eb01704ac76f6b2d024f81a",
+          "truncated": false,
+          "url": "https://pythontutorial.org/oop/python-dataclasses/"
+        },
+        "coverage_check_statuses": [
+          "supported",
+          "supported",
+          "missing",
+          "supported"
+        ],
+        "audit_supported": null,
+        "audit_reason": ""
+      }
+    },
+    "note": "Core-only c01/c04 outputs exist, but they are not substituted for missing final atomic executions."
+  }
+}

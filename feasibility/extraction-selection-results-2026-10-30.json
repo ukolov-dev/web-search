@@ -1,0 +1,714 @@
+{
+  "protocol": {
+    "cases": 8,
+    "cards": 149,
+    "known_gold": 63,
+    "positive_gold": 13,
+    "unjudged_gold": 86,
+    "gold": {
+      "author": "one separate source annotator blinded to branch labels/model outputs; not independent acceptance",
+      "freeze": "queries/code fixed before inference; source gold fixed after acquisition before branch predictions inspected",
+      "scope": "known relevant retrieved sources, not universal web recall; null unjudged and unknown direct reported separately",
+      "source_gold": "original retained HTML from raw acquisition union plus preselected source-only audits; not branch-extracted text",
+      "criteria": "grade2 requested relationship including material conditions;grade1 partial scope;grade0 clearly unrelated;short shell/challenge/unobserved source unknown",
+      "historical": "unsupported/superseded version without requested historical version is grade1",
+      "source_conflict": "n01C020 explicitly false key condition against official n01C011:primary grade1;source_relevance_grade2 retained for separate sensitivity,not merged into primary",
+      "offsets": "UTF-8 bytes in whitespace-normalized source_text(original HTML); script/style/template/noscript/svg text excluded",
+      "isolation": "no branch output, model labels or verdicts were read by annotator; gold-only audits never injected into branch inputs"
+    },
+    "comparison": "full initial+coverage+audit+localQwen; identical frozen live SERP and raw acquisition; branch-specific extraction and document selection",
+    "timing": "sequential replay; raw/snapshot and provider cache differ; not isolated SLA",
+    "read_metrics": "selected includes host-disabled skips; attempted excludes those skips; success requires actual extracted document; ratios use known positive retrieved sources"
+  },
+  "branches": {
+    "baseline": {
+      "tp": 8,
+      "fp": 4,
+      "fn": 5,
+      "unjudged_direct": 0,
+      "recall": 0.6153846153846154,
+      "precision_judged": 0.6666666666666666,
+      "initial_valid": 8,
+      "initial_attempts": 8,
+      "initial_length": 0,
+      "initial_stop_empty": 0,
+      "initial_reasoning_tokens": 0,
+      "initial_elapsed_ms_median": 2406.0,
+      "elapsed_ms_median": 18497.5,
+      "elapsed_ms_sum": 168974,
+      "generative_calls": 23,
+      "known_cost_usd": 0.003875394,
+      "unpriced_generations": 0,
+      "prompt_tokens": 96483,
+      "completion_tokens": 10617,
+      "providers": {
+        "Morph": 23
+      },
+      "reads": 32,
+      "raw_snapshot_cache_hits": 0,
+      "known_positive": 13,
+      "positive_in_coverage_pool": 11,
+      "positive_read_selected": 11,
+      "positive_attempted": 11,
+      "positive_extracted": 11,
+      "read_recall": 0.8461538461538461,
+      "extracted_source_recall": 0.8461538461538461,
+      "reranker_calls": 26,
+      "reranker_pairs": 550,
+      "reranker_fallbacks": 0,
+      "proof_ranges_validated": 59,
+      "errors": {
+        "evidence_verification": 6,
+        "unsupported_direct_evidence_or_constraints": 1
+      },
+      "all_classes_recall_at10": 0.8461538461538461,
+      "relevant_returned_at10": 11
+    },
+    "fixed": {
+      "tp": 8,
+      "fp": 2,
+      "fn": 5,
+      "unjudged_direct": 0,
+      "recall": 0.6153846153846154,
+      "precision_judged": 0.8,
+      "initial_valid": 8,
+      "initial_attempts": 8,
+      "initial_length": 0,
+      "initial_stop_empty": 0,
+      "initial_reasoning_tokens": 0,
+      "initial_elapsed_ms_median": 2822.5,
+      "elapsed_ms_median": 16042.0,
+      "elapsed_ms_sum": 124448,
+      "generative_calls": 23,
+      "known_cost_usd": 0.003736308,
+      "unpriced_generations": 0,
+      "prompt_tokens": 95598,
+      "completion_tokens": 10474,
+      "providers": {
+        "Morph": 23
+      },
+      "reads": 32,
+      "raw_snapshot_cache_hits": 26,
+      "known_positive": 13,
+      "positive_in_coverage_pool": 12,
+      "positive_read_selected": 12,
+      "positive_attempted": 12,
+      "positive_extracted": 12,
+      "read_recall": 0.9230769230769231,
+      "extracted_source_recall": 0.9230769230769231,
+      "reranker_calls": 27,
+      "reranker_pairs": 600,
+      "reranker_fallbacks": 0,
+      "proof_ranges_validated": 50,
+      "errors": {
+        "evidence_verification": 5,
+        "unsupported_direct_evidence_or_constraints": 1
+      },
+      "all_classes_recall_at10": 0.9230769230769231,
+      "relevant_returned_at10": 12
+    }
+  },
+  "cases": [
+    {
+      "id": "n01",
+      "query": "git stash pop apply conflict stash entry retained",
+      "known_positive": 1,
+      "branches": {
+        "baseline": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 1,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": 0.0,
+          "direct": [
+            "C001",
+            "C015",
+            "C020"
+          ],
+          "relevant_returned": 0,
+          "positive_in_coverage_pool": [],
+          "positive_read_selected": [],
+          "positive_attempted": [],
+          "positive_extracted": [],
+          "initial_valid": true,
+          "reads": 4,
+          "errors": [
+            "evidence_verification: C003: failed to grab the article"
+          ],
+          "status": "partial"
+        },
+        "fixed": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "unjudged_direct": 0,
+          "recall": 1.0,
+          "precision_judged": 0.5,
+          "direct": [
+            "C011",
+            "C020"
+          ],
+          "relevant_returned": 1,
+          "positive_in_coverage_pool": [
+            "C011"
+          ],
+          "positive_read_selected": [
+            "C011"
+          ],
+          "positive_attempted": [
+            "C011"
+          ],
+          "positive_extracted": [
+            "C011"
+          ],
+          "initial_valid": true,
+          "reads": 4,
+          "errors": [],
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "id": "n02",
+      "query": "Python itertools.groupby adjacent equal keys shared underlying iterator",
+      "known_positive": 1,
+      "branches": {
+        "baseline": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "unjudged_direct": 0,
+          "recall": 1.0,
+          "precision_judged": 1.0,
+          "direct": [
+            "C001"
+          ],
+          "relevant_returned": 1,
+          "positive_in_coverage_pool": [
+            "C001"
+          ],
+          "positive_read_selected": [
+            "C001"
+          ],
+          "positive_attempted": [
+            "C001"
+          ],
+          "positive_extracted": [
+            "C001"
+          ],
+          "initial_valid": true,
+          "reads": 4,
+          "errors": [
+            "evidence_verification: C002: failed to grab the article",
+            "evidence_verification: C015: fetch_timeout"
+          ],
+          "status": "partial"
+        },
+        "fixed": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "unjudged_direct": 0,
+          "recall": 1.0,
+          "precision_judged": 1.0,
+          "direct": [
+            "C001"
+          ],
+          "relevant_returned": 1,
+          "positive_in_coverage_pool": [
+            "C001"
+          ],
+          "positive_read_selected": [
+            "C001"
+          ],
+          "positive_attempted": [
+            "C001"
+          ],
+          "positive_extracted": [
+            "C001"
+          ],
+          "initial_valid": true,
+          "reads": 4,
+          "errors": [
+            "evidence_verification: C002: failed to grab the article",
+            "evidence_verification: C015: fetch_timeout"
+          ],
+          "status": "partial"
+        }
+      }
+    },
+    {
+      "id": "n03",
+      "query": "Rust BufRead read_line read_until UTF-8 invalid data delimiter retained",
+      "known_positive": 1,
+      "branches": {
+        "baseline": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "relevant_returned": 1,
+          "positive_in_coverage_pool": [
+            "C002"
+          ],
+          "positive_read_selected": [
+            "C002"
+          ],
+          "positive_attempted": [
+            "C002"
+          ],
+          "positive_extracted": [
+            "C002"
+          ],
+          "initial_valid": true,
+          "reads": 4,
+          "errors": [],
+          "status": "ok"
+        },
+        "fixed": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "relevant_returned": 1,
+          "positive_in_coverage_pool": [
+            "C002"
+          ],
+          "positive_read_selected": [
+            "C002"
+          ],
+          "positive_attempted": [
+            "C002"
+          ],
+          "positive_extracted": [
+            "C002"
+          ],
+          "initial_valid": true,
+          "reads": 4,
+          "errors": [],
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "id": "n04",
+      "query": "PostgreSQL DISTINCT ON ORDER BY first row unpredictable",
+      "known_positive": 2,
+      "branches": {
+        "baseline": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "unjudged_direct": 0,
+          "recall": 1.0,
+          "precision_judged": 1.0,
+          "direct": [
+            "C011",
+            "C020"
+          ],
+          "relevant_returned": 2,
+          "positive_in_coverage_pool": [
+            "C011",
+            "C020"
+          ],
+          "positive_read_selected": [
+            "C011",
+            "C020"
+          ],
+          "positive_attempted": [
+            "C011",
+            "C020"
+          ],
+          "positive_extracted": [
+            "C011",
+            "C020"
+          ],
+          "initial_valid": true,
+          "reads": 4,
+          "errors": [
+            "evidence_verification: C008: failed to grab the article"
+          ],
+          "status": "partial"
+        },
+        "fixed": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "unjudged_direct": 0,
+          "recall": 0.5,
+          "precision_judged": 1.0,
+          "direct": [
+            "C011"
+          ],
+          "relevant_returned": 2,
+          "positive_in_coverage_pool": [
+            "C011",
+            "C020"
+          ],
+          "positive_read_selected": [
+            "C011",
+            "C020"
+          ],
+          "positive_attempted": [
+            "C011",
+            "C020"
+          ],
+          "positive_extracted": [
+            "C011",
+            "C020"
+          ],
+          "initial_valid": true,
+          "reads": 4,
+          "errors": [
+            "evidence_verification: C008: failed to grab the article"
+          ],
+          "status": "partial"
+        }
+      }
+    },
+    {
+      "id": "n05",
+      "query": "SQLite REPLACE delete triggers recursive_triggers update hook change counter",
+      "known_positive": 1,
+      "branches": {
+        "baseline": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "relevant_returned": 1,
+          "positive_in_coverage_pool": [
+            "C013"
+          ],
+          "positive_read_selected": [
+            "C013"
+          ],
+          "positive_attempted": [
+            "C013"
+          ],
+          "positive_extracted": [
+            "C013"
+          ],
+          "initial_valid": true,
+          "reads": 4,
+          "errors": [],
+          "status": "ok"
+        },
+        "fixed": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "relevant_returned": 1,
+          "positive_in_coverage_pool": [
+            "C013"
+          ],
+          "positive_read_selected": [
+            "C013"
+          ],
+          "positive_attempted": [
+            "C013"
+          ],
+          "positive_extracted": [
+            "C013"
+          ],
+          "initial_valid": true,
+          "reads": 4,
+          "errors": [],
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "id": "n06",
+      "query": "Docker empty volume populate nocopy existing container files",
+      "known_positive": 1,
+      "branches": {
+        "baseline": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "unjudged_direct": 0,
+          "recall": 1.0,
+          "precision_judged": 1.0,
+          "direct": [
+            "C007"
+          ],
+          "relevant_returned": 1,
+          "positive_in_coverage_pool": [
+            "C007"
+          ],
+          "positive_read_selected": [
+            "C007"
+          ],
+          "positive_attempted": [
+            "C007"
+          ],
+          "positive_extracted": [
+            "C007"
+          ],
+          "initial_valid": true,
+          "reads": 4,
+          "errors": [
+            "evidence_verification: C003: failed to grab the article"
+          ],
+          "status": "partial"
+        },
+        "fixed": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "unjudged_direct": 0,
+          "recall": 1.0,
+          "precision_judged": 1.0,
+          "direct": [
+            "C007"
+          ],
+          "relevant_returned": 1,
+          "positive_in_coverage_pool": [
+            "C007"
+          ],
+          "positive_read_selected": [
+            "C007"
+          ],
+          "positive_attempted": [
+            "C007"
+          ],
+          "positive_extracted": [
+            "C007"
+          ],
+          "initial_valid": true,
+          "reads": 4,
+          "errors": [
+            "evidence_verification: C003: failed to grab the article"
+          ],
+          "status": "partial"
+        }
+      }
+    },
+    {
+      "id": "n07",
+      "query": "CSS overflow clip hidden scroll container programmatic scrolling",
+      "known_positive": 2,
+      "branches": {
+        "baseline": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 2,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": 0.0,
+          "direct": [
+            "C015"
+          ],
+          "relevant_returned": 1,
+          "positive_in_coverage_pool": [
+            "C007"
+          ],
+          "positive_read_selected": [
+            "C007"
+          ],
+          "positive_attempted": [
+            "C007"
+          ],
+          "positive_extracted": [
+            "C007"
+          ],
+          "initial_valid": true,
+          "reads": 4,
+          "errors": [
+            "evidence_verification: C001: fetch_timeout"
+          ],
+          "status": "partial"
+        },
+        "fixed": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 2,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": 0.0,
+          "direct": [
+            "C015"
+          ],
+          "relevant_returned": 1,
+          "positive_in_coverage_pool": [
+            "C007"
+          ],
+          "positive_read_selected": [
+            "C007"
+          ],
+          "positive_attempted": [
+            "C007"
+          ],
+          "positive_extracted": [
+            "C007"
+          ],
+          "initial_valid": true,
+          "reads": 4,
+          "errors": [
+            "evidence_verification: C001: fetch_timeout"
+          ],
+          "status": "partial"
+        }
+      }
+    },
+    {
+      "id": "n08",
+      "query": "HTTP HEAD Content-Length response body GET semantics",
+      "known_positive": 4,
+      "branches": {
+        "baseline": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "unjudged_direct": 0,
+          "recall": 1.0,
+          "precision_judged": 1.0,
+          "direct": [
+            "C007",
+            "C009",
+            "C011",
+            "C016"
+          ],
+          "relevant_returned": 4,
+          "positive_in_coverage_pool": [
+            "C007",
+            "C009",
+            "C011",
+            "C016"
+          ],
+          "positive_read_selected": [
+            "C007",
+            "C009",
+            "C011",
+            "C016"
+          ],
+          "positive_attempted": [
+            "C007",
+            "C009",
+            "C011",
+            "C016"
+          ],
+          "positive_extracted": [
+            "C007",
+            "C009",
+            "C011",
+            "C016"
+          ],
+          "initial_valid": true,
+          "reads": 4,
+          "errors": [
+            "unsupported_direct_evidence_or_constraints: 2 downgraded"
+          ],
+          "status": "partial"
+        },
+        "fixed": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "unjudged_direct": 0,
+          "recall": 1.0,
+          "precision_judged": 1.0,
+          "direct": [
+            "C007",
+            "C009",
+            "C011",
+            "C016"
+          ],
+          "relevant_returned": 4,
+          "positive_in_coverage_pool": [
+            "C007",
+            "C009",
+            "C011",
+            "C016"
+          ],
+          "positive_read_selected": [
+            "C007",
+            "C009",
+            "C011",
+            "C016"
+          ],
+          "positive_attempted": [
+            "C007",
+            "C009",
+            "C011",
+            "C016"
+          ],
+          "positive_extracted": [
+            "C007",
+            "C009",
+            "C011",
+            "C016"
+          ],
+          "initial_valid": true,
+          "reads": 4,
+          "errors": [
+            "unsupported_direct_evidence_or_constraints: 2 downgraded"
+          ],
+          "status": "partial"
+        }
+      }
+    }
+  ],
+  "false_direct_changes": {
+    "new": [],
+    "retained": [
+      [
+        "n01",
+        "C020"
+      ],
+      [
+        "n07",
+        "C015"
+      ]
+    ],
+    "removed": [
+      [
+        "n01",
+        "C001"
+      ],
+      [
+        "n01",
+        "C015"
+      ]
+    ]
+  },
+  "source_relevance_sensitivity": {
+    "baseline": {
+      "tp": 9,
+      "fp": 3,
+      "fn": 5,
+      "unjudged_direct": 0,
+      "recall": 0.6428571428571429,
+      "precision_judged": 0.75
+    },
+    "fixed": {
+      "tp": 9,
+      "fp": 1,
+      "fn": 5,
+      "unjudged_direct": 0,
+      "recall": 0.6428571428571429,
+      "precision_judged": 0.9
+    }
+  },
+  "recall_delta_query_bootstrap95": [
+    -0.20000000000000007,
+    0.2727272727272727
+  ],
+  "corpus_sha256": "2f39751d0a8210b1fd99835434eba2682820e407212e7ba9386c0dfc4f4b8f7e",
+  "original20_sha256": "b67e3269830ae0e976aa9b4c5dc2f6b9c3e922ad1adda35738289d6b1b8325d6"
+}

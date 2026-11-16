@@ -1,0 +1,151 @@
+{
+  "schema": "research-followup-frozen-v1",
+  "baseline": "b29fd97 / V4",
+  "note": "Frozen before fresh cohort inference; D02/D04 development and H01/H02 separate. Reference answers never passed to runtime. Own bounded source-aware comparison, not general qualification.",
+  "cases": [
+    {
+      "id": "F01",
+      "tool": "research",
+      "question": "RFC 6455: MUST ли клиент маскировать все frames, которые отправляет серверу?",
+      "gold_aspects": [
+        "Client MUST mask all frames sent to server."
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc6455.html"
+      ],
+      "group": "RFC"
+    },
+    {
+      "id": "F02",
+      "tool": "research",
+      "question": "RFC 9110: может ли ответ 204 содержать content или trailers?",
+      "gold_aspects": [
+        "204 cannot contain content or trailers."
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc9110.html"
+      ],
+      "group": "RFC"
+    },
+    {
+      "id": "F03",
+      "tool": "research",
+      "question": "RFC 9111: что запрещает response directive no-store для shared и private caches?",
+      "gold_aspects": [
+        "Cache MUST NOT store any part of response or immediate request."
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc9111.html"
+      ],
+      "group": "RFC"
+    },
+    {
+      "id": "F04",
+      "tool": "research",
+      "question": "RFC 7519: обязательно ли использовать claim nbf?",
+      "gold_aspects": [
+        "Use of nbf is optional."
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc7519.html"
+      ],
+      "group": "RFC"
+    },
+    {
+      "id": "F05",
+      "tool": "research",
+      "question": "В документации Rust Vec::clear: становится ли len равен 0 и меняется ли capacity?",
+      "gold_aspects": [
+        "clear removes all values, has no effect on allocated capacity."
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/vec/struct.Vec.html#method.clear"
+      ],
+      "group": "technical"
+    },
+    {
+      "id": "F06",
+      "tool": "research",
+      "question": "В документации Rust Option::take: что метод оставляет вместо значения в self?",
+      "gold_aspects": [
+        "Takes value and leaves None."
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/option/enum.Option.html#method.take"
+      ],
+      "group": "technical"
+    },
+    {
+      "id": "F07",
+      "tool": "research",
+      "question": "По документации Rust slice::split_first: что возвращается для пустого среза?",
+      "gold_aspects": [
+        "Returns None for empty slice."
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/primitive.slice.html#method.split_first"
+      ],
+      "group": "technical"
+    },
+    {
+      "id": "F08",
+      "tool": "research",
+      "question": "По документации Rust str::strip_prefix: что возвращается, если префикс не найден?",
+      "gold_aspects": [
+        "Returns None when no prefix matches."
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/primitive.str.html#method.strip_prefix"
+      ],
+      "group": "technical"
+    },
+    {
+      "id": "F09",
+      "tool": "research",
+      "question": "site:doc.rust-lang.org По документации Vec::pop: что возвращается для пустого вектора?",
+      "gold_aspects": [
+        "Returns None for empty vector."
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/vec/struct.Vec.html#method.pop"
+      ],
+      "group": "scope"
+    },
+    {
+      "id": "F10",
+      "tool": "research",
+      "question": "site:doc.rust-lang.org По документации Vec::truncate: увеличит ли truncate(20) длину вектора, если текущая длина 3?",
+      "gold_aspects": [
+        "If len is greater or equal current length, has no effect."
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/vec/struct.Vec.html#method.truncate"
+      ],
+      "group": "scope"
+    },
+    {
+      "id": "F11",
+      "tool": "research",
+      "question": "site:doc.rust-lang.org Подтверди, что std::vec::Vec::freeze_owned является стабильным методом Vec и гарантирует неизменную capacity.",
+      "gold_aspects": [
+        "No supported freeze_owned guarantee; withhold unproven API."
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/vec/struct.Vec.html"
+      ],
+      "group": "scope"
+    },
+    {
+      "id": "F12",
+      "tool": "research",
+      "question": "RFC 6585: требуется ли обязательно выдавать 429 при ограничении частоты запросов?",
+      "gold_aspects": [
+        "Servers are not required to use status 429."
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc6585.html"
+      ],
+      "group": "scope"
+    }
+  ]
+}

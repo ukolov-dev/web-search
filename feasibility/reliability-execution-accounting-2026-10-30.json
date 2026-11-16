@@ -1,0 +1,53 @@
+{
+  "baseline": {
+    "elapsed_ms_sum": 245196,
+    "elapsed_ms_median": 32577.0,
+    "initial_valid_ids": [
+      "h04",
+      "h08"
+    ],
+    "source_error_count": 0
+  },
+  "fixed": {
+    "elapsed_ms_sum": 173786,
+    "elapsed_ms_median": 16888.5,
+    "initial_valid_ids": [
+      "h01",
+      "h02",
+      "h03",
+      "h04",
+      "h05",
+      "h06",
+      "h07",
+      "h08"
+    ],
+    "source_error_count": 0
+  },
+  "snapshot_acquisition": {
+    "distinct_attempted_urls": 32,
+    "successful_documents": 23,
+    "record_status_counts": {
+      "200": 25,
+      "fetch_timeout": 4,
+      "source_blocked: no retry in this probe": 2,
+      "unsupported_content": 1
+    },
+    "source_search_calls": 16,
+    "gold_only_fetches": 2,
+    "release_mcp_generations_unpriced": 3,
+    "release_mcp_reads": 4,
+    "release_mcp_reranker_calls": 4,
+    "release_mcp_reranker_pairs": 61
+  },
+  "cost_accounting": {
+    "priced_unique_generation_ids": 171,
+    "known_reported_usd": 0.032942672,
+    "extra_to_primary_known_usd": 0.02464217,
+    "primary_fresh8_usd": 0.008300502,
+    "excluded_wrong_identity_calls": 30,
+    "excluded_wrong_identity_usd": 0.004939846,
+    "unpriced_generations": 4,
+    "unpriced_reason": "one early development quote-contract failure was not persisted; three final release MCP smoke responses expose no provider usage",
+    "deduplication": "response.id across raw call/result copies; reranker calls excluded from OpenRouter generation/cost counts"
+  }
+}

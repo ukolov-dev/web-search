@@ -1,0 +1,1538 @@
+{
+  "protocol": {
+    "author": "one separate source annotator, blinded to model outputs/branch labels; not independent acceptance",
+    "freeze": "source gold fixed after acquisition and before prediction inspection; no source grades based on branch output",
+    "scope": "known relevant retrieved sources, not universal web recall; null unjudged and unknown direct separately reported",
+    "source_gold": "retained original HTML/raw acquisition and preselected source-only audits; never branch-extracted text",
+    "criteria": "grade2 concrete requested relationship with material conditions;grade1 partial/unresolved/wrong factual condition only with concrete counter-evidence;grade0 unrelated;unobserved/challenge/incomplete source unknown",
+    "proposals": "status/genre/date alone is not negative; conjecture is not shipped behavior; concrete current explanations in an issue remain assessable",
+    "offsets": "UTF-8 bytes in whitespace-normalized source_text(original HTML); visible text plus uniquely declared typed code-view JSON rawLines; other scripts/styles excluded",
+    "isolation": "annotator did not read new branch results, model calls, labels or logs; source-only audits not injected into model input",
+    "artifact_status": "frozen before prediction inspection",
+    "blind_source_review": {
+      "path": "runs/passage-coverage-final-2026-10-30/gold-audit/peer-review.json",
+      "sha256": "9cda1d122e6bd896118787f6d79d1dae324674289bd13a9101d1bb09a5da26c9",
+      "scope": "all grade2 and grade1 sources; separate blind reviewer; not formal independent acceptance"
+    }
+  },
+  "cases": [
+    {
+      "id": "f01",
+      "query": "Go closed buffered channel receive drain zero value ok false",
+      "criteria": "After a buffered Go channel is closed, queued values can still be received; after it is drained a receive returns the element zero value and comma-ok is false.",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://cristiancurteanu.com/go-channels-buffered-vs-unbuffered-select-and-production-patterns/",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "for v := range ch exits cleanly when the channel is closed and drained. After close, the channel returns all remaining buffered values first, then returns the zero value with ok = false , and range exits.",
+              "start": 12889,
+              "end": 13093
+            }
+          ],
+          "snapshot": "runs/passage-coverage-final-2026-10-30/gold-audit/f01-C001.html",
+          "field": "raw_html_text",
+          "html_hash": "2dbe3b10a078dc4c95ed69a141aa97960787465c100b64f7915bee8dccc5ecd6",
+          "normalized_text_hash": "77e6505206cd537d19c71926c7cc97f3f1560ac19e14b2b7c8822a56ef07611f",
+          "source_chars": 15025,
+          "final_url": "https://cristiancurteanu.com/go-channels-buffered-vs-unbuffered-select-and-production-patterns/"
+        },
+        {
+          "id": "C002",
+          "url": "https://en.wikipedia.org/wiki/File:Blank.png",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/languages/golang.md",
+          "grade": 1,
+          "basis": "concrete closed buffered channel range example drains 0..4, but channel zero-value receive and comma-ok false are absent; map comma-ok examples are a different operation",
+          "support": [],
+          "snapshot": "runs/passage-coverage-final-2026-10-30/gold-audit/f01-C003.html",
+          "field": "raw_html_text",
+          "html_hash": "1bbbefd8d44e31c3ba123ca4a4221cea709fa40759d0f64850d8a9a7c9c710f9",
+          "normalized_text_hash": "455fde199318fad16b5a8173213356914eb922a4b301d181cde838caeadfec3e",
+          "source_chars": 31102,
+          "final_url": "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/languages/golang.md",
+          "partial_support": [
+            {
+              "quote": "// Channels can be closed and iterated channel := make ( chan int , 5 ) for i := 0 ; i < 5 ; i ++ { channel <- i } close ( channel ) for value := range channel { fmt . Println ( value ) } /* 0 1 2 3 4 */",
+              "start": 15647,
+              "end": 15850
+            }
+          ]
+        },
+        {
+          "id": "C004",
+          "url": "https://github.com/TimMikeladze/reflectdb",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://github.com/iamskyy666/golang-advanced",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": [],
+          "snapshot": "runs/passage-coverage-final-2026-10-30/raw-cache/164967b4989326edf30ca3a59ce89c7010e0e3b8ea4679c7940caae041d5abc3.json",
+          "field": "raw_html_text",
+          "html_hash": "de03c9fa02ac13fcdb38c0c69f20ec4ee4ed5ad0e552b7824cbff9406b7fa8c8",
+          "normalized_text_hash": "034c75a58f7645bd4bc09d80fdf8ab13a05f90cfd5af8007bc8b469d6f4e08c2",
+          "source_chars": 4343,
+          "final_url": "https://github.com/iamskyy666/golang-advanced",
+          "scope_warning": "retained repository page exposes file listings and README loading, not the linked closing-channel document; source behavior remains unobserved"
+        },
+        {
+          "id": "C006",
+          "url": "https://github.com/philiprehberger/go-safechan",
+          "grade": 1,
+          "basis": "safechan wrapper documents draining buffered values and timeout zero/false, but not standard Go closed buffered receive draining followed by zero/false",
+          "support": [],
+          "snapshot": "runs/passage-coverage-final-2026-10-30/raw-cache/520f6d700a7dbb9addabf4e8c61ac492c912902c2c4ee3c54e64f394cbef30c0.json",
+          "field": "raw_html_text",
+          "html_hash": "885d04a179668d492026c5172ce7ca84f19d4202a06caca4183c278633b09022",
+          "normalized_text_hash": "e9c398b958b12713b1ef3521079b5f8f6ed0d5c2996043bfab82d797c00ef945",
+          "source_chars": 6789,
+          "final_url": "https://github.com/philiprehberger/go-safechan",
+          "partial_support": [
+            {
+              "quote": "Drain[T](ch) Non-blocking read of all buffered values",
+              "start": 5567,
+              "end": 5620
+            },
+            {
+              "quote": "RecvTimeout[T](ch, d) Receive with timeout; returns zero + false on expiry",
+              "start": 5872,
+              "end": 5946
+            }
+          ]
+        },
+        {
+          "id": "C007",
+          "url": "https://gitlab.com/-/snippets/6041984",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://go.dev/tour/concurrency/4",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": [],
+          "snapshot": "runs/passage-coverage-final-2026-10-30/raw-cache/516b3b59457cf4f8b199b737c3b15b4ec28146946b70a6d2a5f54873b5d5ea4a.json",
+          "field": "raw_html_text",
+          "html_hash": "360d52b48de9200750cc88aa503bb0a8dea5f047bd037188699cf3b5ae00294c",
+          "normalized_text_hash": "a5e9ba1f3a9f69c86feb78d3ee685d9799b30edc13ea083f982b43c8a09e4de1",
+          "source_chars": 25,
+          "final_url": "https://go.dev/tour/concurrency/4",
+          "scope_warning": "retained Go Tour page canonical text is only a 25-character application shell; article content unobserved"
+        },
+        {
+          "id": "C009",
+          "url": "https://gobyexample.com/closing-channels",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "jobs := make ( chan int , 5 )",
+              "start": 445,
+              "end": 474
+            },
+            {
+              "quote": "the more value will be false if jobs has been close d and all values in the channel have already been received.",
+              "start": 632,
+              "end": 743
+            },
+            {
+              "quote": "Reading from a closed channel succeeds immediately, returning the zero value of the underlying type.",
+              "start": 1242,
+              "end": 1342
+            },
+            {
+              "quote": "The optional second return value is true if the value received was delivered by a successful send operation to the channel, or false if it was a zero value generated because the channel is closed and empty.",
+              "start": 1343,
+              "end": 1549
+            }
+          ],
+          "snapshot": "runs/passage-coverage-final-2026-10-30/raw-cache/0b6727b0da7deb763af33b35006a7b5788e553db21ecded55f1b2dfbac0a20a7.json",
+          "field": "raw_html_text",
+          "html_hash": "6acc2cf52664481f211a1be42d97874e251b9b6dca814ce7e6645a4dda3b6cf1",
+          "normalized_text_hash": "8e12fca8da9c128047a9abf077d7be29ca034546e4f45b725172e1b6f73a5e7c",
+          "source_chars": 1948,
+          "final_url": "https://gobyexample.com/closing-channels"
+        },
+        {
+          "id": "C010",
+          "url": "https://www.ietf.org/ietf-ftp/ietf-mail-archive/mobileip/2004-05.mail",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://www.infoq.com/articles/go-channels-happens-before-concurrency/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": [],
+          "snapshot": "runs/passage-coverage-final-2026-10-30/raw-cache/9d54829dd496886096c29f850266ae7ca63e635fcdae5bda1ff052585f3ff782.json",
+          "field": "raw_html_text",
+          "html_hash": "7ad68253c34a8304127106272f5b5f7fea109ebebd65a47084682307ca513963",
+          "normalized_text_hash": "bb8ec7165841b0d00590b9e4e5a49140785cf0b422962ed54f6957c2cd6f6d62",
+          "source_chars": 18,
+          "final_url": "https://www.infoq.com/articles/go-channels-happens-before-concurrency/",
+          "scope_warning": "retained HTML canonical text is only Human Verification; article content unobserved"
+        },
+        {
+          "id": "C012",
+          "url": "https://nodejs.org/download/release/v20.20.0/docs/api/stream.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://www.npmjs.com/package/@billdaddy/channelkit",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://patents.google.com/patent/US20070018794A1/en",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://patents.google.com/patent/US20070197291A1/en",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://patents.google.com/patent/US4419756A/en",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://patents.google.com/patent/US4734907A/en",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://patents.google.com/patent/US4899147A/en",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "http://rtsolution.co.kr/bbs/zboard.php?id=rollingnews&no=21",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C020",
+          "url": "https://velog.io/@moonyoung/golang-channel-with-select-%ED%97%B7%EA%B0%88%EB%A6%AC%EB%8A%94-%EC%BC%80%EC%9D%B4%EC%8A%A4-%EC%A0%95%EB%A6%AC%ED%95%98%EA%B8%B0",
+          "grade": 1,
+          "basis": "concrete buffered close example drains queued values then receives zero, but no comma-ok false behavior",
+          "support": [],
+          "snapshot": "runs/passage-coverage-final-2026-10-30/raw-cache/5429906486b3be41637fa06f86e8a2d333531e799e183dbff8b29d5abcea2da0.json",
+          "field": "raw_html_text",
+          "html_hash": "f602ffaebcd630903d7c5b2caa7824a55aa9007ce859445fcb8f106c72b196b5",
+          "normalized_text_hash": "ce54df39f8ec84b573f36377614bdcc8c5d31da46ffd409f1af48e7fa7c72f8b",
+          "source_chars": 5147,
+          "final_url": "https://velog.io/@moonyoung/golang-channel-with-select-%ED%97%B7%EA%B0%88%EB%A6%AC%EB%8A%94-%EC%BC%80%EC%9D%B4%EC%8A%A4-%EC%A0%95%EB%A6%AC%ED%95%98%EA%B8%B0",
+          "partial_support": [
+            {
+              "quote": "wg . Wait ( ) close ( ch ) fmt . Println ( <- ch ) // 10 fmt . Println ( <- ch ) // 11 fmt . Println ( <- ch ) // 0",
+              "start": 2187,
+              "end": 2302
+            },
+            {
+              "quote": "버퍼에 저장된 값은 고대로 읽어오고 값이 없다면 zero value를 가져온다.",
+              "start": 2563,
+              "end": 2657
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f02",
+      "query": "Linux mmap MAP_PRIVATE msync private modifications written back underlying file guarantee",
+      "criteria": "MAP_PRIVATE is copy-on-write and private modifications are not written back to the underlying file; msync does not turn a private mapping into shared file-backed writeback. A correct rejection of the writeback premise is positive.",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://android.googlesource.com/toolchain/glibc/+/refs/heads/upstream/release/2.18/master/ChangeLog",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://bugs.python.org/issue17560",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://www.businessit.cz/cz/linux-manual-mmap-munmap-mapujte-nebo-unmapujte-soubory-nebo-zarizeni-do-pameti.php",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://ccrma.stanford.edu/planetccrma/man/man2/mmap.2.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://cmp.felk.cvut.cz/~pisa/linux/tlk-0.8-3.pdf",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://en.wikipedia.org/wiki/Mmap",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "If the mapping is shared and backed by a file (not MAP_ANONYMOUS ) the underlying file medium is only guaranteed to be written after it is passed to the msync(2) system call, but may also be flushed by the system at any other time.",
+              "start": 3485,
+              "end": 3716
+            },
+            {
+              "quote": "In contrast, if the mapping is private (the MAP_PRIVATE flag is set), the changes will neither be seen by other processes nor written to the file.",
+              "start": 3717,
+              "end": 3863
+            }
+          ],
+          "snapshot": "runs/passage-coverage-final-2026-10-30/raw-cache/bc1c3398b1548878e74ba75cf57716f0e61cda81849f293fe61018a11fd64aa1.json",
+          "field": "raw_html_text",
+          "html_hash": "ff650b67929ba98ca01a6c57440e8f75a98b3731811957118a4f405275b7b629",
+          "normalized_text_hash": "ca833b857f78c718fa65cd13668909fce1357d321cc8b86a86afdc653d81ce4e",
+          "source_chars": 9883,
+          "final_url": "https://en.wikipedia.org/wiki/Mmap"
+        },
+        {
+          "id": "C007",
+          "url": "https://github.com/GoogleCloudPlatform/gcsfuse/blob/master/docs/semantics.md",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://github.com/jamesgober/mmap-io",
+          "grade": 1,
+          "basis": "Rust mmap-io wrapper documents private COW no writeback and no-op wrapper flush, but does not name MAP_PRIVATE or establish the native Linux msync contract",
+          "support": [],
+          "snapshot": "runs/passage-coverage-final-2026-10-30/raw-cache/025db72220e0367777f6675a9e223812ace97a78f34f03baf930b2bb26402935.json",
+          "field": "raw_html_text",
+          "html_hash": "feb6402c6ffaa6e6801b5672176db06952de1045f62a0ece42870e137d461150",
+          "normalized_text_hash": "3d43d8caa2b467d8337c411089fa5006347fbc9e33bbd325227cac0a68fc238b",
+          "source_chars": 23748,
+          "final_url": "https://github.com/jamesgober/mmap-io",
+          "partial_support": [
+            {
+              "quote": "open_cow_writable maps a file privately: write to it freely, the file never changes",
+              "start": 5084,
+              "end": 5167
+            },
+            {
+              "quote": "flush() is synchronous ( msync(MS_SYNC) on Unix, FlushViewOfFile + FlushFileBuffers on Windows).",
+              "start": 4332,
+              "end": 4428
+            },
+            {
+              "quote": "written pages are copied on first write, the changes are visible through this mapping only, and they never reach the file. flush() is a no-op",
+              "start": 15479,
+              "end": 15620
+            }
+          ]
+        },
+        {
+          "id": "C009",
+          "url": "https://github.com/nomadshiba/mmap",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://www.infradead.org/~mchehab/kernel_docs/filesystems/api-summary.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://jongmingim.tistory.com/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://kernel-internals.org/io/mmap-io/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://learn.microsoft.com/fi-fi/windows/wsl/release-notes",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://www.linkedin.com/blog/engineering/open-source/the-exabyte-club-linkedin-s-journey-of-scaling-the-hadoop-distr",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://linux.die.net/man/3/mmap64",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://www.man7.org/linux/man-pages/man2/mmap.2.html",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "MAP_SHARED Share this mapping. Updates to the mapping are visible to other processes mapping the same region, and (in the case of file-backed mappings) are carried through to the underlying file.",
+              "start": 2643,
+              "end": 2838
+            },
+            {
+              "quote": "(To precisely control when updates are carried through to the underlying file requires the use of msync(2) .)",
+              "start": 2839,
+              "end": 2948
+            },
+            {
+              "quote": "MAP_PRIVATE Create a private copy-on-write mapping. Updates to the mapping are not visible to other processes mapping the same file, and are not carried through to the underlying file.",
+              "start": 3373,
+              "end": 3557
+            }
+          ],
+          "snapshot": "runs/passage-coverage-final-2026-10-30/raw-cache/c793feb41d3b51b654fc1ed449f776079fa329eef53e473e80770dc53d2367d5.json",
+          "field": "raw_html_text",
+          "html_hash": "86675e35754bc15ac0f392afa4a9fe806b7cfa0770b4df2d04092a084b7774df",
+          "normalized_text_hash": "ae6eee4f476fd3082c9044ddc50c9743464a7d4bef2a118daae7da48279b438c",
+          "source_chars": 26972,
+          "final_url": "https://www.man7.org/linux/man-pages/man2/mmap.2.html"
+        },
+        {
+          "id": "C017",
+          "url": "https://man7.org/linux/man-pages/man2/munmap.2.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://mate.naver.com/#partners",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://www.tutorialspoint.com/unix_system_calls/mmap.htm",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "f03",
+      "query": "C++ std::vector reserve size capacity reallocation iterator invalidation",
+      "criteria": "vector::reserve changes capacity without changing size; capacity grows/reallocation happens when the request exceeds capacity, and reallocation invalidates iterators/references while no reallocation preserves them.",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://blog.naver.com/abcdsc/224297283388",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://blog.naver.com/nobel1226/224356146132",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://blog.naver.com/oo002pickle/224350232469",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://coddy.tech/docs/cpp/vector",
+          "grade": 1,
+          "basis": "reserve capacity-not-size and general push_back reallocation invalidation are explained, but reserve request-versus-capacity and no-reallocation preservation conditions are not stated",
+          "support": [],
+          "snapshot": "runs/passage-coverage-final-2026-10-30/gold-audit/f03-C004.html",
+          "field": "raw_html_text",
+          "html_hash": "051ae9d0124f8cb57b9d6d535acc9e03d82d6c89c907f42e09446ddc10777c6a",
+          "normalized_text_hash": "5c520de6e79e5a5cdb24c0e423d0703d55584a88bc58a592174c7b0e8e43314b",
+          "source_chars": 17661,
+          "final_url": "https://coddy.tech/docs/cpp/vector",
+          "partial_support": [
+            {
+              "quote": "Note that reserve() changes capacity, not size - the vector still has zero elements until you push them.",
+              "start": 12493,
+              "end": 12597
+            },
+            {
+              "quote": "Because growing moves the storage, any pointer, reference, or iterator you saved into the vector becomes dangling after a push_back that reallocates:",
+              "start": 12663,
+              "end": 12812
+            }
+          ]
+        },
+        {
+          "id": "C005",
+          "url": "https://en.cppreference.com/cpp/container/vector/reserve",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "Increase the capacity of the vector (the total number of elements that the vector can hold without requiring reallocation) to a value that's greater or equal to new_cap .",
+              "start": 2511,
+              "end": 2681
+            },
+            {
+              "quote": "If new_cap is greater than the current capacity() , new storage is allocated, otherwise the function does nothing.",
+              "start": 2682,
+              "end": 2796
+            },
+            {
+              "quote": "reserve() does not change the size of the vector.",
+              "start": 2797,
+              "end": 2846
+            },
+            {
+              "quote": "If new_cap is greater than capacity() , all iterators (including the end() iterator) and all references to the elements are invalidated. Otherwise, no iterators or references are invalidated.",
+              "start": 2847,
+              "end": 3038
+            }
+          ],
+          "snapshot": "runs/passage-coverage-final-2026-10-30/raw-cache/9dff14c6ac7f70f60a0d9afbd13f510dd5e4cf8b5b1dcdeb1c827c71633c2308.json",
+          "field": "raw_html_text",
+          "html_hash": "467e26136a1d752f511357ac59031cc52bc6ac149a908656f36a280326195a19",
+          "normalized_text_hash": "0d0f190349876061c9c97ca382febecb516db1ec65a1863825e51245bf925fc4",
+          "source_chars": 8091,
+          "final_url": "https://en.cppreference.com/cpp/container/vector/reserve"
+        },
+        {
+          "id": "C006",
+          "url": "https://en.wikipedia.org/wiki/C++11",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:52023DC0654",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://gcc.gnu.org/pipermail/libstdc++/2026-September/067677.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://www.geeksforgeeks.org/cpp/iterator-invalidation-cpp/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://github.com/boostorg/circular_buffer/blob/develop/include/boost/circular_buffer/base.hpp",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://harnzzi.github.io/2020/04/19/std-vector%EC%97%90%EC%84%9C-size-capacity%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90%EC%9D%80-%EB%AC%B4%EC%97%87%EC%9D%BC%EA%B9%8C/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://www.mastercplusplus.com/nl/learn/stl-algorithms/containers/sequence-containers",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://mate.naver.com/#partners",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p0843r14.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://runebook.dev/ko/docs/cpp/container/vector/clear",
+          "grade": 1,
+          "basis": "clear/shrink article has concrete reserve capacity and size examples, but no reserve reallocation and iterator-invalidation rule",
+          "support": [],
+          "snapshot": "runs/passage-coverage-final-2026-10-30/raw-cache/54c93de3eb5410a3e560a22c552ecdca3748545c9e78eade1aecc07480be5b33.json",
+          "field": "raw_html_text",
+          "html_hash": "bd4f8ae925a1473c36c76e7ccf30399f18231ae5bc30f855fd1095c01de68f01",
+          "normalized_text_hash": "276ef9dd18152472b4f89d16e45608dc42b3e181585785748d1fc5241d029740",
+          "source_chars": 5639,
+          "final_url": "https://runebook.dev/ko/docs/cpp/container/vector/clear",
+          "partial_support": [
+            {
+              "quote": "data.reserve( 10 ); // capacity를 10으로 확보 data.pop_back(); // 1개 제거 (size = 4, capacity = 10)",
+              "start": 3355,
+              "end": 3463
+            }
+          ]
+        },
+        {
+          "id": "C016",
+          "url": "https://www.sandordargo.com/blog/2026/08/26/cpp26-inplace-vector",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "http://slashslash.info/2013/11/capacity-members-for-vector-reserve/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://softwareengineering.stackexchange.com/questions/461079/when-to-use-stdvector-reserve",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://stackoverflow.com/questions/9521629/stdstringss-capacity-reserve-resize-functions",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C020",
+          "url": "https://velog.io/@lunacat16/vector",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "f04",
+      "query": "Java ConcurrentHashMap computeIfAbsent atomic invocation null result absent mapping",
+      "criteria": "ConcurrentHashMap.computeIfAbsent performs the absent-key computation atomically; a null function result leaves no mapping, so a later absent-key invocation can compute again. It is not a forever-once guarantee per key.",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://bugs.openjdk.org/browse/JDK-8062841",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://codereview.stackexchange.com/questions/292355/a-thread-safe-performant-url-shortener-in-java",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://developer.android.com/reference/java/util/concurrent/ConcurrentHashMap",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "If the specified key is not already associated with a value, attempts to compute its value using the given mapping function and enters it into this map unless null .",
+              "start": 173182,
+              "end": 173347
+            },
+            {
+              "quote": "The entire method invocation is performed atomically. The supplied function is invoked exactly once per invocation of this method if the key is absent, else not at all.",
+              "start": 198947,
+              "end": 199115
+            },
+            {
+              "quote": "the current (existing or computed) value associated with the specified key, or null if the computed value is null",
+              "start": 199483,
+              "end": 199596
+            }
+          ],
+          "snapshot": "runs/passage-coverage-final-2026-10-30/raw-cache/95f211e9102378334cb8b1f1d80ae2886013267dddca7ed1369834e7e16a1bff.json",
+          "field": "raw_html_text",
+          "html_hash": "2ca7a36899eb9c38b2f90bce1d0b274ec73fcce20578183b3766806104c52dc5",
+          "normalized_text_hash": "358a276cdb36b063162fefdbce30998a57bd270e36cd897afadd4e48e85e0086",
+          "source_chars": 235952,
+          "final_url": "https://developer.android.com/reference/java/util/concurrent/ConcurrentHashMap"
+        },
+        {
+          "id": "C004",
+          "url": "https://diarycoding.com/artikel/how-do-i-use-concurrenthashmap-computeifabsent-safely",
+          "grade": 1,
+          "basis": "atomic computation is explained, but the claim that a null mapping-function result throws NullPointerException is contradicted by retained C003/C005 API documentation, which states null result creates no mapping",
+          "support": [],
+          "snapshot": "runs/passage-coverage-final-2026-10-30/raw-cache/ef40ac37138113e998da6ed09a45d0cce452c49f9e13c7f41dadd2bb0896f3a5.json",
+          "field": "raw_html_text",
+          "html_hash": "44e383882ea1083bfa17ab6e07c0157e63b1b75ac5730b538519a578da38707d",
+          "normalized_text_hash": "251adbd5fea3007ce733010f9d7699622441e9a60313cc8c2e77bfed612e2975",
+          "source_chars": 5228,
+          "final_url": "https://diarycoding.com/artikel/how-do-i-use-concurrenthashmap-computeifabsent-safely",
+          "partial_support": [
+            {
+              "quote": "It guarantees atomicity when checking for the key, computing the value, and inserting it into the map.",
+              "start": 1392,
+              "end": 1494
+            },
+            {
+              "quote": "While ConcurrentHashMap does not allow null keys or values, the mapping function might inadvertently return a null value. This will result in a NullPointerException .",
+              "start": 2956,
+              "end": 3122
+            }
+          ]
+        },
+        {
+          "id": "C005",
+          "url": "https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentHashMap.html",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "If the specified key is not already associated with a value, attempts to compute its value using the given mapping function and enters it into this map unless null .",
+              "start": 11330,
+              "end": 11495
+            },
+            {
+              "quote": "The entire method invocation is performed atomically, so the function is applied at most once per key.",
+              "start": 37148,
+              "end": 37250
+            },
+            {
+              "quote": "the current (existing or computed) value associated with the specified key, or null if the computed value is null",
+              "start": 37728,
+              "end": 37841
+            }
+          ],
+          "snapshot": "runs/passage-coverage-final-2026-10-30/raw-cache/b35f8c172ae1fedfa00ff61aaba9f02b4b09b90bf60557ab662e29badedfe268.json",
+          "field": "raw_html_text",
+          "html_hash": "fd3202b4de1831cedafd9926bf984ce38b1b5e070f49735a4f5ede7183517aa8",
+          "normalized_text_hash": "d0528ebf12139ecfdde5a50b18e2edfd3c281a2419e6ae50b1ad2b56c6da0239",
+          "source_chars": 64384,
+          "final_url": "https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentHashMap.html"
+        },
+        {
+          "id": "C006",
+          "url": "https://dzone.com/refcardz/core-java-concurrency",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://www.educative.io/courses/java-multithreading-for-senior-engineering-interviews/concurrenthashmap",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://en.wikipedia.org/wiki/Java_ConcurrentMap",
+          "grade": 1,
+          "basis": "general ConcurrentMap interface atomicity explanation includes computeIfAbsent but not ConcurrentHashMap function invocation and null-result absent-mapping semantics",
+          "support": [],
+          "snapshot": "runs/passage-coverage-final-2026-10-30/raw-cache/bf5a01464851385004dd7894f54264fb7c2ffb21069d8f667e434925fedc7acf.json",
+          "field": "raw_html_text",
+          "html_hash": "178041df2dbd71a8d8b0d7237950e42474817d2a6f37aea2edd4898a88625116",
+          "normalized_text_hash": "11f0095d89acdf829c57248b027cfadb3487f506a92c8fb7be8e5335e457e536",
+          "source_chars": 25212,
+          "final_url": "https://en.wikipedia.org/wiki/Java_ConcurrentMap",
+          "partial_support": [
+            {
+              "quote": "computeIfAbsent(K, Function) , computeIfPresent(K, BiFunction) , compute(K,BiFunction) , and merge(K, V, BiFunction)",
+              "start": 19582,
+              "end": 19698
+            },
+            {
+              "quote": "The default implementations in java.util.Map<K, V> do not guarantee atomicity, but in the java.util.concurrent.ConcurrentMap<K, V> overriding defaults these use lock free techniques to achieve atomicity",
+              "start": 19701,
+              "end": 19903
+            }
+          ]
+        },
+        {
+          "id": "C009",
+          "url": "https://www.geeksforgeeks.org/java/null-pointer-exception-in-java/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://github.com/A-N-O-D-E-R/JoePenShip",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://www.linkedin.com/posts/a-s-155225234_java-concurrency-multithreading-activity-7434624123299037184-7YDt",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://www.scribd.com/document/482947356/java-1-8-pdf",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://thecodeforge.io/java/java-map-containskey/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://velog.io/@maketheworldwise/ConcurrentHashMap",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://winterbe.com/posts/2015/05/22/java8-concurrency-tutorial-atomic-concurrent-map-examples/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://www.youtube.com/watch?v=OGXAs9fZYTc",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "f05",
+      "query": "MySQL InnoDB foreign_key_checks reenable validate rows inserted while disabled",
+      "criteria": "Re-enabling MySQL/InnoDB foreign_key_checks does not scan or retrospectively validate rows added while checks were disabled; those pre-existing inconsistent rows are not repaired by re-enabling.",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://dev.mysql.com/doc/connectors/en/connector-j-reference-error-sqlstates.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://dev.mysql.com/doc/refman/8.0/en/glossary.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://docs.cloud.google.com/compute/docs/instances/mysql/mysql-workloads",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://docs.newrelic.com/install/mysql/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://docs.percona.com/percona-monitoring-and-management/3/reference/dashboards/dashboard-mysql-innodb-details.html",
+          "grade": 0,
+          "basis": "full inspected body is an InnoDB monitoring dashboard, with no foreign key or re-enable validation semantics",
+          "support": [],
+          "snapshot": "runs/passage-coverage-final-2026-10-30/raw-cache/1f61d5b37e0b2fe50608587f2f5876aff6f6d4570b89a98be90680830c4862e9.json",
+          "field": "raw_html_text",
+          "html_hash": "aa94af1bd5a8b87ac2b73fdb83fa89490f65617b1442962e86aebfe1ff86530c",
+          "normalized_text_hash": "8ac8ca6667c3ad9d3acd2d8165a8f99f582b4084cb5beb52e019f5bbebc489cf",
+          "source_chars": 57397,
+          "final_url": "https://docs.percona.com/percona-monitoring-and-management/3/reference/dashboards/dashboard-mysql-innodb-details.html",
+          "basis_field": "raw_html_text"
+        },
+        {
+          "id": "C006",
+          "url": "https://gist.github.com/Anticom/a835e9920d97f15db131",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://i.iinfo.cz/files/root/k/MySQL_reference_manual.pdf",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://mariadb.com/docs/release-notes/community-server/changelogs/changelogs-mariadb-102-series/mariadb-10238-changelog",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://mate.naver.com/#partners",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://memos-software.com/technologie/mysql/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://releem.com/blog/mysql-security-checks",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://tms-outsource.com/cs/mysql-cheat-sheet/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://webdsl.org/reference/mysql/",
+          "grade": 0,
+          "basis": "full inspected body describes converting InnoDB dumps to MyISAM, not toggling InnoDB foreign_key_checks or retrospective validation",
+          "support": [],
+          "snapshot": "runs/passage-coverage-final-2026-10-30/raw-cache/9387bd2db8eaacdcd82759849437adfc8382859975e9fb5f566fcc87b8a91570.json",
+          "field": "raw_html_text",
+          "html_hash": "ba3b062ee268916f7d6f94e6a0741d3eab137ea6260b54a729ce44c95fbb1971",
+          "normalized_text_hash": "6c2b5f0a0a315c8626a7665f66cf4929aff7dac815dc84bfdd42cdd7bd4bfa58",
+          "source_chars": 3080,
+          "final_url": "https://webdsl.org/reference/mysql/",
+          "basis_field": "raw_html_text"
+        },
+        {
+          "id": "C014",
+          "url": "http://www.yolinux.com/TUTORIALS/MySQL-InnoDb-Transactions-ForeignKeys.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "f06",
+      "query": "Kubernetes startupProbe livenessProbe readinessProbe disabled until startup succeeds failure restart",
+      "criteria": "A configured startupProbe suppresses both liveness and readiness probes until it succeeds; startup failure reaching its failure threshold kills/restarts the container according to restart policy.",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://airflow.apache.org/docs/helm-chart/stable/parameters-ref.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://www.cfncloud.com/en/p/kubernetes-quickstart-probes",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.21/html/monitoring_apis/thanosruler-monitoring-coreos-com-v1",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://github.com/NVIDIA/OpenShell/issues/409",
+          "grade": 1,
+          "basis": "concrete startupProbe suppression of liveness is explained, but both readiness suppression and startup failure/restart action are not established; source reports the project fix completed and tested",
+          "support": [],
+          "snapshot": "runs/passage-coverage-final-2026-10-30/raw-cache/cece022497fb299a20381ab52ab340b41a32467faa08be521b293f8425e0c864.json",
+          "field": "raw_html_text",
+          "html_hash": "dc423b2e4a115de7add71a69acbd2246fc4743cf67e5e515a93602f0ff619192",
+          "normalized_text_hash": "531cfaaa940ff774198a084fea930acf906c830b39a4a1baa8dbfd64605b07af",
+          "source_chars": 14616,
+          "final_url": "https://github.com/NVIDIA/OpenShell/issues/409",
+          "partial_support": [
+            {
+              "quote": "With a startupProbe , the livenessProbe is disabled until the startup probe succeeds, preventing premature kills during the flannel initialization window.",
+              "start": 7710,
+              "end": 7864
+            }
+          ]
+        },
+        {
+          "id": "C005",
+          "url": "https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.4.md",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://www.k8s.guide/configuration/probes/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://kubernetes.io/docs/concepts/workloads/pods/probes/",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "If a startup probe is configured, Kubernetes does not execute liveness or readiness probes until the startup probe succeeds, allowing the application time to finish its initialization.",
+              "start": 25480,
+              "end": 25664
+            },
+            {
+              "quote": "If the startup probe fails, the kubelet kills the container, and the container is subjected to its restart policy .",
+              "start": 25779,
+              "end": 25894
+            },
+            {
+              "quote": "For the case of a startup or liveness probe, if at least failureThreshold probes have failed, Kubernetes treats the container as unhealthy and triggers a restart for that specific container.",
+              "start": 35098,
+              "end": 35288
+            }
+          ],
+          "snapshot": "runs/passage-coverage-final-2026-10-30/raw-cache/ed3fae2eff2ce609da2adb540609a03d2e24febe6435b7e6adb6c96f4905da66.json",
+          "field": "raw_html_text",
+          "html_hash": "e73fcec5a6fe631d4f04ab6cc5f73029360344ebc139b88c2959c750fd126db1",
+          "normalized_text_hash": "721ef2df73dbe4e2923f4e5141a3d7b6c9da1f36e1379027cc65f3eb7c14df9e",
+          "source_chars": 45392,
+          "final_url": "https://kubernetes.io/docs/concepts/workloads/pods/probes/"
+        },
+        {
+          "id": "C008",
+          "url": "https://kubernetes.io/zh-cn/docs/concepts/workloads/pods/probes/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://kubernetesguru.com/blog/kubernetes-health-checks/",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "Startup Probe - determines if a container’s application has started. While it’s failing, liveness and readiness probes are disabled.",
+              "start": 2872,
+              "end": 3008
+            },
+            {
+              "quote": "When it fires: from container start, every periodSeconds , until it passes or exceeds failureThreshold Failure action: if it never passes within failureThreshold × periodSeconds , container is killed",
+              "start": 3104,
+              "end": 3304
+            },
+            {
+              "quote": "Startup probe SUCCESS → Startup probe stops → Liveness probe: STARTS (after its own initialDelaySeconds) → Readiness probe: STARTS (after its own initialDelaySeconds)",
+              "start": 6127,
+              "end": 6299
+            }
+          ],
+          "snapshot": "runs/passage-coverage-final-2026-10-30/raw-cache/9b987da94316efe15f4fc291c0e404baf45f7fe18f28043f098cf8284e89ea47.json",
+          "field": "raw_html_text",
+          "html_hash": "b918b50475bd487b8acc4bdb0f4d040a5b20d1f4f44e1bb1ad00daf39117e46c",
+          "normalized_text_hash": "e03f483cc2df21bf1dd2d12853997676f5a95155a7d6913af14d1e430801144e",
+          "source_chars": 17485,
+          "final_url": "https://kubernetesguru.com/blog/kubernetes-health-checks/",
+          "scope_warning": "supports startup gating and failureThreshold leading to container killed; explicit respects restartPolicy wording is only in its liveness section, so this source is not proof of unconditional restart after startup failure"
+        },
+        {
+          "id": "C010",
+          "url": "https://learn.microsoft.com/cs-cz/azure/aks/learn/quick-kubernetes-deploy-portal",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://lepape.me/blog/speed-up-kubernetes-deployments-with-startup-probes/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://www.linkedin.com/pulse/kubernetes-probes-liveness-vs-readiness-startup-sammed-chougule-hombc",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://mate.naver.com/#partners",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://www.nethost.cz/kubernetes/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://www.transip.eu/knowledgebase/configuring-readiness-liveness-and-startup-probes-in-kubernetes",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://valpero.com/blog/kubernetes-health-checks-liveness-readiness-startup",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://velog.io/@baeyuna97/kubernetes-livenessProbe",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://xoruddl.github.io/posts/Kubernetes-4-livenessProbe%EB%A1%9C-%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EC%83%81%ED%83%9C-%EC%A0%90%EA%B2%80%ED%95%98%EA%B8%B0/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": [],
+          "snapshot": "runs/passage-coverage-final-2026-10-30/raw-cache/b7f97fec26aa98f78816e519078db2861548c92e1f60c21af579d07792b40ea6.json",
+          "field": "raw_html_text",
+          "html_hash": "558122bf726d4255dda30fb1821a2752b47d24fe18141bd45e7e190d9ccd0bba",
+          "normalized_text_hash": "560380cae62c2625727f03f87d1cd1f17557551d4024ca7ec4557cc934ff5cf8",
+          "source_chars": 988,
+          "final_url": "https://etakyung.com/posts/Kubernetes-4-livenessProbe%EB%A1%9C-%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EC%83%81%ED%83%9C-%EC%A0%90%EA%B2%80%ED%95%98%EA%B8%B0/",
+          "scope_warning": "retained response is an explicit 404 page; requested probe article unobserved"
+        },
+        {
+          "id": "C019",
+          "url": "https://www.yogihosting.com/kubernetes-liveness-readiness-startup-probes/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "f07",
+      "query": "MongoDB updateMany atomic whole operation concurrent writes interleave",
+      "criteria": "MongoDB updateMany makes individual document updates atomic, but the whole multi-document operation is not atomic and other operations can interleave unless a transaction supplies the required isolation.",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://www.cisa.gov/news-events/bulletins/sb26-236",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://www.codeztech.in/2019/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://www.datacamp.com/tutorial/update-many-in-mongodb",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://www.geeksforgeeks.org/mongodb/upsert-in-mongodb/",
+          "grade": 1,
+          "basis": "discusses atomic upsert operations and single-operation examples; updateMany is only a navigation link and multi-document interleaving is not explained",
+          "support": [],
+          "snapshot": "runs/passage-coverage-final-2026-10-30/raw-cache/760468da73f0a52119e12d624b4cc1386314ea608ae3a7c1911e65e29be45fd7.json",
+          "field": "raw_html_text",
+          "html_hash": "38ab56266eb9e189eccffb19b7c7883c7a3ede1f28a22aa478f490aecdd0e8dd",
+          "normalized_text_hash": "caf20d43b96069f52d87777c25fcc9e107168f55bcb6b0f3437ab81dc94584ab",
+          "source_chars": 17486,
+          "final_url": "https://www.geeksforgeeks.org/mongodb/upsert-in-mongodb/",
+          "partial_support": [
+            {
+              "quote": "Upsert operations are atomic . This ensures that the operation is completed in a single step without any interference from other operations.",
+              "start": 967,
+              "end": 1107
+            }
+          ]
+        },
+        {
+          "id": "C005",
+          "url": "https://github.com/coenddt/nodejs-store",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://github.com/multipliedtwice/prisma-generator-express",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://www.linkedin.com/pulse/best-practices-ensure-data-integrity-avoid-dirty-reads-busetti-kb2sc",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://marcinjahn.com/technologies/mongodb/crud/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://medium.com/idealo-tech-blog/how-to-visually-spot-and-analyze-slow-mongodb-operations-d91ac819e0de",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://www.mongodb.com/docs/manual/core/backups/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://www.mongodb.com/docs/manual/core/write-operations-atomicity/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://www.mongodb.com/docs/manual/reference/method/db.collection.updatemany/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://www.mongodb.com/docs/v6.1/core/write-operations-atomicity/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://mongoosejs.com/docs/api/model.html",
+          "grade": 1,
+          "basis": "documents updateMany updating all matches and bulk commands; no per-document versus whole-operation atomicity or interleaving guarantee",
+          "support": [],
+          "snapshot": "runs/passage-coverage-final-2026-10-30/raw-cache/da11fdabb638184b43e174b2627aafd74bb4a325cde7598afd2e2121d3f35543.json",
+          "field": "raw_html_text",
+          "html_hash": "bcc39c0478631eec1771c140731b5b5209440cf4a0beac942ca685879bacda5a",
+          "normalized_text_hash": "e5670ed2652dc73bba2d0d65338dfd2e469df2da2ab3074c3fbcf1f7dfbd9cbc",
+          "source_chars": 74166,
+          "final_url": "https://mongoosejs.com/docs/api/model.html",
+          "partial_support": [
+            {
+              "quote": "Sends multiple insertOne , updateOne , updateMany , replaceOne , deleteOne , and/or deleteMany operations to the MongoDB server in one command.",
+              "start": 14457,
+              "end": 14600
+            }
+          ]
+        },
+        {
+          "id": "C015",
+          "url": "https://onecompiler.com/mongodb",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://onecompiler.com/posts/3uxxu2z5h/how-to-use-mongodb-transactions-in-spring-boot",
+          "grade": 1,
+          "basis": "explicit updateMany non-atomic and transaction alternative, but does not establish concurrent operations interleaving during the multi-update",
+          "support": [],
+          "snapshot": "runs/passage-coverage-final-2026-10-30/raw-cache/42da73684fe28908f3a7cca07c44145d9326bd94c77ec5d695bf3dcfcc1ebd8b.json",
+          "field": "raw_html_text",
+          "html_hash": "79eb8ac41b8beb3d2d44a079f6e4a640bf65eca762cf36f889edf454b17aa24f",
+          "normalized_text_hash": "ba0074808428b1d5b6fdff918ad520d3e0140d931fb100605269bc45f6742805",
+          "source_chars": 2231,
+          "final_url": "https://onecompiler.com/posts/3uxxu2z5h/how-to-use-mongodb-transactions-in-spring-boot",
+          "partial_support": [
+            {
+              "quote": "updateOne() operation updates one document is atomic, if we try to modify multiple documents by using a single operation like updateMany() is not atomic because of multiple documents are modifying in the collection.",
+              "start": 421,
+              "end": 636
+            },
+            {
+              "quote": "If we want to make multiple write operations as atomic we need a transaction.",
+              "start": 637,
+              "end": 714
+            }
+          ]
+        },
+        {
+          "id": "C017",
+          "url": "https://systemdesigntutorial.com/m42-cdc.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "f08",
+      "query": ".NET Enumerable.ToList immediate execution materialize cached copy repeated enumeration",
+      "criteria": "Enumerable.ToList forces immediate evaluation and materializes a List containing a cached copy of query results; enumerating that list reuses the materialized results instead of re-executing the original query. It does not automatically memoize future ToList calls.",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://arxiv.org/list/cs/new?skip=0",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://www.cisa.gov/news-events/bulletins/sb26-229",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://en.wikipedia.org/wiki/Cardinality",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://gist.github.com/douglasduteil/8d0af7a0ecd5ab81fea9d82a653cedb1",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://github.com/SeleniumHQ/selenium/wiki/.pr_agent_accepted_suggestions",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://github.com/dotnet/docs/blob/main/docs/framework/data/adonet/ef/performance-considerations.md",
+          "grade": 1,
+          "basis": "materialization to List is mentioned, but ToList cached result reuse is not; query-plan/command caching is a different relation",
+          "support": [],
+          "snapshot": "runs/passage-coverage-final-2026-10-30/raw-cache/717f75e6d420c205a31a2f4057f0018e4202b2d1abeb1b01ba00749aa9d36158.json",
+          "field": "raw_html_text",
+          "html_hash": "b175e2abc70bc3fa84e8f21f8d2e2bd5be754d1dc29407c24c89aa01fcfeb5b2",
+          "normalized_text_hash": "1123e54cb69a4a6be954b8189730766d48c923ddbcd6fa7176ca995c96873d2e",
+          "source_chars": 43028,
+          "final_url": "https://github.com/dotnet/docs/blob/main/docs/framework/data/adonet/ef/performance-considerations.md",
+          "partial_support": [
+            {
+              "quote": "Query execution is deferred until the results are needed, such as during a foreach (C#) or For Each (Visual Basic) enumeration or when it is assigned to fill a xref:System.Collections.Generic.List`1 collection.",
+              "start": 8409,
+              "end": 8619
+            }
+          ]
+        },
+        {
+          "id": "C007",
+          "url": "https://learn.microsoft.com/cs-cz/dotnet/core/unmanaged-api/debugging/enumerateclrs-function",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://learn.microsoft.com/cs-cz/dotnet/core/unmanaged-api/metadata/interfaces/imetadataemit-definetypedef-method",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://learn.microsoft.com/cs-cz/dotnet/framework/unmanaged-api/hosting/eapicategories-enumeration",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://learn.microsoft.com/cs-cz/dynamics365/developer/reference/entities/asyncoperation",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://learn.microsoft.com/en-us/dotnet/api/system.linq.enumerable.tolist?view=net-10.0",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "The ToList<TSource>(IEnumerable<TSource>) method forces immediate query evaluation and returns a List<T> that contains the query results.",
+              "start": 3227,
+              "end": 3364
+            },
+            {
+              "quote": "You can append this method to your query in order to obtain a cached copy of the query results.",
+              "start": 3365,
+              "end": 3460
+            }
+          ],
+          "snapshot": "runs/passage-coverage-final-2026-10-30/raw-cache/8293fb347bc16da3f9637a8b2f03e1d4f052fcdfdf549e0b6d6e60a349d4fd4c.json",
+          "field": "raw_html_text",
+          "html_hash": "1fa6329b66578f3a78b9df87bdae63a37669366455b5736993feaddd4ff5a2a4",
+          "normalized_text_hash": "138ae33d515566d40c74596cd50e3166151c93e0e523119811aa97c1d3ed0591",
+          "source_chars": 4322,
+          "final_url": "https://learn.microsoft.com/en-us/dotnet/api/system.linq.enumerable.tolist?view=net-10.0"
+        },
+        {
+          "id": "C012",
+          "url": "https://learn.microsoft.com/en-us/dotnet/framework/data/adonet/ef/performance-considerations",
+          "grade": 1,
+          "basis": "materialization to List is mentioned, but ToList cached result reuse is not; query-plan/command caching is a different relation",
+          "support": [],
+          "snapshot": "runs/passage-coverage-final-2026-10-30/raw-cache/f379805aad72b5ff805634039f9a9d8c7e371874ff28ee8dc1d46189070d0cb4.json",
+          "field": "raw_html_text",
+          "html_hash": "aa59331b4812282fac136e81f5f4d0761a9d778600de6b8fe9493bfe6394408f",
+          "normalized_text_hash": "ad743c37739528ebec8456b70314c6cb88c99a160dfb5188c8d7d6344bd8e64f",
+          "source_chars": 18174,
+          "final_url": "https://learn.microsoft.com/en-us/dotnet/framework/data/adonet/ef/performance-considerations",
+          "partial_support": [
+            {
+              "quote": "Query execution is deferred until the results are needed, such as during a foreach (C#) or For Each (Visual Basic) enumeration or when it is assigned to fill a List<T> collection.",
+              "start": 5762,
+              "end": 5941
+            }
+          ]
+        },
+        {
+          "id": "C013",
+          "url": "https://www.magicdatatech.com/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://okmij.org/ftp/Haskell/Iteratee/index.html",
+          "grade": 0,
+          "basis": "full inspected body explains Haskell iteratee streaming; no .NET Enumerable.ToList materialization or cached query-result relation",
+          "support": [],
+          "snapshot": "runs/passage-coverage-final-2026-10-30/raw-cache/4841cf4e3ab931479d6b6a6e756eee294a4977fbaff27af11df2bc5ef53b1d83.json",
+          "field": "raw_html_text",
+          "html_hash": "629fc92803119be886ea4b154a004f2c39be146ceb2f5414b59b686537c78199",
+          "normalized_text_hash": "25dba2e8192ceb1f53c796e8eafd2ca220e1153ce12b6b26cfc1bdf572be11b9",
+          "source_chars": 66811,
+          "final_url": "https://okmij.org/ftp/Haskell/Iteratee/index.html",
+          "basis_field": "raw_html_text"
+        },
+        {
+          "id": "C015",
+          "url": "https://www.vut.cz/www_base/zav_prace_soubor_verejne.php?file_id=295201",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        }
+      ]
+    }
+  ]
+}

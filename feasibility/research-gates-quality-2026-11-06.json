@@ -1,0 +1,902 @@
+{
+  "schema": "research-gates-quality-v1",
+  "final12_independent_review": {
+    "schema": "independent-research-gates-final-quality-v1",
+    "reviewer": "/root/research_gates_review",
+    "reviewed_at": "2026-11-06T09:43:16.531953+00:00",
+    "scope": "Frozen baseline vs V4 FINAL12, baseline/V4 actual Harness, V4 OLD; no live source/LLM/Qwen requests by reviewer.",
+    "snapshot": {
+      "candidate_binary_sha256": "f7f24ec503084e212bad3140d1ace3d3f08733117747a8ffa927b8350d4b5b6f",
+      "source_sha256": {
+        "src/research.rs": "49b11bd05a85d1531ed21f1c1009ade2da5e74865dabd811b9dc2522aeb6f3ad",
+        "src/research_tests.rs": "c639d2fbc76ee5a2ef10973e6041dccb9354a9eebc3894e80ee508ff16beebcd"
+      },
+      "current_sources_match_frozen_v4": true,
+      "frozen_case_sha256": "e365e62ee6f69deb8e9f682300b204101ab0e3b470f017ee741b717cbac492fd"
+    },
+    "verdict": "request_changes_quality_gate_failed",
+    "reason": "Gross aspect recall improves, but supported baseline controls D02 and the exp-before part of D04 are lost. No-new-false alone does not satisfy acceptance.",
+    "metrics": {
+      "baseline": {
+        "emitted_claims": 9,
+        "supported_claims": 8,
+        "false_claim_ids": [],
+        "unknown_claim_ids": [
+          "D03/A1"
+        ],
+        "factual_aspects_covered": 8,
+        "complete_factual_cases": [
+          "D02",
+          "D04",
+          "D07",
+          "D10"
+        ],
+        "factual_aspects_total": 20,
+        "aspect_recall": 0.4,
+        "emitted_factual_precision": null,
+        "honest_insufficiency_conditions_passed": 1,
+        "honest_insufficiency_conditions_total": 1,
+        "supported_fraction_all_emitted": 0.8888888888888888,
+        "judged_precision_excluding_unknown": 1.0
+      },
+      "candidate-v4": {
+        "emitted_claims": 14,
+        "supported_claims": 14,
+        "false_claim_ids": [],
+        "unknown_claim_ids": [],
+        "factual_aspects_covered": 11,
+        "complete_factual_cases": [
+          "D05",
+          "D07",
+          "D08",
+          "D09",
+          "D10"
+        ],
+        "factual_aspects_total": 20,
+        "aspect_recall": 0.55,
+        "emitted_factual_precision": 1.0,
+        "honest_insufficiency_conditions_passed": 1,
+        "honest_insufficiency_conditions_total": 1,
+        "supported_fraction_all_emitted": 1.0,
+        "judged_precision_excluding_unknown": 1.0
+      }
+    },
+    "scoring_policy": {
+      "whole_claim": "An unqualified false substatement makes the whole compound claim false; true fragments are not split out for a recall gain.",
+      "general_contracts": "Direct substitution of question inputs into a fully supported general operation contract is credited uniformly: D05 swap, D07 skip, D08 split_last. No new API knowledge is supplied.",
+      "d03_baseline": "Final label unknown_scope_ambiguous: global ONLY assertion would be false because other MUSTs exist, but the question can narrow the intended scope to the time-step parameter. Do not promote true fragments or a favorable reading into a supported whole claim.",
+      "d03_candidate": "The balance sentence is true background, but it does not issue the recommended-versus-MUST conclusion. All its question facets remain missing in the tool itself.",
+      "truth_and_relevance": "Supported-claim precision includes true background; requested-aspect recall excludes background and duplicate coverage.",
+      "abstention": "D12 is a separate insufficiency condition, not one of the20 factual aspects.",
+      "units": "Research claim truth; not ranked_search false-direct qualification."
+    },
+    "lost_baseline_gold": [
+      {
+        "case": "D02",
+        "indices": [
+          0
+        ]
+      },
+      {
+        "case": "D04",
+        "indices": [
+          0
+        ]
+      }
+    ],
+    "gained_gold": [
+      {
+        "case": "D05",
+        "indices": [
+          0,
+          1
+        ]
+      },
+      {
+        "case": "D08",
+        "indices": [
+          0
+        ]
+      },
+      {
+        "case": "D09",
+        "indices": [
+          0,
+          1
+        ]
+      }
+    ],
+    "new_false_candidate_claim_ids": [],
+    "new_unknown_candidate_claim_ids": [],
+    "cases": [
+      {
+        "id": "D01",
+        "gold_aspects": [
+          "all three TEST-NET blocks SHOULD NOT appear on public Internet"
+        ],
+        "factual_case": true,
+        "notes": "Neither arm emitted a supported answer for the TEST-NET norm.",
+        "baseline": {
+          "status": "partial",
+          "stop_reason": "no_new_evidence",
+          "covered_gold_indices": [],
+          "claims": [],
+          "missing": [
+            0,
+            1,
+            2
+          ],
+          "evidence_path": "runs/research-gates-2026-11-06/baseline/final/D01/tool-result.json"
+        },
+        "candidate-v4": {
+          "status": "partial",
+          "stop_reason": "budget_exhausted",
+          "covered_gold_indices": [],
+          "claims": [],
+          "missing": [
+            0,
+            1
+          ],
+          "evidence_path": "runs/research-gates-2026-11-06/candidate-v4/final/D01/tool-result.json"
+        }
+      },
+      {
+        "id": "D02",
+        "gold_aspects": [
+          ".invalid intended for constructing obviously invalid domain names"
+        ],
+        "factual_case": true,
+        "notes": "V4 lost the previously supported .invalid purpose. Its correct draft starts with a quoted identifier; the conservative literal-clause start check withholds it. Metadata/source body is available, not a proof that the norm is absent.",
+        "baseline": {
+          "status": "partial",
+          "stop_reason": "budget_exhausted",
+          "covered_gold_indices": [
+            0
+          ],
+          "claims": [
+            {
+              "id": "A1",
+              "text": "RFC 2606: .invalid предназначен для онлайн-конструирования доменных имён, которые заведомо недействительны и очевидно недействительны с первого взгляда.",
+              "truth": "supported",
+              "relevance": "requested_or_directly_entailing"
+            },
+            {
+              "id": "A2",
+              "text": "RFC 2606 резервирует четыре доменных имени: .test, .example, .invalid и .localhost.",
+              "truth": "supported",
+              "relevance": "background"
+            }
+          ],
+          "missing": [],
+          "evidence_path": "runs/research-gates-2026-11-06/baseline/final/D02/tool-result.json"
+        },
+        "candidate-v4": {
+          "status": "partial",
+          "stop_reason": "budget_exhausted",
+          "covered_gold_indices": [],
+          "claims": [],
+          "missing": [
+            0,
+            1
+          ],
+          "evidence_path": "runs/research-gates-2026-11-06/candidate-v4/final/D02/tool-result.json"
+        }
+      },
+      {
+        "id": "D03",
+        "gold_aspects": [
+          "30 seconds recommended default",
+          "not a universal MUST exactly30 from this recommendation"
+        ],
+        "factual_case": true,
+        "notes": "Whole-claim scoring: the baseline ONLY/лишь wording is not safe to accept as a clean supported claim. A global reading contradicts R3/R5 MUSTs; the original time-step question also permits a narrower reading. Mark unknown/ambiguous rather than claiming a definitively false interpretation. V4 accurately quotes motivation for default30, but does not issue the recommended-versus-universal-MUST conclusion; gold0/2.",
+        "baseline": {
+          "status": "partial",
+          "stop_reason": "budget_exhausted",
+          "covered_gold_indices": [],
+          "claims": [
+            {
+              "id": "A1",
+              "text": "Обязательное требование RFC 6238 (MUST) касается лишь совпадения X у prover и verifier; само значение X — системный параметр с рекомендуемым по умолчанию 30 секундами.",
+              "truth": "unknown",
+              "relevance": "requested_but_scope_ambiguous"
+            }
+          ],
+          "missing": [
+            0,
+            1,
+            2
+          ],
+          "evidence_path": "runs/research-gates-2026-11-06/baseline/final/D03/tool-result.json"
+        },
+        "candidate-v4": {
+          "status": "partial",
+          "stop_reason": "budget_exhausted",
+          "covered_gold_indices": [],
+          "claims": [
+            {
+              "id": "A1",
+              "text": "RFC 6238: This default value of 30 seconds is selected as a balance between security and usability.",
+              "truth": "supported",
+              "relevance": "background"
+            }
+          ],
+          "missing": [
+            0,
+            1,
+            2
+          ],
+          "evidence_path": "runs/research-gates-2026-11-06/candidate-v4/final/D03/tool-result.json"
+        }
+      },
+      {
+        "id": "D04",
+        "gold_aspects": [
+          "current time MUST be before expiration time when processing exp",
+          "small clock-skew leeway MAY be provided"
+        ],
+        "factual_case": true,
+        "notes": "Baseline covered both exp-time rule and leeway. V4 retained only leeway. Its exp-before quotes alter the original line break after The and fail exact-source validation; do not normalize the fabricated copy into an accepted quote.",
+        "baseline": {
+          "status": "partial",
+          "stop_reason": "no_new_evidence",
+          "covered_gold_indices": [
+            0,
+            1
+          ],
+          "claims": [
+            {
+              "id": "A1",
+              "text": "RFC 7519: exp задаёт время, начиная с которого JWT MUST NOT приниматься; при обработке exp текущие дата/время MUST быть раньше указанного в exp.",
+              "truth": "supported",
+              "relevance": "requested_or_directly_entailing"
+            },
+            {
+              "id": "A2",
+              "text": "RFC 7519 разрешает (MAY) реализаторам предусмотреть небольшой leeway, обычно не более нескольких минут, для учёта clock skew.",
+              "truth": "supported",
+              "relevance": "requested_or_directly_entailing"
+            }
+          ],
+          "missing": [],
+          "evidence_path": "runs/research-gates-2026-11-06/baseline/final/D04/tool-result.json"
+        },
+        "candidate-v4": {
+          "status": "partial",
+          "stop_reason": "budget_exhausted",
+          "covered_gold_indices": [
+            1
+          ],
+          "claims": [
+            {
+              "id": "A1",
+              "text": "RFC 7519: Implementers MAY provide for some small leeway, usually no more than a few minutes, to account for clock skew.",
+              "truth": "supported",
+              "relevance": "requested_or_directly_entailing"
+            }
+          ],
+          "missing": [
+            0
+          ],
+          "evidence_path": "runs/research-gates-2026-11-06/candidate-v4/final/D04/tool-result.json"
+        }
+      },
+      {
+        "id": "D05",
+        "gold_aspects": [
+          "x becomes [2,3]",
+          "y becomes [1]"
+        ],
+        "factual_case": true,
+        "notes": "V4 general swap contract directly entails both concrete assignments for the inputs in the question. The separate safe-functions statement adds no gold aspect.",
+        "baseline": {
+          "status": "partial",
+          "stop_reason": "budget_exhausted",
+          "covered_gold_indices": [],
+          "claims": [],
+          "missing": [
+            0,
+            1,
+            2
+          ],
+          "evidence_path": "runs/research-gates-2026-11-06/baseline/final/D05/tool-result.json"
+        },
+        "candidate-v4": {
+          "status": "partial",
+          "stop_reason": "budget_exhausted",
+          "covered_gold_indices": [
+            0,
+            1
+          ],
+          "claims": [
+            {
+              "id": "A1",
+              "text": "std::mem::swap — безопасная функция для перемещения значений.",
+              "truth": "supported",
+              "relevance": "background"
+            },
+            {
+              "id": "A2",
+              "text": "swap меняет значения в двух изменяемых местах, не деинициализируя ни одно из них.",
+              "truth": "supported",
+              "relevance": "requested_or_directly_entailing"
+            }
+          ],
+          "missing": [
+            0,
+            1,
+            2
+          ],
+          "evidence_path": "runs/research-gates-2026-11-06/candidate-v4/final/D05/tool-result.json"
+        }
+      },
+      {
+        "id": "D06",
+        "gold_aspects": [
+          "length becomes zero",
+          "capacity unchanged by clear"
+        ],
+        "factual_case": true,
+        "notes": "Neither arm emitted clear length/capacity facts.",
+        "baseline": {
+          "status": "partial",
+          "stop_reason": "budget_exhausted",
+          "covered_gold_indices": [],
+          "claims": [],
+          "missing": [
+            0,
+            1,
+            2
+          ],
+          "evidence_path": "runs/research-gates-2026-11-06/baseline/final/D06/tool-result.json"
+        },
+        "candidate-v4": {
+          "status": "partial",
+          "stop_reason": "budget_exhausted",
+          "covered_gold_indices": [],
+          "claims": [],
+          "missing": [
+            0,
+            1
+          ],
+          "evidence_path": "runs/research-gates-2026-11-06/candidate-v4/final/D06/tool-result.json"
+        }
+      },
+      {
+        "id": "D07",
+        "gold_aspects": [
+          "first two items skipped",
+          "remaining [7,6]"
+        ],
+        "factual_case": true,
+        "notes": "Both general skip(n) semantics and V4 concrete application cover the two requested aspects. Additional too-short-iterator statement adds no coverage.",
+        "baseline": {
+          "status": "partial",
+          "stop_reason": "budget_exhausted",
+          "covered_gold_indices": [
+            0,
+            1
+          ],
+          "claims": [
+            {
+              "id": "A1",
+              "text": "skip(n) пропускает элементы, пока не пропущено n элементов или не достигнут конец итератора; после этого выдаются все оставшиеся элементы.",
+              "truth": "supported",
+              "relevance": "requested_or_directly_entailing"
+            },
+            {
+              "id": "A2",
+              "text": "Если исходный итератор короче n, возвращённый итератор пуст.",
+              "truth": "supported",
+              "relevance": "background"
+            }
+          ],
+          "missing": [
+            0
+          ],
+          "evidence_path": "runs/research-gates-2026-11-06/baseline/final/D07/tool-result.json"
+        },
+        "candidate-v4": {
+          "status": "partial",
+          "stop_reason": "budget_exhausted",
+          "covered_gold_indices": [
+            0,
+            1
+          ],
+          "claims": [
+            {
+              "id": "A1",
+              "text": "skip(n) создаёт итератор, пропускающий первые n элементов.",
+              "truth": "supported",
+              "relevance": "requested_or_directly_entailing"
+            },
+            {
+              "id": "A2",
+              "text": "skip(2) пропускает первые два элемента, после чего выдаются все оставшиеся; для [9, 8, 7, 6] остаются 7 и 6.",
+              "truth": "supported",
+              "relevance": "requested_or_directly_entailing"
+            },
+            {
+              "id": "A3",
+              "text": "Если исходный итератор короче n, возвращаемый итератор пуст.",
+              "truth": "supported",
+              "relevance": "background"
+            }
+          ],
+          "missing": [],
+          "evidence_path": "runs/research-gates-2026-11-06/candidate-v4/final/D07/tool-result.json"
+        }
+      },
+      {
+        "id": "D08",
+        "gold_aspects": [
+          "last is 6 and remaining [4,5]",
+          "empty slice returns None"
+        ],
+        "factual_case": true,
+        "notes": "Baseline only covered empty->None. V4 also gives the last/rest contract, which directly entails last6/rest[4,5] for the provided input.",
+        "baseline": {
+          "status": "partial",
+          "stop_reason": "budget_exhausted",
+          "covered_gold_indices": [
+            1
+          ],
+          "claims": [
+            {
+              "id": "A1",
+              "text": "Для пустого slice split_last возвращает None.",
+              "truth": "supported",
+              "relevance": "requested_or_directly_entailing"
+            }
+          ],
+          "missing": [
+            0,
+            2
+          ],
+          "evidence_path": "runs/research-gates-2026-11-06/baseline/final/D08/tool-result.json"
+        },
+        "candidate-v4": {
+          "status": "partial",
+          "stop_reason": "budget_exhausted",
+          "covered_gold_indices": [
+            0,
+            1
+          ],
+          "claims": [
+            {
+              "id": "A1",
+              "text": "Для пустого среза split_last возвращает None.",
+              "truth": "supported",
+              "relevance": "requested_or_directly_entailing"
+            },
+            {
+              "id": "A2",
+              "text": "split_last возвращает последний элемент и все остальные элементы среза.",
+              "truth": "supported",
+              "relevance": "requested_or_directly_entailing"
+            }
+          ],
+          "missing": [
+            0
+          ],
+          "evidence_path": "runs/research-gates-2026-11-06/candidate-v4/final/D08/tool-result.json"
+        }
+      },
+      {
+        "id": "D09",
+        "gold_aspects": [
+          "presence of exp OPTIONAL in base RFC7519",
+          "when present its expiration processing rule applies"
+        ],
+        "factual_case": true,
+        "notes": "V4 own RFC clauses cover optional presence and the processing rule when present. Do not count the two expiration clauses twice.",
+        "baseline": {
+          "status": "partial",
+          "stop_reason": "budget_exhausted",
+          "covered_gold_indices": [],
+          "claims": [],
+          "missing": [
+            0,
+            1
+          ],
+          "evidence_path": "runs/research-gates-2026-11-06/baseline/final/D09/tool-result.json"
+        },
+        "candidate-v4": {
+          "status": "partial",
+          "stop_reason": "budget_exhausted",
+          "covered_gold_indices": [
+            0,
+            1
+          ],
+          "claims": [
+            {
+              "id": "A1",
+              "text": "RFC 7519: The \"exp\" (expiration time) claim identifies the expiration time on or after which the JWT MUST NOT be accepted for processing.",
+              "truth": "supported",
+              "relevance": "requested_or_directly_entailing"
+            },
+            {
+              "id": "A2",
+              "text": "RFC 7519: The processing of the \"exp\" claim requires that the current date/time MUST be before the expiration date/time listed in the \"exp\" claim.",
+              "truth": "supported",
+              "relevance": "requested_or_directly_entailing"
+            },
+            {
+              "id": "A3",
+              "text": "RFC 7519: Its value MUST be a number containing a NumericDate value. Use of this claim is OPTIONAL.",
+              "truth": "supported",
+              "relevance": "requested_or_directly_entailing"
+            }
+          ],
+          "missing": [],
+          "evidence_path": "runs/research-gates-2026-11-06/candidate-v4/final/D09/tool-result.json"
+        }
+      },
+      {
+        "id": "D10",
+        "gold_aspects": [
+          "initializer panic propagates, not returned Err",
+          "cell remains uninitialized"
+        ],
+        "factual_case": true,
+        "notes": "Both correctly bind initializer panic propagation and uninitialized cell to std::cell::OnceCell::get_or_init. V4 reentrancy clause is true additional context, not another gold aspect.",
+        "baseline": {
+          "status": "partial",
+          "stop_reason": "budget_exhausted",
+          "covered_gold_indices": [
+            0,
+            1
+          ],
+          "claims": [
+            {
+              "id": "A1",
+              "text": "В std::cell::OnceCell::get_or_init паника из f() распространяется вызывающему, а ячейка остаётся неинициализированной.",
+              "truth": "supported",
+              "relevance": "requested_or_directly_entailing"
+            }
+          ],
+          "missing": [
+            2
+          ],
+          "evidence_path": "runs/research-gates-2026-11-06/baseline/final/D10/tool-result.json"
+        },
+        "candidate-v4": {
+          "status": "partial",
+          "stop_reason": "budget_exhausted",
+          "covered_gold_indices": [
+            0,
+            1
+          ],
+          "claims": [
+            {
+              "id": "A1",
+              "text": "std::cell::OnceCell::get_or_init: если f() паникует, паника распространяется вызывающему, а ячейка остаётся неинициализированной.",
+              "truth": "supported",
+              "relevance": "requested_or_directly_entailing"
+            },
+            {
+              "id": "A2",
+              "text": "Повторная (реентерабельная) инициализация ячейки из f является ошибкой и приводит к панике.",
+              "truth": "supported",
+              "relevance": "background"
+            }
+          ],
+          "missing": [
+            2
+          ],
+          "evidence_path": "runs/research-gates-2026-11-06/candidate-v4/final/D10/tool-result.json"
+        }
+      },
+      {
+        "id": "D11",
+        "gold_aspects": [
+          "ordinary replace stable since1.0 available in1.70",
+          "const form since1.83, not stable const on1.70"
+        ],
+        "factual_case": true,
+        "notes": "Neither arm emitted the required ordinary-versus-const version distinction.",
+        "baseline": {
+          "status": "partial",
+          "stop_reason": "budget_exhausted",
+          "covered_gold_indices": [],
+          "claims": [],
+          "missing": [
+            0,
+            1,
+            2
+          ],
+          "evidence_path": "runs/research-gates-2026-11-06/baseline/final/D11/tool-result.json"
+        },
+        "candidate-v4": {
+          "status": "partial",
+          "stop_reason": "budget_exhausted",
+          "covered_gold_indices": [],
+          "claims": [],
+          "missing": [
+            0,
+            1,
+            2
+          ],
+          "evidence_path": "runs/research-gates-2026-11-06/candidate-v4/final/D11/tool-result.json"
+        }
+      },
+      {
+        "id": "D12",
+        "gold_aspects": [
+          "Explicit insufficiency for unconfirmed API without substituting swap"
+        ],
+        "factual_case": false,
+        "notes": "Both emit no factual claims and explicitly retain nonempty missing + partial: honest insufficiency, scored separately, never a factual recall TP.",
+        "baseline": {
+          "status": "partial",
+          "stop_reason": "budget_exhausted",
+          "covered_gold_indices": [],
+          "claims": [],
+          "missing": [
+            0,
+            1,
+            2
+          ],
+          "evidence_path": "runs/research-gates-2026-11-06/baseline/final/D12/tool-result.json",
+          "honest_insufficiency": true
+        },
+        "candidate-v4": {
+          "status": "partial",
+          "stop_reason": "budget_exhausted",
+          "covered_gold_indices": [],
+          "claims": [],
+          "missing": [
+            0,
+            1,
+            2
+          ],
+          "evidence_path": "runs/research-gates-2026-11-06/candidate-v4/final/D12/tool-result.json",
+          "honest_insufficiency": true
+        }
+      }
+    ],
+    "harness": [
+      {
+        "id": "H01",
+        "gold_aspects": [
+          "511 response MUST NOT be stored by cache"
+        ],
+        "baseline": {
+          "sdk_status": "completed",
+          "actual_research_calls": 1,
+          "frozen_question_matches": true,
+          "inner_status": "partial",
+          "inner_claims": 2,
+          "covered_gold_indices": [
+            0
+          ],
+          "outer_grounded_gold_indices": [
+            0
+          ],
+          "new_false_factual_answer_claims": [],
+          "new_unknown_asserted_factual_answer_claims": [],
+          "tool_message_json_equals_inner_result": [
+            true
+          ],
+          "spill_files_found": [],
+          "final_text": [
+            "**Ответ: MUST NOT кэшироваться.** RFC 6585 прямо предписывает: «Responses with the 511 status code MUST NOT be stored by a cache» — ответы со статусом 511 не должны сохраняться кэшем ([S1](https://www.rfc-editor.org/info/rfc6585/)).\n\nДополнительно: статус 511 «SHOULD NOT be generated by origin servers» — его не следует генерировать origin-серверам; он предназначен для перехватывающих прокси, контролирующих доступ к сети ([S1](https://www.rfc-editor.org/info/rfc6585/)).\n\n**Ограничения и пропуски:**\n- Статус результата — `partial`, остановка по исчерпанию бюджета (`budget_exhausted`).\n- Утверждения опираются на один документ (rfc-editor.org); независимость издателя не установлена, хотя прочитаны также MDN, Wikipedia и RFC 9111.\n- Семантический аудит экспериментальный, не гарантия истинности.\n- Точный номер раздела RFC 6585 в проверенных утверждениях не указан — это пропуск, не додумываю."
+          ],
+          "evidence_path": "runs/research-gates-2026-11-06/baseline/harness/H01"
+        },
+        "candidate-v4": {
+          "sdk_status": "completed",
+          "actual_research_calls": 1,
+          "frozen_question_matches": true,
+          "inner_status": "partial",
+          "inner_claims": 1,
+          "covered_gold_indices": [
+            0
+          ],
+          "outer_grounded_gold_indices": [
+            0
+          ],
+          "new_false_factual_answer_claims": [],
+          "new_unknown_asserted_factual_answer_claims": [],
+          "tool_message_json_equals_inner_result": [
+            true
+          ],
+          "spill_files_found": [],
+          "final_text": [
+            "**Ответ: MUST NOT кэшироваться.**\n\nПрочитанная норма RFC 6585 (дословно): «Responses with the 511 status code MUST NOT be stored by a cache.» — ответы с кодом 511 не должны сохраняться кэшем. Источник: https://www.rfc-editor.org/rfc/rfc6585.html\n\n**Ограничения и пропуски:**\n- Статус результата — `partial` (stop_reason: `no_new_evidence`); суффикенси-порог в 2 независимых документа не достигнут: цитируется 1 документ.\n- Второй прочитанный источник — RFC 9111 (HTTP Caching), https://www.rfc-editor.org/rfc/rfc9111.html — но проверенных утверждений из него в ответ не вошло.\n- Номер раздела RFC 6585 и контекст (например, связь с 401/407) инструмент не подтвердил — не додумываю.\n- Семантический аудит экспериментальный, не гарантия истинности; независимость издателя не установлена."
+          ],
+          "evidence_path": "runs/research-gates-2026-11-06/candidate-v4/harness/H01"
+        },
+        "outer_wording_caveat": "V4 says a threshold of two independent documents, while the product promises only two distinct bodies. Its final paragraph does disclaim publisher independence. Treat this as unsupported contract wording, not evidence that sources are independent."
+      },
+      {
+        "id": "H02",
+        "gold_aspects": [
+          "returns [3,4]",
+          "original contains [1,2]",
+          "original capacity unchanged"
+        ],
+        "baseline": {
+          "sdk_status": "completed",
+          "actual_research_calls": 1,
+          "frozen_question_matches": true,
+          "inner_status": "partial",
+          "inner_claims": 0,
+          "covered_gold_indices": [],
+          "outer_grounded_gold_indices": [],
+          "new_false_factual_answer_claims": [],
+          "new_unknown_asserted_factual_answer_claims": [],
+          "tool_message_json_equals_inner_result": [
+            true
+          ],
+          "spill_files_found": [],
+          "final_text": [
+            "**Проверенных утверждений нет.** Research вернул пустой список claims (`claims: []`), статус `partial`, причина остановки — `budget_exhausted`.\n\nЧто произошло:\n- Поиск (2 формы, движок Seznam) дал результаты, но Naver отключён (`source_disabled`).\n- Три чтения завершились `fetch_timeout` (packages.gleam.run, law.resource.org, starknet.io).\n- Единственный прочитанный документ — S1, «New in XMLSpy 2027» (https://www.altova.com/xmlspy-xml-editor/whatsnew) — к Rust не относится; из него не извлечено ни одного утверждения.\n- Аудит не завершён (`audit_completed: false`), цитируемых документов 0 при требуемых 2.\n\nПробелы: все три аспекта вопроса — возвращаемое значение `split_off(2)` для `[1, 2, 3, 4]`, содержимое исходного Vec и изменение capacity — остаются неподтверждёнными (`missing: [0,1,2]`). Значения в квадратных скобках показать нельзя: ни один источник их не подтверждает.\n\nОфициальная документация Rust (doc.rust-lang.org) в этом вызове не читалась. Ответить по памяти я не могу по условиям задачи. Рекомендую повторить запрос с явным указанием URL документации `Vec::split_off`."
+          ],
+          "evidence_path": "runs/research-gates-2026-11-06/baseline/harness/H02"
+        },
+        "candidate-v4": {
+          "sdk_status": "completed",
+          "actual_research_calls": 1,
+          "frozen_question_matches": true,
+          "inner_status": "partial",
+          "inner_claims": 0,
+          "covered_gold_indices": [],
+          "outer_grounded_gold_indices": [],
+          "new_false_factual_answer_claims": [],
+          "new_unknown_asserted_factual_answer_claims": [],
+          "tool_message_json_equals_inner_result": [
+            true
+          ],
+          "spill_files_found": [],
+          "final_text": [
+            "Проверка не дала ответа: research вернул `status: partial`, `stop_reason: budget_exhausted`, `claims: []` — проверенных утверждений нет, все три аспекта (возвращаемое значение, остаток в исходном Vec, capacity) помечены как `missing`.\n\nНайденные документы не относятся к теме: это страницы Википедии «WikiProject Video games» (https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Video_games) и «Comparison of programming languages (string functions)» (https://en.wikipedia.org/wiki/Comparison_of_programming_languages_(string_functions)). Документация Rust не была прочитана; два чтения завершились ошибками (`unsupported_content`, `fetch_timeout`), поисковик Naver отключён.\n\nПоэтому я не могу подтвердить ни `[3, 4]` как результат, ни `[1, 2]` как остаток, ни изменение capacity — это остаётся непроверенным. Независимость источников не установлена, семантический аудит не завершён (`audit_completed: false`), так что даже при наличии утверждений это была бы не гарантия истинности. Рекомендую повторить запрос с прямым указанием на doc.rust-lang.org."
+          ],
+          "evidence_path": "runs/research-gates-2026-11-06/candidate-v4/harness/H02"
+        },
+        "outer_unverified_additions": {
+          "candidate-v4": [
+            "The outer answer introduces [3,4] and [1,2] as explicitly unconfirmed hypotheses despite empty inner claims. They are NOT verified outputs and do not satisfy gold.",
+            "The suggested doc.rust-lang.org destination was not read in this invocation; it is a future-query recommendation, not a verified source citation."
+          ],
+          "baseline": [
+            "Suggests repeating with a Vec::split_off URL, without having read the Rust reference."
+          ],
+          "factual_label_note": "Explicitly disclaimed hypotheses/recommendations are kept separate from asserted false/unknown factual answer claims; no quality credit is given."
+        }
+      }
+    ],
+    "old_v4": [
+      {
+        "id": "R01",
+        "status": "partial",
+        "claims": 0,
+        "texts": [],
+        "judgement": "False SHOULD not emitted; empty live answer is not a recovered positive answer.",
+        "evidence_path": "runs/research-gates-2026-11-06/candidate-v4/old/R01/tool-result.json"
+      },
+      {
+        "id": "R03",
+        "status": "partial",
+        "claims": 3,
+        "texts": [
+          "После возврата false работа take_while() завершена, а остальные элементы игнорируются.",
+          "Элемент, на котором предикат вернул false, потребляется для проверки и не возвращается в итератор.",
+          "В примере после take_while(|&n| n != 3) остаток итератора даёт только [4], без 3."
+        ],
+        "judgement": "Three supported claims preserve the two take_while aspects and the numeric array example.",
+        "evidence_path": "runs/research-gates-2026-11-06/candidate-v4/old/R03/tool-result.json"
+      }
+    ],
+    "provenance_checks": {
+      "calls": 30,
+      "answer_ranges": 29,
+      "witness_slices": 31,
+      "recomputed_version_hashes": 31
+    },
+    "provenance_limit": "Matching slices, offsets and document hashes prove provenance, not semantic truth or source independence.",
+    "causes_to_report_without_retuning_final12": [
+      {
+        "id": "D02",
+        "cause": "Correct .invalid clause starts with a quote/dot; conservative uppercase-or-digit sentence-start rule excludes it."
+      },
+      {
+        "id": "D03",
+        "cause": "Correct recommendation draft uses a larger exact two-sentence quote than its one-sentence claim; literal text equality withholds it. The retained motivation clause does not answer the modal question."
+      },
+      {
+        "id": "D04",
+        "cause": "The model changes original newline/indentation in the exp-before exact quote; failed provenance must remain withheld."
+      }
+    ],
+    "historical_separation": {
+      "NEW12": "V1 candidate0 claims, failed; not pooled here. Prior review identified baseline N11/A2 API-scope error and N10/A2 ambiguous wording.",
+      "CONFIRM12": "V2 10/21 to6/21 factual aspects, failed; not pooled here.",
+      "V3": "Superseded after independent safety review; D predictions not opened by this reviewer and not included here.",
+      "release": "This JSON does not approve ready_to_merge, main merge, deployment or general pilot qualification."
+    },
+    "limits": [
+      "Single small frozen set; no broad web recall or truth guarantee.",
+      "Live policy/source bodies/cache/refusal state can differ by arm; these results do not isolate one validator change.",
+      "Actual Harness returned faithful partial answers but H02 did not demonstrate successful technical evidence recovery."
+    ],
+    "review_judgement_revision": {
+      "claim": "baseline D03/A1",
+      "initial_considered": "false_overbroad_exclusivity under strict global reading",
+      "final": "unknown_scope_ambiguous",
+      "reason": "The original question supplies a plausible narrower parameter-selection scope; a definitive false label would overstate the evidence. Gold-coverage verdict remains unchanged."
+    }
+  },
+  "earlier_cohorts": {
+    "NEW12_N01_N12": {
+      "comparison": "baseline vs candidate-v1",
+      "emitted_claims": [
+        14,
+        0
+      ],
+      "supported_claims": [
+        12,
+        0
+      ],
+      "false_claim_ids": {
+        "baseline": [
+          "N11/A2"
+        ],
+        "candidate": []
+      },
+      "unknown_claim_ids": {
+        "baseline": [
+          "N10/A2"
+        ],
+        "candidate": []
+      },
+      "gate": "failed; zero emitted claims is not a precision/recall success",
+      "precision_of_empty_candidate": null,
+      "assessment": "reviewer source-first claims; true off-topic N02/N12 substitutions do not count as covered gold"
+    },
+    "CONFIRM12_C01_C12": {
+      "comparison": "baseline vs candidate-v2",
+      "emitted_claims": [
+        18,
+        9
+      ],
+      "factual_aspects_covered": [
+        10,
+        6
+      ],
+      "factual_aspects_total": 21,
+      "honest_insufficiency": [
+        1,
+        1
+      ],
+      "gate": "failed; supported C02/C03/C09 lost",
+      "candidate_false_claim_ids": [],
+      "candidate_unknown_claim_ids": [],
+      "assessment": "independent review of gold/control losses and candidate claims; not pooled with other sets"
+    },
+    "candidate-v3": {
+      "status": "superseded_due_to_independent_trust_boundary_review",
+      "quality": "not_scored",
+      "change_basis": "matching blog-title/body mentions must not substitute for an own header; corrected before FINAL12 predictions were opened"
+    }
+  },
+  "old_component": {
+    "regression_tests": 3,
+    "baseline_expected_red": 3,
+    "candidate_green": 3,
+    "R01": "erroneous SHOULD withheld despite prior supported audit",
+    "R03": "two valid primary witnesses preserved; array example passes structural gate; all3 supported by separate real OLD audit",
+    "semantic_audit_raw": "old-component/call.json",
+    "limit": "same original selected chunks/drafts; not a fresh retrieval recall result"
+  },
+  "outer_contract_errors": [
+    {
+      "arm": "candidate-v4",
+      "case": "H01",
+      "classification": "unsupported_contract_wording",
+      "text": "Threshold described as two independent documents; actual contract requires two distinct bodies.",
+      "note": "Publisher independence is explicitly unestablished later in the same answer; do not credit independence or merge this with FINAL12 factual claims."
+    }
+  ],
+  "acceptance": "request_changes; implementation remains in_progress; no release"
+}

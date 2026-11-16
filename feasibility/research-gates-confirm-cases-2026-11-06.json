@@ -1,0 +1,238 @@
+{
+  "schema": "research-gates-confirm12-v1",
+  "frozen_before_inference": true,
+  "reason": "First NEW12 remains failed/exploratory after diagnosis; this separate untouched confirmation is not pooled with it.",
+  "cases": [
+    {
+      "id": "C01",
+      "tool": "research",
+      "group": "RFC",
+      "question": "По RFC 6585 разрешено ли сохранять HTTP 431 Request Header Fields Too Large в кэше или действует MUST NOT?",
+      "gold_aspects": [
+        "431 response MUST NOT be stored by a cache"
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc6585.html#section-5"
+      ],
+      "false_claim_controls": [
+        "431 cacheable without restriction"
+      ]
+    },
+    {
+      "id": "C02",
+      "tool": "research",
+      "group": "RFC",
+      "question": "According to RFC 7617, is a Basic authentication user-id containing a colon valid? Explain where the user-id/password boundary is.",
+      "gold_aspects": [
+        "user-id containing colon invalid",
+        "first colon separates user-id from password"
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc7617.html#section-2"
+      ],
+      "false_claim_controls": [
+        "colon allowed as part of user-id"
+      ]
+    },
+    {
+      "id": "C03",
+      "tool": "research",
+      "group": "RFC",
+      "question": "RFC 8259 section 10: JSON-генератор может произвольно расширять JSON grammar или MUST строго ей соответствовать?",
+      "gold_aspects": [
+        "JSON generator MUST strictly conform to JSON grammar"
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc8259.html#section-10"
+      ],
+      "false_claim_controls": [
+        "generator MAY output nonconforming JSON as standard JSON"
+      ]
+    },
+    {
+      "id": "C04",
+      "tool": "research",
+      "group": "RFC",
+      "question": "For each masked WebSocket frame, does RFC 6455 require the client to choose a fresh 32-bit masking key or can it reuse one fixed key?",
+      "gold_aspects": [
+        "client MUST pick fresh masking key for masked frame",
+        "masking key has 32 bits"
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc6455.html#section-5.3"
+      ],
+      "false_claim_controls": [
+        "fixed masking key reusable"
+      ]
+    },
+    {
+      "id": "C05",
+      "tool": "research",
+      "group": "technical",
+      "question": "Rust slice::split_first на [8, 9, 10]: что возвращается как первый элемент и остаток, и что получается для пустого slice?",
+      "gold_aspects": [
+        "first element 8 reference and remaining [9,10]",
+        "empty slice returns None"
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/primitive.slice.html#method.split_first"
+      ],
+      "false_claim_controls": [
+        "empty slice panics"
+      ]
+    },
+    {
+      "id": "C06",
+      "tool": "research",
+      "group": "technical",
+      "question": "What does Rust std::mem::replace return when replacing vector [5, 6] with [7], and what remains in the destination?",
+      "gold_aspects": [
+        "returns old value [5,6]",
+        "destination becomes [7]"
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/mem/fn.replace.html"
+      ],
+      "false_claim_controls": [
+        "replace returns new value"
+      ]
+    },
+    {
+      "id": "C07",
+      "tool": "research",
+      "group": "technical",
+      "question": "Для Rust Vec [10, 20, 30, 40] вызов swap_remove(1): какой элемент возвращается и каким становится Vec? Сохраняет ли метод порядок?",
+      "gold_aspects": [
+        "returns 20",
+        "remaining [10,40,30]",
+        "order not preserved"
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/vec/struct.Vec.html#method.swap_remove"
+      ],
+      "false_claim_controls": [
+        "order preserved like remove"
+      ]
+    },
+    {
+      "id": "C08",
+      "tool": "research",
+      "group": "technical",
+      "question": "For a Rust iterator over [5, 6, 7, 8], what do nth(1) and then next() return? Are skipped elements consumed?",
+      "gold_aspects": [
+        "nth(1) returns 6",
+        "following next returns 7",
+        "skipped elements consumed"
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.nth"
+      ],
+      "false_claim_controls": [
+        "nth preserves skipped items for later next"
+      ]
+    },
+    {
+      "id": "C09",
+      "tool": "research",
+      "group": "scope",
+      "question": "RFC 8259 требует от парсера MUST отклонять UTF-8 BOM в начале сетевого JSON, раз генератору запрещено его добавлять? Раздели требования к отправителю и парсеру.",
+      "gold_aspects": [
+        "generator MUST NOT add BOM to network-transmitted JSON",
+        "parser MAY ignore BOM rather than error"
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc8259.html#section-8.1"
+      ],
+      "false_claim_controls": [
+        "parser MUST reject BOM"
+      ]
+    },
+    {
+      "id": "C10",
+      "tool": "research",
+      "group": "scope",
+      "question": "Are Rust LazyLock and OnceLock both immune to poisoning when an initializer panics? Compare their documented behavior.",
+      "gold_aspects": [
+        "LazyLock poisoned unrecoverably after initializer panic",
+        "OnceLock not poisoned by initializer panic"
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/sync/struct.LazyLock.html",
+        "https://doc.rust-lang.org/std/sync/struct.OnceLock.html"
+      ],
+      "false_claim_controls": [
+        "LazyLock never poisoned like OnceLock"
+      ]
+    },
+    {
+      "id": "C11",
+      "tool": "research",
+      "group": "scope",
+      "question": "Можно ли использовать std::mem::take в стабильном Rust 1.39? С какой стабильной версии эта функция доступна по официальной документации?",
+      "gold_aspects": [
+        "std::mem::take stable since Rust1.40, not available as stable std API in1.39"
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/mem/fn.take.html"
+      ],
+      "false_claim_controls": [
+        "stable mem::take available in Rust1.39"
+      ]
+    },
+    {
+      "id": "C12",
+      "tool": "research",
+      "group": "scope",
+      "question": "Find an official Rust Iterator method named take_while_preserve_failed and explain its guarantees. If the requested method cannot be confirmed, do not silently replace it with take_while or Peekable.",
+      "gold_aspects": [
+        "Explicit insufficiency for requested unconfirmed API; no substituted semantics"
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/iter/trait.Iterator.html"
+      ],
+      "false_claim_controls": [
+        "invented take_while_preserve_failed semantics",
+        "silent substitution of take_while behavior"
+      ]
+    }
+  ],
+  "harness": [
+    {
+      "id": "H01",
+      "prompt": "Проверь по RFC 6585: ответ HTTP 511 можно сохранить в кэше или он MUST NOT кэшироваться? Укажи прочитанную норму, не додумывай.\nВызови research ровно один раз с question, равным вопросу выше без этой инструкции, language=ru. Ответ только по его проверенным утверждениям; пропуски обозначь явно.",
+      "gold_aspects": [
+        "511 response MUST NOT be stored by cache"
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc6585.html#section-6"
+      ]
+    },
+    {
+      "id": "H02",
+      "prompt": "Проверь в документации Rust результат Vec::split_off(2) для [1, 2, 3, 4]: что возвращается, что остаётся в исходном Vec и меняется ли его capacity? Покажи значения с квадратными скобками.\nВызови research ровно один раз с question, равным вопросу выше без этой инструкции, language=ru. Ответ только по его проверенным утверждениям; пропуски обозначь явно.",
+      "gold_aspects": [
+        "returns [3,4]",
+        "original contains [1,2]",
+        "original capacity unchanged"
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/vec/struct.Vec.html#method.split_off"
+      ]
+    }
+  ],
+  "protocol": {
+    "baseline_git": "0744c73",
+    "product_source_git": "82a37561b6882bc16724a53f803c7f9d6cc53293",
+    "holdout_no_tuning": true,
+    "old_replay_separate": true,
+    "judgement": "source-first claim IDs; exact quote is provenance only; missing target evidence never counted as success",
+    "new_false_claim_id_blocks_acceptance": true,
+    "unknown_claim_id_blocks_acceptance": true,
+    "live_pairing": "same model/Qwen/budgets/ledger/cache; record source hashes/cache and separate drift from validator effect",
+    "language": "Questions RU/EN, research answer ru for both arms to match existing driver; Harness final ru",
+    "source_of_change": "OLD R01/R03 development + RFC info/body navigation and explicit zero-based facet IDs; first NEW12 failure preserved",
+    "abstention_case": "C12: empty claims plus explicit nonempty missing/partial is honest insufficiency; substitutes do not satisfy its condition",
+    "quality_units": "factual gold aspects and insufficiency condition reported separately; false/unknown/out-of-scope IDs separate",
+    "no_pooling": true
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "version": "news-dates-sensitivity-two-v1",
+  "as_of": "2026-11-03",
+  "timezone": "Europe/Moscow",
+  "cases": [
+    {
+      "id": "ds01",
+      "query": "последние новости Нижнего Новгорода",
+      "intent": "source_aware_sensitivity",
+      "place": "Нижний Новгород",
+      "topic": "городские новости",
+      "published_from": "2026-11-01",
+      "published_to": "2026-11-03",
+      "date_rule": "default last3Moscow calendar days, asof2026-11-03"
+    },
+    {
+      "id": "ds02",
+      "query": "последние новости Челябинска",
+      "intent": "source_aware_sensitivity",
+      "place": "Челябинск",
+      "topic": "городские новости",
+      "published_from": "2026-11-01",
+      "published_to": "2026-11-03",
+      "date_rule": "default last3Moscow calendar days, asof2026-11-03"
+    }
+  ],
+  "limits": [
+    "Supplemental source-aware sensitivity after frozen NEW12, not a replacement/new qualification.",
+    "ds01 known city/source/URL overlap expected; ds02 newcity in this news series, exactquerynew only.",
+    "Default last3days window differs from nd01 explicit day; all city/topic/date/source criteria remain unchanged."
+  ]
+}

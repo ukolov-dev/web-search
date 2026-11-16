@@ -1,0 +1,817 @@
+{
+  "protocol": {
+    "author": "one separate source annotator, blinded to model outputs/branch labels; not independent acceptance",
+    "freeze": "source gold fixed after acquisition and before prediction inspection; no source grades based on branch output",
+    "scope": "known relevant retrieved sources, not universal web recall; null unjudged and unknown direct separately reported",
+    "source_gold": "retained original HTML/raw acquisition and preselected source-only audits; never branch-extracted text",
+    "criteria": "grade2 concrete requested relationship with material conditions;grade1 partial/unresolved/wrong factual condition only with concrete counter-evidence;grade0 unrelated;unobserved/challenge/incomplete source unknown",
+    "proposals": "status/genre/date alone is not negative; conjecture is not shipped behavior; concrete current explanations in an issue remain assessable",
+    "offsets": "UTF-8 bytes in whitespace-normalized source_text(original HTML); visible text plus uniquely declared typed code-view JSON rawLines; other scripts/styles excluded",
+    "isolation": "annotator did not read new branch results, model calls, labels or logs; source-only audits not injected into model input",
+    "artifact_status": "frozen before prediction inspection",
+    "blind_source_review": {
+      "path": "runs/passage-coverage-confirm-2026-10-30/gold-audit/peer-review.json",
+      "sha256": "d3c02609ce35fa8aa2953209870ba61a480d89e1c2a808303a8295d70c65f575",
+      "scope": "all grade2 and grade1 sources; separate blind reviewer; not formal independent acceptance"
+    }
+  },
+  "cases": [
+    {
+      "id": "h01",
+      "query": "Python str.rstrip removesuffix trailing character set exact suffix difference",
+      "criteria": "str.rstrip(chars) strips trailing characters from a character set, not one exact suffix substring; str.removesuffix(suffix) removes one exact matching suffix and otherwise leaves the string unchanged. Both operations and the comparison direction must be bound by this source.",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://cs.python-3.com/?p=369183",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://docs.astral.sh/ruff/rules/bad-str-strip-call/",
+          "grade": 1,
+          "basis": "Concrete str.strip character-set behavior and exact str.removesuffix contrast, but full retained source never names rstrip or binds the requested trailing-only operation; both-ends strip is not the requested rstrip relation.",
+          "support": [],
+          "snapshot": "runs/passage-coverage-confirm-2026-10-30/raw-cache/44e167f9ed8e5ef24a2ddd507f51cbd1b8fc765afa0ff475cd0daf651e84c0de.json",
+          "field": "raw_html_text",
+          "html_hash": "4139df35a08a7f592af0b6b7799a0c4ce2b0f90b450d31973757304814b039b7",
+          "normalized_text_hash": "64223ce262a30ed2cd08589dace5d8f546ee5b069b3db6fbd3540ba721bc0522",
+          "source_chars": 1293,
+          "final_url": "https://docs.astral.sh/ruff/rules/bad-str-strip-call/",
+          "partial_support": [
+            {
+              "quote": "All characters in str.strip calls are removed from both the leading and trailing ends of the string.",
+              "start": 579,
+              "end": 679
+            },
+            {
+              "quote": "In Python 3.9 and later, you can use str.removeprefix and str.removesuffix to remove an exact prefix or suffix from a string, respectively, which should be preferred when possible.",
+              "start": 771,
+              "end": 951
+            }
+          ]
+        },
+        {
+          "id": "C003",
+          "url": "https://docs.python.org/3/builtins/stdtypes.html",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "Return a copy of the string with trailing characters removed. The chars argument is a string specifying the set of characters to be removed.",
+              "start": 78442,
+              "end": 78582
+            },
+            {
+              "quote": "The chars argument is not a suffix; rather, all combinations of its values are stripped.",
+              "start": 78656,
+              "end": 78744
+            },
+            {
+              "quote": "See removesuffix() for a method that will remove a single suffix string rather than all of a set of characters.",
+              "start": 78846,
+              "end": 78957
+            },
+            {
+              "quote": "If the string ends with the suffix string and that suffix is not empty, return string[:-len(suffix)] . Otherwise, return a copy of the original string:",
+              "start": 75374,
+              "end": 75525
+            }
+          ],
+          "snapshot": "runs/passage-coverage-confirm-2026-10-30/gold-audit/h01-C003.html",
+          "field": "raw_html_text",
+          "html_hash": "e5ef597aecce0dd5b62d4d8c4f97856d6b8e6d9df4cc175b84b06ab4c5b318d3",
+          "normalized_text_hash": "2840b2948928486bc6fd2e5238f24c549a6a433278173ccdec983af903a91638",
+          "source_chars": 196507,
+          "final_url": "https://docs.python.org/3/builtins/stdtypes.html",
+          "scope_warning": "Retained Python documentation includes current str methods plus historical/bytes alternatives; proofs are from the Unicode str rstrip/removesuffix sections, not the bytes methods."
+        },
+        {
+          "id": "C004",
+          "url": "http://docs.sqlalchemy.org/en/latest/dialects/postgresql.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://www.educba.com/python-rstrip/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://fliphtml5.com/hsjls/baxk/Python_String_Built-in_Function/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://www.geeksforgeeks.org/python/python-string-rstrip/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://github.com/dosisod/refurb/blob/master/docs/checks.md",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://github.com/outcastdreamer/Python_Notes",
+          "grade": 1,
+          "basis": "Concrete rstrip trailing-character behavior in Python notes; complete retained source has no removesuffix operation or exact-suffix comparison.",
+          "support": [],
+          "snapshot": "runs/passage-coverage-confirm-2026-10-30/raw-cache/16205dbca4d1c9e9c0c445a9fad98cbddb23498a6dd69283ed8aeebe2f4d7404.json",
+          "field": "raw_html_text",
+          "html_hash": "c8297eec249cd789a3422db1fbff8a3ff047e00a4e3453c4a4a967ac98f4aa27",
+          "normalized_text_hash": "a2a6f115f86023075d882899c83abdaab81bb5b3b74a3dea8e6b42e475b8ab63",
+          "source_chars": 113792,
+          "final_url": "https://github.com/outcastdreamer/Python_Notes",
+          "partial_support": [
+            {
+              "quote": "rstrip(self, chars=None, /) | Return a copy of the string with trailing whitespace removed. | | If chars is given and not None, remove characters in chars instead.",
+              "start": 57688,
+              "end": 57851
+            }
+          ]
+        },
+        {
+          "id": "C010",
+          "url": "https://mate.naver.com/#partners",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://pandas.pydata.org/pandas-docs/version/2.2.1/user_guide/text.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://peps.python.org/pep-0616/",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "(l/r)strip : The argument is interpreted as a character set. The characters are repeatedly removed from the appropriate end of the string.",
+              "start": 9608,
+              "end": 9746
+            },
+            {
+              "quote": "remove(prefix/suffix) : The argument is interpreted as an unbroken substring. Only at most one copy of the prefix/suffix is removed.",
+              "start": 9747,
+              "end": 9879
+            },
+            {
+              "quote": "def removesuffix ( self : str , suffix : str , / ) -> str : # suffix='' should not call self[:-0]. if suffix and self . endswith ( suffix ): return self [: - len ( suffix )] else : return self [:]",
+              "start": 2743,
+              "end": 2939
+            }
+          ],
+          "snapshot": "runs/passage-coverage-confirm-2026-10-30/raw-cache/0f2a76b68c93d75cebaee88d7ca16474235ee8746adbe0b53bc1e048bdb3b9ab.json",
+          "field": "raw_html_text",
+          "html_hash": "b872258bab8dbbbe8c899ecf39beaaf776c54bc9da5ed8e1beac0f039a321e4a",
+          "normalized_text_hash": "ed736e85a25e9ce36e38e9653d761cb22cce2c93fe7af474573d515ee0633e61",
+          "source_chars": 12240,
+          "final_url": "https://peps.python.org/pep-0616/",
+          "scope_warning": "PEP status is Final and Python-Version3.9; rejected alternatives and draft history are not treated as current behavior."
+        },
+        {
+          "id": "C013",
+          "url": "https://pynative.com/python-string-exercise/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://python-reference.readthedocs.io/en/latest/docs/str/strip.html",
+          "grade": 1,
+          "basis": "Concrete strip(chars) character-set behavior, but removesuffix is absent and rstrip only appears as a See Also link; requested two-operation trailing comparison is missing.",
+          "support": [],
+          "snapshot": "runs/passage-coverage-confirm-2026-10-30/raw-cache/b3b009283ad9111c2045d474d05a2bd1c70bf5bd5daa01a65bdf8397fce13d34.json",
+          "field": "raw_html_text",
+          "html_hash": "b35c16ec6293f42ed4914b97d5eb8a5ef530f84e58c8fd07f4701748598cae05",
+          "normalized_text_hash": "4a01aeb4e441cd73c1207d5e9494191a170b6a409e152794bdbbc08bbe81fe98",
+          "source_chars": 1255,
+          "final_url": "https://python-reference.readthedocs.io/en/latest/docs/str/strip.html",
+          "partial_support": [
+            {
+              "quote": "The chars argument is not a prefix; rather, all combinations of its values are stripped.",
+              "start": 732,
+              "end": 820
+            }
+          ]
+        },
+        {
+          "id": "C015",
+          "url": "https://python-tutorials.in/python-string-rstrip/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://www.pythonpool.com/python-remove-newline-from-list/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://www.pythonpool.com/python-trim/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://www.pythonpool.com/remove-character-from-string-python/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://softhints.com/python-regex-cheat-sheet-with-examples/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C020",
+          "url": "https://www.tutorialspoint.com/python/string_rstrip.htm",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "h02",
+      "query": "Redis EXPIRE NX XX GT LT nonvolatile key infinite TTL mutually exclusive options",
+      "criteria": "Redis EXPIRE documents the conditions for NX, XX, GT and LT; how GT/LT treat a nonvolatile key as having an infinite TTL; and which options are mutually exclusive. Do not assume all four options are mutually exclusive or transfer another command/product rule without an explicit source binding.",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://github.com/piaohao/godis/blob/master/redis.go",
+          "grade": 1,
+          "basis": "Godis Redis client source explains basic EXPIRE timeout and contains NX/XX for a different SET operation, but no EXPIRE NX/XX/GT/LT or nonvolatile infinite-TTL option contract; GT/LT option tokens are absent.",
+          "support": [],
+          "snapshot": "runs/passage-coverage-confirm-2026-10-30/raw-cache/31f304f48d287bde0b434df5dc1009786718b7d8b3736f39923e7ee91a676a34.json",
+          "field": "raw_html_text",
+          "html_hash": "01abeeeecfae049776ccf94a4ddcf550357d9390d6bd8596873befa9b5912476",
+          "normalized_text_hash": "a8271648365514fee4a8ab11e7c45e4c7968e821d697822f89bfa174726b3629",
+          "source_chars": 158380,
+          "final_url": "https://github.com/piaohao/godis/blob/master/redis.go",
+          "partial_support": [
+            {
+              "quote": "//Expire Set a timeout on the specified key. After the timeout the key will be automatically deleted by //the server. A key with an associated timeout is said to be volatile in Redis terminology.",
+              "start": 10708,
+              "end": 10903
+            }
+          ],
+          "scope_warning": "NX/XX in SET comments cannot supply EXPIRE conditions."
+        },
+        {
+          "id": "C002",
+          "url": "https://goodspace.ai/interview-questions/redis",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://mypresta.rocks/known-issues",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://redict.io/docs/commands/pexpire/",
+          "grade": 1,
+          "basis": "Full retained source documents Redict PEXPIRE options and explicitly relates milliseconds PEXPIRE to its EXPIRE command, but does not bind those semantics to the requested Redis EXPIRE implementation; a navigation Compatibility with Redis link is not such evidence.",
+          "support": [],
+          "snapshot": "runs/passage-coverage-confirm-2026-10-30/raw-cache/0914db9fb4ad889b96b4e32e3351431a6ab4b148404b7050a33214cf35520fe6.json",
+          "field": "raw_html_text",
+          "html_hash": "d02b33fc26ab3a98f487255c6b912c5217e469a14b4d2d3ef65e7df4e871ab3c",
+          "normalized_text_hash": "32518f0c664f858ec3d73b30ae53f7e3034374b3cf0f51e84fb57df47c4399f7",
+          "source_chars": 2083,
+          "final_url": "https://redict.io/docs/commands/pexpire/",
+          "partial_support": [
+            {
+              "quote": "This command works exactly like EXPIRE but the time to live of the key is specified in milliseconds instead of seconds.",
+              "start": 1195,
+              "end": 1314
+            },
+            {
+              "quote": "The PEXPIRE command supports a set of options since Redict 7.0: NX – Set expiry only when the key has no expiry XX – Set expiry only when the key has an existing expiry GT – Set expiry only when the new expiry is greater than current one LT – Set expiry only when the new expiry is less than current one",
+              "start": 1325,
+              "end": 1636
+            },
+            {
+              "quote": "A non-volatile key is treated as an infinite TTL for the purpose of GT and LT . The GT , LT and NX options are mutually exclusive.",
+              "start": 1637,
+              "end": 1767
+            }
+          ],
+          "scope_warning": "Different command and product scope: Redict PEXPIRE; no source-grounded Redis EXPIRE equivalence."
+        },
+        {
+          "id": "C005",
+          "url": "https://redis.io/docs/latest/commands/expire/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": [],
+          "scope_warning": "Requested Redis EXPIRE original source was not acquired; no content proof and no direct source gold."
+        },
+        {
+          "id": "C006",
+          "url": "https://redis.io/docs/latest/commands/hexpire/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://redis.io/docs/latest/commands/hpexpireat/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://redis.io/docs/latest/commands/pexpireat/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://redis.io/docs/latest/develop/reference/modules/modules-api-ref/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://valkey.io/commands/expire/",
+          "grade": 1,
+          "basis": "Full retained Valkey EXPIRE source explicitly supplies all option/infinite-TTL/exclusivity semantics, but its product scope is Valkey. It does not establish these properties for Redis EXPIRE; a Redis-code copyright/trademark footer is not an implementation binding.",
+          "support": [],
+          "snapshot": "runs/passage-coverage-confirm-2026-10-30/raw-cache/a166534d19ea5db4ed23ff06e39ab221ae3e01d036f0f0fbaad4e705f128af57.json",
+          "field": "raw_html_text",
+          "html_hash": "27e09be3a537114ae360a13180d96f9774e2572568a891d33640fc259443f42f",
+          "normalized_text_hash": "2a210b22ba5ed4f9417d0a9f4af7b11bfe3731231691d67d2c7c1a5a2209fbb9",
+          "source_chars": 10242,
+          "final_url": "https://valkey.io/commands/expire/",
+          "partial_support": [
+            {
+              "quote": "A key with an associated timeout is often said to be volatile in Valkey terminology.",
+              "start": 405,
+              "end": 489
+            },
+            {
+              "quote": "The EXPIRE command supports a set of options: NX -- Set expiry only when the key has no expiry XX -- Set expiry only when the key has an existing expiry GT -- Set expiry only when the new expiry is greater than current one LT -- Set expiry only when the new expiry is less than current one",
+              "start": 1726,
+              "end": 2015
+            },
+            {
+              "quote": "A non-volatile key is treated as an infinite TTL for the purpose of GT and LT . The GT , LT and NX options are mutually exclusive.",
+              "start": 2016,
+              "end": 2146
+            }
+          ],
+          "scope_warning": "Different product scope: Valkey EXPIRE; no source-grounded Redis EXPIRE equivalence."
+        }
+      ]
+    },
+    {
+      "id": "h03",
+      "query": "JavaScript Object.freeze shallow nested object mutation strict mode TypeError",
+      "criteria": "Object.freeze is shallow: the frozen object own properties cannot be changed, while a nested referenced object remains mutable unless separately frozen. Strict mode throws TypeError for a prohibited frozen-object mutation; it does not make nested objects recursively frozen.",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "Freezing an object prevents extensions and makes existing properties non-writable and non-configurable.",
+              "start": 2128,
+              "end": 2231
+            },
+            {
+              "quote": "function fail() { \"use strict\"; obj.foo = \"sparky\"; // throws a TypeError",
+              "start": 6131,
+              "end": 6204
+            },
+            {
+              "quote": "If the value of those properties are objects themselves, those objects are not frozen and may be the target of property addition, removal or value re-assignment operations.",
+              "start": 7917,
+              "end": 8089
+            }
+          ],
+          "snapshot": "runs/passage-coverage-confirm-2026-10-30/raw-cache/f41a45096ae37ce755a97536ba9d5b124f21b1b1a21ad6759b5b805e5eecd9be.json",
+          "field": "raw_html_text",
+          "html_hash": "c68aad936f3aa346e897c4f9280224526aa1c726a62e94679c50b29fd0a59148",
+          "normalized_text_hash": "d85e49a898df1b99dd4ba47644572916aa298d5080f058f4e596c697d46bd56a",
+          "source_chars": 11672,
+          "final_url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze"
+        },
+        {
+          "id": "C002",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode",
+          "grade": 1,
+          "basis": "Actual strict-mode nonwritable-property assignment TypeError is concrete partial support. Complete source has no Object.freeze/frozen/shallow relation; nested function references are unrelated to nested object freezing.",
+          "support": [],
+          "snapshot": "runs/passage-coverage-confirm-2026-10-30/raw-cache/8623479eaf22e4a0181a6b88c09bfed7db40b2dc8484931d7e93008ac8972dea.json",
+          "field": "raw_html_text",
+          "html_hash": "39346c44356b95bf745d9c619b80d5e33bab05c8e3ad9d2ff16a4d12a81d09a5",
+          "normalized_text_hash": "7a9bb20210d2b4afc684a35675c0a7844a40d675fcf328020057bebca93c7236",
+          "source_chars": 35100,
+          "final_url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode",
+          "partial_support": [
+            {
+              "quote": "Failing to assign to an object's property (e.g., it's read-only) throws a TypeError . In sloppy mode, this would silently fail.",
+              "start": 20571,
+              "end": 20698
+            }
+          ]
+        },
+        {
+          "id": "C003",
+          "url": "https://dzone.com/articles/tuples-records-javascript-part-1",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://www.elastic.co/docs/release-notes/elasticsearch/clients/javascript/breaking-changes",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://frontendchecklist.io/rules/javascript/immutable-patterns",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://gist.github.com/dmitry-vsl/898687d80faaa499a0b6560ece5eb4c1",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://github.com/react/react/blob/main/scripts/error-codes/codes.json",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://www.librechat.ai/docs/configuration/librechat_yaml/object_structure/agents",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://macklin.me/immutability-in-go/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://masteringjs.io/all",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://mate.naver.com/#partners",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://mathiasbynens.be/notes/es6-const",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "const foo = Object.freeze({ 'bar': 27 }); foo.bar = 42; // throws a TypeError exception in strict mode; // silently fails in sloppy mode console.log(foo.bar); // → 27",
+              "start": 1802,
+              "end": 1970
+            },
+            {
+              "quote": "Note that Object.freeze() is shallow: object values within a frozen object (i.e. nested objects) can still be mutated.",
+              "start": 1971,
+              "end": 2089
+            }
+          ],
+          "snapshot": "runs/passage-coverage-confirm-2026-10-30/raw-cache/9f588f77927702b3f9bbc2c80168ec2a5c505614d9e28e37fd53a2ce19eb9416.json",
+          "field": "raw_html_text",
+          "html_hash": "e88a6ab7b514f82e507dd7c3445868b7341f9fbfca7fcb60d1ccdfa1ef85e907",
+          "normalized_text_hash": "e9fd1620c279904ea4cdc8b4400b5eeb20db8764a2d0014f67ce5af9cb6ff6e3",
+          "source_chars": 5330,
+          "final_url": "https://mathiasbynens.be/notes/es6-const"
+        },
+        {
+          "id": "C013",
+          "url": "https://myassignmenthelp.com/programming-help/javascript-assignment-help.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://www.npmjs.com/package/mutative",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://react-querybuilder.js.org/docs/changelog",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://www.scribd.com/document/678925324/JavaScript-Notes",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://sebastienlorber.com/records-and-tuples-for-react",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://simplyjavascript.com/interview/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://www.w3schools.com/js/js_error_object.asp",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C020",
+          "url": "https://yvonnickfrin.dev/immutability-in-javascript/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "h04",
+      "query": "POSIX dup dup2 shared open file description offset FD_CLOEXEC descriptor flag",
+      "criteria": "dup/dup2 duplicates refer to the same open file description and share its file offset (and status flags), while the file-descriptor FD_CLOEXEC flag is not shared and is normally clear on a newly duplicated descriptor. Preserve any same-descriptor or platform condition stated by the source; do not confuse open-file-description state with descriptor-local flags.",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://ccrma.stanford.edu/planetccrma/man/man2/fcntl.2.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://en.wikipedia.org/wiki/Dup_(system_call)",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://github.com/facebook/folly/blob/main/folly/Subprocess.h",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://linux.die.net/man/2/dup",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://man.netbsd.org/dup.2",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://man.openbsd.org/dup.2",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "read(2) , write(2) and lseek(2) calls all move a single pointer into the file, and append mode, non-blocking I/O and asynchronous I/O options are shared between the references.",
+              "start": 2228,
+              "end": 2404
+            },
+            {
+              "quote": "The close-on-exec and close-on-fork flags on the new file descriptor are unset.",
+              "start": 2550,
+              "end": 2629
+            },
+            {
+              "quote": "When newd equals oldd , dup2 () just returns without affecting the close-on-exec or close-on-fork flags.",
+              "start": 2798,
+              "end": 2902
+            }
+          ],
+          "snapshot": "runs/passage-coverage-confirm-2026-10-30/raw-cache/ab2ef652baba6af3e5efbc3e983f24d8c5142a308640222af53bb37aca8b11fb.json",
+          "field": "raw_html_text",
+          "html_hash": "3529ff6eeec7c3f3477b033e40870f744d8b132fcbe503dcda80fcdfd6bbe79b",
+          "normalized_text_hash": "e830ab88ad20ea28f564c896b1941df0dfe16a83869f65cee49e9990c82e9b45",
+          "source_chars": 4480,
+          "final_url": "https://man.openbsd.org/dup.2",
+          "scope_warning": "Natural close-on-exec is semantically sufficient even without literal FD_CLOEXEC; preserve the same-descriptor exception and do not import dup3 flags."
+        },
+        {
+          "id": "C007",
+          "url": "https://man7.org/linux/man-pages/man2/F_DUPFD.2const.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://www.man7.org/linux/man-pages/man2/dup.2.html",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "Since the two file descriptors refer to the same open file description, they share file offset and file status flags;",
+              "start": 1058,
+              "end": 1175
+            },
+            {
+              "quote": "The two file descriptors do not share file descriptor flags (the close-on-exec flag).",
+              "start": 1328,
+              "end": 1413
+            },
+            {
+              "quote": "The close-on-exec flag ( FD_CLOEXEC ; see fcntl(2) ) for the duplicate descriptor is off.",
+              "start": 1414,
+              "end": 1503
+            },
+            {
+              "quote": "If oldfd is a valid file descriptor, and newfd has the same value as oldfd , then dup2 () does nothing, and returns newfd .",
+              "start": 2564,
+              "end": 2687
+            }
+          ],
+          "snapshot": "runs/passage-coverage-confirm-2026-10-30/gold-audit/h04-C008.html",
+          "field": "raw_html_text",
+          "html_hash": "f0b886340b0471a181d135320ed5b3847de410ab05ca4a29b78780d1aa2aa2ae",
+          "normalized_text_hash": "23ee3f55efb713f708f80db2c54c98d9eff21d8e16667ec7d287484ade710db4",
+          "source_chars": 6507,
+          "final_url": "https://www.man7.org/linux/man-pages/man2/dup.2.html"
+        },
+        {
+          "id": "C009",
+          "url": "https://manpages.ubuntu.com/manpages/focal/man2/fcntl.2.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://manual.cs50.io/2/fcntl",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://mimedefang.org/documentation/Changelog.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://notes.shichao.io/apue/ch3/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://perldoc.perl.org/POSIX",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://pkg.odin-lang.org/core/sys/posix/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://pubs.opengroup.org/onlinepubs/007908799/xsh/shm_open.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://pubs.opengroup.org/onlinepubs/9699919799/functions/open.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://www.qnx.com/developers/docs/6.4.1/neutrino/lib_ref/p/posix_typed_mem_open.html",
+          "grade": 1,
+          "basis": "Wrong-operation partial: this retained posix_typed_mem_open source defines initial descriptor FD_CLOEXEC and says dup/dup2 can operate on it, but does not establish duplicated descriptors sharing offset/status while preserving local flag state. It explicitly marks this documentation version unmaintained; do not transfer typed-memory creation or mmap physical-offset rules to dup.",
+          "support": [],
+          "snapshot": "runs/passage-coverage-confirm-2026-10-30/raw-cache/316a3dc64e474091ba78d3fbbcfcd6c0d8fb6eaf10076ef30c0a1a9975fce200.json",
+          "field": "raw_html_text",
+          "html_hash": "030f29178732910b56ab0c024e29a969db2a3f36777e31968de7553738d14c4d",
+          "normalized_text_hash": "7ac9f9b28d8e37f248d9bb796a7098b33cc0b3ef2460f90bafd33a0d785869a4",
+          "source_chars": 5996,
+          "final_url": "https://www.qnx.com/developers/docs/6.4.1/neutrino/lib_ref/p/posix_typed_mem_open.html",
+          "partial_support": [
+            {
+              "quote": "The FD_CLOEXEC file descriptor flag associated with the new file descriptor is cleared.",
+              "start": 4291,
+              "end": 4378
+            },
+            {
+              "quote": "The mmap() , posix_mem_offset() , posix_typed_mem_get_info() , fstat() , dup() , dup2() , and close() functions can operate on a file descriptor that posix_typed_mem_open() returns.",
+              "start": 4379,
+              "end": 4560
+            }
+          ],
+          "scope_warning": "This version of this document is no longer maintained. Source is posix_typed_mem_open, not dup semantics; grade1 is a conservative topical partial, never direct."
+        },
+        {
+          "id": "C018",
+          "url": "https://www.root.cz/man/2/dup2-2-gz/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://stackoverflow.com/questions/6125068/what-does-the-fd-cloexec-fcntl-flag-do",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C020",
+          "url": "https://www.tutorialspoint.com/unix_system_calls/dup.htm",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        }
+      ]
+    }
+  ]
+}

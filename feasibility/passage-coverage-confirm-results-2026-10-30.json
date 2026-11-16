@@ -1,0 +1,420 @@
+{
+  "protocol": {
+    "cases": 4,
+    "cards": 70,
+    "known_gold": 14,
+    "positive_gold": 6,
+    "unjudged_gold": 56,
+    "gold": {
+      "author": "one separate source annotator, blinded to model outputs/branch labels; not independent acceptance",
+      "freeze": "source gold fixed after acquisition and before prediction inspection; no source grades based on branch output",
+      "scope": "known relevant retrieved sources, not universal web recall; null unjudged and unknown direct separately reported",
+      "source_gold": "retained original HTML/raw acquisition and preselected source-only audits; never branch-extracted text",
+      "criteria": "grade2 concrete requested relationship with material conditions;grade1 partial/unresolved/wrong factual condition only with concrete counter-evidence;grade0 unrelated;unobserved/challenge/incomplete source unknown",
+      "proposals": "status/genre/date alone is not negative; conjecture is not shipped behavior; concrete current explanations in an issue remain assessable",
+      "offsets": "UTF-8 bytes in whitespace-normalized source_text(original HTML); visible text plus uniquely declared typed code-view JSON rawLines; other scripts/styles excluded",
+      "isolation": "annotator did not read new branch results, model calls, labels or logs; source-only audits not injected into model input",
+      "artifact_status": "frozen before prediction inspection",
+      "blind_source_review": {
+        "path": "runs/passage-coverage-confirm-2026-10-30/gold-audit/peer-review.json",
+        "sha256": "d3c02609ce35fa8aa2953209870ba61a480d89e1c2a808303a8295d70c65f575",
+        "scope": "all grade2 and grade1 sources; separate blind reviewer; not formal independent acceptance"
+      }
+    },
+    "comparison": "full initial+coverage+audit+localQwen; identical frozen live SERP and raw acquisition; branch-specific extraction and document selection",
+    "timing": "sequential replay; raw/snapshot and provider cache differ; not isolated SLA",
+    "read_metrics": "selected includes host-disabled skips; attempted excludes those skips; success requires actual extracted document; ratios use known positive retrieved sources"
+  },
+  "branches": {
+    "baseline": {
+      "tp": 0,
+      "fp": 1,
+      "fn": 6,
+      "unjudged_direct": 0,
+      "recall": 0.0,
+      "precision_judged": 0.0,
+      "initial_valid": 4,
+      "initial_attempts": 4,
+      "initial_length": 0,
+      "initial_stop_empty": 0,
+      "initial_reasoning_tokens": 0,
+      "initial_elapsed_ms_median": 2668.5,
+      "elapsed_ms_median": 22713.0,
+      "elapsed_ms_sum": 101996,
+      "generative_calls": 11,
+      "known_cost_usd": 0.001698466,
+      "unpriced_generations": 0,
+      "prompt_tokens": 41299,
+      "completion_tokens": 5074,
+      "providers": {
+        "Morph": 11
+      },
+      "reads": 13,
+      "raw_snapshot_cache_hits": 0,
+      "known_positive": 6,
+      "positive_in_coverage_pool": 5,
+      "positive_read_selected": 3,
+      "positive_attempted": 3,
+      "positive_extracted": 3,
+      "read_recall": 0.5,
+      "extracted_source_recall": 0.5,
+      "reranker_calls": 10,
+      "reranker_pairs": 148,
+      "reranker_fallbacks": 0,
+      "proof_ranges_validated": 5,
+      "audit_conflicts_validated": 0,
+      "errors": {
+        "evidence_verification": 6,
+        "naver": 1,
+        "unsupported_direct_evidence_or_constraints": 3
+      },
+      "all_classes_recall_at10": 0.8333333333333334,
+      "relevant_returned_at10": 5
+    },
+    "fixed": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 4,
+      "unjudged_direct": 0,
+      "recall": 0.3333333333333333,
+      "precision_judged": 1.0,
+      "initial_valid": 4,
+      "initial_attempts": 4,
+      "initial_length": 0,
+      "initial_stop_empty": 0,
+      "initial_reasoning_tokens": 0,
+      "initial_elapsed_ms_median": 1744.0,
+      "elapsed_ms_median": 15723.5,
+      "elapsed_ms_sum": 59440,
+      "generative_calls": 11,
+      "known_cost_usd": 0.002003762,
+      "unpriced_generations": 0,
+      "prompt_tokens": 43691,
+      "completion_tokens": 6534,
+      "providers": {
+        "Morph": 11
+      },
+      "reads": 14,
+      "raw_snapshot_cache_hits": 9,
+      "known_positive": 6,
+      "positive_in_coverage_pool": 5,
+      "positive_read_selected": 4,
+      "positive_attempted": 4,
+      "positive_extracted": 4,
+      "read_recall": 0.6666666666666666,
+      "extracted_source_recall": 0.6666666666666666,
+      "reranker_calls": 11,
+      "reranker_pairs": 161,
+      "reranker_fallbacks": 0,
+      "proof_ranges_validated": 10,
+      "audit_conflicts_validated": 0,
+      "errors": {
+        "evidence_verification": 5,
+        "naver": 1,
+        "unsupported_direct_evidence_or_constraints": 2
+      },
+      "all_classes_recall_at10": 0.8333333333333334,
+      "relevant_returned_at10": 5
+    }
+  },
+  "cases": [
+    {
+      "id": "h01",
+      "query": "Python str.rstrip removesuffix trailing character set exact suffix difference",
+      "known_positive": 2,
+      "branches": {
+        "baseline": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "relevant_returned": 2,
+          "positive_in_coverage_pool": [
+            "C003",
+            "C012"
+          ],
+          "positive_read_selected": [],
+          "positive_attempted": [],
+          "positive_extracted": [],
+          "initial_valid": true,
+          "reads": 4,
+          "audit_conflicts_validated": 0,
+          "errors": [
+            "evidence_verification: C017: fetch_timeout"
+          ],
+          "status": "partial"
+        },
+        "fixed": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "unjudged_direct": 0,
+          "recall": 0.5,
+          "precision_judged": 1.0,
+          "direct": [
+            "C012"
+          ],
+          "relevant_returned": 2,
+          "positive_in_coverage_pool": [
+            "C003",
+            "C012"
+          ],
+          "positive_read_selected": [
+            "C012"
+          ],
+          "positive_attempted": [
+            "C012"
+          ],
+          "positive_extracted": [
+            "C012"
+          ],
+          "initial_valid": true,
+          "reads": 4,
+          "audit_conflicts_validated": 0,
+          "errors": [
+            "evidence_verification: C017: fetch_timeout"
+          ],
+          "status": "partial"
+        }
+      }
+    },
+    {
+      "id": "h02",
+      "query": "Redis EXPIRE NX XX GT LT nonvolatile key infinite TTL mutually exclusive options",
+      "known_positive": 0,
+      "branches": {
+        "baseline": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "unjudged_direct": 0,
+          "recall": null,
+          "precision_judged": 0.0,
+          "direct": [
+            "C010"
+          ],
+          "relevant_returned": 0,
+          "positive_in_coverage_pool": [],
+          "positive_read_selected": [],
+          "positive_attempted": [],
+          "positive_extracted": [],
+          "initial_valid": true,
+          "reads": 2,
+          "audit_conflicts_validated": 0,
+          "errors": [
+            "naver: parser_changed",
+            "evidence_verification: C006: host_disabled",
+            "evidence_verification: C005: host_disabled",
+            "unsupported_direct_evidence_or_constraints: 2 downgraded"
+          ],
+          "status": "partial"
+        },
+        "fixed": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "unjudged_direct": 0,
+          "recall": null,
+          "precision_judged": null,
+          "direct": [],
+          "relevant_returned": 0,
+          "positive_in_coverage_pool": [],
+          "positive_read_selected": [],
+          "positive_attempted": [],
+          "positive_extracted": [],
+          "initial_valid": true,
+          "reads": 3,
+          "audit_conflicts_validated": 0,
+          "errors": [
+            "naver: parser_changed",
+            "evidence_verification: C005: host_disabled",
+            "unsupported_direct_evidence_or_constraints: 2 downgraded"
+          ],
+          "status": "partial"
+        }
+      }
+    },
+    {
+      "id": "h03",
+      "query": "JavaScript Object.freeze shallow nested object mutation strict mode TypeError",
+      "known_positive": 2,
+      "branches": {
+        "baseline": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "relevant_returned": 2,
+          "positive_in_coverage_pool": [
+            "C001",
+            "C012"
+          ],
+          "positive_read_selected": [
+            "C001",
+            "C012"
+          ],
+          "positive_attempted": [
+            "C001",
+            "C012"
+          ],
+          "positive_extracted": [
+            "C001",
+            "C012"
+          ],
+          "initial_valid": true,
+          "reads": 4,
+          "audit_conflicts_validated": 0,
+          "errors": [
+            "evidence_verification: C020: fetch_timeout",
+            "unsupported_direct_evidence_or_constraints: 1 downgraded"
+          ],
+          "status": "partial"
+        },
+        "fixed": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "unjudged_direct": 0,
+          "recall": 0.5,
+          "precision_judged": 1.0,
+          "direct": [
+            "C001"
+          ],
+          "relevant_returned": 2,
+          "positive_in_coverage_pool": [
+            "C001",
+            "C012"
+          ],
+          "positive_read_selected": [
+            "C001",
+            "C012"
+          ],
+          "positive_attempted": [
+            "C001",
+            "C012"
+          ],
+          "positive_extracted": [
+            "C001",
+            "C012"
+          ],
+          "initial_valid": true,
+          "reads": 4,
+          "audit_conflicts_validated": 0,
+          "errors": [
+            "evidence_verification: C020: fetch_timeout"
+          ],
+          "status": "partial"
+        }
+      }
+    },
+    {
+      "id": "h04",
+      "query": "POSIX dup dup2 shared open file description offset FD_CLOEXEC descriptor flag",
+      "known_positive": 2,
+      "branches": {
+        "baseline": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "relevant_returned": 1,
+          "positive_in_coverage_pool": [
+            "C006"
+          ],
+          "positive_read_selected": [
+            "C006"
+          ],
+          "positive_attempted": [
+            "C006"
+          ],
+          "positive_extracted": [
+            "C006"
+          ],
+          "initial_valid": true,
+          "reads": 3,
+          "audit_conflicts_validated": 0,
+          "errors": [
+            "evidence_verification: C001: error sending request for url (https://ccrma.stanford.edu/planetccrma/man/man2/fcntl.2.html)",
+            "evidence_verification: C004: host_disabled",
+            "unsupported_direct_evidence_or_constraints: 3 downgraded"
+          ],
+          "status": "partial"
+        },
+        "fixed": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "unjudged_direct": 0,
+          "recall": 0.0,
+          "precision_judged": null,
+          "direct": [],
+          "relevant_returned": 1,
+          "positive_in_coverage_pool": [
+            "C006"
+          ],
+          "positive_read_selected": [
+            "C006"
+          ],
+          "positive_attempted": [
+            "C006"
+          ],
+          "positive_extracted": [
+            "C006"
+          ],
+          "initial_valid": true,
+          "reads": 3,
+          "audit_conflicts_validated": 0,
+          "errors": [
+            "evidence_verification: C001: error sending request for url (https://ccrma.stanford.edu/planetccrma/man/man2/fcntl.2.html)",
+            "evidence_verification: C004: host_disabled",
+            "unsupported_direct_evidence_or_constraints: 3 downgraded"
+          ],
+          "status": "partial"
+        }
+      }
+    }
+  ],
+  "false_direct_changes": {
+    "new": [],
+    "retained": [],
+    "removed": [
+      [
+        "h02",
+        "C010"
+      ]
+    ]
+  },
+  "source_relevance_sensitivity": {
+    "baseline": {
+      "tp": 0,
+      "fp": 1,
+      "fn": 6,
+      "unjudged_direct": 0,
+      "recall": 0.0,
+      "precision_judged": 0.0
+    },
+    "fixed": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 4,
+      "unjudged_direct": 0,
+      "recall": 0.3333333333333333,
+      "precision_judged": 1.0
+    }
+  },
+  "recall_delta_query_bootstrap95": [
+    0.0,
+    0.5
+  ],
+  "corpus_sha256": "d4e75f7ac673f537f240fc1ad49c669af74a65215c715afe7f0e04f5980b8627",
+  "original20_sha256": "b67e3269830ae0e976aa9b4c5dc2f6b9c3e922ad1adda35738289d6b1b8325d6"
+}

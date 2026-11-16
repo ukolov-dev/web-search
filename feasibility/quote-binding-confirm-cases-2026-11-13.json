@@ -1,0 +1,157 @@
+{
+  "schema": "quote-binding-confirm-cases-v1",
+  "note": "Frozen before confirmation inference. Eight new questions + four explicitly known controls; not twelve unseen independent questions. Root cause F09 already known. This cohort is never pooled with failed F01-F12. Primary RFC gold preflight done before freeze. No gold/URLs passed to runtime.",
+  "cases": [
+    {
+      "id": "G01",
+      "tool": "research",
+      "question": "RFC 8259: является ли JSON object упорядоченной коллекцией пар name/value?",
+      "gold_aspects": [
+        "An object is an unordered collection of zero or more name/value pairs."
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc8259.html"
+      ],
+      "role": "new_question"
+    },
+    {
+      "id": "G02",
+      "tool": "research",
+      "question": "RFC 8259: SHOULD или MUST имена членов JSON object быть уникальными?",
+      "gold_aspects": [
+        "The names within an object SHOULD be unique; do not strengthen SHOULD to MUST."
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc8259.html"
+      ],
+      "role": "new_question"
+    },
+    {
+      "id": "G03",
+      "tool": "research",
+      "question": "RFC 6901: как кодируются символы тильды и косой черты в reference token JSON Pointer?",
+      "gold_aspects": [
+        "Tilde is ~0, slash is ~1 in a reference token."
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc6901.html"
+      ],
+      "role": "new_question"
+    },
+    {
+      "id": "G04",
+      "tool": "research",
+      "question": "RFC 7231: должен ли сервер отправлять message body в ответе на HEAD?",
+      "gold_aspects": [
+        "Server MUST NOT send message body in response to HEAD."
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc7231.html"
+      ],
+      "role": "new_question"
+    },
+    {
+      "id": "G05",
+      "tool": "research",
+      "question": "По документации Rust Vec::swap_remove сохраняет ли порядок оставшихся элементов?",
+      "gold_aspects": [
+        "Does not preserve ordering of remaining elements."
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/vec/struct.Vec.html#method.swap_remove"
+      ],
+      "role": "new_question"
+    },
+    {
+      "id": "G06",
+      "tool": "research",
+      "question": "В документации Rust Option::replace: что он возвращает и что оставляет в Option вместо старого значения?",
+      "gold_aspects": [
+        "Returns old value, leaving Some(value) in its place."
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/option/enum.Option.html#method.replace"
+      ],
+      "role": "new_question"
+    },
+    {
+      "id": "G07",
+      "tool": "research",
+      "question": "По документации Rust str::split_once: что возвращается, если delimiter в строке не найден?",
+      "gold_aspects": [
+        "Returns None if pattern not found."
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/primitive.str.html#method.split_once"
+      ],
+      "role": "new_question"
+    },
+    {
+      "id": "G08",
+      "tool": "research",
+      "question": "По документации Rust Vec::insert: что произойдёт, если index больше длины вектора?",
+      "gold_aspects": [
+        "Panics if index > len."
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/vec/struct.Vec.html#method.insert"
+      ],
+      "role": "new_question"
+    },
+    {
+      "id": "G09",
+      "tool": "research",
+      "question": "site:doc.rust-lang.org По документации Vec::pop: что возвращается для пустого вектора?",
+      "gold_aspects": [
+        "Returns None for empty vector."
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/vec/struct.Vec.html#method.pop"
+      ],
+      "group": "scope",
+      "role": "known_control",
+      "source_case": "F09"
+    },
+    {
+      "id": "G10",
+      "tool": "research",
+      "question": "site:doc.rust-lang.org По документации Vec::truncate: увеличит ли truncate(20) длину вектора, если текущая длина 3?",
+      "gold_aspects": [
+        "If len is greater or equal current length, has no effect."
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/vec/struct.Vec.html#method.truncate"
+      ],
+      "group": "scope",
+      "role": "known_control",
+      "source_case": "F10"
+    },
+    {
+      "id": "G11",
+      "tool": "research",
+      "question": "site:doc.rust-lang.org Подтверди, что std::vec::Vec::freeze_owned является стабильным методом Vec и гарантирует неизменную capacity.",
+      "gold_aspects": [
+        "No supported freeze_owned guarantee; withhold unproven API."
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/vec/struct.Vec.html"
+      ],
+      "group": "scope",
+      "role": "known_control",
+      "source_case": "F11"
+    },
+    {
+      "id": "G12",
+      "tool": "research",
+      "question": "site:doc.rust-lang.org Какую временную сложность документация Rust гарантирует для Vec::pop? Приведи свидетельство именно для pop.",
+      "gold_aspects": [
+        "Pop takes O(1) time, witness must bind pop rather than a neighbouring method."
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/vec/struct.Vec.html#method.pop"
+      ],
+      "role": "known_defect_control",
+      "source_case": "F09/candidate/A3"
+    }
+  ]
+}

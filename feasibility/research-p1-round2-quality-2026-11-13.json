@@ -1,0 +1,684 @@
+{
+  "schema": "research-p1-round2-quality-v1",
+  "independent_reviewer": "/root/independent_acceptance",
+  "components_not_pooled": true,
+  "quality": {
+    "baseline-quality": {
+      "schema": "independent-research-p1-round2-quality-v1",
+      "snapshot": "9b7dc17",
+      "reviewer": "independent_acceptance subagent",
+      "status": "baseline_complete_before_candidate_inference",
+      "policy": "same strict own-returned-witness support asV1; concrete result question requires an explicit corresponding concrete answer and proper general-rule evidence for inference",
+      "interpretations": [
+        "J01 A2/A3 cite only car/bike instances; general rule exists in another claim but not their own evidence.",
+        "J03 A3 usesfoofooexample forabcxyzxyz; genericA1/A2 do not explicitly answer both requested concrete expression results.",
+        "G07 allthreeclaims add general branch or prefix/suffix semantics beyond signature+singlecfgNoneexample."
+      ],
+      "summary": {
+        "questions": 12,
+        "conditions": 18,
+        "supported_conditions": 5,
+        "complete_questions": 3,
+        "false_claim_ids": [],
+        "unknown_as_cited_ids": [
+          "J01/A2",
+          "J01/A3",
+          "J03/A3",
+          "G07/A1",
+          "G07/A2",
+          "G07/A3"
+        ]
+      },
+      "cases": [
+        {
+          "id": "J01",
+          "arm": "baseline",
+          "covered_conditions": [
+            false,
+            false
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [
+            "A2",
+            "A3"
+          ],
+          "result_sha256": "0bee7d7c02feae32fb5df0fef94eeb28eb6dfc434dc15e896db3251ade28acce",
+          "claims": [
+            {
+              "id": "A1",
+              "text": "Option::unwrap_or возвращает содержащееся значение Some либо предоставленное значение по умолчанию.",
+              "kind": "fact",
+              "truth": "true",
+              "witness_support": "supported"
+            },
+            {
+              "id": "A2",
+              "text": "Для Some(7) при default=9 unwrap_or вернёт 7.",
+              "kind": "inference",
+              "truth": "true",
+              "witness_support": "unknown"
+            },
+            {
+              "id": "A3",
+              "text": "Для None при default=9 unwrap_or вернёт 9.",
+              "kind": "inference",
+              "truth": "true",
+              "witness_support": "unknown"
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "id": "J02",
+          "arm": "baseline",
+          "covered_conditions": [
+            true,
+            true
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [],
+          "result_sha256": "522be258ffdff012a166f6a7a3cb8237eeeca1da6b109fcc46e0d026bc403bb1",
+          "claims": [
+            {
+              "id": "A1",
+              "text": "Vec::clear очищает вектор, удаляя все значения.",
+              "kind": "fact",
+              "truth": "true",
+              "witness_support": "supported"
+            },
+            {
+              "id": "A2",
+              "text": "Vec::clear не влияет на выделенную ёмкость вектора.",
+              "kind": "fact",
+              "truth": "true",
+              "witness_support": "supported"
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "id": "J03",
+          "arm": "baseline",
+          "covered_conditions": [
+            false,
+            false
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [
+            "A3"
+          ],
+          "result_sha256": "1128b3655865cc8d9474fce4b12c9ff35a4b1c3cfbc5702a34edcc943c034d78",
+          "claims": [
+            {
+              "id": "A1",
+              "text": "При совпадении суффикса strip_suffix возвращает подстроку до суффикса, обёрнутую в Some.",
+              "kind": "fact",
+              "truth": "true",
+              "witness_support": "supported"
+            },
+            {
+              "id": "A2",
+              "text": "Если строка не заканчивается суффиксом, strip_suffix возвращает None.",
+              "kind": "fact",
+              "truth": "true",
+              "witness_support": "supported"
+            },
+            {
+              "id": "A3",
+              "text": "Для входных данных из вопроса: Some(abcxyz).",
+              "kind": "inference",
+              "truth": "true",
+              "witness_support": "unknown"
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "id": "J04",
+          "arm": "baseline",
+          "covered_conditions": [
+            false
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [],
+          "result_sha256": "7233da8fece371f1c57c8b0a286833ccb6fcdf07f42b11d5c6fda53778edcd54",
+          "claims": [],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "id": "J05",
+          "arm": "baseline",
+          "covered_conditions": [
+            false
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [],
+          "result_sha256": "4a21ab44bee9e5ce80328d788fc65f81cd1cbe334ab0289481d897c5bb006ab9",
+          "claims": [],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "id": "J06",
+          "arm": "baseline",
+          "covered_conditions": [
+            true
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [],
+          "result_sha256": "3c02ee75821ea03c92088cad94d3e6e7002aa1299157eaef8ca62f9c06522ab6",
+          "claims": [
+            {
+              "id": "A1",
+              "text": "RFC 8259: This specification allows implementations to set limits on the range and precision of numbers accepted.",
+              "kind": "fact",
+              "truth": "true",
+              "witness_support": "supported"
+            },
+            {
+              "id": "A2",
+              "text": "RFC 8259: An implementation may set limits on the range and precision of numbers.",
+              "kind": "fact",
+              "truth": "true",
+              "witness_support": "supported"
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "id": "G07",
+          "arm": "baseline",
+          "covered_conditions": [
+            false
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [
+            "A1",
+            "A2",
+            "A3"
+          ],
+          "result_sha256": "d4020407802b8679f72904a13be0ec90cf2eef28bde72ee2eee685c079294134",
+          "claims": [
+            {
+              "id": "A1",
+              "text": "Если разделитель в строке не найден, split_once возвращает None (пример: split_once('=') для строки без '=').",
+              "kind": "fact",
+              "truth": "true",
+              "witness_support": "unknown"
+            },
+            {
+              "id": "A2",
+              "text": "str::split_once возвращает Option из двух строковых срезов: префикса до разделителя и суффикса после него.",
+              "kind": "fact",
+              "truth": "true",
+              "witness_support": "unknown"
+            },
+            {
+              "id": "A3",
+              "text": "Если разделитель в строке не найден, split_once возвращает None (пример: split_once('=') для строки cfg даёт None).",
+              "kind": "fact",
+              "truth": "true",
+              "witness_support": "unknown"
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "id": "G08",
+          "arm": "baseline",
+          "covered_conditions": [
+            false
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [],
+          "result_sha256": "f41c2aff32303fcb78a066dad7ae2564fbbf66eead062d7d8b3f79afbaa8dc9e",
+          "claims": [],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "id": "G09",
+          "arm": "baseline",
+          "covered_conditions": [
+            false
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [],
+          "result_sha256": "5d2b8f5e02f6fdcc2d3b3e5e1496eaa126d50162049b2faeae222a7559545d82",
+          "claims": [],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "id": "I03",
+          "arm": "baseline",
+          "covered_conditions": [
+            true,
+            true
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [],
+          "result_sha256": "cf47d272fdf1a7f1b4032361eecab4f4137adfa21ec1939c919508783d08eadb",
+          "claims": [
+            {
+              "id": "A1",
+              "text": "Если len больше или равна текущей длине вектора, truncate не оказывает эффекта.",
+              "kind": "fact",
+              "truth": "true",
+              "witness_support": "supported"
+            },
+            {
+              "id": "A2",
+              "text": "truncate не влияет на выделенную ёмкость (capacity) вектора.",
+              "kind": "fact",
+              "truth": "true",
+              "witness_support": "supported"
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "id": "F02",
+          "arm": "baseline",
+          "covered_conditions": [
+            false,
+            false
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [],
+          "result_sha256": "f26a8087a743231543c72667836b93ea4119d5328e110724196aebb3008cc2dd",
+          "claims": [],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "id": "F03",
+          "arm": "baseline",
+          "covered_conditions": [
+            false,
+            false
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [],
+          "result_sha256": "cd1895573204b68edcd8a25987d3112d0082738c5bb161821c3043f5c1be170b",
+          "claims": [],
+          "mechanical_quote_ranges": "verified"
+        }
+      ]
+    },
+    "candidate-quality": {
+      "schema": "independent-research-p1-round2-quality-v1",
+      "snapshot": "46f8953",
+      "reviewer": "independent_acceptance subagent",
+      "status": "candidate_semantic_review_complete",
+      "policy": "same strict own-returned-witness support asV1; concrete result question requires an explicit corresponding concrete answer and proper general-rule evidence for inference",
+      "interpretations": [
+        "J01 A2/A3 cite only car/bike instances; general rule exists in another claim but not their own evidence.",
+        "J03 A3 usesfoofooexample forabcxyzxyz; genericA1/A2 do not explicitly answer both requested concrete expression results.",
+        "G07 allthreeclaims add general branch or prefix/suffix semantics beyond signature+singlecfgNoneexample."
+      ],
+      "summary": {
+        "questions": 12,
+        "conditions": 18,
+        "supported_conditions": 12,
+        "complete_questions": 7,
+        "false_claim_ids": [],
+        "unknown_as_cited_ids": [
+          "J01/A2"
+        ],
+        "new_unknown_as_cited_ids": [],
+        "semantic_matches": {
+          "J01/A2": [
+            "baseline J01/A2",
+            "baseline J01/A3"
+          ]
+        },
+        "lost_supported_conditions": [],
+        "paired_no_new_error_no_loss_gate": "passed within observed cohort",
+        "product_acceptance": "NOT PASSED: residual unknown J01/A2 and incomplete G07/G08/F02/J04 remain; exact task criteria/workflow separately reviewed"
+      },
+      "cases": [
+        {
+          "id": "J01",
+          "arm": "candidate",
+          "covered_conditions": [
+            false,
+            false
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [
+            "A2"
+          ],
+          "result_sha256": "412f088fdde1f222c6773cf5b3057f3b6e3a5e063440b8531af0cc4a5d439ab3",
+          "claims": [
+            {
+              "id": "A1",
+              "text": "Option::unwrap_or возвращает содержащееся значение Some либо предоставленное значение по умолчанию.",
+              "kind": "fact",
+              "truth": "true",
+              "witness_support": "supported"
+            },
+            {
+              "id": "A2",
+              "text": "Для Some(7) при default=9 unwrap_or вернёт 7; для None при default=9 вернёт 9.",
+              "kind": "inference",
+              "truth": "true",
+              "witness_support": "unknown"
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "id": "J02",
+          "arm": "candidate",
+          "covered_conditions": [
+            true,
+            true
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [],
+          "result_sha256": "eb711570b5bcba0fae0b6f30d4deb990000832d7c8d22f040fb640efe60769bc",
+          "claims": [
+            {
+              "id": "A1",
+              "text": "Vec::clear удаляет все значения из вектора.",
+              "kind": "fact",
+              "truth": "true",
+              "witness_support": "supported"
+            },
+            {
+              "id": "A2",
+              "text": "Vec::clear не влияет на выделенную ёмкость (capacity) вектора.",
+              "kind": "fact",
+              "truth": "true",
+              "witness_support": "supported"
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "id": "J03",
+          "arm": "candidate",
+          "covered_conditions": [
+            true,
+            true
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [],
+          "result_sha256": "06d4e52b0fa336fcd9e4781dc36cf64df96d69fd74f9f628c3f861e0576d5256",
+          "claims": [
+            {
+              "id": "A1",
+              "text": "Для входа abcxyzxyz с суффиксом xyz результат — Some с подстрокой abcxyz (удаляется один суффикс).",
+              "kind": "inference",
+              "truth": "true",
+              "witness_support": "supported"
+            },
+            {
+              "id": "A2",
+              "text": "Для входа abc с суффиксом xyz результат — None, так как строка не оканчивается на этот суффикс.",
+              "kind": "inference",
+              "truth": "true",
+              "witness_support": "supported"
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "id": "J04",
+          "arm": "candidate",
+          "covered_conditions": [
+            false
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [],
+          "result_sha256": "13290ccaff9e844faae57cf999aa6c3efe1e9e56361dd083d3c53181b47473aa",
+          "claims": [],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "id": "J05",
+          "arm": "candidate",
+          "covered_conditions": [
+            true
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [],
+          "result_sha256": "6160dc711d014044fc682875aa25e88191a3c28962c07da7bf2c48b4f50bc612",
+          "claims": [
+            {
+              "id": "A1",
+              "text": "RFC 8259: A JSON parser MUST accept all texts that conform to the JSON grammar.",
+              "kind": "fact",
+              "truth": "true",
+              "witness_support": "supported"
+            },
+            {
+              "id": "A2",
+              "text": "RFC 8259: A JSON parser MAY accept non-JSON forms or extensions.",
+              "kind": "fact",
+              "truth": "true",
+              "witness_support": "supported"
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "id": "J06",
+          "arm": "candidate",
+          "covered_conditions": [
+            true
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [],
+          "result_sha256": "a812286d712502730c9f6dbc6d3c70cb27bb29abb69c37eecb6ba0d10024f7a4",
+          "claims": [
+            {
+              "id": "A1",
+              "text": "RFC 8259: This specification allows implementations to set limits on the range and precision of numbers accepted.",
+              "kind": "fact",
+              "truth": "true",
+              "witness_support": "supported"
+            },
+            {
+              "id": "A2",
+              "text": "RFC 8259: An implementation may set limits on the range and precision of numbers.",
+              "kind": "fact",
+              "truth": "true",
+              "witness_support": "supported"
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "id": "G07",
+          "arm": "candidate",
+          "covered_conditions": [
+            false
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [],
+          "result_sha256": "6c82db24ab989b30c8cfd93b76895bd41e3d582de17b327a9373d47fb9b79e89",
+          "claims": [],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "id": "G08",
+          "arm": "candidate",
+          "covered_conditions": [
+            false
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [],
+          "result_sha256": "8cd792cf32f2125f535746ea3ba957ba3806bb6d5636be8e520b971d64888726",
+          "claims": [],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "id": "G09",
+          "arm": "candidate",
+          "covered_conditions": [
+            true
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [],
+          "result_sha256": "f37a2cd65cc11e4c4ac17e640513d202a32035dd33c6cecd81bdd059b0f0e58d",
+          "claims": [
+            {
+              "id": "A1",
+              "text": "Vec::pop удаляет последний элемент и возвращает его, либо None, если вектор пуст.",
+              "kind": "fact",
+              "truth": "true",
+              "witness_support": "supported"
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "id": "I03",
+          "arm": "candidate",
+          "covered_conditions": [
+            true,
+            true
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [],
+          "result_sha256": "5c0ef4f074b020331ee81d5c75b641a1c3123cfe67b6af3298da10d59ff3e5e5",
+          "claims": [
+            {
+              "id": "A1",
+              "text": "Если len больше или равна текущей длине вектора, Vec::truncate не оказывает эффекта.",
+              "kind": "fact",
+              "truth": "true",
+              "witness_support": "supported"
+            },
+            {
+              "id": "A2",
+              "text": "Vec::truncate не влияет на выделенную ёмкость (capacity) вектора.",
+              "kind": "fact",
+              "truth": "true",
+              "witness_support": "supported"
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "id": "F02",
+          "arm": "candidate",
+          "covered_conditions": [
+            true,
+            false
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [],
+          "result_sha256": "5a1c376c6d678ac2e2fd844e1e78003ff9831b540cf3c85fbe96de9f271e7c35",
+          "claims": [
+            {
+              "id": "A1",
+              "text": "RFC 9110: All 1xx (Informational), 204 (No Content), and 304 (Not Modified) responses do not include content.",
+              "kind": "fact",
+              "truth": "true",
+              "witness_support": "supported"
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "id": "F03",
+          "arm": "candidate",
+          "covered_conditions": [
+            true,
+            true
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [],
+          "result_sha256": "0f29bb3133a601d71cd11c7e72e29fcea7e6a5dfdbdbb3b7f8a7ab4305c5628b",
+          "claims": [
+            {
+              "id": "A1",
+              "text": "RFC 9111: The no-store response directive indicates that a cache MUST NOT store any part of either the immediate request or the response and MUST NOT use the response to satisfy any other request.",
+              "kind": "fact",
+              "truth": "true",
+              "witness_support": "supported"
+            },
+            {
+              "id": "A2",
+              "text": "RFC 9111: This directive applies to both private and shared caches.",
+              "kind": "fact",
+              "truth": "true",
+              "witness_support": "supported"
+            },
+            {
+              "id": "A3",
+              "text": "RFC 9111: Note that the must-understand cache directive overrides no-store in certain circumstances; see Section 5.2.2.3.",
+              "kind": "fact",
+              "truth": "true",
+              "witness_support": "supported"
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        }
+      ]
+    },
+    "harness-quality": {
+      "reviewer": "independent_acceptance subagent",
+      "snapshot_baseline": "9b7dc17",
+      "snapshot_candidate": "46f8953",
+      "cases": [
+        {
+          "arm": "baseline",
+          "id": "H01",
+          "covered_conditions": [
+            true
+          ],
+          "false_claims": [],
+          "unknown_as_cited": [],
+          "kind_classification": "correct; H02 concrete outputs inference with explicit question-input substitution",
+          "mechanical_quote_ranges": "verified",
+          "result_sha256": "51a484860f83b5b339444440abf55eb6bfba3685472631cee3fcf89be93e9737"
+        },
+        {
+          "arm": "baseline",
+          "id": "H02",
+          "covered_conditions": [
+            true,
+            true,
+            true
+          ],
+          "false_claims": [],
+          "unknown_as_cited": [],
+          "kind_classification": "correct; H02 concrete outputs inference with explicit question-input substitution",
+          "mechanical_quote_ranges": "verified",
+          "result_sha256": "b71aab48bc81111c315f864be9e3e489f016810469602ea645b1dd1815e2e490"
+        },
+        {
+          "arm": "candidate",
+          "id": "H01",
+          "covered_conditions": [
+            true
+          ],
+          "false_claims": [],
+          "unknown_as_cited": [],
+          "kind_classification": "correct; H02 concrete outputs inference with explicit question-input substitution",
+          "mechanical_quote_ranges": "verified",
+          "result_sha256": "7002aa0800c511f912ac4d365b79a69dbddfd01c2420df12b6a90746ebb74add"
+        },
+        {
+          "arm": "candidate",
+          "id": "H02",
+          "covered_conditions": [
+            true,
+            true,
+            true
+          ],
+          "false_claims": [],
+          "unknown_as_cited": [],
+          "kind_classification": "correct; H02 concrete outputs inference with explicit question-input substitution",
+          "mechanical_quote_ranges": "verified",
+          "result_sha256": "dfe314b80b5b158ebcbdd8b1d4639e718544bf5bb79aad99f09d426c3e0849c4"
+        }
+      ],
+      "summary": "H01 1/1→1/1;H02 3/3→3/3; no false/unknown/loss; correct inference labels",
+      "limitations": [
+        "Separate known-task Harness cohort, not fresh question qualification.",
+        "Outer exact tool-payload mechanics and cost counted by root collection."
+      ]
+    }
+  }
+}

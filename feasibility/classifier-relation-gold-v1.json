@@ -1,0 +1,2001 @@
+{
+  "protocol": {
+    "author": "single author, blinded to baseline/fixed predicted labels; not independent acceptance",
+    "freeze": "queries fixed before implementation, source gold before prediction inspection (not before inference); snapshots from sealed trials+runtime union and12audit pages",
+    "scope": "known relevant retrieved sources, NOT universal web recall; null=unjudged; unjudged direct separately reported",
+    "small_extraction": "<500chars or max100000 limit without positive witness remains unjudged rather than assumed negative",
+    "constraints": "explicit relation helps query including negative answer; shared Git common diff options count as relevant; partial topic, API signatures, neighbor API rules do not",
+    "query_controls": "s06 failure-order versus load-order ambiguity; s07 If-Match versus If-None-Match; s09 paint containment versus generic clipping",
+    "inputs_isolated": "gold source audits are not passed to branches; URL snapshots reached only through each branch normal budgeted decisions"
+  },
+  "cases": [
+    {
+      "id": "s01",
+      "query": "git diff --exit-code --quiet exit status differences",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://antigravity.google/docs/cli/commands/diff/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://www.atlassian.com/git/tutorials/saving-changes/git-diff",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://chezmoi.io/user-guide/tools/diff/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://doc.dvc.org/command-reference/exp/diff",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://docs.sentry.io/cli/snapshots/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://gist.github.com/depau/53fec21f3d07221a5ce8814c107cc170",
+          "grade": 1,
+          "basis": "captured full extracted snapshot does not demonstrate all required relations; source may still help a partial topic",
+          "support": [],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/6b4c343c828d3c64c85253c4f17e0dec90ca532b6ef4124fedc1627233773d28.json",
+          "text_hash": "a4eec080e14a2e3a6fdf21d575431dfa99f3acc522206b1fd93135bd30e00f9c",
+          "normalized_text_hash": "a24aa4905d15f47d9725341a7243c1040ef3bf00db852e36ae9717f229f3c05e",
+          "snapshot_chars": 11641
+        },
+        {
+          "id": "C007",
+          "url": "https://git-scm.com/docs/git-diff",
+          "grade": 2,
+          "basis": "direct concrete help for requested relationship in blinded captured source; full answer/tutorial not required",
+          "support": [
+            {
+              "quote": "--exit-code Make the program exit with codes similar to diff(1). That is, it exits with 1 if there were differences and",
+              "start": 24086,
+              "end": 24205
+            },
+            {
+              "quote": "--quiet Disable all output of the program. Implies --exit-code. Disables execution of external diff helpers whose exit",
+              "start": 24230,
+              "end": 24348
+            }
+          ],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/49c19fcf7136c4b343190f42ed030e0a4d9c3fd17410e2887bd4d2e5c7e36b42.json",
+          "text_hash": "33fcb6d0343bcb239ee427327c85fc463f6da10cfaa6c272639a8c7eb10806b5",
+          "normalized_text_hash": "412a825acbc94985865b17d157fa3b92a0db26dd80b2e1303badbd879d2cc49e",
+          "snapshot_chars": 28402
+        },
+        {
+          "id": "C008",
+          "url": "https://www.git-scm.com/docs/git-diff-index/2.41.0",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://github.com/drush-ops/drush/issues/6162",
+          "grade": 1,
+          "basis": "captured full extracted snapshot does not demonstrate all required relations; source may still help a partial topic",
+          "support": [],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/c4c26add388046b02d7b8e6e82ee32391d4eb2de6ca6e6d9dfe4175908303873.json",
+          "text_hash": "ff019c7154e94a79526588889f98f1f23f97fc3224dc2e98e855fd57ffd1d262",
+          "normalized_text_hash": "33e80e9c1b926d51cc56e359528da9aa491a932c4e9fd31d130d409798cb1b9a",
+          "snapshot_chars": 5974
+        },
+        {
+          "id": "C010",
+          "url": "https://github.com/pfrederiksen/configdiff",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://www.gnu.org/software/diffutils/manual/diffutils.html",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://initialcommit.com/blog/git-diff",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://www.kernel.org/pub/software/scm/git/docs/git-diff-index.html",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://linux.die.net/man/1/git-diff-index",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "explicit unrelated technology/product/navigation in captured title/snippet",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://privacyscrubber.com/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://www.root.cz/man/1/git-diff-files/",
+          "grade": 2,
+          "basis": "direct concrete help for requested relationship in blinded captured source; full answer/tutorial not required",
+          "support": [
+            {
+              "quote": "--quiet Disable all output of the program. Implies --exit-code",
+              "start": 4966,
+              "end": 5028
+            },
+            {
+              "quote": "--exit-code Make the program exit with codes similar to diff(1). T",
+              "start": 4822,
+              "end": 4888
+            }
+          ],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/3d923127c0af54a90ed080c878ef991ca574049ce0f0f51f2ef38504e08f8084.json",
+          "text_hash": "1392c2cac4710b14018d636d91cf6d9c61537c921e31ac408c41da27005d5827",
+          "normalized_text_hash": "649672df50822644fefe7e846505a9ec8acdd42d7514511bfd8bd76c0713b71f",
+          "snapshot_chars": 13190
+        },
+        {
+          "id": "C018",
+          "url": "https://schacon.github.io/git/git-diff.html",
+          "grade": 2,
+          "basis": "direct concrete help for requested relationship in blinded captured source; full answer/tutorial not required",
+          "support": [
+            {
+              "quote": "--exit-code Make the program exit with codes similar to diff(1). That is, it exits with 1 if there were differences and",
+              "start": 15292,
+              "end": 15411
+            },
+            {
+              "quote": "--quiet Disable all output of the program. Implies --exit-code. --ext-diff Allow an external diff helper to be execute",
+              "start": 15436,
+              "end": 15554
+            }
+          ],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/954fa222b4116384fc427157de99d22cab1bf7b0bb89128cc69f91b0c63edcd0.json",
+          "text_hash": "571cb5f543e658c686b27f1adda624d873a09459a9a7ca68ebe57c5399ba6a53",
+          "normalized_text_hash": "2870b96eb433fba25fee5cbaf4d30ccca49b68d9540df440ac721717ccc9e8b5",
+          "snapshot_chars": 27998
+        },
+        {
+          "id": "C019",
+          "url": "https://superuser.com/questions/1274906/how-to-tell-if-there-are-any-working-copy-changes-in-git",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C020",
+          "url": "https://unix.stackexchange.com/questions/155046/determine-if-git-working-directory-is-clean-from-a-script",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "query": "Python contextlib.suppress BaseExceptionGroup Python 3.12 behavior",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://anyio.readthedocs.io/en/stable/versionhistory.html",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://bugs.python.org/issue33146",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://devguide.python.org/versions/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://discuss.python.org/t/support-async-contextmanagers-in-contextlib-suppress/103954",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://docs.cloud.google.com/bigquery/docs/user-defined-functions-python",
+          "grade": 0,
+          "basis": "explicit unrelated technology/product/navigation in captured title/snippet",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://docs.python.org/id/3/",
+          "grade": 1,
+          "basis": "captured full extracted snapshot does not demonstrate all required relations; source may still help a partial topic",
+          "support": [],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/8ba91b3f27c25ba8082d2bb38bf60cd345068e0de03b138d9db65b8ac6eebf9a.json",
+          "text_hash": "f325405149400fdc90a918042f52cd34afb49c005b973a89da2a167bd93ed9ce",
+          "normalized_text_hash": "f25f71e6b703a62f245f43863a43bb3914ad54165ae77028bbf66fe7ae208fe7",
+          "snapshot_chars": 1481
+        },
+        {
+          "id": "C007",
+          "url": "https://github.com/python/cpython/blob/main/Doc/library/contextlib.rst?plain=1",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": [],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/d567dc238703521360ceed4adf778a3ec47b1de0dd0df9867f954f0873a46e6f.json",
+          "text_hash": "bba79654d6ddaaa6a95759355bf7ebf961db7d5271b2fdefa39f9698f7e2715f",
+          "normalized_text_hash": "cad80fa23cf6834a4a87bc650d1bb63630b924931c250b712574e887f43824c9",
+          "snapshot_chars": 160
+        },
+        {
+          "id": "C008",
+          "url": "https://github.com/python/cpython/issues/119287",
+          "grade": 2,
+          "basis": "direct concrete help for requested relationship in blinded captured source; full answer/tutorial not required",
+          "support": [
+            {
+              "quote": "you need to implement the derive() method, so that other code knows how to create a new exceptio",
+              "start": 1707,
+              "end": 1803
+            },
+            {
+              "quote": "ExceptionGroups are supported as of python 3.12, but not that the derive method is required for it to ",
+              "start": 2266,
+              "end": 2368
+            }
+          ],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/8060b88d9fb2320e32a4947c01cf7b4bf6b87439355b024c77e7313cbd3e717e.json",
+          "text_hash": "c0723fef2d2040b21ed7854513056bb0a1c3aa3f29bdbe894064d9f520027ac4",
+          "normalized_text_hash": "b5322b7268d9f66caf82ac35290a17387e9ab0005bf5efbef7ad9fe784d4e13c",
+          "snapshot_chars": 4008
+        },
+        {
+          "id": "C009",
+          "url": "https://pypi.org/project/exceptiongroup/",
+          "grade": 1,
+          "basis": "captured full extracted snapshot does not demonstrate all required relations; source may still help a partial topic",
+          "support": [],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/4fec96983d66eab14ec7598525a8b7e044a43126496ad352f541d4786ed95195.json",
+          "text_hash": "e28ae4e9265575666a7d1063faf606a445b3ccf9d21d96a4af1ac22e6e979de1",
+          "normalized_text_hash": "11e7b4ac187f20a1837a6974824206348b22639f11653c2e3356c4894a32ca91",
+          "snapshot_chars": 14572
+        },
+        {
+          "id": "C010",
+          "url": "https://www.python.org/getit/",
+          "grade": 0,
+          "basis": "explicit unrelated technology/product/navigation in captured title/snippet",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://pythoncomplexity.com/builtins/exceptions/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://realpython.com/ref/stdlib/contextlib/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://www.scribd.com/document/311176922/Mastering-Python-Sample-Chapter",
+          "grade": 0,
+          "basis": "explicit unrelated technology/product/navigation in captured title/snippet",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://www.scribd.com/document/692253294/News",
+          "grade": 0,
+          "basis": "explicit unrelated technology/product/navigation in captured title/snippet",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "query": "PostgreSQL NULLS NOT DISTINCT unique index duplicate nulls",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://blog.naver.com/ralalife/224295372505",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://blog.naver.com/sssang97/224163680788",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://www.datacamp.com/doc/postgresql/select",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://www.depesz.com/2022/02/06/waiting-for-postgresql-15-add-unique-null-treatment-option/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": [],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/515b9808fe90bd968ca61d7df30df39ff6eb172ef7576b3f9cc25316d487e036.json",
+          "text_hash": "05f2b767eed8991716d921a24545b1b5aa959c7d38c5e46a7ad52c42c511b13a",
+          "normalized_text_hash": "05f2b767eed8991716d921a24545b1b5aa959c7d38c5e46a7ad52c42c511b13a",
+          "snapshot_chars": 23
+        },
+        {
+          "id": "C005",
+          "url": "https://docs.cloud.google.com/spanner/docs/secondary-indexes",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://duckdb.org/docs/current/sql/data_types/nulls",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://en.wikipedia.org/wiki/Null_(SQL)",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://github.com/fluentmigrator/fluentmigrator/issues/2291",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://github.com/sumit-gupta03/reconflow",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://invents.us/insights/null-trap-postgres-idempotency-locks.html",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://matjaz.it/tutorial-unique-constraint-on-null-values-in-postgresql/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://modern-sql.com/concept/null",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://ohseunghyeon.github.io/study/when-the-duplicates-are-created-on-postgreSQL-with-unique-index-by-null/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://parksangji.github.io/posts/postgresql-constraint-pitfalls/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://www.postgresdba.com/bbs/board.php?bo_table=B10&wr_id=172",
+          "grade": 2,
+          "basis": "direct concrete help for requested relationship in blinded captured source; full answer/tutorial not required",
+          "support": [
+            {
+              "quote": "CREATE TABLE y ( y TEXT , CONSTRAINT uq_y UNIQUE NULLS NOT DISTINCT (",
+              "start": 600,
+              "end": 669
+            },
+            {
+              "quote": "insert into y values(null); -- failure ERROR: duplicate key value violates unique constraint ",
+              "start": 714,
+              "end": 807
+            }
+          ],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/9eb50a23f2c2bf5d67621a9706017013bcbce28fcc385d45a0e43fd5dfaf3bdc.json",
+          "text_hash": "23b5693f5bfeeebea91ad2a45ac06b8cc785febe30159c93ff192fff30547368",
+          "normalized_text_hash": "e0a2974a3cdb9d8db49b7da232aa0151c7887eab5306de21b8d0616827c20b89",
+          "snapshot_chars": 735
+        },
+        {
+          "id": "C016",
+          "url": "https://www.postgresql.org/about/featurematrix/detail/unique-nulls-not-distinct/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://www.postgresql.org/docs/current/indexes-unique.html",
+          "grade": 2,
+          "basis": "direct concrete help for requested relationship in blinded captured source; full answer/tutorial not required",
+          "support": [
+            {
+              "quote": "By default, null values in a unique column are not considered equal, allowing multiple nulls in the column. The NULLS NOT ",
+              "start": 365,
+              "end": 487
+            },
+            {
+              "quote": "The NULLS NOT DISTINCT option modifies this and causes the index to treat nulls as equal. A multicolumn unique index will only reject cases wher",
+              "start": 473,
+              "end": 617
+            }
+          ],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/d8eda1c7ad452490c9e7df9057c6940dd99df997e99e0e637cd5dc104be0e4df.json",
+          "text_hash": "fb695a6f28a3b449d1d51e37b0cf218f1151995000f257fdb008f50cfa5c50bb",
+          "normalized_text_hash": "8a83e147a16b0aed808c850e669f58bd89c7ac74aca39a4423aa784a7152e352",
+          "snapshot_chars": 1077
+        },
+        {
+          "id": "C018",
+          "url": "https://www.sqlite.org/nulls.html",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://stackoverflow.com/questions/79825741/postgresql-sqlalchemy-index-nulls-not-distinct",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C020",
+          "url": "https://vonng.com/en/pg/sql-distinct-on/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "query": "SQLite recursive_triggers foreign key cascade PRAGMA distinction",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://www.adacore.com/devlog",
+          "grade": 0,
+          "basis": "explicit unrelated technology/product/navigation in captured title/snippet",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://blog.naver.com/junetoltol/224045743761",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://coddy.tech/docs/sqlite",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://dbconvert.com/sqlite/",
+          "grade": 0,
+          "basis": "explicit unrelated technology/product/navigation in captured title/snippet",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://docs.oracle.com/en/database/oracle/oracle-database/18/lnpls/plsql-triggers.html",
+          "grade": 0,
+          "basis": "explicit unrelated technology/product/navigation in captured title/snippet",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://gist.github.com/ughstudios/2956a03eb82fd21fcb279b1efcff5576",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://github.com/sqlite/sqlite/blob/master/src/sqliteInt.h",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": [],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/02f49e78073798bbf80f581b02c4a666ce0c0b1b457d1931e2c9188d02eaf3bf.json",
+          "text_hash": "27c303fc97b7302350abfbc09ba82427fe3322e48cefe3a097817777c0131306",
+          "normalized_text_hash": "27c303fc97b7302350abfbc09ba82427fe3322e48cefe3a097817777c0131306",
+          "snapshot_chars": 21
+        },
+        {
+          "id": "C008",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "explicit unrelated technology/product/navigation in captured title/snippet",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://sangseek.com/communities/60403",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://sqlite-utils.datasette.io/en/stable/changelog.html",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://sqlite-utils.datasette.io/en/stable/python-api.html",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://www.sqlite.org/changes.html",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://www.sqlite.org/foreignkeys.html",
+          "grade": 2,
+          "basis": "direct concrete help for requested relationship in blinded captured source; full answer/tutorial not required",
+          "support": [
+            {
+              "quote": "The PRAGMA recursive_triggers setting does not affect the operation of foreign key actions. It is not possible to disable recursive foreign key ac",
+              "start": 34248,
+              "end": 34394
+            }
+          ],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/321f3b718e6b2df0fa1ea9bdd4d16a9088801178767a262b5086da28f8551c1b.json",
+          "text_hash": "f703ad25cc5ece23e9a9c7710391a25cd6705a3aaa4a82e5c347f061b015b8f4",
+          "normalized_text_hash": "0a13673f66c3077bc5c2a6dec86811838f636a0d472c87119fe14337ba73a369",
+          "snapshot_chars": 34612
+        },
+        {
+          "id": "C014",
+          "url": "https://www.sqlite.org/keyword_index.html",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://www.sqlite.org/pragma.html",
+          "grade": 1,
+          "basis": "captured full extracted snapshot does not demonstrate all required relations; source may still help a partial topic",
+          "support": [],
+          "snapshot": "runs/classifier-relation-2026-10-30/gold-audit/s04-C015-document.json",
+          "text_hash": "fb83c7da94926eb6831f9f8704190d2fd9eb46442ce4c5864adbda80b581fe05",
+          "normalized_text_hash": "97ce03e13ec9d2d0977c4bc6d7f18a7172a00af73bf31d17a5e6b20d1d4469a2",
+          "snapshot_chars": 81423
+        },
+        {
+          "id": "C016",
+          "url": "https://www.sqlitetutorial.net/sqlite-bun/transaction/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://www.techonthenet.com/sqlite/foreign_keys/foreign_delete.php",
+          "grade": 1,
+          "basis": "captured full extracted snapshot does not demonstrate all required relations; source may still help a partial topic",
+          "support": [],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/f4c3092503a97dceed869598c239ab07ec982ca1ed99cbf2444ed3bbc2c98fec.json",
+          "text_hash": "b733bafe1a7394c2f6a6b50fb30acc6857157323523830b94fbb30664e488e97",
+          "normalized_text_hash": "a37b52fada1fe1c6b2db9a80dfd878f581074dc4d2faf467191f449811cd7332",
+          "snapshot_chars": 4988
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "query": "Docker --init PID 1 signal forwarding zombie reaping",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://ahmet.im/blog/minimal-init-process-for-containers/",
+          "grade": 2,
+          "basis": "direct concrete help for requested relationship in blinded captured source; full answer/tutorial not required",
+          "support": [
+            {
+              "quote": "PID 1 (init process) responsibilities like zombie child reaping and signal forwarding. In this article I explored pros and cons of some of t",
+              "start": 928,
+              "end": 1068
+            },
+            {
+              "quote": "with --init option, your container’s original entrypoint will be replaced by tini, and executed as its subprocess. Pros: small (written ",
+              "start": 3138,
+              "end": 3276
+            }
+          ],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/ef4a848d35daf4eb7acb691a42b0c19cc37223e93f2173a5541bb22ae1e046c0.json",
+          "text_hash": "a92f454d1b13c1723a9a17b196486b69382019fb48c3fd1b8aed308a1d23eba7",
+          "normalized_text_hash": "bde64e1e14fc0e3cb236690d500ec618ecba9c5a0e63227af9752737309d65ae",
+          "snapshot_chars": 5193
+        },
+        {
+          "id": "C002",
+          "url": "https://blog.naver.com/japkey/223867926911",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://blog.phusion.nl/docker-and-the-pid-1-zombie-reaping-problem/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://crates.io/crates/pid1",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://docs.docker.com/reference/cli/docker/container/run/",
+          "grade": 2,
+          "basis": "direct concrete help for requested relationship in blinded captured source; full answer/tutorial not required",
+          "support": [
+            {
+              "quote": "--init API 1.25+ Run an init inside the container that forwards signals and reaps processes -i, --interactive Keep STDIN open even if not attached",
+              "start": 3472,
+              "end": 3618
+            },
+            {
+              "quote": "You can use the --init flag to indicate that an init process should be used as the PID 1 in the container. Specifying an init process ensures t",
+              "start": 37691,
+              "end": 37834
+            }
+          ],
+          "snapshot": "runs/classifier-relation-2026-10-30/gold-audit/s05-C005-document.json",
+          "text_hash": "6c0a38b94b5f730006fcb80f93b92ff3698cbc4797d7297ce2287bfc3a96b715",
+          "normalized_text_hash": "0deb019af467be9ed71e78d2fcb7609900e238cb22ae8c5ab4e05c8e477c6f9c",
+          "snapshot_chars": 59289
+        },
+        {
+          "id": "C006",
+          "url": "https://docs.docker.com/reference/cli/docker/init",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://engineeringblog.yelp.com/2016/01/dumb-init-an-init-for-docker.html",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://gist.github.com/npodonnell/0c65290e126b806b8543938986df6a81",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://github.com/cboxdk/init",
+          "grade": 1,
+          "basis": "captured full extracted snapshot does not demonstrate all required relations; source may still help a partial topic",
+          "support": [],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/b755c6cf48bd36f3b1872c4febc5f262f3d8aa9dd0d6351d36c283fc1630b519.json",
+          "text_hash": "26f62420e0eba7aba21623042dc8b1c0ed50b76861d03239b0c8d51b3e7fab0b",
+          "normalized_text_hash": "24dcd2b59c6d3e6babbc1a44f5ec0625ede39fe4b13b7834cb7dac4da5f26ab0",
+          "snapshot_chars": 3305
+        },
+        {
+          "id": "C010",
+          "url": "https://github.com/cboxdk/init/issues",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": [],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/821f3e3c9624fa3699eba121cc00ae720bfdefca6072c53021398f6cde4af33b.json",
+          "text_hash": "b5696ca92dc43e2ed3ab07ac61e463f78b42c36a20de742b2595d6651725776d",
+          "normalized_text_hash": "7a3a460ca04f9575dbd7282eb975a721d75bded24e08a5036fb5ba74b8840b37",
+          "snapshot_chars": 182
+        },
+        {
+          "id": "C011",
+          "url": "https://github.com/emrul/container-init",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://github.com/mviereck/x11docker/wiki/Init-systems",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://github.com/topics/docker-container?o=desc&s=updated",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://groups.google.com/g/firebird-general/c/5gPXXp7m1aM",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://www.hahwul.com/blog/2022/docker-dumb-init/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://hermes-agent.nousresearch.com/docs/user-guide/docker",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://petermalmgren.com/signal-handling-docker/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://sourceforge.net/directory/init/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://velog.io/@songtofu/Docker%EC%99%80-PID-1%EC%A2%80%EB%B9%84-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "query": "Rust AtomicUsize compare_exchange failure ordering Release AcqRel panic",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://atomicorp.com/mssp-enablement/",
+          "grade": 0,
+          "basis": "explicit unrelated technology/product/navigation in captured title/snippet",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://blog.m-ou.se/rust-cpp-concurrency/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://blog.ymgyt.io/entry/rust_atomics_and_locks/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://chrisdoescoding.com/kb/rust/parallelism.html",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://doc.rust-lang.org/nightly/src/core/sync/atomic.rs.html",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://doc.rust-lang.org/nightly/std/sync/atomic/type.AtomicUsize.html",
+          "grade": 1,
+          "basis": "captured full extracted snapshot does not demonstrate all required relations; source may still help a partial topic",
+          "support": [],
+          "snapshot": "runs/classifier-relation-2026-10-30/gold-audit-extra/s06-C006-document.json",
+          "text_hash": "18f0e94cedcb339bd2a584aa437ce0f9d54ae7cc1b551f195f713e7716bb3020",
+          "normalized_text_hash": "4ab361a91a6683d688d1ec34c0a398798b97698ad01c85d6711b7401fd2ed963",
+          "snapshot_chars": 704
+        },
+        {
+          "id": "C007",
+          "url": "https://doc.rust-lang.org/src/core/sync/atomic.rs.html",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://doc.servo.org/src/crossbeam_epoch/atomic.rs.html",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://github.com/swiftlang/swift-evolution/blob/main/proposals/0410-atomics.md",
+          "grade": 0,
+          "basis": "explicit unrelated technology/product/navigation in captured title/snippet",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://google.github.io/comprehensive-rust/glossary.html",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://hackmd.io/@WilsonKuo/By5pJd8qa",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://leapcell.io/blog/de/rusts-atomics-explained-the-indivisibles-of-concurrency",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://leon.schuermann.io/blog/2024-08-07_rust-mutex-atomics-unsafecell_spooky-action-at-a-distance.html",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://mozilla.github.io/uniffi-rs/0.27/internals/api/uniffi/deps/static_assertions/_core/sync/atomic/struct.AtomicUsize.html",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://okky.kr/articles/1530657",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://pitdicker.github.io/Writing-a-seqlock-in-Rust/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://stablestate.cc/docs/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/std/sync/atomic/struct.AtomicI8.html",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://wikidocs.net/blog/@laniakea/2370/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C020",
+          "url": "https://yeet.cx/blog/lock-free-rust",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "query": "HTTP If-Match weak ETag strong comparison wildcard existing resource",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://build.fhir.org/http.html",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://crates.io/crates/baukit-http",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://devdoc.net/web/developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag.html",
+          "grade": 1,
+          "basis": "captured full extracted snapshot does not demonstrate all required relations; source may still help a partial topic",
+          "support": [],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/97e6ea1e9ccb6755335d64feee8d32aefe6063cdb7f27e03b81eacb1ff2b67fd.json",
+          "text_hash": "aeff9cfc30db2deac313f4d14841528656459834846bab80b6d681da8321fbfd",
+          "normalized_text_hash": "1b92716d31f2e935fef2e2562f2b8ad43b261edd9eade7e8748c53feac932cca",
+          "snapshot_chars": 7527
+        },
+        {
+          "id": "C004",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/If-None-Match",
+          "grade": 1,
+          "basis": "captured full extracted snapshot does not demonstrate all required relations; source may still help a partial topic",
+          "support": [],
+          "snapshot": "runs/classifier-relation-2026-10-30/gold-audit-extra/s07-C004-document.json",
+          "text_hash": "5bad11e97fcfc65008424aa208c0f1e2456425d74fc7633ec367cf6d9b546dc4",
+          "normalized_text_hash": "22a7bff940f62fab3aa4674855829ca4dd80c5bf11325bffc4bcdc506e165335",
+          "snapshot_chars": 3066
+        },
+        {
+          "id": "C005",
+          "url": "https://docs.oasis-open.org/odata/odata/v4.01/cs01/part1-protocol/odata-v4.01-cs01-part1-protocol.html",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://en.wikipedia.org/wiki/HTTP_ETag",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://github.com/kennethreitz/responder/blob/main/CHANGELOG.md",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://github.com/microsoft/api-guidelines/blob/vNext/azure/Guidelines.md",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://grokipedia.com/page/HTTP_ETag",
+          "grade": 1,
+          "basis": "captured full extracted snapshot does not demonstrate all required relations; source may still help a partial topic",
+          "support": [],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/d08e284cd6145ae1f5748f5f7f9dd16ed47c099401b17a24c9446eb3f450d361.json",
+          "text_hash": "873db8f8d5430819d6f3d434bb989a8430cc1c1c5a96fc828a6f7ca91a946b0e",
+          "normalized_text_hash": "fa0deba8ebac037dbf0b1ac62af8ea5a3ddea747128ac6c059c05d16a07096c6",
+          "snapshot_chars": 54087
+        },
+        {
+          "id": "C010",
+          "url": "https://guides.rubyonrails.org/caching_with_rails.html",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://hl7.org/fhir/http.html",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://http.dev/if-none-match",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://httpwg.org/specs/rfc7230.html",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://httpwg.org/specs/rfc7232.html",
+          "grade": 2,
+          "basis": "direct concrete help for requested relationship in blinded captured source; full answer/tutorial not required",
+          "support": [
+            {
+              "quote": "An origin server MUST use the strong comparison function when comparing entity-tags for If-Match (Section 2.3.2), since the client intends this precond",
+              "start": 21551,
+              "end": 21702
+            },
+            {
+              "quote": "If the field-value is \"*\", the condition is false if the origin server does not have a current representation for the target resource. If the field-value is a list ",
+              "start": 22451,
+              "end": 22615
+            }
+          ],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/73dc15ce35ffc42f87548a961ab31d3541557bf894cf18f3a8e2ba3e34408069.json",
+          "text_hash": "19e004c1d276bd03e0878f3370d162a7105b645a6d9b9b0d8707c7dc7a2b55c4",
+          "normalized_text_hash": "b83a1888e0c8cf260c9d769948559a8aca4d5ea88a5ca9efe2701e527807eea7",
+          "snapshot_chars": 45854
+        },
+        {
+          "id": "C015",
+          "url": "https://httpwg.org/specs/rfc7233.html",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://httpwg.org/specs/rfc7234.html",
+          "grade": 1,
+          "basis": "captured full extracted snapshot does not demonstrate all required relations; source may still help a partial topic",
+          "support": [],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/353dd8b25b69295de2d1e832ddf5f08e215370d7f829463e89e55c62ee6a1f07.json",
+          "text_hash": "774a4250236c14a15102374852065676c7413b8fc145806bf551584eb5683468",
+          "normalized_text_hash": "15e4c1d56b975b981b62f7c98391b9c19b02fbb4e4524d21750d9a980fe13a59",
+          "snapshot_chars": 74297
+        },
+        {
+          "id": "C017",
+          "url": "https://www.npmjs.com/package/@fluojs/http",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://pgext.cloud/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://www.truenas.com/docs/printview/scale/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C020",
+          "url": "https://www.w3.org/Protocols/rfc2616/rfc2616.html",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "query": "JavaScript Promise.all rejection cancels remaining promises behavior",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://www.aleksandrhovhannisyan.com/blog/javascript-promise-all/",
+          "grade": 2,
+          "basis": "direct concrete help for requested relationship in blinded captured source; full answer/tutorial not required",
+          "support": [
+            {
+              "quote": "Promise.all doesn’t cancel the remaining Promise callbacks when it rejects. Thus, the remaining Promise callbacks still get queued",
+              "start": 14360,
+              "end": 14492
+            }
+          ],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/01d758785e448b526c3db04d7a89fe3af55d521c11ce7050ab30bec52060dcb6.json",
+          "text_hash": "12f2705bc458c3c387a95be9b12de8627bd17fd6911527cdaa539ef3f93fdd34",
+          "normalized_text_hash": "86bc1eee337b8dd6b10abb608e19ca38785e8566225024552b934641eb375872",
+          "snapshot_chars": 19603
+        },
+        {
+          "id": "C002",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises",
+          "grade": 2,
+          "basis": "direct concrete help for requested relationship in blinded captured source; full answer/tutorial not required",
+          "support": [
+            {
+              "quote": "If one of the promises in the array rejects, Promise.all() immediately rejects the returned promise. The other operations continue to run, but their outcomes are not available via the return v",
+              "start": 14159,
+              "end": 14351
+            }
+          ],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/5ab95aa7e1b37650a06226ad287ccf63ac83a495b64683add5de9c6446483a71.json",
+          "text_hash": "49f232b9b5b5a1d815401dac62086c0261c9d8633cfff5ff14c1564ef9ba166a",
+          "normalized_text_hash": "6a992179842819730e57a46820033ed8cdd03ae11c9ffc930b018fd611774f48",
+          "snapshot_chars": 21233
+        },
+        {
+          "id": "C003",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all",
+          "grade": 2,
+          "basis": "direct concrete help for requested relationship in blinded captured source; full answer/tutorial not required",
+          "support": [
+            {
+              "quote": "Rejecting the returned promise does not cancel the remaining operations or unsubscribe the handlers attached to their promises",
+              "start": 2571,
+              "end": 2697
+            }
+          ],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/69a9968dad950c9ca4f01c9c9294158194e3394fbbb47089c5799e4c40bb5aa4.json",
+          "text_hash": "5462948ec4afedb9adb584159e3189e49307244cb80ed8b721d7f6e3656d0177",
+          "normalized_text_hash": "3685b5da1891188e0fd7f7ccdcbf7695a1f154110f5df4f3647767dfab8ddbaa",
+          "snapshot_chars": 10811
+        },
+        {
+          "id": "C004",
+          "url": "https://firebase.google.com/support/release-notes/js?authuser=0",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://www.geeksforgeeks.org/javascript/javascript-promise/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://github.com/axios/axios",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://github.com/piotar/react-promise-bridge",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://www.ietf.org/ietf-ftp/ietf-mail-archive/mobileip/2004-05.mail",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "http://javascriptissexy.com/javascript-variable-scope-and-hoisting-explained/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://www.moltbook.com/post/ceead284-12a5-4c5e-ac98-8c70d26ad6ad",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://play.google.com/store/info/name/Joyce_Meyer?id=090tyt",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://rnfirebase.io/migrating-to-v26",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://www.scribd.com/document/272450550/Mastering-JavaScript-Promises-Sample-Chapter",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://www.sitepoint.com/javascript-event-loop-explained-debugging-guide/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://www.slideshare.net/slideshow/java-script-promises/38259439",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://stackoverflow.com/questions/33445415/javascript-promises-reject-vs-throw",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://www.udacity.com/course/javascript-promises--ud898",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://www.w3.org/TR/2016/WD-html51-20160310/webappapis.html",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://www.w3schools.com/js/js_async_promises.asp",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C020",
+          "url": "https://web.dev/articles/promises",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "query": "CSS contain paint overflow clipping stacking context",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://blog.naver.com/lobkrea/224259737639",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://www.cssportal.com/css-properties/overflow.php",
+          "grade": 1,
+          "basis": "captured full extracted snapshot does not demonstrate all required relations; source may still help a partial topic",
+          "support": [],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/25e52277a9b125faa1c983436a1d6e9a29e207f9d56b82fe96d4756934896f6c.json",
+          "text_hash": "081fe3c561fba3076104c896fb18f305d4cb3606ac904181e0c9da519a7faa07",
+          "normalized_text_hash": "a1f50995c81e1abbd74cfd0e70a8747b7df17e021d33ce7877bd263dc1eed661",
+          "snapshot_chars": 5073
+        },
+        {
+          "id": "C003",
+          "url": "https://csswizardry.com/2026/04/what-is-css-containment-and-how-can-i-use-it/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://www.devdic.com/guides/css/document:5820/%EC%8A%A4%ED%83%9C%ED%82%B9-%EC%BB%A8%ED%85%8D%EC%8A%A4%ED%8A%B8(stacking-context)",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Gaps",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Masking",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Masking/Clipping",
+          "grade": 1,
+          "basis": "captured full extracted snapshot does not demonstrate all required relations; source may still help a partial topic",
+          "support": [],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/939190760456a8081b7fe967909e41aa45751d01e31951167b4fc610efe71b91.json",
+          "text_hash": "51f31066baa509ea9e1be2ae9b25a9f540336de9ada893713e85f5222d323464",
+          "normalized_text_hash": "6c79d2d944dc1c1d31e2f32b58507d1a8f65d5cf8bf3b5d1fb842a8bf2583dee",
+          "snapshot_chars": 14031
+        },
+        {
+          "id": "C008",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Overflow",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context",
+          "grade": 1,
+          "basis": "captured full extracted snapshot does not demonstrate all required relations; source may still help a partial topic",
+          "support": [],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/f73890dce2184a237d9b937d97ffe1f0ec47554bed170cf7b9148a2536e7ec7f.json",
+          "text_hash": "8ffc10946358d5ae8d33f25c5e47c815d19d6a80bff96e5dbbd5555e26896c16",
+          "normalized_text_hash": "870b94574ed5b1658237899f516c671c6fb2832bca7e15fd757746a4bc06ce19",
+          "snapshot_chars": 8936
+        },
+        {
+          "id": "C010",
+          "url": "https://docs.webkit.org/Deep%20Dive/Layout%20%26%20Rendering/DisplayTree.html",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://freefrontend.com/css-clip-path-examples/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://github.com/w3c/csswg-drafts/blob/main/css-transforms-1/Overview.bs",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://github.com/w3ctag/design-reviews/issues/579",
+          "grade": 1,
+          "basis": "captured full extracted snapshot does not demonstrate all required relations; source may still help a partial topic",
+          "support": [],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/a13e4bbb0b42509db7ea9f551fefb6acf7a7ec61e474ac7bfd5ee8eab4a022b9.json",
+          "text_hash": "2214ca7474dffa9f341efa4f6b74131acbb7ebb62266c4950664efbc08233cd0",
+          "normalized_text_hash": "dd7264fcacbd4928d2e11e7762c75d8edbaa996602df6fa21c75ec692368c66e",
+          "snapshot_chars": 9846
+        },
+        {
+          "id": "C014",
+          "url": "https://helloadmin.com/css-overflow-clip-overflow-clip-margin-patterns/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://interactivecss.com/css-stacking-context-interactive-tutorial/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://mapagam.com/frontend/css",
+          "grade": 0,
+          "basis": "explicit unrelated technology/product/navigation in captured title/snippet",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://www.smashingmagazine.com/2026/03/dropdowns-scrollable-containers-why-break-how-fix/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://www.w3.org/TR/css-overflow-3/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://www.w3.org/TR/css-transforms-2/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "query": "Linux open O_NOFOLLOW final component symbolic links earlier components",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://android.googlesource.com/kernel/common/+/618a931c/Documentation/filesystems/path-lookup.md?autodive=0%2F",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://www.businessit.cz/cz/linux-manual-open-creat-otevrete-a-pripadne-vytvorte-soubor-nebo-zarizeni.php",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://www.codethink.co.uk/articles/externally-verifying-linux/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://en.wikipedia.org/wiki/Linux_kernel_interfaces",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://feedly.com/cve/cwe/367",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://github.com/Open-Wine-Components/umu-launcher",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://github.com/dotnet/source-build/discussions/2960",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://github.com/openclaw/openclaw/releases",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://www.linkedin.com/posts/linuxsecurity_linux-wacom-hid-fix-prevents-kernel-memory-activity-7513027008906457089--bWQ",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://www.linkedin.com/posts/linuxsecurity_toctou-race-condition-vulnerability-in-linux-activity-7508527619915530241-hLlK",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://linux.die.net/man/1/explain_lca2010",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://lwn.net/Articles/899543/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://www.man7.org/linux/man-pages/man2/open.2.html",
+          "grade": 2,
+          "basis": "direct concrete help for requested relationship in blinded captured source; full answer/tutorial not required",
+          "support": [
+            {
+              "quote": "O_NOFOLLOW If the trailing component (i.e., basename) of path is a symbolic link, then the ",
+              "start": 10645,
+              "end": 10736
+            },
+            {
+              "quote": "Symbolic links in earlier components of the pathname will still be followed. (Note that the ELOOP error that can occur in this case",
+              "start": 10770,
+              "end": 10901
+            }
+          ],
+          "snapshot": "runs/classifier-relation-2026-10-30/gold-audit/s10-C013-document.json",
+          "text_hash": "cdaba7a24492e5dbfbfe97a9e3ab22c03d673b39244da9bfb980195cf3500ccf",
+          "normalized_text_hash": "95676584d7c08fc1fae7abdb213ffc3b0d9c43c3ac30959678d56b6bf064232b",
+          "snapshot_chars": 42583
+        },
+        {
+          "id": "C014",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "explicit unrelated technology/product/navigation in captured title/snippet",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://www.microsoft.com/en-us/security/blog/2022/04/26/microsoft-finds-new-elevation-of-privilege-linux-vulnerability-nimbuspwn/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://notes.io/wV2dy",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://www.redhat.com/en/topics/linux",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://registry.terraform.io/providers/blechschmidt/sysutils/latest/docs/resources/archive_extract",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://sourceforge.net/directory/?q=linux%20rolling%20release",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "query": "Python functools.cached_property Python 3.12 concurrent calls lock removed",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://blog.naver.com/nabilera1/223915648215",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://bugs.python.org/pull_request18785",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://catswhocode.com/development/python-modules-list/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://cs.python-3.com/?p=116920",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://docs.python.org/3/library/concurrency.html",
+          "grade": 1,
+          "basis": "captured full extracted snapshot does not demonstrate all required relations; source may still help a partial topic",
+          "support": [],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/b4280712d4e812c4f738d00adb8d2a3792ccb859f7584b1b5233dcbda0245efc.json",
+          "text_hash": "2be46ccaf1bedb51c24dd757b1c898a3edd3b7c581c0acd2c320bb9d261bca60",
+          "normalized_text_hash": "e9169542ef511ff0e1c4c1555aebe55bb6579aa551b786fd3d0934ff9f7d04fb",
+          "snapshot_chars": 2926
+        },
+        {
+          "id": "C006",
+          "url": "https://docs.python.org/3/library/functools.html",
+          "grade": 2,
+          "basis": "direct concrete help for requested relationship in blinded captured source; full answer/tutorial not required",
+          "support": [
+            {
+              "quote": "Changed in version 3.12: Prior to Python 3.12, @cached_property included an undocumented lock to ensure that in multi-threaded usage the getter func",
+              "start": 4000,
+              "end": 4148
+            },
+            {
+              "quote": "In Python 3.12+ this locking is removed. functools.cmp_to_key(func)¶ Transform an old-style com",
+              "start": 4310,
+              "end": 4406
+            }
+          ],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/1cd9df78eedaf8dbe05325d2b238a4b264f87fd5016bb46a00c832d9fee87657.json",
+          "text_hash": "63e217f2e7b192907849b0af128bf423258a5ea185cb04b8ce159c0be1b15ff8",
+          "normalized_text_hash": "8f853904d8cd8746ea0de2572305eeebbecf79975a04f7802ace1e5d7186a45b",
+          "snapshot_chars": 26182
+        },
+        {
+          "id": "C007",
+          "url": "https://docs.python.org/3/library/removed.html",
+          "grade": 1,
+          "basis": "captured full extracted snapshot does not demonstrate all required relations; source may still help a partial topic",
+          "support": [],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/87d58cd61d21507d0da98481e1de277771d55cffc908f8373c0086e344996028.json",
+          "text_hash": "c142370f5559fbc265bddec8b630fcfd97d12c5f8a20ad4cef0339891041eee9",
+          "normalized_text_hash": "dbf91265277fcc67426ac5f5739ce8eef9c322f629e1c549e364a0bf9f3876b5",
+          "snapshot_chars": 1092
+        },
+        {
+          "id": "C008",
+          "url": "https://www.geeksforgeeks.org/python-functools-cached_property/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://github.com/cython/cython/blob/master/CHANGES.rst",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://github.com/grpc/grpc/issues/43421",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://locutus.io/python/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://locutus.io/python/functools/",
+          "grade": 1,
+          "basis": "captured full extracted snapshot does not demonstrate all required relations; source may still help a partial topic",
+          "support": [],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/fbbb08f5a31da80bbe3e695c5ab7f6865da7d562080c4daf4517f22343d8a3c1.json",
+          "text_hash": "aa558af820650d3f413cfc334f5e7e41fa28082c8a212a3cf2b8d9f50ce504bf",
+          "normalized_text_hash": "4d871ac5681dc55fdf6924652c9d1fdcff9acd132116f22c404598b365b8bb86",
+          "snapshot_chars": 2050
+        },
+        {
+          "id": "C013",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "explicit unrelated technology/product/navigation in captured title/snippet",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://mypy.readthedocs.io/en/stable/changelog.html",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://pynative.com/python-itertools-functools-exercises/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://pypi.org/project/codehound/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://python.flowdas.com/whatsnew/3.12.html",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://pythoncomplexity.com/stdlib/functools/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://www.scribd.com/document/311176922/Mastering-Python-Sample-Chapter",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C020",
+          "url": "https://www.scribd.com/document/692253294/News",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "query": "nginx proxy_pass trailing slash URI replacement regex location",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://book.jorianwoltjer.com/web/server-side/reverse-proxies",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://www.devshelfhub.com/cheatsheets/nginx/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://www.getpagespeed.com/server-setup/nginx/nginx-proxy_pass",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://gist.github.com/jgornick/0b10798608193ba4fd6d",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://github.com/nginx-proxy/nginx-proxy/blob/main/docs/README.md",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://github.com/nginx/kubernetes.nginx.org/blob/main/ingress-nginx-migration.html",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://gixy.getpagespeed.com/checks/proxy-pass-normalized/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://gixy.io/plugins/proxy_pass_normalized/",
+          "grade": 1,
+          "basis": "captured full extracted snapshot does not demonstrate all required relations; source may still help a partial topic",
+          "support": [],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/9cb614ab6464ea74307f70dd73531e73c9cce729793d1a6e191b683fb1c92bdd.json",
+          "text_hash": "bb6ddf0d7d52a6ed606b439278eaeb8d154fa3f6b48fc681b7335b53c542b1d6",
+          "normalized_text_hash": "fa3d0f4f8a0bf99a8932db87215cdb71f3c5db8bd51ece0066060b022a5279cc",
+          "snapshot_chars": 4703
+        },
+        {
+          "id": "C009",
+          "url": "https://www.janmikolas.cz/slovnik/nginx",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "explicit unrelated technology/product/navigation in captured title/snippet",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://mj.is-a.dev/posts/nginx-config-guide/",
+          "grade": 1,
+          "basis": "captured full extracted snapshot does not demonstrate all required relations; source may still help a partial topic",
+          "support": [],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/ffe0b3e88e318483326fad9c6353a5df82fde8c5112834dc6feadd90ca2f8280.json",
+          "text_hash": "2487ff2fba5567410c6eef71be941d9a7540ba0a27134406c1bcc099ab026a9e",
+          "normalized_text_hash": "12f5eef2a41ccc78f1272cf2689b05b8f5f3b9930503977f4d2871caa9774bc4",
+          "snapshot_chars": 4581
+        },
+        {
+          "id": "C012",
+          "url": "https://nginx.org/en/docs/http/ngx_http_rewrite_module.html",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://nginxstore.com/docs/nginx-plus/nginx-reverse-proxy/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://phoenixnap.com/kb/nginx-reverse-proxy",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://www.scribd.com/document/289536507/Nginx-HTTP-Server-Third-Edition-Sample-Chapter",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://serverfault.com/questions/379675/nginx-reverse-proxy-url-rewrite",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://unit.nginx.org/configuration/",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://www.uptimia.com/questions/how-to-forward-query-string-parameters-through-nginx-proxy-pass",
+          "grade": null,
+          "basis": "unjudged source; partial card alone does not establish full-page relevance",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://velog.io/@jun-log/nginx-%EC%84%A4%EC%A0%95%EC%A0%95%EB%A6%AC1",
+          "grade": 2,
+          "basis": "direct concrete help for requested relationship in blinded captured source; full answer/tutorial not required",
+          "support": [
+            {
+              "quote": "proxy_pass 끝에 / 가 붙는지 여부에 따라, location prefix를 백엔드로 전달할지 말지가 결정된다. 설정 클라이언트 요청 백엔드로",
+              "start": 69,
+              "end": 232
+            },
+            {
+              "quote": "정규식 location에서는 proxy_pass에 URI(trailing slash)를 붙일 수 없다. nginx가 설정 로드 시점에 에러를 발생시키므로, 아예 허용되지 않는다. # ❌ 설정 에러 발생",
+              "start": 1562,
+              "end": 1766
+            }
+          ],
+          "snapshot": "runs/classifier-relation-2026-10-30/page-cache/4ce56503c359d2e88be0ab4688a3af92083887ebf247e53f83b96f55005b4975.json",
+          "text_hash": "4435baa05ac6bc391be6c61f6bce8afa62095e544e501028a13504f36840e175",
+          "normalized_text_hash": "535c4c42f4d6d1a3416904722930543620b0ce3abbe3c7a867485d12cd2a49e2",
+          "snapshot_chars": 1634
+        },
+        {
+          "id": "C020",
+          "url": "https://zerodatatools.com/nginx-proxy-generator/",
+          "grade": 0,
+          "basis": "explicit unrelated technology/product/navigation in captured title/snippet",
+          "support": []
+        }
+      ]
+    }
+  ]
+}

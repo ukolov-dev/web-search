@@ -1,0 +1,1148 @@
+{
+  "scope": "old9 development diagnostic; real fresh initial+coverage+audit and local Qwen; identical recorded pool/cache; not NEW24",
+  "branches": {
+    "baseline": {
+      "tp": 4,
+      "fn": 10,
+      "fp": 1,
+      "unknown_direct": 0,
+      "positive": 14,
+      "direct_recall": 0.2857142857142857,
+      "false_direct_ids": [
+        [
+          "p11",
+          "C004"
+        ]
+      ]
+    },
+    "v10_before_heading": {
+      "tp": 5,
+      "fn": 9,
+      "fp": 2,
+      "unknown_direct": 0,
+      "positive": 14,
+      "direct_recall": 0.35714285714285715,
+      "false_direct_ids": [
+        [
+          "p06",
+          "C010"
+        ],
+        [
+          "p11",
+          "C004"
+        ]
+      ]
+    },
+    "fixed": {
+      "tp": 7,
+      "fn": 7,
+      "fp": 1,
+      "unknown_direct": 0,
+      "positive": 14,
+      "direct_recall": 0.5,
+      "false_direct_ids": [
+        [
+          "p11",
+          "C004"
+        ]
+      ]
+    }
+  },
+  "cases": [
+    {
+      "id": "h01",
+      "branches": {
+        "baseline": {
+          "tp": 0,
+          "fn": 2,
+          "fp": 0,
+          "unknown_direct": 0,
+          "positive": 2,
+          "false_direct_ids": [],
+          "unknown_direct_ids": [],
+          "direct_ids": [],
+          "budget": {
+            "classification_calls": 3,
+            "document_reads": 4,
+            "logical_search_calls": 2,
+            "reranker_calls": 3,
+            "reranker_pairs": 97,
+            "source_context_max": 8936
+          },
+          "errors": [
+            "evidence_verification: C017: fetch_timeout"
+          ],
+          "target_states": {
+            "C003": {
+              "pool_position": 9,
+              "read_attempted": false,
+              "document_error": null,
+              "body_supplied": false,
+              "document_html_hash": null,
+              "source_snapshot_matches_original_gold": null,
+              "reranker_status": null,
+              "coverage_statuses": [
+                "missing",
+                "missing",
+                "missing",
+                "missing"
+              ],
+              "literal_gaps": [],
+              "audit_supported": null,
+              "audit_reason": "",
+              "direct": false
+            }
+          }
+        },
+        "v10_before_heading": {
+          "tp": 1,
+          "fn": 1,
+          "fp": 0,
+          "unknown_direct": 0,
+          "positive": 2,
+          "false_direct_ids": [],
+          "unknown_direct_ids": [],
+          "direct_ids": [
+            "C003"
+          ],
+          "budget": {
+            "classification_calls": 3,
+            "document_reads": 4,
+            "logical_search_calls": 2,
+            "reranker_calls": 3,
+            "reranker_pairs": 195,
+            "source_context_max": 12099
+          },
+          "errors": [
+            "evidence_verification: C017: fetch_timeout"
+          ],
+          "target_states": {
+            "C003": {
+              "pool_position": 4,
+              "read_attempted": true,
+              "document_error": null,
+              "body_supplied": true,
+              "document_html_hash": "e5ef597aecce0dd5b62d4d8c4f97856d6b8e6d9df4cc175b84b06ab4c5b318d3",
+              "source_snapshot_matches_original_gold": true,
+              "reranker_status": "ok",
+              "coverage_statuses": [
+                "supported",
+                "supported",
+                "supported",
+                "supported"
+              ],
+              "literal_gaps": [],
+              "audit_supported": true,
+              "audit_reason": "",
+              "direct": true
+            }
+          }
+        },
+        "fixed": {
+          "tp": 1,
+          "fn": 1,
+          "fp": 0,
+          "unknown_direct": 0,
+          "positive": 2,
+          "false_direct_ids": [],
+          "unknown_direct_ids": [],
+          "direct_ids": [
+            "C003"
+          ],
+          "target_states": {
+            "C003": {
+              "pool_position": 4,
+              "read_attempted": true,
+              "document_error": null,
+              "body_supplied": true,
+              "document_html_hash": "e5ef597aecce0dd5b62d4d8c4f97856d6b8e6d9df4cc175b84b06ab4c5b318d3",
+              "source_snapshot_matches_original_gold": true,
+              "reranker_status": "ok",
+              "coverage_statuses": [
+                "supported",
+                "supported",
+                "supported",
+                "supported"
+              ],
+              "literal_gaps": [],
+              "audit_supported": true,
+              "audit_reason": "",
+              "direct": true
+            }
+          },
+          "budget": {
+            "classification_calls": 3,
+            "document_reads": 4,
+            "logical_search_calls": 2,
+            "reranker_calls": 3,
+            "reranker_pairs": 195,
+            "source_context_max": 12099
+          },
+          "errors": [
+            "evidence_verification: C017: fetch_timeout"
+          ]
+        }
+      },
+      "equal_model_inputs_by_stage": [
+        true,
+        false,
+        false
+      ],
+      "model_input_sha256": {
+        "baseline": [
+          "8ee84e962e25ec10faba8c1fffaf098dbb4686957bdd02483b7d618afa25611b",
+          "a9fceac6a7919063e6dbb3d3f9ec5421061da15ebb59010bbb1f2d5e1fe81e0a",
+          "6310a23b47ab36025d61a9c2a2478b457aaa8267ce3142028d863bd63de2ed24"
+        ],
+        "fixed": [
+          "8ee84e962e25ec10faba8c1fffaf098dbb4686957bdd02483b7d618afa25611b",
+          "0a194a63735846aea8fbb1737920f83f852777d0980c41985b9017a89cd26ddd",
+          "7e41204a18376d36205f4a5267a1d460ed700f35bdcb0e9c8000f99a7a0b9dd9"
+        ]
+      }
+    },
+    {
+      "id": "h02",
+      "branches": {
+        "baseline": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "unknown_direct": 0,
+          "positive": 0,
+          "false_direct_ids": [],
+          "unknown_direct_ids": [],
+          "direct_ids": [],
+          "budget": {
+            "classification_calls": 2,
+            "document_reads": 2,
+            "logical_search_calls": 2,
+            "reranker_calls": 2,
+            "reranker_pairs": 107,
+            "source_context_max": 9953
+          },
+          "errors": [
+            "naver: parser_changed",
+            "evidence_verification: C006: host_disabled",
+            "evidence_verification: C005: host_disabled",
+            "unsupported_direct_evidence_or_constraints: 2 downgraded"
+          ],
+          "target_states": {}
+        },
+        "v10_before_heading": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "unknown_direct": 0,
+          "positive": 0,
+          "false_direct_ids": [],
+          "unknown_direct_ids": [],
+          "direct_ids": [],
+          "budget": {
+            "classification_calls": 2,
+            "document_reads": 2,
+            "logical_search_calls": 2,
+            "reranker_calls": 2,
+            "reranker_pairs": 107,
+            "source_context_max": 9953
+          },
+          "errors": [
+            "naver: parser_changed",
+            "evidence_verification: C006: host_disabled",
+            "evidence_verification: C005: host_disabled",
+            "unsupported_direct_evidence_or_constraints: 2 downgraded"
+          ],
+          "target_states": {}
+        },
+        "fixed": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "unknown_direct": 0,
+          "positive": 0,
+          "false_direct_ids": [],
+          "unknown_direct_ids": [],
+          "direct_ids": [],
+          "target_states": {},
+          "budget": {
+            "classification_calls": 3,
+            "document_reads": 3,
+            "logical_search_calls": 2,
+            "reranker_calls": 3,
+            "reranker_pairs": 108,
+            "source_context_max": 10137
+          },
+          "errors": [
+            "naver: parser_changed",
+            "evidence_verification: C005: host_disabled",
+            "unsupported_direct_evidence_or_constraints: 2 downgraded"
+          ]
+        }
+      },
+      "equal_model_inputs_by_stage": [
+        true,
+        true
+      ],
+      "model_input_sha256": {
+        "baseline": [
+          "d4ef083c872d1bc518bb1528cc1aaf247f7474e6760afa4d38ee6cbb1aa22c61",
+          "5a0eac07323a2c6d97915ad82b80eddc21073d9a12858e4e002c1f01b637aa15"
+        ],
+        "fixed": [
+          "d4ef083c872d1bc518bb1528cc1aaf247f7474e6760afa4d38ee6cbb1aa22c61",
+          "5a0eac07323a2c6d97915ad82b80eddc21073d9a12858e4e002c1f01b637aa15"
+        ]
+      }
+    },
+    {
+      "id": "h03",
+      "branches": {
+        "baseline": {
+          "tp": 1,
+          "fn": 1,
+          "fp": 0,
+          "unknown_direct": 0,
+          "positive": 2,
+          "false_direct_ids": [],
+          "unknown_direct_ids": [],
+          "direct_ids": [
+            "C001"
+          ],
+          "budget": {
+            "classification_calls": 3,
+            "document_reads": 4,
+            "logical_search_calls": 2,
+            "reranker_calls": 3,
+            "reranker_pairs": 32,
+            "source_context_max": 14848
+          },
+          "errors": [
+            "evidence_verification: C020: fetch_timeout",
+            "unsupported_direct_evidence_or_constraints: 1 downgraded"
+          ],
+          "target_states": {
+            "C012": {
+              "pool_position": 2,
+              "read_attempted": true,
+              "document_error": null,
+              "body_supplied": true,
+              "document_html_hash": "e88a6ab7b514f82e507dd7c3445868b7341f9fbfca7fcb60d1ccdfa1ef85e907",
+              "source_snapshot_matches_original_gold": true,
+              "reranker_status": "ok",
+              "coverage_statuses": [
+                "supported",
+                "supported",
+                "supported",
+                "supported"
+              ],
+              "literal_gaps": [
+                "JavaScript"
+              ],
+              "audit_supported": null,
+              "audit_reason": "",
+              "direct": false
+            }
+          }
+        },
+        "v10_before_heading": {
+          "tp": 2,
+          "fn": 0,
+          "fp": 0,
+          "unknown_direct": 0,
+          "positive": 2,
+          "false_direct_ids": [],
+          "unknown_direct_ids": [],
+          "direct_ids": [
+            "C001",
+            "C012"
+          ],
+          "budget": {
+            "classification_calls": 3,
+            "document_reads": 4,
+            "logical_search_calls": 2,
+            "reranker_calls": 3,
+            "reranker_pairs": 32,
+            "source_context_max": 14951
+          },
+          "errors": [
+            "evidence_verification: C020: fetch_timeout"
+          ],
+          "target_states": {
+            "C012": {
+              "pool_position": 2,
+              "read_attempted": true,
+              "document_error": null,
+              "body_supplied": true,
+              "document_html_hash": "e88a6ab7b514f82e507dd7c3445868b7341f9fbfca7fcb60d1ccdfa1ef85e907",
+              "source_snapshot_matches_original_gold": true,
+              "reranker_status": "ok",
+              "coverage_statuses": [
+                "supported",
+                "supported",
+                "supported",
+                "supported"
+              ],
+              "literal_gaps": [],
+              "audit_supported": true,
+              "audit_reason": "",
+              "direct": true
+            }
+          }
+        },
+        "fixed": {
+          "tp": 2,
+          "fn": 0,
+          "fp": 0,
+          "unknown_direct": 0,
+          "positive": 2,
+          "false_direct_ids": [],
+          "unknown_direct_ids": [],
+          "direct_ids": [
+            "C001",
+            "C012"
+          ],
+          "target_states": {
+            "C012": {
+              "pool_position": 2,
+              "read_attempted": true,
+              "document_error": null,
+              "body_supplied": true,
+              "document_html_hash": "e88a6ab7b514f82e507dd7c3445868b7341f9fbfca7fcb60d1ccdfa1ef85e907",
+              "source_snapshot_matches_original_gold": true,
+              "reranker_status": "ok",
+              "coverage_statuses": [
+                "supported",
+                "supported",
+                "supported",
+                "supported"
+              ],
+              "literal_gaps": [],
+              "audit_supported": true,
+              "audit_reason": "",
+              "direct": true
+            }
+          },
+          "budget": {
+            "classification_calls": 3,
+            "document_reads": 4,
+            "logical_search_calls": 2,
+            "reranker_calls": 3,
+            "reranker_pairs": 32,
+            "source_context_max": 14359
+          },
+          "errors": [
+            "evidence_verification: C020: fetch_timeout",
+            "unsupported_direct_evidence_or_constraints: 1 downgraded"
+          ]
+        }
+      },
+      "equal_model_inputs_by_stage": [
+        true,
+        false,
+        false
+      ],
+      "model_input_sha256": {
+        "baseline": [
+          "84e3ff113f6ffcaa3a7e9e7b48f282eddc695600a8350d9addd5c93e898099a2",
+          "89405c29c4b4cc24c1df80af599c83d79c117161eeef76446aea48dd5edabfb9",
+          "d20be077f2eb9b6f3629b68035d3fc1f53bdf8b61eee1705e92bf29c77569124"
+        ],
+        "fixed": [
+          "84e3ff113f6ffcaa3a7e9e7b48f282eddc695600a8350d9addd5c93e898099a2",
+          "b6c5351c88799ce2aea56c6997442eb46e8a5a4b2987d3b93c58deaca4010e35",
+          "6c5fc7aece74d35791beac56034ac0ff86fdc67d711db939907c1b5bec4ea170"
+        ]
+      }
+    },
+    {
+      "id": "h04",
+      "branches": {
+        "baseline": {
+          "tp": 0,
+          "fn": 2,
+          "fp": 0,
+          "unknown_direct": 0,
+          "positive": 2,
+          "false_direct_ids": [],
+          "unknown_direct_ids": [],
+          "direct_ids": [],
+          "budget": {
+            "classification_calls": 2,
+            "document_reads": 3,
+            "logical_search_calls": 2,
+            "reranker_calls": 2,
+            "reranker_pairs": 9,
+            "source_context_max": 10342
+          },
+          "errors": [
+            "evidence_verification: C001: error sending request for url (https://ccrma.stanford.edu/planetccrma/man/man2/fcntl.2.html)",
+            "evidence_verification: C004: host_disabled",
+            "unsupported_direct_evidence_or_constraints: 3 downgraded"
+          ],
+          "target_states": {
+            "C006": {
+              "pool_position": 2,
+              "read_attempted": true,
+              "document_error": null,
+              "body_supplied": true,
+              "document_html_hash": "3529ff6eeec7c3f3477b033e40870f744d8b132fcbe503dcda80fcdfd6bbe79b",
+              "source_snapshot_matches_original_gold": true,
+              "reranker_status": "ok",
+              "coverage_statuses": [
+                "supported",
+                "supported",
+                "supported",
+                "supported"
+              ],
+              "literal_gaps": [
+                "FD_CLOEXEC"
+              ],
+              "audit_supported": null,
+              "audit_reason": "",
+              "direct": false
+            },
+            "C008": {
+              "pool_position": null,
+              "read_attempted": false,
+              "document_error": null,
+              "body_supplied": false,
+              "document_html_hash": null,
+              "source_snapshot_matches_original_gold": null,
+              "reranker_status": null,
+              "coverage_statuses": [],
+              "literal_gaps": null,
+              "audit_supported": null,
+              "audit_reason": null,
+              "direct": false
+            }
+          }
+        },
+        "v10_before_heading": {
+          "tp": 1,
+          "fn": 1,
+          "fp": 0,
+          "unknown_direct": 0,
+          "positive": 2,
+          "false_direct_ids": [],
+          "unknown_direct_ids": [],
+          "direct_ids": [
+            "C008"
+          ],
+          "budget": {
+            "classification_calls": 3,
+            "document_reads": 3,
+            "logical_search_calls": 2,
+            "reranker_calls": 2,
+            "reranker_pairs": 9,
+            "source_context_max": 10988
+          },
+          "errors": [
+            "evidence_verification: C001: error sending request for url (https://ccrma.stanford.edu/planetccrma/man/man2/fcntl.2.html)",
+            "evidence_verification: C004: host_disabled",
+            "unsupported_direct_evidence_or_constraints: 3 downgraded"
+          ],
+          "target_states": {
+            "C006": {
+              "pool_position": 2,
+              "read_attempted": true,
+              "document_error": null,
+              "body_supplied": true,
+              "document_html_hash": "3529ff6eeec7c3f3477b033e40870f744d8b132fcbe503dcda80fcdfd6bbe79b",
+              "source_snapshot_matches_original_gold": true,
+              "reranker_status": "ok",
+              "coverage_statuses": [
+                "supported",
+                "supported",
+                "supported",
+                "supported"
+              ],
+              "literal_gaps": [
+                "FD_CLOEXEC"
+              ],
+              "audit_supported": null,
+              "audit_reason": "",
+              "direct": false
+            },
+            "C008": {
+              "pool_position": 4,
+              "read_attempted": true,
+              "document_error": null,
+              "body_supplied": true,
+              "document_html_hash": "f0b886340b0471a181d135320ed5b3847de410ab05ca4a29b78780d1aa2aa2ae",
+              "source_snapshot_matches_original_gold": true,
+              "reranker_status": "ok",
+              "coverage_statuses": [
+                "supported",
+                "supported",
+                "supported",
+                "supported"
+              ],
+              "literal_gaps": [],
+              "audit_supported": true,
+              "audit_reason": "",
+              "direct": true
+            }
+          }
+        },
+        "fixed": {
+          "tp": 2,
+          "fn": 0,
+          "fp": 0,
+          "unknown_direct": 0,
+          "positive": 2,
+          "false_direct_ids": [],
+          "unknown_direct_ids": [],
+          "direct_ids": [
+            "C006",
+            "C008"
+          ],
+          "target_states": {
+            "C006": {
+              "pool_position": 2,
+              "read_attempted": true,
+              "document_error": null,
+              "body_supplied": true,
+              "document_html_hash": "3529ff6eeec7c3f3477b033e40870f744d8b132fcbe503dcda80fcdfd6bbe79b",
+              "source_snapshot_matches_original_gold": true,
+              "reranker_status": "ok",
+              "coverage_statuses": [
+                "supported",
+                "supported",
+                "supported",
+                "supported"
+              ],
+              "literal_gaps": [],
+              "audit_supported": true,
+              "audit_reason": "",
+              "direct": true
+            },
+            "C008": {
+              "pool_position": 4,
+              "read_attempted": true,
+              "document_error": null,
+              "body_supplied": true,
+              "document_html_hash": "f0b886340b0471a181d135320ed5b3847de410ab05ca4a29b78780d1aa2aa2ae",
+              "source_snapshot_matches_original_gold": true,
+              "reranker_status": "ok",
+              "coverage_statuses": [
+                "supported",
+                "supported",
+                "supported",
+                "supported"
+              ],
+              "literal_gaps": [],
+              "audit_supported": true,
+              "audit_reason": "",
+              "direct": true
+            }
+          },
+          "budget": {
+            "classification_calls": 3,
+            "document_reads": 3,
+            "logical_search_calls": 2,
+            "reranker_calls": 2,
+            "reranker_pairs": 9,
+            "source_context_max": 10988
+          },
+          "errors": [
+            "evidence_verification: C001: error sending request for url (https://ccrma.stanford.edu/planetccrma/man/man2/fcntl.2.html)",
+            "evidence_verification: C004: host_disabled",
+            "unsupported_direct_evidence_or_constraints: 3 downgraded"
+          ]
+        }
+      },
+      "equal_model_inputs_by_stage": [
+        true,
+        false
+      ],
+      "model_input_sha256": {
+        "baseline": [
+          "47a9bc3aa39f5958e211b5af96eef776d2ffcc1e586d73928e1383513316b278",
+          "17bdacf5d4c49293378598701dcc72e39cf5e4c1af03d5e665999df2bd91653d"
+        ],
+        "fixed": [
+          "47a9bc3aa39f5958e211b5af96eef776d2ffcc1e586d73928e1383513316b278",
+          "011559dce321280fe69f91d1d018a0b19c1bc05a54a712fb2586f02267a900f0",
+          "d2a664b731ef0b5dc3c839f3875aec57193aafea2e223feeafc081d49515f610"
+        ]
+      }
+    },
+    {
+      "id": "n01",
+      "branches": {
+        "baseline": {
+          "tp": 0,
+          "fn": 1,
+          "fp": 0,
+          "unknown_direct": 0,
+          "positive": 1,
+          "false_direct_ids": [],
+          "unknown_direct_ids": [],
+          "direct_ids": [],
+          "budget": {
+            "classification_calls": 3,
+            "document_reads": 4,
+            "logical_search_calls": 2,
+            "reranker_calls": 4,
+            "reranker_pairs": 38,
+            "source_context_max": 17671
+          },
+          "errors": [],
+          "target_states": {}
+        },
+        "v10_before_heading": {
+          "tp": 0,
+          "fn": 1,
+          "fp": 0,
+          "unknown_direct": 0,
+          "positive": 1,
+          "false_direct_ids": [],
+          "unknown_direct_ids": [],
+          "direct_ids": [],
+          "budget": {
+            "classification_calls": 3,
+            "document_reads": 4,
+            "logical_search_calls": 2,
+            "reranker_calls": 3,
+            "reranker_pairs": 22,
+            "source_context_max": 12773
+          },
+          "errors": [
+            "evidence_verification: C003: failed to grab the article"
+          ],
+          "target_states": {}
+        },
+        "fixed": {
+          "tp": 0,
+          "fn": 1,
+          "fp": 0,
+          "unknown_direct": 0,
+          "positive": 1,
+          "false_direct_ids": [],
+          "unknown_direct_ids": [],
+          "direct_ids": [],
+          "target_states": {},
+          "budget": {
+            "classification_calls": 3,
+            "document_reads": 4,
+            "logical_search_calls": 2,
+            "reranker_calls": 3,
+            "reranker_pairs": 22,
+            "source_context_max": 12773
+          },
+          "errors": [
+            "evidence_verification: C003: failed to grab the article"
+          ]
+        }
+      },
+      "equal_model_inputs_by_stage": [
+        true,
+        false,
+        false
+      ],
+      "model_input_sha256": {
+        "baseline": [
+          "243a6f42da7b3a24b1dd440e63d198e256bf212d4c91b33d3dd1da16de434c95",
+          "b7c50f341aff59f486e4caa0bd5ce6f3ba68ff8fb06f236fbe72c3a32a48330c",
+          "97ba226783ee011f51da86a4c959c20ca884599c4e9b427b880c3b7b7b57c44d"
+        ],
+        "fixed": [
+          "243a6f42da7b3a24b1dd440e63d198e256bf212d4c91b33d3dd1da16de434c95",
+          "4767c26aaf2aee592ae3ae7c2654a25fd647c4bb87ba3600a7897f3fae447737",
+          "5b791c836b3c874d64f965a8cd7562ad38cebc7ad912e5d17084272da7edbacc"
+        ]
+      }
+    },
+    {
+      "id": "n07",
+      "branches": {
+        "baseline": {
+          "tp": 1,
+          "fn": 1,
+          "fp": 0,
+          "unknown_direct": 0,
+          "positive": 2,
+          "false_direct_ids": [],
+          "unknown_direct_ids": [],
+          "direct_ids": [
+            "C007"
+          ],
+          "budget": {
+            "classification_calls": 3,
+            "document_reads": 4,
+            "logical_search_calls": 2,
+            "reranker_calls": 3,
+            "reranker_pairs": 22,
+            "source_context_max": 14929
+          },
+          "errors": [
+            "evidence_verification: C001: fetch_timeout"
+          ],
+          "target_states": {}
+        },
+        "v10_before_heading": {
+          "tp": 0,
+          "fn": 2,
+          "fp": 0,
+          "unknown_direct": 0,
+          "positive": 2,
+          "false_direct_ids": [],
+          "unknown_direct_ids": [],
+          "direct_ids": [],
+          "budget": {
+            "classification_calls": 2,
+            "document_reads": 4,
+            "logical_search_calls": 2,
+            "reranker_calls": 2,
+            "reranker_pairs": 17,
+            "source_context_max": 11528
+          },
+          "errors": [
+            "evidence_verification: C001: fetch_timeout",
+            "evidence_verification: C009: cache_only_miss: https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Properties/overflow"
+          ],
+          "target_states": {}
+        },
+        "fixed": {
+          "tp": 0,
+          "fn": 2,
+          "fp": 0,
+          "unknown_direct": 0,
+          "positive": 2,
+          "false_direct_ids": [],
+          "unknown_direct_ids": [],
+          "direct_ids": [],
+          "target_states": {},
+          "budget": {
+            "classification_calls": 2,
+            "document_reads": 4,
+            "logical_search_calls": 2,
+            "reranker_calls": 2,
+            "reranker_pairs": 17,
+            "source_context_max": 11528
+          },
+          "errors": [
+            "evidence_verification: C001: fetch_timeout",
+            "evidence_verification: C009: cache_only_miss: https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Properties/overflow"
+          ]
+        }
+      },
+      "equal_model_inputs_by_stage": [
+        true,
+        false
+      ],
+      "model_input_sha256": {
+        "baseline": [
+          "1f124e5ce16a9fcc6bfb46292c75ecaacba3a2a58e54dfe7935e7eddd278613b",
+          "d9391eb52beab564f1e0eb96d83e5c6ff64468dc8041897ea2c4a3ed0002ff8c",
+          "531c2258bfdda61dc90967c6520a26505c6d2d7bfe626725b07c6c0fdd619414"
+        ],
+        "fixed": [
+          "1f124e5ce16a9fcc6bfb46292c75ecaacba3a2a58e54dfe7935e7eddd278613b",
+          "d3e0bea37cec4e7a0d8065cf2f28eb738ce763216ed13f40de5c488aa915a5a4"
+        ]
+      }
+    },
+    {
+      "id": "p06",
+      "branches": {
+        "baseline": {
+          "tp": 1,
+          "fn": 0,
+          "fp": 0,
+          "unknown_direct": 0,
+          "positive": 1,
+          "false_direct_ids": [],
+          "unknown_direct_ids": [],
+          "direct_ids": [
+            "C005"
+          ],
+          "budget": {
+            "classification_calls": 3,
+            "document_reads": 4,
+            "logical_search_calls": 2,
+            "reranker_calls": 3,
+            "reranker_pairs": 23,
+            "source_context_max": 14070
+          },
+          "errors": [
+            "evidence_verification: C001: failed to grab the article"
+          ],
+          "target_states": {}
+        },
+        "v10_before_heading": {
+          "tp": 1,
+          "fn": 0,
+          "fp": 1,
+          "unknown_direct": 0,
+          "positive": 1,
+          "false_direct_ids": [
+            "C010"
+          ],
+          "unknown_direct_ids": [],
+          "direct_ids": [
+            "C005",
+            "C010"
+          ],
+          "budget": {
+            "classification_calls": 3,
+            "document_reads": 4,
+            "logical_search_calls": 2,
+            "reranker_calls": 3,
+            "reranker_pairs": 23,
+            "source_context_max": 14070
+          },
+          "errors": [
+            "evidence_verification: C001: failed to grab the article"
+          ],
+          "target_states": {}
+        },
+        "fixed": {
+          "tp": 1,
+          "fn": 0,
+          "fp": 0,
+          "unknown_direct": 0,
+          "positive": 1,
+          "false_direct_ids": [],
+          "unknown_direct_ids": [],
+          "direct_ids": [
+            "C005"
+          ],
+          "target_states": {},
+          "budget": {
+            "classification_calls": 3,
+            "document_reads": 4,
+            "logical_search_calls": 2,
+            "reranker_calls": 3,
+            "reranker_pairs": 23,
+            "source_context_max": 14070
+          },
+          "errors": [
+            "evidence_verification: C001: failed to grab the article"
+          ]
+        }
+      },
+      "equal_model_inputs_by_stage": [
+        true,
+        true,
+        false
+      ],
+      "model_input_sha256": {
+        "baseline": [
+          "9d82b2509aeb38616c28959144ceec4fd47e958ef34e421f8f0bc4be80e264d3",
+          "05b69c02db4e107aff6297be2a5de89b2572eb2ce5b125cf5381cc5cb1986bf8",
+          "b2a2107fa3a3c6774e156c31c8a8eac2089c4808b5ce074d5e755e32e3bc0359"
+        ],
+        "fixed": [
+          "9d82b2509aeb38616c28959144ceec4fd47e958ef34e421f8f0bc4be80e264d3",
+          "05b69c02db4e107aff6297be2a5de89b2572eb2ce5b125cf5381cc5cb1986bf8",
+          "c8585c3172691937e073b9652dc316f699b28e2a84f45855c4b8b54d01af5018"
+        ]
+      }
+    },
+    {
+      "id": "p11",
+      "branches": {
+        "baseline": {
+          "tp": 1,
+          "fn": 1,
+          "fp": 1,
+          "unknown_direct": 0,
+          "positive": 2,
+          "false_direct_ids": [
+            "C004"
+          ],
+          "unknown_direct_ids": [],
+          "direct_ids": [
+            "C004",
+            "C007"
+          ],
+          "budget": {
+            "classification_calls": 3,
+            "document_reads": 4,
+            "logical_search_calls": 2,
+            "reranker_calls": 3,
+            "reranker_pairs": 67,
+            "source_context_max": 14771
+          },
+          "errors": [
+            "evidence_verification: C001: failed to grab the article",
+            "unsupported_direct_evidence_or_constraints: 1 downgraded"
+          ],
+          "target_states": {}
+        },
+        "v10_before_heading": {
+          "tp": 0,
+          "fn": 2,
+          "fp": 1,
+          "unknown_direct": 0,
+          "positive": 2,
+          "false_direct_ids": [
+            "C004"
+          ],
+          "unknown_direct_ids": [],
+          "direct_ids": [
+            "C004"
+          ],
+          "budget": {
+            "classification_calls": 3,
+            "document_reads": 4,
+            "logical_search_calls": 2,
+            "reranker_calls": 2,
+            "reranker_pairs": 63,
+            "source_context_max": 10740
+          },
+          "errors": [
+            "evidence_verification: C001: failed to grab the article",
+            "evidence_verification: C016: cache_only_miss: https://www.postgresql.org/docs/release/9.3.5/",
+            "unsupported_direct_evidence_or_constraints: 1 downgraded"
+          ],
+          "target_states": {}
+        },
+        "fixed": {
+          "tp": 1,
+          "fn": 1,
+          "fp": 1,
+          "unknown_direct": 0,
+          "positive": 2,
+          "false_direct_ids": [
+            "C004"
+          ],
+          "unknown_direct_ids": [],
+          "direct_ids": [
+            "C004",
+            "C007"
+          ],
+          "target_states": {},
+          "budget": {
+            "classification_calls": 3,
+            "document_reads": 4,
+            "logical_search_calls": 2,
+            "reranker_calls": 3,
+            "reranker_pairs": 67,
+            "source_context_max": 14551
+          },
+          "errors": [
+            "evidence_verification: C016: cache_only_miss: https://www.postgresql.org/docs/release/9.3.5/"
+          ]
+        }
+      },
+      "equal_model_inputs_by_stage": [
+        true,
+        false,
+        false
+      ],
+      "model_input_sha256": {
+        "baseline": [
+          "9c7ca0b214f1a0ec4157dcf7d2bd099585e5ebe0a4f49b0259f1f5514078ac28",
+          "c0a7431d32a089de56e65aec126721ad6a7521a78afa0b56e3b0a1488d9a0cfd",
+          "2065e63bbb56aed3ac9b1fba6685b8bf3b7d469c5c5daa80d2527e12cce7b66a"
+        ],
+        "fixed": [
+          "9c7ca0b214f1a0ec4157dcf7d2bd099585e5ebe0a4f49b0259f1f5514078ac28",
+          "8d66f0bd0921655b70b6ff446e9a6d3731f607cd2602a419b266523e4608faf8",
+          "634c549153962c252f9497043471be0d61f33e8cab2bbc6d2bb770e001417f7f"
+        ]
+      }
+    },
+    {
+      "id": "f04",
+      "branches": {
+        "baseline": {
+          "tp": 0,
+          "fn": 2,
+          "fp": 0,
+          "unknown_direct": 0,
+          "positive": 2,
+          "false_direct_ids": [],
+          "unknown_direct_ids": [],
+          "direct_ids": [],
+          "budget": {
+            "classification_calls": 3,
+            "document_reads": 4,
+            "logical_search_calls": 2,
+            "reranker_calls": 4,
+            "reranker_pairs": 163,
+            "source_context_max": 18893
+          },
+          "errors": [],
+          "target_states": {}
+        },
+        "v10_before_heading": {
+          "tp": 0,
+          "fn": 2,
+          "fp": 0,
+          "unknown_direct": 0,
+          "positive": 2,
+          "false_direct_ids": [],
+          "unknown_direct_ids": [],
+          "direct_ids": [],
+          "budget": {
+            "classification_calls": 3,
+            "document_reads": 4,
+            "logical_search_calls": 2,
+            "reranker_calls": 4,
+            "reranker_pairs": 163,
+            "source_context_max": 18652
+          },
+          "errors": [],
+          "target_states": {}
+        },
+        "fixed": {
+          "tp": 0,
+          "fn": 2,
+          "fp": 0,
+          "unknown_direct": 0,
+          "positive": 2,
+          "false_direct_ids": [],
+          "unknown_direct_ids": [],
+          "direct_ids": [],
+          "target_states": {},
+          "budget": {
+            "classification_calls": 3,
+            "document_reads": 4,
+            "logical_search_calls": 2,
+            "reranker_calls": 4,
+            "reranker_pairs": 163,
+            "source_context_max": 18652
+          },
+          "errors": []
+        }
+      },
+      "equal_model_inputs_by_stage": [
+        true,
+        false,
+        true
+      ],
+      "model_input_sha256": {
+        "baseline": [
+          "d8634d3150cff8802d65432c90120b47104a29e75dcd530cf67be535eae1ad7d",
+          "0f20b3a4f4cb190918a0d3d1a47dddf8f0be5ef608892f7fbbaa1cbc17ac2b46",
+          "9850457633def717bdada2d86a460efa32803b8b9459779018c4249c25c3ccb3"
+        ],
+        "fixed": [
+          "d8634d3150cff8802d65432c90120b47104a29e75dcd530cf67be535eae1ad7d",
+          "51a5ecbefbe862c30757726e5f5e5aaf574fb2b851cd062c1e27906c37ef8d94",
+          "9850457633def717bdada2d86a460efa32803b8b9459779018c4249c25c3ccb3"
+        ]
+      }
+    }
+  ],
+  "initial_inputs_identical": true,
+  "no_new_fp": true,
+  "independent_acceptance": false,
+  "new_false_direct_ids": [],
+  "removed_false_direct_ids": [],
+  "limitations": [
+    "Old sources and development fixtures; per-case generations nondeterministic despite identical initial inputs.",
+    "Full pool not pre-acquired for this development run; uncached selected old URLs fail closed, never fetched.",
+    "The large NEW24 primary benchmark uses complete shared raw cache and separate pre-inference gold."
+  ],
+  "pre_heading_new_false_direct_ids": [
+    [
+      "p06",
+      "C010"
+    ]
+  ],
+  "all_four_target_direct_final": true
+}

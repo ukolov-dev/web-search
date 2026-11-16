@@ -1,0 +1,70 @@
+{
+  "protocol": {
+    "date": "2026-10-30",
+    "frozen_before_model_outputs": true,
+    "purpose": "selector component isolation, NOT end-to-end qualification",
+    "upstream": "RRF pool, all candidates provisionally background without using labels/gold; same first coverage review and up to4 safe reads, both branches",
+    "comparison": "current evidence-v2 lexical selector vs Qwen MLX4bit, same downstream coverage model/gates",
+    "full_pipeline_separate": "original new12 capture preserves initial classifier failures, no config tuning",
+    "gold": "blinded source snapshot judgments and exact support quotes frozen before branch predictions",
+    "no_tuning_on_holdout": true
+  },
+  "cases": [
+    {
+      "id": "h01",
+      "query": "site:docs.python.org weakref.finalize atexit exception interpreter shutdown",
+      "forms": [
+        "site:docs.python.org weakref.finalize atexit exception interpreter shutdown"
+      ]
+    },
+    {
+      "id": "h02",
+      "query": "site:doc.rust-lang.org Condvar wait spurious wakeups wait_while predicate",
+      "forms": [
+        "site:doc.rust-lang.org Condvar wait spurious wakeups wait_while predicate"
+      ]
+    },
+    {
+      "id": "h03",
+      "query": "site:postgresql.org CREATE INDEX CONCURRENTLY transaction block invalid index failure",
+      "forms": [
+        "site:postgresql.org CREATE INDEX CONCURRENTLY transaction block invalid index failure"
+      ]
+    },
+    {
+      "id": "h04",
+      "query": "site:sqlite.org journal_size_limit WAL checkpoint truncate size limit",
+      "forms": [
+        "site:sqlite.org journal_size_limit WAL checkpoint truncate size limit"
+      ]
+    },
+    {
+      "id": "h05",
+      "query": "site:docs.docker.com tmpfs mount reboot memory swap persistence",
+      "forms": [
+        "site:docs.docker.com tmpfs mount reboot memory swap persistence"
+      ]
+    },
+    {
+      "id": "h06",
+      "query": "site:developer.mozilla.org flex item min-width auto min-content shrink",
+      "forms": [
+        "site:developer.mozilla.org flex item min-width auto min-content shrink"
+      ]
+    },
+    {
+      "id": "h07",
+      "query": "site:git-scm.com git restore staged worktree source restore index difference",
+      "forms": [
+        "site:git-scm.com git restore staged worktree source restore index difference"
+      ]
+    },
+    {
+      "id": "h08",
+      "query": "site:developer.mozilla.org If-Range strong ETag weak validator range request",
+      "forms": [
+        "site:developer.mozilla.org If-Range strong ETag weak validator range request"
+      ]
+    }
+  ]
+}

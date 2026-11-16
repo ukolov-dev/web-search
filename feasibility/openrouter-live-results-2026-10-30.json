@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-30",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "provider": "openrouter",
+  "key_loaded_by_rust_constructor": true,
+  "key_authentication_verified": false,
+  "preflight": {
+    "endpoint": "/api/v1/models",
+    "http_status": 403,
+    "result": "failed before generation"
+  },
+  "diagnostic": {
+    "endpoint": "/api/v1/key",
+    "http_status": null,
+    "result": "response parser failed; no retry"
+  },
+  "api_get_attempts": 4,
+  "generation_attempts": 0,
+  "search_attempts": 0,
+  "target_reads": 0,
+  "paid_generation_cost": 0,
+  "quality_verified": false,
+  "failure_origin": "Unknown: provider or intermediary network policy. A valid-looking key prefix does not prove authentication.",
+  "attempts_after_user_replaced_key": [
+    {
+      "endpoint": "/api/v1/models",
+      "http_status": 403,
+      "generation_attempts": 0,
+      "result": "same preflight refusal"
+    },
+    {
+      "endpoint": "/api/v1/models",
+      "http_status": 403,
+      "generation_attempts": 0,
+      "message": "Access denied by security policy.",
+      "purpose": "capture safely redacted preflight error after fixing observability"
+    }
+  ],
+  "latest_failure_reason": "Access denied by security policy.",
+  "key_format_prefix_matches": true,
+  "resolved_by": "feasibility/openrouter-access-results-2026-10-30.json",
+  "current_state": "Access verified with existing system proxy explicitly configured for OpenRouter; prior refusal captures retained."
+}

@@ -1,0 +1,185 @@
+{
+  "version": "news-dates-plan-v1",
+  "question": "Does own-Article scope-bound publication microdata recovery increase final direct recall without new false or unknown directs?",
+  "case_file": "feasibility/news-dates-cases-v1.json",
+  "baseline": "preserved opt-in request-evidence-v12-coverage",
+  "candidate": "opt-in request-evidence-v13-news-dates; own publication microdata recovery plus preholdout safety repair using same trusted main-article extraction scope and news-only city-relation coverage/audit guidance",
+  "stage": "limited live paired development comparison, not general qualification",
+  "as_of": "2026-11-03",
+  "timezone": "Europe/Moscow",
+  "groups": {
+    "current_opportunities_nd01_nd08_nd12": [
+      "nd01",
+      "nd02",
+      "nd03",
+      "nd04",
+      "nd05",
+      "nd06",
+      "nd07",
+      "nd08",
+      "nd12"
+    ],
+    "untargeted_current_nd01_nd07_nd12": [
+      "nd01",
+      "nd02",
+      "nd03",
+      "nd04",
+      "nd05",
+      "nd06",
+      "nd07",
+      "nd12"
+    ],
+    "targeted_source_sensitivity_nd08": [
+      "nd08"
+    ],
+    "archive_control_nd09": [
+      "nd09"
+    ],
+    "future_control_nd10": [
+      "nd10"
+    ],
+    "irrelevant_site_control_nd11": [
+      "nd11"
+    ],
+    "all_news_nd01_nd12": [
+      "nd01",
+      "nd02",
+      "nd03",
+      "nd04",
+      "nd05",
+      "nd06",
+      "nd07",
+      "nd08",
+      "nd09",
+      "nd10",
+      "nd11",
+      "nd12"
+    ]
+  },
+  "fixed_before_live": [
+    "all12 exact queries and city/topic/site/date criteria",
+    "source-only gold schema and full READ+returned cards",
+    "primary denominator and separate returned-only secondary recall",
+    "per-query budgets, arm order, versions/model pins, original-validation priority/cap",
+    "safety/usefulness gates; no tuning or substitutions after primary starts",
+    "Pre-inference root-approved transport amendment: native CLI fresh sessions and exact primary raw originals, replacing persistentMCP draft/40laterreads.",
+    "Pre-inference safety amendment after preserved old-query development false direct; source stable + old negative controls + applicable checks required before final tooling/binary freeze and NEW12."
+  ],
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "reranker": "Qwen3-Reranker-0.6B-4bit",
+  "evidence_versions": {
+    "baseline": "request-evidence-v12-coverage",
+    "fixed": "request-evidence-v13-news-dates"
+  },
+  "per_query_max": {
+    "logical_search_calls": 2,
+    "classification_calls": 3,
+    "document_reads": 4,
+    "reranker_calls": 4,
+    "runtime_seconds": 180,
+    "source_context_chars_per_model_call": 24000
+  },
+  "source_policy": "Original query only, existing Seznam/Naver; no extra search/scraping API. No app/download queries; andro.io/subdomains blocked and never eligible for validation. Model/key/Qwen settings trusted startup only.",
+  "arm_order": "baseline,fixed odd ordinal; fixed,baseline even; native CLI processes strictly sequential, fresh Session per case/arm; whole-cohort stop after source block prevents process restart from bypassing blocks.",
+  "stop": "Complete24 primary calls if possible; any actual source/host block stops BOTH remaining paths, records not_run; no resets/retries/bypass because shared trusted host mask is unavailable. Failed original targets are not retried.",
+  "inputs": "Exact native primary raw target HTML/full extracted documents and redacted raw model inputs/outputs retained using existing --output path, no new network to capture originals. Live arm HTML/model inputs can differ; all source variants preserved for blind review. Code/binaries/tooling frozen before primary and checked before each call.",
+  "observed_union": {
+    "identity": "sha256(case_id+newline+canonical requested/original URL)[:16]; canonical strips www/tracking/trailing slash as existing tooling; redirect targets retained as provenance, not silently merged",
+    "read": "Every successful HTTP2xx source document with body text_hash and no error in news_navigation/page_verification documents, regardless runtime kind/date or returned membership; trace-specific IDs retained hidden",
+    "returned": "Every actual returned result, including unreviewed or unfetched sources",
+    "blind": "All READ+returned case/URL tokens, with source-only URL/title/snippet cards and exact primary original variants; no arm/model/runtime date/type/classification/read-or-returned flags. Native source/body variants kept when arms differ.",
+    "missing": "Any unavailable/failed/unread/over-cap returned potential article remains in cards/gold as unknown; every successful READ native original retained. Failed reads not made positives or forced negatives."
+  },
+  "annotation": {
+    "schema": {
+      "rows": [
+        {
+          "blind_id": "sha256(case_id+newline+canonical_url)[:16]",
+          "case_id": "nd01..nd12",
+          "url": "observed URL matching blind_id",
+          "grade": "0|1|2|null",
+          "kind": "article|feed|application|other|unknown",
+          "published_date": "YYYY-MM-DD|null",
+          "source_reviewed": "boolean",
+          "date_verified": "boolean",
+          "reason": "nonempty string",
+          "evidence": [
+            "short exact source quote with path/URL"
+          ],
+          "event_cluster": "optional stable story cluster",
+          "publisher_cluster": "optional publisher/domain cluster"
+        }
+      ]
+    },
+    "grade2": "Specific full original article matches requested city/topic/site and full own publication date in window, no date after as_of. Runtime kind/eligible/direct is never source gold.",
+    "grade1": "Feed/navigation or useful clearly incomplete material, never an eligible full news article. Missing original or unresolved essential date is unknown unless independently clear wrong place/topic/period.",
+    "grade0": "Source clearly wrong place/topic/site/period or app advertisement for news-reading intent; card-only 0/1 marked provisional. Controls may produce positive sources if actually suitable; no expected score is imposed.",
+    "unknown": "Original absent/inaccessible, source insufficient, own full publication date unresolved, or validation cap exhausted; excluded from known-positive denominator and separate from FP.",
+    "date_rules": [
+      "Full own Article/NewsArticle publication date bound to article identity; never query/URL/copyright/clock/adjacent teaser/year inference.",
+      "Modified/event/other-entity dates are not publication; nested/foreign dates not accepted as own.",
+      "Date/time offsets consistently converted to Moscow calendar.",
+      "Today exactly2026-11-03; nd07/12 exactly2026-11-02; nd09 November2025; future publication cannot qualify as of2026-11-03."
+    ],
+    "dedup": "Per-case canonical URL; repeated source across queries counts case/URL, with separate event/publisher cluster disclosures.",
+    "gold_freeze": "Blind source-only annotators inspect all primary captured variants for a URL. Freeze labels before prediction join; no arm/model/runtime verdicts. If variants disagree materially on suitability, mark unknown and disclose; primary grade2 requires all supplied complete variants suitable (unavailable variants remain missing, not invented negatives)."
+  },
+  "recall": {
+    "primary": "paired_read_returned_union_gold_direct_recall",
+    "denominator": "Every known-grade2 case/URL in successful READ union plus returned union of BOTH arms, only cases executed successfully by BOTH arms. Same denominator per arm.",
+    "numerator": "Denominator URLs actually returned as direct by this arm in top10.",
+    "fn": "Denominator minus numerator, including read-but-not-returned and URLs only observed by opposite arm.",
+    "secondary": "paired_returned_union_gold_direct_recall, same prior definition, separately labelled and not substituted for primary.",
+    "undefined": "null before gold, without paired cases, or zero known positives; never made-up0/100.",
+    "unknowns": "All observed/unknown union counts plus per-arm missing originals; unknown direct separate from known FP. Known-positive-only denominator can still understate opportunities when cap/unknown sources remain.",
+    "limits": "Conditional known-positive observed READ+returned corpus, not candidate-pool/full-web recall. Live source variants can differ; disagreements become unknown and are disclosed. Shared CLI/MCP run/public_result is code-backed, not proof of deployment/transport equivalence under all conditions."
+  },
+  "extra_validation": {
+    "max_unique_urls": 8,
+    "tool": "Optional unchanged guarded Rust standalone validator; root orchestrates only if unread-returned originals require it. Never re-fetch READ originals.",
+    "rule": "Only unread returned URLs: direct first then other returned, canonical dedup; no failed/blocked targets or andro.io/subdomains retried; strict original-origin check before every hop. All missing/over-cap originals retained as unknown.",
+    "budget": "Primary native --output captures READ HTML/docs at zero extraHTTP. Up to8 optional unread unique targets separately reported, including actual HTTP attempts/hops/errors.",
+    "method_limit": "READ originals are exact native primary capture bytes. Any optional unread returned originals come later and are explicitly marked as such, not primary input."
+  },
+  "measurements": [
+    "all24 case/arm calls and full capture completeness, valid initial classifiers, failures/source blocks",
+    "primary paired READ+returned direct recall plus secondary returned-only recall",
+    "known TP/FP/FN exact IDs and unknown direct/observed counts, per-case/subgroup",
+    "read-but-not-returned suitable source IDs/date reasons and final direct eligibility/audit gates",
+    "distinct event/publisher clusters separate from pooled case/URL recall",
+    "physical read/generative/logical search/Qwen/source-context/time budgets; no inferred money costs"
+  ],
+  "quality_gates": [
+    "all24 valid structured captures plus annotations for ALL observed READ+returned token IDs, unknown permitted explicitly",
+    "No new known unsuitable direct IDs versus same-query baseline, and candidate unknown direct0.",
+    "Candidate direct article/date/witness/audit/app protections preserved.",
+    "All per-query budgets and OpenRouter DeepSeek/Qwen/evidence version pins match.",
+    "No blocked host attempts/retries, original20/B17/history unchanged."
+  ],
+  "usefulness_gate": "Positive primary paired direct-recall delta on nonzero known-positive denominator plus safety gate; returned-only improvement alone cannot establish primary benefit.",
+  "old_regression_scope": "Two prior Bezformata microdata misses and preholdout regional/Gorodets negative are separate development controls with preserved failures; never pooled into NEW12 score.",
+  "deployment": "None; no VPS/global config/hooks/newAPI/model change.",
+  "transport": "Native CLI ranked-search, same policy::Session::run and public_result(...,10) as MCP, fresh Session/process per arm+case. Primary is CLI, not persistent MCP; release stdio tests cover MCP separately.",
+  "candidate_scope": [
+    "Recover full own Article/NewsArticle datePublished microdata bound to primary article URL/heading; nested/foreign/modified/yearless values remain rejected.",
+    "Reuse the SAME trusted main_article_scope for extraction before generic <main>; strip nested article/teaser text rather than let sibling event text become primary body evidence.",
+    "News-only coverage and final audit require actual requested-city relation: publisher identity, oblast/nearby town, navigation/teaser alone do not establish city; explicit route/event affecting requested city can qualify.",
+    "Preserve all original city/topic/site/date gold criteria, active requirements, literal witnesses, audit/conflict gates and SSRF/source-block guards; no date invention or source/model/API change."
+  ],
+  "preholdout_development": {
+    "status": "Development safety failure found before NEW12; all failed v13-initial artifacts preserved; primary not started.",
+    "plan": "runs/news-dates-2026-11-03/dev-old-query-plan.json",
+    "baseline_outputs": "runs/news-dates-2026-11-03/dev-old-query-baseline",
+    "initial_v13_outputs": "runs/news-dates-2026-11-03/dev-old-query-fixed",
+    "initial_v13_public": "runs/news-dates-2026-11-03/dev-old-query-fixed-public.json",
+    "preserved_initial_source": "runs/news-dates-2026-11-03/initial-date-src",
+    "preserved_initial_binary": "runs/news-dates-2026-11-03/initial-date-web-search",
+    "failure": "Initial own-date repair recovered two known old direct articles, but also labelled /privolzhe-glavnie/165483239/ direct for a regional/Gorodets body with Nizhny publisher context and sibling teasers in generic main. Publisher/oblast text is not proof of requested-city relevance.",
+    "root_safety_amendment": "Scope-bound primary article text extraction + news-only coverage/audit city relation guidance, followed by planned old-positive/negative development controls and ordinary checks before primary.",
+    "limits": [
+      "Development examples are already observed and not NEW12 holdout; preserve failed attempts.",
+      "NEW12 exact queries/date/city/topic/site criteria, source gold rubric, case/URL denominator and metrics unchanged.",
+      "No code tuning after NEW12 begins; positive recovery and newfalseIDs must be measured on frozen primary."
+    ]
+  }
+}

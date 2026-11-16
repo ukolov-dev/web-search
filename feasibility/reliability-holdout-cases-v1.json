@@ -1,0 +1,71 @@
+{
+  "protocol": {
+    "frozen_before_outputs": true,
+    "date": "2026-10-30",
+    "context": "original s01-s12 is development after failed strict-binding v3; this cohort is new full-pipeline validation",
+    "baseline": "original classifier v3 high/2400, coveragev2,localQwen4bit",
+    "fixed": "classifierv4 none/4096, single coverage v4 with contextual quotes and mandatory skeptical audit, sameQwen",
+    "no_classifier_bypass": true,
+    "no_holdout_tuning": true,
+    "gold": "blinded snapshots before prediction inspection; unknowns separate; not independent acceptance",
+    "budget": "3generative calls,4safe reads,4local rerank calls/30s within180s;provider refusals stop without retries"
+  },
+  "cases": [
+    {
+      "id": "h01",
+      "query": "HTTP 202 Accepted processing completed guarantee response status",
+      "forms": [
+        "HTTP 202 Accepted processing completed guarantee response status"
+      ]
+    },
+    {
+      "id": "h02",
+      "query": "PostgreSQL sequence nextval rollback gaps cache transaction",
+      "forms": [
+        "PostgreSQL sequence nextval rollback gaps cache transaction"
+      ]
+    },
+    {
+      "id": "h03",
+      "query": "Python zip strict ValueError iterators consumed length mismatch",
+      "forms": [
+        "Python zip strict ValueError iterators consumed length mismatch"
+      ]
+    },
+    {
+      "id": "h04",
+      "query": "Rust std fs rename cross filesystem existing target replacement",
+      "forms": [
+        "Rust std fs rename cross filesystem existing target replacement"
+      ]
+    },
+    {
+      "id": "h05",
+      "query": "Docker restart on-failure daemon restart unless-stopped difference",
+      "forms": [
+        "Docker restart on-failure daemon restart unless-stopped difference"
+      ]
+    },
+    {
+      "id": "h06",
+      "query": "SQLite INTEGER PRIMARY KEY AUTOINCREMENT ROWID reuse overhead",
+      "forms": [
+        "SQLite INTEGER PRIMARY KEY AUTOINCREMENT ROWID reuse overhead"
+      ]
+    },
+    {
+      "id": "h07",
+      "query": "git clean -n -x -X ignored files directories difference",
+      "forms": [
+        "git clean -n -x -X ignored files directories difference"
+      ]
+    },
+    {
+      "id": "h08",
+      "query": "CSS visibility hidden display none layout accessibility difference",
+      "forms": [
+        "CSS visibility hidden display none layout accessibility difference"
+      ]
+    }
+  ]
+}

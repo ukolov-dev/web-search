@@ -1,0 +1,30 @@
+{
+  "scope": "bounded audit conflict visibility; public witness shape preserved",
+  "reproduction": {
+    "command": "CARGO_HOME=\"$PWD/.cache/cargo\" cargo test --locked --offline reviewer_bounded_audit_unseen_conflict_quote",
+    "baseline_exit": 101,
+    "baseline_reason": "Unseen non-support quote accepted through mandatory chunk ID",
+    "fixed_exit": 0,
+    "red_log": "runs/research-p1-2026-11-13/audit-visibility-red.log",
+    "green_log": "runs/research-p1-2026-11-13/audit-visibility-green3.log"
+  },
+  "checks": [
+    {
+      "command": "CARGO_HOME=\"$PWD/.cache/cargo\" cargo test --locked --offline",
+      "status": "passed",
+      "reason": "166unit+6stdio,37+10ignored; no model/public HTTP"
+    },
+    {
+      "command": "CARGO_HOME=\"$PWD/.cache/cargo\" cargo clippy --locked --offline --all-targets -- -D warnings",
+      "status": "passed"
+    }
+  ],
+  "snapshot": {
+    "src/research.rs": "42f6e28566bb740c209a2f3235a382d2f327798a581cf5006c00709cbd12dddd",
+    "src/research_tests.rs": "409be4f2438344a1164fdae54028f9c77b033ade92f6cea533fe42fe322e2482"
+  },
+  "limitations": [
+    "Model judgment and fresh paired no-loss remain separately verified",
+    "Initial patch caller compilation error retained separately, not defect red evidence"
+  ]
+}

@@ -1,0 +1,1265 @@
+
+
+
+  
+
+
+<!DOCTYPE html>
+<html lang="ko-KR" data-site-id="99">
+<head>
+	<meta charset="utf-8">
+	<meta content="ie=edge" http-equiv="x-ua-compatible">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"/>
+	<meta name="format-detection" content="telephone=no, address=no, email=no"/>
+	
+
+
+	
+	
+
+
+
+
+	<meta name="citation_publisher" content="Korean Society Of Automation And Robotics In Construction"/>
+
+    <meta name="citation_title" content="A Case Study of Automated Simulation for Excavator Cycle Time Estimation"/>
+    <meta name="citation_doi" content="10.55785/JCAR.2.1.13"/>
+    <meta name="citation_abstract_html_url" content="www.jcar.or.kr/articles/article/bXDR/"/>
+    <meta name="citation_fulltext_html_url" content="www.jcar.or.kr/articles/xml/bXDR/"/>
+    
+        
+        
+            
+    <meta name="citation_firstpage" content="13"/>
+            
+            
+        
+            
+            
+    <meta name="citation_lastpage" content="19"/>
+            
+        
+    
+    
+    
+    <meta name="citation_author" content="ChungBae Yoon"/>
+    <meta name="citation_author" content="SangUk Han"/>
+    
+    
+    <meta name="citation_pdf_url" content="https://www.jcar.or.kr/articles/pdf/bXDR/ksarc-2023-002-01-3.pdf"/>
+    <meta name="citation_journal_title" content="Journal of Construction Automation and Robotics"/>
+    <meta name="citation_journal_abbrev" content="Journal of Construction Automation and Robotics"/>
+    <meta name="citation_issn" content="2800-0552"/>
+    <meta name="citation_issn" content="2951-116X"/>
+    <meta name="citation_volume" content="2"/>
+    <meta name="citation_issue" content="1"/>
+    <meta name="citation_publication_date" content="2023/04/14"/>
+    <meta name="citation_article_type" content=""/>
+    <meta name="DOI" content="10.55785/JCAR.2.1.13"/>
+
+
+
+
+
+
+	
+<!-- Start DC -->
+
+    <meta name="dc.identifier" content="10.55785/JCAR.2.1.13"/>
+	<meta name="dc.creator" content="Journal of Construction Automation and Robotics" />
+	<meta name="dc.date" content="2023-04" scheme="DCTERMS.W3CDTF" />
+	<meta name="dc.identifier" content="https://www.jcar.or.kr/articles/article/bXDR/" scheme="DCTERMS.URI" />
+	
+	<meta name="dc.publisher" content="Korean Society Of Automation And Robotics In Construction" />
+	
+	<meta name="dc.title" content="A Case Study of Automated Simulation for Excavator Cycle Time Estimation" />
+	<meta name="DC.title" content="굴삭기 사이클 타임 추정을 위한 시뮬레이션 자동화 사례 연구" />
+	<meta name="dc.type" content="text/html" />
+	
+	
+	<meta name="dc.source" content="Journal of Construction Automation and Robotics 2023 2:1"/>
+	
+
+<!-- End EC -->
+
+
+
+	
+	<title>
+		
+			
+				A Case Study of Automated Simulation for Excavator Cycle Time Estimation
+			
+		
+	</title>
+	
+	<link rel="shortcut icon" href="#">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/static/design/css/common.css?20260429">
+	<link rel="stylesheet" type="text/css" href="/static/design/css/style.css?120260429">
+
+	
+	<link rel="stylesheet" type="text/css" href="/static/design/css/layout.css?20260429">
+	<link rel="stylesheet" type="text/css" href="/static/skin/styleA/css/style.css?20260429">
+
+
+
+		
+	<link rel="stylesheet" type="text/css" href="/site-css/ksarc_css.css?T171836">
+	<link rel="stylesheet" type="text/css" href="/static/css/base_override.css?220260429">
+	
+
+	
+	<!-- google analytics here-->
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SXZFBY05YE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SXZFBY05YE', {
+			// GA4에서 맞춤 차원 생성 후 아래 주석 해제하세요 -- 측정기준 사용시 필수 
+			'custom_map': {'custom_parameter_1': 'society_name'},
+			'society_name': '(사)한국건설자동화·로보틱스학회',
+			'site_id': '99', 
+			'site_domain': 'https://www.jcar.or.kr/'
+	});
+		
+  // 모든 후속 이벤트에 자동으로 포함될 매개변수 설정
+  gtag('set', {
+    'society_name': '(사)한국건설자동화·로보틱스학회',
+    'site_id': '99',
+    'site_domain': 'https://www.jcar.or.kr/'
+  });
+
+  // Articles 및 Search 페이지별 gtag 이벤트 설정
+  document.addEventListener('DOMContentLoaded', function() {
+    const currentPath = window.location.pathname;
+    const urlName = 'xml';
+    const appName = 'articles';
+    
+    if (appName === 'articles' || appName === 'search') {
+      // 공통 이벤트 파라미터
+      const eventParams = {
+        'page_location': window.location.href,
+        'page_title': document.title,
+        'journal_id': '100',
+        'journal_name': 'Journal of Construction Automation and Robotics',
+        'app_name': appName
+      };
+
+      // 게시글 정보가 있는 경우 추가 파라미터
+      
+      const articleParams = {
+        'article_id': '53046',
+        'article_title': 'A Case Study of Automated Simulation for Excavator Cycle Time Estimation',
+        'article_doi': '10.55785/JCAR.2.1.13',
+        'article_num': 'N0410020103',
+      };
+      Object.assign(eventParams, articleParams);
+      
+
+      // 검색 관련 파라미터
+      const searchParams = new URLSearchParams(window.location.search);
+      if (searchParams.has('q')) {
+        eventParams.search_query = searchParams.get('q');
+      }
+      if (searchParams.has('type')) {
+        eventParams.search_type = searchParams.get('type');
+      }
+      if (searchParams.has('category')) {
+        eventParams.search_category = searchParams.get('category');
+      }
+
+      // Articles 앱 URL 패턴별 이벤트 전송
+      if (appName === 'articles') {
+        switch(urlName) {
+          case 'all-issues':
+            gtag('event', 'view_all_issues', {
+              ...eventParams,
+              'content_type': 'issue_list',
+              'event_category': 'content_view'
+            });
+            break;
+            
+          case 'current-issue':
+            gtag('event', 'view_current_issue', {
+              ...eventParams,
+              'content_type': 'current_issue',
+              'event_category': 'content_view'
+            });
+            break;
+            
+          case 'article-list-by-issue':
+            gtag('event', 'view_issue_articles', {
+              ...eventParams,
+              'content_type': 'article_list',
+              'event_category': 'content_view',
+              'issue_id': currentPath.match(/article-list-by-issue\/(\d+)\//)?.[1]
+            });
+            break;
+            
+          case 'article_by_doi':
+            gtag('event', 'view_article_by_doi', {
+              ...eventParams,
+              'content_type': 'article',
+              'event_category': 'content_view',
+              'access_method': 'doi'
+            });
+            break;
+            
+          case 'article':
+            gtag('event', 'view_article', {
+              ...eventParams,
+              'content_type': 'article',
+              'event_category': 'content_view',
+              'access_method': 'direct'
+            });
+            break;
+            
+          case 'pdf':
+            gtag('event', 'file_download', {
+              ...eventParams,
+              'content_type': 'pdf',
+              'event_category': 'engagement',
+              'access_method': 'direct',
+              'file_type': 'pdf',
+              'download_type': 'full_text'
+            });
+            break;
+            
+          case 'pdf_by_doi':
+            gtag('event', 'file_download', {
+              ...eventParams,
+              'content_type': 'pdf',
+              'event_category': 'engagement',
+              'access_method': 'doi',
+              'file_type': 'pdf',
+              'download_type': 'full_text'
+            });
+            break;
+            
+          case 'export_biblio':
+            gtag('event', 'export_bibliography', {
+              ...eventParams,
+              'content_type': 'export',
+              'event_category': 'data_export',
+              'export_format': 'bibliography'
+            });
+            break;
+            
+          case 'xml':
+            gtag('event', 'view_xml', {
+              ...eventParams,
+              'content_type': 'xml',
+              'event_category': 'structured_data',
+              'data_format': 'xml'
+            });
+            break;
+            
+          case 'crossref':
+            gtag('event', 'click', {
+              ...eventParams,
+              'content_type': 'crossref',
+              'event_category': 'engagement',
+              'data_format': 'crossref'
+            });
+            break;
+            
+          case 'online-first':
+            gtag('event', 'view_online_first', {
+              ...eventParams,
+              'content_type': 'online_first',
+              'event_category': 'content_view'
+            });
+            break;
+        }
+      }
+
+      // Search 앱 URL 패턴별 이벤트 전송
+      if (appName === 'search') {
+        switch(urlName) {
+          case 'search':
+            gtag('event', 'site_search', {
+              ...eventParams,
+              'content_type': 'search_results',
+              'event_category': 'search',
+              'search_term': eventParams.search_query || '',
+              'search_method': 'site_search'
+            });
+            break;
+            
+          case 'browse':
+            gtag('event', 'browse_content', {
+              ...eventParams,
+              'content_type': 'browse_page',
+              'event_category': 'navigation',
+              'browse_method': 'category_browse'
+            });
+            break;
+            
+          case 'browse-articles':
+            gtag('event', 'browse_articles', {
+              ...eventParams,
+              'content_type': 'article_browse',
+              'event_category': 'content_view',
+              'browse_category_id': currentPath.match(/browse\/articles\/(\d+)\//)?.[1],
+              'access_method': 'browse'
+            });
+            break;
+        }
+      }
+
+      // 페이지 체류 시간 추적
+      let startTime = Date.now();
+      window.addEventListener('beforeunload', function() {
+        const timeSpent = Math.round((Date.now() - startTime) / 1000);
+        gtag('event', 'page_dwell_time', {
+          'event_category': 'user_engagement',
+          'content_type': eventParams.content_type || 'page',
+          'time_spent_seconds': timeSpent,
+          'journal_id': eventParams.journal_id,
+          'app_name': eventParams.app_name
+        });
+      });
+
+      // 스크롤 깊이 추적 (25%, 50%, 75%, 100%)
+      let scrollDepths = [25, 50, 75, 100];
+      let maxScroll = 0;
+      
+      window.addEventListener('scroll', function() {
+        const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+        
+        scrollDepths.forEach(function(depth, index) {
+          if (scrollPercent >= depth && maxScroll < depth) {
+            maxScroll = depth;
+            gtag('event', 'scroll_depth', {
+              'event_category': 'user_engagement',
+              'content_type': eventParams.content_type || 'page',
+              'scroll_depth_percent': depth,
+              'journal_id': eventParams.journal_id,
+              'app_name': eventParams.app_name
+            });
+          }
+        });
+      });
+    }
+  });
+</script>
+
+
+	
+
+
+	
+	<!--<link rel="stylesheet" type="text/css" href="/static/JATS/JATSPreviewStylesheets/jats-preview.css">	-->
+	<link rel="stylesheet" type="text/css" href="/static/design/css/xml.css?220260429">
+	<link rel="stylesheet" type="text/css" href="/static/JATS/css/jats-html.css?1120260429">
+	<link rel="stylesheet" type="text/css" href="/static/megaview/css/custom-theme/jquery-ui-1.10.3.custom.css" />
+	<link rel="stylesheet" type="text/css" href="/static/megaview/css/lhp_miv.css" />
+	<style>
+		/* megaview */
+		.JPO_close {
+			position: absolute;
+			right: 0;
+			z-index: 8888;
+			COLOR: #333;
+			background: rgba(255, 255, 255, .8);
+			font-size: 1.2rem;
+			background-image: url("/static/design/images/pop_close.png");
+			background-repeat: no-repeat;
+			background-position: center;
+			text-indent: -100px;
+			width: 30px;
+			height: 20px;
+			overflow: hidden;
+			display: none;
+		}
+		#JPO {
+			width:960px; 
+			height:600px; 
+			overflow:hidden; 
+			border:solid 15px #FFF; 
+			background: white;
+			display: none;
+		} 
+		#tooltipanchor {
+			display: none;
+			position:absolute;
+			width: 2px;
+			height: 2px;
+			/* border: 1px solid red;*/
+		}
+		.bibrLink-current,
+		.bibrLink-current * {
+			color: orange !important;
+		}
+	</style>
+
+
+	
+
+	
+
+	<script src="/static/js/jquery-3.5.1.min.js"></script>
+	<script src="/static/js/jquery.color-2.1.2.min.js"></script>
+	<script src="/static/design/js/layout.js"></script>
+	<script src="/static/sy/js/base.js?20260429"></script>
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<script src="/static/design/js/respond.js"></script>
+	<![endif]-->
+	
+	<script src="/static/js/jquery-migrate-3.3.0.min.js"></script>
+
+	
+
+	
+	<script type="text/javascript" src="/static/js/jquery.linkify.js?820260429"></script> 
+	<script type="text/javascript" src="/static/js/jquery.popupoverlay.min.js"></script>
+	<script type="text/javascript" src="/static/JATS/js/jats.js?220260429"></script>
+	<script type="text/javascript" src="/static/megaview/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="/static/megaview/js/jquery.mousewheel.min.js"></script>
+	<script type="text/javascript" src="/static/megaview/js/jquery.lhpMegaImgViewer.js"></script>
+	
+
+
+	    
+
+
+
+
+	 
+	<!-- version3 -->
+	<script>
+	
+	MathJax = {
+	  tex: {
+	    inlineMath: [['\\(', '\\)']] // [['$', '$'], ['\\(', '\\)']]
+	  },
+	  mml: {
+	    parseAs: 'html',                     // or 'xml'
+	    forceReparse: false,                 // true to serialize and re-parse all MathML
+	    parseError: function (node) {        // function to process parsing errors
+	      this.error(this.adaptor.textContent(node).replace(/\n.*/g, ''));
+	    },
+	    verify: {                            // parameters controling verification of MathML
+	      checkArity: true,                  //   check if number of children is correct
+	      checkAttributes: false,            //   check if attribute names are valid
+	      fullErrors: true,                 //   display full error messages or just error node
+	      fixMmultiscripts: true,            //   fix unbalanced mmultiscripts
+	      fixMtables: true                   //   fix incorrect nesting in mtables
+	    }
+	  },
+	  chtml: {
+	    scale: .91,                    // global scaling factor for all expressions
+	    minScale: .5,                  // smallest scaling factor to use
+	    //matchFontHeight: true,         // true to match ex-height of surrounding font
+	    //mtextInheritFont: false,       // true to make mtext elements use surrounding font
+	    //merrorInheritFont: false,      // true to make merror text use surrounding font
+	    //mtextFont: '',                 // font to use for mtext, if not inheriting (empty means use MathJax fonts)
+	    //merrorFont: 'serif',           // font to use for merror, if not inheriting (empty means use MathJax fonts)
+	    mathmlSpacing: false,          // true for MathML spacing rules, false for TeX rules
+	    skipAttributes: {},            // RFDa and other attributes NOT to copy to the output
+	    exFactor: .5,                  // default size of ex in em units
+	    displayAlign: 'left',          // default for indentalign when set to 'auto'
+	    displayIndent: '0'             // default for indentshift when set to 'auto'
+	  }
+	};
+	
+	</script>
+	
+	<script id="MathJax-script" async src="/static/vendors/MathJax-3.2.2/es5/tex-mml-chtml.js?2"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	<script>
+		$(function(){
+			$('#article-body img').hover(function(){
+				if ($(this).hasClass('megaview-detected')) return;
+				
+				if ($(this).prop('naturalWidth') > 500 || $(this).prop('naturalHeight') > 500) {
+					$(this).addClass('can-megaview megaview-detected');
+				} else {
+					$(this).addClass('cannot-megaview megaview-detected');
+				}
+			});
+			
+			$('#JPO').popup({
+				autoopen: false,
+				scrolllock: false,
+				background: true,
+				pagecontainer: '#wrap'
+			});
+			
+			$('#article-body img').click(function(e){
+				e.preventDefault();
+				
+				if (!$(this).hasClass('can-megaview')) return;
+				
+				var url = $(e.target).attr('src');
+				$.extend(megaviewSettings, {'contentUrl' : url});
+				
+				$('#JPO').popup('show');
+				$('#JPO').lhpMegaImgViewer( 'destroy' );
+				$('#JPO').lhpMegaImgViewer(megaviewSettings);
+				
+			});
+			
+			var megaviewSettings = {
+				'viewportWidth' : '100%',
+				'viewportHeight' : '100%',
+				'fitToViewportShortSide' : true,  
+				'contentSizeOver100' : false,
+				'loadingBgColor' : '#ffffff',
+				'startScale' : .5,
+				'startX' : 1100,
+				'startY' : 1700,
+				'animTime' : 500,
+				'draggInertia' : 10,
+				'zoomLevel' : 1,
+				'zoomStep' : 0.1,
+				'contentUrl' : null,
+				'intNavEnable' : true,
+				'intNavPos' : 'B',
+				'intNavAutoHide' : false,
+				'intNavMoveDownBtt' : true,
+				'intNavMoveUpBtt' : true,
+				'intNavMoveRightBtt' : true,
+				'intNavMoveLeftBtt' : true,
+				'intNavZoomBtt' : true,
+				'intNavUnzoomBtt' : true,
+				'intNavFitToViewportBtt' : true,
+				'intNavFullSizeBtt' : true,
+				'intNavBttSizeRation' : 1,
+				'mapEnable' : true,
+				'mapPos' : 'BL',
+				'popupShowAction' : 'click',
+				'testMode' : false
+			};
+		});
+	
+	</script>
+
+</head>
+<!--<img src="/static/images/Ellipsis.gif" class="ajax-global-loading" width="33" height="33"-->
+		<!--style="position: fixed;left: 50%;top: 50%;display: none;z-index: 88">-->
+
+<body class="style-
+				favorite-lang-en
+				en ko
+				">
+<div id="wrap">
+	
+	
+	
+	
+	
+
+	
+		
+			<div id="header" class="bg">
+				
+
+<!-- header(상단메뉴) -->
+<h1><a href="/">
+
+<img src="/media/logo/cM619A3S8G.png"
+     alt="None"/>
+
+<span class="issn">
+	<span class="journal-title">Journal of Construction Automation and Robotics</span>
+	<em class="issn">
+		ISSN:2800-0552(Print) 2951-116X(Online)
+	</em>
+    <em class="journal-title-ko">
+    
+        건설자동화·로보틱스 논문집
+    
+    </em>
+</span>
+</a></h1>
+<ul class="menu">
+	
+		<li><a href="/">Home</a>
+			
+		</li>
+	
+		<li><a href="/articles/current-issue/">Current Issue</a>
+			
+		</li>
+	
+		<li><a href="/articles/all-issues/">All Issues</a>
+			
+		</li>
+	
+		<li><a href="#">Journal Information</a>
+			
+				<div class="sub">
+					<ul>
+						
+							<li><a href="/journal-information/about/">About This Journal</a></li>
+						
+							<li><a href="/journal-information/pages/Aims%20and%20Scope/">Aims and Scope</a></li>
+						
+							<li><a href="/journal-information/instructions-for-authors/">Instructions for Authors</a></li>
+						
+							<li><a href="/journal-information/pages/Review%20Regulation/">Review Regulation</a></li>
+						
+							<li><a href="/journal-information/publishing-policies/">Publishing Policies</a></li>
+						
+					</ul>
+				</div>
+			
+		</li>
+	
+</ul>
+<div class="menu_mo">
+	<a href="#self" class="btn_m_menu"><img src="/static/design/images/btn_m_menu.gif" alt="menu"/></a>
+	<ul class="menu_m_list">
+		
+			<li><a href="/">Home</a>
+				
+			</li>
+		
+			<li><a href="/articles/current-issue/">Current Issue</a>
+				
+			</li>
+		
+			<li><a href="/articles/all-issues/">All Issues</a>
+				
+			</li>
+		
+			<li><a href="#">Journal Information</a>
+				
+					<div class="sub">
+						<ul>
+							
+								<li><a href="/journal-information/about/">About This Journal</a></li>
+							
+								<li><a href="/journal-information/pages/Aims%20and%20Scope/">Aims and Scope</a></li>
+							
+								<li><a href="/journal-information/instructions-for-authors/">Instructions for Authors</a></li>
+							
+								<li><a href="/journal-information/pages/Review%20Regulation/">Review Regulation</a></li>
+							
+								<li><a href="/journal-information/publishing-policies/">Publishing Policies</a></li>
+							
+						</ul>
+					</div>
+				
+			</li>
+		
+	</ul>
+</div>
+<form action="/search/" id="search">
+	<div class="search">
+		<input type="text" name="q" value="" placeholder="Enter keywords, authors etc"/><a href="javascript:$('#search').submit();void(0);">검색하기</a>
+	</div>
+</form>
+<div class="search_mo">
+	<a href="#self" class="btn_m_srch_view"><em class="skip">검색영역</em></a>
+	<div class="wrap">
+		<form action="/search/" id="search-small">
+			<span class="ip_bx"><input type="text" name="q" value=""/></span><a href="#self" class="btn_m_srch">검색하기</a>
+		</form>
+	</div>
+</div>
+<!--//header -->
+			</div>
+		
+	
+
+	<div id="container">
+		
+	<div class="wrap">
+	    <div class="content xml">
+	        <div class="title view">
+	        
+	    		<a href="/articles/article/bXDR/" class="btn_prev" title="previous page"><h2
+	                    class="xml">Preview</h2></a>
+	       
+	        </div>
+	
+	        <div class="bx_cnt_line">
+	        	
+	            
+		            <div class="crossMarkWrap">
+			    		
+	            		
+			            	<p>
+			            		
+		                        <span class="crossMark">
+					                
+						                <span class="crossref-doi-link">
+						                    <script src="https://crossmark-cdn.crossref.org/widget/v2.0/widget.js"></script>
+						                    <a data-target="crossmark"><img src="/static/design/images/btn_official_crossmark.gif"/></a>
+						                </span>
+					                
+					        	</span>
+					        	
+			            		Journal of Construction Automation and Robotics. 
+								 
+									14 April 2023. 
+								
+								13-19<br>
+		                        
+		                        <a href="https://doi.org/10.55785/JCAR.2.1.13" target="_blank"><font class="fontRed">https://doi.org/10.55785/JCAR.2.1.13</font></a>
+		                        
+		                        
+					        </p>
+	            		
+		            </div>
+				
+	
+	            <div class="xmlView xml">
+	                <div>
+	                    
+						<html><div id="article-front" class="front"><div class="metadata title-group"><h1 class="document-title">A Case Study of Automated Simulation for Excavator Cycle Time Estimation</h1><div class="metadata-entry trans-title" data-lang="ko">굴삭기 사이클 타임 추정을 위한 시뮬레이션 자동화 사례 연구</div></div><DIV class="wrapper-author"><div class="metadata contrib-group lang-en"><div class="metadata-group contrib-identify" data-lang="en"><div class="metadata-entry " data-lang="en"><a id="idm857177528" class="anchor"><!-- named anchor --></a>ChungBae Yoon<sup class="aff"><a href="#ksarc_2023_021_13_aff-1" class="bt_fn link_blue" name="bibrLink">1</a></sup></div></div>, <div class="metadata-group contrib-identify" data-lang="en"><div class="metadata-entry " data-lang="en"><a id="idm848097448" class="anchor"><!-- named anchor --></a>SangUk Han<sup class="aff"><a href="#ksarc_2023_021_13_aff-2" class="bt_fn link_blue" name="bibrLink">2</a></sup><sup>*</sup><a class="blt_email" href="mailto:sanguk@hanyang.ac.kr"></a></div></div></div><div class="metadata contrib-group lang-ko"><div class="metadata-group contrib-identify" data-lang="ko"><div class="metadata-entry " data-lang="ko"><a id="idm855790488" class="anchor"><!-- named anchor --></a>윤 충배<sup class="aff"><a href="#ksarc_2023_021_13_aff-1" class="bt_fn link_blue" name="bibrLink">1</a></sup></div></div>, <div class="metadata-group contrib-identify" data-lang="ko"><div class="metadata-entry " data-lang="ko"><a id="idm854353224" class="anchor"><!-- named anchor --></a>한 상욱<sup class="aff"><a href="#ksarc_2023_021_13_aff-2" class="bt_fn link_blue" name="bibrLink">2</a></sup><sup>*</sup><a class="blt_email" href="mailto:sanguk@hanyang.ac.kr"></a></div></div></div><div class="metadata-group aff lang-en"><div class="metadata-entry " data-lang=""><a id="ksarc_2023_021_13_aff-1" class="anchor"><!-- named anchor --></a><sup>1</sup>Combined Master’s and Ph.D Degree, Department of Civil and Environmental Engineering, Hanyang University</div><div class="metadata-entry " data-lang=""><a id="ksarc_2023_021_13_aff-2" class="anchor"><!-- named anchor --></a><sup>2</sup>Associate Professor, Department of Civil and Environmental Engineering, Hanyang University</div></div><div class="metadata-group aff lang-ko"><div class="metadata-entry " data-lang=""><a id="ksarc_2023_021_13_aff-1" class="anchor"><!-- named anchor --></a><sup>1</sup>한양대학교 건설환경공학과 석박사통합과정</div><div class="metadata-entry " data-lang=""><a id="ksarc_2023_021_13_aff-2" class="anchor"><!-- named anchor --></a><sup>2</sup>한양대학교 건설환경공학과 부교수</div></div><div class="metadata-group author-notes"><div class="metadata-area"><div class="metadata-chunk"><a id="idm855336136" class="anchor"><!-- named anchor --></a><div class="metadata-entry " data-lang="ko"><sup class="label lang-en">*Corresponding Author</sup></div></div></div></div></DIV><h1 class="abstract xmlTitleBar">ABSTRACT</h1><DIV class="wrapper-abstract"><div class="metadata abstract lang-en"><p class="first" id="idm856433864">Efficient planning of earthworks is critical for the success of construction projects, accounting for approximately 30% of the project budget. However, traditional approaches, relying on managers' experience, or using standardized estimating systems and equipment manufacturer data, are regarded as inaccurate due to the fact that such methods may are limited in incorporating various site conditions that influence excavator operation, such as digging depth, swing angle, and terrain shape. This study proposes a reinforcement learning-based simulation approach for predicting the cycle time of an excavator given field conditions. For the training of an excavator agent, terrain point clouds of a site are collected and used to build a 3D virtual simulation environment representing a real site where the agent learns how to operate the excavation through trial and error processes. The proposed approach achieves a prediction accuracy of 88.89%, which is higher than that of a traditional method (77.06%). It is thus expected that the proposed approach may allow for improving the accuracy of cycle time estimation for earthmoving planning in practice.</p></div><div class="metadata-group keywords lang-en"><div class="xmlConTit keyword lang-en">Keywords</div><div class="metadata-area"><div class="metadata-chunk lang-en"><div class="metadata-entry xmlKeyword lang-en">Reinforcement Learning</div><div class="metadata-entry xmlKeyword lang-en">Earthwork Process</div><div class="metadata-entry xmlKeyword lang-en">Excavator</div><div class="metadata-entry xmlKeyword lang-en">Cycletime Estimation</div><div class="metadata-entry xmlKeyword lang-en">Pointcloud</div></div></div></div><div class="metadata abstract lang-ko"><p class="first" id="idm851629272">건설 프로젝트를 성공적으로 수행하기 위해서는 프로젝트 전체 예산의 약 30%를 차지하는 토공 작업을 효율적으로 계획하는 것이 필수적이다. 실무에서는 흔히 공정 관리자의 경험에 의존하거나 표준품셈 혹은 장비 제조사에서 제공되는 제원을 바탕으로 토공 공정 계획의 기초적인 자료가 되는 장비의 생산성을 추정하고 있다. 하지만, 경험적 데이터에는 관리자의 주관이 반영될 수 있으며, 표준품셈 및 제조사 데이터의 경우 굴착 깊이와 회전 각도, 지형의 형태 등 굴착 작업에 영향을 끼치는 다양한 현장 환경으로 인해 장비 사이클 타임을 정확히 예측하는데 어려움이 있다. 본 연구에서는 현장 작업 조건에 따른 굴삭기 사이클 타임 예측을 위한 강화학습 기반의 시뮬레이션 기술을 제안한다. 드론을 통해 수집된 현장 지형의 포인트클라우드를 기반으로 시뮬레이션 환경이 제작되었으며, 강화학습을 통해 가상환경 내에서 자동화된 굴삭기가 굴착 작업 시뮬레이션을 반복함으로써 사이클 타임이 예측되었다. 본 기술의 예측 정확도는 88.89%로, 전통적인 방식인 표준품셈 방식(77.06%)보다 높은 수치를 보였다. 제안된 기술을 통해 보다 정확한 토공 공정 계획을 수립하여 성공적인 프로젝트를 달성하는데 기여할 수 있을 것이라 기대된다.</p></div><div class="metadata-group keywords lang-ko"><div class="xmlConTit keyword lang-ko">키워드</div><div class="metadata-area"><div class="metadata-chunk lang-ko"><div class="metadata-entry xmlKeyword lang-ko">강화학습</div><div class="metadata-entry xmlKeyword lang-ko">토공 공정</div><div class="metadata-entry xmlKeyword lang-ko">굴삭기</div><div class="metadata-entry xmlKeyword lang-ko">사이클 타임 예측</div><div class="metadata-entry xmlKeyword lang-ko">포인트클라우드</div></div></div></div></DIV><hr class="part-rule"></div><h1 class="main xmlTitleBar">MAIN</h1><div id="article-body" class="body"><div class="list xmlContentsList mt10"><a id="idm856806648" class="anchor"><!-- named anchor --></a><ul style="list-style-type: none"><li><p id="idm854435704">1. 서    론</p></li><li><p id="idm854817080">2. 선행연구 조사</p></li><li><p id="idm855112200">  2.1 중장비의 생산성 및 사이클 타임 예측</p></li><li><p id="idm854727688">  2.2 토목 분야의 강화학습 적용 사례</p></li><li><p id="idm850353368">3. 기술 구현 및 현장 검증</p></li><li><p id="idm855273800">  3.1 강화학습 기반 시뮬레이션 환경 구현</p></li><li><p id="idm857183000">  3.2 성능 평가</p></li><li><p id="idm852231128">4. 결 론</p></li></ul></div><div class="section"><a id="ksarc_2023_021_13_sec1" class="anchor"><!-- named anchor --></a><p class="xmlTitle" id="idm850549352"><span class="sec-label"><sup class="warning"></sup></span> 1. 서    론</p><p id="idm855335272">대부분의 건설 프로젝트에서 고속도로, 댐, 교량, 건물 등의 구조물을 건설하기에 앞서 토공 작업이 수행된다. 토공 공정은 대량의 흙을 운반 및 매립하여 지표면을 계획한 형태로 변형시키는 작업을 의미하며, 이 과정에서 전체 건설 예산의 25~30%가 소요된다고 알려져 있다(<a href="#ksarc_2023_021_13_r11" class="bt_fn link_blue" name="bibrLink">Hola and Schabowicz, 2010</a>; <a href="#ksarc_2023_021_13_r21" class="bt_fn link_blue" name="bibrLink">Lu et al., 2007</a>). 따라서, 건설 프로젝트를 성공적으로 수행하기 위해서는 토공 작업에 발생하는 비용을 최소화하기 위한 노력이 필요하며, 이는 정확한 장비 생산성(시간당 작업량) 추정을 바탕으로 공정 계획을 최적화함으로써 달성할 수 있다(<a href="#ksarc_2023_021_13_r29" class="bt_fn link_blue" name="bibrLink">Shehadeh et al., 2022</a>).</p><p id="idm849880696">굴삭기는 가장 많이 이용되는 중장비로, 건설 프로젝트에서 굴착, 절토 된 토사의 적재, 평탄화 등 다양한 역할을 수행하며 토공 공정 시 발생하는 비용에 큰 영향을 끼친다(<a href="#ksarc_2023_021_13_r33" class="bt_fn link_blue" name="bibrLink">Yang et al., 2003</a>; <a href="#ksarc_2023_021_13_r31" class="bt_fn link_blue" name="bibrLink">Vahdatikhaki et al., 2015</a>; <a href="#ksarc_2023_021_13_r22" class="bt_fn link_blue" name="bibrLink">Mahmood et al., 2022</a>). 전통적으로 굴삭기의 생산성을 추정하는데 필요한 사이클 타임은 프로젝트 관리자의 경험적 데이터, 표준품셈, 장비 제조사에서 제공되는 제원(예, 사이클 타임 테이블) 등을 바탕으로 이론적으로 예측하는 것이 일반적이다(<a href="#ksarc_2023_021_13_r25" class="bt_fn link_blue" name="bibrLink">Parente et al., 2016</a>). 그러나, 기존 방식을 통해 추정된 장비의 사이클 타임과 실제 현장의 사이클 타임 값에는 오차가 있다고 보고되었다(<a href="#ksarc_2023_021_13_r12" class="bt_fn link_blue" name="bibrLink">Holt and Edwards, 2015</a>; <a href="#ksarc_2023_021_13_r26" class="bt_fn link_blue" name="bibrLink">Rashidi et al., 2014</a>; <a href="#ksarc_2023_021_13_r2" class="bt_fn link_blue" name="bibrLink">Akhavian and Behzadan, 2014</a>). 뿐만 아니라, 굴삭기의 작업은 굴착 깊이와 회전 각도, 지형의 경사와 생김새 등 다양한 현장 환경에 영향을 받기 때문에 계획 단계에서 사이클 타임을 정확히 예측을 하는데 어려움이 있다(<a href="#ksarc_2023_021_13_r33" class="bt_fn link_blue" name="bibrLink">Yang et al., 2003</a>, <a href="#ksarc_2023_021_13_r20" class="bt_fn link_blue" name="bibrLink">Lee et al., 2008</a>, <a href="#ksarc_2023_021_13_r16" class="bt_fn link_blue" name="bibrLink">Kim et al., 2020</a>). 이에, 본 연구에서는 굴삭기를 대상으로 기계학습의 한 종류인 강화학습(Reinforcement learning, RL)을 기반으로 현장 작업 조건에 따른 사이클 타임을 추정하는 기법을 제안한다.</p></div><div class="section"><a id="ksarc_2023_021_13_sec2" class="anchor"><!-- named anchor --></a><p class="xmlTitle" id="idm849270856"><span class="sec-label"><sup class="warning"></sup></span> 2. 선행연구 조사</p><p id="idm855334040">2.1 중장비의 생산성 및 사이클 타임 예측</p><p id="idm858774216">토공 장비의 생산성은 장비가 사이클당 수행할 수 있는 흙의 양에 사이클 수를 곱한 값, 즉 장비가 단위 시간 내에 작업을 수행한 토사의 양을 의미하며, 전통적인 굴삭기 생산성 및 사이클 타임 예측 방식의 한계를 개선하기 위해 여러 연구가 수행되었다. 일례로, <a href="#ksarc_2023_021_13_r6" class="bt_fn link_blue" name="bibrLink">Edwards and Holt(2000)</a>는 다중 회귀 분석을, <a href="#ksarc_2023_021_13_r33" class="bt_fn link_blue" name="bibrLink">Yang et al.(2003)</a>은 퍼지 모델을 이용하여 굴삭기의 사이클 타임을 예측하였으며, <a href="#ksarc_2023_021_13_r27" class="bt_fn link_blue" name="bibrLink">Sağlam and Bettemir(2018)</a>는 몬테카를로 시뮬레이션을 통해 굴착작업 소요시간을 예측하는 방법론을 제안하였다. 한편, 기계학습은 인간이 해결하기 힘든 복잡한 문제를 보다 빠르게 해결할 수 있다는 장점으로 인해 교량 유지보수(<a href="#ksarc_2023_021_13_r13" class="bt_fn link_blue" name="bibrLink">Jaafaru et al., 2022</a>), 토공 모니터링(<a href="#ksarc_2023_021_13_r16" class="bt_fn link_blue" name="bibrLink">Kim and Chi, 2020</a>) 등에 응용되는 등 건설 산업에도 기여하고 있으며, 토공 장비의 생산성을 예측하기 위해서도 기계학습 기술이 사용되고 있다. 일례로, <a href="#ksarc_2023_021_13_r30" class="bt_fn link_blue" name="bibrLink">Tam et al.(2002)</a>은 굴삭기의 사이클타임을 예측하는 연구에서 인공신경망(Artificial Neural Network, ANN) 기술을 사용했으며, <a href="#ksarc_2023_021_13_r5" class="bt_fn link_blue" name="bibrLink">Edwards and Griffiths(2000)</a>는 굴삭기의 사이클타임과 굴착공정에 소요되는 비용을 예측하기 위해 ANN 기술을 채택했다.</p><p id="idm854784168">하지만, 이러한 노력에도 불구하고 기존의 연구에서 해결되지 못한 한계점은 다음과 같다. 회귀 모델과 인공신경망 모델 등 예측을 학습시키기 위해서는 다량의 입력 데이터가 필요하다. 하지만, 토공 공정의 경우 다양한 현장 조건에 따른 충분한 학습 데이터가 부재한 실정이며 현장에서의 데이터 수집에 많은 시간이 요구되는 등 데이터 확보에 어려움이 있다(<a href="#ksarc_2023_021_13_r23" class="bt_fn link_blue" name="bibrLink">Nikas et al., 2007</a>; <a href="#ksarc_2023_021_13_r15" class="bt_fn link_blue" name="bibrLink">Kim et al., 2019</a>). 또한, 기존 방식들의 경우 시시각각 변하는 현장 작업 조건(예, 지형, 장애물, 회전 각도, 굴착 깊이)을 사이클 타임 추정에 정확히 반영하는데 한계가 있다.</p><p id="idm857887800">2.2 토목 분야의 강화학습 적용 사례</p><p id="idm856035304">최근 건설 분야에서도 강화학습이 터널(<a href="#ksarc_2023_021_13_r9" class="bt_fn link_blue" name="bibrLink">Erharter et al., 2021</a>), 교통 시스템(<a href="#ksarc_2023_021_13_r10" class="bt_fn link_blue" name="bibrLink">Genders et al., 2019</a>) 등 다양한 연구 주제에 적용되고 있다. 여러 도메인 중 건설 장비에 대한 연구 또한 다양하게 진행되고 있는데, 일례로 <a href="#ksarc_2023_021_13_r1" class="bt_fn link_blue" name="bibrLink">Adi et al.(2020)</a>은 트럭의 최적 경로를 찾기 위해, <a href="#ksarc_2023_021_13_r3" class="bt_fn link_blue" name="bibrLink">Ali and Frimpong(2021)</a>은 덤프트럭의 자동화를 위해, <a href="#ksarc_2023_021_13_r4" class="bt_fn link_blue" name="bibrLink">Cho and Han(2022)</a>은 타워크레인의 양중 작업 경로 계획을 위해 강화학습을 도입하였다. 또한, 굴삭기와 관련된 연구에서도 강화학습이 적용되고 있으며, 일례로 <a href="#ksarc_2023_021_13_r19" class="bt_fn link_blue" name="bibrLink">Kurinov et al.(2020)</a>은 강화학습을 통해 가상 환경에서 굴삭기를 자동화하였고, <a href="#ksarc_2023_021_13_r8" class="bt_fn link_blue" name="bibrLink">Egli and Hutter(2020</a>, <a href="#ksarc_2023_021_13_r7" class="bt_fn link_blue" name="bibrLink">2022</a>)는 실제 굴삭기 자동화를 위해 강화학습 기법을 이용하였다. <a href="#ksarc_2023_021_13_r32" class="bt_fn link_blue" name="bibrLink">Woo et al.(2018)</a>는 학습 환경의 이미지를 강화학습의 입력 값으로 설정하고, 컴퓨터 비전 기술에서 널리 사용되는 합성곱 신경망(Convolutional Neural Network, CNN)과 강화학습을 결합하여 토공 공정에서 굴착 순서를 최적화하는 방법을 제안하였다.</p><p id="idm850119112">하지만, 기존 굴삭기 관련 강화학습 연구에서 제안된 기술들을 건설 현장에서 바로 적용하기 위해서는 추가적인 연구가 필요하다 판단된다. 예를 들어, 굴삭기 자동화 기술의 경우 실제 현장에서 안전하게 구현되기 위해서는 로보틱스, 센싱 등의 요소들에 대한 고려가 필요하며, 굴착 순서 최적화 기술의 경우 2차원의 그리드 환경에서 기술이 구현되었기 때문에 실제 현장 특성을 반영하는 3차원 환경에 대한 추가적인 연구가 필요할 수 있다. 본 연구에서는 강화학습 기반의 굴삭기 작업 3D 시뮬레이션을 통해 장비의 제원(예, 몸통의 회전속도, 버켓의 회전 속도 등)을 반영한 굴삭기 에이전트를 현장 지형을 반영한 포인트클라우드 기반의 가상환경에서 학습하여 사이클 타임을 예측한다.</p></div><div class="section"><a id="ksarc_2023_021_13_sec3" class="anchor"><!-- named anchor --></a><p class="xmlTitle" id="idm851256488"><span class="sec-label"><sup class="warning"></sup></span> 3. 기술 구현 및 현장 검증</p><p id="idm851256024">3.1 강화학습 기반 시뮬레이션 환경 구현</p><p id="idm833428552">3.1.1 3차원 가상환경 구현</p><p id="idm834151112">강화 학습 시뮬레이션 환경은 <a href="#ksarc_2023_021_13_F1" class="bt_fn link_blue" name="bibrLink">Fig. 1</a>과 같이 3단계로 구현되었다. 먼저 드론을 이용하여 현장의 포인트 클라우드를 수집하고 Pix4D 소프트웨어를 이용하여 드론을 통해 수집된 지형 이미지에서 포인트 클라우드를 추출하였다. 두 번째로, Cloud Compare 소프트웨어를 사용하여 포인트 클라우드를 메쉬 형태로 변환한 뒤 Unity 3차원 가상환경에 입력하였다. 마지막으로, 굴삭기의 장비 제원을 참고하여 실제 굴삭기와 동일한 속도로 작동하는 가상 환경 굴삭기를 구현하고 굴착 공정이 수행되는 위치에 굴삭기와 덤프트럭을 배치하였다.</p><p id="idm856807112"><div style="padding: 0 0px;" class="graphic-style"><div class="fig panel"><a id="ksarc_2023_021_13_F1" class="anchor"><!-- named anchor --></a><img alt="https://cdn.apub.kr/journalsite/sites/ksarc/2023-002-01/N0410020103/images/ksarc_02_01_03_F1.jpg" src="https://cdn.apub.kr/journalsite/sites/ksarc/2023-002-01/N0410020103/images/ksarc_02_01_03_F1.jpg"><h5 class="label">Fig. 1</h5><div class="caption"><h3 class="title">Process of simulation environment implementation</h3></div></div></div></p><p id="idm855411944">지형의 경사와 생김새는 굴착을 위한 회전 각도, 굴착 깊이, 장애물 유무 등 굴삭기의 작업 조건에 영향을 미친다. 일례로, 전후 5%, 좌우 3% 이상의 경사는 굴삭기의 작업을 위태롭게 만들 수 있으며, 35도 이상의 급경사는 굴삭기가 오르내릴 수 없어 굴착 작업에서 장애물로 인식되어 굴삭기의 작업 경로에 영향을 끼칠 수 있다(<a href="#ksarc_2023_021_13_r17" class="bt_fn link_blue" name="bibrLink">Kim et al., 2020</a>). 본 현장의 경우, 굴착작업이 수행되는 위치의 지형이 평탄하여 작업이 안정적일 것으로 확인되었으며, 굴삭기 에이전트가 급경사를 장애물로 인식하도록 설정하였다. 또한, 본 현장의 지형을 확인한 바, 굴삭기의 위치가 사이클타임에 유의미한 영향을 끼치지 않는다 판단하여, 효율적인 강화학습을 위해 굴삭기의 위치는 고정되어 있다 가정하였다.</p><p id="idm855036520">3.1.2 강화학습 모델링 및 훈련</p><p id="idm855040424">강화학습은 기계학습의 한 종류로, 의사결정의 주체인 에이전트(agent)가 환경(environment)을 관찰(observation)하며 행동(action)함으로써 상호작용하고, 사용자가 정해준 보상 함수(reward function)에 따라 주어지는 보상의 값을 최대화하는 방향으로 행동(action)의 확률분포인 정책(policy)을 변경하는 방식으로 학습이 진행된다(<a href="#ksarc_2023_021_13_F2" class="bt_fn link_blue" name="bibrLink">Fig. 2</a>). 이에, 강화학습은 일반적으로 주어진 환경에서 에피소드(episode)를 반복하며 시행착오(trial and error)를 통해 학습을 진행함에 따라 학습 데이터가 필요하지 않는다는 장점이 있다. 본 연구에서는 굴삭기 에이전트를 강화학습시켜 가상환경 내에서 자동화한 뒤, 3차원 가상환경 내에서 굴착 작업을 시뮬레이션하여 사이클 타임을 예측하였다. 강화학습은 Proximal Policy Optimization(<a href="#ksarc_2023_021_13_r28" class="bt_fn link_blue" name="bibrLink">Schulman et al., 2017</a>) 알고리즘을 기반으로 구현되었다.</p><p id="idm849968840"><div style="padding: 0 200px;" class="graphic-style"><div class="fig panel"><a id="ksarc_2023_021_13_F2" class="anchor"><!-- named anchor --></a><img alt="https://cdn.apub.kr/journalsite/sites/ksarc/2023-002-01/N0410020103/images/ksarc_02_01_03_F2.jpg" src="https://cdn.apub.kr/journalsite/sites/ksarc/2023-002-01/N0410020103/images/ksarc_02_01_03_F2.jpg"><h5 class="label">Fig. 2</h5><div class="caption"><h3 class="title">Mechanism of reinforcement learning</h3></div></div></div></p><p id="idm855793336">강화학습을 위한 입력 값인 관찰을 위해 거리 센서를 통해 수집되는 거리 데이터(<a href="#ksarc_2023_021_13_F2" class="bt_fn link_blue" name="bibrLink">Fig. 2</a>의 distance sensing data)와 굴삭기 에이전트와 트럭, 굴착 지점 등 굴삭기 주변 지형 지물과의 관계 데이터(<a href="#ksarc_2023_021_13_F3" class="bt_fn link_blue" name="bibrLink">Fig. 3</a>), 그리고 굴삭기 주요 부품(암, 붐, 버켓, 몸통) 별 회전 각도가 이용되었다(<a href="#ksarc_2023_021_13_T1" class="bt_fn link_blue" name="bibrLink">Table 1</a>, <a href="#ksarc_2023_021_13_F4" class="bt_fn link_blue" name="bibrLink">Fig. 4</a>). 관계 데이터의 일례로, 굴삭기의 버켓과 굴착 지점 사이의 거리 및 각도, 트럭의 위치 등이 이용되었다.</p><p id="idm854594600"><div style="padding: 0 200px;" class="graphic-style"><div class="fig panel"><a id="ksarc_2023_021_13_F3" class="anchor"><!-- named anchor --></a><img alt="https://cdn.apub.kr/journalsite/sites/ksarc/2023-002-01/N0410020103/images/ksarc_02_01_03_F3.jpg" src="https://cdn.apub.kr/journalsite/sites/ksarc/2023-002-01/N0410020103/images/ksarc_02_01_03_F3.jpg"><h5 class="label">Fig. 3</h5><div class="caption"><h3 class="title">Environmental data by excavator agent and other components : (a)<i>V<sub>tb</sub></i>=Vector from truck’s basket to bucket, (b)<i>V<sub>ts</sub></i>=Vector from truck’s basket to excavated dirt, (c)<i>a<sub>d</sub></i>=Angle between bucket and digging point, = Angle between bucket and truck, (d)<i>D<sub>d</sub></i>=Distance between bucket and digging point</h3></div></div></div></p><p id="idm856942152"><div style="padding: 0 0px;" class="graphic-style"><div class="fig panel"><a id="ksarc_2023_021_13_F4" class="anchor"><!-- named anchor --></a><img alt="https://cdn.apub.kr/journalsite/sites/ksarc/2023-002-01/N0410020103/images/ksarc_02_01_03_F4.jpg" src="https://cdn.apub.kr/journalsite/sites/ksarc/2023-002-01/N0410020103/images/ksarc_02_01_03_F4.jpg"><h5 class="label">Fig. 4</h5><div class="caption"><h3 class="title">Angle of each components of excavator agent’s as a environmental data : (a)<i>∆a<sub>body</sub></i>= Angle of rotation of body, (b)<i>∆a<sub>boom</sub></i>= Angle of rotation of boom, (c)<i>∆a<sub>arm</sub></i>= Angle of rotation of arm, (d) <i>∆a<sub>bucket</sub></i>= Angle of rotation of bucket</h3></div></div></div></p><div class="table-wrap panel"><a id="ksarc_2023_021_13_T1" class="anchor"><!-- named anchor --></a><h5 class="label">Table 1.</h5><div class="caption"><h4 class="subsection-title">Observations for excavator reinforcement learning</h4></div><table><a id="idm854751960" class="anchor"><!-- named anchor --></a><tbody><a id="idm854751704" class="anchor"><!-- named anchor --></a><tr><a id="idm854751448" class="anchor"><!-- named anchor --></a><td><a id="idm833425624" class="anchor"><!-- named anchor --></a>
+			Number
+			</td><td><a id="idm833425192" class="anchor"><!-- named anchor --></a>
+			Contents
+			</td></tr><tr><a id="idm851043608" class="anchor"><!-- named anchor --></a><td><a id="idm851043352" class="anchor"><!-- named anchor --></a>
+			1
+			</td><td><a id="idm854355256" class="anchor"><!-- named anchor --></a>
+			cos<i>a<sub>d</sub></i></td></tr><tr><a id="idm854883544" class="anchor"><!-- named anchor --></a><td><a id="idm850263096" class="anchor"><!-- named anchor --></a>
+			2
+			</td><td><a id="idm850262680" class="anchor"><!-- named anchor --></a>
+			cos<i>a<sub>t</sub></i></td></tr><tr><a id="idm854797640" class="anchor"><!-- named anchor --></a><td><a id="idm854797384" class="anchor"><!-- named anchor --></a>
+			3
+			</td><td><a id="idm854797000" class="anchor"><!-- named anchor --></a>
+			Position of the excavated dirt
+			</td></tr><tr><a id="idm858686360" class="anchor"><!-- named anchor --></a><td><a id="idm858686104" class="anchor"><!-- named anchor --></a>
+			4
+			</td><td><a id="idm856907656" class="anchor"><!-- named anchor --></a>
+			Position of the dump truck
+			</td></tr><tr><a id="idm854467496" class="anchor"><!-- named anchor --></a><td><a id="idm854467240" class="anchor"><!-- named anchor --></a>
+			5
+			</td><td><a id="idm854466824" class="anchor"><!-- named anchor --></a><i>d<sub>d</sub></i></td></tr><tr><a id="idm855249400" class="anchor"><!-- named anchor --></a><td><a id="idm855249144" class="anchor"><!-- named anchor --></a>
+			6
+			</td><td><a id="idm855704984" class="anchor"><!-- named anchor --></a><i>∆a<sub>body</sub></i>, <i>∆a<sub>boom</sub></i>, <i>∆a<sub>arm</sub></i>, <i>∆a<sub>bucket</sub></i></td></tr><tr><a id="idm857505032" class="anchor"><!-- named anchor --></a><td><a id="idm857504776" class="anchor"><!-- named anchor --></a>
+			7
+			</td><td><a id="idm855261624" class="anchor"><!-- named anchor --></a>
+			Distance sensing data from virtual sensors
+			</td></tr></tbody></table></div><p id="idm855116056">학습의 기준이 되는 보상 함수로는 매 단위 시간(0.02초) 마다 주어지는 연속적인 보상 함수가 6개, 그리고 특수한 조건이 달성되었을 때 주어지는 이산적인 보상 함수가 8개 이용되었다(<a href="#ksarc_2023_021_13_T2" class="bt_fn link_blue" name="bibrLink">Table 2</a>). 각각의 보상은 굴착 된 흙을 떨어뜨리지 않도록 버켓의 각도를 일정하게 유지하거나, 굴착 된 흙을 트럭에 적재하기 위해 버켓을 트럭보다 높게 드는 등 특정 목적을 달성하는 방향으로 강화학습이 진행될 수 있도록 구성되었다. 또한, 효율적인 학습을 위해 굴삭기의 4가지 세부 작업 단계(굴착, 적재 전 회전, 적재, 적재 후 회전)에 따라 서로 다른 보상 함수 조합이 적용되었다(<a href="#ksarc_2023_021_13_T3" class="bt_fn link_blue" name="bibrLink">Table 3</a>).</p><div class="table-wrap panel"><a id="ksarc_2023_021_13_T2" class="anchor"><!-- named anchor --></a><h5 class="label">Table 2.</h5><div class="caption"><h4 class="subsection-title">Excavator reinforcement learning reward functions</h4></div><table><a id="idm856802360" class="anchor"><!-- named anchor --></a><tbody><a id="idm856802104" class="anchor"><!-- named anchor --></a><tr><a id="idm854807464" class="anchor"><!-- named anchor --></a><td><a id="idm854807208" class="anchor"><!-- named anchor --></a>
+			Reward
+			</td><td><a id="idm856829304" class="anchor"><!-- named anchor --></a>
+			Terms
+			</td></tr><tr><a id="idm856828744" class="anchor"><!-- named anchor --></a><td><a id="idm856349000" class="anchor"><!-- named anchor --></a>
+			CR1
+			</td><td><a id="idm856348584" class="anchor"><!-- named anchor --></a>
+			If dirt is inside the bucket, positive reward
+			</td></tr><tr><a id="idm845991832" class="anchor"><!-- named anchor --></a><td><a id="idm845991576" class="anchor"><!-- named anchor --></a>
+			CR2
+			</td><td><a id="idm855939816" class="anchor"><!-- named anchor --></a>
+			Positive reward inversely proportional to
+			</td></tr><tr><a id="idm855939192" class="anchor"><!-- named anchor --></a><td><a id="idm855938872" class="anchor"><!-- named anchor --></a>
+			CR3
+			</td><td><a id="idm855938456" class="anchor"><!-- named anchor --></a>
+			Positive reward proportional to
+			</td></tr><tr><a id="idm858658792" class="anchor"><!-- named anchor --></a><td><a id="idm858658536" class="anchor"><!-- named anchor --></a>
+			CR4
+			</td><td><a id="idm854515896" class="anchor"><!-- named anchor --></a>
+			Positive reward proportional to )
+			</td></tr><tr><a id="idm854515384" class="anchor"><!-- named anchor --></a><td><a id="idm855748760" class="anchor"><!-- named anchor --></a>
+			CR5
+			</td><td><a id="idm855748344" class="anchor"><!-- named anchor --></a>
+			Negative reward as time goes
+			</td></tr><tr><a id="idm855354712" class="anchor"><!-- named anchor --></a><td><a id="idm855354456" class="anchor"><!-- named anchor --></a>
+			CR6
+			</td><td><a id="idm845993176" class="anchor"><!-- named anchor --></a>
+			Negative reward proportional to
+			</td></tr><tr><a id="idm845992664" class="anchor"><!-- named anchor --></a><td><a id="idm845992408" class="anchor"><!-- named anchor --></a>
+			DR1
+			</td><td><a id="idm855689480" class="anchor"><!-- named anchor --></a>
+			If bucket reach dig position, positive reward
+			</td></tr><tr><a id="idm847127016" class="anchor"><!-- named anchor --></a><td><a id="idm847126760" class="anchor"><!-- named anchor --></a>
+			DR2
+			</td><td><a id="idm847126344" class="anchor"><!-- named anchor --></a>
+			If dumping is completed, positive reward
+			</td></tr><tr><a id="idm844630088" class="anchor"><!-- named anchor --></a><td><a id="idm844629832" class="anchor"><!-- named anchor --></a>
+			DR3
+			</td><td><a id="idm858055976" class="anchor"><!-- named anchor --></a>
+			If bucket bottom touch terrain, negative reward
+			</td></tr><tr><a id="idm858055336" class="anchor"><!-- named anchor --></a><td><a id="idm857216600" class="anchor"><!-- named anchor --></a>
+			DR4
+			</td><td><a id="idm857216216" class="anchor"><!-- named anchor --></a>
+			If dirt dropped, negative reward
+			</td></tr><tr><a id="idm848845160" class="anchor"><!-- named anchor --></a><td><a id="idm848844904" class="anchor"><!-- named anchor --></a>
+			DR5
+			</td><td><a id="idm848844520" class="anchor"><!-- named anchor --></a>
+			If bucket penetrate terrain, negative reward
+			</td></tr><tr><a id="idm856036216" class="anchor"><!-- named anchor --></a><td><a id="idm856035960" class="anchor"><!-- named anchor --></a>
+			DR6
+			</td><td><a id="idm854531992" class="anchor"><!-- named anchor --></a>
+			If rotates opposite direction, negative reward
+			</td></tr><tr><a id="idm853868008" class="anchor"><!-- named anchor --></a><td><a id="idm853867752" class="anchor"><!-- named anchor --></a>
+			DR7
+			</td><td><a id="idm853867336" class="anchor"><!-- named anchor --></a>
+			If components collide, negative reward
+			</td></tr><tr><a id="idm854772152" class="anchor"><!-- named anchor --></a><td><a id="idm854771896" class="anchor"><!-- named anchor --></a>
+			DR8
+			</td><td><a id="idm849961048" class="anchor"><!-- named anchor --></a>
+			If excavator hit the truck, negative reward
+			</td></tr></tbody></table></div><div class="table-wrap panel"><a id="ksarc_2023_021_13_T3" class="anchor"><!-- named anchor --></a><h5 class="label">Table 3.</h5><div class="caption"><h4 class="subsection-title">Reward functions for excavator reinforcement learning by detailed excavation process</h4></div><table><a id="idm856857144" class="anchor"><!-- named anchor --></a><tbody><a id="idm856856888" class="anchor"><!-- named anchor --></a><tr><a id="idm856856632" class="anchor"><!-- named anchor --></a><td rowspan="2"><a id="idm848677576" class="anchor"><!-- named anchor --></a>
+			Stage
+			</td><td colspan="2"><a id="idm848676952" class="anchor"><!-- named anchor --></a>
+			Positive Reward Function
+			</td><td colspan="2"><a id="idm855037976" class="anchor"><!-- named anchor --></a>
+			Negative Reward Function
+			</td></tr><tr><a id="idm858635304" class="anchor"><!-- named anchor --></a><td><a id="idm858635048" class="anchor"><!-- named anchor --></a>
+			Continuous
+			</td><td><a id="idm854799416" class="anchor"><!-- named anchor --></a>
+			Discrete
+			</td><td><a id="idm854799032" class="anchor"><!-- named anchor --></a>
+			Continuous
+			</td><td><a id="idm856462776" class="anchor"><!-- named anchor --></a>
+			Discrete
+			</td></tr><tr><a id="idm856462216" class="anchor"><!-- named anchor --></a><td><a id="idm856461960" class="anchor"><!-- named anchor --></a>
+			Digging
+			</td><td><a id="idm854815544" class="anchor"><!-- named anchor --></a>
+			CR1 + CR3
+			</td><td><a id="idm854815112" class="anchor"><!-- named anchor --></a></td><td><a id="idm856054632" class="anchor"><!-- named anchor --></a></td><td><a id="idm856054248" class="anchor"><!-- named anchor --></a>
+			DR3
+			</td></tr><tr><a id="idm848839560" class="anchor"><!-- named anchor --></a><td><a id="idm848839304" class="anchor"><!-- named anchor --></a>
+			Swing
+			</td><td><a id="idm854685864" class="anchor"><!-- named anchor --></a>
+			CR1 + CR4
+			</td><td><a id="idm854685432" class="anchor"><!-- named anchor --></a></td><td><a id="idm854685016" class="anchor"><!-- named anchor --></a></td><td><a id="idm858727832" class="anchor"><!-- named anchor --></a>
+			DR3
+			</td></tr><tr><a id="idm858727288" class="anchor"><!-- named anchor --></a><td><a id="idm851518552" class="anchor"><!-- named anchor --></a>
+			Dumping
+			</td><td><a id="idm851518168" class="anchor"><!-- named anchor --></a></td><td><a id="idm849271896" class="anchor"><!-- named anchor --></a>
+			DR1
+			</td><td><a id="idm849271480" class="anchor"><!-- named anchor --></a>
+			CR6
+			</td><td><a id="idm849271064" class="anchor"><!-- named anchor --></a></td></tr><tr><a id="idm854755288" class="anchor"><!-- named anchor --></a><td><a id="idm854755032" class="anchor"><!-- named anchor --></a>
+			Returning
+			</td><td><a id="idm855114696" class="anchor"><!-- named anchor --></a>
+			CR2
+			</td><td><a id="idm855114280" class="anchor"><!-- named anchor --></a>
+			DR2
+			</td><td><a id="idm858740440" class="anchor"><!-- named anchor --></a></td><td><a id="idm858740024" class="anchor"><!-- named anchor --></a>
+			DR4
+			</td></tr><tr><a id="idm857163896" class="anchor"><!-- named anchor --></a><td><a id="idm857163640" class="anchor"><!-- named anchor --></a></td><td><a id="idm857163224" class="anchor"><!-- named anchor --></a></td><td><a id="idm857886504" class="anchor"><!-- named anchor --></a></td><td><a id="idm857886088" class="anchor"><!-- named anchor --></a></td><td><a id="idm854754568" class="anchor"><!-- named anchor --></a></td></tr><tr><a id="idm854754024" class="anchor"><!-- named anchor --></a><td><a id="idm854753768" class="anchor"><!-- named anchor --></a>
+			Every Stage
+			</td><td><a id="idm852229688" class="anchor"><!-- named anchor --></a></td><td><a id="idm852229272" class="anchor"><!-- named anchor --></a></td><td><a id="idm858729800" class="anchor"><!-- named anchor --></a>
+			CR5
+			</td><td><a id="idm858729384" class="anchor"><!-- named anchor --></a>
+			DR4 + DR5 + DR6 +<br class="br">
+
+			DR7+ DR8
+			</td></tr></tbody></table></div><p id="idm854611496">3.2 성능 평가</p><p id="idm858494680">3.2.1 강화학습 결과</p><p id="idm858494232">효율적인 학습을 위하여, 17,670,000 스텝까지는 적재 후 회전하여 굴삭기의 버켓이 목표 굴착 지점에 도달하는 시점에 에피소드가 끝나도록 학습이 진행되었으며, 본 단계의 학습에서 누적 보상은 약 1,000에 도달하였을 때 수렴되는 양상을 보였다. 이후, 굴착, 굴착 후 회전, 적재, 적재 후 회전 과정이 모두 완료되는 시점에 에피소드가 끝나도록 환경을 설정하여 학습을 재개하였고, 최종적으로 약 7억 스텝의 학습이 진행되었을 때 누적 보상이 약 6,000에 수렴하였다(<a href="#ksarc_2023_021_13_F5" class="bt_fn link_blue" name="bibrLink">Fig. 5</a>).</p><p id="idm854395192"><div style="padding: 0 200px;" class="graphic-style"><div class="fig panel"><a id="ksarc_2023_021_13_F5" class="anchor"><!-- named anchor --></a><img alt="https://cdn.apub.kr/journalsite/sites/ksarc/2023-002-01/N0410020103/images/ksarc_02_01_03_F5.jpg" src="https://cdn.apub.kr/journalsite/sites/ksarc/2023-002-01/N0410020103/images/ksarc_02_01_03_F5.jpg"><h5 class="label">Fig. 5</h5><div class="caption"><h3 class="title">Cumulative reward for steps</h3></div></div></div></p><p id="idm833423240">3.2.2 현장 데이터와의 비교를 통한 기술 검증</p><p id="idm858737080">본 연구에서 제안하는 강화학습 기반 3D 시뮬레이션 기술은 실제 현장에서 수집된 굴삭기의 사이클 타임 데이터와 시뮬레이션 기법을 통해 예측된 사이클 타임을 비교하고, 또한 이와 표준품셈을 이용한 전통적 방식의 예측 정확도를 비교함으로써 그 성능을 평가한다. 현장에서는 총 108개의 사이클 타임이 수집되었으며, 시뮬레이션을 통해 예측된 사이클 타임과 비교되었다.</p><p id="idm858736696"><a href="#ksarc_2023_021_13_F6" class="bt_fn link_blue" name="bibrLink">Fig. 6</a>는 표준품셈과 강화학습 시뮬레이션을 통해 예측된 사이클 타임의 회전 각도와 굴착 깊이 별 분포를 나타내며, 시뮬레이션을 통해 현장 작업 조건에 따른 사이클 타임이 예측되었음을 확인할 수 있다. <a href="#ksarc_2023_021_13_T4" class="bt_fn link_blue" name="bibrLink">Table 4</a>는 강화학습 시뮬레이션과 표준품셈을 통한 사이클 타임 예측 정확도를 나타낸다. 실제 현장의 굴삭기의 평균 사이클 타임은 23.23초였으며, 예측 사이클 타임은 표준품셈 방식의 경우 17.9초, 강화학습 시뮬레이션 기법의 경우 20.65초였다. 전통적인 방식의 예측 정확도가 77.06%인 반면, 본 연구에서 제안된 기법은 88.89%의 정확도를 보였으며, <a href="#ksarc_2023_021_13_r14" class="bt_fn link_blue" name="bibrLink">Kassem et al.(2021)</a>에 따르면 80%가 신뢰할 수 있는 예측의 임계 값이므로, 전통적 방식보다 제안된 기법을 채택하는 것이 타당하다 판단된다.</p><p id="idm855749608"><div style="padding: 0 200px;" class="graphic-style"><div class="fig panel"><a id="ksarc_2023_021_13_F6" class="anchor"><!-- named anchor --></a><img alt="https://cdn.apub.kr/journalsite/sites/ksarc/2023-002-01/N0410020103/images/ksarc_02_01_03_F6.jpg" src="https://cdn.apub.kr/journalsite/sites/ksarc/2023-002-01/N0410020103/images/ksarc_02_01_03_F6.jpg"><h5 class="label">Fig. 6</h5><div class="caption"><h3 class="title">Comparison cycletime distributions of simulation and standardized estimating systems by : (a) swing angle, (b) digging depth</h3></div></div></div></p><div class="table-wrap panel"><a id="ksarc_2023_021_13_T4" class="anchor"><!-- named anchor --></a><h5 class="label">Table 4.</h5><div class="caption"><h4 class="subsection-title">Cycle time estimation accuracy of traditional and RL simulation methods</h4></div><table><a id="idm854796376" class="anchor"><!-- named anchor --></a><tbody><a id="idm854796120" class="anchor"><!-- named anchor --></a><tr><a id="idm854795864" class="anchor"><!-- named anchor --></a><td><a id="idm849856584" class="anchor"><!-- named anchor --></a></td><td><a id="idm849856168" class="anchor"><!-- named anchor --></a>
+			RL<br class="br">
+
+			simulation
+			</td><td><a id="idm854512888" class="anchor"><!-- named anchor --></a>
+			Traditional<br class="br">
+
+			method
+			</td></tr><tr><a id="idm854512120" class="anchor"><!-- named anchor --></a><td><a id="idm857386072" class="anchor"><!-- named anchor --></a>
+			Estimated 
+
+			cycle time (s)
+			</td><td><a id="idm857385592" class="anchor"><!-- named anchor --></a>
+			20.65
+			</td><td><a id="idm846809432" class="anchor"><!-- named anchor --></a>
+			17.9
+			</td></tr><tr><a id="idm846808872" class="anchor"><!-- named anchor --></a><td><a id="idm846808616" class="anchor"><!-- named anchor --></a>
+			Standard deviation of 
+
+			estimated value
+			</td><td><a id="idm858634424" class="anchor"><!-- named anchor --></a>
+			5.97
+			</td><td><a id="idm858633992" class="anchor"><!-- named anchor --></a>
+			x
+			</td></tr><tr><a id="idm855390648" class="anchor"><!-- named anchor --></a><td><a id="idm855390392" class="anchor"><!-- named anchor --></a>
+			Cycle time (s) 
+
+			of site data
+			</td><td colspan="2"><a id="idm855390008" class="anchor"><!-- named anchor --></a>
+			23.23
+			</td></tr><tr><a id="idm851495256" class="anchor"><!-- named anchor --></a><td><a id="idm851495000" class="anchor"><!-- named anchor --></a>
+			Standard deviation of 
+			the site data
+			</td><td colspan="2"><a id="idm851494616" class="anchor"><!-- named anchor --></a>
+			2.94
+			</td></tr><tr><a id="idm854843800" class="anchor"><!-- named anchor --></a><td><a id="idm854843544" class="anchor"><!-- named anchor --></a>
+			Absolute 
+
+			Error (s)
+			</td><td><a id="idm855006392" class="anchor"><!-- named anchor --></a>
+			2.58
+			</td><td><a id="idm855005960" class="anchor"><!-- named anchor --></a>
+			5.33
+			</td></tr><tr><a id="idm854921704" class="anchor"><!-- named anchor --></a><td><a id="idm854921448" class="anchor"><!-- named anchor --></a>
+			Estimation 
+
+			Accuracy (%)
+			</td><td><a id="idm854921064" class="anchor"><!-- named anchor --></a>
+			88.89
+			</td><td><a id="idm854441912" class="anchor"><!-- named anchor --></a>
+			77.06
+			</td></tr></tbody></table></div></div><div class="section"><a id="ksarc_2023_021_13_sec4" class="anchor"><!-- named anchor --></a><p class="xmlTitle" id="idm854731592"><span class="sec-label"><sup class="warning"></sup></span> 4. 결 론</p><p id="idm851299224">본 연구에서는 굴삭기의 사이클 타임 예측을 위한 강화학습 기반의 3D 시뮬레이션 기술을 제안한다. 실험 결과는 제안된 기술이 굴삭기의 사이클 타임을 약 88.89%의 정확도로 추정할 수 있음을 보여주며, 이를 통해 정확한 장비 생산성 추정을 바탕으로 효율적인 토공 계획을 수립하는데 기여할 수 있을 것으로 판단된다.</p><p id="idm858712616">비록 본 연구에서 제안된 강화학습 접근법을 통해서 현장 지형 조건에 따른 굴삭기의 사이클타임을 예측하였지만 다음과 같은 한계가 남아있다. (1)굴삭기 에이전트의 위치가 고정 되어있다. (2)현장 지형의 상황을 저자가 육안으로 판단하는 등 주관적인 기준에 의해 실험 조건이 설정된 사항들이 있다. (3)가상환경에서 굴삭기 에이전트를 학습시키는 것에 많은 시간이 소요된다. 따라서, 향후 현장에서 굴삭기가 이동할 수 있는 위치 별로 사이클타임을 예측할 수 있도록 가상환경을 개선하고, 경사 센서 등을 통해 객관적인 기준을 반영하여 줌으로써 보다 더 정확한 사이클타임 예측이 가능할 것으로 기대된다. 또한, 임의로 제작된 다양한 지형 가상환경에서의 충분한 학습을 통해 굴삭기 에이전트를 사전학습을 시킨 뒤, 현장 지형이 반영된 가상환경에서의 파인튜닝(fine-tuning)하는 전이학습 등에 대한 후속 연구가 필요하리라 생각된다. 추가적으로, 본 기술은 향후 3D 시뮬레이션 내에 입도 구성, 밀도, 공극률 등 토사의 성질과, 흙의 성질이 반영된 지형의 시간적 변형을 학습에 반영함으로써 현장 작업조건이 굴삭기의 사이클타임에 미치는 영향을 이해하고 현장 작업조건에 따른 굴삭기의 움직임을 기반으로 사이클타임을 보다 정확히 추정하는 기술로 확장될 수 있다(<a href="#ksarc_2023_021_13_r24" class="bt_fn link_blue" name="bibrLink">Parsakhoo et al., 2008</a>, <a href="#ksarc_2023_021_13_r18" class="bt_fn link_blue" name="bibrLink">Kujundžić et al., 2021</a>).</p></div></div><div id="article-back" class="back"><div class="back-section Acknowledgements"><a id="idm858060200" class="anchor"><!-- named anchor --></a><h2 class="xmlTitleBar ">Acknowledgements</h2><p class="first" id="idm854831976">이 연구는 국토교통부/국토교통과학기술진흥원이 시행하고 한국도로공사가 총괄하는 “스마트건설기술 개발국가 R&amp;D 사업(과제번호 22SMIP-A158708-03)”의 지원으로 수행하였습니다. 본 논문은 한국건설자동화로보틱스학회 제1회 정기학술대회에서 발표된 논문을 수정ㆍ보완하여 작성되었습니다.</p></div><div class="back-section References"><a id="idm854831464" class="anchor"><!-- named anchor --></a><h2 class="xmlTitleBar ">References</h2><div class="section ref-list wrapper-references"><a id="idm854831464" class="anchor"><!-- named anchor --></a><div class="ref-list table"><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r1"></a><div class="ref-label cell"><span class="ref-label"><span class="label">1</span><a id="ksarc_2023_021_13_r1" class="anchor"><!-- named anchor --></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r1"><div class="citation"><a id="idm840296792" class="anchor"><!-- named anchor --></a>Adi, T.N., Iskandar, Y.A., and Bae, H. (2020). Interterminal truck routing optimization using deep reinforcement learning. Sensors, 20(20), 5794.
+        <span class="pub-id  pub-id-type-doi">10.3390/s20205794</span><span class="pub-id  pub-id-type-pmid">33066280</span><span class="pub-id  pub-id-type-pmcid">PMC7602099</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r2"></a><div class="ref-label cell"><span class="ref-label"><span class="label">2</span><a id="ksarc_2023_021_13_r2" class="anchor"><!-- named anchor --></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r2"><div class="citation"><a id="idm854442360" class="anchor"><!-- named anchor --></a>Akhavian, R., and Behzadan, A. H. (2014). Evaluation of queuing systems for knowledge-based simulation of construction processes. Automation in Construction, 47, pp. 37-49.
+        <span class="pub-id  pub-id-type-doi">10.1016/j.autcon.2014.07.007</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r3"></a><div class="ref-label cell"><span class="ref-label"><span class="label">3</span><a id="ksarc_2023_021_13_r3" class="anchor"><!-- named anchor --></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r3"><div class="citation"><a id="idm848270248" class="anchor"><!-- named anchor --></a>Ali, D., and Frimpong, S. (2021). DeepHaul: a deep learning and reinforcement learning-based smart automation framework for dump trucks. Progress in Artificial Intelligence, 10(2), pp. 157-180.
+        <span class="pub-id  pub-id-type-doi">10.1007/s13748-021-00233-7</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r4"></a><div class="ref-label cell"><span class="ref-label"><span class="label">4</span><a id="ksarc_2023_021_13_r4" class="anchor"><!-- named anchor --></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r4"><div class="citation"><a id="idm833426440" class="anchor"><!-- named anchor --></a>Cho, S., and Han, S. (2022). Reinforcement learning-based simulation and automation for tower crane 3D lift planning. Automation in Construction, 144, 104620.
+        <span class="pub-id  pub-id-type-doi">10.1016/j.autcon.2022.104620</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r5"></a><div class="ref-label cell"><span class="ref-label"><span class="label">5</span><a id="ksarc_2023_021_13_r5" class="anchor"><!-- named anchor --></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r5"><div class="citation"><a id="idm855768792" class="anchor"><!-- named anchor --></a>Edwards, D., and Griffiths, I. (2000). Artificial intelligence approach to calculation of hydraulic excavator cycle time and output. Mining Technology, 109(1), pp. 23-29.
+        <span class="pub-id  pub-id-type-doi">10.1179/mnt.2000.109.1.23</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r6"></a><div class="ref-label cell"><span class="ref-label"><span class="label">6</span><a id="ksarc_2023_021_13_r6" class="anchor"><!-- named anchor --></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r6"><div class="citation"><a id="idm854436328" class="anchor"><!-- named anchor --></a>Edwards, D. J., and Holt, G. D. (2000). ESTIVATE: a model for calculating excavator productivity and output costs. Engineering, Construction and Architectural Management.
+        <span class="pub-id  pub-id-type-doi">10.1108/eb021132</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r7"></a><div class="ref-label cell"><span class="ref-label"><span class="label">7</span><a id="ksarc_2023_021_13_r7" class="anchor"><!-- named anchor --></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r7"><div class="citation"><a id="idm854574328" class="anchor"><!-- named anchor --></a>Egli, P., and Hutter, M. (2022). A general approach for the automation of hydraulic excavator arms using reinforcement learning. IEEE Robotics and Automation Letters, 7(2), pp. 5679-5686.
+        <span class="pub-id  pub-id-type-doi">10.1109/LRA.2022.3152865</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r8"></a><div class="ref-label cell"><span class="ref-label"><span class="label">8</span><a id="ksarc_2023_021_13_r8" class="anchor"><!-- named anchor --></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r8"><div class="citation"><a id="idm854585832" class="anchor"><!-- named anchor --></a>Egli, P., and Hutter, M. (2020). Towards RL-based hydraulic excavator automation. in 2020 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), IEEE.
+        <span class="pub-id  pub-id-type-doi">10.1109/IROS45743.2020.9341598</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r9"></a><div class="ref-label cell"><span class="ref-label"><span class="label">9</span><a id="ksarc_2023_021_13_r9" class="anchor"><!-- named anchor --></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r9"><div class="citation"><a id="idm856905704" class="anchor"><!-- named anchor --></a>Erharter, G. H., Hansen, T. F., Liu, Z., and Marcher, T. (2021). Reinforcement learning based process optimization and strategy development in conventional tunneling. Automation in Construction, 127, 103701.
+        <span class="pub-id  pub-id-type-doi">10.1016/j.autcon.2021.103701</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r10"></a><div class="ref-label cell"><span class="ref-label"><span class="label">10</span><a id="ksarc_2023_021_13_r10" class="anchor"><!-- named anchor --></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r10"><div class="citation"><a id="idm857155176" class="anchor"><!-- named anchor --></a>Genders, W., and Razavi, S. (2019). Asynchronous n-step Q-learning adaptive traffic signal control. Journal of Intelligent Transportation Systems, 23(4), pp. 319-331.
+        <span class="pub-id  pub-id-type-doi">10.1080/15472450.2018.1491003</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r11"></a><div class="ref-label cell"><span class="ref-label"><span class="label">11</span><a id="ksarc_2023_021_13_r11" class="anchor"><!-- named anchor --></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r11"><div class="citation"><a id="idm858670696" class="anchor"><!-- named anchor --></a>Hola, B., and Schabowicz, K. (2010). Estimation of earthworks execution time cost by means of artificial neural networks. Automation in Construction, 19(5), pp.570-579.
+        <span class="pub-id  pub-id-type-doi">10.1016/j.autcon.2010.02.004</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r12"></a><div class="ref-label cell"><span class="ref-label"><span class="label">12</span><a id="ksarc_2023_021_13_r12" class="anchor"><!-- named anchor --></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r12"><div class="citation"><a id="idm851418744" class="anchor"><!-- named anchor --></a>Holt, G.D., and Edwards, D. (2015). Analysis of interrelationships among excavator productivity modifying factors. International Journal of Productivity and Performance Management.
+        <span class="pub-id  pub-id-type-doi">10.1108/IJPPM-02-2014-0026</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r13"></a><div class="ref-label cell"><span class="ref-label"><span class="label">13</span><a id="ksarc_2023_021_13_r13" class="anchor"><!-- named anchor --></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r13"><div class="citation"><a id="idm848018152" class="anchor"><!-- named anchor --></a>Jaafaru, H., and Agbelie, B. (2022). Bridge maintenance planning framework using machine learning, multi-attribute utility theory and evolutionary optimization models. Automation in Construction, 141, 104460.
+        <span class="pub-id  pub-id-type-doi">10.1016/j.autcon.2022.104460</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r14"></a><div class="ref-label cell"><span class="ref-label"><span class="label">14</span><a id="ksarc_2023_021_13_r14" class="anchor"><!-- named anchor --></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r14"><div class="citation"><a id="idm856481800" class="anchor"><!-- named anchor --></a>Kassem, M., Mahamedi, E., Rogage, K., Duffy, K., and Huntingdon, J. (2021). Measuring and benchmarking the productivity of excavators in infrastructure projects: A deep neural network approach. Automation in Construction, 124, 103532.
+        <span class="pub-id  pub-id-type-doi">10.1016/j.autcon.2020.103532</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r15"></a><div class="ref-label cell"><span class="ref-label"><span class="label">15</span><a id="ksarc_2023_021_13_r15" class="anchor"><!-- named anchor --></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r15"><div class="citation"><a id="idm858772568" class="anchor"><!-- named anchor --></a>Kim, H., Ham, Y., Kim, W., Park, S., and Kim, H. (2019). Vision-based nonintrusive context documentation for earthmoving productivity simulation. Automation in Construction, 102, pp. 135-147.
+        <span class="pub-id  pub-id-type-doi">10.1016/j.autcon.2019.02.006</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r16"></a><div class="ref-label cell"><span class="ref-label"><span class="label">16</span><a id="ksarc_2023_021_13_r16" class="anchor"><!-- named anchor --></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r16"><div class="citation"><a id="idm857907912" class="anchor"><!-- named anchor --></a>Kim, J., Lee, D. E., and Seo, J. (2020). Task planning strategy and path similarity analysis for an autonomous excavator. Automation in Construction, 112, 103108.
+        <span class="pub-id  pub-id-type-doi">10.1016/j.autcon.2020.103108</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r17"></a><div class="ref-label cell"><span class="ref-label"><span class="label">17</span><a id="ksarc_2023_021_13_r17" class="anchor"><!-- named anchor --></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r17"><div class="citation"><a id="idm851489928" class="anchor"><!-- named anchor --></a>Kim, J., and Chi, S. (2020). Multi-camera vision-based productivity monitoring of earthmoving operations. Automation in Construction, 112, 103121.
+        <span class="pub-id  pub-id-type-doi">10.1016/j.autcon.2020.103121</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r18"></a><div class="ref-label cell"><span class="ref-label"><span class="label">18</span><a id="ksarc_2023_021_13_r18" class="anchor"><!-- named anchor --></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r18"><div class="citation"><a id="idm854742840" class="anchor"><!-- named anchor --></a>Kujundžić, T., Klanfar, M., Korman, T., and Briševac, Z. (2021). Influence of crushed rock properties on the productivity of a hydraulic excavator. Applied Sciences, 11(5), 2345.
+        <span class="pub-id  pub-id-type-doi">10.3390/app11052345</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r19"></a><div class="ref-label cell"><span class="ref-label"><span class="label">19</span><a id="ksarc_2023_021_13_r19" class="anchor"><!-- named anchor --></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r19"><div class="citation"><a id="idm848021384" class="anchor"><!-- named anchor --></a>Kurinov, I., Orzechowski, G., Hämäläinen, P., and Mikkola, A. (2020). Automated excavator based on reinforcement learning and multibody system dynamics. IEEE Access, 8, pp. 213998-214006.
+        <span class="pub-id  pub-id-type-doi">10.1109/ACCESS.2020.3040246</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r20"></a><div class="ref-label cell"><span class="ref-label"><span class="label">20</span><a id="ksarc_2023_021_13_r20" class="anchor"><!-- named anchor --></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r20"><div class="citation"><a id="idm855266744" class="anchor"><!-- named anchor --></a>Lee, S., Kim, G. N., and Seo, J. (2008). Analyzing effect factor in earthwork and skillful excavator operator's behavior. KSCE 2008 convention conference, pp. 1867-1870.
+        
+        
+        
+        </div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r21"></a><div class="ref-label cell"><span class="ref-label"><span class="label">21</span><a id="ksarc_2023_021_13_r21" class="anchor"><!-- named anchor --></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r21"><div class="citation"><a id="idm856648440" class="anchor"><!-- named anchor --></a>Lu, M., Chan, W. H., Zhang, J. P., and Cao, M. (2007). Generic process mapping and simulation methodology for integrating site layout and operations planning in construction. Journal of Computing in Civil Engineering, 21(6), pp. 453-462.
+        <span class="pub-id  pub-id-type-doi">10.1061/(ASCE)0887-3801(2007)21:6(453)</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r22"></a><div class="ref-label cell"><span class="ref-label"><span class="label">22</span><a id="ksarc_2023_021_13_r22" class="anchor"><!-- named anchor --></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r22"><div class="citation"><a id="idm846817336" class="anchor"><!-- named anchor --></a>Mahmood, B., Han, S., and Seo, J. (2022). Implementation experiments on convolutional neural network training using synthetic images for 3D pose estimation of an excavator on real images. Automation in Construction, 133, 103996.
+        <span class="pub-id  pub-id-type-doi">10.1016/j.autcon.2021.103996</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r23"></a><div class="ref-label cell"><span class="ref-label"><span class="label">23</span><a id="ksarc_2023_021_13_r23" class="anchor"><!-- named anchor --></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r23"><div class="citation"><a id="idm853570296" class="anchor"><!-- named anchor --></a>Nikas, A., Poulymenakou, A., and Kriaris, P. (2007). Investigating antecedents and drivers affecting the adoption of collaboration technologies in the construction industry. Automation in Construction, 16(5), pp. 632-641.
+        <span class="pub-id  pub-id-type-doi">10.1016/j.autcon.2006.10.003</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r24"></a><div class="ref-label cell"><span class="ref-label"><span class="label">24</span><a id="ksarc_2023_021_13_r24" class="anchor"><!-- named anchor --></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r24"><div class="citation"><a id="idm848297000" class="anchor"><!-- named anchor --></a>Parsakhoo, A., Hosseini, S. A., Jalilvand, H., and Lotfalian, M. (2008). Physical soil properties and slope treatments effects on hydraulic excavator productivity for forest road construction. Pakistan Journal of Biological Sciences, 11(11), pp. 1422-1428.
+        <span class="pub-id  pub-id-type-doi">10.3923/pjbs.2008.1422.1428</span><span class="pub-id  pub-id-type-pmid">18817241</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r25"></a><div class="ref-label cell"><span class="ref-label"><span class="label">25</span><a id="ksarc_2023_021_13_r25" class="anchor"><!-- named anchor --></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r25"><div class="citation"><a id="idm858510440" class="anchor"><!-- named anchor --></a>Parente, M., Correia, A. G., and Cortez, P. (2016). A novel integrated optimization system for earthwork tasks. Transportation Research Procedia, 14, pp. 3601-3610.
+        <span class="pub-id  pub-id-type-doi">10.1016/j.trpro.2016.05.428</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r26"></a><div class="ref-label cell"><span class="ref-label"><span class="label">26</span><a id="ksarc_2023_021_13_r26" class="anchor"><!-- named anchor --></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r26"><div class="citation"><a id="idm857233464" class="anchor"><!-- named anchor --></a>Rashidi, A., Nejad, H.R., and Maghiar, M. (2014). Productivity estimation of bulldozers using generalized linear mixed models. KSCE journal of civil engineering, 18(6), pp. 1580-1589.
+        <span class="pub-id  pub-id-type-doi">10.1007/s12205-014-0354-0</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r27"></a><div class="ref-label cell"><span class="ref-label"><span class="label">27</span><a id="ksarc_2023_021_13_r27" class="anchor"><!-- named anchor --></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r27"><div class="citation"><a id="idm854393016" class="anchor"><!-- named anchor --></a>Sağlam, B., and Bettemir, Ö. (2018). Estimation of duration of earthwork with backhoe excavator by Monte Carlo Simulation. Journal of Construction Engineering, 1(2), pp. 85-94.
+        <span class="pub-id  pub-id-type-doi">10.31462/jcemi.2018.01085094</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r28"></a><div class="ref-label cell"><span class="ref-label"><span class="label">28</span><a id="ksarc_2023_021_13_r28" class="anchor"><!-- named anchor --></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r28"><div class="citation"><a id="idm858508520" class="anchor"><!-- named anchor --></a>Schulman, J., Wolski, F., Dhariwal, P., Radford, A., and Klimov, O. (2017). Proximal policy optimization algorithms. arXiv preprint arXiv:1707.06347.
+        
+        
+        
+        </div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r29"></a><div class="ref-label cell"><span class="ref-label"><span class="label">29</span><a id="ksarc_2023_021_13_r29" class="anchor"><!-- named anchor --></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r29"><div class="citation"><a id="idm850619432" class="anchor"><!-- named anchor --></a>Shehadeh, A., Alshboul, O., Tatari, O., Alzubaidi, M. A., and Salama, A. H. E. S. (2022). Selection of heavy machinery for earthwork activities: A multi-objective optimization approach using a genetic algorithm. Alexandria Engineering Journal, 61(10), pp. 7555-7569.
+        <span class="pub-id  pub-id-type-doi">10.1016/j.aej.2022.01.010</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r30"></a><div class="ref-label cell"><span class="ref-label"><span class="label">30</span><a id="ksarc_2023_021_13_r30" class="anchor"><!-- named anchor --></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r30"><div class="citation"><a id="idm856340728" class="anchor"><!-- named anchor --></a>Tam, C. M., Tong, T. K., and Tse, S. L. (2002). Artificial neural networks model for predicting excavator productivity. Engineering Construction and Architectural Management, 9(5‐6), pp. 446-452.
+        <span class="pub-id  pub-id-type-doi">10.1108/eb021238</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r31"></a><div class="ref-label cell"><span class="ref-label"><span class="label">31</span><a id="ksarc_2023_021_13_r31" class="anchor"><!-- named anchor --></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r31"><div class="citation"><a id="idm854674824" class="anchor"><!-- named anchor --></a>Vahdatikhaki, F., A. Hammad, and Siddiqui, H. (2015). Optimization-based excavator pose estimation using real-time location systems. Automation in Construction, 56, pp. 76-92.
+        <span class="pub-id  pub-id-type-doi">10.1016/j.autcon.2015.03.006</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r32"></a><div class="ref-label cell"><span class="ref-label"><span class="label">32</span><a id="ksarc_2023_021_13_r32" class="anchor"><!-- named anchor --></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r32"><div class="citation"><a id="idm841155384" class="anchor"><!-- named anchor --></a>Woo, S., Yeon, J., Ji, M., Moon, I. C., and Park, J. (2018). Deep reinforcement learning with fully convolutional neural network to solve an earthwork scheduling problem. In 2018 IEEE international conference on systems, man, and cybernetics (SMC) (pp. 4236-4242). IEEE.
+        <span class="pub-id  pub-id-type-doi">10.1109/SMC.2018.00717</span></div></div></div><div class="row"><a class="ref-anchor" id="ksarc_2023_021_13_r33"></a><div class="ref-label cell"><span class="ref-label"><span class="label">33</span><a id="ksarc_2023_021_13_r33" class="anchor"><!-- named anchor --></a></span></div><div class="ref-content cell" name="ksarc_2023_021_13_r33"><div class="citation"><a id="idm858716712" class="anchor"><!-- named anchor --></a>Yang, J., Edwards, D.J., and Love, P.E. (2003). A computational intelligent fuzzy model approach for excavator cycle time simulation. Automation in construction, 12(6), pp. 725-735.
+        <span class="pub-id  pub-id-type-doi">10.1016/S0926-5805(03)00056-6</span></div></div></div></div></div></div></div></html>
+
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	
+	<!--Top으로 이동-->
+	<a class="pg_top" href="#"><img src="/static/design/images/btn_top.png" alt="페이지 상단으로 이동하기"/></a>
+	<!--//Top으로 이동 -->
+	
+	<!-- accessibility -->
+	<div id="accessibility"><a href="#container">Go to Contents</a><a href="#header">Go to Main Nevigation</a><a
+	        href="#footer">Go to Footer</a></div>
+	<!--//accessibility -->
+	
+	<div id="ref-tooltip" class="well well--tooltip"></div>
+	<div id="JPO">
+	    <button class="JPO_close">Close</button>
+	</div>
+	
+	<div id="tooltipanchor"></div>
+
+	</div>
+
+	<div id="footer" class="">
+		
+		
+			<!-- footer -->
+
+<div class="logo">
+    <em>
+        
+        <a href="https://www.ksarc.or.kr/">
+            <img src="/media/logo/5Z91sUPp63.png" alt="None"/> 
+        </a>
+        
+        
+        
+	        <span>Korean Society of Automation and Robotics in Construction
+	            <br/><span class="kr">(사)한국건설자동화·로보틱스학회 </span>
+	        </span>
+		
+
+    </em>
+</div>
+<div class="info">
+    <address>
+		
+    	
+    	510, Jae Sung Civil Engineering Building, 222, Wangsimni-ro, Seongdong-gu, Seoul, Republic of Korea<br>
+        Tel: <a href="tel:02-2220-4497">02-2220-4497</a> /
+        
+        E-mail: <a href="mailto:ksarc2021@ksarc.or.kr">ksarc2021@ksarc.or.kr</a>
+    </address>
+    <span class="copy">Copyright© Korean Society of Automation and Robotics in Construction. Powered by <a href="http://www.apub.kr/">APUB</a></span>
+</div>
+<div class="family_combo">
+    <a href="#self"><em>Family Site</em></a>
+    <ul>
+        
+        <li><a href="https://www.ksarc.or.kr/" target="_blank">(사)한국건설자동화·로보틱스학회 홈페이지</a></li>
+        
+    </ul>
+</div>
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+	if ($('.metadata')) {
+		// by odop 2020.3.11
+		// 소속이 1개인 경우의 주석 숨기기 
+		
+		
+		// by odop 2024.7.15
+		// 초록 노드 선택 변경 
+	    // var abstract_ko = $('.metadata.abstract.lang-ko').children('p');
+	    // var abstract_en = $('.metadata.abstract.lang-en').children('p');
+	    var abstract_ko = $('.metadata.abstract.lang-ko');
+	    var abstract_en = $('.metadata.abstract.lang-en');
+	
+	    var chunk_ko = $('.metadata-chunk.lang-ko')
+	    var chunk_en = $('.metadata-chunk.lang-en')
+	
+		// by odop 2020.12.9 
+		// 초록 숨기는 조건 변경 
+	    //if (abstract_ko.text() == '' || chunk_ko.text() == '') {
+	    if (abstract_ko.text() == '' && chunk_ko.text() == '') {
+			$('.metadata.abstract.lang-ko').empty();
+		}
+	
+		if (abstract_en.text() == '' && chunk_en.text() == '') {
+		    $('.metadata-group.keywords.lang-en').empty();
+		    $('.metadata.abstract.lang-en').empty();
+		}
+		// 언어별 키워드가 없는 경우 
+		if (chunk_ko.text() == '') {
+	        $('.xmlConTit.keyword.lang-ko').empty();
+		}
+		if (chunk_en.text() == '') {
+	        $('.xmlConTit.keyword.lang-en').empty();
+		}
+		
+	}
+});
+
+
+</script>
+<!--//footer-->
+		
+		
+	</div>
+	
+		
+
+	
+</div>
+
+
+</body>
+
+</html>
+
+	<script>
+	$(function(){
+		/*
+		
+		    //$("[style]").removeAttr("style");
+		    var aff = document.getElementsByClassName('aff');
+		    // console.log(aff);
+		    for(var i = 0; i < aff.length; i++)
+		    {
+		       if(aff[i].firstElementChild)
+		       {
+		           aff[i].firstElementChild.classList.remove('link_blue');
+		           aff[i].firstElementChild.setAttribute("name",'');
+		       }
+		    }
+		*/
+		
+	    $('.bt_fn').click(function(e){
+	        // 본문내 주석 클릭시 아래 참고 문헌쪽으로 이동 
+	        e.stopPropagation();
+	        e.preventDefault();
+	        //e.stop
+        
+       		$('#ref-tooltip').html('');
+        	$('#ref-tooltip').popup('hide');
+	        
+	        var refId = $(this).attr("href"); //.split("#")[1];
+	        //console.log(refId);
+	        //console.log($(refId, '.xml').offset().top);
+	        window.setTimeout(function(){
+	       		//console.log($(refId, '.xml').offset().top);
+	       		$(window).scrollTop($(refId, '.xml').offset().top);
+	        	$(refId, '.xml').closest('.row, .footnote').css('backgroundColor', '#DDFFAA').animate({backgroundColor: 'white'}, 4000);
+	        }, 
+	        
+	        300);
+	        
+	        //return false;
+	    });
+	    
+	    // 드래깅 여부를 체크.
+	    // 드랭깅 중이면 툴팁이 뜨지 않도록 한다.
+	    $('body')
+	    .on('mousedown', function (e) {
+	        $(this).data('dragging', true);
+	        //console.log('-mouse down');
+	    })
+	    .on('mouseup', function (e) {
+	        $(this).data('dragging', false);
+	        //console.log('-mouse up');
+	    });
+		    
+	
+		// 참고문헌 툴팁
+		$('a[name=bibrLink]').on({
+			mouseenter: function(e){
+				// 열린 툴팁이  있으면 미리 지운다.
+				if ($('html').hasClass('popup_visible_ref-tooltip')) {
+					$('html').click();	// hide popup
+					//$('#ref-tooltip').popup('hide');
+					//$('#ref-tooltip_wrapper').remove();
+					//$('#ref-tooltip').remove();
+					//return;
+				}
+				
+				// by odop 2021.3.12
+				if ($('body').data('dragging')) return;
+				
+				$('.bibrLink-current').removeClass('bibrLink-current');
+			    
+			    
+			    //console.log(e.pageY);//
+			    //console.log($(this).offset());
+			
+				//var anchor = $('.bibrLink-current').attr('href');
+				var anchor = $(this).attr('href');
+				var $row = $('.ref-anchor'+anchor).closest('.row').first();
+				
+				// by odop 2021.11.16 - 각주도 동일하게 작용 
+				if (!$row.length) {
+					$row = $('.anchor'+anchor).closest('.footnote').first();
+				}
+				
+				//console.log("+Anchor= " + anchor);
+				
+				if ($row.length) {
+					$(this).addClass('bibrLink-current');
+					
+				    // 툴팁 앵커 역할을 할 엘레먼트를 위치 조종 
+				    // 타겟이 되는 링크에 개행이 발생하면 툴팁의 노출 위치가 타겟의 center가 아닌 문단의 가운데 위치하는 문제가 있어
+				    // 별도의 툴팁 앵커를 마우스 위치로 이동하여 앵커 역할을 하도록 한 것임 
+				    $('#tooltipanchor').show();
+				    $('#tooltipanchor').css('top', $(this).offset().top);
+				    $('#tooltipanchor').css('left', e.pageX);
+				    
+					// 참고문헌 내용 tooltip에 넣기 
+					$('#ref-tooltip').html('');
+					$('#ref-tooltip').append( $row.clone(true) );
+					
+					$('#ref-tooltip .row').removeClass();
+					// by syl@yuhasoft.com 2021.5.7
+					// 앵커는 삭제하지 않고 살려둔다.
+					//$('a',            '#ref-tooltip').remove();
+					$('.ref-content', '#ref-tooltip').removeAttr('name');
+					$('div',          '#ref-tooltip').removeAttr('style');
+					
+					$('#ref-tooltip').popup({
+					  type: 'tooltip',
+					  //tooltipanchor: $('.bibrLink-current'),
+					  tooltipanchor: $('#tooltipanchor'),
+					  offsetleft: 0,
+					  offsettop: -10,
+					  vertical: 'top',
+					  horizontal: 'center',
+					  background: false,
+					  autoopen: true,
+					  detach: false,
+					  beforeopen: function() {
+					    // by odop 2021.3.11
+					    // 팝업이 오픈되었을 때 마우스리브 이벤트를 붙여 툴팁이 닫히도록 한다.
+					    $(this).mouseleave(function(e){
+						    //var _h = $(window).scrollTop();
+					    	$('.bibrLink-current').removeClass('bibrLink-current');
+						    //$('#ref-tooltip').popup('hide');
+						    $('html').click();	// hide popup
+					    });
+					    //console.log('-beforeopen');
+					    // scrolltop의 위치를 저장 후 close 에서 그 위치를 다시 셋팅 
+					    // ie에서 팝업 윗쪽으로 mouseout 했을 때 스크롤이 맨 위로 올라가버리는 문제 해결 
+					    $('body').attr('data-scrolltop', $(window).scrollTop());
+					  },
+					  onclose: function() {
+					    // by odop 2021.3.11
+					    //console.log('-onclose');
+					    $('.bibrLink-current').removeClass('bibrLink-current');
+					  },
+					  closetransitionend: function() {
+					    // by odop 2021.3.11
+					    //var _h = $('body').attr('data-scrolltop');
+					    //if (_h && $(window).scrollTop() > _h) $(window).scrollTop(_h);
+					    
+					    //console.log(_h);
+					  }
+					});
+				
+					$('#ref-tooltip').popup('reposition');
+				}
+			},
+			mouseleave: function() {
+				// by odop 2020.7.23
+				// chrome 브라우저의 경우 툴팁의 height가 서로 다를 경우 스크롤이 발생하는 문제가 있어
+				// height를 잡아줌 
+				
+				// by odop 2021.3.11
+				// 툴팁이 활성화 되면서 위 공간이 부족하여 스크롤이 생기고 마우스 리브가 생기면
+				// 툴팁이 사라져버리는 문제가 있음.
+				// --> 툴팁이 열릴 때 해당 툴팁에 마우스리브 이벤트가 나왔을 때 닫히는 이벤트 추가.
+				/*
+				    var _h = $(window).scrollTop();
+				    $('#ref-tooltip').popup('hide');
+				    $(window).scrollTop(_h);
+			    */
+			    
+			    
+			    //이걸 숨기면 브라우저에 따라 스크롤리 맨 위로 올라가는 문제가 있음 
+			    //$('#tooltipanchor').hide();
+			}
+		});
+		
+		// MathJax 윗쪽에 라벨이 있을 경우 수식 오른쪽 끝으로 이동 
+		// by odop 2020.7.8
+		// 이 경우 inline으로 수식이 들어간 경우 문제가 발생함. caption 내에서는 제외 처리 
+		$('math').siblings('h5.label').each(function(){
+			if (!$(this).closest('caption')) {
+				$(this).addClass('mathjax-label');
+			}
+		})
+	});
+	</script>
+
+<!--www.jcar.or.kr-->
+
+	

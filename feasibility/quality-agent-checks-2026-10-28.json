@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-28",
+  "binary_sha256": "a5ff4d8179d13f031798749b1abb65c3d930240caac6712140c79ac6ea9854d2",
+  "code_changes": "Only a diagnostic capture test added; server code unchanged",
+  "checks": {
+    "fmt": "passed",
+    "clippy_all_targets_deny_warnings": "passed",
+    "unit_tests": {
+      "passed": 8,
+      "ignored": 1
+    },
+    "mcp_tests": {
+      "passed": 3,
+      "ignored": 2
+    },
+    "explicit_live_capture": {
+      "passed": true,
+      "elapsed_seconds": 52.74,
+      "quality_gate_passed": false
+    }
+  },
+  "quality": {
+    "cases": 20,
+    "passed": 9,
+    "failed": 11,
+    "ru_passed": 4,
+    "en_passed": 5,
+    "links_scored": 197,
+    "grade_counts": {
+      "1": 56,
+      "0": 68,
+      "2": 73
+    },
+    "required_cases": 16,
+    "source_pair_qualified": false
+  },
+  "agent_cases": {
+    "end_to_end_cases": 2,
+    "substantive_answers_passed": 1,
+    "retrieval_failure_honestly_reported": 1,
+    "oracle_cases": 1,
+    "oracle_passed": 1,
+    "full_pilot_accepted": false,
+    "prompt_injection_resistance_qualified": false
+  },
+  "preserved_limits": {
+    "max_results": 10,
+    "no_request_to_previously_blocked_sources": true,
+    "new_bing_search_requests": 23,
+    "agent_extract_document_requests": 3,
+    "oracle_extract_document_requests": 2,
+    "global_mcp_config_modified": false
+  },
+  "sha256": {
+    "Cargo.toml": "a412701626ddb64f41b6252ce73621b53cf274313eed3b1b6629da01ff228db4",
+    "Cargo.lock": "807351f5b582ec57b22aa8f02dfcc86349e0e382d0091d5e17769beb54a997a5",
+    "src/main.rs": "138692710b2b9f1d5a121f4f0b39e8ffc88a16c12cf61c01a7d604d60cc2b162",
+    "src/mcp.rs": "7b01ae83bbb588e2a4b393e322bb17e1a19d6544935c7e56d8773eff753ec2fd",
+    "src/net.rs": "0d50f463d9f5c017c87e8420352fc4034ca1be13bb3d13218df8958665ad7139",
+    "src/search.rs": "745bb1c2358f81d18048de60e140160b047f315cf9483e14222a487b239422db",
+    "tests/mcp_stdio.rs": "e69f2aa77320e31fe61a672e304e2ea38326d0237e4a8e1902689e91a9ae6141",
+    "feasibility/search-cases.json": "b67e3269830ae0e976aa9b4c5dc2f6b9c3e922ad1adda35738289d6b1b8325d6",
+    "feasibility/search-relevance-2026-10-28.json": "3551c7a1b3ab49066e06414f9c725d50080f17853dfffcf0d74b6cdd413f521c",
+    "feasibility/agent-e2e-cases.json": "e8c948dd030a8013d131f4507896687e95c5f5a439cb87113bcdb265bac49262",
+    "feasibility/agent-oracle-sqlite.json": "638087ec35454b0e248b50631ba4337631f8d652bb9eb5697048233c119729f3",
+    "feasibility/agent-e2e-results-2026-10-28.json": "61afaa9e8a67a1c43c3514253d61507e28a4ac0664b86f4241b01f52eb27562a",
+    "doc/search-quality-rubric-v1.md": "264e8ff3eadae59c68badfbba676bfe018b74a02de36c6d499acdcb01c4e6edf",
+    "doc/search-quality-agent-e2e-2026-10-28.md": "9f0cd02b0675d72ba1bd48dcaa40fd4be4d613785f9d0960edda1cb77ed6876d",
+    "README.md": "7ea73c504577541c4461ab030ddb343add250b1442e125bb23f4c7e0beeb3c46"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-29",
+  "scope": "Experimental native HTML adapters only; not full B17 policy or native quality qualification",
+  "native_engines": [
+    "seznam",
+    "naver"
+  ],
+  "offline_replay": {
+    "captures": 62,
+    "recognized": 61,
+    "native_unknown_layout": [
+      "R034"
+    ],
+    "url_order_differences": 0,
+    "text_difference_rows": 0,
+    "frozen_checks": "12 module/schedule hashes plus enriched commitment and import snapshot hashes of 62 HTML",
+    "gold_or_predictions_read": false
+  },
+  "day2_guard": {
+    "requested_date": "2026-10-29",
+    "live_flag": false,
+    "rejected": true,
+    "exit_code": 1,
+    "reason": "Same-day guard rejected before filesystem/capture stages",
+    "new_series_created": false,
+    "network_calls": 0,
+    "wrapper_sha256": "1033cbb93dd1d2383bd89983e13e19b9605e4c724ffd51fcca577a7100406393"
+  },
+  "upstream_reported_quality": {
+    "selected": 16,
+    "total": 20,
+    "strict_intersection_sensitivity": 15,
+    "with_adjudication": 16,
+    "days": 1,
+    "qualification_complete": false,
+    "basis": "Read B17 report, not independently regraded here"
+  },
+  "checks": {
+    "ordinary_passed": 19,
+    "ignored": 12,
+    "fmt": "passed",
+    "clippy_all_targets": "passed",
+    "release": "passed",
+    "release_stdio": "3 passed, 5 live ignored",
+    "b17_offline_replay": "passed"
+  },
+  "network_calls": 0,
+  "model_calls": 0,
+  "full_policy_ported": false,
+  "day2_executed": false,
+  "automatic_fallback": false,
+  "known_transport_differences": [
+    "Existing Rust SSRF-safe net client and User-Agent retained; not research urllib",
+    "Existing per-host minimum 2s retained; research frozen minimum 2.1s"
+  ],
+  "sha256": {
+    "src/search.rs": "0e984f500cbdf308076fc79150b1ded3fb71343fcb8acfa051c1e96ff633594b",
+    "src/main.rs": "8d48eb7caad83818ceb466fe0e061caa1a1e83033251118247db5144543919b0",
+    "src/mcp.rs": "610342caf7efdbea43cfff9b23baaecca668e17ad6c1c3b90b0638cfb15db8bf",
+    "tests/mcp_stdio.rs": "3a7b2b3828bae46cec47ac376945bffd1ff8f6d34134bf63612534616fd257fe",
+    "Cargo.lock": "807351f5b582ec57b22aa8f02dfcc86349e0e382d0091d5e17769beb54a997a5",
+    "feasibility/search-cases.json": "b67e3269830ae0e976aa9b4c5dc2f6b9c3e922ad1adda35738289d6b1b8325d6",
+    "feasibility/b17-import-2026-10-29.json": "69765c8c4a15497735ba64b14d296e7962d35859a755741a071fd2893a13ac47",
+    "target/release/web-search": "03dc0fa35fd48d64ed15186fbeebbd603b57f02da3e106b0f7db54a3a7759fce",
+    "runs/native-search-2026-10-29/parser-replay.json": "5376128e5329715ae90cbc913942485caefd690c20bf0f507ef2a022e24a9995",
+    "runs/native-search-2026-10-29/day2-guard.json": "361461463aae3f1137bc82061f9b84bdb4ac481a35c9304dfff0a7e9758b6a4c"
+  },
+  "resource_limits": {
+    "naver_kept_urls": 10,
+    "seznam_ancestor_levels": 64
+  }
+}

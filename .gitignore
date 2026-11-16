@@ -1,0 +1,28 @@
+/target/
+/node_modules/
+/.cache/
+/runs/
+.env
+.env.*
+!.env.example
+*.sqlite3*
+# Project context router
+.project-context/indexes/
+.project-context/drafts/
+.project-context/trash/
+.project-context/active/**/.execution.lock
+.project-context/active/**/.research.lock
+.project-context/active/**/.*.tmp
+
+# Local/generated state, not source evidence
+/outputs/
+/.ua/
+.DS_Store
+__pycache__/
+*.pyc
+*.log
+*.sqlite*
+# Large raw corpora stay local; the checksummed inventory records their identity.
+/feasibility/*-corpus-*.json
+/feasibility/*-corpus-*.tar.gz
+!/feasibility/model-benchmark-corpus-2026-10-30.json

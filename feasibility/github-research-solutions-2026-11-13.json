@@ -1,0 +1,146 @@
+{
+  "date": "2026-11-13",
+  "scope": "source review only; no downloaded code executed",
+  "baseline": "a8dab92",
+  "runtime": "40fa7f9",
+  "repositories": [
+    {
+      "id": "G1",
+      "repository": "567-labs/instructor",
+      "commit": "aeb7e2558166caeec497e541bcfc6b4eaa2cf53b",
+      "commit_date": "2026-11-06T23:12:59Z",
+      "archived": false,
+      "license": "MIT",
+      "read_files": [
+        {
+          "path": "instructor/v2/core/retry.py",
+          "url": "https://github.com/567-labs/instructor/blob/aeb7e2558166caeec497e541bcfc6b4eaa2cf53b/instructor/v2/core/retry.py"
+        },
+        {
+          "path": "tests/v2/test_retry_budget.py",
+          "url": "https://github.com/567-labs/instructor/blob/aeb7e2558166caeec497e541bcfc6b4eaa2cf53b/tests/v2/test_retry_budget.py"
+        },
+        {
+          "path": "tests/v2/test_retry_isolation_contract.py",
+          "url": "https://github.com/567-labs/instructor/blob/aeb7e2558166caeec497e541bcfc6b4eaa2cf53b/tests/v2/test_retry_isolation_contract.py"
+        },
+        {
+          "path": "examples/validators/citations.py",
+          "url": "https://github.com/567-labs/instructor/blob/aeb7e2558166caeec497e541bcfc6b4eaa2cf53b/examples/validators/citations.py"
+        }
+      ]
+    },
+    {
+      "id": "G2",
+      "repository": "deepset-ai/haystack",
+      "commit": "5487d837d3848c197451ff9ec455a856e87bfda4",
+      "commit_date": "2026-11-13T10:22:23Z",
+      "archived": false,
+      "license": "Apache-2.0",
+      "read_files": [
+        {
+          "path": "haystack/components/query/query_expander.py",
+          "url": "https://github.com/deepset-ai/haystack/blob/5487d837d3848c197451ff9ec455a856e87bfda4/haystack/components/query/query_expander.py"
+        },
+        {
+          "path": "test/components/query/test_query_expander.py",
+          "url": "https://github.com/deepset-ai/haystack/blob/5487d837d3848c197451ff9ec455a856e87bfda4/test/components/query/test_query_expander.py"
+        },
+        {
+          "path": "haystack/components/validators/json_schema.py",
+          "url": "https://github.com/deepset-ai/haystack/blob/5487d837d3848c197451ff9ec455a856e87bfda4/haystack/components/validators/json_schema.py"
+        },
+        {
+          "path": "test/components/validators/test_json_schema.py",
+          "url": "https://github.com/deepset-ai/haystack/blob/5487d837d3848c197451ff9ec455a856e87bfda4/test/components/validators/test_json_schema.py"
+        }
+      ]
+    },
+    {
+      "id": "G3",
+      "repository": "shuyanzhou/docprompting",
+      "commit": "b7e0e626d47a0649090465bb15c91192fee8777f",
+      "commit_date": "2023-08-08T15:40:21Z",
+      "archived": false,
+      "license": "Apache-2.0",
+      "read_files": [
+        {
+          "path": "retriever/eval.py",
+          "url": "https://github.com/shuyanzhou/docprompting/blob/b7e0e626d47a0649090465bb15c91192fee8777f/retriever/eval.py"
+        }
+      ]
+    },
+    {
+      "id": "G4",
+      "repository": "amazon-science/RAGChecker",
+      "commit": "6091f08c00e676e87a970f2aeb4a23a484746348",
+      "commit_date": "2024-12-13T13:24:31Z",
+      "archived": false,
+      "license": "Apache-2.0",
+      "read_files": [
+        {
+          "path": "ragchecker/computation.py",
+          "url": "https://github.com/amazon-science/RAGChecker/blob/6091f08c00e676e87a970f2aeb4a23a484746348/ragchecker/computation.py"
+        },
+        {
+          "path": "ragchecker/metrics.py",
+          "url": "https://github.com/amazon-science/RAGChecker/blob/6091f08c00e676e87a970f2aeb4a23a484746348/ragchecker/metrics.py"
+        },
+        {
+          "path": "data/meta_evaluation/meta_eval.py",
+          "url": "https://github.com/amazon-science/RAGChecker/blob/6091f08c00e676e87a970f2aeb4a23a484746348/data/meta_evaluation/meta_eval.py"
+        }
+      ]
+    },
+    {
+      "id": "G5",
+      "repository": "amazon-science/RefChecker",
+      "commit": "1df1b25cee792ba2b171302e31ca4f768bd67703",
+      "commit_date": "2025-05-16T03:37:47Z",
+      "archived": true,
+      "license": "Apache-2.0",
+      "read_files": [
+        {
+          "path": "refchecker/aggregator.py",
+          "url": "https://github.com/amazon-science/RefChecker/blob/1df1b25cee792ba2b171302e31ca4f768bd67703/refchecker/aggregator.py"
+        },
+        {
+          "path": "refchecker/checker/checker_base.py",
+          "url": "https://github.com/amazon-science/RefChecker/blob/1df1b25cee792ba2b171302e31ca4f768bd67703/refchecker/checker/checker_base.py"
+        }
+      ]
+    },
+    {
+      "id": "G6",
+      "repository": "princeton-nlp/ALCE",
+      "commit": "246c476a4edfc564266b7346b6e29ef4861ae937",
+      "commit_date": "2024-10-09T11:36:02Z",
+      "archived": false,
+      "license": "MIT",
+      "read_files": [
+        {
+          "path": "eval.py",
+          "url": "https://github.com/princeton-nlp/ALCE/blob/246c476a4edfc564266b7346b6e29ef4861ae937/eval.py"
+        },
+        {
+          "path": "human_eval/README.md",
+          "url": "https://github.com/princeton-nlp/ALCE/blob/246c476a4edfc564266b7346b6e29ef4861ae937/human_eval/README.md"
+        }
+      ]
+    },
+    {
+      "id": "G7",
+      "repository": "xbmxb/RAG-query-rewriting",
+      "commit": "6bab6243e60c7f3e526b6ee44f95381b1024d471",
+      "commit_date": "2024-02-28T12:06:46Z",
+      "archived": false,
+      "license": null,
+      "read_files": [
+        {
+          "path": "generate/inprompts/myprompt.jsonl",
+          "url": "https://github.com/xbmxb/RAG-query-rewriting/blob/6bab6243e60c7f3e526b6ee44f95381b1024d471/generate/inprompts/myprompt.jsonl"
+        }
+      ]
+    }
+  ]
+}

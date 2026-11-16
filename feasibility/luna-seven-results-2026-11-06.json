@@ -1,0 +1,1694 @@
+{
+  "schema": "seven-luna-search-results-v1",
+  "client_date": "2026-11-06",
+  "snapshot": {
+    "client_date": "2026-11-06",
+    "base": "82a3756",
+    "frozen_at": "2026-11-06T05:56:37.637430+00:00",
+    "binary_sha256": "4d3f1d6b4de0308366d8984dd282172c65ea8692310c2e01c1c272da7d7a0e0b",
+    "source_sha256": {
+      "src/benchmark.rs": "a986628eac97c65ba3b96138f1b24cf52a0807c5b2208ec5abce7a1d4f515500",
+      "src/browser.rs": "4bf08cddf944b6a1f7640b7350d69e88a5d9f93772099ea64f759dceb4ec807b",
+      "src/cache.rs": "550185965e556aea218cfcddeb8ca30d04995c9da9669d1c96ee6637f3dc9687",
+      "src/coverage_replay.rs": "2050a0b807c7942ad2f49ceed450cd5cf0df7f6a5153cb27f50d7bae4dd744e0",
+      "src/discover.rs": "bf23fee3cdf642c9c5e3a45350481779b33d4ea5377d7148e912d905c188f7e0",
+      "src/evidence.rs": "653028a1775e2292ff3138ec702aca07abe66f42eb21b2ceb73ad41812e76acd",
+      "src/evidence_probe.rs": "4be45e9118fc627b53c9a2d819b3a5258cdf97e483eb777789e803ff2d6a7c4c",
+      "src/firecrawl_benchmark.rs": "649385f0b44ba58fdaebc839e9c9264594fa13bce35ee03f550f7517d6b3e2cb",
+      "src/main.rs": "def00842d6a0e62f56d28d28eb15ab5857fe10bf91ff4450e60cbed4fdfec099",
+      "src/mcp.rs": "b79fb5826be5aa65cb1e9595dee2114f8acfe4800b72636e77678709a8837c8b",
+      "src/model.rs": "38083f9a1999aff9fca6e969da2dc75fdc02beaa996e1292f2dd3b5e780a0c61",
+      "src/net.rs": "18926f679b1f84eb6cdf593821529b03a24ca57ab5bb4da9f1bd95cbadc58426",
+      "src/news.rs": "cdc4585b56621b3fdc76c3394be9fb18e4fe12a29f67461e113257122e196c0f",
+      "src/news_search.rs": "e9b6acb717e2846a023796df8c0fed1dec1f93c84e6c5edbe04f0e6caebf4808",
+      "src/policy.rs": "131d1be0283b38e218cd5b40428cadf5c1557152d730c3a57b71bb5a2abaf4db",
+      "src/reliability_benchmark.rs": "8e7b1b31a83c4cf95888ef57d9f2325aff955b44fb86768b9221263d803ddc0f",
+      "src/reranker.rs": "116ed9e2231299ef00e0bb5bb828d15da40d28610489585bf95d0ba7f2045fe3",
+      "src/reranker_benchmark.rs": "d2341b43d554121b0c8e79889cdf114a8f6018ac230e52ef2f911c5545e0fe61",
+      "src/rescue.rs": "995883142aea40927bf915f7b5b11c19cb331e4fa4c117125ded54e88c0bffc1",
+      "src/research.rs": "6656321a00be6bd808d090325ff30a267aa49b07940b3a9bf818210db009b63c",
+      "src/research_tests.rs": "d6dc17f56cd1681d8a6307a5899f20e664b0dbafb1dc02b8400d196a620dcad9",
+      "src/search.rs": "4d073253ccc65cb4420b4164fb836ed795624ac67931aff9cdd2d60826b45d1c"
+    },
+    "original20_sha256": "b67e3269830ae0e976aa9b4c5dc2f6b9c3e922ad1adda35738289d6b1b8325d6",
+    "b17_sha256": "1e83c13aa670b1a656262542eb5c34b21f559aca8fd0da179ab704097dcc995e"
+  },
+  "agents": [
+    {
+      "id": "L1",
+      "agent": "/root/luna_1_security",
+      "model": "gpt-6-luna",
+      "report_exists": true,
+      "results_exists": true,
+      "scope": "security"
+    },
+    {
+      "id": "L2",
+      "agent": "/root/luna_2_extraction",
+      "model": "gpt-6-luna",
+      "report_exists": true,
+      "results_exists": true,
+      "scope": "extraction"
+    },
+    {
+      "id": "L3",
+      "agent": "/root/luna_3_cache",
+      "model": "gpt-6-luna",
+      "report_exists": true,
+      "results_exists": true,
+      "scope": "cache"
+    },
+    {
+      "id": "L4",
+      "agent": "/root/luna_4_budgets",
+      "model": "gpt-6-luna",
+      "report_exists": true,
+      "results_exists": true,
+      "scope": "budgets"
+    },
+    {
+      "id": "L5",
+      "agent": "/root/luna_5_retrieval",
+      "model": "gpt-6-luna",
+      "report_exists": true,
+      "results_exists": true,
+      "scope": "retrieval"
+    },
+    {
+      "id": "L6",
+      "agent": "/root/luna_6_research",
+      "model": "gpt-6-luna",
+      "report_exists": true,
+      "results_exists": true,
+      "scope": "research"
+    },
+    {
+      "id": "L7",
+      "agent": "/root/luna_7_harness",
+      "model": "gpt-6-luna",
+      "report_exists": true,
+      "results_exists": true,
+      "scope": "harness"
+    }
+  ],
+  "episodes": [
+    {
+      "status": "completed",
+      "tool_status": "partial",
+      "stop_reason": null,
+      "elapsed_ms": 22937,
+      "is_error": false,
+      "public_bytes": 29010,
+      "text_bytes": 29010,
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 4,
+        "hits": 1,
+        "http_reads": 4,
+        "misses": 12,
+        "qwen_calls": 4,
+        "refresh": false,
+        "writes": 12
+      },
+      "budget": {
+        "classification_calls": 3,
+        "document_reads": 4,
+        "logical_search_calls": 2,
+        "reranker_calls": 4,
+        "reranker_pairs": 92,
+        "source_context_max": 16029
+      },
+      "provenance_checks": {},
+      "model_refusal": false,
+      "id": "D01",
+      "agent": "L5",
+      "tool": "ranked_search",
+      "binary_sha256": "4d3f1d6b4de0308366d8984dd282172c65ea8692310c2e01c1c272da7d7a0e0b",
+      "queue_ms": 18921,
+      "artifacts_member": "L5/episodes/D01",
+      "queue_included_in_latency": false,
+      "results": [
+        {
+          "id": "C003",
+          "url": "https://doc.rust-lang.org/nightly/core/option/enum.Option.html",
+          "classification": "direct",
+          "document_http_status": 200,
+          "fetch_method": "http_extract"
+        },
+        {
+          "id": "C004",
+          "url": "https://doc.rust-lang.org/std/option/",
+          "classification": "background",
+          "document_http_status": 200,
+          "fetch_method": "http_extract"
+        },
+        {
+          "id": "C007",
+          "url": "https://en.wikipedia.org/wiki/Option_type",
+          "classification": "background",
+          "document_http_status": 200,
+          "fetch_method": "http_extract"
+        },
+        {
+          "id": "C010",
+          "url": "https://www.root.cz/clanky/datovy-typ-option-v-programovacim-jazyku-rust/",
+          "classification": "background",
+          "document_http_status": 200,
+          "fetch_method": "http_extract"
+        },
+        {
+          "id": "C006",
+          "url": "https://en.wikipedia.org/wiki/Option",
+          "classification": "irrelevant",
+          "document_http_status": null,
+          "fetch_method": "unknown"
+        }
+      ]
+    },
+    {
+      "status": "completed",
+      "tool_status": "partial",
+      "stop_reason": null,
+      "elapsed_ms": 1935,
+      "is_error": false,
+      "public_bytes": 3754,
+      "text_bytes": 3755,
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 0,
+        "hits": 1,
+        "http_reads": 0,
+        "misses": 0,
+        "qwen_calls": 0,
+        "refresh": false,
+        "writes": 0
+      },
+      "budget": {
+        "classification_calls": 1,
+        "document_reads": 0,
+        "logical_search_calls": 2,
+        "reranker_calls": 0,
+        "reranker_pairs": 0,
+        "source_context_max": 3290
+      },
+      "provenance_checks": {},
+      "model_refusal": false,
+      "id": "D02",
+      "agent": "L5",
+      "tool": "ranked_search",
+      "binary_sha256": "4d3f1d6b4de0308366d8984dd282172c65ea8692310c2e01c1c272da7d7a0e0b",
+      "queue_ms": 7412,
+      "artifacts_member": "L5/episodes/D02",
+      "queue_included_in_latency": false,
+      "results": [
+        {
+          "id": "C006",
+          "url": "https://www.python.org/",
+          "classification": "irrelevant",
+          "document_http_status": null,
+          "fetch_method": "unknown"
+        },
+        {
+          "id": "C003",
+          "url": "https://www.knihydobrovsky.cz/e-kniha/python-421779448",
+          "classification": "irrelevant",
+          "document_http_status": null,
+          "fetch_method": "unknown"
+        },
+        {
+          "id": "C002",
+          "url": "https://github.com/python",
+          "classification": "irrelevant",
+          "document_http_status": null,
+          "fetch_method": "unknown"
+        },
+        {
+          "id": "C004",
+          "url": "http://www.parallelpython.com/",
+          "classification": "irrelevant",
+          "document_http_status": null,
+          "fetch_method": "unknown"
+        },
+        {
+          "id": "C001",
+          "url": "https://cs.wikipedia.org/wiki/Python",
+          "classification": "irrelevant",
+          "document_http_status": null,
+          "fetch_method": "unknown"
+        }
+      ]
+    },
+    {
+      "status": "completed",
+      "tool_status": "partial",
+      "stop_reason": null,
+      "elapsed_ms": 10626,
+      "is_error": false,
+      "public_bytes": 25722,
+      "text_bytes": 25724,
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 4,
+        "hits": 1,
+        "http_reads": 4,
+        "misses": 12,
+        "qwen_calls": 4,
+        "refresh": false,
+        "writes": 12
+      },
+      "budget": {
+        "classification_calls": 2,
+        "document_reads": 4,
+        "logical_search_calls": 2,
+        "reranker_calls": 4,
+        "reranker_pairs": 68,
+        "source_context_max": 16128
+      },
+      "provenance_checks": {},
+      "model_refusal": false,
+      "id": "D03",
+      "agent": "L5",
+      "tool": "ranked_search",
+      "binary_sha256": "4d3f1d6b4de0308366d8984dd282172c65ea8692310c2e01c1c272da7d7a0e0b",
+      "queue_ms": 2114,
+      "artifacts_member": "L5/episodes/D03",
+      "queue_included_in_latency": false,
+      "results": [
+        {
+          "id": "C004",
+          "url": "https://developer.mozilla.org/ru/docs/Web/HTTP/Reference/Headers",
+          "classification": "background",
+          "document_http_status": 200,
+          "fetch_method": "http_extract"
+        },
+        {
+          "id": "C008",
+          "url": "https://ru.wikipedia.org/wiki/HTTP",
+          "classification": "background",
+          "document_http_status": 200,
+          "fetch_method": "http_extract"
+        },
+        {
+          "id": "C002",
+          "url": "https://be.wikipedia.org/wiki/HTTP",
+          "classification": "background",
+          "document_http_status": 200,
+          "fetch_method": "http_extract"
+        },
+        {
+          "id": "C010",
+          "url": "https://uk.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D0%BA%D0%BE%D0%B4%D1%96%D0%B2_%D1%81%D1%82%D0%B0%D0%BD%D1%83_HTTP",
+          "classification": "background",
+          "document_http_status": null,
+          "fetch_method": "unknown"
+        },
+        {
+          "id": "C007",
+          "url": "https://groups.google.com/g/common-crawl/c/_ERKXfgZDm4",
+          "classification": "irrelevant",
+          "document_http_status": null,
+          "fetch_method": "unknown"
+        }
+      ]
+    },
+    {
+      "status": "completed",
+      "tool_status": "partial",
+      "stop_reason": null,
+      "elapsed_ms": 18333,
+      "is_error": false,
+      "public_bytes": 17254,
+      "text_bytes": 17255,
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 3,
+        "hits": 1,
+        "http_reads": 4,
+        "misses": 6,
+        "qwen_calls": 0,
+        "refresh": false,
+        "writes": 4
+      },
+      "budget": {
+        "classification_calls": 1,
+        "document_reads": 4,
+        "logical_search_calls": 2,
+        "reranker_calls": 0,
+        "reranker_pairs": 0,
+        "source_context_max": 3573
+      },
+      "provenance_checks": {},
+      "model_refusal": false,
+      "id": "N01",
+      "agent": "L5",
+      "tool": "ranked_search",
+      "binary_sha256": "4d3f1d6b4de0308366d8984dd282172c65ea8692310c2e01c1c272da7d7a0e0b",
+      "queue_ms": 2115,
+      "artifacts_member": "L5/episodes/N01",
+      "queue_included_in_latency": false,
+      "results": [
+        {
+          "id": "C006",
+          "url": "https://www.slunecnice.cz/android/sw/np-voronez-mestnye-novosti/",
+          "classification": "background",
+          "document_http_status": null,
+          "fetch_method": "unknown"
+        },
+        {
+          "id": "C001",
+          "url": "https://ca.wikipedia.org/wiki/2026",
+          "classification": "irrelevant",
+          "document_http_status": 200,
+          "fetch_method": "http_extract"
+        },
+        {
+          "id": "C004",
+          "url": "https://www.side-line.com/2026/10/",
+          "classification": "irrelevant",
+          "document_http_status": null,
+          "fetch_method": "unknown"
+        },
+        {
+          "id": "C002",
+          "url": "https://gid.cz/topic/31269-%D0%BF%D1%80%D0%B0%D0%B3%D0%B0-%D1%83%D0%BB%D0%B0%D0%BD-%D0%B1%D0%B0%D1%82%D0%BE%D1%80-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B4%D0%B0%D0%BD/",
+          "classification": "irrelevant",
+          "document_http_status": 200,
+          "fetch_method": "http_extract"
+        },
+        {
+          "id": "C003",
+          "url": "https://itvar.cz/obtydenik/2026/6",
+          "classification": "irrelevant",
+          "document_http_status": 200,
+          "fetch_method": "http_extract"
+        }
+      ]
+    },
+    {
+      "status": "completed",
+      "tool_status": "ok",
+      "stop_reason": null,
+      "elapsed_ms": 962,
+      "is_error": false,
+      "public_bytes": 2412,
+      "text_bytes": 2412,
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 0,
+        "hits": 0,
+        "http_reads": 1,
+        "misses": 1,
+        "qwen_calls": 0,
+        "refresh": false,
+        "writes": 1
+      },
+      "budget": null,
+      "provenance_checks": {},
+      "model_refusal": false,
+      "id": "S01",
+      "agent": "L5",
+      "tool": "search",
+      "binary_sha256": "4d3f1d6b4de0308366d8984dd282172c65ea8692310c2e01c1c272da7d7a0e0b",
+      "queue_ms": 2108,
+      "artifacts_member": "L5/episodes/S01",
+      "queue_included_in_latency": false
+    },
+    {
+      "status": "completed",
+      "tool_status": "ok",
+      "stop_reason": null,
+      "elapsed_ms": 26,
+      "is_error": false,
+      "public_bytes": 2411,
+      "text_bytes": 2411,
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 0,
+        "hits": 1,
+        "http_reads": 0,
+        "misses": 0,
+        "qwen_calls": 0,
+        "refresh": false,
+        "writes": 0
+      },
+      "budget": null,
+      "provenance_checks": {},
+      "model_refusal": false,
+      "id": "S01W",
+      "agent": "L5",
+      "tool": "search",
+      "binary_sha256": "4d3f1d6b4de0308366d8984dd282172c65ea8692310c2e01c1c272da7d7a0e0b",
+      "queue_ms": 2106,
+      "artifacts_member": "L5/episodes/S01W",
+      "queue_included_in_latency": false
+    },
+    {
+      "status": "completed",
+      "tool_status": "ok",
+      "stop_reason": null,
+      "elapsed_ms": 821,
+      "is_error": false,
+      "public_bytes": 1883,
+      "text_bytes": 1883,
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 0,
+        "hits": 0,
+        "http_reads": 1,
+        "misses": 1,
+        "qwen_calls": 0,
+        "refresh": false,
+        "writes": 1
+      },
+      "budget": null,
+      "provenance_checks": {},
+      "model_refusal": false,
+      "id": "S02",
+      "agent": "L5",
+      "tool": "search",
+      "binary_sha256": "4d3f1d6b4de0308366d8984dd282172c65ea8692310c2e01c1c272da7d7a0e0b",
+      "queue_ms": 74881,
+      "artifacts_member": "L5/episodes/S02",
+      "queue_included_in_latency": false
+    },
+    {
+      "status": "completed",
+      "tool_status": "ok",
+      "stop_reason": null,
+      "elapsed_ms": 789,
+      "is_error": false,
+      "public_bytes": 2865,
+      "text_bytes": 2865,
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 0,
+        "hits": 0,
+        "http_reads": 1,
+        "misses": 1,
+        "qwen_calls": 0,
+        "refresh": false,
+        "writes": 1
+      },
+      "budget": null,
+      "provenance_checks": {},
+      "model_refusal": false,
+      "id": "S03",
+      "agent": "L5",
+      "tool": "search",
+      "binary_sha256": "4d3f1d6b4de0308366d8984dd282172c65ea8692310c2e01c1c272da7d7a0e0b",
+      "queue_ms": 24933,
+      "artifacts_member": "L5/episodes/S03",
+      "queue_included_in_latency": false
+    },
+    {
+      "status": "completed",
+      "tool_status": "partial",
+      "stop_reason": "budget_exhausted",
+      "elapsed_ms": 9653,
+      "is_error": false,
+      "public_bytes": 7305,
+      "text_bytes": 7311,
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 4,
+        "hits": 0,
+        "http_reads": 6,
+        "misses": 10,
+        "qwen_calls": 0,
+        "refresh": false,
+        "writes": 10
+      },
+      "budget": {
+        "limits": {
+          "browser": 0,
+          "documents": 4,
+          "forms": 2,
+          "generations": 6,
+          "output_bytes": 32768,
+          "qwen": 4,
+          "seconds": 180,
+          "serp": 4,
+          "source_context_chars": 24000
+        },
+        "remaining": {
+          "documents": 0,
+          "forms": 0,
+          "generations": 3,
+          "milliseconds": 170367,
+          "qwen": 4,
+          "serp": 2
+        },
+        "used": {
+          "documents": 4,
+          "forms": 2,
+          "generations": 3,
+          "qwen": 0,
+          "serp": 2
+        }
+      },
+      "provenance_checks": {
+        "claim_ranges": 0,
+        "witnesses": 0
+      },
+      "model_refusal": false,
+      "id": "N02",
+      "agent": "L6",
+      "tool": "research",
+      "binary_sha256": "4d3f1d6b4de0308366d8984dd282172c65ea8692310c2e01c1c272da7d7a0e0b",
+      "queue_ms": 20185,
+      "artifacts_member": "L6/episodes/N02",
+      "queue_included_in_latency": false,
+      "answer": "",
+      "claims": [],
+      "missing": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "sources": [
+        {
+          "id": "S1",
+          "url": "http://www.comics-blog.cz/2017/12/1591-saga-6-80.html",
+          "text_hash": "f11c73bea086e2288a553d5a76dce3bfd9006a8cf974fce6824c8282bdce5895",
+          "eligible": false,
+          "eligibility": "not_article",
+          "publication": {
+            "date_status": "missing",
+            "kind": "feed",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "extraction": {
+            "method": "readability",
+            "scope": "inferred_article",
+            "truncated": false
+          }
+        },
+        {
+          "id": "S2",
+          "url": "http://www.comics-blog.cz/2014/07/701-ultimatni-komiksovy-komplet-26.html",
+          "text_hash": "7090ceec086aeeeba93d08ee2273a0dba79259403d908c7fefd40b907937ac1f",
+          "eligible": false,
+          "eligibility": "not_article",
+          "publication": {
+            "date_status": "missing",
+            "kind": "feed",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "extraction": {
+            "method": "readability",
+            "scope": "inferred_article",
+            "truncated": false
+          }
+        },
+        {
+          "id": "S3",
+          "url": "https://nezanesli.ru/",
+          "text_hash": "08b23a2cb35c4e57f9b849623fed401451d41f049640226c4138af221c142eb1",
+          "eligible": false,
+          "eligibility": "not_article",
+          "publication": {
+            "date_status": "missing",
+            "kind": "feed",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          }
+        },
+        {
+          "id": "S4",
+          "url": "https://nezanesli.ru/bonus/bonus-za-depozit-ot-riobet/",
+          "text_hash": "03dbf2a9a86d0583fea33ef9ab46d6eb60bac85a0d19ec8f700fe581c207151a",
+          "eligible": false,
+          "eligibility": "publication_date_not_verified",
+          "publication": {
+            "date_status": "missing",
+            "kind": "article",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          }
+        }
+      ],
+      "sufficiency": {
+        "audit_completed": false,
+        "cited_distinct_documents": 0,
+        "judge_sufficient": false,
+        "required_distinct_documents": 2
+      }
+    },
+    {
+      "status": "completed",
+      "tool_status": "partial",
+      "stop_reason": "budget_exhausted",
+      "elapsed_ms": 54185,
+      "is_error": false,
+      "public_bytes": 10077,
+      "text_bytes": 10085,
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 3,
+        "hits": 0,
+        "http_reads": 7,
+        "misses": 12,
+        "qwen_calls": 3,
+        "refresh": false,
+        "writes": 11
+      },
+      "budget": {
+        "limits": {
+          "browser": 0,
+          "documents": 4,
+          "forms": 2,
+          "generations": 6,
+          "output_bytes": 32768,
+          "qwen": 4,
+          "seconds": 180,
+          "serp": 4,
+          "source_context_chars": 24000
+        },
+        "remaining": {
+          "documents": 0,
+          "forms": 0,
+          "generations": 2,
+          "milliseconds": 125836,
+          "qwen": 1,
+          "serp": 2
+        },
+        "used": {
+          "documents": 4,
+          "forms": 2,
+          "generations": 4,
+          "qwen": 3,
+          "serp": 2
+        }
+      },
+      "provenance_checks": {
+        "claim_ranges": 4,
+        "witnesses": 4
+      },
+      "model_refusal": false,
+      "id": "R01",
+      "agent": "L6",
+      "tool": "research",
+      "binary_sha256": "4d3f1d6b4de0308366d8984dd282172c65ea8692310c2e01c1c272da7d7a0e0b",
+      "queue_ms": 2108,
+      "artifacts_member": "L6/episodes/R01",
+      "queue_included_in_latency": false,
+      "answer": "RFC 6585 предписывает серверам SHOULD включать Retry-After, но не делает это обязательным. [S1](<https://errorlookup.com/guides/429-too-many-requests/>)\nMUST (или REQUIRED, SHALL) означает абсолютное требование спецификации. [S3](<https://www.rfc-editor.org/info/rfc2119/>)\nMAY (или OPTIONAL) означает, что элемент действительно необязателен. [S3](<https://www.rfc-editor.org/info/rfc2119/>)\nSHOULD (или RECOMMENDED) допускает обоснованные причины игнорировать требование в отдельных обстоятельствах. [S3](<https://www.rfc-editor.org/info/rfc2119/>)",
+      "claims": [
+        {
+          "answer_end": 90,
+          "answer_start": 0,
+          "evidence": [
+            {
+              "chunk_id": "S1P1",
+              "document_version": "b35abf649101db570a8ad5f26246f9248160f8c3a4238ccde5e9293889a8d56f",
+              "end": 6738,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "RFC 6585 says servers SHOULD include Retry-After but does not make it mandatory.",
+              "source_id": "S1",
+              "start": 6658
+            }
+          ],
+          "facets": [
+            0
+          ],
+          "id": "A1",
+          "kind": "fact",
+          "rationale": "",
+          "text": "RFC 6585 предписывает серверам SHOULD включать Retry-After, но не делает это обязательным."
+        },
+        {
+          "answer_end": 224,
+          "answer_start": 153,
+          "evidence": [
+            {
+              "chunk_id": "S3P2",
+              "document_version": "c56eb9d18a3e7a0bf1d5ce6c6bb6eddd394f67fee381223ddef67e1fdc881c5e",
+              "end": 1602,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "1. MUST   This word, or the terms \"REQUIRED\" or \"SHALL\", mean that the\n   definition is an absolute requirement of the specification.",
+              "source_id": "S3",
+              "start": 1469
+            }
+          ],
+          "facets": [
+            1
+          ],
+          "id": "A2",
+          "kind": "fact",
+          "rationale": "",
+          "text": "MUST (или REQUIRED, SHALL) означает абсолютное требование спецификации."
+        },
+        {
+          "answer_end": 342,
+          "answer_start": 274,
+          "evidence": [
+            {
+              "chunk_id": "S3P1",
+              "document_version": "c56eb9d18a3e7a0bf1d5ce6c6bb6eddd394f67fee381223ddef67e1fdc881c5e",
+              "end": 2582,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "5. MAY   This word, or the adjective \"OPTIONAL\", mean that an item is\n   truly optional.",
+              "source_id": "S3",
+              "start": 2494
+            }
+          ],
+          "facets": [
+            1
+          ],
+          "id": "A3",
+          "kind": "fact",
+          "rationale": "",
+          "text": "MAY (или OPTIONAL) означает, что элемент действительно необязателен."
+        },
+        {
+          "answer_end": 500,
+          "answer_start": 392,
+          "evidence": [
+            {
+              "chunk_id": "S3P2",
+              "document_version": "c56eb9d18a3e7a0bf1d5ce6c6bb6eddd394f67fee381223ddef67e1fdc881c5e",
+              "end": 1892,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "3. SHOULD   This word, or the adjective \"RECOMMENDED\", mean that there\n   may exist valid reasons in particular circumstances to ignore a\n   particular item",
+              "source_id": "S3",
+              "start": 1736
+            }
+          ],
+          "facets": [
+            1
+          ],
+          "id": "A4",
+          "kind": "fact",
+          "rationale": "",
+          "text": "SHOULD (или RECOMMENDED) допускает обоснованные причины игнорировать требование в отдельных обстоятельствах."
+        }
+      ],
+      "missing": [
+        0
+      ],
+      "sources": [
+        {
+          "id": "S1",
+          "url": "https://errorlookup.com/guides/429-too-many-requests/",
+          "text_hash": "92b4840b37d1b3e72c9f9ec346f57ce60dc42d9ca13e722556abb8e8c545f36d",
+          "eligible": true,
+          "eligibility": "read_body",
+          "publication": {
+            "date_status": "missing",
+            "kind": "article",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          }
+        },
+        {
+          "id": "S2",
+          "url": "https://blobstreaming.org/notes/rfc-basics-for-devs/",
+          "text_hash": "1736b0b4b0735e6f756511e0b951e49be585fcbd1786221085ec18e43cd53bff",
+          "eligible": true,
+          "eligibility": "read_body",
+          "publication": {
+            "date_status": "valid",
+            "kind": "article",
+            "published_date": "2024-10-18",
+            "witness_count": 2,
+            "witnesses": [
+              {
+                "date": "2024-10-18",
+                "raw": "2024-10-18T00:00:00Z",
+                "source": "jsonld.datePublished",
+                "timestamp": "2024-10-18T00:00:00+00:00"
+              },
+              {
+                "date": "2024-10-18",
+                "raw": "2024-10-18",
+                "source": "article.datePublished",
+                "timestamp": null
+              }
+            ],
+            "witnesses_limited": false
+          },
+          "extraction": {
+            "method": "owned_article",
+            "scope": "article",
+            "truncated": false
+          }
+        },
+        {
+          "id": "S3",
+          "url": "https://www.rfc-editor.org/info/rfc2119/",
+          "text_hash": "de79223d2792c560394e10a6f8eeaedd45fb9571fdf6c9d4b0800954c7877ba4",
+          "eligible": true,
+          "eligibility": "read_body",
+          "publication": {
+            "date_status": "missing",
+            "kind": "article",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          }
+        }
+      ],
+      "sufficiency": {
+        "audit_completed": true,
+        "cited_distinct_documents": 2,
+        "judge_sufficient": false,
+        "required_distinct_documents": 2
+      }
+    },
+    {
+      "status": "completed",
+      "tool_status": "partial",
+      "stop_reason": "budget_exhausted",
+      "elapsed_ms": 17100,
+      "is_error": false,
+      "public_bytes": 9344,
+      "text_bytes": 9357,
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 4,
+        "hits": 0,
+        "http_reads": 6,
+        "misses": 14,
+        "qwen_calls": 4,
+        "refresh": false,
+        "writes": 14
+      },
+      "budget": {
+        "limits": {
+          "browser": 0,
+          "documents": 4,
+          "forms": 2,
+          "generations": 6,
+          "output_bytes": 32768,
+          "qwen": 4,
+          "seconds": 180,
+          "serp": 4,
+          "source_context_chars": 24000
+        },
+        "remaining": {
+          "documents": 0,
+          "forms": 0,
+          "generations": 2,
+          "milliseconds": 162937,
+          "qwen": 0,
+          "serp": 2
+        },
+        "used": {
+          "documents": 4,
+          "forms": 2,
+          "generations": 4,
+          "qwen": 4,
+          "serp": 2
+        }
+      },
+      "provenance_checks": {
+        "claim_ranges": 2,
+        "witnesses": 2
+      },
+      "model_refusal": false,
+      "id": "R02",
+      "agent": "L6",
+      "tool": "research",
+      "binary_sha256": "4d3f1d6b4de0308366d8984dd282172c65ea8692310c2e01c1c272da7d7a0e0b",
+      "queue_ms": 21567,
+      "artifacts_member": "L6/episodes/R02",
+      "queue_included_in_latency": false,
+      "answer": "str.partition возвращает кортеж (3-tuple) из трёх частей: до разделителя, сам разделитель и после него. [S2](<https://github.com/outcastdreamer/Python_Notes>)\nЕсли разделитель не найден, str.partition возвращает кортеж из исходной строки и двух пустых строк. [S2](<https://github.com/outcastdreamer/Python_Notes>)",
+      "claims": [
+        {
+          "answer_end": 103,
+          "answer_start": 0,
+          "evidence": [
+            {
+              "chunk_id": "S2P2",
+              "document_version": "ca1eb9b765afe9b1e20406dd3a365b8d8b2b7a822f0e1598af9f7de9dbec544b",
+              "end": 55815,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "returns a 3-tuple containing the part before the separator, the separator\n |      itself, and the part after it.",
+              "source_id": "S2",
+              "start": 55703
+            }
+          ],
+          "facets": [
+            0
+          ],
+          "id": "A1",
+          "kind": "fact",
+          "rationale": "",
+          "text": "str.partition возвращает кортеж (3-tuple) из трёх частей: до разделителя, сам разделитель и после него."
+        },
+        {
+          "answer_end": 258,
+          "answer_start": 159,
+          "evidence": [
+            {
+              "chunk_id": "S2P2",
+              "document_version": "ca1eb9b765afe9b1e20406dd3a365b8d8b2b7a822f0e1598af9f7de9dbec544b",
+              "end": 55943,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "If the separator is not found, returns a 3-tuple containing the original string\n |      and two empty strings.",
+              "source_id": "S2",
+              "start": 55833
+            }
+          ],
+          "facets": [
+            1
+          ],
+          "id": "A2",
+          "kind": "fact",
+          "rationale": "",
+          "text": "Если разделитель не найден, str.partition возвращает кортеж из исходной строки и двух пустых строк."
+        }
+      ],
+      "missing": [],
+      "sources": [
+        {
+          "id": "S1",
+          "url": "https://blog.finxter.com/python-list-sort/",
+          "text_hash": "f42fb6edf2f0c59d90b6897e25ad94c3f0ade4da35dcb9e471e6f3d9445d3ace",
+          "eligible": true,
+          "eligibility": "read_body",
+          "publication": {
+            "date_status": "missing",
+            "kind": "feed",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          }
+        },
+        {
+          "id": "S2",
+          "url": "https://github.com/outcastdreamer/Python_Notes",
+          "text_hash": "f7856ffaa9ae63bff44e5f4f92548aff2effc54e04e055474033d04b48c15903",
+          "eligible": true,
+          "eligibility": "read_body",
+          "publication": {
+            "date_status": "missing",
+            "kind": "feed",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": true
+          }
+        },
+        {
+          "id": "S3",
+          "url": "https://github.com/Meteosource/pymeteosource",
+          "text_hash": "a10f36957b19a74ef8130ef14b9e2e0a438458ec83232402fd6ab54671180d7a",
+          "eligible": true,
+          "eligibility": "read_body",
+          "publication": {
+            "date_status": "missing",
+            "kind": "feed",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          }
+        },
+        {
+          "id": "S4",
+          "url": "https://github.com/python/mypy",
+          "text_hash": "bde1ff22a2480cc0977482b5322aa9a83b7a35947199efdf4135db06b97ba6bd",
+          "eligible": true,
+          "eligibility": "read_body",
+          "publication": {
+            "date_status": "missing",
+            "kind": "feed",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          }
+        }
+      ],
+      "sufficiency": {
+        "audit_completed": true,
+        "cited_distinct_documents": 1,
+        "judge_sufficient": true,
+        "required_distinct_documents": 2
+      }
+    },
+    {
+      "status": "completed",
+      "tool_status": "partial",
+      "stop_reason": "budget_exhausted",
+      "elapsed_ms": 20852,
+      "is_error": false,
+      "public_bytes": 7812,
+      "text_bytes": 7819,
+      "cache": {
+        "enabled": true,
+        "errors": 0,
+        "extractions": 4,
+        "hits": 0,
+        "http_reads": 6,
+        "misses": 14,
+        "qwen_calls": 4,
+        "refresh": false,
+        "writes": 14
+      },
+      "budget": {
+        "limits": {
+          "browser": 0,
+          "documents": 4,
+          "forms": 2,
+          "generations": 6,
+          "output_bytes": 32768,
+          "qwen": 4,
+          "seconds": 180,
+          "serp": 4,
+          "source_context_chars": 24000
+        },
+        "remaining": {
+          "documents": 0,
+          "forms": 0,
+          "generations": 3,
+          "milliseconds": 159203,
+          "qwen": 0,
+          "serp": 2
+        },
+        "used": {
+          "documents": 4,
+          "forms": 2,
+          "generations": 3,
+          "qwen": 4,
+          "serp": 2
+        }
+      },
+      "provenance_checks": {
+        "claim_ranges": 0,
+        "witnesses": 0
+      },
+      "model_refusal": false,
+      "id": "R03",
+      "agent": "L6",
+      "tool": "research",
+      "binary_sha256": "4d3f1d6b4de0308366d8984dd282172c65ea8692310c2e01c1c272da7d7a0e0b",
+      "queue_ms": 8727,
+      "artifacts_member": "L6/episodes/R03",
+      "queue_included_in_latency": false,
+      "answer": "",
+      "claims": [],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "sources": [
+        {
+          "id": "S1",
+          "url": "https://doc.rust-lang.org/std/iter/trait.Iterator.html",
+          "text_hash": "67a90eb13ad13410f66bff4899d6c7a282455d43120b9d072a5ee23fe26941d1",
+          "eligible": true,
+          "eligibility": "read_body",
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": true
+          }
+        },
+        {
+          "id": "S2",
+          "url": "https://doc.rust-lang.org/nightly/core/iter/struct.Peekable.html",
+          "text_hash": "38651448330855ebe7096d263236ceba1eec5de7ee0fd81f5b31485626d95cfb",
+          "eligible": true,
+          "eligibility": "read_body",
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          }
+        },
+        {
+          "id": "S3",
+          "url": "https://doc.rust-lang.org/nightly/src/core/iter/traits/iterator.rs.html",
+          "text_hash": "b98f64f6b667722c54c60622c9280060cb6d929cd1b5e6f75779cb8e4b8d9900",
+          "eligible": true,
+          "eligibility": "read_body",
+          "publication": {
+            "date_status": "missing",
+            "kind": "unknown",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": true
+          }
+        },
+        {
+          "id": "S4",
+          "url": "https://en.wikipedia.org/wiki/Iterator",
+          "text_hash": "db0f60f4f2fbf633ea8ebe7973912d048440a316e7fceae81f2db9221c62014d",
+          "eligible": true,
+          "eligibility": "read_body",
+          "publication": {
+            "date_status": "valid",
+            "kind": "article",
+            "published_date": "2003-01-22",
+            "witness_count": 1,
+            "witnesses": [
+              {
+                "date": "2003-01-22",
+                "raw": "2003-01-22T11:49:18Z",
+                "source": "jsonld.datePublished",
+                "timestamp": "2003-01-22T11:49:18+00:00"
+              }
+            ],
+            "witnesses_limited": false
+          },
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          }
+        }
+      ],
+      "sufficiency": {
+        "audit_completed": false,
+        "cited_distinct_documents": 0,
+        "judge_sufficient": false,
+        "required_distinct_documents": 2
+      }
+    },
+    {
+      "status": "completed",
+      "elapsed_ms": 18846,
+      "model_refusal": false,
+      "provenance_checks": {
+        "witnesses": 1,
+        "claim_ranges": 1
+      },
+      "id": "H01",
+      "agent": "L7",
+      "tool": "harness",
+      "binary_sha256": "4d3f1d6b4de0308366d8984dd282172c65ea8692310c2e01c1c272da7d7a0e0b",
+      "queue_ms": 55781,
+      "artifacts_member": "L7/episodes/H01",
+      "queue_included_in_latency": false,
+      "tool_calls": 1,
+      "outer_model_calls": 2,
+      "harness_status": "completed",
+      "spills": []
+    },
+    {
+      "status": "completed",
+      "elapsed_ms": 5893,
+      "model_refusal": false,
+      "id": "H02",
+      "agent": "L7",
+      "tool": "harness",
+      "binary_sha256": "4d3f1d6b4de0308366d8984dd282172c65ea8692310c2e01c1c272da7d7a0e0b",
+      "queue_ms": 18441,
+      "artifacts_member": "L7/episodes/H02",
+      "queue_included_in_latency": false,
+      "tool_calls": 2,
+      "outer_model_calls": 3,
+      "harness_status": "completed",
+      "spills": []
+    }
+  ],
+  "semantic_assessment_by": "root; Luna L5/L6 explicitly did not audit semantic support",
+  "research_judgements": {
+    "R01": {
+      "facts_returned": 4,
+      "supported_reference_facts": 3,
+      "false_facts": [
+        "A1"
+      ],
+      "gold_fully_met": false
+    },
+    "R02": {
+      "facts_returned": 2,
+      "supported_reference_facts": 2,
+      "false_facts": [],
+      "gold_fully_met": true,
+      "formal_ok": false,
+      "reason": "Both content facets correct; only one cited document body."
+    },
+    "R03": {
+      "facts_returned": 0,
+      "gold_fully_met": false,
+      "reason": "Correct read/selected primary witnesses lost at citation and bracket gates."
+    },
+    "N02": {
+      "facts_returned": 0,
+      "gold_fully_met": false,
+      "honest_shortage": true,
+      "global_article_absence_proven": false
+    }
+  },
+  "direct_assessment": [
+    {
+      "case": "D01",
+      "id": "C003",
+      "url": "https://doc.rust-lang.org/nightly/core/option/enum.Option.html",
+      "parent_judgement": "supported_direct",
+      "reason": "Read Rust Option body explicitly states eager or, lazy or_else and when closure is called.",
+      "normalized_witnesses_checked": 5
+    }
+  ],
+  "false_claim_ids": [
+    "R01/A1"
+  ],
+  "false_direct_ids": [],
+  "unknown_direct_ids": [],
+  "provenance_checks": {
+    "research_witness_placements_original_unicode": 7,
+    "research_answer_ranges": 7,
+    "ranked_normalized_byte_placements_including_title": 5,
+    "all_exact": true,
+    "semantic_truth_not_implied": true
+  },
+  "agent_visible_checks": [
+    {
+      "case": "H01",
+      "tool": "research",
+      "exact_public_payload_equal": true,
+      "chars": 8042,
+      "utf8_bytes": 8263
+    },
+    {
+      "case": "H02",
+      "tool": "extract",
+      "text_hash_equal": true,
+      "body_chars": 1390,
+      "kind": "application",
+      "date_status": "missing",
+      "truncated": false
+    }
+  ],
+  "cache_repeat": {
+    "cases": [
+      "S01",
+      "S01W"
+    ],
+    "search_cards_identical": true,
+    "first_ms": 962,
+    "warm_ms": 26,
+    "http_reads": [
+      1,
+      0
+    ],
+    "warm_hits": 1,
+    "scope": "one warm repetition of raw search, not an independent new query or general latency benchmark"
+  },
+  "source_http_reads_observed": 48,
+  "qwen_http_calls_observed": 23,
+  "cost": {
+    "inner_calls": 25,
+    "inner_known_usd": 0.00288545,
+    "outer_harness_calls": 5,
+    "outer_harness_known_usd": 0.000565992,
+    "unknown_cost_attempts": 0,
+    "included": "OpenRouter reported usage.cost for product/Harness only",
+    "excluded_unknown": "Native Luna subagent cost, local hardware/electricity, metadata-request overhead",
+    "total_known_usd": 0.003451442
+  },
+  "model_calls": [
+    {
+      "case": "D01",
+      "file": "L5/episodes/D01/capture/0000-ranked_search/custom-evidence-audit.json",
+      "cost": 0.000472368,
+      "context_chars": 10227
+    },
+    {
+      "case": "D01",
+      "file": "L5/episodes/D01/capture/0000-ranked_search/custom-evidence-round1.json",
+      "cost": 0.000309616,
+      "context_chars": 16029
+    },
+    {
+      "case": "D01",
+      "file": "L5/episodes/D01/capture/0000-ranked_search/custom-call00.json",
+      "cost": 6.8076e-05,
+      "context_chars": 3476
+    },
+    {
+      "case": "D02",
+      "file": "L5/episodes/D02/capture/0000-ranked_search/custom-call00.json",
+      "cost": 7.007e-05,
+      "context_chars": 3290
+    },
+    {
+      "case": "D03",
+      "file": "L5/episodes/D03/capture/0000-ranked_search/custom-evidence-round1.json",
+      "cost": 0.000260902,
+      "context_chars": 16128
+    },
+    {
+      "case": "D03",
+      "file": "L5/episodes/D03/capture/0000-ranked_search/custom-call00.json",
+      "cost": 6.9546e-05,
+      "context_chars": 3901
+    },
+    {
+      "case": "N01",
+      "file": "L5/episodes/N01/capture/0000-ranked_search/custom-call00.json",
+      "cost": 6.4496e-05,
+      "context_chars": 3573
+    },
+    {
+      "case": "N02",
+      "file": "L6/episodes/N02/capture/0000-research/model-01-plan.json",
+      "cost": 4.112e-05,
+      "context_chars": 776
+    },
+    {
+      "case": "N02",
+      "file": "L6/episodes/N02/capture/0000-research/model-02-draft.json",
+      "cost": 2.0654e-05,
+      "context_chars": 1578
+    },
+    {
+      "case": "N02",
+      "file": "L6/episodes/N02/capture/0000-research/model-03-draft.json",
+      "cost": 2.1614e-05,
+      "context_chars": 2083
+    },
+    {
+      "case": "R01",
+      "file": "L6/episodes/R01/capture/0000-research/model-01-plan.json",
+      "cost": 4.0104e-05,
+      "context_chars": 550
+    },
+    {
+      "case": "R01",
+      "file": "L6/episodes/R01/capture/0000-research/model-02-draft.json",
+      "cost": 5.2614e-05,
+      "context_chars": 5167
+    },
+    {
+      "case": "R01",
+      "file": "L6/episodes/R01/capture/0000-research/model-04-audit.json",
+      "cost": 0.000127276,
+      "context_chars": 15647
+    },
+    {
+      "case": "R01",
+      "file": "L6/episodes/R01/capture/0000-research/model-03-draft.json",
+      "cost": 0.000202304,
+      "context_chars": 14370
+    },
+    {
+      "case": "R02",
+      "file": "L6/episodes/R02/capture/0000-research/model-01-plan.json",
+      "cost": 3.2598e-05,
+      "context_chars": 566
+    },
+    {
+      "case": "R02",
+      "file": "L6/episodes/R02/capture/0000-research/model-02-draft.json",
+      "cost": 5.4116e-05,
+      "context_chars": 9699
+    },
+    {
+      "case": "R02",
+      "file": "L6/episodes/R02/capture/0000-research/model-04-audit.json",
+      "cost": 9.4218e-05,
+      "context_chars": 19439
+    },
+    {
+      "case": "R02",
+      "file": "L6/episodes/R02/capture/0000-research/model-03-draft.json",
+      "cost": 0.000131814,
+      "context_chars": 18778
+    },
+    {
+      "case": "R03",
+      "file": "L6/episodes/R03/capture/0000-research/model-01-plan.json",
+      "cost": 5.8134e-05,
+      "context_chars": 586
+    },
+    {
+      "case": "R03",
+      "file": "L6/episodes/R03/capture/0000-research/model-02-draft.json",
+      "cost": 7.7926e-05,
+      "context_chars": 9890
+    },
+    {
+      "case": "R03",
+      "file": "L6/episodes/R03/capture/0000-research/model-03-draft.json",
+      "cost": 0.000249882,
+      "context_chars": 18991
+    },
+    {
+      "case": "H01",
+      "file": "L7/episodes/H01/mcp-capture/0000-research/model-01-plan.json",
+      "cost": 5.7586e-05,
+      "context_chars": 547
+    },
+    {
+      "case": "H01",
+      "file": "L7/episodes/H01/mcp-capture/0000-research/model-02-draft.json",
+      "cost": 3.0362e-05,
+      "context_chars": 8761
+    },
+    {
+      "case": "H01",
+      "file": "L7/episodes/H01/mcp-capture/0000-research/model-04-audit.json",
+      "cost": 0.000109666,
+      "context_chars": 18268
+    },
+    {
+      "case": "H01",
+      "file": "L7/episodes/H01/mcp-capture/0000-research/model-03-draft.json",
+      "cost": 0.000168388,
+      "context_chars": 17707
+    }
+  ],
+  "outer_calls": [
+    {
+      "case": "H01",
+      "file": "L7/episodes/H01/agent-llm-00.json",
+      "cost": 6.5724e-05
+    },
+    {
+      "case": "H01",
+      "file": "L7/episodes/H01/agent-llm-01.json",
+      "cost": 0.000213544
+    },
+    {
+      "case": "H02",
+      "file": "L7/episodes/H02/agent-llm-00.json",
+      "cost": 6.8482e-05
+    },
+    {
+      "case": "H02",
+      "file": "L7/episodes/H02/agent-llm-01.json",
+      "cost": 6.2696e-05
+    },
+    {
+      "case": "H02",
+      "file": "L7/episodes/H02/agent-llm-02.json",
+      "cost": 0.000155546
+    }
+  ],
+  "max_model_context_chars": 19439,
+  "source_state_after": {
+    "blocked": {
+      "bing": "excluded from fixed protocol",
+      "ddg": "historical challenge; unqualified in this protocol",
+      "mwmbl": "excluded from fixed protocol",
+      "naver": "source_challenge: verification page; no retry"
+    },
+    "document_blocks": {
+      "hermes-agent.nousresearch.com": "source_blocked: no retry in this probe",
+      "redis.io": "source_blocked: no retry in this probe",
+      "tfl.gov.uk": "source_blocked: no retry in this probe",
+      "www.ltmuseum.co.uk": "source_blocked: no retry in this probe",
+      "www.mujrozhlas.cz": "source_blocked: no retry in this probe"
+    }
+  },
+  "source_refusals_preserved": true,
+  "parent_supplementary": [
+    {
+      "id": "P1",
+      "passed": true,
+      "exit_code": 0,
+      "expected": {
+        "kind": "article",
+        "date_status": "valid",
+        "published_date": "2026-11-06"
+      },
+      "actual": {
+        "chars": 71,
+        "truncated": false,
+        "kind": "article",
+        "date_status": "valid",
+        "published_date": "2026-11-06",
+        "tail_absent": true
+      },
+      "stderr": ""
+    },
+    {
+      "id": "P2",
+      "passed": true,
+      "exit_code": 0,
+      "expected": {
+        "kind": "article",
+        "date_status": "valid",
+        "published_date": "2026-11-06"
+      },
+      "actual": {
+        "chars": 71,
+        "truncated": false,
+        "kind": "article",
+        "date_status": "valid",
+        "published_date": "2026-11-06",
+        "tail_absent": true
+      },
+      "stderr": ""
+    },
+    {
+      "id": "P3",
+      "passed": true,
+      "exit_code": 0,
+      "expected": {
+        "kind": "article",
+        "date_status": "conflict",
+        "published_date": null
+      },
+      "actual": {
+        "chars": 71,
+        "truncated": false,
+        "kind": "article",
+        "date_status": "conflict",
+        "published_date": null,
+        "tail_absent": true
+      },
+      "stderr": ""
+    },
+    {
+      "id": "P4",
+      "passed": true,
+      "exit_code": 0,
+      "expected": {
+        "chars": 100000,
+        "truncated": true,
+        "tail_absent": true
+      },
+      "actual": {
+        "chars": 100000,
+        "truncated": true,
+        "kind": "article",
+        "date_status": "missing",
+        "published_date": null,
+        "tail_absent": true
+      },
+      "stderr": ""
+    }
+  ],
+  "qualification": {
+    "corpus_recall_measured": false,
+    "general_two_day_acceptance": false,
+    "release": false,
+    "independent_ready_to_merge": false
+  },
+  "limits": [
+    "14episodes include an explicitly repeated warm case and topic overlap between tools; do not pool as14independent quality queries.",
+    "Original11L2fixtures prove successful CLI execution and limited content checks; all lacked own Article metadata and genuine truncation; parent4cases fill those exact narrow gaps.",
+    "One observed direct is too small to establish false-direct safety.",
+    "All4directresearch calls remain partial; one answered content facets, one returned a wrong normative assertion.",
+    "Two Harness episodes completed but did not fulfill full user question; isolated SDK profile, not current Desktop profile."
+  ],
+  "tested_product_git_commit": "82a37561b6882bc16724a53f803c7f9d6cc53293",
+  "tooling_sha256": {
+    "scripts/luna-seven-benchmark.py": "ce5cc75e8fec4fe042affa1336158152205a8027dc4d0cb1cdfa7e6b55956b03",
+    "scripts/luna-seven-harness-guard.mjs": "68a2b9c282a94d1d2dbffd989dcfe59bd1776fff301d3ac3df13cf6592f15e2e",
+    "scripts/harness-cache-benchmark.py": "952ebae75734c5b5265e5bc7250777afabb4b33b1d344ca8290d36a90900e125"
+  },
+  "post_live_tooling_check": "Guard registry/caps/dispose self-check added; model-refusal detection restricted to real error fields and includes preflight401/403/429. No observed case had model refusal, so recorded14trial outcomes unchanged; no live rerun."
+}

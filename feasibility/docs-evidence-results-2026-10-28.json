@@ -1,0 +1,301 @@
+{
+  "date": "2026-10-28",
+  "purpose": "Development only; not search acceptance or model confidence calibration",
+  "navigation": {
+    "seed": "https://www.sqlite.org/docs.html",
+    "candidates": 114,
+    "returned": 20,
+    "selected_labels": [
+      "Foreign Key Support",
+      "Pragmas"
+    ],
+    "selected_urls": [
+      "https://www.sqlite.org/foreignkeys.html",
+      "https://www.sqlite.org/pragma.html"
+    ],
+    "document_loads": 3,
+    "http_requests_including_redirects": 3,
+    "live_binary_sha256": "c9c9f04d94c2c03b29c1a9b21cf0b9b2b47e62a5d361ed1612101da9570ad65f",
+    "documents": [
+      {
+        "url": "https://www.sqlite.org/foreignkeys.html",
+        "final_url": "https://www.sqlite.org/foreignkeys.html",
+        "text_hash": "1ba0da63224cd65f405103189d43a4d39e2f9474cc549832bfeb4c1a537c3f14",
+        "chars": 43804,
+        "truncated": false,
+        "hops": [
+          "https://www.sqlite.org/foreignkeys.html"
+        ]
+      },
+      {
+        "url": "https://www.sqlite.org/pragma.html",
+        "final_url": "https://www.sqlite.org/pragma.html",
+        "text_hash": "f8bd597e73ffae6b9ab8f3ba5c3f64c2ca156291085f971698c547ecabd86fd2",
+        "chars": 88045,
+        "truncated": false,
+        "hops": [
+          "https://www.sqlite.org/pragma.html"
+        ]
+      }
+    ],
+    "selection": "Deterministic fixture label matching on actual returned links, not autonomous model selection",
+    "raw_seed_html_persisted": false
+  },
+  "evidence": {
+    "model": "MiMo-V2.6-Distill-Qwen-9B-OptiQ-4bit",
+    "generations": 4,
+    "assessment": "assistant manual review of raw model answers against exact source slices; not independent human annotation",
+    "records": [
+      {
+        "condition": "full",
+        "coverage_match": true,
+        "reported_status": "sufficient",
+        "raw_answer_grounded": true,
+        "raw_model_answer_untrusted": "Включение: PRAGMA foreign_keys = ON; — отдельно для каждого соединения, так как внешние ключи отключены по умолчанию. Внутри активной многостатментной транзакции изменение через PRAGMA foreign_keys не возвращает ошибку и не имеет эффекта.",
+        "coverage": [
+          {
+            "evidence_ids": [
+              "enable-excerpt"
+            ],
+            "fact_id": "enable",
+            "supported": true
+          },
+          {
+            "evidence_ids": [
+              "transaction-excerpt"
+            ],
+            "fact_id": "transaction",
+            "supported": true
+          }
+        ],
+        "elapsed_ms": 23737,
+        "gated_result": {
+          "excerpts": [
+            {
+              "evidence": {
+                "document_version": "1ba0da63224cd65f405103189d43a4d39e2f9474cc549832bfeb4c1a537c3f14",
+                "end_char": 12619,
+                "id": "enable-excerpt",
+                "source_url": "https://www.sqlite.org/foreignkeys.html",
+                "start_char": 11954,
+                "text": "Assuming the library is compiled with foreign key constraints enabled,\n    it must still be enabled by the application at runtime, using the\n    PRAGMA foreign_keys command. For example:\n\nsqlite> PRAGMA foreign_keys = ON;\n\nForeign key constraints are disabled by default \n    (for backwards compatibility),\n    so must be enabled separately for each database connection.\n    (Note, however, that future releases of SQLite might change\n    so that foreign key constraints enabled by default.  Careful\n    developers will not\n    make any assumptions about whether or not foreign keys are enabled by\n    default but will instead enable or disable them as necessary.)\n"
+              },
+              "fact_id": "enable"
+            },
+            {
+              "evidence": {
+                "document_version": "1ba0da63224cd65f405103189d43a4d39e2f9474cc549832bfeb4c1a537c3f14",
+                "end_char": 13525,
+                "id": "transaction-excerpt",
+                "source_url": "https://www.sqlite.org/foreignkeys.html",
+                "start_char": 13290,
+                "text": "It is not possible to enable or disable foreign key constraints\n    in the middle of a multi-statement transaction (when SQLite\n    is not in autocommit mode).  Attempting to do so does not return\n    an error; it simply has no effect."
+              },
+              "fact_id": "transaction"
+            }
+          ],
+          "limitation": "Source slices and IDs are verified structurally; semantic support still needs review. This is an extractive diagnostic, not a full research answer.",
+          "message": "Доступны только приведённые фрагменты источника; незакрытые вопросы перечислены в missing.",
+          "missing": [],
+          "model_answer_released": false,
+          "status": "sufficient"
+        }
+      },
+      {
+        "condition": "full_with_noise",
+        "coverage_match": true,
+        "reported_status": "sufficient",
+        "raw_answer_grounded": true,
+        "raw_model_answer_untrusted": "Включение: PRAGMA foreign_keys = ON; для отдельного соединения (по умолчанию выключено). Внутри активной многостатментной транзакции изменение не возвращает ошибку и не имеет эффекта.",
+        "coverage": [
+          {
+            "evidence_ids": [
+              "enable-excerpt"
+            ],
+            "fact_id": "enable",
+            "supported": true
+          },
+          {
+            "evidence_ids": [
+              "transaction-excerpt"
+            ],
+            "fact_id": "transaction",
+            "supported": true
+          }
+        ],
+        "elapsed_ms": 2814,
+        "gated_result": {
+          "excerpts": [
+            {
+              "evidence": {
+                "document_version": "1ba0da63224cd65f405103189d43a4d39e2f9474cc549832bfeb4c1a537c3f14",
+                "end_char": 12619,
+                "id": "enable-excerpt",
+                "source_url": "https://www.sqlite.org/foreignkeys.html",
+                "start_char": 11954,
+                "text": "Assuming the library is compiled with foreign key constraints enabled,\n    it must still be enabled by the application at runtime, using the\n    PRAGMA foreign_keys command. For example:\n\nsqlite> PRAGMA foreign_keys = ON;\n\nForeign key constraints are disabled by default \n    (for backwards compatibility),\n    so must be enabled separately for each database connection.\n    (Note, however, that future releases of SQLite might change\n    so that foreign key constraints enabled by default.  Careful\n    developers will not\n    make any assumptions about whether or not foreign keys are enabled by\n    default but will instead enable or disable them as necessary.)\n"
+              },
+              "fact_id": "enable"
+            },
+            {
+              "evidence": {
+                "document_version": "1ba0da63224cd65f405103189d43a4d39e2f9474cc549832bfeb4c1a537c3f14",
+                "end_char": 13525,
+                "id": "transaction-excerpt",
+                "source_url": "https://www.sqlite.org/foreignkeys.html",
+                "start_char": 13290,
+                "text": "It is not possible to enable or disable foreign key constraints\n    in the middle of a multi-statement transaction (when SQLite\n    is not in autocommit mode).  Attempting to do so does not return\n    an error; it simply has no effect."
+              },
+              "fact_id": "transaction"
+            }
+          ],
+          "limitation": "Source slices and IDs are verified structurally; semantic support still needs review. This is an extractive diagnostic, not a full research answer.",
+          "message": "Доступны только приведённые фрагменты источника; незакрытые вопросы перечислены в missing.",
+          "missing": [],
+          "model_answer_released": false,
+          "status": "sufficient"
+        }
+      },
+      {
+        "condition": "partial",
+        "coverage_match": true,
+        "reported_status": "partial",
+        "raw_answer_grounded": true,
+        "raw_model_answer_untrusted": "Включение: PRAGMA foreign_keys = ON; для каждого соединения отдельно (по умолчанию выключено). Изменение внутри активной транзакции: в предоставленной выдержке не описано — факт не подтверждён.",
+        "coverage": [
+          {
+            "evidence_ids": [
+              "enable-excerpt"
+            ],
+            "fact_id": "enable",
+            "supported": true
+          },
+          {
+            "evidence_ids": [],
+            "fact_id": "transaction",
+            "supported": false
+          }
+        ],
+        "elapsed_ms": 3518,
+        "gated_result": {
+          "excerpts": [
+            {
+              "evidence": {
+                "document_version": "1ba0da63224cd65f405103189d43a4d39e2f9474cc549832bfeb4c1a537c3f14",
+                "end_char": 12619,
+                "id": "enable-excerpt",
+                "source_url": "https://www.sqlite.org/foreignkeys.html",
+                "start_char": 11954,
+                "text": "Assuming the library is compiled with foreign key constraints enabled,\n    it must still be enabled by the application at runtime, using the\n    PRAGMA foreign_keys command. For example:\n\nsqlite> PRAGMA foreign_keys = ON;\n\nForeign key constraints are disabled by default \n    (for backwards compatibility),\n    so must be enabled separately for each database connection.\n    (Note, however, that future releases of SQLite might change\n    so that foreign key constraints enabled by default.  Careful\n    developers will not\n    make any assumptions about whether or not foreign keys are enabled by\n    default but will instead enable or disable them as necessary.)\n"
+              },
+              "fact_id": "enable"
+            }
+          ],
+          "limitation": "Source slices and IDs are verified structurally; semantic support still needs review. This is an extractive diagnostic, not a full research answer.",
+          "message": "Доступны только приведённые фрагменты источника; незакрытые вопросы перечислены в missing.",
+          "missing": [
+            {
+              "id": "transaction",
+              "requirement": "What happens when the setting is changed inside an active multi-statement transaction?"
+            }
+          ],
+          "model_answer_released": false,
+          "status": "partial"
+        }
+      },
+      {
+        "condition": "noise_only",
+        "coverage_match": true,
+        "reported_status": "insufficient",
+        "raw_answer_grounded": false,
+        "raw_model_answer_untrusted": "Нет достаточных доказательств: единственный предоставленный фрагмент — это управляемый шум, не содержащий фактов о SQLite. Готовые ответы: (enable) — через PRAGMA foreign_keys=ON по отдельному соединению; (transaction) — изменение внутри активной транзакции не влияет на уже начатые транзакции, но применяется к последующим. Конкретные подтверждения в предоставленных данных отсутствуют.",
+        "coverage": [
+          {
+            "evidence_ids": [],
+            "fact_id": "enable",
+            "supported": false
+          },
+          {
+            "evidence_ids": [],
+            "fact_id": "transaction",
+            "supported": false
+          }
+        ],
+        "elapsed_ms": 3898,
+        "gated_result": {
+          "excerpts": [],
+          "limitation": "Source slices and IDs are verified structurally; semantic support still needs review. This is an extractive diagnostic, not a full research answer.",
+          "message": "Недостаточно доказательств для ответа.",
+          "missing": [
+            {
+              "id": "enable",
+              "requirement": "How is foreign-key enforcement enabled for one SQLite connection?"
+            },
+            {
+              "id": "transaction",
+              "requirement": "What happens when the setting is changed inside an active multi-statement transaction?"
+            }
+          ],
+          "model_answer_released": false,
+          "status": "insufficient"
+        }
+      }
+    ],
+    "finding": "Correct insufficient status did not prevent unsupported substantive output from model memory.",
+    "gate_scope": "cfg(test) extractive diagnostic only; no research/LLM MCP tool published",
+    "gate_replay_generations": 0,
+    "source_slice_ranges_and_hashes_verified": true,
+    "limitation": "IDs and source slices do not establish semantic support. Four correlated conditions on one question, explicitly marked synthetic noise; no calibration or injection qualification."
+  },
+  "rewrite": {
+    "generations": 1,
+    "query": "site:docs.python.org asyncio.timeout CancelledError TimeoutError",
+    "constraint_validation": true,
+    "serp_requests": 2,
+    "variants": [
+      {
+        "variant": "original",
+        "query": "site:docs.python.org Как asyncio.timeout преобразует CancelledError в TimeoutError",
+        "http_status": 200,
+        "status": "error",
+        "error_code": "source_query_mismatch",
+        "eligible_direct_candidates": 0
+      },
+      {
+        "variant": "rewritten",
+        "query": "site:docs.python.org asyncio.timeout CancelledError TimeoutError",
+        "http_status": 200,
+        "status": "error",
+        "error_code": "source_query_mismatch",
+        "eligible_direct_candidates": 0
+      }
+    ],
+    "enabled_automatically": false
+  },
+  "total_model_generations": 5,
+  "total_public_requests": 5,
+  "fixture_adjustment": "Before model run, fact requirement labels were neutralized into questions to avoid leaking expected answers. Navigation seed/query/limits and expected coverage were unchanged; original navigation fixture is preserved in execution.json.",
+  "checks": {
+    "ordinary_tests_passed": 18,
+    "ignored": 11,
+    "fmt": "passed",
+    "clippy_all_targets_deny_warnings": "passed",
+    "release_build": "passed",
+    "final_release_stdio": "passed: 3 offline protocol tests, 5 live tests ignored"
+  },
+  "sha256": {
+    "feasibility/docs-evidence-cases.json": "fe652a0d569fd6dc5333cc44e807ea14f698e78163212f5fc1e9b807cff6d4b8",
+    "runs/docs-evidence-2026-10-28/execution.json": "ea188bce83b53b0e9add79f14f9d8154a8f535bccb87c8b2e9ef61becb806e95",
+    "runs/docs-evidence-2026-10-28/model/evidence.json": "33c09dc147100f6763f2cffda8a71aba9d650a62fc30242a7328c68b00bef830",
+    "runs/docs-evidence-2026-10-28/model/gate-replay.json": "496b4851181b695e265328a4c035033af5977dc3f55e54d813dd72190b64f14a",
+    "runs/docs-evidence-2026-10-28/model/rewrite.json": "fef1a6362a2d668c1c219fb3114093b2e3da09fce0f78e27d450f628f5cee631",
+    "runs/docs-evidence-2026-10-28/model/search-original.html": "233ca40448c2733f3efb75e372f94578e39b259b49cbdffde86f041745205e7b",
+    "runs/docs-evidence-2026-10-28/model/search-original.json": "440d9aaf1b15f93d871a4c42479f629aab6b5507fff159b722bdeaa6d04807ee",
+    "runs/docs-evidence-2026-10-28/model/search-rewritten.html": "11a81014bf042993b9657a065d5e3c1d10e075baf7cebe78546ef02fd8cee6e6",
+    "runs/docs-evidence-2026-10-28/model/search-rewritten.json": "a62caf218131e8e645f04c598519a348757f5042ce029ec9fc06f25c56a4bb93",
+    "runs/docs-evidence-2026-10-28/trace.json": "3043f896dd61bb8f86676d8e636b4b5a72cb7631fb2cb9434606590ce2126ddb",
+    "src/discover.rs": "3dd98313a4bf003d217a21a6640d99797615e397d926b159155fcf3a3f5d2b68",
+    "src/evidence_probe.rs": "4be45e9118fc627b53c9a2d819b3a5258cdf97e483eb777789e803ff2d6a7c4c",
+    "target/release/web-search": "d3e5a1a5a080ab1044beceb185dc4c093f12c1524ac1a9daf096fc6895170ac7"
+  }
+}

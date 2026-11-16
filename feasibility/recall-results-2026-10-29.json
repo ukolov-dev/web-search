@@ -1,0 +1,395 @@
+{
+  "author_assessment": true,
+  "scope": "Observed-pool relevance, mixed SERP/fetched-text evidence; not exhaustive page/web recall or factual truth",
+  "cases": [
+    {
+      "id": "f01",
+      "pool": 20,
+      "gold2": 3,
+      "promoted": 0,
+      "elapsed_ms": 63925,
+      "document_reads": 4,
+      "model_calls": 3,
+      "baseline": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "top10_relevant": 3,
+        "top10_success_ge3": 1
+      },
+      "current": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "top10_relevant": 3,
+        "top10_success_ge3": 1
+      }
+    },
+    {
+      "id": "f02",
+      "pool": 18,
+      "gold2": 1,
+      "promoted": 0,
+      "elapsed_ms": 63561,
+      "document_reads": 4,
+      "model_calls": 3,
+      "baseline": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "top10_relevant": 1,
+        "top10_success_ge3": 0
+      },
+      "current": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "top10_relevant": 1,
+        "top10_success_ge3": 0
+      }
+    },
+    {
+      "id": "f03",
+      "pool": 19,
+      "gold2": 1,
+      "promoted": 0,
+      "elapsed_ms": 51128,
+      "document_reads": 4,
+      "model_calls": 2,
+      "baseline": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "top10_relevant": 1,
+        "top10_success_ge3": 0
+      },
+      "current": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "top10_relevant": 1,
+        "top10_success_ge3": 0
+      }
+    },
+    {
+      "id": "f04",
+      "pool": 20,
+      "gold2": 5,
+      "promoted": 1,
+      "elapsed_ms": 40527,
+      "document_reads": 4,
+      "model_calls": 3,
+      "baseline": {
+        "tp": 3,
+        "fp": 1,
+        "fn": 2,
+        "top10_relevant": 5,
+        "top10_success_ge3": 1
+      },
+      "current": {
+        "tp": 4,
+        "fp": 1,
+        "fn": 1,
+        "top10_relevant": 5,
+        "top10_success_ge3": 1
+      }
+    },
+    {
+      "id": "f05",
+      "pool": 11,
+      "gold2": 1,
+      "promoted": 0,
+      "elapsed_ms": 29603,
+      "document_reads": 4,
+      "model_calls": 3,
+      "baseline": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "top10_relevant": 1,
+        "top10_success_ge3": 0
+      },
+      "current": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "top10_relevant": 1,
+        "top10_success_ge3": 0
+      }
+    },
+    {
+      "id": "f06",
+      "pool": 19,
+      "gold2": 3,
+      "promoted": 0,
+      "elapsed_ms": 40493,
+      "document_reads": 4,
+      "model_calls": 3,
+      "baseline": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "top10_relevant": 3,
+        "top10_success_ge3": 1
+      },
+      "current": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "top10_relevant": 3,
+        "top10_success_ge3": 1
+      }
+    },
+    {
+      "id": "f07",
+      "pool": 16,
+      "gold2": 1,
+      "promoted": 0,
+      "elapsed_ms": 49719,
+      "document_reads": 4,
+      "model_calls": 3,
+      "baseline": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "top10_relevant": 1,
+        "top10_success_ge3": 0
+      },
+      "current": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "top10_relevant": 1,
+        "top10_success_ge3": 0
+      }
+    },
+    {
+      "id": "f08",
+      "pool": 19,
+      "gold2": 5,
+      "promoted": 0,
+      "elapsed_ms": 53617,
+      "document_reads": 4,
+      "model_calls": 3,
+      "baseline": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 3,
+        "top10_relevant": 5,
+        "top10_success_ge3": 1
+      },
+      "current": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 3,
+        "top10_relevant": 5,
+        "top10_success_ge3": 1
+      }
+    }
+  ],
+  "total": {
+    "baseline": {
+      "tp": 8,
+      "fp": 2,
+      "fn": 12,
+      "top10_relevant": 20,
+      "top10_success_ge3": 4,
+      "precision": 0.8,
+      "recall": 0.4
+    },
+    "current": {
+      "tp": 9,
+      "fp": 2,
+      "fn": 11,
+      "top10_relevant": 20,
+      "top10_success_ge3": 4,
+      "precision": 0.8181818181818182,
+      "recall": 0.45
+    }
+  },
+  "sensitivity_excluding_borderline_SERP": {
+    "baseline": {
+      "tp": 4,
+      "fp": 6,
+      "fn": 11,
+      "precision": 0.4,
+      "recall": 0.26666666666666666
+    },
+    "current": {
+      "tp": 5,
+      "fp": 6,
+      "fn": 10,
+      "precision": 0.45454545454545453,
+      "recall": 0.3333333333333333
+    }
+  },
+  "final_attempts": {
+    "source_fetch_operations": 16,
+    "target_read_attempts": 32,
+    "model_attempts": 23,
+    "model_errors": 0,
+    "cold_model_state_resets": 8
+  },
+  "final_elapsed_ms": {
+    "min": 29603,
+    "median": 50423.5,
+    "max": 63925
+  },
+  "top3_known_relevant_slots": {
+    "baseline": 12,
+    "current": 13,
+    "slots": 24
+  },
+  "new_promotions": [
+    {
+      "case": "f04",
+      "id": "C011",
+      "url": "https://www.jakpsatweb.cz/css/box-sizing.html",
+      "text_hash": "6d5c39b9f11920e4e15b8c0d20563fced226e915db741d1fd29b002e0f920dec",
+      "source_quote_artifact": "runs/recall-2026-10-29/final/f04/f04-result.json",
+      "manual_grade": 2
+    }
+  ],
+  "fixture_sha256": {
+    "feasibility/search-cases.json": "b67e3269830ae0e976aa9b4c5dc2f6b9c3e922ad1adda35738289d6b1b8325d6",
+    "feasibility/recall-cases-v1.json": "527f03621c8623705afa68e5068d9691e30a9c7bc2883329eb941df2e88923ce",
+    "feasibility/recall-validation-cases-v1.json": "a1b112b04a6cc944afd16f36644e71c08dc2b87ceeb91c1fa8d3349199058bc8",
+    "feasibility/recall-final-cases-v1.json": "0eef11e4dc9ac19fd75316d832bc2eb2ce193de4161c363507c7d513b72f1ca2"
+  },
+  "all_experiments": {
+    "phases": [
+      {
+        "phase": "baseline",
+        "source_fetch_operations": 16,
+        "target_read_attempts": 0,
+        "recorded_model_attempts": 8,
+        "recorded_model_errors": 1,
+        "note": ""
+      },
+      {
+        "phase": "pages-v3",
+        "source_fetch_operations": 0,
+        "target_read_attempts": 8,
+        "recorded_model_attempts": 9,
+        "recorded_model_errors": 0,
+        "note": ""
+      },
+      {
+        "phase": "pages-v3b",
+        "source_fetch_operations": 0,
+        "target_read_attempts": 28,
+        "recorded_model_attempts": 6,
+        "recorded_model_errors": 0,
+        "note": ""
+      },
+      {
+        "phase": "pages-v3c",
+        "source_fetch_operations": 0,
+        "target_read_attempts": 0,
+        "recorded_model_attempts": 12,
+        "recorded_model_errors": 0,
+        "note": ""
+      },
+      {
+        "phase": "pages-v3d",
+        "source_fetch_operations": 0,
+        "target_read_attempts": 0,
+        "recorded_model_attempts": 10,
+        "recorded_model_errors": 0,
+        "note": ""
+      },
+      {
+        "phase": "pages-v3e",
+        "source_fetch_operations": 0,
+        "target_read_attempts": 0,
+        "recorded_model_attempts": 10,
+        "recorded_model_errors": 0,
+        "note": ""
+      },
+      {
+        "phase": "validation",
+        "source_fetch_operations": 8,
+        "target_read_attempts": 4,
+        "recorded_model_attempts": 5,
+        "recorded_model_errors": 2,
+        "note": "validation interrupted during v04, 8 source artifacts but 6 in incremental summary"
+      },
+      {
+        "phase": "validation-resumed",
+        "source_fetch_operations": 4,
+        "target_read_attempts": 20,
+        "recorded_model_attempts": 12,
+        "recorded_model_errors": 0,
+        "note": "subtract 3 reused v03 calls; source snapshots reused"
+      },
+      {
+        "phase": "validation-page-ids",
+        "source_fetch_operations": 0,
+        "target_read_attempts": 0,
+        "recorded_model_attempts": 10,
+        "recorded_model_errors": 3,
+        "note": ""
+      },
+      {
+        "phase": "final",
+        "source_fetch_operations": 16,
+        "target_read_attempts": 32,
+        "recorded_model_attempts": 23,
+        "recorded_model_errors": 0,
+        "note": ""
+      },
+      {
+        "phase": "release MCP smoke",
+        "source_fetch_operations": 2,
+        "target_read_attempts": 4,
+        "recorded_model_attempts": 3,
+        "recorded_model_errors": 0
+      }
+    ],
+    "source_fetch_operations": 46,
+    "target_read_attempts": 96,
+    "recorded_model_attempts": 108,
+    "recorded_model_errors": 6,
+    "interrupted_v04_model_request_without_result": 1,
+    "counting_note": "Fetch operation attempts include timeouts/DNS/parse failures; redirect hops can cause additional wire HTTP requests. Reused captures/calls are not counted twice. One in-flight model request at SIGINT is separate."
+  },
+  "mcp_release_smoke": {
+    "status": "partial",
+    "classifier_valid": true,
+    "budget": {
+      "classification_calls": 3,
+      "document_reads": 4,
+      "logical_search_calls": 2,
+      "source_context_max": 8674
+    },
+    "promoted": 1,
+    "returned_proof_ids": [
+      "C011"
+    ]
+  },
+  "code_drift_check": {
+    "src/rescue.rs": {
+      "exact_hash_matches": true,
+      "runtime_before_test_module_matches": true
+    },
+    "src/model.rs": {
+      "exact_hash_matches": true,
+      "runtime_before_test_module_matches": true
+    },
+    "src/policy.rs": {
+      "exact_hash_matches": false,
+      "runtime_before_test_module_matches": true
+    },
+    "src/main.rs": {
+      "exact_hash_matches": true,
+      "runtime_before_test_module_matches": true
+    },
+    "src/mcp.rs": {
+      "exact_hash_matches": true,
+      "runtime_before_test_module_matches": true
+    },
+    "SERP_prompt_unchanged": true,
+    "original20_sha256": "b67e3269830ae0e976aa9b4c5dc2f6b9c3e922ad1adda35738289d6b1b8325d6"
+  },
+  "release_binary_sha256": "3b8776cb0ffd7d5c57de4951da70ec5ad5c204b14da29284a02fcd9393069a64"
+}

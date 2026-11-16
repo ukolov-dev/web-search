@@ -1,0 +1,74 @@
+{
+  "schema": "bounded-research-dev-v1",
+  "frozen_at": "2026-11-05T14:10:49.235669+00:00",
+  "protocol": {
+    "cases": 4,
+    "max_primary_per_case": 1,
+    "no_retries_after_refusal": true,
+    "llm": "deepseek/deepseek-v4.1-flash-1017",
+    "budget": {
+      "forms": 2,
+      "serp": 4,
+      "documents": 4,
+      "qwen": 4,
+      "generations": 6,
+      "seconds": 180
+    },
+    "source_ledger_seed": "runs/harness-cache-2026-11-05/source-state.json",
+    "evaluation": "source-first claim/citation audit, completeness by frozen aspects, not corpus recall; no A/B qualification",
+    "external_reference_reading": "official reference pages read before freezing; reference URLs are not injected into product requests"
+  },
+  "cases": [
+    {
+      "id": "R01",
+      "question": "Чем отличаются HTTP 404 и 410: означают ли они постоянное удаление и кэшируются ли по умолчанию? Подтверди каждый код источниками.",
+      "gold": [
+        "404 itself does not distinguish temporary/permanent absence",
+        "410 means no longer available, likely permanent",
+        "404 heuristically cacheable unless method definition or explicit controls say otherwise",
+        "410 heuristically cacheable with the same exceptions"
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc9110.html#section-15.5.5",
+        "https://www.rfc-editor.org/rfc/rfc9110.html#section-15.5.11",
+        "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/404",
+        "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/410"
+      ]
+    },
+    {
+      "id": "R02",
+      "question": "Обязан ли Redis SCAN с COUNT 100 возвращать ровно 100 ключей за вызов? Может ли он вернуть пустой список до завершения итерации? Подтверди по документации.",
+      "gold": [
+        "COUNT is work hint, not exact returned-key count guarantee",
+        "zero elements can be returned before iteration completion",
+        "only returned cursor zero establishes end of iteration"
+      ],
+      "references": [
+        "https://redis.io/docs/latest/commands/scan/"
+      ]
+    },
+    {
+      "id": "R03",
+      "question": "Как Python statistics.median_low и median_high выбирают результат для чётного числа элементов, и могут ли они вернуть значение вне исходного набора?",
+      "gold": [
+        "median_low selects smaller of two middle values",
+        "median_high selects larger of two middle values",
+        "both are actual members of input data; no interpolation"
+      ],
+      "references": [
+        "https://docs.python.org/3/library/statistics.html#statistics.median_low",
+        "https://docs.python.org/3/library/statistics.html#statistics.median_high"
+      ]
+    },
+    {
+      "id": "R04",
+      "question": "Найди две новости о водоснабжении в городе Перми с собственной датой публикации 5 ноября 2026 года. Укажи события и ссылки; если подтверждения не хватает, явно перечисли пробелы.",
+      "gold": [
+        "first distinct read article: substantive Perm city water event, own publication date 2026-11-05",
+        "second distinct read article with same eligibility",
+        "explicit shortage instead of invented events/dates/URLs if insufficient; actual availability unknown"
+      ],
+      "references": []
+    }
+  ]
+}

@@ -1,0 +1,800 @@
+{
+  "schema": "research-p1-quality-v1",
+  "independent_reviewer": "/root/independent_acceptance",
+  "components_not_pooled": true,
+  "quality": {
+    "baseline-quality": {
+      "schema": "independent-research-p1-baseline-quality-v1",
+      "reviewer": "independent_acceptance subagent",
+      "snapshot": "40fa7f9",
+      "status": "baseline_semantic_review_complete_not_final_acceptance",
+      "policy": "Mandatory condition must be answered generally when question asks general rule. Returned quote union supports all claim details; full-page truth alone does not repair insufficient witness. Mechanical provenance separated.",
+      "interpretations": [
+        "I07 only lowercase is asked; no-other-literal-names phrase in gold not separately required.",
+        "I01 concrete old-value examples do not replace general return contract.",
+        "G07 single concrete assert does not prove general no-delimiter rule."
+      ],
+      "summary": {
+        "questions": 12,
+        "conditions": 16,
+        "supported_conditions": 8,
+        "complete_questions": 4,
+        "false_claim_ids": [],
+        "unknown_as_cited_ids": [
+          "I03/A3",
+          "G07/A1"
+        ]
+      },
+      "cases": [
+        {
+          "arm": "baseline",
+          "id": "I01",
+          "covered_conditions": [
+            false,
+            true
+          ],
+          "new_false_claims": [],
+          "unknown_as_cited": [],
+          "all_returned_claims_supported": true,
+          "note": "Возврат старого Option показан только двумя конкретными примерами; общего утверждения о возврате old value нет. None в исходном Option прямо утверждён и supported.",
+          "result_sha256": "79118446c2ae7b1897aefd06268bb29cd3db9285bbeab28a0063ca46a4644db6",
+          "claims": [
+            {
+              "id": "A1",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "После вызова take в исходном Option остаётся None."
+            },
+            {
+              "id": "A2",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "Пример: для x = Some(2) после take x становится None, а y равен Some(2)."
+            },
+            {
+              "id": "A3",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "Пример: для x = None take возвращает None и оставляет x равным None."
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "arm": "baseline",
+          "id": "I02",
+          "covered_conditions": [
+            true,
+            false
+          ],
+          "new_false_claims": [],
+          "unknown_as_cited": [],
+          "all_returned_claims_supported": true,
+          "note": "Both-Some условие supported точным witness zip. Either-None отсутствует в ответе.",
+          "result_sha256": "0a9aaf37e6713cfc859b6bb20975eaf617135f4101eaf8b8049a0e793eb65cdf",
+          "claims": [
+            {
+              "id": "A1",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "Option::zip возвращает Some((s, o)), если self равен Some(s) и other равен Some(o)."
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "arm": "baseline",
+          "id": "I03",
+          "covered_conditions": [
+            true,
+            true
+          ],
+          "new_false_claims": [],
+          "unknown_as_cited": [
+            "A3 initial values [1,2,3,4,5] not fully in returned quote union"
+          ],
+          "all_returned_claims_supported": false,
+          "note": "Original initialization exists between quoted spans but is excluded from returned witness union; full-page truth does not repair incomplete witness.",
+          "result_sha256": "2ff7ebab8dd73a6c9947df153ff3067db0222c2cb8c1f13656f68c361f3dcdfe",
+          "claims": [
+            {
+              "id": "A1",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "Если len больше или равна текущей длине вектора, Vec::truncate не оказывает эффекта."
+            },
+            {
+              "id": "A2",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "Vec::truncate не влияет на выделенную ёмкость (capacity) вектора."
+            },
+            {
+              "id": "A3",
+              "truth": "true",
+              "returned_witness_support": "unknown",
+              "text": "Пример из документации: vec![1, 2, 3, 4, 5] после truncate(2) равен [1, 2]."
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "arm": "baseline",
+          "id": "I04",
+          "covered_conditions": [
+            true,
+            true
+          ],
+          "new_false_claims": [],
+          "unknown_as_cited": [],
+          "all_returned_claims_supported": true,
+          "note": "Оба обязательных условия и дополнительный claim поддержаны правильными strip_prefix ranges.",
+          "result_sha256": "6121b3df1b8201e874b4a9225ce8f53ed89a77e5eca273ffc8bde3d7440967e0",
+          "claims": [
+            {
+              "id": "A1",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "str::strip_prefix удаляет префикс ровно один раз, в отличие от trim_start_matches."
+            },
+            {
+              "id": "A2",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "Если строка не начинается с префикса, str::strip_prefix возвращает None."
+            },
+            {
+              "id": "A3",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "Если строка начинается с префикса, str::strip_prefix возвращает подстроку после префикса в Some."
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "arm": "baseline",
+          "id": "I05",
+          "covered_conditions": [
+            false
+          ],
+          "new_false_claims": [],
+          "unknown_as_cited": [],
+          "all_returned_claims_supported": true,
+          "note": "Возвращён верный фон о leading zeros/fraction/exponent; Infinity/NaN не отвечены.",
+          "result_sha256": "c0681ec0a641c7c2566f4efc570722c128f48c80c66f5d8de12273e7b4b093e6",
+          "claims": [
+            {
+              "id": "A1",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "RFC 8259: Leading zeros are not allowed."
+            },
+            {
+              "id": "A2",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "RFC 8259: A fraction part is a decimal point followed by one or more digits."
+            },
+            {
+              "id": "A3",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "RFC 8259: The E and optional sign are followed by one or more digits."
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "arm": "baseline",
+          "id": "I06",
+          "covered_conditions": [
+            false
+          ],
+          "new_false_claims": [],
+          "unknown_as_cited": [],
+          "all_returned_claims_supported": true,
+          "note": "Ответ пуст.",
+          "result_sha256": "1b76e8a94b568458382075a8bf73fe74f47b545661db48f9944662f5292cff24",
+          "claims": [],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "arm": "baseline",
+          "id": "I07",
+          "covered_conditions": [
+            true
+          ],
+          "new_false_claims": [],
+          "unknown_as_cited": [],
+          "all_returned_claims_supported": true,
+          "note": "Lowercase норма отвечает вопросу. Gold also says no other names allowed, but that is not an independently requested condition.",
+          "result_sha256": "f72e52e43c3178dc1b3a690f4c977863909218b1d46a088c8dcadd613c168026",
+          "claims": [
+            {
+              "id": "A1",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "RFC 8259: The literal names MUST be lowercase."
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "arm": "baseline",
+          "id": "I08",
+          "covered_conditions": [
+            false
+          ],
+          "new_false_claims": [],
+          "unknown_as_cited": [],
+          "all_returned_claims_supported": true,
+          "note": "Ответ пуст.",
+          "result_sha256": "92cfcab81d8f83303bedc8437a87c790127857e2e6aa2638ad77a5ab09a57f19",
+          "claims": [],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "arm": "baseline",
+          "id": "G02",
+          "covered_conditions": [
+            false
+          ],
+          "new_false_claims": [],
+          "unknown_as_cited": [],
+          "all_returned_claims_supported": true,
+          "note": "Ответ пуст.",
+          "result_sha256": "5fc4b39a66ceb399d1eb00aacb24411c4fdd6c422724f79e1ce27532e5117a46",
+          "claims": [],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "arm": "baseline",
+          "id": "G07",
+          "covered_conditions": [
+            false
+          ],
+          "new_false_claims": [],
+          "unknown_as_cited": [
+            "A1"
+          ],
+          "all_returned_claims_supported": false,
+          "note": "General no-delimiter rule cannot be established by single cfg/equals example; fact true elsewhere but returned witness narrower.",
+          "result_sha256": "eb85da0a48c0cb099d2b684ee36d7aad75fa1a422596afad35a6656ab21d7459",
+          "claims": [
+            {
+              "id": "A1",
+              "truth": "true",
+              "returned_witness_support": "unknown",
+              "text": "Если разделитель не найден, split_once возвращает None (пример: split_once('=') на строке без '=')."
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "arm": "baseline",
+          "id": "G08",
+          "covered_conditions": [
+            false
+          ],
+          "new_false_claims": [],
+          "unknown_as_cited": [],
+          "all_returned_claims_supported": true,
+          "note": "Empty answer.",
+          "result_sha256": "ab3b0f26b446dd57ec5aa9d56085c132bf8c44f01848e777a60bdeb1b6246b16",
+          "claims": [],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "arm": "baseline",
+          "id": "G09",
+          "covered_conditions": [
+            true
+          ],
+          "new_false_claims": [],
+          "unknown_as_cited": [],
+          "all_returned_claims_supported": true,
+          "note": "Exact pop rule explicitly includes empty-vector None; correct method scope.",
+          "result_sha256": "4e061d3d384e5a0f68a48051ced51a1a9f96dd9fc53f9f326af8517b7c778ae6",
+          "claims": [
+            {
+              "id": "A1",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "Vec::pop удаляет последний элемент и возвращает его, а для пустого вектора возвращает None."
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        }
+      ]
+    },
+    "candidate-quality": {
+      "schema": "independent-research-p1-candidate-quality-v1",
+      "reviewer": "independent_acceptance subagent",
+      "snapshot": "9b7dc17",
+      "status": "candidate_semantic_review_complete_not_final_workflow_review",
+      "summary": {
+        "questions": 12,
+        "conditions": 16,
+        "supported_conditions": 13,
+        "complete_questions": 9,
+        "false_claim_ids": [],
+        "unknown_as_cited_ids": [
+          "G07/A2",
+          "G09/A2"
+        ],
+        "new_unknown_as_cited_ids": [
+          "G09/A2"
+        ],
+        "lost_supported_conditions": [],
+        "gate": "FAILED"
+      },
+      "notes": [
+        "G07/A2 general-from-example deficiency matches baselineG07/A1 semantically; renumbering not counted new.",
+        "G09/A2 new insufficient quote: lone pop assertion lacks initial/remaining vector values.",
+        "I03/A3 baseline insufficient quote eliminated in candidate.",
+        "G08 A2/A4 are explicit inference; successful insert and result length5 with insertion contract support pre-length4 arithmetic.",
+        "I07 lowercase mandatory; no-other-literal extra not separately requested."
+      ],
+      "cases": [
+        {
+          "arm": "candidate",
+          "id": "I01",
+          "covered_conditions": [
+            false,
+            true
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [],
+          "all_returned_claims_supported": true,
+          "result_sha256": "90d1dce934dbb1ab311148b04ade9ff4eab3f7360d6a5a481b96f2ce4a591e6d",
+          "claims": [
+            {
+              "id": "A1",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "take извлекает значение из Option, оставляя на его месте None."
+            },
+            {
+              "id": "A2",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "В примере после take из Some(2) исходный x равен None, а возвращённое y равно Some(2)."
+            },
+            {
+              "id": "A3",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "В примере документации после take у Some(2) исходный x равен None, а возвращённое значение y равно Some(2)."
+            },
+            {
+              "id": "A4",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "Если исходный Option был None, take возвращает None и исходный x остаётся None."
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "arm": "candidate",
+          "id": "I02",
+          "covered_conditions": [
+            true,
+            true
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [],
+          "all_returned_claims_supported": true,
+          "result_sha256": "a35593d446ef9c6b39d8c107a07a0562e6825d4a1f65c9ef8cdc03565018e328",
+          "claims": [
+            {
+              "id": "A1",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "Option::zip возвращает Some((s, o)), если self равен Some(s) и other равен Some(o); в остальных случаях возвращается None."
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "arm": "candidate",
+          "id": "I03",
+          "covered_conditions": [
+            true,
+            true
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [],
+          "all_returned_claims_supported": true,
+          "result_sha256": "e51ba8d83019685d9d7ffd3509587d579f7bc2ffcbe7c66c7e1a66bb649cab4f",
+          "claims": [
+            {
+              "id": "A1",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "Если len больше или равна текущей длине вектора, truncate не оказывает эффекта."
+            },
+            {
+              "id": "A2",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "Vec::truncate не влияет на выделенную ёмкость (capacity) вектора."
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "arm": "candidate",
+          "id": "I04",
+          "covered_conditions": [
+            true,
+            true
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [],
+          "all_returned_claims_supported": true,
+          "result_sha256": "98615b4c26911c6bafe654940f524e36c7890ff428ca1181004d6b8786a0a341",
+          "claims": [
+            {
+              "id": "A1",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "str::strip_prefix удаляет префикс ровно один раз, а не многократно."
+            },
+            {
+              "id": "A2",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "Если строка не начинается с префикса, str::strip_prefix возвращает None."
+            },
+            {
+              "id": "A3",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "Если строка начинается с префикса, возвращается подстрока после префикса, обёрнутая в Some."
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "arm": "candidate",
+          "id": "I05",
+          "covered_conditions": [
+            true
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [],
+          "all_returned_claims_supported": true,
+          "result_sha256": "ba0f0c0a301072c748afebc7a576298fa6038cbd0d126acee098c61b0f41927d",
+          "claims": [
+            {
+              "id": "A1",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "RFC 8259: Numeric values that cannot be represented in the grammar below (such as Infinity and NaN) are not permitted."
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "arm": "candidate",
+          "id": "I06",
+          "covered_conditions": [
+            false
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [],
+          "all_returned_claims_supported": true,
+          "result_sha256": "e63ba341d4cc51b985417f933d57d3ea901b925ea43ecca32087509fbe6b9d79",
+          "claims": [],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "arm": "candidate",
+          "id": "I07",
+          "covered_conditions": [
+            true
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [],
+          "all_returned_claims_supported": true,
+          "result_sha256": "87bd02d2c601fe43c51a6ad8be6b7feff1bb163bae3e2df4f4095c06a79ec85b",
+          "claims": [
+            {
+              "id": "A1",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "RFC 8259: The literal names MUST be lowercase."
+            },
+            {
+              "id": "A2",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "RFC 8259: No other literal names are allowed."
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "arm": "candidate",
+          "id": "I08",
+          "covered_conditions": [
+            true
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [],
+          "all_returned_claims_supported": true,
+          "result_sha256": "20b06600c840a6f84892edf224a1c90fcbd10501773cca7882f037e7c462deec",
+          "claims": [
+            {
+              "id": "A1",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "RFC 8259: Insignificant whitespace is allowed before or after any of the six structural characters."
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "arm": "candidate",
+          "id": "G02",
+          "covered_conditions": [
+            true
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [],
+          "all_returned_claims_supported": true,
+          "result_sha256": "d71e68883f85072e79143bad6e580388f68f0e24f0d13824a86d3f0b1cb4a1f7",
+          "claims": [
+            {
+              "id": "A1",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "RFC 8259: The names within an object SHOULD be unique."
+            },
+            {
+              "id": "A2",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "RFC 8259: When the names within an object are not unique, the behavior of software that receives such an object is unpredictable."
+            },
+            {
+              "id": "A3",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "RFC 8259: An object whose names are all unique is interoperable in the sense that all software implementations receiving that object will agree on the name-value mappings."
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "arm": "candidate",
+          "id": "G07",
+          "covered_conditions": [
+            false
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [
+            "A2"
+          ],
+          "all_returned_claims_supported": false,
+          "result_sha256": "82078d184a1072337ad8d939435772e5bae77c8403e2afcb3db79793409bb86d",
+          "claims": [
+            {
+              "id": "A1",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "str::split_once разбивает строку по первому вхождению разделителя и возвращает префикс до разделителя и суффикс после него."
+            },
+            {
+              "id": "A2",
+              "truth": "true",
+              "returned_witness_support": "unknown",
+              "text": "str::split_once возвращает Option из двух строковых срезов; если разделитель не найден, возвращается None, как в примере для строки без знака равенства."
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "arm": "candidate",
+          "id": "G08",
+          "covered_conditions": [
+            true
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [],
+          "all_returned_claims_supported": true,
+          "result_sha256": "46fc30e455da6042400461092950a060d309dc10e3b46e2d3c67796da3a319ab",
+          "claims": [
+            {
+              "id": "A1",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "Vec::insert вставляет элемент в позицию index, сдвигая все элементы после неё вправо."
+            },
+            {
+              "id": "A2",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "Граница index == len допустима: пример вставляет 'e' при index 4 в вектор длины 4 без паники."
+            },
+            {
+              "id": "A3",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "Vec::insert паникует, если index больше len."
+            },
+            {
+              "id": "A4",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "Вставка при index, равном len, допустима: пример вставляет 'e' по индексу 4 в вектор длины 4 без паники."
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        },
+        {
+          "arm": "candidate",
+          "id": "G09",
+          "covered_conditions": [
+            true
+          ],
+          "false_claim_ids": [],
+          "unknown_as_cited_ids": [
+            "A2"
+          ],
+          "all_returned_claims_supported": false,
+          "result_sha256": "3e13895c0bcbcafe1485d76ccef6976d152dfcd5f77a93fd2b907dca257d95ad",
+          "claims": [
+            {
+              "id": "A1",
+              "truth": "true",
+              "returned_witness_support": "supported",
+              "text": "Vec::pop удаляет последний элемент и возвращает его, а для пустого вектора возвращает None."
+            },
+            {
+              "id": "A2",
+              "truth": "true",
+              "returned_witness_support": "unknown",
+              "text": "Пример в документации: для vec![1, 2, 3] вызов vec.pop() возвращает Some(3), после чего вектор равен [1, 2]."
+            }
+          ],
+          "mechanical_quote_ranges": "verified"
+        }
+      ]
+    },
+    "harness-quality": {
+      "reviewer": "independent_acceptance subagent",
+      "status": "source_semantic_review_complete_agent_visible_payload_mechanics_owned_by_root",
+      "cases": [
+        {
+          "arm": "baseline",
+          "id": "H01",
+          "covered_conditions": [
+            true
+          ],
+          "false_claims": [],
+          "unknown_as_cited": [],
+          "result_sha256": "eec3d619fe8829d4bc458170d0ac54d08e66395fa7a11e7211a6ea9d8b407b22",
+          "notes": []
+        },
+        {
+          "arm": "baseline",
+          "id": "H02",
+          "covered_conditions": [
+            true,
+            true,
+            true
+          ],
+          "false_claims": [],
+          "unknown_as_cited": [],
+          "result_sha256": "46b56f83b7ad678ceb2801a34400beccc235268a40ab76a090f57e891578b9ff",
+          "notes": []
+        },
+        {
+          "arm": "candidate",
+          "id": "H01",
+          "covered_conditions": [
+            true
+          ],
+          "false_claims": [],
+          "unknown_as_cited": [],
+          "result_sha256": "8c35b69b729778dadcb0f9a439026543ef31cb7a18a91316397dd48e0a3e2ae7",
+          "notes": []
+        },
+        {
+          "arm": "candidate",
+          "id": "H02",
+          "covered_conditions": [
+            true,
+            true,
+            true
+          ],
+          "false_claims": [],
+          "unknown_as_cited": [],
+          "result_sha256": "cb42f21314ac997362053ac082b38785b3ce85f14152186d22b20fccdafdd065",
+          "notes": [
+            "Candidate concrete H02 instantiations mislabeled fact with empty rationale; semantically supported by question inputs + cited general contracts."
+          ]
+        }
+      ],
+      "summary": "H01 1/1→1/1;H02 3/3→3/3; no semantic loss/new unknown; candidate H02 inference classification risk"
+    },
+    "component-quality": {
+      "reviewer": "independent_acceptance subagent",
+      "scope": "suffix-only component; current prompt/admission shared by both arms; no retrieval/Qwen/HTTP",
+      "cases": [
+        {
+          "arm": "range-baseline",
+          "id": "F02",
+          "covered": false,
+          "admitted_claims": 0,
+          "result_sha256": "5205e147fa583903f13caf2333dffaa3c12a35133e7730a9a2505bcaeece9cd0",
+          "reason": "Draft continues document-absolute rather than chunk-relative offsets; rejected appropriately. F02 also has incomplete truncated RFC clause."
+        },
+        {
+          "arm": "range-baseline",
+          "id": "F03",
+          "covered": false,
+          "admitted_claims": 0,
+          "result_sha256": "e7b5aa508f86f547642744b46875f7cd15e6b2d28b200145048e6a768754df2e",
+          "reason": "Draft continues document-absolute rather than chunk-relative offsets; rejected appropriately. F02 also has incomplete truncated RFC clause."
+        },
+        {
+          "arm": "range-candidate",
+          "id": "F02",
+          "covered": false,
+          "admitted_claims": 0,
+          "result_sha256": "e46b421830e77b59d491a64185b464c572b8f205e5741895f368b4188ea3513a",
+          "reason": "Draft continues document-absolute rather than chunk-relative offsets; rejected appropriately. F02 also has incomplete truncated RFC clause."
+        },
+        {
+          "arm": "range-candidate",
+          "id": "F03",
+          "covered": false,
+          "admitted_claims": 0,
+          "result_sha256": "22756299088c8507a903c95d5b3e2e6ee912dbbed4a5a5a3f94dcf52464bf11c",
+          "reason": "Draft continues document-absolute rather than chunk-relative offsets; rejected appropriately. F02 also has incomplete truncated RFC clause."
+        }
+      ],
+      "quality_gain": "none;0→0 admitted supported answers",
+      "test_exit_is_not_quality_pass": true
+    },
+    "v1-criteria-provisional": {
+      "status": "provisional_v1_criterion_assessment_not_formal_router_acceptance",
+      "snapshot": "9b7dc17",
+      "reviewer": "independent_acceptance subagent",
+      "format": {
+        "1": "failed: live G07 general contract still not supported by returned quote; deterministic saved repair path works",
+        "2": "passed within inspected unit/code evidence: safe text/HTML/link/Unicode/ambiguity/RFC gates preserved",
+        "3": "passed component preservation/ambiguity controls; full semantic citation validity remains separate known leak",
+        "4": "failed: new candidate G09/A2 unknown-as-cited"
+      },
+      "docs": {
+        "1": "passed scoped observed RU/EN docs questions reach appropriate official docs inside budgets; not general qualification",
+        "2": "passed inspected code/controls: only ranking existing URLs, no scope/URL guards bypass",
+        "3": "passed scoped controls; unchanged query explicit version/language contracts, ordinary/news sorting guards",
+        "4": "passed: no new APIs/deps/budget/source-state reset observed",
+        "5": "passed with disclosed source-aware limitation and complete per-ID false/unknown/loss accounting"
+      },
+      "coverage": {
+        "1": "passed: per-ID stage diagnosis retained; F12 optionality correction distinguished428/429",
+        "2": "failed: F02/F03 suffix component remains empty and F12 not restored; G02 alone improved",
+        "3": "passed scoped returned RFC claims retain exact modality/subject/conditions",
+        "4": "passed: absent support missing/partial; body count not independence",
+        "5": "failed: new G09/A2 unknown-as-cited in frozen cohort"
+      },
+      "acceptance": {
+        "1": "failed: sanitized settings hash observed after early baseline inference, limitation disclosed",
+        "2": "partial: fresh12+Harness done; missing/conflict/version component coverage not yet fully mapped to evidence",
+        "3": "failed: new unknown G09/A2 although no supported-condition losses",
+        "4": "passed subject to root mechanical final collection: real local Qwen/cost/cache/refusal disclosed",
+        "5": "failed: overall failed gate prevents independently accepted ready_to_merge",
+        "6": "passed: no claims of day2/CI/Linux/VPS/load qualification"
+      },
+      "global_gate": "FAILED: new unknown-as-cited G09/A2; improved score does not override gate",
+      "remaining": "Await exact final workflow bundle/evidenceIDs before formal acceptance review; do not call provisional docs assessment whole release acceptance."
+    }
+  }
+}

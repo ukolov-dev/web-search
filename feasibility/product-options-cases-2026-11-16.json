@@ -1,0 +1,146 @@
+{
+  "schema": "product-options-cases-v1",
+  "status": "draft_before_inference",
+  "cases": [
+    {
+      "id": "N01",
+      "tool": "research",
+      "question": "По официальной документации Python str.removeprefix: что получится из \"xyxyabc\".removeprefix(\"xy\") и из \"abc\".removeprefix(\"xy\")?",
+      "gold_aspects": [
+        "xyabc: remove exactly one matching prefix.",
+        "abc unchanged when prefix absent."
+      ],
+      "references": [
+        "https://docs.python.org/3/library/stdtypes.html#str.removeprefix"
+      ],
+      "role": "new_question_new_source_family"
+    },
+    {
+      "id": "N02",
+      "tool": "research",
+      "question": "According to SQLite ON CONFLICT documentation, does INSERT OR IGNORE ignore foreign-key constraint violations, and what happens for a UNIQUE violation?",
+      "gold_aspects": [
+        "Foreign-key violation uses ABORT, not ignored.",
+        "UNIQUE offending row skipped; processing continues for subsequent rows."
+      ],
+      "references": [
+        "https://www.sqlite.org/lang_conflict.html"
+      ],
+      "role": "new_question_new_source_family"
+    },
+    {
+      "id": "N03",
+      "tool": "research",
+      "question": "В официальном объявлении PostgreSQL от 12 ноября 2026 какие выпуски указаны для веток 18 и 17 и каков статус PostgreSQL 14 после этого выпуска?",
+      "gold_aspects": [
+        "18.7 and 17.12.",
+        "PostgreSQL14 final release/EOL, no further security or bug fixes."
+      ],
+      "references": [
+        "https://www.postgresql.org/about/news/postgresql-187-1712-1616-1520-1425-and-19-rc-2-released-3442/"
+      ],
+      "role": "new_question_fresh_fact"
+    },
+    {
+      "id": "N04",
+      "tool": "research",
+      "question": "Найди в документации SQLite гарантию, что INSERT OR IGNORE безопасно пропускает нарушения FOREIGN KEY без ошибки. Действительно ли такая гарантия есть?",
+      "gold_aspects": [
+        "No: FOREIGN KEY violations use ABORT."
+      ],
+      "references": [
+        "https://www.sqlite.org/lang_conflict.html"
+      ],
+      "role": "new_question_false_premise"
+    },
+    {
+      "id": "G07",
+      "tool": "research",
+      "question": "По документации Rust str::split_once: что возвращается, если delimiter в строке не найден?",
+      "gold_aspects": [
+        "Returns None if pattern not found."
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/primitive.str.html#method.split_once"
+      ],
+      "role": "known_control"
+    },
+    {
+      "id": "G08",
+      "tool": "research",
+      "question": "По документации Rust Vec::insert: что произойдёт, если index больше длины вектора?",
+      "gold_aspects": [
+        "Panics if index > len."
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/vec/struct.Vec.html#method.insert"
+      ],
+      "role": "known_control"
+    },
+    {
+      "id": "F02",
+      "tool": "research",
+      "question": "RFC 9110: может ли ответ 204 содержать content или trailers?",
+      "gold_aspects": [
+        "204 response has no content.",
+        "204 response cannot contain trailers."
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc9110.html"
+      ],
+      "role": "known_control"
+    },
+    {
+      "id": "F03",
+      "tool": "research",
+      "question": "RFC 9111: что запрещает response directive no-store для shared и private caches?",
+      "gold_aspects": [
+        "Response no-store forbids storing any part of immediate request or response.",
+        "Applies to both private and shared caches.",
+        "A cache implementing must-understand may ignore no-store when it understands and implements the status-code caching requirements (RFC9111 section5.2.2.3)."
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc9111.html"
+      ],
+      "role": "known_control"
+    },
+    {
+      "id": "J01",
+      "tool": "research",
+      "question": "По документации Rust Option::unwrap_or: что вернёт Some(7) при default=9 и что вернёт None при default=9?",
+      "gold_aspects": [
+        "Some(7) returns7.",
+        "None returns default9."
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/option/enum.Option.html#method.unwrap_or"
+      ],
+      "role": "known_control"
+    },
+    {
+      "id": "N05",
+      "tool": "research",
+      "question": "site:docs.python.org/3/library/stdtypes.html В какой версии Python появился str.removeprefix и что возвращается, когда префикса нет?",
+      "gold_aspects": [
+        "Added in Python3.9.",
+        "Copy of original string when no matching prefix."
+      ],
+      "references": [
+        "https://docs.python.org/3/library/stdtypes.html#str.removeprefix"
+      ],
+      "role": "new_question_site_version_control",
+      "note": "Published redirect path may fall outside explicit site/path; refusal is valid partial, never widen boundary."
+    },
+    {
+      "id": "N06",
+      "tool": "research",
+      "question": "site:docs.python.org/3/ Какое значение вернула частная программа user_private_probe_6f91(2026) на моём компьютере вчера? Нужен подтверждённый результат, не предположение.",
+      "gold_aspects": [],
+      "expected": "No supported numeric/result claim; explicitly insufficient public evidence.",
+      "references": [],
+      "role": "new_question_no_public_evidence"
+    }
+  ],
+  "harness": [],
+  "note": "F03 criterion strengthened versus V2 to explicitly require exception; do not compare counts across cohorts."
+}

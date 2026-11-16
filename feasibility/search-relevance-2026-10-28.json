@@ -1,0 +1,1814 @@
+{
+  "version": 1,
+  "date": "2026-10-28",
+  "reviewer": "assistant manual SERP assessment; not independent human annotation",
+  "rubric": "doc/search-quality-rubric-v1.md",
+  "rubric_sha256": "264e8ff3eadae59c68badfbba676bfe018b74a02de36c6d499acdcb01c4e6edf",
+  "capture_path": "runs/quality-1793183855/capture.json",
+  "capture_sha256": "6bc98a426a3b360f783ce0b86451e29551556d97283a33fec7546f0c291a08e9",
+  "case_set_sha256": "b67e3269830ae0e976aa9b4c5dc2f6b9c3e922ad1adda35738289d6b1b8325d6",
+  "binary_sha256": "a5ff4d8179d13f031798749b1abb65c3d930240caac6712140c79ac6ea9854d2",
+  "engine": "bing",
+  "max_results": 10,
+  "full_page_content_reviewed_for_all_links": false,
+  "qualification_pass": false,
+  "two_different_day_runs_completed": false,
+  "cases": [
+    {
+      "case_id": "ru01",
+      "query": "Rust владение borrowing документация",
+      "unique_relevant": 0,
+      "pass": false,
+      "assessment": "В выдаче смешаны язык, игра и географические объекты; прямых материалов о владении/заимствовании не видно.",
+      "results": [
+        {
+          "position": 1,
+          "snippet": "Rust is blazingly fast and memory-efficient: with no runtime or garbage collector, it can power performance-critical services, run on …",
+          "title": "Rust Programming Language",
+          "url": "https://rust-lang.org/",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 2,
+          "snippet": "The only aim in Rust is to survive. Everything wants you to die - the island’s wildlife and other inhabitants, the environment, other …",
+          "title": "Rust - Explore, Build and Survive",
+          "url": "https://rust.facepunch.com/",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 3,
+          "snippet": "Rust findet in vielen Betriebssystemen zunehmend Anwendung, da vor allem Speicherzugriffsfehler oder Pufferüberläufe immer …",
+          "title": "Rust (Programmiersprache) – Wikipedia",
+          "url": "https://de.wikipedia.org/wiki/Rust_(Programmiersprache)",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 4,
+          "snippet": "Ob mit dem Auto, Zug, Flugzeug oder als Reisegruppe: wir sind sehr gut zu erreichen! Unsere Adresse: Europa-Park-Straße 2 …",
+          "title": "Der Europa-Park in Rust – Ein Freizeitpark mit über 100 Attraktionen ...",
+          "url": "https://www.europapark.de/de/park",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 5,
+          "snippet": "The only aim in Rust is to survive. Everything wants you to die - the island’s wildlife, other inhabitants, the environment, and other …",
+          "title": "Save 50% on Rust on Steam",
+          "url": "https://store.steampowered.com/app/252490/Rust/",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 6,
+          "snippet": "The only aim in Rust is to survive. Everything wants you to die - the island’s wildlife and other inhabitants, the environment, other …",
+          "title": "Rust - Play - Rust",
+          "url": "https://rust.facepunch.com/play",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 7,
+          "snippet": "Software developer Graydon Hoare created Rust in 2006 while working at Mozilla, which officially sponsored the project in 2009. The …",
+          "title": "Rust (programming language) - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Rust_(programming_language)",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 8,
+          "snippet": "Die Gemeinde Rust möchte mit der Gewährung der Zuschüsse die rationelle Energieverwendung und die vermehrte Nutzung …",
+          "title": "Startseite | Rust",
+          "url": "https://www.rust.de/startseite",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 9,
+          "snippet": "To start using Rust, download the installer, then run the program and follow the onscreen instructions. You may need to install the …",
+          "title": "Install Rust - Rust Programming Language",
+          "url": "https://rust-lang.org/tools/install/",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 10,
+          "snippet": "Rust ist ein Survival - Computerspiel aus dem Jahr 2013 für Microsoft Windows, MacOS und Linux. Das Spiel wurde von den …",
+          "title": "Rust (Computerspiel) – Wikipedia",
+          "url": "https://de.wikipedia.org/wiki/Rust_%28Computerspiel%29",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        }
+      ],
+      "elapsed_ms": 448
+    },
+    {
+      "case_id": "ru02",
+      "query": "SQLite транзакции WAL документация",
+      "unique_relevant": 7,
+      "pass": true,
+      "assessment": "Большинство ссылок явно про SQLite WAL; общая оптимизация, Transaction и общий жизненный цикл транзакций оценены как фон.",
+      "results": [
+        {
+          "position": 1,
+          "snippet": "The default method by which SQLite implementsatomic commit and rollback is a rollback journal.Beginning with version 3.7.0(2010-07-21), a new \"Write-Ahead Log\" option(hereafter referred to as \"WAL\") is available. There are advantages and di…The traditional rollback journal works by writing a copy of theoriginal unchanged database content into a separate rollback journal fileand then writing changes directly into the database file. In theevent of a crash or ROLLBACK, the original content conta…An SQLite database connection defaults to journal_mode=DELETE. To convert to WAL mode, use thefollowing pragma: The journal_mode pragma returns a string which is the new journal mode.On success, the pragma will return the string \"wal\". If t…While a database connection is open on a WAL-mode database, SQLitemaintains an extra journal file called a \"Write Ahead Log\" or \"WAL File\".The name of this file on disk is usually the name of the database filewith an extra \"-wal\" suffix, though different na…",
+          "title": "Write-Ahead Logging - SQLite",
+          "url": "https://sqlite.org/wal.html",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 2,
+          "snippet": "2. Mai 2026 · Практическое руководство по режиму WAL в SQLite: как включить write-ahead logging, как работают …",
+          "title": "Исполняемые доки SQLite: WAL и параллелизм | Coddy",
+          "url": "https://coddy.tech/docs/ru/sqlite/wal-mode-and-concurrency",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 3,
+          "snippet": "16. Mai 2026 · This page documents the WAL (Write-Ahead Logging) subsystem in SQLite, covering the on-disk WAL file format, the …",
+          "title": "Write-Ahead Logging (WAL) | sqlite/sqlite | DeepWiki",
+          "url": "https://deepwiki.com/sqlite/sqlite/3.4-write-ahead-logging-(wal)",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 4,
+          "snippet": "18. Okt. 2026 · Чтобы ответить на эти вопросы, нужно разобраться в режиме WAL, принципах работы с транзакциями и …",
+          "title": "SQLite WAL параллельная запись, многопоточность и работа на …",
+          "url": "https://tretyakov.net/post/sqlite-wal-parallelnaya-zapis-mnogopotochnost-i-rabota-na-servere/",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 5,
+          "snippet": "Я с радостью объясню тебе всё на дружелюбном русском языке, как коллеге по коду!На официальном сайте SQLite есть …",
+          "title": "Секреты производительности SQLite: Транзакции, WAL и …",
+          "url": "https://runebook.dev/ru/docs/sqlite/speed",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 6,
+          "snippet": "На VDS SQLite даёт стабильную предсказуемую производительность при минимальном операционном оверхеде — если …",
+          "title": "SQLite на VDS: WAL, busy_timeout, бэкапы и практика для PHP и …",
+          "url": "https://fastfox.pro/blog/tutorials/sqlite-wal-busy-timeout-vds/",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 7,
+          "snippet": "18. Feb. 2026 · Transactions can be started manually using the BEGIN command. Such transactions usually persist until the next …",
+          "title": "Transaction - SQLite",
+          "url": "https://sqlite.org/lang_transaction.html",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 8,
+          "snippet": "11. Jan. 2026 · Надеюсь, это руководство помогло тебе разобраться в магии SQLite WAL! Если возникнут вопросы по …",
+          "title": "Работа с режимом Write-Ahead Logging в SQLite: От структуры …",
+          "url": "https://runebook.dev/ru/docs/sqlite/walformat",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 9,
+          "snippet": "16. Mai 2026 · This page describes how SQLite implements the transaction lifecycle — BEGIN, COMMIT, ROLLBACK, and …",
+          "title": "Transaction Management | sqlite/sqlite | DeepWiki",
+          "url": "https://deepwiki.com/sqlite/sqlite/3.3-transaction-management",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 10,
+          "snippet": "5. Mai 2026 · Explore SQLite WAL internals, including frames, commit records, and concurrency mechanics for better performance …",
+          "title": "SQLite WAL Internals: Frames, Commits, Concurrency",
+          "url": "https://www.sqliteforum.com/p/sqlite-wal-internals-frames-commits",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        }
+      ],
+      "elapsed_ms": 797
+    },
+    {
+      "case_id": "ru03",
+      "query": "HTTP статус 304 Last-Modified ETag",
+      "unique_relevant": 7,
+      "pass": true,
+      "assessment": "У большинства явно связаны 304/ETag/Last-Modified; у трёх общих страниц про 304 сниппет не раскрывает валидаторы — консервативная оценка 1.",
+      "results": [
+        {
+          "position": 1,
+          "snippet": "15. Juni 2026 · Lerne, wie HTTP Conditional Caching mit ETag und Last-Modified funktioniert, wie browser cache validation …",
+          "title": "HTTP Conditional Caching mit ETag und Last-Modified verstehen",
+          "url": "https://webhosting.de/http-conditional-caching-etag-last-modified-performance-guide/",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 2,
+          "snippet": "Trag ein, was der Server aktuell hat und was der Browser sendet, und der Simulator wendet die Vorrangregeln aus der HTTP …",
+          "title": "HTTP 304 Not Modified, Request für Request simuliert",
+          "url": "https://we.inc/de/guides/http-304-not-modified",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 3,
+          "snippet": "HTTP 304 Not Modified bedeutet, dass die zwischengespeicherte Kopie weiterhin gültig ist. Erfahre, wie bedingte Requests mit …",
+          "title": "HTTP 304 Not Modified — Caching erklärt",
+          "url": "https://httptools.net/de/http-status-codes/304/",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 4,
+          "snippet": "Vor 4 Tagen · Google's crawlers support conditional requests. Set ETag correctly, answer 304 when nothing changed, and check it …",
+          "title": "ETag, Last-Modified and 304s: let Googlebot recrawl what actually ...",
+          "url": "https://dev.to/indexerpal/etag-last-modified-and-304s-let-googlebot-recrawl-what-actually-changed-2dk4",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 5,
+          "snippet": "27. Apr. 2026 · Der Last-Modified-Header sagt dem Browser, wann eine Ressource das letzte Mal geändert wurde. Bei den …",
+          "title": "HTTP-Statuscode 304: Bedeutung und Lösungen | Contabo Blog",
+          "url": "https://contabo.com/blog/de/http-304-statuscode/",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 6,
+          "snippet": "The HTTP 304 Not Modified redirection response status code indicates that there is no need to retransmit the requested resources.",
+          "title": "304 Not Modified - HTTP | MDN - MDN Web Docs",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/304",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 7,
+          "snippet": "14. Okt. 2026 · HTTP 304 is usually a normal caching response, not an error. Learn when it needs attention and how to troubleshoot …",
+          "title": "HTTP 304 Not Modified: meaning and troubleshooting - Hostinger",
+          "url": "https://www.hostinger.com/tutorials/how-to-fix-304-status-code/",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 8,
+          "snippet": "Ein ETag allein erlaubt nicht jede Speicherung, und ein fehlender ETag ist kein eigenständiger SEO-Fehler. Nutzen Sie für das …",
+          "title": "ETag Checker kostenlos: HTTP 304 & Last-Modified testen",
+          "url": "https://seitenreport.de/seo-tools/http-304-etag-checker",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 9,
+          "snippet": "3. Juli 2026 · Was HTTP 304 Not Modified bedeutet, warum der 3xx-Status kein Redirect ist, wie ETag und Last-Modified ihn …",
+          "title": "304 Not Modified: Bedeutung, Caching und SEO",
+          "url": "https://patrickstox.com/de/technisches-seo/http-statuscodes/304-nicht-ge%C3%A4ndert/",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 10,
+          "snippet": "14. Sept. 2026 · 304 means your cached copy is still current, so the server sends no body. It only answers conditional requests using …",
+          "title": "304 Not Modified: why it is a success, not an error",
+          "url": "https://www.host-tracker.com/de/learn/http-status-codes/304-not-modified",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        }
+      ],
+      "elapsed_ms": 707
+    },
+    {
+      "case_id": "ru04",
+      "query": "Tokio асинхронный Rust руководство",
+      "unique_relevant": 6,
+      "pass": true,
+      "assessment": "Tokio/Rust-руководства явно соответствуют; первая общая книга по async без видимого Tokio оценена как фон.",
+      "results": [
+        {
+          "position": 1,
+          "snippet": "«Асинхронный Rust: полное руководство» — это практическое пособие, которое поможет вам освоить одну из самых …",
+          "title": "Асинхронный Rust: полное руководство",
+          "url": "https://pythonlib.ru/book144",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 2,
+          "snippet": "Исчерпывающее руководство по асинхронному программированию на Rust. Изучите async/await, Tokio, многопоточность и …",
+          "title": "Асинхронный Rust: полное руководство",
+          "url": "https://pythonlib.ru/book449",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 3,
+          "snippet": "21. Mai 2024 · Представляю вашему вниманию первую часть туториала по Tokio. Tokio — это асинхронная среда …",
+          "title": "Туториал по Tokio. 1/2 / Хабр - Habr",
+          "url": "https://habr.com/ru/companies/timeweb/articles/815811/",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 4,
+          "snippet": "В этом учебнике вы познакомитесь с библиотекой выполнения Tokio для Rust, которая позволяет разрабатывать …",
+          "title": "Изучение руководства по асинхронной библиотеке времени …",
+          "url": "https://www.studywithgpt.com/ru/tutorial/j5i66q",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 5,
+          "snippet": "Используйте среду выполнения Tokio для эффективного выполнения асинхронных задач, обработки ввода-вывода и других …",
+          "title": "Создание асинхронных приложений с Tokio — Learn Rust Coding",
+          "url": "https://www.coddykit.com/ru/courses/rust/building-async-applications-with-tokio-1404",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 6,
+          "snippet": "6. Sept. 2026 · Tokio асинхронный рантайм — инструмент, который стал базой для многих сетевых и конкурентных …",
+          "title": "Tokio асинхронный рантайм для Rust: быстрый старт и примеры",
+          "url": "https://trinosoft.com/articles/?p=7948",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 7,
+          "snippet": "Tokio is a runtime for writing reliable asynchronous applications with Rust. It provides async I/O, networking, scheduling, timers, and …",
+          "title": "Tutorial | Tokio - An asynchronous Rust runtime",
+          "url": "https://tokio.rs/tokio/tutorial",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        }
+      ],
+      "elapsed_ms": 668
+    },
+    {
+      "case_id": "ru05",
+      "query": "экскаватор рабочий цикл перемещение грунта",
+      "unique_relevant": 7,
+      "pass": true,
+      "assessment": "Семь материалов явно описывают рабочий цикл; общие устройство/характеристики/перемещение грунта — фон.",
+      "results": [
+        {
+          "position": 1,
+          "snippet": "9. Juli 2026 · Грунт разрабатывают по определённой схеме движения экскаватора — проходке. Выбор зависит от формы …",
+          "title": "Технология работы экскаватора: рабочий цикл и уклон — Строй Дока",
+          "url": "https://stroydoka.ru/blog/tehnologiya-raboty-ekskavatora/",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 2,
+          "snippet": "Экскаватор — самоходная землеройная машина циклического или непрерывного действия, предназначенная для копания, …",
+          "title": "Как работает экскаватор: схема устройства, рабочий цикл и …",
+          "url": "https://everstargroup.ru/blog/princip-raboty-ehkskavatora-i-osobennosti-ustrojstva/",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 3,
+          "snippet": "1. Juni 2012 · Основные этапы рабочего цикла экскаватора включают в себя подход к рабочему месту, приготовление к …",
+          "title": "Опишем рабочий цикл экскаватора и его составляющие",
+          "url": "https://mksegment.ru/c/opishem-rabochij-cikl-ehkskavatora-i-ego-sostavlyayushchie",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 4,
+          "snippet": "23. Juni 2024 · Его функция состоит в выемке и перемещении грунта для различных строительных и демонтажных работ. …",
+          "title": "Все, что нужно знать о рабочем цикле экскаватора — его этапы и …",
+          "url": "https://peredelka38.ru/a/vse-chto-nuzhno-znat-o-rabochem-cikle-ehkskavatora-ego-ehtapy-i-znachenie-kazhdogo-dejstviya",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 5,
+          "snippet": "24. Juli 2017 · Рабочий цикл экскаватора представляет собой последовательность этапов, которые позволяют эффективно …",
+          "title": "Рабочий цикл экскаватора: этапы и функции",
+          "url": "https://d-pravo.ru/c/rabochij-cikl-ehkskavatora-osnovnye-ehtapy-i-funkcii-pri-vypolnenii-gornodobyvayushchih-rabot",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 6,
+          "snippet": "По данным все той же статистики, при работе экскаватора от 15 до 30% рабочего времени приходится на срезку и забор …",
+          "title": "Разработка грунта экскаватором. Производственный цикл работ",
+          "url": "https://xcmg-ru.ru/informacziya/statiy/razrabotka-grunta-ekskavatorom/",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 7,
+          "snippet": "Понимать устройство полезно и при выборе: от давления гидросистемы и усилия зависит, какой грунт машина возьмёт. …",
+          "title": "Устройство и принцип работы экскаватора | spec-rus.ru",
+          "url": "https://spec-rus.ru/blog/ustroystvo-ekskavatora/",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 8,
+          "snippet": "23. Apr. 2021 · Рабочий цикл О.Э. состоит из последовательно выполняемых операций копания грунта (1), его перемещения …",
+          "title": "Продолжительность рабочего цикла одноковшового экскаватора",
+          "url": "https://uralsevertrans.ru/ekskavatory/prodolzhitelnost-rabochego-cikla-odnokovshovogo-ekskavatora.html",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 9,
+          "snippet": "Экскаватор — машина для разработки грунта, погрузки, перемещения сыпучих материалов и работы с навесным …",
+          "title": "Экскаватор: устройство, принцип работы, виды, характеристики",
+          "url": "https://td-ker.ru/ekskavator-ustrojstvo-printsip-raboty-vidy-i-tehnicheskie-harakteristiki/",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 10,
+          "snippet": "Связка экскаватор + бульдозер работает хорошо, когда грунт перемещается на 30–80 м от точки копания (например, в …",
+          "title": "Перемещение грунта: разработка, погрузка, вывоз | Технопик",
+          "url": "https://tehnopik.ru/spravochnik/peremeshchenie-grunta",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        }
+      ],
+      "elapsed_ms": 780
+    },
+    {
+      "case_id": "ru06",
+      "query": "site:doc.rust-lang.org владение ownership",
+      "unique_relevant": 0,
+      "pass": false,
+      "assessment": "Ни один URL не на doc.rust-lang.org; выдача про Fast & Furious и словарные формы, обязательный site-фильтр нарушен.",
+      "results": [
+        {
+          "position": 1,
+          "snippet": "„ Seine Wortgewalt fesselt, seine Authentizität geht unter die Haut, berührt, stimmt nachdenklich und wirkt nachhaltig: Dieser Aura …",
+          "title": "fast an‎: Bedeutung, Silbentrennung, Rechtschreibung",
+          "url": "https://www.wortbedeutung.info/fast_an/",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 2,
+          "snippet": "Die Filmreihe Fast & Furious besteht aus mehreren Filmen, die sich an Elementen des Street-Racings, Heist und Agentenfilm  …",
+          "title": "Fast & Furious (Filmreihe) – Wikipedia",
+          "url": "https://de.wikipedia.org/wiki/Fast_%26_Furious_(Filmreihe)",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 3,
+          "snippet": "An undercover Los Angeles police officer infiltrates an illegal street racing crew suspected of high-speed cargo hijackings. Former …",
+          "title": "All Fast & Furious Movies - IMDb",
+          "url": "https://www.imdb.com/list/ls068935667/",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 4,
+          "snippet": "10. Nov. 2021 · Die Reihenfolge der mittlerweile neun Teile auf einen Blick. Wann kommt Fast and Furious 10? Allein die Tatsache, …",
+          "title": "Fast and Furious Reihenfolge: Alle Filme chronologisch sortiert",
+          "url": "https://www.tvmovie.de/news/fast-and-furious-reihenfolge-121750",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 5,
+          "snippet": "Fast & Furious (formerly known as The Fast and the Furious) is an American action media franchise centered on a series of films …",
+          "title": "Fast & Furious - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Fast_%26_Furious",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 6,
+          "snippet": "Einfach erklärt: „Anfassen“ bedeutet, etwas oder jemanden direkt mit der Hand zu berühren. Es kann sowohl eine neutrale Handlung …",
+          "title": "fasst an‎: Bedeutung, Rechtschreibung - Wortbedeutung.info",
+          "url": "https://www.wortbedeutung.info/fasst_an/",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 7,
+          "snippet": "Lernen Sie die Übersetzung für 'fast an' in LEOs ­Englisch ⇔ Deutsch­ Wörterbuch. Mit Flexionstabellen der verschiedenen Fälle und …",
+          "title": "fast an - LEO: Übersetzung im Englisch ⇔ Deutsch Wörterbuch",
+          "url": "https://dict.leo.org/englisch-deutsch/fast%20an",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 8,
+          "snippet": "Fast and Furious — ou Rapides et Dangereux au Québec — est une série de films d'action américains, dont les thèmes tournent …",
+          "title": "Fast and Furious (série de films) — Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Fast_and_Furious_(s%C3%A9rie_de_films)",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 9,
+          "snippet": "The Fast and the Furious (englisch für „Die Schnellen und die Wilden“) ist ein US-amerikanisch - deutscher Actionfilm aus dem Jahr …",
+          "title": "The Fast and the Furious – Wikipedia",
+          "url": "https://de.wikipedia.org/wiki/The_Fast_and_the_Furious",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 10,
+          "snippet": "fast an ist eine flektierte Form von anfasen. Die gesamte Konjugation findest du auf der Seite Flexion:anfasen. Alle weiteren …",
+          "title": "fast an – Wiktionary",
+          "url": "https://de.wiktionary.org/wiki/fast_an",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        }
+      ],
+      "elapsed_ms": 458
+    },
+    {
+      "case_id": "ru07",
+      "query": "Rust Python обработка HTML сравнение",
+      "unique_relevant": 0,
+      "pass": false,
+      "assessment": "Общие сравнения языков, бэкенда и обработки данных; HTML-извлечение в заголовках/сниппетах не раскрыто.",
+      "results": [
+        {
+          "position": 1,
+          "snippet": "17. Aug. 2025 · Сравните производительность Python и Rust в обработке данных на практике. Узнайте, что подходит лучше, …",
+          "title": "Сравнение производительности Python и Rust в обработке данных …",
+          "url": "https://iprog.pp.ru/sravnenie-proizvoditelnosti-python-i-rust-v-zadachah-obrabotki-dannyh-na-praktike/",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 2,
+          "snippet": "Сравните производительность Python и Rust в обработке данных и машинном обучении. Узнайте, что выбрать — читайте …",
+          "title": "Сравнение производительности Python и Rust в обработке данных …",
+          "url": "https://iprog.pp.ru/sravnenie-proizvoditelnosti-python-i-rust-v-zadachah-obrabotki-dannyh-i-mashinnogo-obucheniya/",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 3,
+          "snippet": "В этой статье мы проведем честное сравнение Rust и Python для бэкенд-разработки, рассмотрим реальные сценарии …",
+          "title": "Rust или Python для бэкенда: сравнение и выбор",
+          "url": "https://pythonlib.ru/post583",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 4,
+          "snippet": "В статье проводится сравнительный анализ производительности двух языков программирования — Python и Rust — на …",
+          "title": "Сравнение производительности Python и Rust на примере задачи …",
+          "url": "https://e-postulat.ru/index.php/Postulat/article/view/7038",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 5,
+          "snippet": "В этой статье мы проведём честное сравнение Rust и Python для бэкенд-разработки, рассмотрим их сильные и слабые …",
+          "title": "Rust vs Python для бэкенда: сравнение и выбор",
+          "url": "https://pythonlib.ru/post233",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 6,
+          "snippet": "In diesem umfassenden Vergleich beleuchten wir Leistung, Sicherheit, Skalierbarkeit, Entwicklererfahrung und Zukunftsaussichten …",
+          "title": "Rust vs Python 2026: Backend-Leistung & Sicherheit im Vergleich ...",
+          "url": "https://softwarelogic.co/de-DE/wissensbasis/rust-oder-python-im-backend-2026-leistung-und-sicherheit-im-vergleich/",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 7,
+          "snippet": "6. Mai 2025 · Что выбрать для изучения — Rust или Python, если я хочу работать в области веб-разработки? Для веб …",
+          "title": "Что выбрать для изучения — Rust или Python",
+          "url": "https://mngb.ru/kompyuter/11/chto-luchshe-izuchat-rust-ili-python",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 8,
+          "snippet": "6. Apr. 2026 · Python vs Rust 2026 comparison with 10 benchmarks, salary data, and migration guide. See which language wins for …",
+          "title": "Python vs Rust 2026: 10 Benchmarks, 100x Speed Gap [Tested]",
+          "url": "https://tech-insider.org/python-vs-rust-2026/",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 9,
+          "snippet": "Compare Rust and Python on representative algorithms with interactive benchmarks, reproducible inputs, and clear performance …",
+          "title": "Rust vs Python Benchmarks — Interactive Performance Arena",
+          "url": "https://www.rustpython.com/arena",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 10,
+          "snippet": "13. Dez. 2023 · Python или Rust: что быстре и проще. Мы сравнили два языка, чтобы вы могли решить какой из этих языков …",
+          "title": "Python или Rust: что выбрать для анализа данных и машинного …",
+          "url": "https://proglib.io/p/python-ili-rust-chto-vybrat-dlya-analiza-dannyh-i-mashinnogo-obucheniya-2023-12-13",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        }
+      ],
+      "elapsed_ms": 756
+    },
+    {
+      "case_id": "ru08",
+      "query": "последняя стабильная версия Rust октябрь 2026",
+      "unique_relevant": 0,
+      "pass": false,
+      "assessment": "Выдача про GMX/Gmail и вход в почту, Rust отсутствует.",
+      "results": [
+        {
+          "position": 1,
+          "snippet": "20. Sept. 2026 · Hallo, ich habe seit ein paar Tagen das Problem, dass ich in meinem GMX-Account (über E-Mail-Einstellungen > …",
+          "title": "GMX: Filterregeln können nicht mehr neu erstellt oder ergänzt werden",
+          "url": "https://www.computerbase.de/forum/threads/gmx-filterregeln-koennen-nicht-mehr-neu-erstellt-oder-ergaenzt-werden.2278843/",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 2,
+          "snippet": "23. Juli 2022 · Hi! Weiß wer, was man tun kann? Auf meinem alten Handy Xiaomi Note 5 funktioniert die GMX-App. Auf dem neuen …",
+          "title": "GMX-App: Kann mich nicht einloggen (aber schon auf altem Handy …",
+          "url": "https://www.computerbase.de/forum/threads/gmx-app-kann-mich-nicht-einloggen-aber-schon-auf-altem-handy-und-desktop.2095129/",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 3,
+          "snippet": "Wenn Sie ein Google-Konto erstellen, erhalten Sie automatisch eine Gmail-Adresse. Bei Bedarf lässt sich aber auch eine E‑Mail …",
+          "title": "Mit einer anderen E-Mail-Adresse im Google-Konto anmelden",
+          "url": "https://support.google.com/accounts/answer/176347?hl=de&co=GENIE.Platform%3DDesktop",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 4,
+          "snippet": "Wenn Sie ein E-Mail-Konto von Yahoo!, AOL, Outlook, Hotmail oder einem ausgewählten anderen Drittanbieter haben, können Sie …",
+          "title": "Gmail-Funktionen in anderen E-Mail-Konten verwenden - Computer",
+          "url": "https://support.google.com/mail/answer/6304825?hl=de&co=GENIE.Platform%3DDesktop",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 5,
+          "snippet": "21. März 2024 · Hallo liebes Forum, ich bin kurz vorm Durchdrehen mit dem Programm \"Kaspersky Internet Security\" aufgrund von …",
+          "title": "Kaspersky Update blockt GMX Mailansicht - ComputerBase",
+          "url": "https://www.computerbase.de/forum/threads/kaspersky-update-blockt-gmx-mailansicht.2188970/",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 6,
+          "snippet": "9. Juli 2024 · Denn im Frühjahr hatten viele Nutzer nach dem Login eine Info über hunderte fehlgeschlagene Loginversuche und …",
+          "title": "GMX: Info über letzten Login sowie Anzahl fehlgeschlagener Login ...",
+          "url": "https://www.computerbase.de/forum/threads/gmx-info-ueber-letzten-login-sowie-anzahl-fehlgeschlagener-login-versuche-verschwunden.2202215/",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 7,
+          "snippet": "5. März 2022 · Moin, ich habe 2FA für meinen gmx Mail Account konfiguriert. Das funktioniert so weit auch, wenn ich mich online …",
+          "title": "gmx 2-Faktor Authentifizierung mit Outlook - ComputerBase",
+          "url": "https://www.computerbase.de/forum/threads/gmx-2-faktor-authentifizierung-mit-outlook.2074548/",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 8,
+          "snippet": "12. Sept. 2022 · Hi Nach dem Login wird man erneut aufgefordert , seine Mail Adresse und PW einzugeben , und ein Captcha ! Ich …",
+          "title": "GMX Umleitung interception1.gmx.net ? | ComputerBase Forum",
+          "url": "https://www.computerbase.de/forum/threads/gmx-umleitung-interception1-gmx-net.2102743/",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 9,
+          "snippet": "5. Dez. 2025 · Hallo, ich habe derzeit mit dem Programm Thunderbird in der Version 145.0 unter Windows 11 zu tun. Ich scheitere …",
+          "title": "Thunderbird Version 145.0 - E-Mail Konteneinrichtungen scheitern",
+          "url": "https://www.computerbase.de/forum/threads/thunderbird-version-145-0-e-mail-konteneinrichtungen-scheitern.2259963/",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 10,
+          "snippet": "12. März 2024 · Heute bemerke ich plötzlich, dass das Mailabholen von einer meiner GMX-Adressen, über imap, nicht mehr …",
+          "title": "GMX-Sicherheitswarnung, Databreach | ComputerBase Forum",
+          "url": "https://www.computerbase.de/forum/threads/gmx-sicherheitswarnung-databreach.2187847/",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        }
+      ],
+      "elapsed_ms": 371
+    },
+    {
+      "case_id": "ru09",
+      "query": "Unicode графема кодовая точка разница",
+      "unique_relevant": 0,
+      "pass": false,
+      "assessment": "Общий Unicode, таблицы символов и стандарт; различие графемы и кодовой точки не раскрыто.",
+      "results": [
+        {
+          "position": 1,
+          "snippet": "Everyone in the world should be able to use their own language on phones and computers. Learn More about Unicode",
+          "title": "Unicode – The World Standard for Text and Emoji",
+          "url": "https://home.unicode.org/",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 2,
+          "snippet": "Unicode zielt in erster Linie auf alle Zeichen, die in modernen Texten veröffentlicht werden (etwa in allen Zeitungen und Zeitschriften …",
+          "title": "Unicode – Wikipedia",
+          "url": "https://de.wikipedia.org/wiki/Unicode",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 3,
+          "snippet": "Scrollen Sie einfach nach unten, um die ganze Vielfalt der Unicode-Zeichen zu entdecken. Oder nutzen Sie die Blocknavigation auf …",
+          "title": "Unicode Zeichentabelle - Alle Unicode-Symbole und ihre Codes auf …",
+          "url": "https://symbl.cc/de/unicode-table/",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 4,
+          "snippet": "Explore the complete Unicode characters table on SYMBL ( ‿ ). Find every symbol, emoji, and special character in one place. …",
+          "title": "List of Unicode Symbols",
+          "url": "https://symbl.cc/en/unicode-table/",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 5,
+          "snippet": "This article contains special characters. Without proper rendering support, you may see question marks, boxes, or other symbols. As …",
+          "title": "List of Unicode characters - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/List_of_Unicode_characters",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 6,
+          "snippet": "Unicode (also known as The Unicode Standard and TUS[1][2]) is a character encoding standard maintained by the Unicode …",
+          "title": "Unicode - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Unicode",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 7,
+          "snippet": "The Unicode Standard is the universal character encoding designed to support the worldwide interchange, processing, and display of …",
+          "title": "Unicode Standard",
+          "url": "https://www.unicode.org/standard/standard.html",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 8,
+          "snippet": "UnicodePlus.com is a free tool providing information about any Unicode character, such as its name, its codepoint, or its …",
+          "title": "UnicodePlus - Search for Unicode characters",
+          "url": "https://unicodeplus.com/",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 9,
+          "snippet": "16. Sept. 2017 · See the following resource links for general information about Unicode versions and other information about the …",
+          "title": "Unicode® 18.0.0",
+          "url": "https://www.unicode.org/versions/latest/",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 10,
+          "snippet": "Unicode weist den für alle Sprachen der Welt benötigten Schriftzeichen, Symbolen und Steuerzeichen eine Nummer in einem …",
+          "title": "Portal:Unicode – Wikipedia",
+          "url": "https://de.wikipedia.org/wiki/Portal:Unicode",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        }
+      ],
+      "elapsed_ms": 446
+    },
+    {
+      "case_id": "ru10",
+      "query": "DNS rebinding SSRF IPv6 защита",
+      "unique_relevant": 1,
+      "pass": false,
+      "assessment": "Только Govyn явно объединяет IPv6, SSRF и DNS rebinding; остальные сниппеты дают неполный контекст.",
+      "results": [
+        {
+          "position": 1,
+          "snippet": "14. März 2026 · While conducting security research, I discovered an SSRF (Server-Side Request Forgery) vulnerability in an …",
+          "title": "SSRF DNS Rebinding: Bypassing Protection with CVE-2025-69660",
+          "url": "https://aydinnyunus.github.io/2026/03/14/ssrf-dns-rebinding-vulnerability/",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 2,
+          "snippet": "27. Mai 2026 · DNS rebinding is the technique where an attacker who controls the authoritative DNS for a domain serves two …",
+          "title": "DNS Rebinding SSRF: How TOCTOU Bypasses Host Allowlists",
+          "url": "https://techearl.com/dns-rebinding-ssrf",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 3,
+          "snippet": "17. Dez. 2025 · How DNS rebinding bypasses common SSRF protections by exploiting the gap between DNS resolution and …",
+          "title": "DNS Rebinding Attacks Against SSRF Protections | Behrad's Blog",
+          "url": "https://behradtaher.dev/DNS-Rebinding-Attacks-Against-SSRF-Protections/",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 4,
+          "snippet": "7. Aug. 2023 · Explore the intertwining of SSRF attacks with DNS rebinding. Dive deep into advanced bypass techniques against …",
+          "title": "SSRF with DNS Rebinding | Clear Gate",
+          "url": "https://www.clear-gate.com/blog/ssrf-with-dns-rebinding-2/",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 5,
+          "snippet": "25. Apr. 2023 · Learn about techniques to defend against SSRF DNS rebinding threats using strategies like SOP, DNS pinning, IP …",
+          "title": "Defend Against SSRF DNS Rebinding with Effective Strategies",
+          "url": "https://blog.securelayer7.net/server-side-request-forgery-dns-rebinding-attack/",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 6,
+          "snippet": "22. Sept. 2025 · Deep dive into advanced SSRF exploitation — bypassing URL filters with IPv6 and hex encoding, accessing …",
+          "title": "Advanced SSRF Techniques: Bypassing Filters and Pivoting to Internal ...",
+          "url": "https://payloadplayground.com/blog/server-side-request-forgery-advanced",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 7,
+          "snippet": "22. Nov. 2022 · DNS rebinding is a method of manipulating resolution of domain names that is commonly used as a form of …",
+          "title": "SSRF via DNS Rebinding (CVE-2022–4096) - Medium",
+          "url": "https://infosecwriteups.com/ssrf-via-dns-rebinding-cve-2022-4096-b7bf75928bb2",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 8,
+          "snippet": "22. März 2026 · Deep dive into IPv6 SSRF protection, DNS rebinding defense, header injection prevention, and ReDoS mitigation for …",
+          "title": "AI Proxy SSRF Protection, DNS Rebinding & Injection Defense",
+          "url": "https://govynai.com/blog/ssrf-injection-defense-ai-proxy/",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 9,
+          "snippet": "24. Juli 2026 · What is DNS rebinding and how does connection pinning prevent it? DNS rebinding is when a hostname resolves to a …",
+          "title": "SSRF Prevention: DNS Rebinding, Pinning & Redirect Checks",
+          "url": "https://moayyadfaris.com/blog/ssrf-safe-url-fetcher-dns-pinning",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 10,
+          "snippet": "1. Feb. 2026 · Practical IPv6-based SSRF techniques, real-world payloads, and testing notes for penetration testers and bug bounty …",
+          "title": "IPv6-Based SSRF: Techniques and Practical Payloads",
+          "url": "https://mhsec.me/research/ipv6-based-ssrf-techniques-and-practical-payloads",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        }
+      ],
+      "elapsed_ms": 733
+    },
+    {
+      "case_id": "en01",
+      "query": "Rust ownership borrowing documentation",
+      "unique_relevant": 9,
+      "pass": true,
+      "assessment": "Прямая документация и руководства по владению/заимствованию; старое зеркало Rust 1.25 оценено как фон.",
+      "results": [
+        {
+          "position": 1,
+          "snippet": "It enables Rust to make memory safety guarantees without needing a garbage collector, so it’s important to understand how …",
+          "title": "Understanding Ownership - The Rust Programming Language",
+          "url": "https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 2,
+          "snippet": "When you understand ownership, you’ll have a solid foundation for understanding the features that make Rust unique. In this …",
+          "title": "What is Ownership? - The Rust Programming Language",
+          "url": "https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 3,
+          "snippet": "This is the first of three sections presenting Rust’s ownership system. This is one of Rust’s most distinct and compelling features, …",
+          "title": "Ownership - The Rust Programming Language",
+          "url": "https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/book/first-edition/ownership.html",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 4,
+          "snippet": "Vor 3 Tagen · Rust ownership and borrowing tutorial shows how moves, clones, references, mutable borrows, and slices work, and …",
+          "title": "Rust ownership and borrowing - understanding ownership in Rust",
+          "url": "https://www.zetcode.com/rust/ownership/",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 5,
+          "snippet": "23. Juni 2026 · This document explains how Rust's ownership and borrowing system is taught in the \"100 Exercises to Learn Rust\" …",
+          "title": "Ownership and Borrowing | mainmatter/100-exercises-to-learn-rust",
+          "url": "https://deepwiki.com/mainmatter/100-exercises-to-learn-rust/7.1-ownership-and-borrowing",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 6,
+          "snippet": "11. Sept. 2025 · This document provides a comprehensive explanation of Rust's ownership system and borrowing mechanisms. It …",
+          "title": "Ownership and Borrowing | sunface/rust-course | DeepWiki",
+          "url": "https://deepwiki.com/sunface/rust-course/2.2-ownership-and-borrowing",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 7,
+          "snippet": "19. Juli 2026 · Quick reference for move semantics, borrow rules, references, and clone/copy in Rust.",
+          "title": "Ownership and Borrowing - Rust SME Cookbook",
+          "url": "https://rust.codeguides.io/code-reference/ownership-and-borrowing/",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 8,
+          "snippet": "20. Feb. 2026 · Master Rust's ownership and borrowing system. Property rules, references, lifetimes, and advanced memory …",
+          "title": "Ownership and Borrowing in Rust: Complete Guide 2026",
+          "url": "https://sharpskill.dev/en/blog/rust/ownership-borrowing-rust-complete-guide",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 9,
+          "snippet": "18. März 2026 · The clearest explanation of Rust ownership, borrowing, and the borrow checker in 2026. Understand why Rust …",
+          "title": "Rust Ownership and Borrowing Explained: A Visual Guide for 2026",
+          "url": "https://rustify.rs/articles/rust-ownership-borrowing-explained",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 10,
+          "snippet": "Rust ownership explained — understand move semantics, borrowing rules, and how Rust guarantees memory safety without a …",
+          "title": "Ownership & Borrowing · Learn Rust | LearningRust.org",
+          "url": "https://learningrust.org/lessons/06-ownership",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        }
+      ],
+      "elapsed_ms": 936
+    },
+    {
+      "case_id": "en02",
+      "query": "SQLite WAL transactions documentation",
+      "unique_relevant": 7,
+      "pass": true,
+      "assessment": "WAL-документация соответствует; общие Transaction и индекс документации — фон. GitBook — зеркало WAL и не увеличивает число уникальных страниц.",
+      "results": [
+        {
+          "position": 1,
+          "snippet": "The traditional rollback journal works by writing a copy of theoriginal unchanged database content into a separate rollback journal fileand then writing changes directly into the database file. In theevent of a crash or ROLLBACK, the original content conta…An SQLite database connection defaults to journal_mode=DELETE. To convert to WAL mode, use thefollowing pragma: The journal_mode pragma returns a string which is the new journal mode.On success, the pragma will return the string \"wal\". If t…While a database connection is open on a WAL-mode database, SQLitemaintains an extra journal file called a \"Write Ahead Log\" or \"WAL File\".The name of this file on disk is usually the name of the database filewith an extra \"-wal\" suffix, though different na…Older versions of SQLite could not read a WAL-mode database that wasread-only. In other words, write access was required in order to read aWAL-mode database. This constraint was relaxed beginning withSQLite version 3.22.0(2018-01-22). …",
+          "title": "Write-Ahead Logging - SQLite",
+          "url": "https://sqlite.org/wal.html",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 2,
+          "snippet": "18. Feb. 2026 · SQLite supports multiple simultaneous read transactions coming from separate database connections, possibly in …",
+          "title": "Transaction - SQLite",
+          "url": "https://sqlite.org/lang_transaction.html",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 3,
+          "snippet": "16. Mai 2026 · This page documents the WAL (Write-Ahead Logging) subsystem in SQLite, covering the on-disk WAL file format, the …",
+          "title": "Write-Ahead Logging (WAL) | sqlite/sqlite | DeepWiki",
+          "url": "https://deepwiki.com/sqlite/sqlite/3.4-write-ahead-logging-(wal)",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 4,
+          "snippet": "Beginning with version 3.7.0, a new \"Write-Ahead Log\" option (hereafter referred to as \"WAL\") is available. There are advantages …",
+          "title": "Write-Ahead Logging | SQLite Documentation",
+          "url": "https://wizardforcel.gitbooks.io/sqlite-doc-en/content/48.html",
+          "grade": 2,
+          "counted_as_unique_relevant": false,
+          "duplicate_of_url": "https://sqlite.org/wal.html"
+        },
+        {
+          "position": 5,
+          "snippet": "How SQLite Implements Atomic Commit → A description of the logic within SQLite that implements transactions with atomic commit, …",
+          "title": "SQLite Documentation",
+          "url": "https://a1.sqlite.org/docs.html",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 6,
+          "snippet": "A practical guide to SQLite WAL mode: enabling write-ahead logging, how concurrent reads and writes work, checkpoints, the -wal …",
+          "title": "Runnable SQLite Docs: WAL & Concurrency | Coddy",
+          "url": "https://coddy.tech/docs/sqlite/wal-mode-and-concurrency",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 7,
+          "snippet": "3. Sept. 2026 · Master SQLite transactions. Learn ACID compliance, BEGIN, COMMIT, ROLLBACK, SAVEPOINT nested …",
+          "title": "SQLite Transactions: ACID Guarantees, Savepoints & WAL Mode | VD …",
+          "url": "https://docs.vishnudigital.com/tutorials/sql/sqlite/dml/transactions/",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 8,
+          "snippet": "12. Mai 2026 · Understanding checkpoint behavior gives you far more control over SQLite performance in real-world systems. In the …",
+          "title": "SQLite WAL Checkpoint Algorithms Explained",
+          "url": "https://www.sqliteforum.com/p/checkpoint-algorithms-and-wal-performance",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 9,
+          "snippet": "10. Okt. 2026 · How the -wal and -shm files, read marks and checkpoints work, why a WAL grows without bound, and how to set …",
+          "title": "SQLite WAL mode: how it works, checkpoints and tuning",
+          "url": "http://dpkdb.com/article/sqlite-wal-mode-how-it-works-checkpoints-and-tuning",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 10,
+          "snippet": "Definitive deep dive into SQLite's Write-Ahead Logging: WAL file format, the shared-memory wal-index, checkpoint modes, …",
+          "title": "SQLite WAL Internals — Frame Format, wal-index, Checkpoints, and ...",
+          "url": "https://systeminternals.dev/sqlite/wal/",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        }
+      ],
+      "elapsed_ms": 792
+    },
+    {
+      "case_id": "en03",
+      "query": "HTTP 304 ETag Last-Modified conditional requests",
+      "unique_relevant": 9,
+      "pass": true,
+      "assessment": "Все ссылки явно относятся к условным HTTP-запросам и валидаторам. Перевод той же статьи webhosting.de не считается второй уникальной страницей.",
+      "results": [
+        {
+          "position": 1,
+          "snippet": "15. Juni 2026 · Lerne, wie HTTP Conditional Caching mit ETag und Last-Modified funktioniert, wie browser cache validation …",
+          "title": "HTTP Conditional Caching mit ETag und Last-Modified verstehen",
+          "url": "https://webhosting.de/http-conditional-caching-etag-last-modified-performance-guide/",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 2,
+          "snippet": "14. Okt. 2026 · How to use ETag, Last-Modified, and precondition headers to enable 304 responses and prevent lost updates in …",
+          "title": "Conditional Requests & Validation | Developer Guide",
+          "url": "https://apiguide.dev/guides/conditional-requests",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 3,
+          "snippet": "21. Okt. 2026 · How ETag and Last-Modified power conditional GET requests, the difference between strong and weak validators, …",
+          "title": "ETag and Conditional Requests: 304 Not Modified, If-None-Match, Last ...",
+          "url": "https://speedtesthq.com/guides/cdn/etag-and-conditional-requests",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 4,
+          "snippet": "15. Juni 2026 · Learn how HTTP conditional caching works with ETag and Last-Modified, how browser cache validation is …",
+          "title": "Understanding HTTP Conditional Caching with ETag and Last-Modified",
+          "url": "https://webhosting.de/en/http-conditional-caching-etag-last-modified-and-performance-guide/",
+          "grade": 2,
+          "counted_as_unique_relevant": false,
+          "duplicate_of_url": "https://webhosting.de/http-conditional-caching-etag-last-modified-performance-guide/"
+        },
+        {
+          "position": 5,
+          "snippet": "9. Juni 2026 · A conditional request asks the server for a resource only if it has changed. The server attaches a validator to each …",
+          "title": "Conditional requests (ETag, Last-Modified, 304) · WSS",
+          "url": "https://webspecification.com/spec/performance/conditional-requests/",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 6,
+          "snippet": "30. Juli 2026 · This post covers what 304 actually promises, how the conditional-request machinery (ETag, If-None-Match, Last …",
+          "title": "Understanding HTTP 304 Not Modified: Conditional Requests, ETags, …",
+          "url": "https://siteerror.com/blog/understanding-304-not-modified",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 7,
+          "snippet": "HTTP Conditional Requests: ETags, Last-Modified & 304 is part of the Pro tier — advanced networking topics including BGP routing, …",
+          "title": "HTTP Conditional Requests: ETags, Last-Modified & 304 | Packetlab",
+          "url": "https://www.packetlab.io/simulator/http-conditional-requests",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 8,
+          "snippet": "17. Aug. 2026 · Quick answer: API caching with ETag and Last-Modified uses HTTP conditional requests to validate client-side …",
+          "title": "API Caching with ETag and Last-Modified: Complete Guide 2026",
+          "url": "https://khimananda.com/blog/api-caching-with-etag-and-last-modified",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 9,
+          "snippet": "1. Sept. 2026 · Use ETag and Last-Modified validators with conditional HTTP requests to reduce bandwidth while keeping browser …",
+          "title": "HTTP Conditional Requests with ETag and Last-Modified",
+          "url": "https://nalar.dev/http-conditional-requests-with-etag-and-last-modified/",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 10,
+          "snippet": "Simulate a conditional request: set the server's ETag and Last-Modified, the browser's If-None-Match and If-Modified-Since, and see …",
+          "title": "HTTP 304 Not Modified: ETag and If-None-Match Explained",
+          "url": "https://we.inc/guides/http-304-not-modified",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        }
+      ],
+      "elapsed_ms": 741
+    },
+    {
+      "case_id": "en04",
+      "query": "Tokio Rust asynchronous programming tutorial",
+      "unique_relevant": 0,
+      "pass": false,
+      "assessment": "Выдача про город Токио/туризм, а не runtime Tokio.",
+      "results": [
+        {
+          "position": 1,
+          "snippet": "Tokio ist heute das Industrie-, Handels-, Bildungs- und Kulturzentrum Japans mit zahlreichen Universitäten, Hochschulen, …",
+          "title": "Tokio – Wikipedia",
+          "url": "https://de.wikipedia.org/wiki/Tokio",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 2,
+          "snippet": "28. Sept. 2026 · Die 20 besten Tokio Sehenswürdigkeiten auf einen Blick: Von Tempeln in Asakusa bis Shibuya Sky. Inklusive …",
+          "title": "Tokio Sehenswürdigkeiten: 20 Highlights & Insidertipps für 2026",
+          "url": "https://verliebt-in-japan.de/tokio-sehenswuerdigkeiten/",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 3,
+          "snippet": "A digest of international law as in diplomatic discussions, treaties and other international agreements (John Bassett Moore, ed.), …",
+          "title": "Tokyo - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Tokyo",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 4,
+          "snippet": "28. Jan. 2026 · Tokio steckt voller Orte, die man gesehen haben sollte. Egal ob Sommer, Frühling oder Herbst: Diese zehn …",
+          "title": "Die schönsten Sehenswürdigkeiten in Tokio: Top 10",
+          "url": "https://www.cntraveller.de/artikel/tokio-japan-sehenswuerdigkeiten",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 5,
+          "snippet": "Tokio ist eine Megastadt voller Sehenswürdigkeiten, Attraktionen, Museen, Gärten, Tempel & Schreinen. Tokio bietet viel mehr als …",
+          "title": "Tokio Sehenswürdigkeiten – TOP 25 – Highlights & Aktivitäten",
+          "url": "https://wanderweib.de/tokio-sehenswuerdigkeiten/",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 6,
+          "snippet": "19. Aug. 2026 · Tokio - in dieser Stadt treffen moderne Bauten auf alte Tempel. Wir präsentieren dir die Top 25Sehenswürdigkeiten …",
+          "title": "Top 25 Tokio Sehenswürdigkeiten inkl. Karte - Urlaubsguru",
+          "url": "https://www.urlaubsguru.de/reisemagazin/sehenswuerdigkeiten-tokio/",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 7,
+          "snippet": "Das offizielle Tourismusportal von Tokyo. Mit Infos zu Sightseeing-Touren in Tokyo, Wegbeschreibung und Wissenswertes zu den …",
+          "title": "Das offizielle Tourismusportal für Tokyo GO TOKYO",
+          "url": "https://www.gotokyo.org/de/index.html",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 8,
+          "snippet": "26. Jan. 2023 · Tokio, die größte Metropole der Welt, ist bekannt für ihre Vielfalt und kulturellen Reichtum. Es gibt aber auch viele …",
+          "title": "Was macht Tokio so besonders? | Japanwelt",
+          "url": "https://www.japanwelt.de/blog/tokio-besonderheiten",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 9,
+          "snippet": "18. Aug. 2019 · Tokio Highlights: Die wichtigsten Sehenswürdigkeiten und viele praktische Tipps für deine Reise. Alles, was du …",
+          "title": "Tokio: Highlights & Geheimtipps in der verrückten Metropole",
+          "url": "https://www.sommertage.com/tokio-tipps/",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 10,
+          "snippet": "Die heutigen 23 Bezirke (in ihrer Gesamtheit als Tokio bezeichnet) entsprechen diesem historischen Tokio. Häufig wird der Begriff …",
+          "title": "Tokio (Stadt) – Wikipedia",
+          "url": "https://de.wikipedia.org/wiki/Tokio_%28Stadt%29",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        }
+      ],
+      "elapsed_ms": 411
+    },
+    {
+      "case_id": "en05",
+      "query": "excavator working cycle digging loading travel",
+      "unique_relevant": 6,
+      "pass": true,
+      "assessment": "Цикл экскаватора раскрыт в нескольких материалах; общая траектория/планирование — фон. Scribd и KIT — варианты одной статьи из позиции 1.",
+      "results": [
+        {
+          "position": 1,
+          "snippet": "1. Dez. 2023 · In order to automatically estimate the theoretical cycle time of an excavator in the loading operation, real-time …Mehr lesen",
+          "title": "Automatic estimation of excavator actual and relative cycle times in ...",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0926580523003400",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 2,
+          "snippet": "5. Okt. 2009 · Four working conditions are considered to outline ordinary machine use: trench digging, soil leveling, straight traveling …",
+          "title": "(PDF) ANALYSIS OF HYDRAULIC EXCAVATOR WORKING CYCLE",
+          "url": "https://www.researchgate.net/publication/264858388_ANALYSIS_OF_HYDRAULIC_EXCAVATOR_WORKING_CYCLE",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 3,
+          "snippet": "1. Jan. 2020 · This article evaluates changes in the productivity of an excavator, depending on its angle of rotation and options for …",
+          "title": "(PDF) Evaluation of Effect of the Excavator Cycle Duration on its ...",
+          "url": "https://www.researchgate.net/publication/342264746_Evaluation_of_Effect_of_the_Excavator_Cycle_Duration_on_its_Productivity",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 4,
+          "snippet": "18. Okt. 2026 · Calculate excavator cycle time from phase timings or a field sample, then estimate cycles per hour, loose and bank …",
+          "title": "Excavator Cycle Time Calculator",
+          "url": "https://calculator.academy/excavator-cycle-time-calculator/",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 5,
+          "snippet": "1. Aug. 2023 · To address this issue, a real-time task-oriented continuous digging trajectory planning method for autonomous …",
+          "title": "Real-time task-oriented continuous digging trajectory planning for ...",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0926580523001760",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 6,
+          "snippet": "The obtained relative cycle time can effectively monitor the excavator's productivity in loading operations and help managers identify …",
+          "title": "Automating Excavator Cycle Time Estimation",
+          "url": "https://www.scribd.com/document/709154675/Automatic-estimation-of-excavator-actual-and-relative-cycle-times",
+          "grade": 2,
+          "counted_as_unique_relevant": false,
+          "duplicate_of_url": "https://www.sciencedirect.com/science/article/pii/S0926580523003400"
+        },
+        {
+          "position": 7,
+          "snippet": "29. Sept. 2023 · This paper proposes a framework to automatically determine the productivity and operational effectiveness of an …",
+          "title": "Automatic estimation of excavator actual and relative cycle ti... - KIT",
+          "url": "https://publikationen.bibliothek.kit.edu/1000162647",
+          "grade": 2,
+          "counted_as_unique_relevant": false,
+          "duplicate_of_url": "https://www.sciencedirect.com/science/article/pii/S0926580523003400"
+        },
+        {
+          "position": 8,
+          "snippet": "19. Okt. 2026 · Cycle time is the elapsed time for one repeatable work sequence: digging and dumping, loading and returning, or …",
+          "title": "Equipment Productivity & Cycle Time Measurement",
+          "url": "https://heavyvehicleinspection.com/industries/construction/measuring-equipment-productivity-and-cycle-times",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 9,
+          "snippet": "This paper describes an efficient trajectory planning method for hydraulic excavator tasks including a complete excavation/loading …",
+          "title": "Automatic Excavation Planning of Hydraulic Excavator",
+          "url": "https://link.springer.com/chapter/10.1007/978-3-540-88518-4_128",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 10,
+          "snippet": "This guide breaks down practical, field-tested techniques that experienced operators use to improve excavator efficiency without …",
+          "title": "Excavator Cycle Time Tips: Faster Production - Read Now",
+          "url": "https://heavyequipment.com/hub/article/advanced-excavator-techniques-for-faster-cycle-times",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        }
+      ],
+      "elapsed_ms": 408
+    },
+    {
+      "case_id": "en06",
+      "query": "site:doc.rust-lang.org ownership",
+      "unique_relevant": 0,
+      "pass": false,
+      "assessment": "Все URL вне doc.rust-lang.org; словарное/управленческое ownership вместо документации Rust.",
+      "results": [
+        {
+          "position": 1,
+          "snippet": "Was ist Ownership? Ownership ist ein Prinzip der Aufgabenverteilung. Statt Verantwortlichkeiten an feste Funktionen zu binden, wird …",
+          "title": "Was ist Ownership? / Wörterbuch für gute Arbeit",
+          "url": "https://toolbox-gute-arbeit.de/was-ist-ownership/",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 2,
+          "snippet": "Lernen Sie die Übersetzung für 'ownership' in LEOs ­Englisch ⇔ Deutsch­ Wörterbuch. Mit Flexionstabellen der verschiedenen Fälle …",
+          "title": "ownership - LEO: Übersetzung im Englisch ⇔ Deutsch Wörterbuch",
+          "url": "https://dict.leo.org/englisch-deutsch/ownership",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 3,
+          "snippet": "In agilen Strukturen gibt es die Rollen des Business Owners, des Product Owners, des Service Owners. Aber was bedeutet …",
+          "title": "Karrieretipps: Ownership vs. Leadership – wo liegt der Unterschied?",
+          "url": "https://entwickler.de/karriere/kolumne-karrieretipps-017",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 4,
+          "snippet": "Viele übersetzte Beispielsätze mit \"ownership\" – Deutsch-Englisch Wörterbuch und Suchmaschine für Millionen von Deutsch …",
+          "title": "ownership - Deutsch-Übersetzung – Linguee Wörterbuch",
+          "url": "https://www.linguee.de/englisch-deutsch/uebersetzung/ownership.html",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 5,
+          "snippet": "Übersetzung für 'ownership' im kostenlosen Englisch-Deutsch Wörterbuch von LANGENSCHEIDT – mit Beispielen, Synonymen und …",
+          "title": "ownership - Deutsch-Übersetzung - Langenscheidt Englisch-Deutsch …",
+          "url": "https://de.langenscheidt.com/englisch-deutsch/ownership",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 6,
+          "snippet": "Ownership can involve multiple rights, collectively referred to as title, which may be separated and held by different parties. The …",
+          "title": "Ownership - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Ownership",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 7,
+          "snippet": "Der englische Begriff Ownership bedeutet wörtlich übersetzt „Eigentümerschaft“. Er wird in der entwicklungspolitischen Diskussion …",
+          "title": "Ownership | BMZ",
+          "url": "https://www.bmz.de/de/service/lexikon/ownership-14742",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 8,
+          "snippet": "dict.cc | Übersetzungen für 'ownership' im Englisch-Deutsch-Wörterbuch, mit echten Sprachaufnahmen, Illustrationen, …",
+          "title": "ownership | Übersetzung Englisch-Deutsch",
+          "url": "https://www.dict.cc/?s=ownership",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 9,
+          "snippet": "20. Juni 2024 · Damit Mitarbeiter einer Organisation mit Leidenschaft ihrer Arbeit nachgehen, sollen sie \"Ownership\" übernehmen. …",
+          "title": "Das Prinzip der Ownership - Versus Magazin",
+          "url": "https://versus-online-magazine.com/de/artikel/humanocracy-ownership/",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 10,
+          "snippet": "Die Ownership-Klausel (oder Change of ownership clause; deutsch „Eigentümerwechsel-Klausel“) ist der Anglizismus für eine …",
+          "title": "Ownership-Klausel – Wikipedia",
+          "url": "https://de.wikipedia.org/wiki/Ownership-Klausel",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        }
+      ],
+      "elapsed_ms": 400
+    },
+    {
+      "case_id": "en07",
+      "query": "Rust Python HTML extraction comparison",
+      "unique_relevant": 0,
+      "pass": false,
+      "assessment": "Общий Rust, игра и география; нет сравнения HTML-извлечения на Rust/Python.",
+      "results": [
+        {
+          "position": 1,
+          "snippet": "Rust is blazingly fast and memory-efficient: with no runtime or garbage collector, it can power performance-critical services, run on …",
+          "title": "Rust Programming Language",
+          "url": "https://rust-lang.org/",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 2,
+          "snippet": "The only aim in Rust is to survive. Everything wants you to die - the island’s wildlife and other inhabitants, the environment, other …",
+          "title": "Rust - Explore, Build and Survive",
+          "url": "https://rust.facepunch.com/",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 3,
+          "snippet": "Rust findet in vielen Betriebssystemen zunehmend Anwendung, da vor allem Speicherzugriffsfehler oder Pufferüberläufe immer …",
+          "title": "Rust (Programmiersprache) – Wikipedia",
+          "url": "https://de.wikipedia.org/wiki/Rust_(Programmiersprache)",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 4,
+          "snippet": "Ob mit dem Auto, Zug, Flugzeug oder als Reisegruppe: wir sind sehr gut zu erreichen! Unsere Adresse: Europa-Park-Straße 2 …",
+          "title": "Der Europa-Park in Rust – Ein Freizeitpark mit über 100 Attraktionen ...",
+          "url": "https://www.europapark.de/de/park",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 5,
+          "snippet": "The only aim in Rust is to survive. Everything wants you to die - the island’s wildlife, other inhabitants, the environment, and other …",
+          "title": "Save 50% on Rust on Steam",
+          "url": "https://store.steampowered.com/app/252490/Rust/",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 6,
+          "snippet": "The only aim in Rust is to survive. Everything wants you to die - the island’s wildlife and other inhabitants, the environment, other …",
+          "title": "Rust - Play - Rust",
+          "url": "https://rust.facepunch.com/play",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 7,
+          "snippet": "Software developer Graydon Hoare created Rust in 2006 while working at Mozilla, which officially sponsored the project in 2009. The …",
+          "title": "Rust (programming language) - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Rust_(programming_language)",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 8,
+          "snippet": "Die Gemeinde Rust möchte mit der Gewährung der Zuschüsse die rationelle Energieverwendung und die vermehrte Nutzung …",
+          "title": "Startseite | Rust",
+          "url": "https://www.rust.de/startseite",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 9,
+          "snippet": "To start using Rust, download the installer, then run the program and follow the onscreen instructions. You may need to install the …",
+          "title": "Install Rust - Rust Programming Language",
+          "url": "https://rust-lang.org/tools/install/",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 10,
+          "snippet": "Rust ist ein Survival - Computerspiel aus dem Jahr 2013 für Microsoft Windows, MacOS und Linux. Das Spiel wurde von den …",
+          "title": "Rust (Computerspiel) – Wikipedia",
+          "url": "https://de.wikipedia.org/wiki/Rust_%28Computerspiel%29",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        }
+      ],
+      "elapsed_ms": 579
+    },
+    {
+      "case_id": "en08",
+      "query": "latest stable Rust release October 2026",
+      "unique_relevant": 0,
+      "pass": false,
+      "assessment": "Выдача про магазины BADER/BAUR, стабильная версия Rust не раскрыта.",
+      "results": [
+        {
+          "position": 1,
+          "snippet": "Entdecken Sie jetzt unsere vielfältige Bekleidung im Versandhaus für Damenmode in Deutschland! Sportliche und elegante Mode …",
+          "title": "Ihr Versandhaus für Qualität: Top-Produkte online bestellen! | BADER",
+          "url": "https://www.bader.de/",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 2,
+          "snippet": "Der kostenlose BADER-Newsletter Jetzt anmelden und viele Vorteile genießen: exklusive Gutscheine attraktive Angebote tolle …",
+          "title": "Ich bin schon Online-Kunde - BADER",
+          "url": "https://www.bader.de/meinbader/anmeldung",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 3,
+          "snippet": "Im BADER Online-Shop gibt es eine große Auswahl an Angebote und viele neue Produkte und Trends.",
+          "title": "BADER Online Shop",
+          "url": "https://www.online-shops.de/bader",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 4,
+          "snippet": "Themenwelt kaufen: Qualität, Auswahl & Top-Angebote bei BADER. Jetzt online durchstöbern und den perfekten Artikel finden!",
+          "title": "Themenwelt Online Shop - Versandkostenfrei | BADER",
+          "url": "https://www.bader.at/damen/themenwelt",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 5,
+          "snippet": "Der BAUR Online-Shop bietet dir eine umfassende Auswahl an Produkten, die weit über das klassische BAUR Versandhaus …",
+          "title": "BAUR Online Shop | Mode, Möbel & Technik",
+          "url": "https://www.baur.de/?msockid=18bee7d3a84664b2246cffd3a9c5658d",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 6,
+          "snippet": "Entdecken Sie exklusive Mode, Unterwäsche, Möbel und Technik stark reduziert. Sichern Sie sich die besten Angebote im SALE …",
+          "title": "SALE % - Alle reduzierten Produkte auf einen Blick - BADER",
+          "url": "https://www.bader.at/sale",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 7,
+          "snippet": "Entdecke stilvolle Dekoration, Geschenkideen und Wohnaccessoires im BADER Store. Große Auswahl für dein Zuhause und …",
+          "title": "BADER Store | Deko & Geschenkideen online",
+          "url": "https://www.baderonlineshop.com/",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 8,
+          "snippet": "Gewusst wo`s herkommt, gewusst wo & wie produziert wird und wer die Köpfe unserer Labels sind, sind nur einige Parameter die …",
+          "title": "Badermädels Obermaiselstein",
+          "url": "https://badermaedels.de/",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 9,
+          "snippet": "Passwort vergessen?",
+          "title": "Ich bin schon Online-Kunde - Bader",
+          "url": "https://www.bader.ch/meinbader/anmeldung",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 10,
+          "snippet": "Entdecken Sie die einzigartige Mode für Herren in unserem Herrenmode Onlineshop! Beim BADER Versandhaus für Herrenmode …",
+          "title": "Elegante Herrenbekleidung versandkostenfrei | BADER",
+          "url": "https://www.bader-direktkauf.de/herren/bekleidung",
+          "grade": 0,
+          "counted_as_unique_relevant": false
+        }
+      ],
+      "elapsed_ms": 368
+    },
+    {
+      "case_id": "en09",
+      "query": "Unicode grapheme cluster code point difference",
+      "unique_relevant": 8,
+      "pass": true,
+      "assessment": "Различие графемы и кодовой точки раскрыто; перевод UnicodeFYI дедуплицирован, инструмент сравнения строк оценён как фон.",
+      "results": [
+        {
+          "position": 1,
+          "snippet": "25. Okt. 2021 · A single visible character on screen — called a grapheme cluster — can be made up of multiple Unicode code points, …",
+          "title": "Grapheme Clusters vs Code Points — Unicode Guides",
+          "url": "https://unicodefyi.com/guide/grapheme-clusters-vs-code-points/",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 2,
+          "snippet": "25. Okt. 2021 · Ask a user looking at the screen, and they see four letters. This disconnect is one of the most common sources of …",
+          "title": "Grapheme Clusters vs Code Points — Unicode-Anleitungen",
+          "url": "https://unicodefyi.com/de/guide/grapheme-clusters-vs-code-points/",
+          "grade": 2,
+          "counted_as_unique_relevant": false,
+          "duplicate_of_url": "https://unicodefyi.com/guide/grapheme-clusters-vs-code-points/"
+        },
+        {
+          "position": 3,
+          "snippet": "Learn the critical difference between grapheme clusters (what users see) and code points (what Unicode defines), and when to use …",
+          "title": "Grapheme Clusters vs Code Points: A Detailed Comparison",
+          "url": "https://www.dev-toolbox.tech/tools/string-length-calculator/examples/grapheme-vs-codepoint",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 4,
+          "snippet": "16. Jan. 2026 · To truly understand how text works under the hood, you need to grasp four often-confused concepts: Character, …",
+          "title": "Character vs. Code Point vs. Glyph vs. Grapheme: What's the Difference ...",
+          "url": "https://www.codegenes.net/blog/what-s-the-difference-between-a-character-a-code-point-a-glyph-and-a-grapheme/",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 5,
+          "snippet": "23. Juli 2026 · Learn what a grapheme cluster is, how it differs from code points and code units, and why emoji and combining …",
+          "title": "What Is a Grapheme Cluster? Unicode Characters Explained",
+          "url": "https://www.unicodenow.com/guides/what-is-a-grapheme-cluster/",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 6,
+          "snippet": "1. Sept. 2026 · A single key on a keyboard may correspond to a whole grapheme cluster, a part of a grapheme cluster, or a …",
+          "title": "UAX #29: Unicode Text Segmentation",
+          "url": "https://www.unicode.org/reports/tr29/",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 7,
+          "snippet": "4. Aug. 2026 · They commonly render alike and each forms one extended grapheme cluster, but the first uses one code point and …",
+          "title": "Grapheme Clusters vs Code Points & Bytes | LiveParse",
+          "url": "https://liveparse.com/guides/grapheme-clusters-vs-code-points-and-bytes/",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 8,
+          "snippet": "31. Aug. 2026 · For user-facing length, grapheme clusters may be the closer conceptual match—but databases, protocols and …",
+          "title": "Unicode Grapheme Clusters | Why One Character Can Be Many Code …",
+          "url": "https://edukatesg.com/2026/08/31/how-encoding-works-grapheme-clusters-visible-character-several-code-points/",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 9,
+          "snippet": "The four words that get used interchangeably in casual Unicode talk and shouldn't: codepoint, character, glyph, and grapheme …",
+          "title": "Codepoint, character, glyph, grapheme — four terms compared ...",
+          "url": "https://unicodecharacter.com/guides/codepoints-vs-characters",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 10,
+          "snippet": "Compare two Unicode strings exactly, by code point, grapheme cluster, case folding and NFC, NFD, NFKC or NFKD normalization in …",
+          "title": "Unicode Text Compare Online",
+          "url": "https://www.unicodenow.com/unicode-text-compare/",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        }
+      ],
+      "elapsed_ms": 697
+    },
+    {
+      "case_id": "en10",
+      "query": "DNS rebinding SSRF IPv6 protection",
+      "unique_relevant": 1,
+      "pass": false,
+      "assessment": "Только Govyn явно объединяет все три аспекта; остальные сниппеты не показывают DNS rebinding и IPv6 одновременно.",
+      "results": [
+        {
+          "position": 1,
+          "snippet": "14. März 2026 · While conducting security research, I discovered an SSRF (Server-Side Request Forgery) vulnerability in an …",
+          "title": "SSRF DNS Rebinding: Bypassing Protection with CVE-2025-69660",
+          "url": "https://aydinnyunus.github.io/2026/03/14/ssrf-dns-rebinding-vulnerability/",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 2,
+          "snippet": "17. Dez. 2025 · How DNS rebinding bypasses common SSRF protections by exploiting the gap between DNS resolution and …",
+          "title": "DNS Rebinding Attacks Against SSRF Protections | Behrad's Blog",
+          "url": "https://behradtaher.dev/DNS-Rebinding-Attacks-Against-SSRF-Protections/",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 3,
+          "snippet": "27. Mai 2026 · DNS rebinding is the technique where an attacker who controls the authoritative DNS for a domain serves two …",
+          "title": "DNS Rebinding SSRF: How TOCTOU Bypasses Host Allowlists",
+          "url": "https://techearl.com/dns-rebinding-ssrf",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 4,
+          "snippet": "23. Juni 2026 · DESCRIPTION: Langflow OSS contains a Server-Side Request Forgery (SSRF) vulnerability in the URL component …",
+          "title": "Security Bulletin: DNS Rebinding TOCTOU Bypass of SSRF Protection …",
+          "url": "https://www.ibm.com/support/pages/security-bulletin-dns-rebinding-toctou-bypass-ssrf-protection-langflow-oss-url-component",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 5,
+          "snippet": "7. Aug. 2023 · Explore the intertwining of SSRF attacks with DNS rebinding. Dive deep into advanced bypass techniques against …",
+          "title": "SSRF with DNS Rebinding | Clear Gate",
+          "url": "https://www.clear-gate.com/blog/ssrf-with-dns-rebinding-2/",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 6,
+          "snippet": "22. März 2026 · Deep dive into IPv6 SSRF protection, DNS rebinding defense, header injection prevention, and ReDoS mitigation for …",
+          "title": "AI Proxy SSRF Protection, DNS Rebinding & Injection Defense",
+          "url": "https://govynai.com/blog/ssrf-injection-defense-ai-proxy/",
+          "grade": 2,
+          "counted_as_unique_relevant": true
+        },
+        {
+          "position": 7,
+          "snippet": "SSRF (Server-Side Request Forgery) protection for Python — asyncio-native, zero external dependencies. Port of the TypeScript …",
+          "title": "GitHub - Nacho-Labs-LLC/nachos-ssrf: SSRF protection with DNS rebinding ...",
+          "url": "https://github.com/Nacho-Labs-LLC/nachos-ssrf/tree/main",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 8,
+          "snippet": "SSRF (Server-Side Request Forgery) protection for Python — URL validation, private/internal IP blocking (IPv4 + IPv6), cloud …",
+          "title": "GitHub - m2xdev/ssrf-shield: Python library for robust SSRF (Server ...",
+          "url": "https://github.com/m2xdev/ssrf-shield",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 9,
+          "snippet": "22. Sept. 2025 · Deep dive into advanced SSRF exploitation — bypassing URL filters with IPv6 and hex encoding, accessing …",
+          "title": "Advanced SSRF Techniques: Bypassing Filters and Pivoting to Internal ...",
+          "url": "https://payloadplayground.com/blog/server-side-request-forgery-advanced",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        },
+        {
+          "position": 10,
+          "snippet": "24. Juli 2026 · This post walks through a real, production SSRF-safe URL fetcher: structural validation, resolved-IP checking, DNS …",
+          "title": "SSRF Prevention: DNS Rebinding, Pinning & Redirect Checks",
+          "url": "https://moayyadfaris.com/blog/ssrf-safe-url-fetcher-dns-pinning",
+          "grade": 1,
+          "counted_as_unique_relevant": false
+        }
+      ],
+      "elapsed_ms": 451
+    }
+  ],
+  "summary": {
+    "cases": 20,
+    "passed": 9,
+    "failed": 11,
+    "ru_passed": 4,
+    "en_passed": 5,
+    "links_scored": 197,
+    "grade_counts": {
+      "1": 56,
+      "0": 68,
+      "2": 73
+    },
+    "required_cases": 16,
+    "source_pair_qualified": false
+  }
+}

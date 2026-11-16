@@ -1,0 +1,2279 @@
+{
+  "protocol": {
+    "author": "one separate source annotator, blinded to model outputs/branch labels; not independent acceptance",
+    "freeze": "source gold fixed after acquisition and before prediction inspection; no source grades based on branch output",
+    "scope": "known relevant retrieved sources, not universal web recall; null unjudged and unknown direct separately reported",
+    "source_gold": "retained original HTML/raw acquisition and preselected source-only audits; never branch-extracted text",
+    "criteria": "grade2 concrete requested relationship with material conditions;grade1 partial/unresolved/wrong factual condition only with concrete counter-evidence;grade0 unrelated;unobserved/challenge/incomplete source unknown",
+    "proposals": "status/genre/date alone is not negative; conjecture is not shipped behavior; concrete current explanations in an issue remain assessable",
+    "offsets": "UTF-8 bytes in whitespace-normalized source_text(original HTML); visible text plus uniquely declared typed code-view JSON rawLines; other scripts/styles excluded",
+    "isolation": "annotator did not read new branch results, model calls, labels or logs; source-only audits not injected into model input"
+  },
+  "cases": [
+    {
+      "id": "p01",
+      "query": "Python pathlib Path resolve strict False symlinks missing path absolute difference",
+      "criteria": "resolve(strict=False) makes an absolute path, resolves symlinks and handles a missing remainder without error; distinguishes absolute().",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://www.cmi.ac.in/~madhavan/courses/prog2-2015/docs/python-3.4.2-docs-html/genindex-all.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://discuss.python.org/t/request-for-review-pathlib-pathbase/32420",
+          "grade": 1,
+          "basis": "proposed _PathBase.resolve implementation uses absolute/readlink, but no concrete complete strict=False missing-path and absolute comparison",
+          "support": [],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/8610a27f8cc0fe07f4f10b36cdd7276989ca65abf4b19af8ff191d02f6bf277d.json",
+          "field": "raw_html_text",
+          "html_hash": "5cb3a50cf039ea4c768762957711d3fc3d2f78ca136c488ba607cc618ee8855a",
+          "normalized_text_hash": "59d6f477815f6f343bdf1a85e6e6f95580061dd1ce575d5a2eb208d7b5db2e41",
+          "source_chars": 3381,
+          "final_url": "https://discuss.python.org/t/request-for-review-pathlib-pathbase/32420"
+        },
+        {
+          "id": "C003",
+          "url": "https://docs.pytest.org/en/7.1.x/_modules/_pytest/main.html",
+          "grade": 1,
+          "basis": "source code uses absolute for ancestor checks then resolve for symlink checks; no strict=False missing-remainder semantics",
+          "support": [],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/58bde5acf59aa532e97dd08f62b191ceb873e049df5553a2305782d673d8b2ee.json",
+          "field": "raw_html_text",
+          "html_hash": "09ea6d913499c2c83c1d5660a71af2609876d1f5733a915b2710becaff922a8d",
+          "normalized_text_hash": "25e4521c725009dff0d116ac34388e59ed887091379f645ef3c6440cbf8596b2",
+          "source_chars": 27635,
+          "final_url": "https://docs.pytest.org/en/7.1.x/_modules/_pytest/main.html"
+        },
+        {
+          "id": "C004",
+          "url": "https://docs.python.org/3/library/pathlib.html",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "Path. absolute ( ) ¶ Make the path absolute, without normalization or resolving symlinks.",
+              "start": 26156,
+              "end": 26246
+            },
+            {
+              "quote": "Path. resolve ( strict = False ) ¶ Make the path absolute, resolving any symlinks.",
+              "start": 26385,
+              "end": 26468
+            },
+            {
+              "quote": "If strict is False , the path is resolved as far as possible and any remainder is appended without checking whether it exists.",
+              "start": 26868,
+              "end": 26994
+            }
+          ],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/e66b1645818199a80234be2a027d722ed3cf6590c57dbe6bd98141abe1e64247.json",
+          "field": "raw_html_text",
+          "html_hash": "97b0203bc06ea9cc3807b7b42a93d8be8c403fd77c6735fbfd538346f7940328",
+          "normalized_text_hash": "4cdfaa7fcde4010f692c2a5432b882c7a3bc4de87f4b57030cf4e600306833b3",
+          "source_chars": 60831,
+          "final_url": "https://docs.python.org/3/library/pathlib.html"
+        },
+        {
+          "id": "C005",
+          "url": "https://docs.python.org/3/library/sys.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://github.com/DK26/strict-path-rs",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://github.com/python/cpython/issues/82974",
+          "grade": 1,
+          "basis": "concrete missing-path examples and a current resolve code comment, but no complete resolve versus absolute comparison; historic bug report does not establish a current bug",
+          "support": [],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/fb3c645be61e6c9828da9db5667ffe9b068bd242a0ef1fa34efe3a1cf557d8dc.json",
+          "field": "raw_html_text",
+          "html_hash": "db7ea2ed3ac79827fc8c067c1d89a0b1d686d61fde54128c79e6969345021ebe",
+          "normalized_text_hash": "ff7a4f6e8eee365ebc3b7db4f11b40168460cff3580d956f1b28cb1a460635b8",
+          "source_chars": 6529,
+          "final_url": "https://github.com/python/cpython/issues/82974"
+        },
+        {
+          "id": "C008",
+          "url": "https://github.com/rust-cli/team/issues/10",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://github.com/seznam/confusion-hunter/blob/main/docs/python-api.md",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://gto76.github.io/python-cheatsheet/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://www.klayout.de/development.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://www.nuget.org/packages/Lokad.Lython",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://platform.claude.com/cookbook/claude-agent-sdk-scheduled-repository-reviewer-scheduled-repository-reviewer",
+          "grade": 0,
+          "basis": "retrieval card explicitly describes a scheduled repository reviewer, not pathlib path resolution",
+          "support": [],
+          "basis_field": "retrieval_card"
+        },
+        {
+          "id": "C014",
+          "url": "https://pymotw.com/3/pathlib/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://pypi.org/project/jinest/",
+          "grade": 0,
+          "basis": "retrieval card explicitly describes Jinja expression resolution, not filesystem Path.resolve",
+          "support": [],
+          "basis_field": "retrieval_card"
+        },
+        {
+          "id": "C016",
+          "url": "https://python.flowdas.com/genindex-all.html",
+          "grade": 0,
+          "basis": "inspected body is symbol-name index entries including pathlib absolute and resolve, with no path resolution behavior or strict=False condition",
+          "support": [],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/58066cc7a50c220df54a90fa5a45fd0c5c5b620e36745ead114149c7c45dfe6f.json",
+          "field": "raw_html_text",
+          "html_hash": "a73a3937fbea71b34318c878a3926a083c97e2f78d0d347d6c83eb4d9811e163",
+          "normalized_text_hash": "d44c4fcc0977023e038fd652d309ef8f9afd3ed88a5340a037736a70eddcdc3a",
+          "source_chars": 486122,
+          "final_url": "https://python.flowdas.com/genindex-all.html",
+          "basis_field": "raw_html_text"
+        },
+        {
+          "id": "C017",
+          "url": "https://realpython.com/ref/stdlib/sysconfig/",
+          "grade": 0,
+          "basis": "retrieval card explicitly describes sysconfig build and installation configuration, not pathlib path resolution",
+          "support": [],
+          "basis_field": "retrieval_card"
+        },
+        {
+          "id": "C018",
+          "url": "https://rednafi.com/python/pathlib/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://www.tensorflow.org/api_docs/python/tf/compat/path_to_str",
+          "grade": 0,
+          "basis": "retrieval card explicitly describes TensorFlow path_to_str conversion, not pathlib resolve versus absolute",
+          "support": [],
+          "basis_field": "retrieval_card"
+        },
+        {
+          "id": "C020",
+          "url": "https://testfixtures.readthedocs.io/en/latest/api.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "p02",
+      "query": "git reset --soft --mixed --hard index working tree changes",
+      "criteria": "soft, mixed and hard distinguish effects on HEAD, index and working tree.",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://www.analyticsvidhya.com/blog/2024/06/git-reset-vs-revert/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://www.atlassian.com/git/tutorials/learn-undoing-changes-with-bitbucket",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://www.atlassian.com/git/tutorials/undoing-changes/git-reset",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "When the --soft argument is passed, the ref pointers are updated and the reset stops there. The Staging Index and the Working Directory are left untouched.",
+              "start": 27616,
+              "end": 27771
+            },
+            {
+              "quote": "'--mixed This is the default operating mode. The ref pointers are updated. The Staging Index is reset to the state of the specified commit. Any changes that have been undone from the Staging Index are moved to the Working Directory.",
+              "start": 25284,
+              "end": 25516
+            },
+            {
+              "quote": "When passed --hard The Commit History ref pointers are updated to the specified commit. Then, the Staging Index and Working Directory are reset to match that of the specified commit.",
+              "start": 22233,
+              "end": 22415
+            }
+          ],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/60f40af90cee11c742f89ad29861b07a10d8b8e8da627d22af7caf4d8a5b6ac9.json",
+          "field": "raw_html_text",
+          "html_hash": "8ecc9e7d7eac0fbbe5b582f8f59af7020fedda3dd32af1f626991b90fdbb17c1",
+          "normalized_text_hash": "682b7af46fa0d9d574d4872a000cce506ed627079c4b60381fb995c335be4782",
+          "source_chars": 39881,
+          "final_url": "https://www.atlassian.com/git/tutorials/undoing-changes/git-reset"
+        },
+        {
+          "id": "C004",
+          "url": "https://coddy.tech/git-commands/git-reset",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "git reset moves HEAD back to an earlier commit;",
+              "start": 7620,
+              "end": 7667
+            },
+            {
+              "quote": "Mode Moves branch Resets staging Resets working tree --soft Yes No No --mixed (default) Yes Yes No --hard Yes Yes Yes",
+              "start": 7759,
+              "end": 7876
+            }
+          ],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/79859735345f9d293e4798d64668c94cb0fc6d802c277a1e5f58ce35d0628945.json",
+          "field": "raw_html_text",
+          "html_hash": "bc2021ccc2188ea0ac2bef8658b7c763346fae13adde6a77faf8a4a03302ee67",
+          "normalized_text_hash": "de4d7f6eca3508a1c981cf3995b1c0c551b329bfa12aedee76d02140cb4ec820",
+          "source_chars": 13679,
+          "final_url": "https://coddy.tech/git-commands/git-reset"
+        },
+        {
+          "id": "C005",
+          "url": "https://daleseo.com/git-reset/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://git-scm.com/docs/git-reset",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "git reset [ <mode> ] <commit> changes which commit HEAD points to.",
+              "start": 2864,
+              "end": 2930
+            },
+            {
+              "quote": "--mixed Leave your working directory unchanged. Update the index to match the new HEAD , so nothing will be staged.",
+              "start": 3508,
+              "end": 3623
+            },
+            {
+              "quote": "--soft Leave your working tree files and the index unchanged.",
+              "start": 3699,
+              "end": 3760
+            },
+            {
+              "quote": "--hard Overwrite all files and directories with the version from <commit> , and may overwrite untracked files. Tracked files not in <commit> are removed so that the working tree matches <commit> . Update the index to match the new HEAD , so nothing will be staged.",
+              "start": 4012,
+              "end": 4276
+            }
+          ],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/fdf3b0468d27943cf18e5acf76ac587bc27a38cd7c217fe6ca90a963cc9d7224.json",
+          "field": "raw_html_text",
+          "html_hash": "0c4fdc00dfbb1f67fc9ac663f2b532dc6a6108a661a481d7139c07505a6ad718",
+          "normalized_text_hash": "97e3098cb1f3570c304584e98f09344fe47572bf01277d9d81293ef52cb1174f",
+          "source_chars": 19463,
+          "final_url": "https://git-scm.com/docs/git-reset"
+        },
+        {
+          "id": "C007",
+          "url": "https://gitkraken.com/learn/git/git-reset",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://www.golinuxcloud.com/git-reset-examples/",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "Mode Branch ( HEAD ) Staging area (index) Working tree (files on disk) --soft moves to target commit unchanged unchanged --mixed moves to target commit reset to match target unchanged --hard moves to target commit reset to match target reset to match target",
+              "start": 6352,
+              "end": 6609
+            }
+          ],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/5a2d494121128c1b142abf0c77a5a60e266b087a2fb9393fa93c84103d2d4020.json",
+          "field": "raw_html_text",
+          "html_hash": "dbae608789078392ec789bd6fa6a76c0d5d00d9670c38f43f1a12949602acd4f",
+          "normalized_text_hash": "1a5fca77dee1327355c12f714a7f78322a1125eaad203e1151dbb778d5a67601",
+          "source_chars": 19638,
+          "final_url": "https://www.golinuxcloud.com/git-reset-examples/"
+        },
+        {
+          "id": "C009",
+          "url": "https://heydevjob.com/projects/git-reset-soft",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://initialcommit.com/blog/git-reset",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://www.kernel.org/pub/software/scm/git/docs/git-reset.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://linux.die.net/man/1/git-reset",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://www.positioniseverything.net/git-reset-hard/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://www.scribd.com/document/857074766/GIT-NOTES",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://sosiristseng.github.io/docs/dev/git/git-reset/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://velog.io/@dondonee/Git-%EB%A7%88%EC%A7%80%EB%A7%89-%EC%BB%A4%EB%B0%8B-%EC%9D%B4%ED%9B%84-%EB%B3%80%EA%B2%BD%EC%82%AC%ED%95%AD-%ED%8F%90%EA%B8%B0%ED%95%98%EA%B8%B0",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://www.w3docs.com/learn-git/git-reset.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "p03",
+      "query": "Rust Iterator size_hint ExactSizeIterator lower upper bounds guarantees",
+      "criteria": "size_hint lower and optional upper bounds, ExactSizeIterator exact remaining length, and the relevant reliability qualifications.",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://avro.apache.org/docs/++version++/api/rust/rand/seq/trait.IteratorRandom.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://blog.yoshuawuyts.com/a-survey-of-every-iterator-variant/",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "/// Returns the bounds on the remaining length of the iterator. fn size_hint ( & self ) -> ( usize , Option < usize >) { .. }",
+              "start": 4577,
+              "end": 4702
+            },
+            {
+              "quote": "A buggy iterator may yield less than the lower bound or more than the upper bound of elements.",
+              "start": 5423,
+              "end": 5517
+            },
+            {
+              "quote": "pub trait ExactSizeIterator : Iterator { /// Returns the exact remaining length of the iterator. fn len ( & self ) -> usize { .. }",
+              "start": 6206,
+              "end": 6336
+            },
+            {
+              "quote": "ExactSizeIterator has the same memory-safety guarantees as Iterator::size_hint meaning: you can't rely on it to be correct.",
+              "start": 6578,
+              "end": 6701
+            }
+          ],
+          "snapshot": "runs/passage-coverage-2026-10-30/gold-audit/p03-C002.html",
+          "field": "raw_html_text",
+          "html_hash": "98671ffa797240fe13880c6d9f764dd591e0eca1c13fb20585742b1a34b6134e",
+          "normalized_text_hash": "1ae0ce5a3fc65a283ef8c056069c2c2a8b1cc68bac83860ff80e13331d1e724b",
+          "source_chars": 53444,
+          "final_url": "https://blog.yoshuawuyts.com/a-survey-of-every-iterator-variant/"
+        },
+        {
+          "id": "C003",
+          "url": "https://crates.io/crates/bounded-vec",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://doc.rust-lang.org/nightly/core/iter/trait.ExactSizeIterator.html",
+          "grade": 1,
+          "basis": "concrete exact-length size_hint obligation and safe-trait caveat, but no description of the lower and optional upper tuple bounds",
+          "support": [],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/1afab3c1d6fb48e6433813fe8b1becfc2c3026ca11aaac8c6df30dd46ba90dd5.json",
+          "field": "raw_html_text",
+          "html_hash": "5a0b7651c8463b2c059589288ffa235413022ec389b0d3c8202a9dc92851f995",
+          "normalized_text_hash": "4535b8e3cee18ee19d6acad19addebb598a60d3e8c4c2814cf654c2b929fd798",
+          "source_chars": 9514,
+          "final_url": "https://doc.rust-lang.org/nightly/core/iter/trait.ExactSizeIterator.html"
+        },
+        {
+          "id": "C005",
+          "url": "https://doc.rust-lang.org/nightly/src/core/slice/iter.rs.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://doc.rust-lang.org/std/iter/trait.Iterator.html",
+          "grade": 1,
+          "basis": "complete size_hint bounds and reliability explanation, but ExactSizeIterator only appears in rposition signatures, not an exact-length explanation",
+          "support": [],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/27ab79c9ca045a117ef03f322fb1e332e133dd996ccdfc2ade71997640ba9b5f.json",
+          "field": "raw_html_text",
+          "html_hash": "9a660f8ff1ae4d88955cd8ea4e7f2683e8850929565e58e0e1554054db300bfb",
+          "normalized_text_hash": "1dd77e7247885864a1476a408d7b123c9a71df4f28bdc9b928857be5b81f5162",
+          "source_chars": 126170,
+          "final_url": "https://doc.rust-lang.org/std/iter/trait.Iterator.html"
+        },
+        {
+          "id": "C007",
+          "url": "https://doc.rust-lang.org/std/iter/trait.TrustedLen.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://docs.rs/arbitrary/latest/arbitrary/trait.Arbitrary.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://docs.rs/bittle/latest/bittle/trait.Bits.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://en.wikipedia.org/wiki/Comparison_of_programming_languages_(string_functions)",
+          "grade": 0,
+          "basis": "retrieval card explicitly compares string functions across languages, not iterator size bounds",
+          "support": [],
+          "basis_field": "retrieval_card"
+        },
+        {
+          "id": "C011",
+          "url": "https://gist.github.com/bstaletic/1dd345c5df5ed3f6118d20cb51c84b61",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://github.com/rust-lang/rust/issues/68995",
+          "grade": 1,
+          "basis": "concrete size_hint limitations and a proposal for new size wrappers; does not completely establish the existing traits bounds and guarantee relationship",
+          "support": [],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/c839a0cd75f824f17ad465a5f6d8559f28748159f5d8b878b60a6da3a936fd3b.json",
+          "field": "raw_html_text",
+          "html_hash": "079c71e5a60e8aacf0ab9a38cd45525a31948da90e58622c8c349ca80686ff02",
+          "normalized_text_hash": "854066f94bda27fbaa96099002edb0c1e20a166dcfd5c5d37acccb479c0964be",
+          "source_chars": 9638,
+          "final_url": "https://github.com/rust-lang/rust/issues/68995"
+        },
+        {
+          "id": "C013",
+          "url": "https://github.com/rustomax/rust-iterators",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://github.com/rustsec/rustsec",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://gstreamer.freedesktop.org/documentation/rust/git/docs/gstreamer/bus/struct.Iter.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://mozilla.github.io/uniffi-rs/0.27/internals/api/uniffi/deps/static_assertions/_core/iter/trait.Iterator.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://rust-lang.github.io/rfcs/3513-gen-blocks.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://rust-lang.github.io/rfcs/3550-new-range.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://rustsec.org/advisories/RUSTSEC-2021-0048.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C020",
+          "url": "https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/std/iter/trait.Iterator.html",
+          "grade": 1,
+          "basis": "size_hint bounds and reliability explanation, but ExactSizeIterator only appears in rposition signatures; versioned historical mirror is not proof of current API changes",
+          "support": [],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/6af8de0fa342e5b966a06178605237384d77bb3b785bd178bdc82780475ebeaa.json",
+          "field": "raw_html_text",
+          "html_hash": "bfd8e49c53a43d2ab7bc248e32b51daf8c8a5e0a9ce7b4347ca41bf051601981",
+          "normalized_text_hash": "f5d124ad0e53ff613b4df2c1887e9eb20094f10c4a6c21737bea9e5792312580",
+          "source_chars": 88603,
+          "final_url": "https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/std/iter/trait.Iterator.html"
+        }
+      ]
+    },
+    {
+      "id": "p04",
+      "query": "PostgreSQL row level security table owner FORCE ROW LEVEL SECURITY bypass",
+      "criteria": "table owner bypasses row security by default and FORCE ROW LEVEL SECURITY subjects the owner to it.",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://appwrite.io/docs/products/databases/postgresql/concepts/access-control",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://armordb.org/blog/postgresql-row-level-security-saas",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://www.c-sharpcorner.com/article/mysql-vs-postgresql-a-developer-and-architect-guide",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://daily.dev/posts/postgresql-row-level-security-for-saas-what-we-measured-wxhmymmnr",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://datamcp.app/blog/postgresql-row-level-security-ai-agents",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://docs.cloud.google.com/bigquery/docs/column-level-security",
+          "grade": 0,
+          "basis": "retrieval card explicitly describes BigQuery column-level access control, not PostgreSQL owner row-security behavior",
+          "support": [],
+          "basis_field": "retrieval_card"
+        },
+        {
+          "id": "C007",
+          "url": "https://docs.cloud.google.com/spanner/docs/reference/postgresql/data-definition-language",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://www.enterprisedb.com/blog/how-to-secure-postgresql-security-hardening-best-practices-checklist-tips-encryption-authentication-vulnerabilities",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://github.com/JonathanFrias/super_auth",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://github.com/sqlalchemy/sqlalchemy/issues/13517",
+          "grade": 1,
+          "basis": "describes table owner bypass and FORCE/NO FORCE mapping in a proposed SQLAlchemy API; does not state PostgreSQL owner bypass default",
+          "support": [],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/b107a081e50d2535633290ecd69ef8be4dbd197b24bc3955bf7ed95e9da4dedb.json",
+          "field": "raw_html_text",
+          "html_hash": "9703f34081e971efb94c03901d881f06e369750f5ab6723646858c46db88e1e9",
+          "normalized_text_hash": "adce354f3c78c040bcff9c8032bc4630d0fd3b0a1e29cd48de626c0f669bb7fd",
+          "source_chars": 47223,
+          "final_url": "https://github.com/sqlalchemy/sqlalchemy/issues/13517"
+        },
+        {
+          "id": "C011",
+          "url": "https://learn.microsoft.com/cs-cz/sql/relational-databases/security/row-level-security?view=sql-server-ver17",
+          "grade": 0,
+          "basis": "retrieval card explicitly describes SQL Server row-level security, not PostgreSQL owner FORCE behavior",
+          "support": [],
+          "basis_field": "retrieval_card"
+        },
+        {
+          "id": "C012",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "retrieval card explicitly identifies a partner-navigation shortcut, unrelated to the requested technical relationship",
+          "support": [],
+          "basis_field": "retrieval_card"
+        },
+        {
+          "id": "C013",
+          "url": "https://neon.com/postgresql/administration/row-level-security",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://now-next.nl/en/insights/row-level-security-postgresql-tenant-isolation/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://www.postgresql.org/docs/current/ddl-rowsecurity.html",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "Table owners normally bypass row security as well, though a table owner can choose to be subject to row security with ALTER TABLE ... FORCE ROW LEVEL SECURITY .",
+              "start": 2725,
+              "end": 2885
+            }
+          ],
+          "snapshot": "runs/passage-coverage-2026-10-30/gold-audit/p04-C015.html",
+          "field": "raw_html_text",
+          "html_hash": "645472df870717eb85d99640154ce1f4a415fd690094fe7786e04bcd465418c3",
+          "normalized_text_hash": "191b2e68ab481f1ab6374e6cd8fffb9f1134a133b1202b654af038940774ac50",
+          "source_chars": 16084,
+          "final_url": "https://www.postgresql.org/docs/current/ddl-rowsecurity.html"
+        },
+        {
+          "id": "C016",
+          "url": "https://www.red-gate.com/simple-talk/featured/postgresql-basics-object-ownership-and-default-privileges/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://satoricyber.com/postgres-security/3-pillars-of-postgresql-security/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://supabase.com/docs/guides/database/postgres/row-level-security",
+          "grade": 1,
+          "basis": "describes Supabase bypassrls and a FORCE recursion caveat, but does not explain the PostgreSQL table-owner default and FORCE exception",
+          "support": [],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/46cff25903238019d6d10e6b97b32b466f6bea18c9cbd9e3554b7ef1509d36d7.json",
+          "field": "raw_html_text",
+          "html_hash": "29a0d3c4ff4f3efd0c6caa4e9618fe0646b053650bbf1700db06d062f04b57fe",
+          "normalized_text_hash": "8dcb501d32bce181c8eda6d16341717b6daaf1dd61cbb958c760a5211c416689",
+          "source_chars": 31647,
+          "final_url": "https://supabase.com/docs/guides/database/postgres/row-level-security"
+        },
+        {
+          "id": "C019",
+          "url": "https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-greenplum/7/greenplum-database/admin_guide-row_security.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "p05",
+      "query": "SQLite UPSERT DO UPDATE excluded ABORT statement rollback",
+      "criteria": "excluded is attempted insert values; DO UPDATE uses ABORT and rolls back the entire INSERT statement, not necessarily the transaction.",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://antonz.org/sql-upsert/",
+          "grade": 1,
+          "basis": "explains excluded new values and generic INSERT OR ABORT statement rollback, but does not state DO UPDATE always uses ABORT",
+          "support": [],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/348f494041895651a7899ab7a4c7d841f0d398ec84d775c43b27000a0f46b9f6.json",
+          "field": "raw_html_text",
+          "html_hash": "cc7ce387a41b97059789c91d0a524b21a82d79861fe4a76102652dda8f6d17c2",
+          "normalized_text_hash": "140847535c10f1b8ffac7b67ec20d8e85e3a6d9afb22759f66bf8519f763511e",
+          "source_chars": 15886,
+          "final_url": "https://antonz.org/sql-upsert/"
+        },
+        {
+          "id": "C002",
+          "url": "https://bloomberg.github.io/comdb2/sql.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://cgsql.dev/program-diagram/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://github.com/ehsanmok/sqlite",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://github.com/tursodatabase/turso/issues/6859",
+          "grade": 1,
+          "basis": "concrete SQLite DO UPDATE ABORT failure and excluded usage in a Turso defect report, but excluded value meaning and whole-statement rollback are not completely explained",
+          "support": [],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/ef8d4f0c1f3a81d21735e242170c0381e97ba3a0631346cd5bcdf9c43569abaa.json",
+          "field": "raw_html_text",
+          "html_hash": "e845447f666db7c83847d847f36eb25c90c289317d43bf634c5388dd77c62eed",
+          "normalized_text_hash": "b900857542ffb4972193068c76291df9d45bb941cee139586feaa8e40b35556a",
+          "source_chars": 6216,
+          "final_url": "https://github.com/tursodatabase/turso/issues/6859"
+        },
+        {
+          "id": "C006",
+          "url": "https://goodspace.ai/interview-questions/sqlite",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://knexjs.org/guide/query-builder",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://learn.microsoft.com/cs-cz/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-ver17",
+          "grade": 0,
+          "basis": "retrieval card explicitly describes SQL Server ALTER DATABASE compatibility levels, not SQLite UPSERT",
+          "support": [],
+          "basis_field": "retrieval_card"
+        },
+        {
+          "id": "C009",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "retrieval card explicitly identifies a partner-navigation shortcut, unrelated to the requested technical relationship",
+          "support": [],
+          "basis_field": "retrieval_card"
+        },
+        {
+          "id": "C010",
+          "url": "https://qastack.kr/programming/418898/sqlite-upsert-not-insert-or-replace",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://www.sqlite.org/c3ref/c_abort_rollback.html",
+          "grade": 0,
+          "basis": "inspected body enumerates SQLite extended result-code constants and API return codes; no UPSERT or excluded conflict-update semantics",
+          "support": [],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/e5b0366e2cffb35e42a82a570a4556254ee369586ff51c5a9da4b47e416d1369.json",
+          "field": "raw_html_text",
+          "html_hash": "d5d2718f02d527e7d78ce4a1b5eb2ee422a944cf78ffd5866a0be5f26555208e",
+          "normalized_text_hash": "e06a9b8991ee079cd72f42c9f2b7275d373d41958d117e160938eecf7b876549",
+          "source_chars": 5645,
+          "final_url": "https://www.sqlite.org/c3ref/c_abort_rollback.html",
+          "basis_field": "raw_html_text"
+        },
+        {
+          "id": "C012",
+          "url": "https://www.sqlite.org/changes.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://www.sqlite.org/lang_returning.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://www.sqlite.org/lang_select.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://www.sqlite.org/lang_upsert.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://www.sqlite.org/rescode.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://www.sqlitetutorial.net/sqlite-upsert/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://system.data.sqlite.org/home/timeline?n=9999&y=ci&v=0",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "p06",
+      "query": "Docker bind mount readonly recursive submounts Linux kernel 5.12",
+      "criteria": "read-only bind mount submount behavior and recursive read-only Linux kernel 5.12 condition.",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://blog.naver.com/damultao/224375616659",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": [],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/38a1543ae5f9d024caabbf94c6f2f0fa8d27a6a42874a4eb80c3f90fdcac61b9.json",
+          "field": "raw_html_text",
+          "html_hash": "185f5452842b71e3a317ce31b8871a1a3354e05dfce92517027b74be3c4a20ef",
+          "normalized_text_hash": "1b2dbd6ee41165fd2edec2ce722362b5d9fdd92e502d84d895b682e16a114686",
+          "source_chars": 26,
+          "final_url": "https://blog.naver.com/damultao/224375616659",
+          "scope_warning": "retained HTML exposes only a 26-character blog wrapper; article content unobserved"
+        },
+        {
+          "id": "C002",
+          "url": "https://blog.naver.com/linuxx9488/223992153272",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://blog.naver.com/networkkim_/223992404404",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://blog.naver.com/wwwsecurity/223992137438",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://docs.docker.com/engine/storage/bind-mounts/",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "When you bind mount a path that itself contains mounts, those submounts are also included in the bind mount by default.",
+              "start": 26216,
+              "end": 26335
+            },
+            {
+              "quote": "If the bind mount is read-only, the Docker Engine makes a best-effort attempt at making the submounts read-only as well. This is referred to as recursive read-only mounts.",
+              "start": 26492,
+              "end": 26663
+            },
+            {
+              "quote": "Recursive read-only mounts require Linux kernel version 5.12 or later.",
+              "start": 26664,
+              "end": 26734
+            },
+            {
+              "quote": "If you're running an older kernel version, submounts are automatically mounted as read-write by default.",
+              "start": 26735,
+              "end": 26839
+            },
+            {
+              "quote": "Attempting to set submounts to be read-only on a kernel version earlier than 5.12, using the bind-recursive=readonly option, results in an error.",
+              "start": 26840,
+              "end": 26985
+            }
+          ],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/3db617b7717cd5efca5f7da126628939ced4dd0ab000b1bc7d5d98cba46e9949.json",
+          "field": "raw_html_text",
+          "html_hash": "5039397d4da0244c743ae8d0719beffcdf72f8ee0e6d0ba12ab323ed1a2ca1da",
+          "normalized_text_hash": "70f46ea7f2a56a454f0ecf57ad61b71ac02f8a7c26e3fdf1c38be03e132f44c6",
+          "source_chars": 32152,
+          "final_url": "https://docs.docker.com/engine/storage/bind-mounts/"
+        },
+        {
+          "id": "C006",
+          "url": "https://docs.docker.com/engine/storage/volumes",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://docs.docker.com/reference/cli/docker/service/create",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://github.com/containerd/nerdctl",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://github.com/docker-archive/docker-ce/releases",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://github.com/moby/moby/issues/44978",
+          "grade": 1,
+          "basis": "proposes Docker rro flag and describes existing runc recursive behavior; does not establish current Docker bind-recursive behavior",
+          "support": [],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/526fd61f842d4f9f9b7987f9e131e244ecbbd08e09f3db2e9fa47da9b00829f3.json",
+          "field": "raw_html_text",
+          "html_hash": "bc283d237d770fe5eb57708d5c2f5cb4aac03c55dfd2a4b8a07133bfab955364",
+          "normalized_text_hash": "92d9f6445332512c52ad347e6917a074f66e80034cd1079b13e3a6ee250411d6",
+          "source_chars": 5136,
+          "final_url": "https://github.com/moby/moby/issues/44978"
+        },
+        {
+          "id": "C011",
+          "url": "https://kubernetes.io/blog/2024/04/23/recursive-read-only-mounts/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://kubernetes.io/docs/concepts/storage/volumes/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://kubernetes.io/docs/reference/node/kernel-version-requirements/",
+          "grade": 1,
+          "basis": "explains recursive readonly mount_setattr and Linux 5.12 kernel dependency in Kubernetes, but no Docker bind mount versus submount behavior",
+          "support": [],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/a574321251fb21304c15645b16cadf8c22102439337f84b052042905c0be2098.json",
+          "field": "raw_html_text",
+          "html_hash": "908144f1eb84ab1827f972fcf6bdf9aaf1f02010dc90b5eee452200e7ef11f9c",
+          "normalized_text_hash": "2b5888bcc61de63339b3dacf44438ec693aa8a474b0b2902d85109d1c061f1e7",
+          "source_chars": 29693,
+          "final_url": "https://kubernetes.io/docs/reference/node/kernel-version-requirements/"
+        },
+        {
+          "id": "C014",
+          "url": "https://lechuck.blog/posts/docker",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "retrieval card explicitly identifies a partner-navigation shortcut, unrelated to the requested technical relationship",
+          "support": [],
+          "basis_field": "retrieval_card"
+        },
+        {
+          "id": "C016",
+          "url": "https://monovm.com/blog/how-to-troubleshoot-linux-vps/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://unix.stackexchange.com/questions/198590/what-is-a-bind-mount",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://velog.io/@alsry922/%EB%B3%BC%EB%A5%A8%EA%B3%BC-%EB%B0%94%EC%9D%B8%EB%93%9C-%EB%A7%88%EC%9A%B4%ED%8A%B8%EC%9D%98-%EC%B0%A8%EC%9D%B4",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://yutils.jdgrid.com/ko/guides/docker-compose-explained",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "p07",
+      "query": "CSS position sticky nearest scrolling ancestor overflow hidden auto",
+      "criteria": "sticky attaches to the nearest ancestor with a scrolling mechanism such as hidden or auto, even if that ancestor does not actually scroll.",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://caniuse.com/css-sticky",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "sticks to its nearest ancestor that has a scrolling mechanism (created when overflow is hidden, scroll, auto, or overlay), even if that ancestor isn't the nearest actually scrolling ancestor",
+              "start": 2013,
+              "end": 2203
+            }
+          ],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/d56841ec618d3088d3a203b95551e8f12edc1846279cc471c8b3e8b2fc2dd468.json",
+          "field": "raw_html_text",
+          "html_hash": "b131aa2126934e0bb33f8e71b052756de61aca00ec5ccb92e2b8435ca52ad3aa",
+          "normalized_text_hash": "2a8c45c41f66b45f9148587ae03d0cb9817e24fcd0bb44819a0191b156d19518",
+          "source_chars": 2899,
+          "final_url": "https://caniuse.com/css-sticky"
+        },
+        {
+          "id": "C002",
+          "url": "https://codingeverybody.kr/css-overflow-y-%EC%86%8D%EC%84%B1/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://deeplify.dev/front-end/markup/position-sticky",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/position",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "Note that a sticky element \"sticks\" to its nearest ancestor that has a \"scrolling mechanism\" (created when overflow is hidden , scroll , auto , or overlay ), even if that ancestor isn't the nearest actually scrolling ancestor.",
+              "start": 6594,
+              "end": 6820
+            }
+          ],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/266760f8f9b207c0d11a93cd7f50bb883591951ad37e2c277d32594a5e85289d.json",
+          "field": "raw_html_text",
+          "html_hash": "79e0f0a8b1cae6e37c2da274a94ca7babd3b05d9eed8e8b66592949e7189bfba",
+          "normalized_text_hash": "f11277a626046db1a4f72ba3e2910986296e063a049f07c365050d4f4c77709d",
+          "source_chars": 41445,
+          "final_url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/position"
+        },
+        {
+          "id": "C005",
+          "url": "https://en.wikipedia.org/wiki/CSS",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://github.com/w3c/csswg-drafts/blob/main/css-anchor-position-1/Overview.bs",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://github.com/w3c/csswg-drafts/issues/3083",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "Scrolling the viewport on http://output.jsbin.com/yaxovep in any of Chrome, Firefox, or Safari shows that the sticky element is sticking to the overflow:hidden ancestor for both scrollers, even in the left-hand case where the content area isn't overflowed.",
+              "start": 3099,
+              "end": 3355
+            },
+            {
+              "quote": "The auto value even creates a scrolling mechanism when not overflowing its content area.",
+              "start": 4750,
+              "end": 4838
+            },
+            {
+              "quote": "Position was rewritten and now properly refers to the Overflow spec for its definitions, so this is moot for Position itself. CSSOM-View has also been subsequently edited to remove that incorrect definition.",
+              "start": 8435,
+              "end": 8642
+            }
+          ],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/7d55a488d49328f278f17db7f93140e75f357ef037d43e9244f910b8ab52afdf.json",
+          "field": "raw_html_text",
+          "html_hash": "9292d309b187a0a7038c624b43b96da5d7fbd933a6c57c9ad2bbb914b48f77e0",
+          "normalized_text_hash": "42cec5dd38afe9646db4e6cf72bc7ea1da403061452dd6ffc476ddce6ee8b1e8",
+          "source_chars": 9575,
+          "final_url": "https://github.com/w3c/csswg-drafts/issues/3083"
+        },
+        {
+          "id": "C008",
+          "url": "https://javascript.info/size-and-scroll",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://www.mbloging.com/post/css-positioning-explained-static-relative-absolute",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "Sticky sticks to the nearest ancestor that scrolls (or could scroll). overflow: hidden makes the parent that ancestor even though it never scrolls, so nothing visible happens.",
+              "start": 6248,
+              "end": 6423
+            },
+            {
+              "quote": "Check for a missing top , an ancestor with overflow: hidden or auto , a flex parent stretching the element, or a parent no taller than the element.",
+              "start": 11585,
+              "end": 11732
+            }
+          ],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/e2abb70b2c5bb74cab2291952ad3919033488b5c6b641c6ee5f355548f518357.json",
+          "field": "raw_html_text",
+          "html_hash": "a61c38dd9fab91ee22cb5feed11c79ba3ef44feb7036f623d0765243913ca909",
+          "normalized_text_hash": "23414e8e0c3aa2a628f1cc378577b25b9ed50a16b2a9bcf0be908836caf40dee",
+          "source_chars": 13893,
+          "final_url": "https://www.mbloging.com/post/css-positioning-explained-static-relative-absolute"
+        },
+        {
+          "id": "C010",
+          "url": "https://mimo.org/glossary/css/position-sticky",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://namethatui.com/web/sticky-fixed",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://polypane.app/blog/getting-stuck-all-the-ways-position-sticky-can-fail/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://puredevtools.tools/css-position-sticky-guide/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://www.scribd.com/document/912984670/Css-Notes-Ashok-It",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://sizzy.co/blog/css-position-sticky",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://www.testmuai.com/learning-hub/css-sticky-browser-support/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://thelynan.com/position-sticky-in-css/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://ttj.kr/quiz/question/css-position-sticky-1",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://velog.io/@devstefancho/css-z-index%EA%B0%80-%EC%9D%98%EB%8F%84%EB%8C%80%EB%A1%9C-%EB%90%98%EC%A7%80%EC%95%8A%EB%8A%94-%EA%B2%83-%EA%B0%99%EB%8B%A4-with-sticky",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C020",
+          "url": "https://www.w3.org/TR/css-position-3/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "p08",
+      "query": "HTTP 304 Content-Length selected 200 response no message body",
+      "criteria": "304 has no message body; any Content-Length must equal the selected 200 response representation length.",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://blog.naver.com/hanajava/224126260436",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://blog.naver.com/hyoo917/223900356723",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://blog.naver.com/polypjhv/224338240467",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": [],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/7cd1d86505dad07019bc7ecac85dd77bc56b6a4561d988b34d10548c34b450cb.json",
+          "field": "raw_html_text",
+          "html_hash": "0ed1fa3d949ee7e5bbad738b85067593cc11c0cae9559c37f42b9e26eefb92b8",
+          "normalized_text_hash": "99cc736aa7fddeeac09106dafe92d2bae18a7d4357448a87cac72f91359c44e1",
+          "source_chars": 24,
+          "final_url": "https://blog.naver.com/polypjhv/224338240467",
+          "scope_warning": "retained HTML exposes only a 24-character blog wrapper; article content unobserved"
+        },
+        {
+          "id": "C004",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers",
+          "grade": 1,
+          "basis": "gives generic Content-Length resource size definition; no 304 selected-200 length condition",
+          "support": [],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/40155272e6bfd405b3c936b8a917e73f2f18ab10db1f0a037131ed2ba8856554.json",
+          "field": "raw_html_text",
+          "html_hash": "b0e512bb6a74d1796fd6f81ce4788de4abda611e1199aa361acaea39c4b4bbf2",
+          "normalized_text_hash": "87d441a9ff8efc0d6732ec08b27fa3d2cbfdd0cb5f2e668cb30d55687069f083",
+          "source_chars": 40675,
+          "final_url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers"
+        },
+        {
+          "id": "C005",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/204",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/304",
+          "grade": 1,
+          "basis": "explicit no-body and equivalent 200 response headers, but does not state the Content-Length equality condition",
+          "support": [],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/ecce1858eec4678b340a2c74e34323bfd270513743a71610bc0b479b7ab64230.json",
+          "field": "raw_html_text",
+          "html_hash": "23b4929070c09dc8eee045bc9e009af398b3744c148701846746aa4c2e6cc5fa",
+          "normalized_text_hash": "be97cb5d0ac4ece81849993f23474ad97b6eaacb61a7cd0b77568841d92dffce",
+          "source_chars": 13171,
+          "final_url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/304"
+        },
+        {
+          "id": "C008",
+          "url": "https://extendsim.com/enhancements",
+          "grade": 0,
+          "basis": "retrieval card explicitly describes ExtendSim product enhancements, not HTTP response semantics",
+          "support": [],
+          "basis_field": "retrieval_card"
+        },
+        {
+          "id": "C009",
+          "url": "https://www.fi.muni.cz/~kas/p090/referaty/2004-jaro/skupina16/xholoub_pv090.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://funnelkit.com/whats-new/",
+          "grade": 0,
+          "basis": "retrieval card explicitly describes FunnelKit product updates, not HTTP response semantics",
+          "support": [],
+          "basis_field": "retrieval_card"
+        },
+        {
+          "id": "C011",
+          "url": "https://www.ietf.org/ietf-ftp/ietf-mail-archive/krb-wg/2014-05.mail",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://levnealarmy.cz/bezpecne-cestovani/autodiagnostika-a-prislusenstvi/diagnosticke-pristroje/kkl-fiat-usb-diagnosticky-kabel-obd-vag",
+          "grade": 0,
+          "basis": "retrieval card explicitly describes a vehicle diagnostic cable, not HTTP response semantics",
+          "support": [],
+          "basis_field": "retrieval_card"
+        },
+        {
+          "id": "C013",
+          "url": "https://my.f5.com/manage/s/article/K9567",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://www.plesk.com/blog/various/http-response-status-codes-explained/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://rankmath.com/seo-glossary/200-response-code/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://www.sec.gov/Archives/edgar/data/1448397/000114036124017470/0001140361-24-017470.txt",
+          "grade": 0,
+          "basis": "retrieval card explicitly describes a securities registration statement, not HTTP response semantics",
+          "support": [],
+          "basis_field": "retrieval_card"
+        },
+        {
+          "id": "C017",
+          "url": "https://www.strawberrynet.com/cs-CZ",
+          "grade": 0,
+          "basis": "retrieval card explicitly describes beauty retail, not HTTP response semantics",
+          "support": [],
+          "basis_field": "retrieval_card"
+        },
+        {
+          "id": "C018",
+          "url": "https://trustworthy.systems/publications/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://velog.io/@dnjs_0_/%EC%99%9C-404%EA%B0%80-%EB%9C%A8%EB%8A%94-%EA%B1%B8%EA%B9%8C-HTTP-%EC%9D%91%EB%8B%B5-%EB%A9%94%EC%8B%9C%EC%A7%80%EB%A5%BC-%EC%A0%9C%EB%8C%80%EB%A1%9C-%EC%9D%B4%ED%95%B4%ED%95%B4%EB%B3%B4%EC%9E%90",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C020",
+          "url": "https://www.w3.org/Protocols/HTTP/1.0/spec.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "p09",
+      "query": "Python functools lru_cache async coroutine await reuse limitations",
+      "criteria": "standard functools.lru_cache caches a coroutine object for an async function, creating an await reuse limitation.",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://blog.naver.com/techshare/224177676877",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://bugs.python.org/issue46622",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "Currently, decorating a coroutine with cached_property would cache the coroutine itself. But this is not useful in any way since a coroutine cannot be awaited multiple times.",
+              "start": 1326,
+              "end": 1500
+            },
+            {
+              "quote": "class Foo: @functools.cache async def go(self): print(1) async def main(): foo = Foo() await foo.go() await foo.go() Although now I just noticed this actually does not work either.",
+              "start": 4654,
+              "end": 4834
+            },
+            {
+              "quote": "Let's start from async functions support by `functools.lru_cache`.",
+              "start": 5050,
+              "end": 5116
+            },
+            {
+              "quote": "def reawaitable(func): @wraps(func) def wrapper(*args, **kwargs): return CachedAwaitable(func(*args, **kwargs)) return wrapper It can be combined with lru_cache and cached_property any third-party caching decorator.",
+              "start": 10823,
+              "end": 11038
+            },
+            {
+              "quote": "@lru_cache() @reawaitable async def coro(...): ...",
+              "start": 11086,
+              "end": 11136
+            }
+          ],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/b6abe035866c5a28d1ab3759f8a234e9d889e960b98d95c428ec42a20184bc95.json",
+          "field": "raw_html_text",
+          "html_hash": "2b633bc22f3ebda1733d0717c374130a09c48cccf821000d5ab8e719a3456d13",
+          "normalized_text_hash": "a64d1d07a2d7cb654612ec3da5c68bb40bebef64eac71ed8b0416bed17356045",
+          "source_chars": 15000,
+          "final_url": "https://bugs.python.org/issue46622"
+        },
+        {
+          "id": "C003",
+          "url": "https://codestips.com/python-functools-lru-cache-explained.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://dev.to/coderatul/cache-in-python--18g",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://docs.python.org/3/reference/compound_stmts.html",
+          "grade": 1,
+          "basis": "explains async def coroutine functions, but no functools caching or coroutine reuse behavior",
+          "support": [],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/7efe65c3e6a75cf730bf60a2b87fca8ddfb43f34dcfec1040a485f92d3ff502b.json",
+          "field": "raw_html_text",
+          "html_hash": "31f66ed83268cdf66861771764e03e5f1e47a4835f0713157a54602ab359b897",
+          "normalized_text_hash": "d2b7e1d654b9721e35d188b71eef427fdbfaabfdd522d92f8af6cb20a268325b",
+          "source_chars": 63936,
+          "final_url": "https://docs.python.org/3/reference/compound_stmts.html"
+        },
+        {
+          "id": "C006",
+          "url": "https://www.geeksforgeeks.org/python/python-functools-lru_cache/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://gist.github.com/louis030195/61eeb3ab51ec37e6f8caf8fa66c96a2c",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://github.com/LitePy/PythonWrap",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://github.com/aio-libs/async-lru",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://github.com/python-cachier/cachier",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://grahamdumpleton.me/labs/python-decorators/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://labex.io/pythoncheatsheet/modules/functools-module",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "retrieval card explicitly identifies a partner-navigation shortcut, unrelated to the requested technical relationship",
+          "support": [],
+          "basis_field": "retrieval_card"
+        },
+        {
+          "id": "C014",
+          "url": "https://pullh.com/?section=python&id=p-076",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://pypi.org/project/cacheable-iterators/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://realpython.com/ref/stdlib/functools/",
+          "grade": 1,
+          "basis": "explains standard lru_cache memoization and sync example, but no async coroutine object or await reuse limitation",
+          "support": [],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/f83c6a693880205a3c417669106e425e5cf7e084333ee450cfb69084207c4bfa.json",
+          "field": "raw_html_text",
+          "html_hash": "76a0b8faa50fd26f6b6b42c4b6297032e15583cade99750e4beac2a1ca329664",
+          "normalized_text_hash": "e685472d70ebbb790c7b3c99fbf9100a82eb2e10ad48b1d03ed864b5d28791dd",
+          "source_chars": 17696,
+          "final_url": "https://realpython.com/ref/stdlib/functools/"
+        },
+        {
+          "id": "C017",
+          "url": "https://www.scribd.com/document/311176922/Mastering-Python-Sample-Chapter",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://stackoverflow.com/questions/tagged/functools?tab=Newest",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://www.toptal.com/developers/python/interview-questions",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C020",
+          "url": "https://ttj.kr/quiz/question/python-lru_cache-functoolslru_cache",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "p10",
+      "query": "git sparse-checkout cone mode parent directories files included",
+      "criteria": "cone mode recursively includes selected directories and files in parent or leading directories, rather than every ancestor subtree.",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://buildkite.com/docs/pipelines/best-practices/git-checkout-optimization",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://devblogs.microsoft.com/devops/introducing-scalar/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://docs.databricks.com/gcp/en/repos/git-operations-with-repos",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://docs.oracle.com/cd/E88353_01/html/E37839/git-sparse-checkout-1.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C005",
+          "url": "https://www.dulwich.io/api/dulwich.sparse_patterns.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://git-scm.com/docs/git-sparse-checkout",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "all files under the specified directories (at any depth) will be included in the sparse checkout, as well as files that are siblings of either the given directory or any of its ancestors",
+              "start": 4799,
+              "end": 4985
+            },
+            {
+              "quote": "git sparse-checkout set A/B/C sets the directory A/B/C as a recursive pattern, the directories A and A/B are added as parent patterns.",
+              "start": 21109,
+              "end": 21243
+            }
+          ],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/94af4e93aec8a40cd1aeba56d90d6d594c3edfd9da5ea60ede1abce3308bcbb2.json",
+          "field": "raw_html_text",
+          "html_hash": "3535926ceb6046ecd12e9bbe20752bdbe27e2ee60f3ec5ffb41d7529981d2665",
+          "normalized_text_hash": "e36525fbac15f152c8dfd1243bc2bc2a140921b1aef2a86896e2d9a83b189bab",
+          "source_chars": 24117,
+          "final_url": "https://git-scm.com/docs/git-sparse-checkout"
+        },
+        {
+          "id": "C007",
+          "url": "https://git-scm.com/docs/git-sparse-checkout/2.26.0",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://www.git-tower.com/learn/git/faq/git-sparse-checkout",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://github.blog/open-source/git/bring-your-monorepo-down-to-size-with-sparse-checkout/",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "The set subcommand modifies the sparse-checkout file with patterns to match the files in the given directories. Further, any files that are immediately in a directory that’s a parent to a specified directory are also included.",
+              "start": 10761,
+              "end": 10989
+            },
+            {
+              "quote": "For example, if you ran git sparse-checkout set A/B , then Git would include files with names A/B/C.txt (immediate child of A/B ) and A/D.txt (immediate sibling of A/B ) as well as E.txt (immediate sibling of A ).",
+              "start": 10990,
+              "end": 11203
+            },
+            {
+              "quote": "Given a file path such as /A/B/C/D.txt , Git includes the path in the working directory if any of the following are true: A/B/C is in the parent set, A/B/C is in the recursive set, A/B is in the recursive set, or A is in the recursive set.",
+              "start": 20499,
+              "end": 20738
+            }
+          ],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/cb209d791a4c27551ca47b4f80584d17a816f5b22ae98dbc442a3c63c1fe94c9.json",
+          "field": "raw_html_text",
+          "html_hash": "c81fd5586446f1fedb887aac03534bbc4a3e9c92dab4f2bd323d5eb32e25b922",
+          "normalized_text_hash": "d822a39246ec1bd9cac086a010441ff91863955cb08c024e3f54e685b89d62fe",
+          "source_chars": 27752,
+          "final_url": "https://github.blog/open-source/git/bring-your-monorepo-down-to-size-with-sparse-checkout/"
+        },
+        {
+          "id": "C010",
+          "url": "https://github.com/git/git/blob/master/t/t1092-sparse-checkout-compatibility.sh",
+          "grade": 1,
+          "basis": "concrete sparse-checkout cone setup and compatibility tests, but no demonstrated complete selected-subtree versus parent-directory-file inclusion relationship",
+          "support": [],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/3e561fb431ec40bae70e48ec6bb7ab1ea9c827e9f93be2ee15fc7cd6fa4923d2.json",
+          "field": "raw_html_text",
+          "html_hash": "75b2be44aa51290991587a91d695e86412ca24696f07f7f38f34678fdcf22498",
+          "normalized_text_hash": "8a970fdcc58488ef2262faee89fd56ffeff266d15cf1a3e15347fb18b4fc0fe2",
+          "source_chars": 120328,
+          "final_url": "https://github.com/git/git/blob/master/t/t1092-sparse-checkout-compatibility.sh"
+        },
+        {
+          "id": "C011",
+          "url": "https://github.com/git/htmldocs/blob/gh-pages/git-sparse-checkout.txt",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": [],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/5a883dcdeb0a9a17e1de0bab8e213ed79a582204e1081ee29e636919875bf727.json",
+          "field": "raw_html_text",
+          "html_hash": "bd5c5e6b6b53955c60e9606ef7a6f455ada2a9e516caeed9ae1ebb841453c00e",
+          "normalized_text_hash": "4af1c5007313cca3a1b6491bdaaacc3c64f494fd5e815aa341c781e8aae51a0f",
+          "source_chars": 2199,
+          "final_url": "https://github.com/git/htmldocs/blob/gh-pages/git-sparse-checkout.txt",
+          "scope_warning": "retained response explicitly says 404 and requested file absent from branch; source content unobserved"
+        },
+        {
+          "id": "C012",
+          "url": "https://gitlab.com/dkg/git/-/blob/v2.43.0/Documentation/git-sparse-checkout.txt?ref_type=tags",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": [],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/04c7047c0c96b4560e3bd246f7ca87b22776840d42edde370156249fe48abc7a.json",
+          "field": "raw_html_text",
+          "html_hash": "3e01269ab68147bd9f0e7f4d6c4ab288fbe5b628f4fe9ba93c7d9e90acdabc00",
+          "normalized_text_hash": "640ea76825f26a04daa7530b37ec4c6f9a7e2a425811adf218810943b3cff13f",
+          "source_chars": 92,
+          "final_url": "https://gitlab.com/dkg/git/-/blob/v2.43.0/Documentation/git-sparse-checkout.txt?ref_type=tags",
+          "scope_warning": "retained HTML is only GitLab file heading and Loading; file content unobserved"
+        },
+        {
+          "id": "C013",
+          "url": "https://gitsunmin.github.io/til/git/sparse-checkout/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C014",
+          "url": "https://www.kernel.org/pub/software/scm/git/docs/git-sparse-checkout.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C015",
+          "url": "https://learn.microsoft.com/en-us/archive/msdn-magazine/2017/august/devops-git-internals-architecture-and-index-files",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "retrieval card explicitly identifies a partner-navigation shortcut, unrelated to the requested technical relationship",
+          "support": [],
+          "basis_field": "retrieval_card"
+        },
+        {
+          "id": "C017",
+          "url": "https://mdsanwarhossain.me/blog-git-monorepo-lfs-submodules-sparse-checkout.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://squidfunk.github.io/mkdocs-material/blog/2023/09/22/using-git-sparse-checkout-for-faster-documentation-builds/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://stackoverflow.com/questions/tagged/git-sparse-checkout?tab=Newest",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "p11",
+      "query": "PostgreSQL CTE MATERIALIZED NOT MATERIALIZED side effect free multiple references",
+      "criteria": "side-effect-free CTE folding versus default materialization when multiply referenced, and MATERIALIZED/NOT MATERIALIZED overrides.",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://blog.naver.com/smileman___/224055572107",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": [],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/00bd5531a23a581b426267ef138f62c18d040ff60dae979bc62d8e84fab07253.json",
+          "field": "raw_html_text",
+          "html_hash": "cf0a57f0eef40dbec1bfa55bd73c522af3b26232fa50b4854bb18f1c84ed99e8",
+          "normalized_text_hash": "78ad1a8f732b61218a5e5f69f6e3fc9e3e51b8473d02adbde45f7155ae07805a",
+          "source_chars": 28,
+          "final_url": "https://blog.naver.com/smileman___/224055572107",
+          "scope_warning": "retained HTML exposes only a 28-character blog wrapper; article content unobserved"
+        },
+        {
+          "id": "C002",
+          "url": "https://boringsql.com/posts/good-cte-bad-cte/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C003",
+          "url": "https://dba.stackexchange.com/questions/257014/are-there-side-effects-to-postgres-12s-not-materialized-directive",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://enricopirozzi.blogspot.com/",
+          "grade": 1,
+          "basis": "current post excerpt describes side-effect-free single/multiple reference defaults and names both clauses, but does not explain which clause forces folding versus separate calculation",
+          "support": [],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/16031087c1f5ba12d32368257b5756926c54d182e1ee44f1cfd6e206aaa72902.json",
+          "field": "raw_html_text",
+          "html_hash": "34d294a0f0caa983f801cc8a400b1412a82e6354ea36ac54f9e3fb739ec88082",
+          "normalized_text_hash": "098ba3aaf8723c69082cce3c030daa2755e8f0f84e75363c2297d4f9840fbcf6",
+          "source_chars": 4776,
+          "final_url": "https://enricopirozzi.blogspot.com/"
+        },
+        {
+          "id": "C005",
+          "url": "https://www.freecodecamp.org/news/fdw-pushdown/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C006",
+          "url": "https://getinsights.app/blogs/postgres-cte",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://github.com/dimagi/django-cte/issues/31",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "if a WITH query is non-recursive and side-effect-free (that is, it is a SELECT containing no volatile functions) then it can be folded into the parent query, allowing joint optimization of the two query levels. By default, this happens if the parent query references the WITH query just once, but not if it references the WITH query more than once.",
+              "start": 3066,
+              "end": 3414
+            },
+            {
+              "quote": "You can override that decision by specifying MATERIALIZED to force separate calculation of the WITH query, or by specifying NOT MATERIALIZED to force it to be merged into the parent query.",
+              "start": 3415,
+              "end": 3603
+            }
+          ],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/e0eb84e0870e33ebfc259f93a283f97fc3672fcb745eecf487fd4ad7b8ef0d59.json",
+          "field": "raw_html_text",
+          "html_hash": "47842a7d4a08da9438f2d29ad36146f722e3b2763a9509585413dbe0de0e48c2",
+          "normalized_text_hash": "b27d3ea026fc5f6b92c3d32fac158ba9ac28b283d56dda73711435448068e4cb",
+          "source_chars": 5927,
+          "final_url": "https://github.com/dimagi/django-cte/issues/31"
+        },
+        {
+          "id": "C008",
+          "url": "https://github.com/libredb/libredb-studio/issues/424",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://hakibenita.com/be-careful-with-cte-in-postgre-sql",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://www.heatware.net/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://www.integrate.io/blog/postgresql-vs-mysql-which-one-is-better-for-your-use-case/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://kowashlab.com/blog/postgresql-ctes-window-functions-practical-guide",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C013",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "retrieval card explicitly identifies a partner-navigation shortcut, unrelated to the requested technical relationship",
+          "support": [],
+          "basis_field": "retrieval_card"
+        },
+        {
+          "id": "C014",
+          "url": "https://www.postgresql.org/docs/current/sql-select.html",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "A WITH query that is referenced more than once in FROM is computed only once, unless specified otherwise with NOT MATERIALIZED .",
+              "start": 3089,
+              "end": 3217
+            },
+            {
+              "quote": "a WITH query can be marked NOT MATERIALIZED to remove this guarantee. In that case, the WITH query can be folded into the primary query much as though it were a simple sub- SELECT in the primary query's FROM clause.",
+              "start": 10482,
+              "end": 10697
+            },
+            {
+              "quote": "By default, a side-effect-free WITH query is folded into the primary query if it is used exactly once in the primary query's FROM clause.",
+              "start": 11143,
+              "end": 11280
+            },
+            {
+              "quote": "However, such folding can be prevented by marking the WITH query as MATERIALIZED .",
+              "start": 11395,
+              "end": 11477
+            }
+          ],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/b53c08444749a8dd3bba1912a1d2556a16da59b41a8a8e42c6a3ff948009a9ae.json",
+          "field": "raw_html_text",
+          "html_hash": "9aa2ffff600acc6ba9729fc068e47ae9de7cfcaf35ea82c90eaa93389b66db8e",
+          "normalized_text_hash": "30930e2c24d99f054dc31934dc5de5ffd39b82216a9424f36bca786ecf72a383",
+          "source_chars": 62314,
+          "final_url": "https://www.postgresql.org/docs/current/sql-select.html"
+        },
+        {
+          "id": "C015",
+          "url": "https://www.postgresql.org/docs/release/12.0/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://www.postgresql.org/docs/release/9.3.5/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://posthog.com/docs/cdp/sources",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "http://renesd.blogspot.com/2017/02/is-postgresql-good-enough.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C019",
+          "url": "https://www.tigerdata.com/learn/how-to-use-common-table-expression-sql",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        }
+      ]
+    },
+    {
+      "id": "p12",
+      "query": "Rust Arc clone deep copy underlying value reference count",
+      "criteria": "Arc clone shares the allocation and value and increments the strong reference count rather than deep-copying the value.",
+      "gold": [
+        {
+          "id": "C001",
+          "url": "https://antelang.org/blog/stable_mutable_refs/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C002",
+          "url": "https://www.cadforum.cz/cz/download.asp?cat=33",
+          "grade": 0,
+          "basis": "retrieval card explicitly describes CAD utilities downloads, not Rust Arc clone semantics",
+          "support": [],
+          "basis_field": "retrieval_card"
+        },
+        {
+          "id": "C003",
+          "url": "https://www.cheats.rs/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C004",
+          "url": "https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html",
+          "grade": 2,
+          "basis": "concrete requested relationship and material conditions in inspected retained source",
+          "support": [
+            {
+              "quote": "Invoking clone on Arc produces a new Arc instance, which points to the same allocation on the heap as the source Arc , while increasing a reference count.",
+              "start": 2206,
+              "end": 2360
+            },
+            {
+              "quote": "Makes a clone of the Arc pointer. This creates another pointer to the same allocation, increasing the strong reference count.",
+              "start": 50580,
+              "end": 50705
+            }
+          ],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/a26ee2f23642a63bc5a3ba081d479e3a38c5b942b42c55eef7c0e4037b0e4f79.json",
+          "field": "raw_html_text",
+          "html_hash": "3f27db3fd3ed74228108aab5523e0211c16687002d51b6ab14314ac7a08e8aa9",
+          "normalized_text_hash": "353cb4f206ca5df6c54833ed258468dc507e883de03ae9b2320fe1c3c1f6399c",
+          "source_chars": 72482,
+          "final_url": "https://doc.rust-lang.org/nightly/alloc/sync/struct.Arc.html"
+        },
+        {
+          "id": "C005",
+          "url": "https://doc.rust-lang.org/std/clone/trait.Clone.html",
+          "grade": 1,
+          "basis": "explicit Arc smart-pointer clone shared-data explanation, but no increment of the strong reference count",
+          "support": [],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/45c009e14c456a4b17a2b0bfed1e8bdd69a4e8a4cd80413e5f38d553f31a8e47.json",
+          "field": "raw_html_text",
+          "html_hash": "e8a40ccab00c369c3b8fae8c06d54949399c0818828bd1b4d9ee67987e7579db",
+          "normalized_text_hash": "631fb4e0ac6085cc2c2a7addd417bbcd311ca22d66ac54a5bb86aecfe47c3e5a",
+          "source_chars": 30492,
+          "final_url": "https://doc.rust-lang.org/std/clone/trait.Clone.html"
+        },
+        {
+          "id": "C006",
+          "url": "https://en.wikipedia.org/wiki/Rust_syntax",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C007",
+          "url": "https://github.com/manizada/OVSwrap/blob/main/ovswrap-poc.py",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C008",
+          "url": "https://hexcasting.hexxy.media/v/0.11.4/1.0/en_us/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C009",
+          "url": "https://htmlunit.org/changes-report.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C010",
+          "url": "https://itsallaboutthebit.com/arc-mutex/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C011",
+          "url": "https://krnomad.github.io/posts/6.-Rust-copy%EC%99%80-clone-%EC%A0%95%EB%A6%AC(%EA%B9%8A%EC%9D%80-%EB%B3%B5%EC%82%AC,-%EC%96%95%EC%9D%80-%EB%B3%B5%EC%82%AC-%ED%8F%AC%ED%95%A8)/",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C012",
+          "url": "https://langdock.com/products/integrations",
+          "grade": 0,
+          "basis": "retrieval card explicitly describes product integrations, not Rust Arc clone semantics",
+          "support": [],
+          "basis_field": "retrieval_card"
+        },
+        {
+          "id": "C013",
+          "url": "https://miracuves.com/airbnb-clone/",
+          "grade": 0,
+          "basis": "retrieval card explicitly describes an Airbnb clone application, not Rust Arc clone semantics",
+          "support": [],
+          "basis_field": "retrieval_card"
+        },
+        {
+          "id": "C014",
+          "url": "https://news.ycombinator.com/item?id=43978435",
+          "grade": 1,
+          "basis": "concrete Arc shared-pointer and reference-counting discussion, but no complete clone allocation-sharing and strong-count increment relationship",
+          "support": [],
+          "snapshot": "runs/passage-coverage-2026-10-30/raw-cache/74d105a434789c853e611570bfba2f8374defaefea6817b236fbfdd6049f9640.json",
+          "field": "raw_html_text",
+          "html_hash": "267b226b5da5095d7376f053872d5d8517540131e9bd9452263fa8724e2eb0a9",
+          "normalized_text_hash": "80c20535eae3329a5f7f26af292fa9a4f0a09caecbc4aa7b8638208dc0f606c6",
+          "source_chars": 188867,
+          "final_url": "https://news.ycombinator.com/item?id=43978435"
+        },
+        {
+          "id": "C015",
+          "url": "https://rhai.rs/book/language/dynamic-rust.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C016",
+          "url": "https://rust-lang.github.io/rfcs/0256-remove-refcounting-gc-of-t.html",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C017",
+          "url": "https://softpanorama.org/Admin/index.shtml",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C018",
+          "url": "https://synthiam.com/Products/ARC/Releases",
+          "grade": 0,
+          "basis": "retrieval card explicitly describes Synthiam ARC software releases, not Rust Arc clone semantics",
+          "support": [],
+          "basis_field": "retrieval_card"
+        },
+        {
+          "id": "C019",
+          "url": "https://velog.io/@jollidah/Rust-Ref-Arc-Rc-Mutex",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        },
+        {
+          "id": "C020",
+          "url": "https://zed.dev/blog/zed-decoded-async-rust",
+          "grade": null,
+          "basis": "unjudged: no sufficient inspected source evidence",
+          "support": []
+        }
+      ]
+    }
+  ]
+}

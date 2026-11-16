@@ -1,0 +1,415 @@
+{
+  "date": "2026-11-05",
+  "task_id": "TASK-20261105-115349-001",
+  "scope": "Requested Qwen news lead selection fix; same local Firecrawl on NEW12 relative to previous12 URLs; historical source-aware component, not full search qualification.",
+  "selector": "query-feature-cover-v3-news-lead",
+  "memory_version_unchanged": "request-evidence-v14-news-anchors",
+  "runtime_reader_default_unchanged": true,
+  "changed_runtime_logic": [
+    "src/reranker.rs: top3_diverse news lead reservation and trace identifier"
+  ],
+  "models": {
+    "utc": "2026-11-05T09:23:43.110901+00:00",
+    "frozen_quality_and_gold_unchanged": true,
+    "same_gold_both_clock_cohorts": true,
+    "same_sources_and_queries_except_clock": true,
+    "sourcecode_unchanged_after_freeze": true,
+    "unrelated_production_source_original20_B17_Cargo_unchanged": true,
+    "models": {
+      "deepseek/deepseek-v4.1-flash-1017": 36
+    },
+    "finish_reasons": {
+      "stop": 36
+    },
+    "qwen_models": {
+      "Qwen3-Reranker-0.6B-4bit": 42
+    },
+    "calls": {
+      "primary": {
+        "generations": 16,
+        "qwen_calls": 16,
+        "qwen_pairs": 114,
+        "errors": []
+      },
+      "clock_aligned": {
+        "generations": 16,
+        "qwen_calls": 20,
+        "qwen_pairs": 142,
+        "errors": []
+      },
+      "known_old": {
+        "generations": 4,
+        "qwen_calls": 6,
+        "qwen_pairs": 46,
+        "errors": [
+          "audit reason length"
+        ]
+      }
+    },
+    "counts_not_pooled_for_quality": true
+  },
+  "primary": {
+    "baseline": {
+      "quality": {
+        "tp_ids": [
+          "P01",
+          "P02",
+          "P04",
+          "P05",
+          "P07",
+          "P08",
+          "P11"
+        ],
+        "fn_ids": [
+          "P10"
+        ],
+        "fp_ids": [],
+        "unknown_direct_ids": [],
+        "direct_recall": 0.875
+      },
+      "reranked_pages": 8,
+      "body_witnesses_present": 21,
+      "body_witnesses_total": 21,
+      "selected_witnesses_retained": 12,
+      "selected_witnesses_eligible_total": 16,
+      "positive_selected_witnesses_retained": 10,
+      "positive_selected_witnesses_eligible_total": 14,
+      "positive_witnesses_total": 16,
+      "model_calls": 8,
+      "qwen_calls": 8,
+      "qwen_pairs": 57,
+      "verification_stage_latency": {
+        "n": 4,
+        "min_ms": 7351.0,
+        "p50_ms": 11850.0,
+        "p95_ms": 17479.0,
+        "max_ms": 17479.0
+      },
+      "qwen_call_latency": {
+        "n": 8,
+        "min_ms": 108.0,
+        "p50_ms": 314.5,
+        "p95_ms": 3150.0,
+        "max_ms": 3150.0
+      },
+      "generation_call_latency": {
+        "n": 8,
+        "min_ms": 2123.0,
+        "p50_ms": 5014.0,
+        "p95_ms": 9185.0,
+        "max_ms": 9185.0
+      }
+    },
+    "fixed": {
+      "quality": {
+        "tp_ids": [
+          "P01",
+          "P02",
+          "P04",
+          "P05",
+          "P07",
+          "P08",
+          "P11"
+        ],
+        "fn_ids": [
+          "P10"
+        ],
+        "fp_ids": [],
+        "unknown_direct_ids": [],
+        "direct_recall": 0.875
+      },
+      "reranked_pages": 8,
+      "body_witnesses_present": 21,
+      "body_witnesses_total": 21,
+      "selected_witnesses_retained": 14,
+      "selected_witnesses_eligible_total": 16,
+      "positive_selected_witnesses_retained": 12,
+      "positive_selected_witnesses_eligible_total": 14,
+      "positive_witnesses_total": 16,
+      "model_calls": 8,
+      "qwen_calls": 8,
+      "qwen_pairs": 57,
+      "verification_stage_latency": {
+        "n": 4,
+        "min_ms": 7056.0,
+        "p50_ms": 9492.0,
+        "p95_ms": 30193.0,
+        "max_ms": 30193.0
+      },
+      "qwen_call_latency": {
+        "n": 8,
+        "min_ms": 102.0,
+        "p50_ms": 252.5,
+        "p95_ms": 901.0,
+        "max_ms": 901.0
+      },
+      "generation_call_latency": {
+        "n": 8,
+        "min_ms": 1917.0,
+        "p50_ms": 4110.5,
+        "p95_ms": 25431.0,
+        "max_ms": 25431.0
+      }
+    }
+  },
+  "clock_aligned": {
+    "baseline": {
+      "quality": {
+        "tp_ids": [
+          "P01",
+          "P02",
+          "P04",
+          "P05",
+          "P07",
+          "P08",
+          "P10",
+          "P11"
+        ],
+        "fn_ids": [],
+        "fp_ids": [],
+        "unknown_direct_ids": [],
+        "direct_recall": 1.0
+      },
+      "reranked_pages": 10,
+      "body_witnesses_present": 21,
+      "body_witnesses_total": 21,
+      "selected_witnesses_retained": 14,
+      "selected_witnesses_eligible_total": 19,
+      "positive_selected_witnesses_retained": 12,
+      "positive_selected_witnesses_eligible_total": 16,
+      "positive_witnesses_total": 16,
+      "model_calls": 8,
+      "qwen_calls": 10,
+      "qwen_pairs": 71,
+      "verification_stage_latency": {
+        "n": 4,
+        "min_ms": 9037.0,
+        "p50_ms": 13775.5,
+        "p95_ms": 18760.0,
+        "max_ms": 18760.0
+      },
+      "qwen_call_latency": {
+        "n": 10,
+        "min_ms": 77.0,
+        "p50_ms": 271.0,
+        "p95_ms": 1153.0,
+        "max_ms": 1153.0
+      },
+      "generation_call_latency": {
+        "n": 8,
+        "min_ms": 2476.0,
+        "p50_ms": 4487.0,
+        "p95_ms": 15595.0,
+        "max_ms": 15595.0
+      }
+    },
+    "fixed": {
+      "quality": {
+        "tp_ids": [
+          "P01",
+          "P02",
+          "P04",
+          "P05",
+          "P07",
+          "P08",
+          "P10",
+          "P11"
+        ],
+        "fn_ids": [],
+        "fp_ids": [],
+        "unknown_direct_ids": [],
+        "direct_recall": 1.0
+      },
+      "reranked_pages": 10,
+      "body_witnesses_present": 21,
+      "body_witnesses_total": 21,
+      "selected_witnesses_retained": 17,
+      "selected_witnesses_eligible_total": 19,
+      "positive_selected_witnesses_retained": 14,
+      "positive_selected_witnesses_eligible_total": 16,
+      "positive_witnesses_total": 16,
+      "model_calls": 8,
+      "qwen_calls": 10,
+      "qwen_pairs": 71,
+      "verification_stage_latency": {
+        "n": 4,
+        "min_ms": 8344.0,
+        "p50_ms": 13104.5,
+        "p95_ms": 18424.0,
+        "max_ms": 18424.0
+      },
+      "qwen_call_latency": {
+        "n": 10,
+        "min_ms": 78.0,
+        "p50_ms": 207.5,
+        "p95_ms": 1034.0,
+        "max_ms": 1034.0
+      },
+      "generation_call_latency": {
+        "n": 8,
+        "min_ms": 1607.0,
+        "p50_ms": 3955.0,
+        "p95_ms": 13904.0,
+        "max_ms": 13904.0
+      }
+    }
+  },
+  "calls": {
+    "local_firecrawl_uploads": 37,
+    "local_rust_extract_controls": 36,
+    "openrouter_generations": 36,
+    "qwen_calls": 42,
+    "qwen_pairs": 302,
+    "target_http": 0,
+    "search": 0,
+    "browser": 0
+  },
+  "known_old": {
+    "scope": "Separate known old failure; not NEW12. Invalid baseline audit prohibits paired finaldirect gain claim. No retry.",
+    "rows": [
+      {
+        "arm": "baseline",
+        "errors": [
+          "audit reason length"
+        ],
+        "direct_ids": [],
+        "city_witness_in_selected_context": false,
+        "selected_ranges": [
+          [
+            7100,
+            9291
+          ],
+          [
+            3578,
+            5661
+          ],
+          [
+            1812,
+            3905
+          ]
+        ],
+        "check_statuses": [
+          "supported",
+          "missing",
+          "missing",
+          "missing"
+        ],
+        "audit_supported": null,
+        "model_calls": 2,
+        "qwen_calls": 3
+      },
+      {
+        "arm": "fixed",
+        "errors": [],
+        "direct_ids": [
+          "C001",
+          "C002"
+        ],
+        "city_witness_in_selected_context": true,
+        "selected_ranges": [
+          [
+            7100,
+            9291
+          ],
+          [
+            3578,
+            5661
+          ],
+          [
+            0,
+            2185
+          ]
+        ],
+        "check_statuses": [
+          "supported",
+          "supported",
+          "missing",
+          "missing"
+        ],
+        "audit_supported": true,
+        "model_calls": 2,
+        "qwen_calls": 3
+      }
+    ]
+  },
+  "protocol_amendments": [
+    "Before quality: use already instrumented reader/Qwen/stage timing; CPU-only benchmark not run.",
+    "After primary: retain results and correct solely historical as_of_timestamp to completed original source freeze; separate repeat, no code/gold/source/params changes."
+  ],
+  "source_clock": "2026-11-03T14:13:52.222315+00:00",
+  "api_memory_peak_bytes": 470913024,
+  "teardown": {
+    "owned_project_removed": true,
+    "all_preexisting_containers_running": true,
+    "preexisting_count": 8,
+    "preexisting_names": [
+      "WeKnora-app",
+      "WeKnora-docreader",
+      "WeKnora-frontend",
+      "WeKnora-postgres",
+      "WeKnora-redis",
+      "vincenzo-context-hub-local-backend-1",
+      "vincenzo-context-hub-local-confluence-stub-1",
+      "vincenzo-context-hub-local-postgres-1"
+    ],
+    "no_claim_of_zero_restarts_or_other_apps_functional_acceptance": true
+  },
+  "checks": {
+    "red_green_regression": "passed",
+    "cargo_fmt": "passed",
+    "native_unit": 118,
+    "native_stdio": 5,
+    "clippy_all_targets": "passed",
+    "release_build": "passed",
+    "fresh_release_stdio": 5,
+    "source_gold_quality_integrity": "passed",
+    "separate_raw_recount": "passed",
+    "offline_archive_replay": "passed:407verified files, both metric JSON byte identical",
+    "context": {
+      "lint": "OK",
+      "index_check": "fresh",
+      "router_stdio_smoke": "passed",
+      "doctor": "WARN",
+      "doctor_summary": {
+        "ok": 15,
+        "warn": 5,
+        "fail": 0
+      },
+      "warning_ids": [
+        "sqlite-ignore",
+        "draft-ignore",
+        "source-coverage",
+        "durable-memory",
+        "backlog-ready"
+      ]
+    }
+  },
+  "artifacts": {
+    "corpus_files": 407,
+    "unique_blobs": 218,
+    "corpus_sha256": "8f52d3b292ae3c61f06f83cd2fc34f85b2cef776306251d8b0f7a9de2d5d7675",
+    "primary_results_sha256": "168071e5987cf66f31fe260f376bf39c893678a1a88bf26c4a48896e17d14d48",
+    "aligned_results_sha256": "ba53814db51d9fd12a3ce637f854152f40d33dd7b16be520cf33ff91a062d062"
+  },
+  "source_files_sha256": {
+    "src/reranker.rs": "116ed9e2231299ef00e0bb5bb828d15da40d28610489585bf95d0ba7f2045fe3",
+    "src/firecrawl_benchmark.rs": "649385f0b44ba58fdaebc839e9c9264594fa13bce35ee03f550f7517d6b3e2cb",
+    "tests/fixtures/reranker/news-lead-firecrawl.json": "68e485470285662bb0f27b57a55a2035b697ebbae638bd21e6a969b62b9ed458",
+    "scripts/prepare-qwen-firecrawl-2026-11-05.py": "b084f316fea35dd17b39fe9ad95cd4161cb9f90f2f73d7df470e09679adf61d2",
+    "scripts/analyze-qwen-firecrawl-2026-11-05.py": "234f84d73c9c3e0cb8059a3e6a848d2f341e662838df3f1c8453745f1bc6a3a8",
+    "scripts/restore-firecrawl-2026-11-05.py": "670b78e877c65307c55ae8a491999be6f3a1ac80ca12e9ad05ae957edc9c35b2"
+  },
+  "formal_completion": "partial: independent accepted ready_to_merge absent; requested study delivered, no user permission pending",
+  "research_revision": 27,
+  "verification": {
+    "id": "VERIFY-20261105-123840-001",
+    "path": ".project-context/active/verification/VERIFY-20261105-123840-001.md"
+  },
+  "task_finalization": {
+    "status": "FINALIZED",
+    "completion": "partial",
+    "taskStatus": "in_progress",
+    "requiresHumanReview": false,
+    "reason": "Requested fix, experiments and report delivered; independent accepted ready_to_merge execution absent."
+  }
+}

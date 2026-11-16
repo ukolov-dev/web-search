@@ -1,0 +1,1894 @@
+{
+  "protocol": {
+    "created_utc": "2026-10-30T11:09:40.548597+00:00",
+    "stage": "SERP judgments before new-layer inference or baseline prediction inspection",
+    "origin": "implementation author, source cards only, no independent assessor",
+    "positive_definition": "Concrete direct help on requested relationship, not complete answer; ambiguous version/partial-help positives preflagged for sensitivity.",
+    "negative_definition": "not direct; 0 only clear unrelated cards, remaining negatives1; direct metrics do not depend on0-vs1",
+    "blind_input_sha256": "05a8ee708cdaa42d08fa556a7221fe24f8b9dd697af6161be43ff1d32d6f620b",
+    "no_unjudged_counted_as_fp": true
+  },
+  "cases": [
+    {
+      "id": "n01",
+      "query": "SQLite BEGIN DEFERRED BEGIN IMMEDIATE SQLITE_BUSY различие транзакций",
+      "judgments": [
+        {
+          "id": "C001",
+          "url": "https://android.googlesource.com/toolchain/rustc/+/refs/heads/main/vendor/rusqlite-0.32.1/src/transaction.rs",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C002",
+          "url": "https://blog.naver.com/k_mashed_potato/224346188879",
+          "grade": 2,
+          "basis": "SERP title/snippet only",
+          "reason": "Explicit deferred-to-write upgrade vs immediate write acquisition and SQLITE_BUSY.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C003",
+          "url": "https://bun.com/docs/runtime/sqlite",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C004",
+          "url": "https://www.c-plusplus.net/forum/topic/352585/sqlite3-error-database-is-locked",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C005",
+          "url": "https://coddy.tech/docs/sqlite",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C006",
+          "url": "https://docs.sqlitecloud.io/docs/sqlite/lang_transaction",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C007",
+          "url": "https://goodspace.ai/interview-questions/sqlite",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C008",
+          "url": "https://juliadatabases.org/SQLite.jl/stable/",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C009",
+          "url": "https://www.mindscale.kr/docs/sqlite/transaction",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C010",
+          "url": "https://pkg.go.dev/modernc.org/sqlite",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C011",
+          "url": "https://riverqueue.com/docs/sqlite",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C012",
+          "url": "https://ro.wikipedia.org/wiki/SQLite",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C013",
+          "url": "https://sangseek.com/communities/60460",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C014",
+          "url": "https://sqlitebrowser.org/dl/",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C015",
+          "url": "https://velog.io/@luna7182/SQLite%EC%97%90%EC%84%9C%EC%9D%98-Transaction-Management",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        }
+      ]
+    },
+    {
+      "id": "n02",
+      "query": "Rust Pin Unpin самоссылочные структуры перемещение документация",
+      "judgments": [
+        {
+          "id": "C001",
+          "url": "https://www.ahifi.cz/pin-do-iso-konektoru-samice-254082.html",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C002",
+          "url": "https://chromewebstore.google.com/detail/pin-kit-pinterest-board-d/dadffeljcabienkbcmdakmegmdpfamfm",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C003",
+          "url": "https://cz.hdfastener-manufacturer.com/pin/",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C004",
+          "url": "https://cz.lomoflexfitting.com/news/how-to-make-u-pin-quick-installation-tool-78093316.html",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C005",
+          "url": "https://cz.mouser.com/cs/new/jonard-tools/jonard-pin-extractor",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C006",
+          "url": "https://doc.rust-lang.org/core/pin/struct.Pin.html",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C007",
+          "url": "https://doc.rust-lang.org/nightly/core/marker/trait.Unpin.html",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C008",
+          "url": "https://doc.rust-lang.org/std/pin/",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C009",
+          "url": "https://www.flash-team.cz/adjust-pin-compression",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C010",
+          "url": "https://www.puhy.cz/piny-do-konektoru-30129/index-64-20a.html",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        }
+      ]
+    },
+    {
+      "id": "n03",
+      "query": "Python asyncio shield wait_for отмена задачи при timeout",
+      "judgments": [
+        {
+          "id": "C001",
+          "url": "https://cs.python-3.com/?p=119264",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C002",
+          "url": "https://developers.llamaindex.ai/python/framework/getting_started/async_python/",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C003",
+          "url": "https://www.elastic.co/docs/reference/elasticsearch/clients/python/async",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C004",
+          "url": "https://gist.github.com/kissgyorgy/d6e4b860b9e7de783465793f622979c3",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C005",
+          "url": "https://github.com/python/cpython/issues/127949",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C006",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C007",
+          "url": "https://pydantic.dev/docs/monty/limitations/asyncio/",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C008",
+          "url": "https://pypi.org/project/wait-for2/",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C009",
+          "url": "https://www.pythonanywhere.com/forums/topic/35437/",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C010",
+          "url": "https://www.pythonsheets.com/notes/asyncio/python-asyncio-advanced.html",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C011",
+          "url": "https://realpython.com/async-io-python/",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C012",
+          "url": "https://stackoverflow.com/questions/tagged/python-asyncio?tab=Newest",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C013",
+          "url": "https://velog.io/@sb-jo/asyncio-%EC%8B%9C%EB%A6%AC%EC%A6%882-async-await-coroutine-task-future",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        }
+      ]
+    },
+    {
+      "id": "n04",
+      "query": "PostgreSQL INSERT ON CONFLICT DO UPDATE WHERE excluded условие обновления",
+      "judgments": [
+        {
+          "id": "C001",
+          "url": "https://betakuang.medium.com/why-postgresqls-on-conflict-cannot-find-my-partial-unique-index-552327b85e1",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C002",
+          "url": "https://blog.naver.com/hanajava/224368025235",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C003",
+          "url": "https://blog.naver.com/idcfa/224279751047",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C004",
+          "url": "https://blog.naver.com/naivety1/224323823756",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C005",
+          "url": "https://cs.wikipedia.org/wiki/PostgreSQL",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C006",
+          "url": "https://docs.cloud.google.com/spanner/docs/reference/postgresql/functions",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C007",
+          "url": "https://www.educba.com/postgresql-merge/",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C008",
+          "url": "https://en.wikipedia.org/wiki/PostgreSQL",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C009",
+          "url": "https://www.geeksforgeeks.org/postgresql/postgresql-upsert/",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C010",
+          "url": "https://github.com/nolaxe/SQL-postgre-patterns-library",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C011",
+          "url": "https://github.com/pgvector/pgvector",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C012",
+          "url": "https://github.com/temporalio/temporal/issues/12097",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C013",
+          "url": "https://learn.microsoft.com/cs-cz/azure/postgresql/development/vs-code-extension/postgresql-extension-overview",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C014",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C015",
+          "url": "https://neon.com/postgresql/tutorial/upsert",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C016",
+          "url": "https://okky.kr/questions/1396074",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C017",
+          "url": "https://www.postgresql.org/docs/19/release-19.html",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C018",
+          "url": "https://www.prisma.io/dataguide/postgresql/inserting-and-modifying-data/insert-on-conflict",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        }
+      ]
+    },
+    {
+      "id": "n05",
+      "query": "Docker Compose depends_on service_healthy порядок запуска и перезапуск зависимостей",
+      "judgments": [
+        {
+          "id": "C001",
+          "url": "https://docs.docker.com/reference/compose-file/services",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C002",
+          "url": "https://docs.linuxserver.io/general/docker-compose/",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C003",
+          "url": "https://www.geeksforgeeks.org/devops/docker-compose/",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C004",
+          "url": "https://github.com/Lifailon/PS-Commands/blob/rsa/devops.md",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C005",
+          "url": "https://github.com/docker/compose",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C006",
+          "url": "https://www.hostcolor.com/apps/docker-hosting.html",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C007",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C008",
+          "url": "https://prohoster.info/cs/blog/administrirovanie/rukovodstvo-po-docker-compose-dlya-nachinayushhih",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C009",
+          "url": "https://stackshare.io/docker-compose",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C010",
+          "url": "https://superset.apache.org/admin-docs/installation/docker-compose/",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C011",
+          "url": "https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Docker-run-vs-docker-compose-Whats-the-difference/",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C012",
+          "url": "https://www.virtualizor.com/docker",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        }
+      ]
+    },
+    {
+      "id": "n06",
+      "query": "CSS position sticky overflow hidden scroll ancestor поведение",
+      "judgments": [
+        {
+          "id": "C001",
+          "url": "https://blog.naver.com/lobkrea/224267735386",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C002",
+          "url": "https://blog.naver.com/ysysyjyj77/223974962643",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C003",
+          "url": "https://caniuse.com/css-sticky",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C004",
+          "url": "https://codingeverybody.kr/css-position-sticky/",
+          "grade": 2,
+          "basis": "SERP title/snippet only",
+          "reason": "Concrete sticky ancestor/scroll mechanism; C019 explicitly includes overflow hidden.",
+          "borderline": true,
+          "borderline_reason": "Explicit sticky/scroll-container relation, hidden is not explicit in the card."
+        },
+        {
+          "id": "C005",
+          "url": "https://www.designcise.com/web/tutorial/how-to-fix-issues-with-css-position-sticky-not-working",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C006",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/position",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C007",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::-webkit-scrollbar",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C008",
+          "url": "https://github.com/w3c/csswg-drafts/blob/main/css-anchor-position-1/Overview.bs",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C009",
+          "url": "https://help.webflow.com/hc/en-us/articles/33961228002963-CSS-position-properties",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C010",
+          "url": "https://www.linkedin.com/learning/no-code-css-layouts-with-webflow/relative-positioning",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C011",
+          "url": "https://naradesign.github.io/position-sticky.html",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C012",
+          "url": "https://www.sarasoueidan.com/blog/css-scrollspy/",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C013",
+          "url": "https://scroll-driven-animations.style/demos/scroll-shadows/css/",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C014",
+          "url": "https://www.toptal.com/developers/css/css-layout-primer-from-classic-approaches-to-the-latest-techniques",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C015",
+          "url": "https://triki.net/prgm/792",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C016",
+          "url": "https://ttj.kr/quiz/question/css-position-sticky-1",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C017",
+          "url": "https://usagi-post.com/archives/1448",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C018",
+          "url": "https://uxkm.io/publishing/css/03-cssMiddleclass/06-css_module3_part1",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C019",
+          "url": "https://velog.io/@devstefancho/css-z-index%EA%B0%80-%EC%9D%98%EB%8F%84%EB%8C%80%EB%A1%9C-%EB%90%98%EC%A7%80%EC%95%8A%EB%8A%94-%EA%B2%83-%EA%B0%99%EB%8B%A4-with-sticky",
+          "grade": 2,
+          "basis": "SERP title/snippet only",
+          "reason": "Concrete sticky ancestor/scroll mechanism; C019 explicitly includes overflow hidden.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C020",
+          "url": "https://www.w3.org/TR/css-scroll-anchoring-1/",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        }
+      ]
+    },
+    {
+      "id": "n07",
+      "query": "git pull --rebase --autostash conflicts documentation",
+      "judgments": [
+        {
+          "id": "C001",
+          "url": "https://alchemists.io/articles/git_rebase",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C002",
+          "url": "https://alexkrolick.com/git/",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C003",
+          "url": "https://www.atlassian.com/git/tutorials/syncing/git-pull",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C004",
+          "url": "https://blog.naver.com/eyjang1998/224300356519",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C005",
+          "url": "https://blog.naver.com/mani7789/224028546311",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C006",
+          "url": "https://blog.naver.com/math-tong/224365919348",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C007",
+          "url": "https://blog.naver.com/thdsnfla/223930932870",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C008",
+          "url": "https://chrisarcand.com/git-autofix-for-amending-pull-requests/",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C009",
+          "url": "https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/configuring-commit-rebasing-for-pull-requests",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C010",
+          "url": "https://findergit.app/docs/git-actions",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C011",
+          "url": "https://git-scm.com/docs/git-pull/2.9.5",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C012",
+          "url": "https://git-scm.com/docs/git-rebase",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C013",
+          "url": "https://github.com/git-guides/git-pull",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C014",
+          "url": "https://github.com/git/git/blob/master/Documentation/SubmittingPatches",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C015",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C016",
+          "url": "https://seonghoho.github.io/github-this-branch-cannot-be-rebased-due-to-conflicts/",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C017",
+          "url": "https://velog.io/@suzu11/DevOps-%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EA%B0%80-%EC%95%8C%EC%95%84%EC%95%BC-%ED%95%A0-Git-%EA%B8%B0%EB%B3%B8%EA%B8%B0",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C018",
+          "url": "https://www.vogella.com/tutorials/Git/article.html",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C019",
+          "url": "https://webinstall.dev/git/",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C020",
+          "url": "https://wizardfactory.wordpress.com/2015/05/24/github-pull-request-%EC%B7%A8%EC%86%8C%ED%95%98%EA%B3%A0-%EC%88%98%EC%A0%95%ED%95%98%EC%97%AC-%EB%8B%A4%EC%8B%9C-pull-request%ED%95%98%EA%B8%B0/",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        }
+      ]
+    },
+    {
+      "id": "n08",
+      "query": "HTTP Retry-After 429 503 seconds HTTP-date behavior",
+      "judgments": [
+        {
+          "id": "C001",
+          "url": "https://www.3xxredirects.com/",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C002",
+          "url": "https://aiwithgowtham.in/how-to-handle-429-error-rate-limiting/",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C003",
+          "url": "https://blog.naver.com/operatingsystem/224287295633",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C004",
+          "url": "https://blog.naver.com/spark1a/224029269705",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C005",
+          "url": "https://datacelix.com/http-error-429/",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C006",
+          "url": "https://decodo.com/faq/error-codes/error-429",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C007",
+          "url": "https://dev.syw.kr/headers/retry-after",
+          "grade": 2,
+          "basis": "SERP title/snippet only",
+          "reason": "Retry-After on429/503 gives seconds or date.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C008",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C009",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Retry-After",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C010",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/423",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C011",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/429",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C012",
+          "url": "https://dnsrobot.net/ko/blog/http-error-429",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C013",
+          "url": "https://en.wikipedia.org/wiki/List_of_HTTP_status_codes",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C014",
+          "url": "https://github.com/open-telemetry/opentelemetry-proto/blob/main/docs/specification.md",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C015",
+          "url": "https://pydantic.dev/docs/ai/models/http-request-retries/",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C016",
+          "url": "https://ref.getfoxi.com/ko/reference/http/429",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C017",
+          "url": "https://runebook.dev/ko/docs/http/headers/retry-after",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C018",
+          "url": "https://www.socialcrawl.dev/glossary/what-is-a-429-error",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C019",
+          "url": "https://www.superwebtricks.com/http-429-too-many-requests/",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C020",
+          "url": "https://www.zerobuffer.io/blogs/429-status-code",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        }
+      ]
+    },
+    {
+      "id": "n09",
+      "query": "Tokio select cancellation safety read_exact recv documentation",
+      "judgments": [
+        {
+          "id": "C001",
+          "url": "https://www.agoda.com/theme/pay-at-hotel/city/nha-trang-vn.html",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C002",
+          "url": "https://biriukov.dev/posts/async-rust-gocha-tokio-cancelation-select-future-then/",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C003",
+          "url": "https://buildwithrust.com/async-rust-with-tokio-building-p2p-blockchain-networking",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C004",
+          "url": "https://cadabra.science/the_cadabra_book.pdf",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C005",
+          "url": "https://chadaustin.me/",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C006",
+          "url": "https://www.cisa.gov/news-events/bulletins/sb25-356",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C007",
+          "url": "https://crates.io/crates/asupersync",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C008",
+          "url": "https://docs.rs/crate/tokio/latest",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C009",
+          "url": "https://www.dpipe.ru/en/lastchanges_en.html",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C010",
+          "url": "https://github.com/Mattbusel/tokio-prompt-orchestrator",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C011",
+          "url": "https://github.com/minghuaw/fe2o3-amqp/issues/22",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C012",
+          "url": "https://github.com/mitmproxy/mitmproxy/issues/8412",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C013",
+          "url": "https://github.com/tokio-rs/tokio/releases",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C014",
+          "url": "https://www.rfc-editor.org/rfc/rfc7540.html",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C015",
+          "url": "https://shove.rs/guides/shutdown/",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C016",
+          "url": "https://sunshowers.io/posts/cancelling-async-rust/",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C017",
+          "url": "https://tokio.rs/tokio/topics/shutdown",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C018",
+          "url": "https://velog.io/@pandawithcat/Cancellation-Safety-in-Rust",
+          "grade": 2,
+          "basis": "SERP title/snippet only",
+          "reason": "Concrete cancellation safety and read_exact data-loss guidance.",
+          "borderline": true,
+          "borderline_reason": "Concrete select/read_exact cancellation behavior, recv appears in code but its safety is not explicit."
+        }
+      ]
+    },
+    {
+      "id": "n10",
+      "query": "JavaScript Array sort toSorted mutation ES2023 difference",
+      "judgments": [
+        {
+          "id": "C001",
+          "url": "https://claritydev.net/blog/immutable-array-operations-tosorted-tospliced-toreversed",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C002",
+          "url": "https://www.deep-log.com/languages/javascript/values/mutation-vs-non-mutation",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C003",
+          "url": "https://www.dev-archive.com/blog/%EC%9B%90%EB%B3%B8%EC%9D%B4-%EB%B3%B4%EC%A1%B4%EB%90%98%EB%8A%94-%EB%B0%B0%EC%97%B4-%EB%A9%94%EC%84%9C%EB%93%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C004",
+          "url": "https://dev.to/sylwia-lask/16-modern-javascript-features-that-might-blow-your-mind-4h5e",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C005",
+          "url": "https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C006",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSorted",
+          "grade": 2,
+          "basis": "SERP title/snippet only",
+          "reason": "Concrete sorting copy versus mutation behavior; C014 explicitly anchors ECMAScript2023.",
+          "borderline": true,
+          "borderline_reason": "Explicit immutable/copying sorting behavior; the ES2023 year is not explicit. Useful source-level help; strict sensitivity downgrades this."
+        },
+        {
+          "id": "C007",
+          "url": "https://flaviocopes.com/javascript-immutable-array-methods/",
+          "grade": 2,
+          "basis": "SERP title/snippet only",
+          "reason": "Concrete sorting copy versus mutation behavior; C014 explicitly anchors ECMAScript2023.",
+          "borderline": true,
+          "borderline_reason": "Explicit immutable/copying sorting behavior; the ES2023 year is not explicit. Useful source-level help; strict sensitivity downgrades this."
+        },
+        {
+          "id": "C008",
+          "url": "https://www.garth.cz/js-manual/array-tosorted/",
+          "grade": 2,
+          "basis": "SERP title/snippet only",
+          "reason": "Concrete sorting copy versus mutation behavior; C014 explicitly anchors ECMAScript2023.",
+          "borderline": true,
+          "borderline_reason": "Explicit immutable/copying sorting behavior; the ES2023 year is not explicit. Useful source-level help; strict sensitivity downgrades this."
+        },
+        {
+          "id": "C009",
+          "url": "https://github.com/GSTJ/magic/blob/main/DECISIONS.md",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C010",
+          "url": "https://github.com/millionco/react-doctor/blob/main/packages/oxlint-plugin-react-doctor/src/plugin/rule-registry.ts",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C011",
+          "url": "https://howtodoinjava.com/typescript/typescript-array-of-objects/",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C012",
+          "url": "https://javascript.info/array",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C013",
+          "url": "https://www.linkedin.com/posts/abhishek-jha07_frontendengineering-webperformance-react-activity-7503175950235475968-vAD1",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C014",
+          "url": "https://www.sonarsource.com/blog/es2023-new-array-copying-methods-javascript/",
+          "grade": 2,
+          "basis": "SERP title/snippet only",
+          "reason": "Concrete sorting copy versus mutation behavior; C014 explicitly anchors ECMAScript2023.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C015",
+          "url": "https://velog.io/@leeyw2709/ES2023%EC%97%90%EC%84%9C-%EB%8F%84%EC%9E%85%EB%90%9C-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%9D%98-%EC%83%88%EB%A1%9C%EC%9A%B4-%EB%B0%B0%EC%97%B4-%EB%B3%B5%EC%82%AC-%EB%A9%94%EC%84%9C%EB%93%9C",
+          "grade": 2,
+          "basis": "SERP title/snippet only",
+          "reason": "Concrete sorting copy versus mutation behavior; C014 explicitly anchors ECMAScript2023.",
+          "borderline": true,
+          "borderline_reason": "Explicit immutable/copying sorting behavior; the ES2023 year is not explicit. Useful source-level help; strict sensitivity downgrades this."
+        },
+        {
+          "id": "C016",
+          "url": "https://www.w3schools.com/js/js_array_sort.asp",
+          "grade": 2,
+          "basis": "SERP title/snippet only",
+          "reason": "Concrete sorting copy versus mutation behavior; C014 explicitly anchors ECMAScript2023.",
+          "borderline": true,
+          "borderline_reason": "Explicit immutable/copying sorting behavior; the ES2023 year is not explicit. Useful source-level help; strict sensitivity downgrades this."
+        },
+        {
+          "id": "C017",
+          "url": "https://www.w3schools.com/jsref/jsref_array_tosorted.asp",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C018",
+          "url": "https://youngmi-k.github.io/javascript/JavaScript_5/",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        }
+      ]
+    },
+    {
+      "id": "n11",
+      "query": "Redis SET NX PX GET return value existing key documentation",
+      "judgments": [
+        {
+          "id": "C001",
+          "url": "https://blog.naver.com/hippo420/224041914801",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C002",
+          "url": "https://blog.naver.com/okodee/224275486461",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C003",
+          "url": "https://cloud.google.com/memorystore/docs/redis/pricing",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C004",
+          "url": "https://devtechnosys.com/",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C005",
+          "url": "https://doc.3forge.com/datasource_adapters/redis/",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C006",
+          "url": "https://gist.github.com/olih/662b80dafffc5525abebe396591cb1a8",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C007",
+          "url": "https://github.com/manizada/OVSwrap/blob/main/ovswrap-poc.py",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C008",
+          "url": "https://jsr.io/@db/redis/doc",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C009",
+          "url": "https://labex.io/cheatsheets/redis",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C010",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C011",
+          "url": "https://www.npmjs.com/package/redis",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C012",
+          "url": "https://www.npmjs.com/package/redislock",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C013",
+          "url": "https://pkg.go.dev/github.com/gogf/gf/v2/database/gredis",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C014",
+          "url": "https://redis-py2.readthedocs.io/en/latest/",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C015",
+          "url": "https://redis.io/docs/latest/commands/get/",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C016",
+          "url": "https://redis.io/docs/latest/commands/set/",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C017",
+          "url": "https://redis.io/docs/latest/commands/setnx/",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C018",
+          "url": "https://redis.io/feature-form/",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C019",
+          "url": "https://redis.readthedocs.io/en/stable/commands.html",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        }
+      ]
+    },
+    {
+      "id": "n12",
+      "query": "curl --resolve --connect-to Host TLS SNI difference",
+      "judgments": [
+        {
+          "id": "C001",
+          "url": "https://blog.naver.com/sung_mk1919/224017027607",
+          "grade": 2,
+          "basis": "SERP title/snippet only",
+          "reason": "Concrete --connect-to/--resolve examples relating Host and TLS SNI.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C002",
+          "url": "https://curl.se/docs/manpage.html",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C003",
+          "url": "https://curl2code.com/cs/guides/curl-ssl-proxy",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C004",
+          "url": "https://www.digicert.com/ssl-checker",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C005",
+          "url": "https://djangocas.dev/blog/test-tls-connectivity-with-openssl/",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C006",
+          "url": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/playbooks/hybrid/connection-resets-during-tls-handshake?hl=ko",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C007",
+          "url": "https://www.freshports.org/ftp/curl/",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C008",
+          "url": "https://gateway.envoyproxy.io/docs/tasks/security/tls-termination/",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C009",
+          "url": "https://github.com/curl/curl/discussions/6466",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C010",
+          "url": "https://github.com/fscarmen/cfnat",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C011",
+          "url": "https://hpbn.co/transport-layer-security-tls/",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C012",
+          "url": "https://www.iplocation.net/blog/why-dns-tls-and-multi-region-checks-matter-for-website-uptime",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C013",
+          "url": "https://learn.microsoft.com/cs-cz/azure/aks/csi-secrets-store-nginx-tls",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C014",
+          "url": "https://mate.naver.com/#partners",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C015",
+          "url": "https://pkg.odin-lang.org/vendor/curl/",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C016",
+          "url": "https://www.root.cz/man/1/curl/",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C017",
+          "url": "https://www.ssdnodes.com/learn/what-is-private-dns",
+          "grade": 0,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        },
+        {
+          "id": "C018",
+          "url": "https://superuser.com/questions/793600/curl-and-sni-enabled-server",
+          "grade": 1,
+          "basis": "SERP title/snippet only",
+          "reason": "No concrete direct support for the requested relationship in this card.",
+          "borderline": false,
+          "borderline_reason": null
+        }
+      ]
+    }
+  ]
+}

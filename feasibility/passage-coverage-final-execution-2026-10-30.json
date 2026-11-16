@@ -1,0 +1,150 @@
+{
+  "task": "TASK-20261030-184909-001",
+  "created_at_utc": "2026-10-30T16:39:36.376083+00:00",
+  "stages": {
+    "v7_development_core_only_rejected": {
+      "cases": 10,
+      "generative_calls": 29,
+      "priced_generations": 29,
+      "reported_cost_usd": 0.004632336,
+      "unpriced_generations": 0,
+      "reads": 40,
+      "reranker_calls": 36,
+      "reranker_pairs": 430
+    },
+    "v7_development_atomic": {
+      "cases": 8,
+      "generative_calls": 24,
+      "priced_generations": 24,
+      "reported_cost_usd": 0.004182368,
+      "unpriced_generations": 0,
+      "reads": 32,
+      "reranker_calls": 28,
+      "reranker_pairs": 319
+    },
+    "v7_fresh_baseline": {
+      "cases": 12,
+      "generative_calls": 35,
+      "priced_generations": 35,
+      "reported_cost_usd": 0.00620095,
+      "unpriced_generations": 0,
+      "reads": 47,
+      "reranker_calls": 39,
+      "reranker_pairs": 804
+    },
+    "v7_fresh_fixed": {
+      "cases": 12,
+      "generative_calls": 33,
+      "priced_generations": 33,
+      "reported_cost_usd": 0.006155584,
+      "unpriced_generations": 0,
+      "reads": 47,
+      "reranker_calls": 38,
+      "reranker_pairs": 876
+    },
+    "v7_release_mcp": {
+      "generative_calls": 3,
+      "unpriced_generations": 3,
+      "reported_cost_usd": null,
+      "reads": 4,
+      "reranker_calls": 4,
+      "reranker_pairs": 61,
+      "status": "partial",
+      "errors": [
+        "unsupported_direct_evidence_or_constraints: 1 downgraded"
+      ]
+    },
+    "v8_development": {
+      "cases": 6,
+      "generative_calls": 17,
+      "priced_generations": 17,
+      "reported_cost_usd": 0.0030858220000000002,
+      "unpriced_generations": 0,
+      "reads": 24,
+      "reranker_calls": 21,
+      "reranker_pairs": 375
+    },
+    "v8_comparison_development": {
+      "cases": 1,
+      "generative_calls": 3,
+      "priced_generations": 3,
+      "reported_cost_usd": 0.000459374,
+      "unpriced_generations": 0,
+      "reads": 4,
+      "reranker_calls": 3,
+      "reranker_pairs": 67
+    },
+    "final8_baseline": {
+      "cases": 8,
+      "generative_calls": 21,
+      "priced_generations": 21,
+      "reported_cost_usd": 0.00323023,
+      "unpriced_generations": 0,
+      "reads": 31,
+      "reranker_calls": 22,
+      "reranker_pairs": 416
+    },
+    "final8_fixed": {
+      "cases": 8,
+      "generative_calls": 19,
+      "priced_generations": 19,
+      "reported_cost_usd": 0.003068878,
+      "unpriced_generations": 0,
+      "reads": 28,
+      "reranker_calls": 22,
+      "reranker_pairs": 428
+    },
+    "v8_release_mcp": {
+      "generative_calls": 3,
+      "unpriced_generations": 3,
+      "reported_cost_usd": null,
+      "reads": 4,
+      "reranker_calls": 4,
+      "reranker_pairs": 61,
+      "status": "ok",
+      "errors": []
+    }
+  },
+  "totals": {
+    "priced_generations": 181,
+    "unpriced_generations": 6,
+    "generative_calls": 187,
+    "reported_cost_usd": 0.031015542
+  },
+  "source_acquisition": {
+    "primary_new_queries": 20,
+    "primary_cards": 371,
+    "retrieval_logical_calls": 40,
+    "extra_mcp_logical_calls": 4,
+    "source_only_gold_reads": 7,
+    "failed_gold_reads": 2,
+    "primary_final8_raw_snapshots": 34
+  },
+  "v7_annotation_erratum": "p12C005 is a full positive missed during first source scan; frozen original preserved, sensitivity separately disclosed",
+  "final8_gold_review": "pending source-only author and blind peer review; predictions not yet inspected",
+  "final8_code_frozen_before_both_branches": true,
+  "final8_code_freeze_exact": true,
+  "verification": {
+    "ordinary_tests": 70,
+    "unit": 65,
+    "stdio": 5,
+    "release_stdio": 5,
+    "clippy": "passed",
+    "release_build": "passed",
+    "live_release_mcp": "v7 passed with partial safe grounding downgrade; finalv8 passed statusok without errors",
+    "independent_acceptance": false
+  },
+  "unchanged_guards": {
+    "net.rs": true,
+    "search.rs": true,
+    "policy.rs": true,
+    "rescue.rs": true,
+    "mcp.rs": true
+  },
+  "original20_sha256": "b67e3269830ae0e976aa9b4c5dc2f6b9c3e922ad1adda35738289d6b1b8325d6",
+  "limits": [
+    "Provider-reported cost only;6 MCP generations unpriced, actual billing unknown",
+    "First12-v7 cohort became development; only final8 is untouched for finalv8 inference",
+    "No day2/load/VPS/MiMo or formal independent ready_to_merge acceptance"
+  ]
+}

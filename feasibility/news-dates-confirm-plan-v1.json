@@ -1,0 +1,212 @@
+{
+  "version": "news-dates-confirm-plan-v1",
+  "task": "TASK-20261103-153636-001",
+  "question": "Does cumulative v14 candidate improve full finaldirect recall while preserving city/date/audit safety, on a separately frozen adaptive sixquery confirmation?",
+  "reason_before_confirm_inference": "Supplemental ds02 source-qualified positive bodies/dates passed but activeR3city check stayedmissing after genericnews/recency tokens consumed anchors; user recall goal still unmet. Root authorizes one lastbounded confirmation after actualsaved-positive/quiznegative component controls.",
+  "stage": "Adaptive hypothesis/mechanism-targeted confirmation, not independentgeneralization/qualification; no pooling withpreviouscohorts.",
+  "case_file": "feasibility/news-dates-confirm-cases-v1.json",
+  "as_of": "2026-11-03",
+  "timezone": "Europe/Moscow",
+  "prior_scores_preserved": {
+    "NEW12_v12_v13": "primary3/4->3/4=75->75%,0newFP/unknown-direct; no gain",
+    "supplement_v12_v13": "primary0/2->0/2; no gain; source-aware, separate",
+    "artifacts": "Previoussource/binary snapshots, rawcaptures, frozen sourcegold and resultfiles remain preserved; newcandidate intentionally cumulativev14."
+  },
+  "baseline": "preserved request-evidence-v12-coverage binary",
+  "candidate": "request-evidence-v14-news-anchors cumulative ownpublicationdate recovery, primaryarticlebody scope, city audit guidance plus trusted-news anchor guidance",
+  "candidate_scope": [
+    "Trustednews coverage guidance doesnot turn genericnews/новости/городские or recency adjectives repeating intent/trustedcalendar into independentanchors.",
+    "All actually requested place/topic/version/date conditions remainmandatory in core/fullquery audit; activechecks positions mustmatch actualanchors; missingactive check never promoted.",
+    "Ownpublication parser/date/type, exactliteral witnesses, core/heading guards, semantic audit and sourceconflict/net protections staystrict.",
+    "Cumulativecandidate includes earlier scopedv13 changes; freshv12/v14 contrast isnot purecausalmeasurement of anchor guidance alone.",
+    "Existing trusted-news CityGuide explicitly rejects a headline merely addressing city readers (known geographyquiz negative) as proof of an actual city event; own event/body must relate to requested city. This is a narrow preconfirmation safetyclarification, not a new genre/date/parser/geography rule.",
+    "Final preconfirmation NEWS_PLACE_GUIDANCE allows an OWN FACTUAL main headline locating the SAME event in the requested city to bind substantive event body when the city name is not repeated there. Non-core place witnesses may quote H/T; CORE still needs substantive S/B and cannot copy the headline. Publisher/site-title suffix/audience-address/foreign teaser do not establish event location. Fullquery audit and active-city obligation remainmandatory."
+  ],
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "reranker": "Qwen3-Reranker-0.6B-4bit",
+  "evidence_versions": {
+    "baseline": "request-evidence-v12-coverage",
+    "fixed": "request-evidence-v14-news-anchors"
+  },
+  "per_query_max": {
+    "logical_search_calls": 2,
+    "classification_calls": 3,
+    "document_reads": 4,
+    "reranker_calls": 4,
+    "runtime_seconds": 180,
+    "source_context_chars_per_model_call": 24000
+  },
+  "maximum_ranked_search_calls": 12,
+  "one_attempt_each_arm_case": true,
+  "arm_order": [
+    [
+      "ca01",
+      "baseline"
+    ],
+    [
+      "ca01",
+      "fixed"
+    ],
+    [
+      "ca02",
+      "fixed"
+    ],
+    [
+      "ca02",
+      "baseline"
+    ],
+    [
+      "ca03",
+      "baseline"
+    ],
+    [
+      "ca03",
+      "fixed"
+    ],
+    [
+      "ca04",
+      "fixed"
+    ],
+    [
+      "ca04",
+      "baseline"
+    ],
+    [
+      "ca05",
+      "baseline"
+    ],
+    [
+      "ca05",
+      "fixed"
+    ],
+    [
+      "ca06",
+      "fixed"
+    ],
+    [
+      "ca06",
+      "baseline"
+    ]
+  ],
+  "groups": {
+    "current_news_ca01_ca05": [
+      "ca01",
+      "ca02",
+      "ca03",
+      "ca04",
+      "ca05"
+    ],
+    "known_city_source_overlap_ca01_ca04": [
+      "ca01",
+      "ca02",
+      "ca03",
+      "ca04"
+    ],
+    "new_city_ca05": [
+      "ca05"
+    ],
+    "future_control_ca06": [
+      "ca06"
+    ],
+    "adaptive_confirm_all6": [
+      "ca01",
+      "ca02",
+      "ca03",
+      "ca04",
+      "ca05",
+      "ca06"
+    ]
+  },
+  "source_policy": "Original query only, existing Seznam/Naver; no extra search/scraping API. No app/download queries; andro.io/subdomains blocked and never eligible for validation. Model/key/Qwen settings trusted startup only.",
+  "transport": "Existingnative CLI samepolicy::Session::run/public_result, freshSession/process percase/arm, sequentialalternating, exactprimaryrawHTML/docs/modelcalls captured. Reuse frozenhelpers byruntimeoverrides, do not editoldfiles.",
+  "stop": "Atmost12querycalls; anysourceblock/forbiddenhost/transport/integrity failure stopsallremainingpaths. No retry/reset/substitution; no tune afterconfirmationstarts, retainbad/emptyoutcomes.",
+  "source_gold_rubric": {
+    "reference": "feasibility/news-dates-plan-v1.json",
+    "sha256": "f12fc065f2ac68ab9b7a0f847b01c60bee160cf01ff3969ecb50780418ccdebe",
+    "annotation": {
+      "schema": {
+        "rows": [
+          {
+            "blind_id": "sha256(case_id+newline+canonical_url)[:16]",
+            "case_id": "ca01..ca06",
+            "url": "observed URL matching blind_id",
+            "grade": "0|1|2|null",
+            "kind": "article|feed|application|other|unknown",
+            "published_date": "YYYY-MM-DD|null",
+            "source_reviewed": "boolean",
+            "date_verified": "boolean",
+            "reason": "nonempty string",
+            "evidence": [
+              "short exact source quote with path/URL"
+            ],
+            "event_cluster": "optional stable story cluster",
+            "publisher_cluster": "optional publisher/domain cluster"
+          }
+        ]
+      },
+      "grade2": "Specific full original article matches requested city/topic/site and full own publication date in window, no date after as_of. Runtime kind/eligible/direct is never source gold.",
+      "grade1": "Feed/navigation or useful clearly incomplete material, never an eligible full news article. Missing original or unresolved essential date is unknown unless independently clear wrong place/topic/period.",
+      "grade0": "Source clearly wrong place/topic/site/period or app advertisement for news-reading intent; card-only 0/1 marked provisional. Controls may produce positive sources if actually suitable; no expected score is imposed.",
+      "unknown": "Original absent/inaccessible, source insufficient, own full publication date unresolved, or validation cap exhausted; excluded from known-positive denominator and separate from FP.",
+      "date_rules": [
+        "Full own Article/NewsArticle publication date bound to article identity; never query/URL/copyright/clock/adjacent teaser/year inference.",
+        "Modified/event/other-entity dates are not publication; nested/foreign dates not accepted as own.",
+        "Date/time offsets consistently converted to Moscow calendar.",
+        "ca01..ca05 default last3Moscow calendar days2026-11-01..03; ca06 future2030-11-03 cannot qualify asof2026-11-03."
+      ],
+      "dedup": "Per-case canonical URL; repeated source across queries counts case/URL, with separate event/publisher cluster disclosures.",
+      "gold_freeze": "Blind source-only annotators inspect all primary captured variants for a URL. Freeze labels before prediction join; no arm/model/runtime verdicts. If variants disagree materially on suitability, mark unknown and disclose; primary grade2 requires all supplied complete variants suitable (unavailable variants remain missing, not invented negatives)."
+    },
+    "note": "Same sourcequalified city/topic/site/calendar rubric and allrelevantprimaryvariant rules, adjusted onlyto6fixedcaseIDs/windows. No sourcegoldregood afterjoin."
+  },
+  "recall": {
+    "primary": "paired_read_returned_union_gold_direct_recall",
+    "denominator": "Every known-grade2 case/URL in successful READ union plus returned union of BOTH arms, only cases executed successfully by BOTH arms. Same denominator per arm.",
+    "numerator": "Denominator URLs actually returned as direct by this arm in top10.",
+    "fn": "Denominator minus numerator, including read-but-not-returned and URLs only observed by opposite arm.",
+    "secondary": "paired_returned_union_gold_direct_recall, same prior definition, separately labelled and not substituted for primary.",
+    "undefined": "null before gold, without paired cases, or zero known positives; never made-up0/100.",
+    "unknowns": "All observed/unknown union counts plus per-arm missing originals; unknown direct separate from known FP. Known-positive-only denominator can still understate opportunities when cap/unknown sources remain.",
+    "limits": "Conditional known-positive observed READ+returned corpus, not candidate-pool/full-web recall. Live source variants can differ; disagreements become unknown and are disclosed. Shared CLI/MCP run/public_result is code-backed, not proof of deployment/transport equivalence under all conditions."
+  },
+  "source_capture": "SuccessfulREAD+returned union; exactnativeoriginals underhash-onlyblindpaths, allcase-relevant variants; unread/missing originalsunknown, noextraHTTP/model/extract forsourcebundle.",
+  "quality_gates": [
+    "All12validstructured captures plusallobservedtoken annotations; exactmodel/version/Qwen/budgets/sourceintegrity.",
+    "No newknown unsuitable directIDs vsbaseline samecase/URL; candidateunknowndirect0; preservedate/city/core/audit safety.",
+    "Actualinitialclassifications separatefrom vacuouslyvalidempty calls; parser/sourceerrors andmissingcalls explicit."
+  ],
+  "usefulness_gate": "Positive primary commonknown-positive READ+returned directrecall delta withsafetygate; no generalqualification from adaptive6 or source/eventoverlap.",
+  "measurements": [
+    "Per-case/current/future/all6 READ+returned primary recall, returned-only secondary clearlylabelled.",
+    "ExactTP/FP/FN/newfalseIDs/unknown source/direct coverage; event/publisher-domain clusters separate.",
+    "Source/targetURLoverlap andmatchedraw modelcontext/input differences; stage failure reasons.",
+    "PhysicalHTTPreads/logicalsource/generative/Qwen/time/contextbudgets and actualinitialcounts."
+  ],
+  "baseline_binary": "runs/news-dates-2026-11-03/baseline-web-search",
+  "fixed_binary": "target/release/web-search",
+  "freeze_gate": "Finalsource/binary/tooling freeze onlyafter rootfinalstable, oldpositive/quiznegative actualQwen/coverage/audit controls and applicablechecks. No confirmationcall beforefreeze.",
+  "last_planned_bounded_cohort": true,
+  "deployment": "None; no newmodel/API/VPS/globalconfig/hook.",
+  "preconfirmation_development_controls": "Root planned actualsavedHTML Chelyabinsk3 controls (2sourcequalified positives + geographyquiz negative), then savedNizhny3 regression (2old positives + regionalTV negative); realQwen/coverage/audit, no fresh targetHTTP/search. All failures/attempts preserved before confirmationstarts.",
+  "mechanism_sensitive_query_design": {
+    "amended_before_any_confirm_calls": true,
+    "initial6_unexecuted_archive": "runs/news-dates-2026-11-03/confirm/cases-pre-mechanism-sensitivity-amendment.json",
+    "rationale": "Initial2word proposals mightnot exercise3anchors->4active missingcheck pathology. Finalfirst5 include fresh/last andcity-news descriptors toprobe the trusted-news anchor contract. Futureca06 unchanged.",
+    "final_queries": [
+      "свежие новости Челябинска",
+      "последние новости Перми",
+      "свежие новости Уфы",
+      "последние городские новости Екатеринбурга",
+      "свежие городские новости Омска",
+      "новости Челябинска транспорт 3 ноября 2030"
+    ],
+    "no_failed_query_substitution": "No initial6query ever ran; no results observed forreplaced wording; all earlier NEW12/supplement failures/scores preserved andseparate.",
+    "scope": "Query-heldout strings only; cities/sources/URLs can overlap, adaptivehypothesis/sourceaware design."
+  },
+  "preconfirmation_v14_prompt_attempts": {
+    "preserved_failed_attempts": "Earlier A/B v14 prompt controls preserved before finalC; initialcity-only-anchor control still gave0/2direct because model demanded repeated cityname inbody despite ownfactualmainheadline. Not an identicalprompt reroll.",
+    "strict_body_model_archive": "runs/news-dates-2026-11-03/anchor-fix/v14-strict-body-model.rs",
+    "finalC_root_report_before_confirmation": "Actualsaved Chely3control green: C020quizbackground, C021/C022direct,2generative/3Qwen, anchors[Челябинска]; cityR1 supported byownfactualH/T plus substantivebodycore. Nizhny3negative regression andfinalreleasechecks still required before source/binaryfreeze.",
+    "scope_boundaries": "No parser/date/type/core-title guard/audit changes; noncoreplace contextual witness clarified only in trustednews guidance. Earlier NEW12 andsupplement v13no-gains remainunchanged andseparate."
+  }
+}

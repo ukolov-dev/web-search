@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "web-search": {
+      "command": "/absolute/path/to/web-search/target/release/web-search",
+      "args": [
+        "mcp"
+      ]
+    }
+  }
+}

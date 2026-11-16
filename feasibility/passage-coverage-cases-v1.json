@@ -1,0 +1,96 @@
+{
+  "protocol": {
+    "date": "2026-10-30",
+    "new_cases": 12,
+    "baseline": "currentv6",
+    "fixed": "v7 diverseQwen/core-querycoverage/declaredcodeextraction",
+    "no_holdout_tuning": true,
+    "gold": "source-only author before predicted labels;unknowns separate;notindependentacceptance"
+  },
+  "cases": [
+    {
+      "id": "p01",
+      "query": "Python pathlib Path resolve strict False symlinks missing path absolute difference",
+      "forms": [
+        "Python pathlib Path resolve strict False symlinks missing path absolute difference"
+      ]
+    },
+    {
+      "id": "p02",
+      "query": "git reset --soft --mixed --hard index working tree changes",
+      "forms": [
+        "git reset --soft --mixed --hard index working tree changes"
+      ]
+    },
+    {
+      "id": "p03",
+      "query": "Rust Iterator size_hint ExactSizeIterator lower upper bounds guarantees",
+      "forms": [
+        "Rust Iterator size_hint ExactSizeIterator lower upper bounds guarantees"
+      ]
+    },
+    {
+      "id": "p04",
+      "query": "PostgreSQL row level security table owner FORCE ROW LEVEL SECURITY bypass",
+      "forms": [
+        "PostgreSQL row level security table owner FORCE ROW LEVEL SECURITY bypass"
+      ]
+    },
+    {
+      "id": "p05",
+      "query": "SQLite UPSERT DO UPDATE excluded ABORT statement rollback",
+      "forms": [
+        "SQLite UPSERT DO UPDATE excluded ABORT statement rollback"
+      ]
+    },
+    {
+      "id": "p06",
+      "query": "Docker bind mount readonly recursive submounts Linux kernel 5.12",
+      "forms": [
+        "Docker bind mount readonly recursive submounts Linux kernel 5.12"
+      ]
+    },
+    {
+      "id": "p07",
+      "query": "CSS position sticky nearest scrolling ancestor overflow hidden auto",
+      "forms": [
+        "CSS position sticky nearest scrolling ancestor overflow hidden auto"
+      ]
+    },
+    {
+      "id": "p08",
+      "query": "HTTP 304 Content-Length selected 200 response no message body",
+      "forms": [
+        "HTTP 304 Content-Length selected 200 response no message body"
+      ]
+    },
+    {
+      "id": "p09",
+      "query": "Python functools lru_cache async coroutine await reuse limitations",
+      "forms": [
+        "Python functools lru_cache async coroutine await reuse limitations"
+      ]
+    },
+    {
+      "id": "p10",
+      "query": "git sparse-checkout cone mode parent directories files included",
+      "forms": [
+        "git sparse-checkout cone mode parent directories files included"
+      ]
+    },
+    {
+      "id": "p11",
+      "query": "PostgreSQL CTE MATERIALIZED NOT MATERIALIZED side effect free multiple references",
+      "forms": [
+        "PostgreSQL CTE MATERIALIZED NOT MATERIALIZED side effect free multiple references"
+      ]
+    },
+    {
+      "id": "p12",
+      "query": "Rust Arc clone deep copy underlying value reference count",
+      "forms": [
+        "Rust Arc clone deep copy underlying value reference count"
+      ]
+    }
+  ]
+}

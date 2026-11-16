@@ -1,0 +1,104 @@
+{
+  "base": "bda65f3",
+  "mode": "test-only; offline identical HTML, explicit target-section trigger",
+  "pairs": [
+    {
+      "id": "cache",
+      "url": "https://www.rfc-editor.org/rfc/rfc9111.html",
+      "question": "RFC 9111 §5.2.2.5: что означает no-store для private и shared caches, и есть ли оговорка со ссылкой на другой раздел?",
+      "html_sha256": "ce91ee9848d2b9ac46386b0f0cbd4bfd9c0cd1948ebc363834cadc7e0997f3d7",
+      "needed_sections": [
+        "section-5.2.2.5",
+        "section-5.2.2.3"
+      ],
+      "arms": {
+        "baseline": {
+          "chars": 894,
+          "text_hash": "37472edfcba6869de48af3e0973c7817e10f25129e57590cc0b3ece3c36821d6",
+          "selected_sections": [
+            "section-5.2.2.5"
+          ],
+          "unresolved_references": [],
+          "offset_scope": "Unicode in this selected extracted text, never full-body offsets",
+          "truncated": false,
+          "question_sha256": "854e80d71f6ccdf1d61b5c1f0069c207fd0b6c33fe28dde03b65220bf760f152"
+        },
+        "candidate": {
+          "chars": 1404,
+          "text_hash": "9a95f9c0923d36353f1083e85e3f524cc9848a7de859d505de3ebf3df643c9b1",
+          "selected_sections": [
+            "section-5.2.2.5",
+            "section-5.2.2.3"
+          ],
+          "unresolved_references": [],
+          "offset_scope": "Unicode in this selected extracted text, never full-body offsets",
+          "truncated": false,
+          "question_sha256": "854e80d71f6ccdf1d61b5c1f0069c207fd0b6c33fe28dde03b65220bf760f152"
+        }
+      }
+    },
+    {
+      "id": "framing",
+      "url": "https://www.rfc-editor.org/rfc/rfc9112.html",
+      "question": "RFC 9112 §6.2: как Content-Length соотносится с Transfer-Encoding и какие правила обработки заданы в связанном разделе?",
+      "html_sha256": "587ec383523df5a9713f2f4192199876af1d6d4a260ce996e0a1f9e4f19dde42",
+      "needed_sections": [
+        "section-6.2",
+        "section-6.1"
+      ],
+      "arms": {
+        "baseline": {
+          "chars": 663,
+          "text_hash": "096f54ce56ae426d8e349ee3558e900c48123d38a0c3440f159e167b57edfb8a",
+          "selected_sections": [
+            "section-6.2"
+          ],
+          "unresolved_references": [],
+          "offset_scope": "Unicode in this selected extracted text, never full-body offsets",
+          "truncated": false,
+          "question_sha256": "84cbf4e90834c3865dda133ccaecc3c8d6bde138c1f5fe597d9d07dd2860d25e"
+        },
+        "candidate": {
+          "chars": 8203,
+          "text_hash": "429e20fb92a6de37fa972e109295750b10ccb75f6d3dd24a9f4d22e5d1158e01",
+          "selected_sections": [
+            "section-6.2",
+            "section-6.1",
+            "section-13.1"
+          ],
+          "unresolved_references": [
+            "https://www.rfc-editor.org/rfc/rfc9110#section-8.6",
+            "https://www.rfc-editor.org/rfc/rfc9110#section-8.6"
+          ],
+          "offset_scope": "Unicode in this selected extracted text, never full-body offsets",
+          "truncated": false,
+          "question_sha256": "84cbf4e90834c3865dda133ccaecc3c8d6bde138c1f5fe597d9d07dd2860d25e"
+        }
+      }
+    }
+  ],
+  "checks": [
+    {
+      "command": "CARGO_HOME=\"$PWD/.cache/cargo\" cargo test --locked --offline",
+      "results": [
+        "test result: ok. 176 passed; 0 failed; 41 ignored; 0 measured; 0 filtered out; finished in 2.02s",
+        "test result: ok. 6 passed; 0 failed; 10 ignored; 0 measured; 0 filtered out; finished in 0.72s"
+      ]
+    },
+    {
+      "command": "CARGO_HOME=\"$PWD/.cache/cargo\" cargo clippy --locked --offline --all-targets -- -D warnings",
+      "status": "passed"
+    },
+    {
+      "command": "SECTION_EXCEPTION_MANIFEST=<frozen manifest> SECTION_EXCEPTION_OUTPUT=<fresh directory> CARGO_HOME=\"$PWD/.cache/cargo\" cargo test --locked --offline captured_section_exception_pairs -- --ignored",
+      "status": "passed1; same original2HTMLs"
+    }
+  ],
+  "limitations": [
+    "original generic no-store heading ambiguity remains",
+    "one-hop local references only; external unresolved",
+    "framing includes extra bibliography section",
+    "no runtime/live/model acceptance",
+    "first wrapper-resolution candidate missed exception; retained separately"
+  ]
+}

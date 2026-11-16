@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "frozen_at": "2026-10-29T20:32:33.246115+03:00",
+  "purpose": "Unseen follow-up after new12 became development data. No tuning after this capture. Small author-assessed validation, not independent acceptance.",
+  "cases": [
+    {
+      "id": "h01",
+      "query": "HTTP 307 308 redirect method preservation difference documentation",
+      "forms": [
+        "HTTP 307 308 redirect method preservation difference documentation"
+      ]
+    },
+    {
+      "id": "h02",
+      "query": "site:sqlite.org foreign_keys PRAGMA transaction no effect documentation",
+      "forms": [
+        "site:sqlite.org foreign_keys PRAGMA transaction no effect documentation"
+      ]
+    },
+    {
+      "id": "h03",
+      "query": "Python pathlib Path.resolve Path.absolute symlink difference",
+      "forms": [
+        "Python pathlib Path.resolve Path.absolute symlink difference"
+      ]
+    },
+    {
+      "id": "h04",
+      "query": "Redis 6.0 release April 2020 ACL official",
+      "forms": [
+        "Redis 6.0 release April 2020 ACL official"
+      ]
+    },
+    {
+      "id": "h05",
+      "query": "PostgreSQL vacuum analyze autovacuum differences documentation",
+      "forms": [
+        "PostgreSQL vacuum analyze autovacuum differences documentation"
+      ]
+    },
+    {
+      "id": "h06",
+      "query": "HTTP Content-Security-Policy Report-Only enforcement отличие документация",
+      "forms": [
+        "HTTP Content-Security-Policy Report-Only enforcement отличие документация"
+      ]
+    }
+  ]
+}

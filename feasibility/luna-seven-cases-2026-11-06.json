@@ -1,0 +1,206 @@
+{
+  "schema": "seven-luna-search-test-v1",
+  "client_date": "2026-11-06",
+  "frozen_at": "2026-11-06T06:05:47.082820+00:00",
+  "base_commit": "82a3756",
+  "agent_model": "gpt-6-luna",
+  "product_model": "deepseek/deepseek-v4.1-flash-1017",
+  "reranker": "Qwen3-Reranker-0.6B-4bit",
+  "protocol": [
+    "Frozen binary and queries; per-agent evidence; root verifies Luna assessments.",
+    "Offline L1-L4; L5-L7 run14predefinedepisodes serialized by a shared lock; allowed Serp Seznam only unless available ledger says otherwise.",
+    "One durable shared refusal ledger; no retry after challenge/403/429; stop LLM calls after model refusal.",
+    "Reference primary pages read separately before freeze; no referenceURL injection into product.",
+    "Cache warm repetition is explicitly S01W; not an independent new query.",
+    "News fulfillment, source relevance, exact witness provenance, semantic support and budgets graded separately. No pooled corpus-recall claim.",
+    "No product patches/VPS/global config/newproviders/browser."
+  ],
+  "cases": [
+    {
+      "id": "S01",
+      "agent": "L5",
+      "tool": "search",
+      "query": "Rust Option::or и Option::or_else: что вычисляется eagerly и когда вызывается замыкание?",
+      "gold_aspects": [
+        "or argument evaluated eagerly",
+        "or_else closure lazy and only used for None"
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/option/enum.Option.html#method.or",
+        "https://doc.rust-lang.org/std/option/enum.Option.html#method.or_else"
+      ]
+    },
+    {
+      "id": "S01W",
+      "agent": "L5",
+      "tool": "search",
+      "query": "Rust Option::or и Option::or_else: что вычисляется eagerly и когда вызывается замыкание?",
+      "gold_aspects": [
+        "or argument evaluated eagerly",
+        "or_else closure lazy and only used for None"
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/option/enum.Option.html#method.or",
+        "https://doc.rust-lang.org/std/option/enum.Option.html#method.or_else"
+      ],
+      "cache_pair": "S01"
+    },
+    {
+      "id": "D01",
+      "agent": "L5",
+      "tool": "ranked_search",
+      "query": "Rust Option::or и Option::or_else: что вычисляется eagerly и когда вызывается замыкание?",
+      "gold_aspects": [
+        "or argument evaluated eagerly",
+        "or_else closure lazy and only used for None"
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/option/enum.Option.html#method.or",
+        "https://doc.rust-lang.org/std/option/enum.Option.html#method.or_else"
+      ]
+    },
+    {
+      "id": "S02",
+      "agent": "L5",
+      "tool": "search",
+      "query": "Python str.partition: возвращаемый тип и результат при отсутствии разделителя",
+      "gold_aspects": [
+        "returns a three-tuple",
+        "missing separator returns original string and two empty strings"
+      ],
+      "references": [
+        "https://docs.python.org/3/library/stdtypes.html#str.partition"
+      ]
+    },
+    {
+      "id": "D02",
+      "agent": "L5",
+      "tool": "ranked_search",
+      "query": "Python str.partition: возвращаемый тип и результат при отсутствии разделителя",
+      "gold_aspects": [
+        "returns a three-tuple",
+        "missing separator returns original string and two empty strings"
+      ],
+      "references": [
+        "https://docs.python.org/3/library/stdtypes.html#str.partition"
+      ]
+    },
+    {
+      "id": "S03",
+      "agent": "L5",
+      "tool": "search",
+      "query": "HTTP 429 Retry-After: заголовок обязателен или необязателен по RFC 6585?",
+      "gold_aspects": [
+        "429 means too many requests",
+        "Retry-After MAY, not mandatory"
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc6585.html#section-4"
+      ]
+    },
+    {
+      "id": "D03",
+      "agent": "L5",
+      "tool": "ranked_search",
+      "query": "HTTP 429 Retry-After: заголовок обязателен или необязателен по RFC 6585?",
+      "gold_aspects": [
+        "429 means too many requests",
+        "Retry-After MAY, not mandatory"
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc6585.html#section-4"
+      ]
+    },
+    {
+      "id": "N01",
+      "agent": "L5",
+      "tool": "ranked_search",
+      "query": "Воронеж новости город 6 ноября 2026",
+      "gold_aspects": [
+        "only same-event substantive city body evidence",
+        "own article publication date 2026-11-06",
+        "honest shortage when no verified article"
+      ],
+      "references": [],
+      "news": true
+    },
+    {
+      "id": "R01",
+      "agent": "L6",
+      "tool": "research",
+      "question": "Обязан ли сервер всегда присылать Retry-After вместе с HTTP 429? Подтверди различие MAY и MUST.",
+      "gold_aspects": [
+        "Retry-After optional MAY",
+        "429 denotes too many requests"
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc6585.html#section-4"
+      ]
+    },
+    {
+      "id": "R02",
+      "agent": "L6",
+      "tool": "research",
+      "question": "В Python str.partition возвращает список или кортеж из трёх элементов? Что будет, если разделитель отсутствует?",
+      "gold_aspects": [
+        "three-tuple, not list",
+        "original string then two empty strings if not found"
+      ],
+      "references": [
+        "https://docs.python.org/3/library/stdtypes.html#str.partition"
+      ]
+    },
+    {
+      "id": "R03",
+      "agent": "L6",
+      "tool": "research",
+      "question": "Сохраняет ли Rust Iterator::take_while первый элемент, на котором предикат вернул false, для последующего чтения того же итератора?",
+      "gold_aspects": [
+        "first false item consumed",
+        "next read starts after consumed rejected element"
+      ],
+      "references": [
+        "https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.take_while"
+      ]
+    },
+    {
+      "id": "N02",
+      "agent": "L6",
+      "tool": "research",
+      "question": "Найди две городские новости Воронежа с собственной датой публикации 6 ноября 2026 года. Назови события и ссылки, явно укажи нехватку подтверждения.",
+      "gold_aspects": [
+        "two distinct read article bodies about Voronezh city events",
+        "own publication dates 2026-11-06",
+        "no invented dates/events/URLs if evidence unavailable"
+      ],
+      "references": [],
+      "news": true
+    },
+    {
+      "id": "H01",
+      "agent": "L7",
+      "tool": "harness",
+      "prompt": "Обязан ли сервер всегда присылать Retry-After вместе с HTTP 429? Вызови research ровно один раз с этим вопросом, language=ru, затем кратко передай только подтверждённые утверждения, ссылки и пробелы.",
+      "gold_aspects": [
+        "Retry-After optional MAY not mandatory",
+        "outer answer preserves tool qualifiers and shortage"
+      ],
+      "references": [
+        "https://www.rfc-editor.org/rfc/rfc6585.html#section-4"
+      ]
+    },
+    {
+      "id": "H02",
+      "agent": "L7",
+      "tool": "harness",
+      "prompt": "Проверь городские новости Воронежа за 6 ноября 2026. Сначала вызови search с engine=seznam и query ровно \"Воронеж новости город 6 ноября 2026\", затем при полезной ссылке прочитай её через extract. Не более3вызовов MCP. Сообщай событие и собственную дату только из прочитанной статьи; при нехватке подтверждения скажи это.",
+      "gold_aspects": [
+        "actual tool calls search/extract or explicit inability",
+        "no false dates/events/app or feed articles",
+        "outer source links must exist in tool outputs"
+      ],
+      "references": [],
+      "news": true
+    }
+  ]
+}

@@ -1,0 +1,2335 @@
+{
+  "date": "2026-10-29",
+  "task_id": "TASK-20261029-201619-001",
+  "classifier": "conservative-evidence-v2",
+  "assessment": "Own author-agent preliminary SERP assessment, no independent acceptance. Model labels excluded from review projection. Existing original20 untouched.",
+  "development12": {
+    "baseline": {
+      "confusion": {
+        "tn": 138,
+        "tp": 28,
+        "fp": 47,
+        "fn": 0
+      },
+      "precision": 0.37333333333333335,
+      "recall": 1.0,
+      "per_case": [
+        {
+          "id": "d01",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "id": "d02",
+          "tp": 3,
+          "fp": 4,
+          "fn": 0
+        },
+        {
+          "id": "d03",
+          "tp": 7,
+          "fp": 4,
+          "fn": 0
+        },
+        {
+          "id": "d04",
+          "tp": 0,
+          "fp": 2,
+          "fn": 0
+        },
+        {
+          "id": "d05",
+          "tp": 1,
+          "fp": 6,
+          "fn": 0
+        },
+        {
+          "id": "d06",
+          "tp": 3,
+          "fp": 2,
+          "fn": 0
+        },
+        {
+          "id": "d07",
+          "tp": 1,
+          "fp": 10,
+          "fn": 0
+        },
+        {
+          "id": "d08",
+          "tp": 6,
+          "fp": 6,
+          "fn": 0
+        },
+        {
+          "id": "d09",
+          "tp": 0,
+          "fp": 6,
+          "fn": 0
+        },
+        {
+          "id": "d10",
+          "tp": 0,
+          "fp": 3,
+          "fn": 0
+        },
+        {
+          "id": "d11",
+          "tp": 5,
+          "fp": 2,
+          "fn": 0
+        },
+        {
+          "id": "d12",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0
+        }
+      ]
+    },
+    "quote_prompt_v1": {
+      "confusion": {
+        "tn": 164,
+        "tp": 20,
+        "fn": 8,
+        "fp": 21
+      },
+      "precision": 0.4878048780487805,
+      "recall": 0.7142857142857143,
+      "per_case": [
+        {
+          "id": "d01",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        {
+          "id": "d02",
+          "tp": 2,
+          "fp": 2,
+          "fn": 1
+        },
+        {
+          "id": "d03",
+          "tp": 4,
+          "fp": 2,
+          "fn": 3
+        },
+        {
+          "id": "d04",
+          "tp": 0,
+          "fp": 2,
+          "fn": 0
+        },
+        {
+          "id": "d05",
+          "tp": 1,
+          "fp": 4,
+          "fn": 0
+        },
+        {
+          "id": "d06",
+          "tp": 2,
+          "fp": 1,
+          "fn": 1
+        },
+        {
+          "id": "d07",
+          "tp": 1,
+          "fp": 3,
+          "fn": 0
+        },
+        {
+          "id": "d08",
+          "tp": 5,
+          "fp": 2,
+          "fn": 1
+        },
+        {
+          "id": "d09",
+          "tp": 0,
+          "fp": 2,
+          "fn": 0
+        },
+        {
+          "id": "d10",
+          "tp": 0,
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "id": "d11",
+          "tp": 4,
+          "fp": 2,
+          "fn": 1
+        },
+        {
+          "id": "d12",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        }
+      ]
+    },
+    "final": {
+      "confusion": {
+        "tn": 179,
+        "fn": 12,
+        "tp": 16,
+        "fp": 6
+      },
+      "precision": 0.7272727272727273,
+      "recall": 0.5714285714285714,
+      "per_case": [
+        {
+          "id": "d01",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "id": "d02",
+          "tp": 2,
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "id": "d03",
+          "tp": 2,
+          "fp": 2,
+          "fn": 5
+        },
+        {
+          "id": "d04",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        {
+          "id": "d05",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "id": "d06",
+          "tp": 2,
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "id": "d07",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        {
+          "id": "d08",
+          "tp": 5,
+          "fp": 2,
+          "fn": 1
+        },
+        {
+          "id": "d09",
+          "tp": 0,
+          "fp": 2,
+          "fn": 0
+        },
+        {
+          "id": "d10",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        {
+          "id": "d11",
+          "tp": 4,
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "id": "d12",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        }
+      ]
+    },
+    "candidate_count": 213,
+    "cases": [
+      {
+        "id": "d01",
+        "query": "PostgreSQL SELECT FOR UPDATE SKIP LOCKED очередь задач документация",
+        "manual_rule": "Only explicit worker queue + SKIP LOCKED card is direct; generic SELECT/locks are background.",
+        "manual_direct_pool": 1,
+        "baseline_direct_labels": 2,
+        "fixed_direct_labels": 0,
+        "baseline_top10_grade2": 1,
+        "fixed_top10_grade2": 0,
+        "candidate_grades": [
+          {
+            "id": "C001",
+            "url": "https://www.ashnik.com/postgresql-mypostgres/",
+            "grade": 0
+          },
+          {
+            "id": "C002",
+            "url": "https://blog.naver.com/hacwatch/223902340443",
+            "grade": 1
+          },
+          {
+            "id": "C003",
+            "url": "https://blog.naver.com/momsoft/224069751285",
+            "grade": 2
+          },
+          {
+            "id": "C004",
+            "url": "https://chadwilken.com/cs/postgresql-update-9/",
+            "grade": 0
+          },
+          {
+            "id": "C005",
+            "url": "https://estuary.dev/blog/postgresql-distinct-clause/",
+            "grade": 0
+          },
+          {
+            "id": "C006",
+            "url": "https://fr.wikipedia.org/wiki/PostgreSQL",
+            "grade": 0
+          },
+          {
+            "id": "C007",
+            "url": "https://www.geeksforgeeks.org/postgresql/postgresql-select-into/",
+            "grade": 0
+          },
+          {
+            "id": "C008",
+            "url": "https://gist.github.com/Rende11/b78fe3884de80c6588092192d45d7b4b",
+            "grade": 0
+          },
+          {
+            "id": "C009",
+            "url": "https://github.com/libredb/libredb-studio/blob/main/README_ru.md",
+            "grade": 0
+          },
+          {
+            "id": "C010",
+            "url": "https://help.keboola.com/components/extractors/database/postgresql/",
+            "grade": 0
+          },
+          {
+            "id": "C011",
+            "url": "https://www.initmax.com/wiki/how-to-update-postgresql-to-the-latest-version/",
+            "grade": 0
+          },
+          {
+            "id": "C012",
+            "url": "https://www.linkedin.com/pulse/postgresql-locks-part-1-table-level-lock-queue-william-muli-wq9ef",
+            "grade": 1
+          },
+          {
+            "id": "C013",
+            "url": "https://mate.naver.com/#partners",
+            "grade": 0
+          },
+          {
+            "id": "C014",
+            "url": "https://neon.com/postgresql/tutorial/select-into",
+            "grade": 0
+          },
+          {
+            "id": "C015",
+            "url": "https://www.postgresql.org/about/news/postgresql-163-157-1412-1315-and-1219-released-2858/",
+            "grade": 0
+          },
+          {
+            "id": "C016",
+            "url": "https://www.postgresql.org/docs/current/sql-select.html",
+            "grade": 1
+          },
+          {
+            "id": "C017",
+            "url": "https://www.postgresql.org/download/",
+            "grade": 0
+          },
+          {
+            "id": "C018",
+            "url": "https://stormatics.tech/blogs/select-for-update-in-postgresql",
+            "grade": 1
+          },
+          {
+            "id": "C019",
+            "url": "https://sukhjitsehra.wordpress.com/postgresql/",
+            "grade": 0
+          },
+          {
+            "id": "C020",
+            "url": "https://www.tutorialspoint.com/postgresql/postgresql_locks.htm",
+            "grade": 1
+          }
+        ]
+      },
+      {
+        "id": "d02",
+        "query": "HTTP 412 If-Match optimistic concurrency documentation",
+        "manual_rule": "Precondition/If-Match lost-update relation, not generic transactions.",
+        "manual_direct_pool": 3,
+        "baseline_direct_labels": 7,
+        "fixed_direct_labels": 2,
+        "baseline_top10_grade2": 3,
+        "fixed_top10_grade2": 2,
+        "candidate_grades": [
+          {
+            "id": "C001",
+            "url": "https://apiguide.dev/",
+            "grade": 0
+          },
+          {
+            "id": "C002",
+            "url": "https://azure.microsoft.com/en-us/blog/managing-concurrency-in-microsoft-azure-storage-2/",
+            "grade": 1
+          },
+          {
+            "id": "C003",
+            "url": "https://caddyserver.com/docs/api",
+            "grade": 0
+          },
+          {
+            "id": "C004",
+            "url": "https://checkerframework.org/manual/",
+            "grade": 0
+          },
+          {
+            "id": "C005",
+            "url": "https://dechonet.com/ko/guides/http-412-precondition-failed",
+            "grade": 2
+          },
+          {
+            "id": "C006",
+            "url": "https://developer.mozilla.org/ko/docs/Web/HTTP/Reference/Status/412",
+            "grade": 1
+          },
+          {
+            "id": "C007",
+            "url": "https://dreamtsoft.com/blog/http-etag-optimistic-concurrency/",
+            "grade": 2
+          },
+          {
+            "id": "C008",
+            "url": "https://en.wikipedia.org/wiki/Optimistic_concurrency_control",
+            "grade": 1
+          },
+          {
+            "id": "C009",
+            "url": "https://giraffe.wiki/docs",
+            "grade": 0
+          },
+          {
+            "id": "C010",
+            "url": "https://github.com/Brenopms/ts-event-sourcing",
+            "grade": 0
+          },
+          {
+            "id": "C011",
+            "url": "https://github.com/microsoft/api-guidelines/blob/vNext/azure/Guidelines.md",
+            "grade": 1
+          },
+          {
+            "id": "C012",
+            "url": "https://learn.microsoft.com/en-us/azure/cosmos-db/database-transactions-optimistic-concurrency",
+            "grade": 1
+          },
+          {
+            "id": "C013",
+            "url": "https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/perform-conditional-operations-using-web-api",
+            "grade": 1
+          },
+          {
+            "id": "C014",
+            "url": "https://matheuspalma.com/blog/optimistic-concurrency-http-apis-etags-if-match-and-conflict-design",
+            "grade": 2
+          },
+          {
+            "id": "C015",
+            "url": "https://www.npmjs.com/package/ampersand-optimistic-sync",
+            "grade": 1
+          },
+          {
+            "id": "C016",
+            "url": "https://nsis.sourceforge.io/Docs/Chapter4.html",
+            "grade": 0
+          },
+          {
+            "id": "C017",
+            "url": "https://www.rfc-editor.org/info/rfc7232/",
+            "grade": 1
+          },
+          {
+            "id": "C018",
+            "url": "https://skookumscript.com/docs/v3.0/",
+            "grade": 0
+          },
+          {
+            "id": "C019",
+            "url": "https://withbundo.blogspot.com/2017/07/http-13-http-iii-if-match-if-modified.html",
+            "grade": 1
+          }
+        ]
+      },
+      {
+        "id": "d03",
+        "query": "CSS container queries media queries сравнение",
+        "manual_rule": "Explicit media/container comparison; stale upcoming and incomplete alternatives background.",
+        "manual_direct_pool": 7,
+        "baseline_direct_labels": 11,
+        "fixed_direct_labels": 4,
+        "baseline_top10_grade2": 6,
+        "fixed_top10_grade2": 4,
+        "candidate_grades": [
+          {
+            "id": "C001",
+            "url": "https://12daysofweb.dev/2021/container-queries/",
+            "grade": 1
+          },
+          {
+            "id": "C002",
+            "url": "https://au.si/css-container-element-queries",
+            "grade": 1
+          },
+          {
+            "id": "C003",
+            "url": "https://blog.naver.com/alikerocknv/223928382803",
+            "grade": 1
+          },
+          {
+            "id": "C004",
+            "url": "https://blog.naver.com/emblim98/224063008335",
+            "grade": 1
+          },
+          {
+            "id": "C005",
+            "url": "https://blog.naver.com/jsy930609/224414982510",
+            "grade": 2
+          },
+          {
+            "id": "C006",
+            "url": "https://css.oddbird.net/rwd/query/",
+            "grade": 1
+          },
+          {
+            "id": "C007",
+            "url": "https://developer.mozilla.org/en-US/blog/getting-started-with-css-container-queries/",
+            "grade": 1
+          },
+          {
+            "id": "C008",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries",
+            "grade": 1
+          },
+          {
+            "id": "C009",
+            "url": "https://frontendchecklist.io/rules/css/container-queries",
+            "grade": 2
+          },
+          {
+            "id": "C010",
+            "url": "https://frontendfoc.us/issues/557",
+            "grade": 2
+          },
+          {
+            "id": "C011",
+            "url": "https://github.com/MarwanAlsoltany/centum",
+            "grade": 0
+          },
+          {
+            "id": "C012",
+            "url": "https://github.com/topics/container-queries",
+            "grade": 1
+          },
+          {
+            "id": "C013",
+            "url": "https://www.html5italia.com/script/423/Combinare-Container-Queries-Media-Queries.aspx",
+            "grade": 2
+          },
+          {
+            "id": "C014",
+            "url": "https://ishadeed.com/article/container-queries-are-finally-here/",
+            "grade": 1
+          },
+          {
+            "id": "C015",
+            "url": "https://ishadeed.com/article/css-container-query-guide/",
+            "grade": 1
+          },
+          {
+            "id": "C016",
+            "url": "https://mimo.org/glossary/css/container-queries",
+            "grade": 2
+          },
+          {
+            "id": "C017",
+            "url": "https://www.smashingmagazine.com/2021/05/css-container-queries-use-cases-migration-strategies/",
+            "grade": 2
+          },
+          {
+            "id": "C018",
+            "url": "https://storyware.co/understanding-container-queries-and-media-queries/",
+            "grade": 2
+          }
+        ]
+      },
+      {
+        "id": "d04",
+        "query": "site:docs.python.org/3/library asyncio TaskGroup ExceptionGroup",
+        "manual_rule": "TaskGroup + ExceptionGroup in mandatory site/path; no card supports both.",
+        "manual_direct_pool": 0,
+        "baseline_direct_labels": 2,
+        "fixed_direct_labels": 0,
+        "baseline_top10_grade2": 0,
+        "fixed_top10_grade2": 0,
+        "candidate_grades": [
+          {
+            "id": "C001",
+            "url": "https://docs.python.org/3.11/whatsnew/changelog.html",
+            "grade": 0
+          },
+          {
+            "id": "C002",
+            "url": "https://docs.python.org/3/library/asyncio-eventloop.html",
+            "grade": 1
+          },
+          {
+            "id": "C003",
+            "url": "https://docs.python.org/3/library/asyncio-graph.html",
+            "grade": 0
+          },
+          {
+            "id": "C004",
+            "url": "https://docs.python.org/3/library/asyncio-task.html",
+            "grade": 1
+          },
+          {
+            "id": "C005",
+            "url": "https://docs.python.org/3/library/asyncio-tools.html",
+            "grade": 1
+          },
+          {
+            "id": "C006",
+            "url": "https://docs.python.org/3/whatsnew/3.13.html",
+            "grade": 0
+          },
+          {
+            "id": "C007",
+            "url": "https://docs.python.org/3/whatsnew/3.14.html",
+            "grade": 0
+          },
+          {
+            "id": "C008",
+            "url": "https://docs.python.org/de/3/whatsnew/3.14.html",
+            "grade": 0
+          },
+          {
+            "id": "C009",
+            "url": "https://docs.python.org/pt-br/3/whatsnew/3.14.html",
+            "grade": 0
+          },
+          {
+            "id": "C010",
+            "url": "https://docs.python.org/zh-cn/3/whatsnew/3.14.html",
+            "grade": 0
+          }
+        ]
+      },
+      {
+        "id": "d05",
+        "query": "Python 3.13 free threading GIL release October 2024",
+        "manual_rule": "Version3.13, October2024 and free threading; individual aspects background.",
+        "manual_direct_pool": 1,
+        "baseline_direct_labels": 7,
+        "fixed_direct_labels": 0,
+        "baseline_top10_grade2": 1,
+        "fixed_top10_grade2": 1,
+        "candidate_grades": [
+          {
+            "id": "C001",
+            "url": "https://blog.naver.com/godinus/224037604659",
+            "grade": 1
+          },
+          {
+            "id": "C002",
+            "url": "https://docs.python.org/3/howto/free-threading-python.html",
+            "grade": 1
+          },
+          {
+            "id": "C003",
+            "url": "https://drew.silcock.dev/blog/everything-you-need-to-know-about-python-3-13/",
+            "grade": 1
+          },
+          {
+            "id": "C004",
+            "url": "https://dzone.com/articles/breaking-the-chains-of-the-gil-in-python",
+            "grade": 0
+          },
+          {
+            "id": "C005",
+            "url": "https://flyaps.com/blog/update-python-3-13/",
+            "grade": 1
+          },
+          {
+            "id": "C006",
+            "url": "https://github.com/contourpy/contourpy/issues/407",
+            "grade": 1
+          },
+          {
+            "id": "C007",
+            "url": "https://github.com/python-pillow/Pillow/issues/8199",
+            "grade": 1
+          },
+          {
+            "id": "C008",
+            "url": "https://www.golinuxcloud.com/python-tutorial/",
+            "grade": 0
+          },
+          {
+            "id": "C009",
+            "url": "https://iwatobipen.wordpress.com/2025/12/13/use-joblib-with-free-threaded-python-memo-diary/",
+            "grade": 1
+          },
+          {
+            "id": "C010",
+            "url": "https://www.linkedin.com/pulse/python-314-free-threading-true-parallelism-without-gil-dayal-b5tic",
+            "grade": 1
+          },
+          {
+            "id": "C011",
+            "url": "https://mate.naver.com/#partners",
+            "grade": 0
+          },
+          {
+            "id": "C012",
+            "url": "https://news.opensuse.org/2024/09/11/python313/",
+            "grade": 1
+          },
+          {
+            "id": "C013",
+            "url": "https://peps.python.org/pep-0719/",
+            "grade": 1
+          },
+          {
+            "id": "C014",
+            "url": "https://www.python.org/downloads/release/python-3133/",
+            "grade": 1
+          },
+          {
+            "id": "C015",
+            "url": "https://www.python.org/downloads/release/python-3143/",
+            "grade": 1
+          },
+          {
+            "id": "C016",
+            "url": "https://www.python.org/downloads/release/python-3148/",
+            "grade": 1
+          },
+          {
+            "id": "C017",
+            "url": "https://www.python.org/downloads/source/",
+            "grade": 1
+          },
+          {
+            "id": "C018",
+            "url": "https://www.python.org/downloads/windows/",
+            "grade": 1
+          },
+          {
+            "id": "C019",
+            "url": "https://realpython.com/python313-free-threading-jit/",
+            "grade": 2
+          }
+        ]
+      },
+      {
+        "id": "d06",
+        "query": "robots.txt RFC 9309 crawl delay supported specification",
+        "manual_rule": "RFC9309 relationship to Crawl-delay, not robots intro alone.",
+        "manual_direct_pool": 3,
+        "baseline_direct_labels": 5,
+        "fixed_direct_labels": 2,
+        "baseline_top10_grade2": 3,
+        "fixed_top10_grade2": 3,
+        "candidate_grades": [
+          {
+            "id": "C001",
+            "url": "https://www.ai-visibility.org.uk/specifications/robots-ai-txt/",
+            "grade": 0
+          },
+          {
+            "id": "C002",
+            "url": "https://crawler-commons.github.io/crawler-commons/1.4/crawlercommons/robots/SimpleRobotRulesParser.html",
+            "grade": 2
+          },
+          {
+            "id": "C003",
+            "url": "https://crawlio.app/blog/robots-txt-rfc-9309",
+            "grade": 2
+          },
+          {
+            "id": "C004",
+            "url": "https://daleseo.com/robots-txt/",
+            "grade": 1
+          },
+          {
+            "id": "C005",
+            "url": "https://de.wikipedia.org/wiki/Robots_Exclusion_Standard",
+            "grade": 1
+          },
+          {
+            "id": "C006",
+            "url": "https://developers.google.com/crawling/docs/robots-txt/robots-txt-spec?hl=de",
+            "grade": 1
+          },
+          {
+            "id": "C007",
+            "url": "https://developers.google.com/crawling/docs/robots-txt/robots-txt-spec?hl=ko",
+            "grade": 1
+          },
+          {
+            "id": "C008",
+            "url": "https://docs.readthedocs.com/platform/stable/reference/robots.html",
+            "grade": 1
+          },
+          {
+            "id": "C009",
+            "url": "https://getsocialguide.com/robots-txt-file/",
+            "grade": 1
+          },
+          {
+            "id": "C010",
+            "url": "https://github.com/python/cpython/issues/138907",
+            "grade": 2
+          },
+          {
+            "id": "C011",
+            "url": "https://github.com/zencart/zencart/blob/master/robots_example.txt",
+            "grade": 1
+          },
+          {
+            "id": "C012",
+            "url": "https://www.ietf.org/archive/id/draft-nottingham-archive-embargo-00.html",
+            "grade": 1
+          },
+          {
+            "id": "C013",
+            "url": "https://www.lumar.io/learn/seo/crawlability/robots-txt/",
+            "grade": 1
+          },
+          {
+            "id": "C014",
+            "url": "https://www.originary.xyz/blog/robots-txt-rfc-9309",
+            "grade": 1
+          },
+          {
+            "id": "C015",
+            "url": "https://pypi.org/project/Protego/",
+            "grade": 1
+          },
+          {
+            "id": "C016",
+            "url": "https://www.searchengineworld.com/rfc9309-robots-txt-quietly-became-an-official-internet-standard",
+            "grade": 1
+          },
+          {
+            "id": "C017",
+            "url": "https://simplewoody.com/ko/dev/robots-txt-sitemap-generator.html",
+            "grade": 1
+          },
+          {
+            "id": "C018",
+            "url": "https://tools.numlm.com/seo/robots-txt-generator/",
+            "grade": 1
+          },
+          {
+            "id": "C019",
+            "url": "https://torumata.com/kontroly/CRAWL-01",
+            "grade": 1
+          },
+          {
+            "id": "C020",
+            "url": "https://www.vergrank.com/guides/robots-txt",
+            "grade": 1
+          }
+        ]
+      },
+      {
+        "id": "d07",
+        "query": "JSON Lines NDJSON CSV сравнение потоковая обработка",
+        "manual_rule": "NDJSON/CSV relation for line-wise streaming; one format alone background.",
+        "manual_direct_pool": 1,
+        "baseline_direct_labels": 11,
+        "fixed_direct_labels": 1,
+        "baseline_top10_grade2": 1,
+        "fixed_top10_grade2": 1,
+        "candidate_grades": [
+          {
+            "id": "C001",
+            "url": "https://blog.naver.com/neuromed_choi/223932165312",
+            "grade": 1
+          },
+          {
+            "id": "C002",
+            "url": "https://conversiontools.io/convert/jsonl-to-csv",
+            "grade": 1
+          },
+          {
+            "id": "C003",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Response/json",
+            "grade": 1
+          },
+          {
+            "id": "C004",
+            "url": "https://docs.deno.com/examples/json_lines/",
+            "grade": 1
+          },
+          {
+            "id": "C005",
+            "url": "https://en.wikipedia.org/wiki/JSON_streaming",
+            "grade": 1
+          },
+          {
+            "id": "C006",
+            "url": "https://formatjsononline.com/glossary/json-lines",
+            "grade": 1
+          },
+          {
+            "id": "C007",
+            "url": "https://geekformat.com/json/jsonl-formatter/",
+            "grade": 1
+          },
+          {
+            "id": "C008",
+            "url": "https://github.com/csvspecs/csv-json",
+            "grade": 1
+          },
+          {
+            "id": "C009",
+            "url": "https://github.com/json-schema-org/json-schema-spec/blob/main/specs/jsonschema-core.md",
+            "grade": 0
+          },
+          {
+            "id": "C010",
+            "url": "https://ja.wikipedia.org/wiki/JSON",
+            "grade": 1
+          },
+          {
+            "id": "C011",
+            "url": "https://jsonlint.com/json-lines",
+            "grade": 1
+          },
+          {
+            "id": "C012",
+            "url": "https://jsonltools.com/jsonl-vs-ndjson",
+            "grade": 1
+          },
+          {
+            "id": "C013",
+            "url": "https://jsonparser.com/ndjson-validator",
+            "grade": 1
+          },
+          {
+            "id": "C014",
+            "url": "https://jsontotable.org/csv-to-ndjson",
+            "grade": 1
+          },
+          {
+            "id": "C015",
+            "url": "https://learn.microsoft.com/en-us/dotnet/core/tools/global-json",
+            "grade": 0
+          },
+          {
+            "id": "C016",
+            "url": "https://mircozeiss.com/json2csv/",
+            "grade": 1
+          },
+          {
+            "id": "C017",
+            "url": "https://www.npmjs.com/package/@json2csv/node",
+            "grade": 1
+          },
+          {
+            "id": "C018",
+            "url": "https://smartquerytools.com/ndjson-to-csv",
+            "grade": 1
+          },
+          {
+            "id": "C019",
+            "url": "https://velog.io/@myeong-su-choi/NDJSON",
+            "grade": 2
+          },
+          {
+            "id": "C020",
+            "url": "https://www.w3.org/TR/2014/REC-json-ld-20140116/",
+            "grade": 0
+          }
+        ]
+      },
+      {
+        "id": "d08",
+        "query": "Brotli gzip compression comparison static web assets",
+        "manual_rule": "Compression comparison applied to web assets; generic compression/index background.",
+        "manual_direct_pool": 6,
+        "baseline_direct_labels": 12,
+        "fixed_direct_labels": 7,
+        "baseline_top10_grade2": 6,
+        "fixed_top10_grade2": 6,
+        "candidate_grades": [
+          {
+            "id": "C001",
+            "url": "https://almanac.httparchive.org/en/2021/compression",
+            "grade": 1
+          },
+          {
+            "id": "C002",
+            "url": "https://blog.desgrange.net/post/2017/04/10/pre-compression-with-gzip-and-brotli-in-apache.html",
+            "grade": 1
+          },
+          {
+            "id": "C003",
+            "url": "https://www.cloudways.com/blog/brotli-vs-gzip/",
+            "grade": 1
+          },
+          {
+            "id": "C004",
+            "url": "https://www.debugbear.com/blog/http-compression-gzip-brotli",
+            "grade": 2
+          },
+          {
+            "id": "C005",
+            "url": "https://devblogs.microsoft.com/dotnet/introducing-support-for-brotli-compression/",
+            "grade": 1
+          },
+          {
+            "id": "C006",
+            "url": "https://dropbox.tech/infrastructure/deploying-brotli-for-static-content",
+            "grade": 1
+          },
+          {
+            "id": "C007",
+            "url": "https://http.dev/compression",
+            "grade": 1
+          },
+          {
+            "id": "C008",
+            "url": "https://jsonl.co/guide/jsonl-compression",
+            "grade": 1
+          },
+          {
+            "id": "C009",
+            "url": "https://kinsta.com/blog/brotli-compression/",
+            "grade": 1
+          },
+          {
+            "id": "C010",
+            "url": "https://llc.taejins.com/en/server-integration/ch10/compression",
+            "grade": 2
+          },
+          {
+            "id": "C011",
+            "url": "https://openreplay.com/tools/compression-comparison/",
+            "grade": 2
+          },
+          {
+            "id": "C012",
+            "url": "https://pagespeed.one/en/know-how/gzip-brotli",
+            "grade": 1
+          },
+          {
+            "id": "C013",
+            "url": "https://www.siteground.com/academy/brotli-vs-gzip-compression",
+            "grade": 2
+          },
+          {
+            "id": "C014",
+            "url": "https://slightfuture.com/webdev/brotli-vs-gzip-vs-zstd-2026/",
+            "grade": 2
+          },
+          {
+            "id": "C015",
+            "url": "https://speedvitals.com/blog/zstd-vs-brotli-vs-gzip/",
+            "grade": 1
+          },
+          {
+            "id": "C016",
+            "url": "https://www.testmuai.com/learning-hub/brotli-browser-support/",
+            "grade": 0
+          },
+          {
+            "id": "C017",
+            "url": "https://toprankertools.com/cs/tools/gzip-checker",
+            "grade": 1
+          },
+          {
+            "id": "C018",
+            "url": "https://uknew.co/wp-gzip-%EC%95%95%EC%B6%95-vs-brotli-%EC%95%95%EC%B6%95-2%EA%B0%9C-%EC%95%95%EC%B6%95-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EC%B0%A8%EC%9D%B4%EC%A0%90/",
+            "grade": 1
+          },
+          {
+            "id": "C019",
+            "url": "https://webmister.pro/cz/optimalizace-obrazku-a-medii-pro-rychlejsi-nacitani-webu/",
+            "grade": 0
+          },
+          {
+            "id": "C020",
+            "url": "https://wp-rocket.me/blog/brotli-vs-gzip-compression/",
+            "grade": 2
+          }
+        ]
+      },
+      {
+        "id": "d09",
+        "query": "git worktree remove locked force документация",
+        "manual_rule": "Locked worktree removal/force; dirty/untracked removal alone background.",
+        "manual_direct_pool": 0,
+        "baseline_direct_labels": 6,
+        "fixed_direct_labels": 2,
+        "baseline_top10_grade2": 0,
+        "fixed_top10_grade2": 0,
+        "candidate_grades": [
+          {
+            "id": "C001",
+            "url": "https://blog.naver.com/sssang97/224062386182",
+            "grade": 1
+          },
+          {
+            "id": "C002",
+            "url": "https://blog.naver.com/wlsgur073/224204061802",
+            "grade": 1
+          },
+          {
+            "id": "C003",
+            "url": "https://code.claude.com/docs/en/hooks",
+            "grade": 0
+          },
+          {
+            "id": "C004",
+            "url": "https://continuumcode.ai/guides/git-worktrees/",
+            "grade": 1
+          },
+          {
+            "id": "C005",
+            "url": "https://dev.to/arifszn/git-worktrees-the-power-behind-cursors-parallel-agents-19j1",
+            "grade": 1
+          },
+          {
+            "id": "C006",
+            "url": "https://docs.factory.com/changelog/release-notes",
+            "grade": 0
+          },
+          {
+            "id": "C007",
+            "url": "https://github.com/LAB271/git-worktree",
+            "grade": 1
+          },
+          {
+            "id": "C008",
+            "url": "https://github.com/codingapi/git-workspace",
+            "grade": 1
+          },
+          {
+            "id": "C009",
+            "url": "https://github.com/vashstorm/wtt",
+            "grade": 1
+          },
+          {
+            "id": "C010",
+            "url": "https://gitkraken.com/learn/git/commands",
+            "grade": 0
+          },
+          {
+            "id": "C011",
+            "url": "https://www.gitworktree.org/tutorial/lock",
+            "grade": 1
+          },
+          {
+            "id": "C012",
+            "url": "https://www.janmikolas.cz/slovnik/git-worktrees",
+            "grade": 1
+          },
+          {
+            "id": "C013",
+            "url": "https://www.luisball.com/blog/git-worktree-remove-is-slow",
+            "grade": 1
+          },
+          {
+            "id": "C014",
+            "url": "https://parallelcode.app/blog/clean-up-ai-agent-worktrees/",
+            "grade": 1
+          },
+          {
+            "id": "C015",
+            "url": "https://seoin.dev/git-worktree-remove-modified-untracked/",
+            "grade": 1
+          },
+          {
+            "id": "C016",
+            "url": "https://www.worktreewise.com/git-worktree/remove",
+            "grade": 1
+          }
+        ]
+      },
+      {
+        "id": "d10",
+        "query": "PostgreSQL 17 release September 2024 official announcement",
+        "manual_rule": "Dated version17 announcement; undated official snippet is insufficient.",
+        "manual_direct_pool": 0,
+        "baseline_direct_labels": 3,
+        "fixed_direct_labels": 0,
+        "baseline_top10_grade2": 0,
+        "fixed_top10_grade2": 0,
+        "candidate_grades": [
+          {
+            "id": "C001",
+            "url": "https://www.ashnik.com/postgresql-mypostgres/",
+            "grade": 0
+          },
+          {
+            "id": "C002",
+            "url": "https://www.brightbox.com/blog/2024/10/10/postgresql-17-cloudsql/",
+            "grade": 1
+          },
+          {
+            "id": "C003",
+            "url": "https://www.couchbase.com/blog/",
+            "grade": 0
+          },
+          {
+            "id": "C004",
+            "url": "https://docs.cloud.google.com/release-notes",
+            "grade": 0
+          },
+          {
+            "id": "C005",
+            "url": "https://docs.gitlab.com/releases/",
+            "grade": 0
+          },
+          {
+            "id": "C006",
+            "url": "https://gigalixir.com/blog/postgresql-18-now-available",
+            "grade": 1
+          },
+          {
+            "id": "C007",
+            "url": "https://github.com/apache/cloudberry/discussions/662",
+            "grade": 1
+          },
+          {
+            "id": "C008",
+            "url": "https://www.initmax.cz/webinar/co-je-noveho-v-postgresql-17/",
+            "grade": 1
+          },
+          {
+            "id": "C009",
+            "url": "https://www.integrate.io/blog/postgresql-vs-mysql-which-one-is-better-for-your-use-case/",
+            "grade": 0
+          },
+          {
+            "id": "C010",
+            "url": "https://news.opensuse.org/category/announcements/",
+            "grade": 0
+          },
+          {
+            "id": "C011",
+            "url": "https://pgpedia.info/postgresql-versions/index.html",
+            "grade": 1
+          },
+          {
+            "id": "C012",
+            "url": "https://pgpedia.info/postgresql-versions/postgresql-17.html",
+            "grade": 1
+          },
+          {
+            "id": "C013",
+            "url": "https://postgrespro.com/blog/pgsql/5971224",
+            "grade": 1
+          },
+          {
+            "id": "C014",
+            "url": "https://www.postgresql.org/about/news/postgresql-17-released-2936/",
+            "grade": 1
+          },
+          {
+            "id": "C015",
+            "url": "https://www.postgresql.org/docs/release/7.4.17/",
+            "grade": 0
+          },
+          {
+            "id": "C016",
+            "url": "https://www.postgresql.org/docs/release/7.4.3/",
+            "grade": 0
+          },
+          {
+            "id": "C017",
+            "url": "https://www.postgresql.org/docs/release/9.4.7/",
+            "grade": 0
+          },
+          {
+            "id": "C018",
+            "url": "https://www.sec.gov/Archives/edgar/data/1687542/000149315226023206/0001493152-26-023206.txt",
+            "grade": 0
+          },
+          {
+            "id": "C019",
+            "url": "https://vettabase.com/category/postgresql/",
+            "grade": 1
+          }
+        ]
+      },
+      {
+        "id": "d11",
+        "query": "HTTP Retry-After 429 503 документация",
+        "manual_rule": "Concrete Retry-After handling of HTTP429/503; header intro or bare status comparison background.",
+        "manual_direct_pool": 5,
+        "baseline_direct_labels": 7,
+        "fixed_direct_labels": 4,
+        "baseline_top10_grade2": 5,
+        "fixed_top10_grade2": 4,
+        "candidate_grades": [
+          {
+            "id": "C001",
+            "url": "https://api-docs.bitdelta.com/",
+            "grade": 0
+          },
+          {
+            "id": "C002",
+            "url": "https://dev.moysklad.ru/doc/api/remap/1.2/",
+            "grade": 0
+          },
+          {
+            "id": "C003",
+            "url": "https://dev.tamtam.chat/ru/",
+            "grade": 0
+          },
+          {
+            "id": "C004",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status",
+            "grade": 1
+          },
+          {
+            "id": "C005",
+            "url": "https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Reference/Headers/Retry-After",
+            "grade": 1
+          },
+          {
+            "id": "C006",
+            "url": "https://developers.google.com/crawling/docs/crawlers-fetchers/reduce-crawl-rate?hl=ko",
+            "grade": 1
+          },
+          {
+            "id": "C007",
+            "url": "https://docs.nlpcloud.com/",
+            "grade": 0
+          },
+          {
+            "id": "C008",
+            "url": "https://www.expandurl.net/http-status-codes/429/",
+            "grade": 1
+          },
+          {
+            "id": "C009",
+            "url": "https://github.com/InitPHP/HTTP",
+            "grade": 0
+          },
+          {
+            "id": "C010",
+            "url": "https://github.com/langchain-ai/langsmith-sdk/issues/3569",
+            "grade": 1
+          },
+          {
+            "id": "C011",
+            "url": "https://www.host-tracker.com/cs/learn/http-status-codes/429-too-many-requests",
+            "grade": 2
+          },
+          {
+            "id": "C012",
+            "url": "https://httpstatus.com/429/",
+            "grade": 2
+          },
+          {
+            "id": "C013",
+            "url": "https://www.okx.com/docs-v5/en/",
+            "grade": 0
+          },
+          {
+            "id": "C014",
+            "url": "https://pulsetic.com/errors/429-too-many-requests/",
+            "grade": 2
+          },
+          {
+            "id": "C015",
+            "url": "https://pypi.org/project/flru-parser/",
+            "grade": 0
+          },
+          {
+            "id": "C016",
+            "url": "https://quire.io/dev/api/",
+            "grade": 0
+          },
+          {
+            "id": "C017",
+            "url": "https://www.remove.bg/ru/api",
+            "grade": 0
+          },
+          {
+            "id": "C018",
+            "url": "https://www.rfc-editor.org/info/rfc1945/",
+            "grade": 1
+          },
+          {
+            "id": "C019",
+            "url": "https://transcribe.so/developers/docs",
+            "grade": 2
+          },
+          {
+            "id": "C020",
+            "url": "https://uptimesignal.io/http-status/429",
+            "grade": 2
+          }
+        ]
+      },
+      {
+        "id": "d12",
+        "query": "site:developer.mozilla.org structuredClone transferable ArrayBuffer",
+        "manual_rule": "Explicit structuredClone transferable mechanism; generic cloning/references incomplete.",
+        "manual_direct_pool": 1,
+        "baseline_direct_labels": 2,
+        "fixed_direct_labels": 0,
+        "baseline_top10_grade2": 1,
+        "fixed_top10_grade2": 1,
+        "candidate_grades": [
+          {
+            "id": "C001",
+            "url": "https://developer.mozilla.org/de/docs/Web/API/Web_Workers_API/Transferable_objects",
+            "grade": 1
+          },
+          {
+            "id": "C002",
+            "url": "https://developer.mozilla.org/de/docs/Web/API/Window/structuredClone",
+            "grade": 1
+          },
+          {
+            "id": "C003",
+            "url": "https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer",
+            "grade": 1
+          },
+          {
+            "id": "C004",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm",
+            "grade": 1
+          },
+          {
+            "id": "C005",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects",
+            "grade": 1
+          },
+          {
+            "id": "C006",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/structuredClone",
+            "grade": 2
+          },
+          {
+            "id": "C007",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+            "grade": 1
+          },
+          {
+            "id": "C008",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer",
+            "grade": 1
+          },
+          {
+            "id": "C009",
+            "url": "https://developer.mozilla.org/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm",
+            "grade": 1
+          },
+          {
+            "id": "C010",
+            "url": "https://developer.mozilla.org/ja/docs/Web/API/Web_Workers_API/Transferable_objects",
+            "grade": 1
+          },
+          {
+            "id": "C011",
+            "url": "https://developer.mozilla.org/ko/docs/Web/API/Web_Workers_API/Structured_clone_algorithm",
+            "grade": 1
+          },
+          {
+            "id": "C012",
+            "url": "https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects",
+            "grade": 1
+          }
+        ]
+      }
+    ],
+    "top10_success_baseline": 5,
+    "top10_success_final": 4
+  },
+  "unseen_followup6": {
+    "final": {
+      "confusion": {
+        "tn": 97,
+        "fn": 5,
+        "tp": 3,
+        "fp": 0
+      },
+      "precision": 1.0,
+      "recall": 0.375,
+      "per_case": [
+        {
+          "id": "h01",
+          "tp": 0,
+          "fp": 0,
+          "fn": 3
+        },
+        {
+          "id": "h02",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        {
+          "id": "h03",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        {
+          "id": "h04",
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        {
+          "id": "h05",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "id": "h06",
+          "tp": 3,
+          "fp": 0,
+          "fn": 1
+        }
+      ]
+    },
+    "candidate_count": 105,
+    "cases": [
+      {
+        "id": "h01",
+        "query": "HTTP 307 308 redirect method preservation difference documentation",
+        "manual_rule": "Comparison307/308 with method preservation; single-code facts insufficient for comparison.",
+        "manual_direct_pool": 3,
+        "status": "ok",
+        "errors": [],
+        "budget": {
+          "classification_calls": 1,
+          "document_reads": 0,
+          "logical_search_calls": 2,
+          "source_context_max": 8869
+        },
+        "candidate_grades": [
+          {
+            "id": "C001",
+            "url": "https://aioseo.com/seo-glossary/308-permanent-redirect/",
+            "grade": 1
+          },
+          {
+            "id": "C002",
+            "url": "https://www.awardspace.com/kb/how-to-fix-307-temporary-redirect/",
+            "grade": 1
+          },
+          {
+            "id": "C003",
+            "url": "https://cutt.ly/resources/encyclopedia/redirect-301-302-307-308/",
+            "grade": 1
+          },
+          {
+            "id": "C004",
+            "url": "https://designindc.com/blog/cms-migration-seo-checklist/",
+            "grade": 0
+          },
+          {
+            "id": "C005",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/308",
+            "grade": 1
+          },
+          {
+            "id": "C006",
+            "url": "https://developer.mozilla.org/ko/docs/Web/HTTP/Reference/Status/308",
+            "grade": 1
+          },
+          {
+            "id": "C007",
+            "url": "https://en.wikipedia.org/wiki/Open_redirect_vulnerability",
+            "grade": 1
+          },
+          {
+            "id": "C008",
+            "url": "https://http.dev/redirects",
+            "grade": 1
+          },
+          {
+            "id": "C009",
+            "url": "https://httpstatus.com/308/",
+            "grade": 1
+          },
+          {
+            "id": "C010",
+            "url": "https://httpstatus.io/learn/308-permanent-redirect",
+            "grade": 1
+          },
+          {
+            "id": "C011",
+            "url": "https://learn.microsoft.com/cs-cz/aspnet/core/security/enforcing-ssl?view=aspnetcore-10.0",
+            "grade": 0
+          },
+          {
+            "id": "C012",
+            "url": "https://www.notiontechnologies.com/blog/308-permanent-redirect/",
+            "grade": 1
+          },
+          {
+            "id": "C013",
+            "url": "https://www.parkwayindependent.com/newspage.htm",
+            "grade": 0
+          },
+          {
+            "id": "C014",
+            "url": "https://perfectacle.github.io/2017/10/16/http-status-code-307-vs-308/",
+            "grade": 2
+          },
+          {
+            "id": "C015",
+            "url": "https://www.perfmasters.com/glossary/307-redirect",
+            "grade": 1
+          },
+          {
+            "id": "C016",
+            "url": "https://redirect.pizza/resources/redirects/http-redirect-status-codes",
+            "grade": 2
+          },
+          {
+            "id": "C017",
+            "url": "https://runebook.dev/ko/docs/http/status/308",
+            "grade": 1
+          },
+          {
+            "id": "C018",
+            "url": "https://statuscodefyi.com/compare/",
+            "grade": 1
+          },
+          {
+            "id": "C019",
+            "url": "https://www.thatdevpro.com/reference/http-3xx-status-codes/",
+            "grade": 1
+          },
+          {
+            "id": "C020",
+            "url": "https://velog.io/@himprover/Nextjs-Redirect-%EC%98%B5%EC%85%98%EC%97%90-Permanent%EB%8A%94-%EB%AD%90%EC%A7%80",
+            "grade": 2
+          }
+        ],
+        "selected_direct_ids": []
+      },
+      {
+        "id": "h02",
+        "query": "site:sqlite.org foreign_keys PRAGMA transaction no effect documentation",
+        "manual_rule": "foreign_keys PRAGMA transaction no-effect relationship not visible in any card.",
+        "manual_direct_pool": 0,
+        "status": "ok",
+        "errors": [],
+        "budget": {
+          "classification_calls": 1,
+          "document_reads": 0,
+          "logical_search_calls": 2,
+          "source_context_max": 4963
+        },
+        "candidate_grades": [
+          {
+            "id": "C001",
+            "url": "https://www.sqlite.org/compile.html",
+            "grade": 1
+          },
+          {
+            "id": "C002",
+            "url": "https://www.sqlite.org/faq.html",
+            "grade": 1
+          },
+          {
+            "id": "C003",
+            "url": "https://www.sqlite.org/foreignkeys.html",
+            "grade": 1
+          },
+          {
+            "id": "C004",
+            "url": "https://www.sqlite.org/keyword_index.html",
+            "grade": 1
+          },
+          {
+            "id": "C005",
+            "url": "https://www.sqlite.org/lang_altertable.html",
+            "grade": 1
+          },
+          {
+            "id": "C006",
+            "url": "https://www.sqlite.org/news.html",
+            "grade": 0
+          },
+          {
+            "id": "C007",
+            "url": "https://sqlite.org/oldnews.html",
+            "grade": 1
+          },
+          {
+            "id": "C008",
+            "url": "https://www.sqlite.org/opcode.html",
+            "grade": 0
+          },
+          {
+            "id": "C009",
+            "url": "https://www.sqlite.org/pragma.html",
+            "grade": 1
+          },
+          {
+            "id": "C010",
+            "url": "https://www.sqlite.org/vdbe.html",
+            "grade": 0
+          },
+          {
+            "id": "C011",
+            "url": "https://www.sqlite.org/wal.html",
+            "grade": 1
+          },
+          {
+            "id": "C012",
+            "url": "https://system.data.sqlite.org/home/timeline?n=9999&y=ci&v=0",
+            "grade": 0
+          }
+        ],
+        "selected_direct_ids": []
+      },
+      {
+        "id": "h03",
+        "query": "Python pathlib Path.resolve Path.absolute symlink difference",
+        "manual_rule": "resolve/absolute symlink comparison; single-method description background.",
+        "manual_direct_pool": 0,
+        "status": "ok",
+        "errors": [],
+        "budget": {
+          "classification_calls": 1,
+          "document_reads": 0,
+          "logical_search_calls": 2,
+          "source_context_max": 8452
+        },
+        "candidate_grades": [
+          {
+            "id": "C001",
+            "url": "https://bugs.python.org/issue29688",
+            "grade": 1
+          },
+          {
+            "id": "C002",
+            "url": "https://bugs.python.org/issue40038",
+            "grade": 1
+          },
+          {
+            "id": "C003",
+            "url": "https://docs.kanaries.net/ko/topics/Python/python-pathlib",
+            "grade": 1
+          },
+          {
+            "id": "C004",
+            "url": "https://docs.python.org/3/library/pathlib.html",
+            "grade": 1
+          },
+          {
+            "id": "C005",
+            "url": "https://github.com/contaware/py-docs-notes",
+            "grade": 0
+          },
+          {
+            "id": "C006",
+            "url": "https://github.com/jaraco/path/issues/214",
+            "grade": 1
+          },
+          {
+            "id": "C007",
+            "url": "https://huggingface.co/koichi12/llm_tutorial/blob/63c744a24194fe649737d8393d4b5d37e621f7a3/.venv/lib/python3.11/site-packages/_pytest/pathlib.py",
+            "grade": 0
+          },
+          {
+            "id": "C008",
+            "url": "https://llc.taejins.com/en/python/ch9/pathlib/",
+            "grade": 1
+          },
+          {
+            "id": "C009",
+            "url": "https://mate.naver.com/#partners",
+            "grade": 0
+          },
+          {
+            "id": "C010",
+            "url": "https://onestorymore.com/python-%ED%8C%8C%EC%9D%BC-%EA%B2%BD%EB%A1%9C-%EA%B4%80%EB%A6%AC-%EC%A0%88%EB%8C%80-%EA%B2%BD%EB%A1%9C-%EC%83%81%EB%8C%80-%EA%B2%BD%EB%A1%9C-%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC-%ED%99%9C%EC%9A%A9/",
+            "grade": 1
+          },
+          {
+            "id": "C011",
+            "url": "https://pathlib.readthedocs.io/en/latest/",
+            "grade": 1
+          },
+          {
+            "id": "C012",
+            "url": "https://peps.python.org/pep-0428/",
+            "grade": 1
+          },
+          {
+            "id": "C013",
+            "url": "https://pydantic.dev/docs/monty/limitations/pathlib/",
+            "grade": 1
+          },
+          {
+            "id": "C014",
+            "url": "https://pymotw.com/3/pathlib/",
+            "grade": 1
+          },
+          {
+            "id": "C015",
+            "url": "https://pymotw.com/3/pathlib/index.html",
+            "grade": 1
+          },
+          {
+            "id": "C016",
+            "url": "https://pypi.org/project/pathlib/",
+            "grade": 1
+          },
+          {
+            "id": "C017",
+            "url": "https://realpython.com/python-pathlib/",
+            "grade": 1
+          },
+          {
+            "id": "C018",
+            "url": "https://stackoverflow.com/questions/51520/how-to-get-an-absolute-file-path-in-python",
+            "grade": 1
+          },
+          {
+            "id": "C019",
+            "url": "https://velog.io/@woo97/How-import-statement-finds-modules-and-packages",
+            "grade": 0
+          }
+        ],
+        "selected_direct_ids": []
+      },
+      {
+        "id": "h04",
+        "query": "Redis 6.0 release April 2020 ACL official",
+        "manual_rule": "Redis6.0 April2020 ACL announcement; other product/date or undated snippet background.",
+        "manual_direct_pool": 0,
+        "status": "partial",
+        "errors": [
+          "unsupported_direct_evidence_or_constraints: 1 downgraded"
+        ],
+        "budget": {
+          "classification_calls": 1,
+          "document_reads": 0,
+          "logical_search_calls": 2,
+          "source_context_max": 6657
+        },
+        "candidate_grades": [
+          {
+            "id": "C001",
+            "url": "https://alas.aws.amazon.com/",
+            "grade": 0
+          },
+          {
+            "id": "C002",
+            "url": "https://blog.brachiosoft.com/en/posts/redis/",
+            "grade": 1
+          },
+          {
+            "id": "C003",
+            "url": "https://www.easydcim.com/changelog",
+            "grade": 0
+          },
+          {
+            "id": "C004",
+            "url": "https://fdcservers.net/cs/blog/how-to-install-and-use-redis-on-a-vps",
+            "grade": 1
+          },
+          {
+            "id": "C005",
+            "url": "https://gist.github.com/MS-Interop/1439660",
+            "grade": 1
+          },
+          {
+            "id": "C006",
+            "url": "https://www.nopcommerce.com/en/release-notes",
+            "grade": 0
+          },
+          {
+            "id": "C007",
+            "url": "https://pypi.org/project/redis/0.6.1/",
+            "grade": 0
+          },
+          {
+            "id": "C008",
+            "url": "https://redis.io/blog/rediscover-redis-security-with-redis-enterprise-6/",
+            "grade": 1
+          },
+          {
+            "id": "C009",
+            "url": "https://redis.io/docs/latest/commands/info/",
+            "grade": 1
+          },
+          {
+            "id": "C010",
+            "url": "https://redis.io/docs/latest/develop/tools/insight/release-notes/v1.4.0/",
+            "grade": 1
+          },
+          {
+            "id": "C011",
+            "url": "https://redis.io/docs/latest/operate/oss_and_stack/management/security/acl/",
+            "grade": 1
+          },
+          {
+            "id": "C012",
+            "url": "https://redis.io/docs/latest/operate/rs/release-notes/legacy-release-notes/rs-5-6-0-april-2020/",
+            "grade": 1
+          },
+          {
+            "id": "C013",
+            "url": "https://redis.io/docs/latest/operate/rs/release-notes/rs-8-0-releases/",
+            "grade": 1
+          },
+          {
+            "id": "C014",
+            "url": "https://segmentfault.com/a/1190000040376111/en",
+            "grade": 1
+          },
+          {
+            "id": "C015",
+            "url": "https://www.trendmicro.com/de_de/research/20/d/more-than-8-000-unsecured-redis-instances-found-in-the-cloud.html",
+            "grade": 0
+          }
+        ],
+        "selected_direct_ids": []
+      },
+      {
+        "id": "h05",
+        "query": "PostgreSQL vacuum analyze autovacuum differences documentation",
+        "manual_rule": "VACUUM/ANALYZE relation, autovacuum context; generic maintenance background.",
+        "manual_direct_pool": 1,
+        "status": "ok",
+        "errors": [],
+        "budget": {
+          "classification_calls": 1,
+          "document_reads": 0,
+          "logical_search_calls": 2,
+          "source_context_max": 8910
+        },
+        "candidate_grades": [
+          {
+            "id": "C001",
+            "url": "https://www.atatus.com/product/database-monitoring/postgresql/",
+            "grade": 0
+          },
+          {
+            "id": "C002",
+            "url": "https://cloud.google.com/blog/products/databases/alloydb-for-postgresql-under-the-hood-adaptive-autovacuum",
+            "grade": 1
+          },
+          {
+            "id": "C003",
+            "url": "https://docs.cloud.google.com/solutions/optimizing-monitoring-troubleshooting-vacuum-operations-postgresql?hl=ko",
+            "grade": 1
+          },
+          {
+            "id": "C004",
+            "url": "https://www.enterprisedb.com/blog/postgresql-vacuum-and-analyze-best-practice-tips",
+            "grade": 1
+          },
+          {
+            "id": "C005",
+            "url": "https://github.com/darold/pgcluu/blob/master/ChangeLog",
+            "grade": 1
+          },
+          {
+            "id": "C006",
+            "url": "http://hochul.net/blog/postgresql-vacuum-optimization/",
+            "grade": 1
+          },
+          {
+            "id": "C007",
+            "url": "https://junhkang.com/posts/17/",
+            "grade": 1
+          },
+          {
+            "id": "C008",
+            "url": "https://learn.microsoft.com/cs-cz/azure/postgresql/parameters/parameters-autovacuum?pivots=postgresql-18",
+            "grade": 1
+          },
+          {
+            "id": "C009",
+            "url": "https://nrise.github.io/posts/postgresql-autovacuum/",
+            "grade": 1
+          },
+          {
+            "id": "C010",
+            "url": "https://percona.community/blog/2026/07/01/postgresql-autovacuum-internals-benchmark/",
+            "grade": 1
+          },
+          {
+            "id": "C011",
+            "url": "https://www.postgresql.org/docs/8.1/runtime-config-autovacuum.html",
+            "grade": 1
+          },
+          {
+            "id": "C012",
+            "url": "https://www.postgresql.org/docs/8.4/runtime-config-autovacuum.html",
+            "grade": 1
+          },
+          {
+            "id": "C013",
+            "url": "https://www.postgresql.org/docs/current/routine-vacuuming.html",
+            "grade": 1
+          },
+          {
+            "id": "C014",
+            "url": "https://www.postgresql.org/download/products/1-administrationdevelopment-tools/",
+            "grade": 1
+          },
+          {
+            "id": "C015",
+            "url": "https://reliadb.com/blog/postgresql-autovacuum-internals-tuning-guide.html",
+            "grade": 1
+          },
+          {
+            "id": "C016",
+            "url": "https://www.site24x7.com/solutions/autovacuum-postgresql.html?src=related-sidebar-database",
+            "grade": 1
+          },
+          {
+            "id": "C017",
+            "url": "https://velog.io/@manx/PostgreSQL-Vacuum-AutoVacuum-%EC%84%A4%EC%A0%95",
+            "grade": 1
+          },
+          {
+            "id": "C018",
+            "url": "https://vettabase.com/tuning-postgresql-auto-vacuum/",
+            "grade": 2
+          },
+          {
+            "id": "C019",
+            "url": "https://youngsam.net/notes/n20-postgresql-vacuum-%EC%9D%B4%ED%95%B4-autovacuum-%EC%84%A4%EC%A0%95%EA%B3%BC-%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81",
+            "grade": 1
+          }
+        ],
+        "selected_direct_ids": []
+      },
+      {
+        "id": "h06",
+        "query": "HTTP Content-Security-Policy Report-Only enforcement отличие документация",
+        "manual_rule": "Report-only monitoring without enforcement; generic CSP incomplete.",
+        "manual_direct_pool": 4,
+        "status": "partial",
+        "errors": [
+          "unsupported_direct_evidence_or_constraints: 1 downgraded"
+        ],
+        "budget": {
+          "classification_calls": 1,
+          "document_reads": 0,
+          "logical_search_calls": 2,
+          "source_context_max": 9128
+        },
+        "candidate_grades": [
+          {
+            "id": "C001",
+            "url": "https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html",
+            "grade": 1
+          },
+          {
+            "id": "C002",
+            "url": "https://www.cloudways.com/en/glossary/content-security-policy-csp",
+            "grade": 0
+          },
+          {
+            "id": "C003",
+            "url": "https://content-security-policy.com/report-only/",
+            "grade": 1
+          },
+          {
+            "id": "C004",
+            "url": "https://devdoc.net/web/developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy-Report-Only.html",
+            "grade": 2
+          },
+          {
+            "id": "C005",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP",
+            "grade": 1
+          },
+          {
+            "id": "C006",
+            "url": "https://developer.mozilla.org/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy-Report-Only",
+            "grade": 2
+          },
+          {
+            "id": "C007",
+            "url": "https://www.directoryone.com/content-security-policy.php",
+            "grade": 1
+          },
+          {
+            "id": "C008",
+            "url": "https://docs.corelightning.org/docs/security-policy",
+            "grade": 0
+          },
+          {
+            "id": "C009",
+            "url": "https://docs.nopcommerce.com/en/developer/tutorials/csp-headers.html",
+            "grade": 1
+          },
+          {
+            "id": "C010",
+            "url": "https://fortcyber.com/cookies-policy/",
+            "grade": 0
+          },
+          {
+            "id": "C011",
+            "url": "https://northwave-cybersecurity.com/resources/data-security-and-privacy",
+            "grade": 0
+          },
+          {
+            "id": "C012",
+            "url": "https://report-uri.com/features/content-security-policy",
+            "grade": 1
+          },
+          {
+            "id": "C013",
+            "url": "https://www.sans.org/cyber-security-courses/advanced-network-forensics-threat-hunting-incident-response",
+            "grade": 0
+          },
+          {
+            "id": "C014",
+            "url": "https://securityheaders.cz/csp-report-only",
+            "grade": 2
+          },
+          {
+            "id": "C015",
+            "url": "http://www.tbskorea.com/bbs/bbs_view.php?bbs_data=aWR4PTEyOTImc3RhcnRQYWdlPTEwJmxpc3RObz00JnRhYmxlPSZjb2RlPWNvbSZzZWFyY2hfaXRlbT0mc2VhcmNoX29yZGVyPQ==%7C%7C",
+            "grade": 0
+          },
+          {
+            "id": "C016",
+            "url": "https://ttj.kr/quiz/question/content-security-policycsp-report-only",
+            "grade": 1
+          },
+          {
+            "id": "C017",
+            "url": "https://www.uriports.com/getting-started-with-website-monitoring",
+            "grade": 1
+          },
+          {
+            "id": "C018",
+            "url": "https://velog.io/@ehdgus8054/HTTPGuidesContent-Security-Policy-CSP",
+            "grade": 1
+          },
+          {
+            "id": "C019",
+            "url": "https://www.w3.org/TR/2014/WD-CSP11-20140211/",
+            "grade": 2
+          },
+          {
+            "id": "C020",
+            "url": "https://wicg.github.io/document-policy/",
+            "grade": 0
+          }
+        ],
+        "selected_direct_ids": [
+          "C004",
+          "C006",
+          "C019"
+        ]
+      }
+    ],
+    "baseline": "Not completed: first control request rejected by oMLX memory guard; not counted as an empty/negative model answer.",
+    "note": "Frozen before inspecting development false-positive details; no semantic tuning after followup capture. Small validation, not formal holdout qualification."
+  },
+  "extract": [
+    {
+      "chars": 2165,
+      "blocks": 36,
+      "truncated": false,
+      "content_scope": "main",
+      "extraction_method": "semantic_main",
+      "warnings": [],
+      "text_hash": "606afa6332884ec08ac10118cddcb6aa1eb40ff53c31b4dbe30382973f6fdfad",
+      "available_fulltext_url": null,
+      "name": "n8n",
+      "baseline_chars": 1797,
+      "markers": {
+        "N8N_SSRF_PROTECTION_ENABLED=true": true,
+        "DNS rebinding": true,
+        "fc00::/7": true
+      }
+    },
+    {
+      "chars": 1776,
+      "blocks": 2,
+      "truncated": false,
+      "content_scope": "abstract",
+      "extraction_method": "scholarly_abstract",
+      "warnings": [
+        "abstract_only: full article text is not present in the selected landing-page scope"
+      ],
+      "text_hash": "db9a459e91fbd784fa06f3d38f554e60503c45923d3524dd5a1a4c60f596be06",
+      "available_fulltext_url": "https://www.jcar.or.kr/articles/xml/bXDR/",
+      "name": "jcar",
+      "baseline_chars": 7567,
+      "markers": {
+        "Efficient planning of earthworks": true
+      }
+    },
+    {
+      "chars": 9248,
+      "blocks": 61,
+      "truncated": false,
+      "content_scope": "article_body",
+      "extraction_method": "scholarly_body",
+      "warnings": [],
+      "text_hash": "e6975a6e93e6e3af8ed2184cff13baeaebd2bda4b06331f53da5cbf195a96398",
+      "available_fulltext_url": "https://www.jcar.or.kr/articles/xml/bXDR/",
+      "name": "jcar-full",
+      "markers": {
+        "대부분의 건설 프로젝트": true
+      }
+    }
+  ],
+  "attempts": {
+    "search_html": 36,
+    "source_http_200": 36,
+    "target_html": 3,
+    "mcp_target_html": 1,
+    "external_total": 40,
+    "classification_attempts": 33,
+    "classification_responses": 31,
+    "model_http400_memory_rejections": 2,
+    "metadata_checks": 5,
+    "source_blocks": 0,
+    "parser_changed": 1,
+    "runtime_retries": 0
+  },
+  "limitations": [
+    "Development12 used to design literal gate after initial v1 comparison; final development score is in-sample.",
+    "Fresh6 has only8 grade2 cards and3 predicted direct, high precision not statistically established.",
+    "Recall is reduced: useful evidence in truncated/translated cards can be downgraded.",
+    "Literal presence and verbatim quote do not prove semantic sufficiency.",
+    "Full factual answers, general rewrite, day2, VPS and browser not implemented here.",
+    "oMLX memory guard prevented followup baseline; provider/global settings unchanged."
+  ],
+  "fixture_hashes": {
+    "feasibility/relevance-dev-cases-v1.json": "1e10b0952ba2a196c8bfe40d31f604683b1277696fb55eaf2f21cfaae5477981",
+    "feasibility/relevance-holdout-cases-v1.json": "211780a88925668f6c267da80a720627e4de75fbf37dfad69e3a42630b42ace6",
+    "feasibility/search-cases.json": "b67e3269830ae0e976aa9b4c5dc2f6b9c3e922ad1adda35738289d6b1b8325d6"
+  },
+  "raw_dir": "runs/relevance-extract-2026-10-29",
+  "commits": {
+    "development": {
+      "committed_at": "2026-10-29T20:26:24.705266+03:00",
+      "input_sha256": "1b019bc8e479e40a7921b2055968efae1515244c75a509ac1626a4a564922423",
+      "grades_sha256": "83cc60677b94a43bc4fce6136e7927b39fcec71f96b34d07334030194c6186ad",
+      "assessor": "Implementation author; all candidate cards reviewed without baseline/fixed labels. Not independent human blind annotation; aware of prior original20 errors and test formats."
+    },
+    "followup": {
+      "committed_at": "2026-10-29T20:40:01.190584+03:00",
+      "grades_sha256": "17f710b3c5ff85c10f0167bb93bb9f0377ef846dc89cc4dc4007bb40e90bcaf2",
+      "input_sha256": "8fdedf94e09f36c30ad835fa8d1957f71c345e6b6a54840ef080eb2552c232ed",
+      "assessor": "Implementation author; reviewed candidate cards without label projection. Own preliminary annotation, not independent human blind assessment."
+    }
+  },
+  "source_hashes": {
+    "runs/relevance-extract-2026-10-29/baseline/S023.html": "789939a3a2b858c182eece78ba68753bd733d7f66d03a51ceeb4aed8e5f9c28f",
+    "runs/relevance-extract-2026-10-29/baseline/S019.html": "9abaaaf97910c5e5ef25ea00deac9e743ab4012060fb35fb3d24bf3a0695d95b",
+    "runs/relevance-extract-2026-10-29/baseline/S003.html": "d633b143f58db62ab3eabce7d4b5b1910d76272a0c145d01f42f454bc3c5f13e",
+    "runs/relevance-extract-2026-10-29/baseline/S015.html": "c77b232ae1a527e62b26bd6772ee4cf3a6bbcc960d611d361d2784434b527cbb",
+    "runs/relevance-extract-2026-10-29/baseline/S014.html": "5a8af3c00affe339b8d8226edcb6b1f855c5399db8a0b158d3aecbc56032935a",
+    "runs/relevance-extract-2026-10-29/baseline/S002.html": "82f8c61e298a40b8735b3d10a99b19e6f7a747b618a82abc13b0e285299977d9",
+    "runs/relevance-extract-2026-10-29/baseline/S018.html": "f7c7c0e601c17eef54b28dcb35b3c5fac9c78e287a2cc590695df51b9f6d311e",
+    "runs/relevance-extract-2026-10-29/baseline/S022.html": "a58437d9567ddf54d0174b206bdae4a6145f63fd6c21711ef05eb7a0a8c4e3fd",
+    "runs/relevance-extract-2026-10-29/baseline/S005.html": "e5480002fcca5d9919bbd38174622569f65f79e81f6a9b61515c478beef1c7d7",
+    "runs/relevance-extract-2026-10-29/baseline/S013.html": "a5efe6bd3c4d59d6944557def8e015225c2dde566e15e22b137a04e1e2492bed",
+    "runs/relevance-extract-2026-10-29/baseline/S009.html": "ff170a22185ccdd9fb9c853491c61387757265ff392564af957b696c90c5abed",
+    "runs/relevance-extract-2026-10-29/baseline/S008.html": "7d1f1e111c379b8f585a19f4e517ee3aff9407a51dc7bf5fae46a5f764b09b16",
+    "runs/relevance-extract-2026-10-29/baseline/S024.html": "96a30138d6fa55666d275eb72267d0a647d13bf290432ac9e7990b7e5acb372d",
+    "runs/relevance-extract-2026-10-29/baseline/S012.html": "0911556903b26aec0a8824e9ce00176506214bbeeaf27c06f50d3b8e7cbc8bba",
+    "runs/relevance-extract-2026-10-29/baseline/S004.html": "2c2888835b8e9d36c3d9cca01d025acf84bfe850f58bf7aa7de38a7b5e70f709",
+    "runs/relevance-extract-2026-10-29/baseline/S011.html": "358a63192bd78c6ff30a5a7dc764b9005c725dd5c4f0ee3c2e0813d172969096",
+    "runs/relevance-extract-2026-10-29/baseline/S007.html": "902dc75ace6df353bcadc00ef98c8a3dd846cd67acb52d4ff40414e9d77a738c",
+    "runs/relevance-extract-2026-10-29/baseline/S006.html": "4785a520901c35ffd80be0c903ac54021eee56e94756417a6c245e1e4e9dc773",
+    "runs/relevance-extract-2026-10-29/baseline/S010.html": "04aea3d1d8097a19ab19f83e3a154bd8b7f83826ef53ef49fe951c286485ce8f",
+    "runs/relevance-extract-2026-10-29/baseline/S021.html": "fe68100372b180559333ca298b0bc83e344c5a50a50e906ee8934af2406964e0",
+    "runs/relevance-extract-2026-10-29/baseline/S017.html": "9f6fd3b6b9a72a3bad256273f85d57297d53d7520e9086781815be73570c8b61",
+    "runs/relevance-extract-2026-10-29/baseline/S001.html": "778d42e9d9d93212e90a96d3db5bfb21f314414f01ffd820398e3b00e5405a14",
+    "runs/relevance-extract-2026-10-29/baseline/S016.html": "4428993e5af131a56e9ffef28b8d751db54c6af886bfe5360c5ee57f079125a0",
+    "runs/relevance-extract-2026-10-29/baseline/S020.html": "a4e9b8a7c9ce5a0a8c803bc97127c5f3fefffb0da574ce337ddf6a2f03139f78",
+    "runs/relevance-extract-2026-10-29/final-v2/holdout/S003.html": "f2d44f259619ce63998eb7f3a82b9da54c7985f81b65895f2b1ebd9562daf2c9",
+    "runs/relevance-extract-2026-10-29/final-v2/holdout/S002.html": "57952b0db2d5c500039d4ac4142b7163ef46b97a0badbb44cf244bd617fab88a",
+    "runs/relevance-extract-2026-10-29/final-v2/holdout/S005.html": "039785702cbb38cbd1d666c901b60c18db206ee20ff18ecee7b1c72143f09ca1",
+    "runs/relevance-extract-2026-10-29/final-v2/holdout/S009.html": "4239de066d2f8f7f22907e97cc2c36ccfe0c46948500ae274ad038e3378fd131",
+    "runs/relevance-extract-2026-10-29/final-v2/holdout/S008.html": "8e78d81c4bb589c73999cb0627abc7f214ef3c17ac999d5ac2c25bd7e8de2364",
+    "runs/relevance-extract-2026-10-29/final-v2/holdout/S012.html": "f0d9955e42a53b9caf30bb17198c8d8e49f5df0bc39cdfb37ae114dbf77c223f",
+    "runs/relevance-extract-2026-10-29/final-v2/holdout/S004.html": "15eb80025b18f1da6a57c76c9cb570e3bfd5d4ea90916bbc668a332d7067180c",
+    "runs/relevance-extract-2026-10-29/final-v2/holdout/S011.html": "d0846f17755e7ecb9a0baccf63e1be26ed13ef0cb871d9a9f36d13cb222fa640",
+    "runs/relevance-extract-2026-10-29/final-v2/holdout/S007.html": "cde6226f8eed08272a2ac1883f5ceb7bd3cc955bcf5ddcc3e6d3bd4ecc3802a3",
+    "runs/relevance-extract-2026-10-29/final-v2/holdout/S006.html": "f95385580310043d0155bc3682c967e97a5f2561f1c4f8a3e9dcfad49cd7ed27",
+    "runs/relevance-extract-2026-10-29/final-v2/holdout/S010.html": "d1579c7d49595dba7dd664b442172144f48ef8e48871664e5f7bb759850f1dcf",
+    "runs/relevance-extract-2026-10-29/final-v2/holdout/S001.html": "1f54e3127c5e50204cb879ac80d5c914010b111694dd17f5939efd66418c32cd",
+    "runs/relevance-extract-2026-10-29/baseline/jcar.html": "130a38452f1395bf8996e8935b6fc49c4d663f32fbdc9be2792afc3a912b4404",
+    "runs/relevance-extract-2026-10-29/baseline/n8n.html": "681c16041d55dbd601d3cb3a48afdecf787f7fd9dbcfd2f4bf6ecdaeb33037b1",
+    "runs/relevance-extract-2026-10-29/fulltext/jcar.html": "8710b394e548f16f82824002086f9efc10ef3d3545434f96907d9ac5a663e8bc"
+  },
+  "verification": {
+    "ordinary_tests": {
+      "passed": 27,
+      "failed": 0,
+      "ignored": 16
+    },
+    "fmt": "passed",
+    "clippy": "passed",
+    "release_build": "passed",
+    "release_mcp_stdio": {
+      "passed": 3,
+      "tools": 4
+    },
+    "live_mcp_extract": {
+      "status": "ok",
+      "chars": 2165,
+      "scope": "main",
+      "sha256": "070ff098c1a9b5a1bf46b9c53d221028d02c978b6e382e153873d28ca9fe9a2a"
+    },
+    "offline_b17_export_parity": "passed; historical export/context only, not current prompt equivalence",
+    "context_check": "passed; Router34tools",
+    "context_lint": "OK",
+    "independent_acceptance": false,
+    "final_release_sha256": "91f183b1c073e341b504c9728754502449cdbc50ff9f8c7ad3541fc68775617a",
+    "source_sha256": {
+      "src/main.rs": "886a26d6e22d6ad7a629dc84862cc4c62cd256d00c63662939403fd9241a2a81",
+      "src/policy.rs": "22071d567153362074442b3e2834ddefb265428462ecbf42d3745a47d398660b",
+      "src/model.rs": "4736cfc3fa07645e110c7cda37cbec2f3a0feae90e10dd075b31a6b8fd29279d",
+      "src/mcp.rs": "c7af9ebfd4902ec246af817895a1d6a351204af60a7ff004d05c6130d78f4c8c",
+      "tests/mcp_stdio.rs": "f477a2a48b0101d226b3bfbda7ce9da4a5d4b83271c80b4bbd5196d174daf113"
+    },
+    "red_green": {
+      "initial": "abeadd524b70b9d5bd1b93139e5119d7b63a0899f03ec70b4bbbaa2352d5babe",
+      "fulltext_red": "202580898abd62d03c6a6af475912a64085ace1ce4dd80b94b01ee3292604c32",
+      "green": "81c8845efc530dfcc59834f42b82121e5e787c5d286875d11b15ac8aca810abc",
+      "verdict": "FIX_PROVEN for extraction only"
+    }
+  }
+}

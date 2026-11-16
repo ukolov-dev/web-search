@@ -1,0 +1,85 @@
+<!doctype html><html><head><title>RFC 9111: HTTP Caching</title><meta content="9111" name="rfc.number"><meta content="xml2rfc 3.12.10" name="generator"></head><body><table class="ears"><thead><tr><td>RFC 9111</td><td>HTTP Caching</td><td>June 2022</td></tr></thead></table><h1 id="rfcnum">RFC 9111</h1><h1 id="title">HTTP Caching</h1><div id="cache-response-directive.no-cache">
+<section id="section-5.2.2.4">
+            <h5 id="name-no-cache-2">
+<a href="#section-5.2.2.4" class="section-number selfRef">5.2.2.4. </a><a href="#name-no-cache-2" class="section-name selfRef">no-cache</a>
+            </h5>
+<span id="iref-no-cache-cache-directive-38" class="iref"></span>
+            <p id="section-5.2.2.4-1">
+   Argument syntax:<a href="#section-5.2.2.4-1" class="pilcrow">¶</a></p>
+<ul class="normal ulEmpty">
+<li class="normal ulEmpty" id="section-5.2.2.4-2.1">#<a href="#imported.rules" class="xref">field-name</a><a href="#section-5.2.2.4-2.1" class="pilcrow">¶</a>
+</li>
+            </ul>
+<p id="section-5.2.2.4-3">
+   The no-cache response directive, in its unqualified form (without an
+   argument), indicates that the response <span class="bcp14">MUST NOT</span> be used to satisfy any
+   other request without forwarding it for validation and receiving a
+   successful response; see <a href="#validation.model" class="xref">Section 4.3</a>.<a href="#section-5.2.2.4-3" class="pilcrow">¶</a></p>
+<p id="section-5.2.2.4-4">
+   This allows an origin server to prevent a cache from using
+   the response to satisfy a request without contacting it, even by caches that have
+   been configured to send stale responses.<a href="#section-5.2.2.4-4" class="pilcrow">¶</a></p>
+<p id="section-5.2.2.4-5">
+   The qualified form of the no-cache response directive, with an argument that
+   lists one or more field names, indicates that a cache <span class="bcp14">MAY</span> use the
+   response to satisfy a subsequent request, subject to any other restrictions
+   on caching, if the listed header fields are excluded from the subsequent
+   response or the subsequent response has been successfully revalidated with
+   the origin server (updating or removing those fields).
+   This allows an origin server to prevent the reuse of certain header
+   fields in a response, while still allowing caching of the rest of the
+   response.<a href="#section-5.2.2.4-5" class="pilcrow">¶</a></p>
+<p id="section-5.2.2.4-6">
+   The field names given are not limited to the set of header
+   fields defined by this specification. Field names are case-insensitive.<a href="#section-5.2.2.4-6" class="pilcrow">¶</a></p>
+<p id="section-5.2.2.4-7">
+   This directive uses the quoted-string form of the argument syntax.
+   A sender <span class="bcp14">SHOULD NOT</span> generate the token form (even if quoting appears not
+   to be needed for single-entry lists).<a href="#section-5.2.2.4-7" class="pilcrow">¶</a></p>
+<aside id="section-5.2.2.4-8">
+              <p id="section-5.2.2.4-8.1">
+                        <strong>Note:</strong> The
+   qualified form of the directive is often handled by caches as if an
+   unqualified no-cache directive was received; that is, the special handling
+   for the qualified form is not widely implemented.<a href="#section-5.2.2.4-8.1" class="pilcrow">¶</a></p>
+</aside>
+</section>
+</div>
+<div id="cache-response-directive.no-store">
+<section id="section-5.2.2.5">
+            <h5 id="name-no-store-2">
+<a href="#section-5.2.2.5" class="section-number selfRef">5.2.2.5. </a><a href="#name-no-store-2" class="section-name selfRef">no-store</a>
+            </h5>
+<span id="iref-no-store-cache-directive-39" class="iref"></span>
+            <p id="section-5.2.2.5-1">
+   The no-store response directive indicates that a cache <span class="bcp14">MUST NOT</span> store
+   any part of either the immediate request or the response and <span class="bcp14">MUST NOT</span> use
+   the response to satisfy any other request.<a href="#section-5.2.2.5-1" class="pilcrow">¶</a></p>
+<p id="section-5.2.2.5-2">
+   This directive applies to both private and shared caches. "MUST NOT
+   store" in this context means that the cache <span class="bcp14">MUST NOT</span> intentionally store
+   the information in non-volatile storage and <span class="bcp14">MUST</span> make a best-effort
+   attempt to remove the information from volatile storage as promptly as
+   possible after forwarding it.<a href="#section-5.2.2.5-2" class="pilcrow">¶</a></p>
+<p id="section-5.2.2.5-3">
+   This directive is not a reliable or sufficient mechanism for ensuring
+   privacy. In particular, malicious or compromised caches might not
+   recognize or obey this directive, and communications networks might be
+   vulnerable to eavesdropping.<a href="#section-5.2.2.5-3" class="pilcrow">¶</a></p>
+<p id="section-5.2.2.5-4">
+   Note that the must-understand cache directive overrides no-store in certain
+   circumstances; see <a href="#cache-response-directive.must-understand" class="xref">Section 5.2.2.3</a>.<a href="#section-5.2.2.5-4" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="cache-response-directive.no-transform">
+<section id="section-5.2.2.6">
+            <h5 id="name-no-transform-2">
+<a href="#section-5.2.2.6" class="section-number selfRef">5.2.2.6. </a><a href="#name-no-transform-2" class="section-name selfRef">no-transform</a>
+            </h5>
+<span id="iref-no-transform-cache-directive" class="iref"></span>
+            <p id="section-5.2.2.6-1">
+   The no-transform response directive indicates that an intermediary
+   (regardless of whether it implements a cache) <span class="bcp14">MUST NOT</span> transform the
+   content, as defined in <span><a href="https://www.rfc-editor.org/rfc/rfc9110#section-7.7" class="relref">Section 7.7</a> of [<a href="#HTTP" class="xref">HTTP</a>]</span>.<a href="#section-5.2.2.6-1" class="pilcrow">¶</a></p>
+</section>
+</div></body></html>

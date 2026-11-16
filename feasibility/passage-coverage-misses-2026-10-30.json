@@ -1,0 +1,1762 @@
+{
+  "protocol": {
+    "purpose": "Historical development diagnosis of all11v6FN;NOT new evaluationgold",
+    "inputs": [
+      "feasibility/direct-coverage-corpus-2026-10-30.json",
+      "feasibility/direct-coverage-gold-v1.json"
+    ],
+    "inference": "No model/network calls;exact supplied passages and frozen source support inspected",
+    "source_offsets": "source support offsets refer whitespace-normalized originalHTML text; extracted offsets explicitly tagged and hashes retained",
+    "caution": "Component information loss demonstrated; suggested repairs require regression/live verification and do not authorize accepting missing conditions"
+  },
+  "counts": {
+    "document_selection": 3,
+    "extraction": 1,
+    "coverage_requirements": 2,
+    "fragment_selection": 2,
+    "fragment_selection_and_coverage": 2,
+    "typed_literal_negation": 1
+  },
+  "cases": [
+    {
+      "case": "c01",
+      "id": "C009",
+      "query": "git cherry-pick --no-commit multiple commits initial index state",
+      "url": "https://git-scm.com/docs/git-cherry-pick",
+      "stage": "document_selection",
+      "cause": "Source is in coverage pool but not in four reads; card lacks --no-commit/initial-index witnesses.",
+      "safe_fix_direction": "Improve read exploration using query subject/API fidelity; fragment changes alone cannot recover unread body.",
+      "gold_basis": "concrete requested relationship and material conditions in inspected retained source",
+      "support": [
+        {
+          "quote": "This flag applies the changes necessary to cherry-pick each named commit to your working tree and the index, without making any commit.",
+          "start": 5634,
+          "end": 5769,
+          "source_snapshot": "runs/direct-coverage-2026-10-30/gold-audit/c01-C009.html",
+          "field": "raw_html_text",
+          "source_normalized_text_hash": "3ff7696674c7324da5de6de799163608b6d6be6657ec4e3fb318bc42ee16696f",
+          "html_hash": "3eb2c974152a02b6a675d0096f08180ab307e807a423d7b270868123781d7f65",
+          "in_supplied_passages": []
+        },
+        {
+          "quote": "your index does not have to match the HEAD commit.",
+          "start": 5809,
+          "end": 5859,
+          "source_snapshot": "runs/direct-coverage-2026-10-30/gold-audit/c01-C009.html",
+          "field": "raw_html_text",
+          "source_normalized_text_hash": "3ff7696674c7324da5de6de799163608b6d6be6657ec4e3fb318bc42ee16696f",
+          "html_hash": "3eb2c974152a02b6a675d0096f08180ab307e807a423d7b270868123781d7f65",
+          "in_supplied_passages": []
+        },
+        {
+          "quote": "The cherry-pick is done against the beginning state of your index.",
+          "start": 5860,
+          "end": 5926,
+          "source_snapshot": "runs/direct-coverage-2026-10-30/gold-audit/c01-C009.html",
+          "field": "raw_html_text",
+          "source_normalized_text_hash": "3ff7696674c7324da5de6de799163608b6d6be6657ec4e3fb318bc42ee16696f",
+          "html_hash": "3eb2c974152a02b6a675d0096f08180ab307e807a423d7b270868123781d7f65",
+          "in_supplied_passages": []
+        },
+        {
+          "quote": "This is useful when cherry-picking more than one commits' effect to your index in a row.",
+          "start": 5927,
+          "end": 6015,
+          "source_snapshot": "runs/direct-coverage-2026-10-30/gold-audit/c01-C009.html",
+          "field": "raw_html_text",
+          "source_normalized_text_hash": "3ff7696674c7324da5de6de799163608b6d6be6657ec4e3fb318bc42ee16696f",
+          "html_hash": "3eb2c974152a02b6a675d0096f08180ab307e807a423d7b270868123781d7f65",
+          "in_supplied_passages": []
+        }
+      ],
+      "coverage_anchors": [
+        "git cherry-pick --no-commit",
+        "--no-commit multiple commits",
+        "multiple commits initial index"
+      ],
+      "coverage_checks": {
+        "checks": [
+          {
+            "passages": [
+              "T",
+              "S"
+            ],
+            "quote": "",
+            "status": "missing"
+          },
+          {
+            "passages": [
+              "T",
+              "S"
+            ],
+            "quote": "",
+            "status": "missing"
+          },
+          {
+            "passages": [
+              "T",
+              "S"
+            ],
+            "quote": "",
+            "status": "missing"
+          },
+          {
+            "passages": [
+              "T",
+              "S"
+            ],
+            "quote": "",
+            "status": "missing"
+          }
+        ]
+      },
+      "final_rejection": "unverified or uncovered requirements: R0,R1,R2,R3,audit:not accepted,literal:--no-commit",
+      "in_coverage_pool": true,
+      "read_attempted": false,
+      "branch_document_chars": null,
+      "branch_extraction_method": null,
+      "branch_extraction_scope": null,
+      "supplied_passage_metadata": [
+        {
+          "end": 92,
+          "field": "title",
+          "id": "T",
+          "normalized_text_hash": "d47bbe12e35308f6b9d35040a0df38033d1e3a18e7b1652e2025e3958a73abad",
+          "source_url": "https://git-scm.com/docs/git-cherry-pick",
+          "start": 0,
+          "text_hash": "d47bbe12e35308f6b9d35040a0df38033d1e3a18e7b1652e2025e3958a73abad"
+        },
+        {
+          "end": 92,
+          "field": "snippet",
+          "id": "S",
+          "normalized_text_hash": "d47bbe12e35308f6b9d35040a0df38033d1e3a18e7b1652e2025e3958a73abad",
+          "source_url": "https://git-scm.com/docs/git-cherry-pick",
+          "start": 0,
+          "text_hash": "d47bbe12e35308f6b9d35040a0df38033d1e3a18e7b1652e2025e3958a73abad"
+        }
+      ],
+      "audit_target": false,
+      "audit_verdict": null
+    },
+    {
+      "case": "c02",
+      "id": "C005",
+      "query": "Python dataclasses asdict recursive deepcopy nested objects",
+      "url": "https://github.com/python/cpython/blob/main/Doc/library/dataclasses.rst?plain=1",
+      "stage": "extraction",
+      "cause": "semantic_main produced128chars of GitHub header/navigation while actual rendered .react-code-lines contains886lines and complete asdict/deepcopy source.",
+      "safe_fix_direction": "Select a unique rendered code container before main; keep pruning/provenance/limits, no new network.",
+      "gold_basis": "concrete requested relationship and material conditions in inspected retained source",
+      "support": [
+        {
+          "quote": "function :: asdict(obj, *, dict_factory=dict)",
+          "start": 21808,
+          "end": 21853,
+          "source_snapshot": "runs/direct-coverage-2026-10-30/raw-cache/9d651bd08445a1212d045875cf535f9d08b8922154ac9dae758e496d38265404.json",
+          "field": "raw_html_text",
+          "source_normalized_text_hash": "dcd95f1cb0238b722d2e32e9c0149e92778fa8ed6130d1468a5c1d30aa4ae84e",
+          "html_hash": "16d4a4cff5b27569089ee85bd6e48cd547ef2a9066b4d125d89c46b9bb4115d5",
+          "in_supplied_passages": [],
+          "in_extracted_text": false
+        },
+        {
+          "quote": "dataclasses, dicts, frozendicts, lists, and tuples are recursed into.",
+          "start": 22026,
+          "end": 22095,
+          "source_snapshot": "runs/direct-coverage-2026-10-30/raw-cache/9d651bd08445a1212d045875cf535f9d08b8922154ac9dae758e496d38265404.json",
+          "field": "raw_html_text",
+          "source_normalized_text_hash": "dcd95f1cb0238b722d2e32e9c0149e92778fa8ed6130d1468a5c1d30aa4ae84e",
+          "html_hash": "16d4a4cff5b27569089ee85bd6e48cd547ef2a9066b4d125d89c46b9bb4115d5",
+          "in_supplied_passages": [],
+          "in_extracted_text": false
+        },
+        {
+          "quote": "Other objects are copied with :func: ` copy.deepcopy `.",
+          "start": 22096,
+          "end": 22151,
+          "source_snapshot": "runs/direct-coverage-2026-10-30/raw-cache/9d651bd08445a1212d045875cf535f9d08b8922154ac9dae758e496d38265404.json",
+          "field": "raw_html_text",
+          "source_normalized_text_hash": "dcd95f1cb0238b722d2e32e9c0149e92778fa8ed6130d1468a5c1d30aa4ae84e",
+          "html_hash": "16d4a4cff5b27569089ee85bd6e48cd547ef2a9066b4d125d89c46b9bb4115d5",
+          "in_supplied_passages": [],
+          "in_extracted_text": false
+        },
+        {
+          "quote": "assert asdict(c) == {'mylist': [{'x': 0, 'y': 0}, {'x': 10, 'y': 4}]}",
+          "start": 22382,
+          "end": 22451,
+          "source_snapshot": "runs/direct-coverage-2026-10-30/raw-cache/9d651bd08445a1212d045875cf535f9d08b8922154ac9dae758e496d38265404.json",
+          "field": "raw_html_text",
+          "source_normalized_text_hash": "dcd95f1cb0238b722d2e32e9c0149e92778fa8ed6130d1468a5c1d30aa4ae84e",
+          "html_hash": "16d4a4cff5b27569089ee85bd6e48cd547ef2a9066b4d125d89c46b9bb4115d5",
+          "in_supplied_passages": [],
+          "in_extracted_text": false
+        }
+      ],
+      "coverage_anchors": [
+        "dataclasses asdict recursive deepcopy",
+        "asdict recursive deepcopy nested",
+        "recursive deepcopy nested objects"
+      ],
+      "coverage_checks": {
+        "checks": [
+          {
+            "passages": [
+              "T",
+              "B1"
+            ],
+            "quote": "",
+            "status": "missing"
+          },
+          {
+            "passages": [
+              "T",
+              "B1"
+            ],
+            "quote": "",
+            "status": "missing"
+          },
+          {
+            "passages": [
+              "T",
+              "B1"
+            ],
+            "quote": "",
+            "status": "missing"
+          },
+          {
+            "passages": [
+              "T",
+              "B1"
+            ],
+            "quote": "",
+            "status": "missing"
+          }
+        ]
+      },
+      "final_rejection": "unverified or uncovered requirements: R0,R1,R2,R3,audit:not accepted",
+      "in_coverage_pool": true,
+      "read_attempted": true,
+      "branch_document_chars": 128,
+      "branch_extraction_method": "semantic_main",
+      "branch_extraction_scope": "main",
+      "supplied_passage_metadata": [
+        {
+          "end": 64,
+          "field": "title",
+          "id": "T",
+          "normalized_text_hash": "4786b3939c7931c11b619f5199cd23f736a006d7ec0048c59add10cb2b58e7ce",
+          "source_url": "https://github.com/python/cpython/blob/main/Doc/library/dataclasses.rst?plain=1",
+          "start": 0,
+          "text_hash": "4786b3939c7931c11b619f5199cd23f736a006d7ec0048c59add10cb2b58e7ce"
+        },
+        {
+          "end": 107,
+          "field": "snippet",
+          "id": "S",
+          "normalized_text_hash": "4ab9d18fb3cd6cf8bcda10b89c396eaa925176e214e069b1fce0b64b0de1cca9",
+          "source_url": "https://github.com/python/cpython/blob/main/Doc/library/dataclasses.rst?plain=1",
+          "start": 0,
+          "text_hash": "4ab9d18fb3cd6cf8bcda10b89c396eaa925176e214e069b1fce0b64b0de1cca9"
+        },
+        {
+          "end": 123,
+          "field": "body",
+          "id": "B1",
+          "normalized_text_hash": "12ab29f19e3a7dfb2fc5791f225ba55639e1e965e2e77f0aa5672bf393e1e10f",
+          "source_url": "https://github.com/python/cpython/blob/main/Doc/library/dataclasses.rst?plain=1",
+          "start": 0,
+          "text_hash": "81c7626a874788a1182bb877c97afd634ce14e87abfa2dfcef762361b318a454"
+        },
+        {
+          "end": 71,
+          "field": "page_title",
+          "id": "H",
+          "normalized_text_hash": "c1a214302c04a5080c6df7995773595f7bd267e8468a13ce020a7e2a8d902f94",
+          "source_url": "https://github.com/python/cpython/blob/main/Doc/library/dataclasses.rst?plain=1",
+          "start": 0,
+          "text_hash": "c1a214302c04a5080c6df7995773595f7bd267e8468a13ce020a7e2a8d902f94"
+        }
+      ],
+      "audit_target": false,
+      "audit_verdict": null,
+      "reranker_selected_ranges": [
+        [
+          0,
+          123
+        ]
+      ]
+    },
+    {
+      "case": "c03",
+      "id": "C005",
+      "query": "Rust Rc Weak upgrade strong count dropped allocation",
+      "url": "https://doc.rust-lang.org/std/rc/",
+      "stage": "coverage_requirements",
+      "cause": "B1 lastRc drop +B2 upgradeNone/value-versus-allocation +B3 no strongRc jointly support query; overlapping anchors upgrade strong count/strong count dropped marked missing.",
+      "safe_fix_direction": "Avoid invented overlapping phrase obligations; audit whole original query from genuine supplied relation witnesses.",
+      "gold_basis": "concrete requested relationship and material conditions in inspected retained source",
+      "support": [
+        {
+          "quote": "When the last Rc pointer to a given allocation is destroyed, the value stored in that allocation (often referred to as “inner value”) is also dropped.",
+          "start": 482,
+          "end": 636,
+          "source_snapshot": "runs/direct-coverage-2026-10-30/raw-cache/877ad83dd8e11c8ea0f74390a3037c7b788733ad86385f2d3e165a1b4d030aeb.json",
+          "field": "raw_html_text",
+          "source_normalized_text_hash": "271eab2891b674d5e189d57766fd98e610dc971540a86feb682dd9779291fa5d",
+          "html_hash": "845b666f4240b5771c27069d886f96e9a97b8fd0581e251019fbbf3177546645",
+          "in_supplied_passages": [
+            "S",
+            "B1"
+          ],
+          "in_extracted_text": true,
+          "extracted_start": 305,
+          "extracted_end": 459,
+          "extracted_text_hash": "c8ef4070043644d8aabfe41ed8cff44c673c4a5cca91b961904cacd36c73b655",
+          "extracted_normalized_text_hash": "73b235f9ab8d249d563153849a9fab1b721aafe2d2165346d8497cde176108c2",
+          "covering_pool_windows": [
+            {
+              "index": 0,
+              "range": [
+                0,
+                1213
+              ],
+              "score": 0.984375,
+              "rank": 1,
+              "selected": true
+            }
+          ]
+        },
+        {
+          "quote": "this will return None if the value stored in the allocation has already been dropped.",
+          "start": 1357,
+          "end": 1442,
+          "source_snapshot": "runs/direct-coverage-2026-10-30/raw-cache/877ad83dd8e11c8ea0f74390a3037c7b788733ad86385f2d3e165a1b4d030aeb.json",
+          "field": "raw_html_text",
+          "source_normalized_text_hash": "271eab2891b674d5e189d57766fd98e610dc971540a86feb682dd9779291fa5d",
+          "html_hash": "845b666f4240b5771c27069d886f96e9a97b8fd0581e251019fbbf3177546645",
+          "in_supplied_passages": [
+            "B2"
+          ],
+          "in_extracted_text": true,
+          "extracted_start": 1172,
+          "extracted_end": 1257,
+          "extracted_text_hash": "c8ef4070043644d8aabfe41ed8cff44c673c4a5cca91b961904cacd36c73b655",
+          "extracted_normalized_text_hash": "73b235f9ab8d249d563153849a9fab1b721aafe2d2165346d8497cde176108c2",
+          "covering_pool_windows": [
+            {
+              "index": 1,
+              "range": [
+                1013,
+                2219
+              ],
+              "score": 0.984375,
+              "rank": 2,
+              "selected": true
+            }
+          ]
+        },
+        {
+          "quote": "Weak pointers do not keep the value inside the allocation alive; however, they do keep the allocation (the backing store for the inner value) alive.",
+          "start": 1459,
+          "end": 1607,
+          "source_snapshot": "runs/direct-coverage-2026-10-30/raw-cache/877ad83dd8e11c8ea0f74390a3037c7b788733ad86385f2d3e165a1b4d030aeb.json",
+          "field": "raw_html_text",
+          "source_normalized_text_hash": "271eab2891b674d5e189d57766fd98e610dc971540a86feb682dd9779291fa5d",
+          "html_hash": "845b666f4240b5771c27069d886f96e9a97b8fd0581e251019fbbf3177546645",
+          "in_supplied_passages": [
+            "B2"
+          ],
+          "in_extracted_text": true,
+          "extracted_start": 1274,
+          "extracted_end": 1422,
+          "extracted_text_hash": "c8ef4070043644d8aabfe41ed8cff44c673c4a5cca91b961904cacd36c73b655",
+          "extracted_normalized_text_hash": "73b235f9ab8d249d563153849a9fab1b721aafe2d2165346d8497cde176108c2",
+          "covering_pool_windows": [
+            {
+              "index": 1,
+              "range": [
+                1013,
+                2219
+              ],
+              "score": 0.984375,
+              "rank": 2,
+              "selected": true
+            }
+          ]
+        }
+      ],
+      "coverage_anchors": [
+        "Rc Weak upgrade",
+        "upgrade strong count",
+        "strong count dropped"
+      ],
+      "coverage_checks": {
+        "checks": [
+          {
+            "passages": [
+              "B1",
+              "B2"
+            ],
+            "quote": "A Weak pointer can be upgraded to an Rc, but this will return None if the value stored in the allocation has already been dropped.",
+            "status": "supported"
+          },
+          {
+            "passages": [
+              "B1",
+              "B2"
+            ],
+            "quote": "A Weak pointer can be upgraded to an Rc, but this will return None if the value stored in the allocation has already been dropped.",
+            "status": "supported"
+          },
+          {
+            "passages": [
+              "B1"
+            ],
+            "quote": "",
+            "status": "missing"
+          },
+          {
+            "passages": [
+              "B1"
+            ],
+            "quote": "",
+            "status": "missing"
+          }
+        ]
+      },
+      "final_rejection": "unverified or uncovered requirements: R2,R3,audit:not accepted",
+      "in_coverage_pool": true,
+      "read_attempted": true,
+      "branch_document_chars": 8203,
+      "branch_extraction_method": "semantic_main",
+      "branch_extraction_scope": "main",
+      "supplied_passage_metadata": [
+        {
+          "end": 14,
+          "field": "title",
+          "id": "T",
+          "normalized_text_hash": "43479451d653aa700b3fd1d16cd9070d8216f9f8b9e63b648e2f9fc8142d33a6",
+          "source_url": "https://doc.rust-lang.org/std/rc/",
+          "start": 0,
+          "text_hash": "43479451d653aa700b3fd1d16cd9070d8216f9f8b9e63b648e2f9fc8142d33a6"
+        },
+        {
+          "end": 154,
+          "field": "snippet",
+          "id": "S",
+          "normalized_text_hash": "d1fffb58833a07c07db463f131f2f2510169d9c50a025288151c92147c812f4e",
+          "source_url": "https://doc.rust-lang.org/std/rc/",
+          "start": 0,
+          "text_hash": "d1fffb58833a07c07db463f131f2f2510169d9c50a025288151c92147c812f4e"
+        },
+        {
+          "end": 1213,
+          "field": "body",
+          "id": "B1",
+          "normalized_text_hash": "73b235f9ab8d249d563153849a9fab1b721aafe2d2165346d8497cde176108c2",
+          "source_url": "https://doc.rust-lang.org/std/rc/",
+          "start": 0,
+          "text_hash": "c8ef4070043644d8aabfe41ed8cff44c673c4a5cca91b961904cacd36c73b655"
+        },
+        {
+          "end": 2219,
+          "field": "body",
+          "id": "B2",
+          "normalized_text_hash": "73b235f9ab8d249d563153849a9fab1b721aafe2d2165346d8497cde176108c2",
+          "source_url": "https://doc.rust-lang.org/std/rc/",
+          "start": 1013,
+          "text_hash": "c8ef4070043644d8aabfe41ed8cff44c673c4a5cca91b961904cacd36c73b655"
+        },
+        {
+          "end": 7693,
+          "field": "body",
+          "id": "B3",
+          "normalized_text_hash": "73b235f9ab8d249d563153849a9fab1b721aafe2d2165346d8497cde176108c2",
+          "source_url": "https://doc.rust-lang.org/std/rc/",
+          "start": 7027,
+          "text_hash": "c8ef4070043644d8aabfe41ed8cff44c673c4a5cca91b961904cacd36c73b655"
+        },
+        {
+          "end": 14,
+          "field": "page_title",
+          "id": "H",
+          "normalized_text_hash": "43479451d653aa700b3fd1d16cd9070d8216f9f8b9e63b648e2f9fc8142d33a6",
+          "source_url": "https://doc.rust-lang.org/std/rc/",
+          "start": 0,
+          "text_hash": "43479451d653aa700b3fd1d16cd9070d8216f9f8b9e63b648e2f9fc8142d33a6"
+        }
+      ],
+      "audit_target": false,
+      "audit_verdict": null,
+      "reranker_selected_ranges": [
+        [
+          0,
+          1213
+        ],
+        [
+          1013,
+          2219
+        ],
+        [
+          7027,
+          7693
+        ]
+      ]
+    },
+    {
+      "case": "c03",
+      "id": "C018",
+      "query": "Rust Rc Weak upgrade strong count dropped allocation",
+      "url": "https://stdrs.dev/nightly/x86_64-unknown-linux-gnu/std/rc/index.html",
+      "stage": "coverage_requirements",
+      "cause": "Mirror has same complete relation inB1/B2/B3;R2/R3 missing due over-specific overlapping query anchors, not missing source.",
+      "safe_fix_direction": "Same generic coverage requirement correction; do not bypass semantic audit.",
+      "gold_basis": "concrete requested relationship and material conditions in inspected retained source",
+      "support": [
+        {
+          "quote": "When the last Rc pointer to a given allocation is destroyed, the value stored in that allocation (often referred to as “inner value”) is also dropped.",
+          "start": 359,
+          "end": 513,
+          "source_snapshot": "runs/direct-coverage-2026-10-30/raw-cache/d5409c946cae1f1b9e1e7ebe28b02140c452ff8b818dac2fabf64f65329fae38.json",
+          "field": "raw_html_text",
+          "source_normalized_text_hash": "0e7151caefe77bb2a3f8687d2bac4ca7d97b88147080620d81fc2b3819e02e23",
+          "html_hash": "9efce0e4a2ad5127cd8c20f8228539ac4c4855c1ddf059629b5df103bf5b03d3",
+          "in_supplied_passages": [
+            "B1"
+          ],
+          "in_extracted_text": true,
+          "extracted_start": 309,
+          "extracted_end": 463,
+          "extracted_text_hash": "54b8fefaada6076e0382e7c634e1c76b46506b26e811290d6be2470e5aab8b0d",
+          "extracted_normalized_text_hash": "5fc54b1951ddaffe5a641fad229a47f88356b5bd5de98234f7adf20746a19bd1",
+          "covering_pool_windows": [
+            {
+              "index": 0,
+              "range": [
+                0,
+                1214
+              ],
+              "score": 0.9921875,
+              "rank": 1,
+              "selected": true
+            }
+          ]
+        },
+        {
+          "quote": "this will return None if the value stored in the allocation has already been dropped.",
+          "start": 1234,
+          "end": 1319,
+          "source_snapshot": "runs/direct-coverage-2026-10-30/raw-cache/d5409c946cae1f1b9e1e7ebe28b02140c452ff8b818dac2fabf64f65329fae38.json",
+          "field": "raw_html_text",
+          "source_normalized_text_hash": "0e7151caefe77bb2a3f8687d2bac4ca7d97b88147080620d81fc2b3819e02e23",
+          "html_hash": "9efce0e4a2ad5127cd8c20f8228539ac4c4855c1ddf059629b5df103bf5b03d3",
+          "in_supplied_passages": [
+            "B2"
+          ],
+          "in_extracted_text": true,
+          "extracted_start": 1176,
+          "extracted_end": 1261,
+          "extracted_text_hash": "54b8fefaada6076e0382e7c634e1c76b46506b26e811290d6be2470e5aab8b0d",
+          "extracted_normalized_text_hash": "5fc54b1951ddaffe5a641fad229a47f88356b5bd5de98234f7adf20746a19bd1",
+          "covering_pool_windows": [
+            {
+              "index": 1,
+              "range": [
+                1014,
+                2220
+              ],
+              "score": 0.984375,
+              "rank": 2,
+              "selected": true
+            }
+          ]
+        },
+        {
+          "quote": "Weak pointers do not keep the value inside the allocation alive; however, they do keep the allocation (the backing store for the inner value) alive.",
+          "start": 1336,
+          "end": 1484,
+          "source_snapshot": "runs/direct-coverage-2026-10-30/raw-cache/d5409c946cae1f1b9e1e7ebe28b02140c452ff8b818dac2fabf64f65329fae38.json",
+          "field": "raw_html_text",
+          "source_normalized_text_hash": "0e7151caefe77bb2a3f8687d2bac4ca7d97b88147080620d81fc2b3819e02e23",
+          "html_hash": "9efce0e4a2ad5127cd8c20f8228539ac4c4855c1ddf059629b5df103bf5b03d3",
+          "in_supplied_passages": [
+            "B2"
+          ],
+          "in_extracted_text": true,
+          "extracted_start": 1278,
+          "extracted_end": 1426,
+          "extracted_text_hash": "54b8fefaada6076e0382e7c634e1c76b46506b26e811290d6be2470e5aab8b0d",
+          "extracted_normalized_text_hash": "5fc54b1951ddaffe5a641fad229a47f88356b5bd5de98234f7adf20746a19bd1",
+          "covering_pool_windows": [
+            {
+              "index": 1,
+              "range": [
+                1014,
+                2220
+              ],
+              "score": 0.984375,
+              "rank": 2,
+              "selected": true
+            }
+          ]
+        }
+      ],
+      "coverage_anchors": [
+        "Rc Weak upgrade",
+        "upgrade strong count",
+        "strong count dropped"
+      ],
+      "coverage_checks": {
+        "checks": [
+          {
+            "passages": [
+              "B1",
+              "B2"
+            ],
+            "quote": "A Weak pointer can be upgraded to an Rc, but this will return None if the value stored in the allocation has already been dropped.",
+            "status": "supported"
+          },
+          {
+            "passages": [
+              "B1",
+              "B2"
+            ],
+            "quote": "A Weak pointer can be upgraded to an Rc, but this will return None if the value stored in the allocation has already been dropped.",
+            "status": "supported"
+          },
+          {
+            "passages": [
+              "B1"
+            ],
+            "quote": "",
+            "status": "missing"
+          },
+          {
+            "passages": [
+              "B1"
+            ],
+            "quote": "",
+            "status": "missing"
+          }
+        ]
+      },
+      "final_rejection": "unverified or uncovered requirements: R2,R3,audit:not accepted",
+      "in_coverage_pool": true,
+      "read_attempted": true,
+      "branch_document_chars": 8335,
+      "branch_extraction_method": "semantic_main",
+      "branch_extraction_scope": "main",
+      "supplied_passage_metadata": [
+        {
+          "end": 128,
+          "field": "title",
+          "id": "T",
+          "normalized_text_hash": "ba59a5cd7742d44c1acff4d3172a2ba3741a9e8ae9402fa3c5b309a7672b1e0a",
+          "source_url": "https://stdrs.dev/nightly/x86_64-unknown-linux-gnu/std/rc/index.html",
+          "start": 0,
+          "text_hash": "ba59a5cd7742d44c1acff4d3172a2ba3741a9e8ae9402fa3c5b309a7672b1e0a"
+        },
+        {
+          "end": 308,
+          "field": "snippet",
+          "id": "S",
+          "normalized_text_hash": "24c5d72cd0f061d7a56a50da1ca3e40c7e3747d82f9a6493226144374ef4a486",
+          "source_url": "https://stdrs.dev/nightly/x86_64-unknown-linux-gnu/std/rc/index.html",
+          "start": 0,
+          "text_hash": "24c5d72cd0f061d7a56a50da1ca3e40c7e3747d82f9a6493226144374ef4a486"
+        },
+        {
+          "end": 1214,
+          "field": "body",
+          "id": "B1",
+          "normalized_text_hash": "5fc54b1951ddaffe5a641fad229a47f88356b5bd5de98234f7adf20746a19bd1",
+          "source_url": "https://stdrs.dev/nightly/x86_64-unknown-linux-gnu/std/rc/index.html",
+          "start": 0,
+          "text_hash": "54b8fefaada6076e0382e7c634e1c76b46506b26e811290d6be2470e5aab8b0d"
+        },
+        {
+          "end": 2220,
+          "field": "body",
+          "id": "B2",
+          "normalized_text_hash": "5fc54b1951ddaffe5a641fad229a47f88356b5bd5de98234f7adf20746a19bd1",
+          "source_url": "https://stdrs.dev/nightly/x86_64-unknown-linux-gnu/std/rc/index.html",
+          "start": 1014,
+          "text_hash": "54b8fefaada6076e0382e7c634e1c76b46506b26e811290d6be2470e5aab8b0d"
+        },
+        {
+          "end": 7814,
+          "field": "body",
+          "id": "B3",
+          "normalized_text_hash": "5fc54b1951ddaffe5a641fad229a47f88356b5bd5de98234f7adf20746a19bd1",
+          "source_url": "https://stdrs.dev/nightly/x86_64-unknown-linux-gnu/std/rc/index.html",
+          "start": 7026,
+          "text_hash": "54b8fefaada6076e0382e7c634e1c76b46506b26e811290d6be2470e5aab8b0d"
+        },
+        {
+          "end": 14,
+          "field": "page_title",
+          "id": "H",
+          "normalized_text_hash": "43479451d653aa700b3fd1d16cd9070d8216f9f8b9e63b648e2f9fc8142d33a6",
+          "source_url": "https://stdrs.dev/nightly/x86_64-unknown-linux-gnu/std/rc/index.html",
+          "start": 0,
+          "text_hash": "43479451d653aa700b3fd1d16cd9070d8216f9f8b9e63b648e2f9fc8142d33a6"
+        }
+      ],
+      "audit_target": false,
+      "audit_verdict": null,
+      "reranker_selected_ranges": [
+        [
+          0,
+          1214
+        ],
+        [
+          1014,
+          2220
+        ],
+        [
+          7026,
+          7814
+        ]
+      ]
+    },
+    {
+      "case": "c04",
+      "id": "C005",
+      "query": "PostgreSQL NOT IN NULL NOT EXISTS three valued logic",
+      "url": "https://explainextended.com/2009/09/16/not-in-vs-not-exists-vs-left-join-is-null-postgresql/",
+      "stage": "initial_grounding_and_document_selection",
+      "cause": "Rawinitial saiddirect, but PostgreSQL only in URL, absent truncatedT/S, so correct initial literal demotion; RRFbackground outside10coveragepool and notread.",
+      "safe_fix_direction": "Provide a bounded read chance for query-specific URL subject; preserve initial/direct literal grounding.",
+      "gold_basis": "concrete requested relationship and material conditions in inspected retained source",
+      "support": [
+        {
+          "quote": "NOT IN , which is semantically different since its logic is trivalent and it can return NULL",
+          "start": 6098,
+          "end": 6190,
+          "source_snapshot": "runs/direct-coverage-2026-10-30/gold-audit/c04-C005.html",
+          "field": "raw_html_text",
+          "source_normalized_text_hash": "e8e06492ac1d7119135174cc29645f9d80f10dc653076f46fb33edebdd787e36",
+          "html_hash": "0c698030d8049de3e08a871ddc28ae2533e415f80ad926b3aba6500abd1f90b4",
+          "in_supplied_passages": []
+        },
+        {
+          "quote": "this condition is semantically equivalent to NOT EXISTS (but not to NOT IN )",
+          "start": 5779,
+          "end": 5855,
+          "source_snapshot": "runs/direct-coverage-2026-10-30/gold-audit/c04-C005.html",
+          "field": "raw_html_text",
+          "source_normalized_text_hash": "e8e06492ac1d7119135174cc29645f9d80f10dc653076f46fb33edebdd787e36",
+          "html_hash": "0c698030d8049de3e08a871ddc28ae2533e415f80ad926b3aba6500abd1f90b4",
+          "in_supplied_passages": []
+        }
+      ],
+      "coverage_anchors": [
+        "NOT IN",
+        "NULL",
+        "NOT EXISTS"
+      ],
+      "coverage_checks": null,
+      "final_rejection": null,
+      "in_coverage_pool": false,
+      "read_attempted": false,
+      "branch_document_chars": null,
+      "branch_extraction_method": null,
+      "branch_extraction_scope": null,
+      "supplied_passage_metadata": [],
+      "audit_target": false,
+      "audit_verdict": null
+    },
+    {
+      "case": "c05",
+      "id": "C014",
+      "query": "SQLite ALTER TABLE ADD COLUMN NOT NULL default existing rows",
+      "url": "https://www.sqlite.org/lang_altertable.html",
+      "stage": "fragment_selection",
+      "cause": "Critical ADDCOLUMN introduction andNOTNULL/default clause exist at~2856/~3371normalizedchars but Qwen top3 chose4/0/6;neededwindows2/3 ranked6/5.",
+      "safe_fix_direction": "Select complementary condition coverage among high-scoring windows, not rank-only generic SQL matches.",
+      "gold_basis": "concrete requested relationship and material conditions in inspected retained source",
+      "support": [
+        {
+          "quote": "The ADD COLUMN syntax is used to add a new column to an existing table.",
+          "start": 3658,
+          "end": 3729,
+          "source_snapshot": "runs/direct-coverage-2026-10-30/raw-cache/ea2a39fa56649580d31dcb2bbbd4345cd059ba240e2d2200b72ed2f8334db5cf.json",
+          "field": "raw_html_text",
+          "source_normalized_text_hash": "97494def6cf46294b52092ffc73eda3f134e3a9ea703b42fafa2490e5f7959ba",
+          "html_hash": "540366b0fa89257467497780e78538a992b5865a70d23180dac2aa7d2ef4e03d",
+          "in_supplied_passages": [],
+          "in_extracted_text": true,
+          "extracted_start": 2856,
+          "extracted_end": 2927,
+          "extracted_text_hash": "34c596f51c5323771720f9d2b4bc181883532f4274976afa6a2c40871d1163e5",
+          "extracted_normalized_text_hash": "23dccd314635e463c4c6bd7ec59a5bcdabef45189bce7e7e2e1ff674c4eab1c9",
+          "covering_pool_windows": [
+            {
+              "index": 2,
+              "range": [
+                2000,
+                3200
+              ],
+              "score": 0.8203125,
+              "rank": 6,
+              "selected": false
+            }
+          ]
+        },
+        {
+          "quote": "If a NOT NULL constraint is specified, then the column must have a default value other than NULL.",
+          "start": 4173,
+          "end": 4270,
+          "source_snapshot": "runs/direct-coverage-2026-10-30/raw-cache/ea2a39fa56649580d31dcb2bbbd4345cd059ba240e2d2200b72ed2f8334db5cf.json",
+          "field": "raw_html_text",
+          "source_normalized_text_hash": "97494def6cf46294b52092ffc73eda3f134e3a9ea703b42fafa2490e5f7959ba",
+          "html_hash": "540366b0fa89257467497780e78538a992b5865a70d23180dac2aa7d2ef4e03d",
+          "in_supplied_passages": [],
+          "in_extracted_text": true,
+          "extracted_start": 3371,
+          "extracted_end": 3468,
+          "extracted_text_hash": "34c596f51c5323771720f9d2b4bc181883532f4274976afa6a2c40871d1163e5",
+          "extracted_normalized_text_hash": "23dccd314635e463c4c6bd7ec59a5bcdabef45189bce7e7e2e1ff674c4eab1c9",
+          "covering_pool_windows": [
+            {
+              "index": 3,
+              "range": [
+                3000,
+                4200
+              ],
+              "score": 0.92578125,
+              "rank": 5,
+              "selected": false
+            }
+          ]
+        },
+        {
+          "quote": "No changes are made to table content for renames or column addition without constraints.",
+          "start": 4940,
+          "end": 5028,
+          "source_snapshot": "runs/direct-coverage-2026-10-30/raw-cache/ea2a39fa56649580d31dcb2bbbd4345cd059ba240e2d2200b72ed2f8334db5cf.json",
+          "field": "raw_html_text",
+          "source_normalized_text_hash": "97494def6cf46294b52092ffc73eda3f134e3a9ea703b42fafa2490e5f7959ba",
+          "html_hash": "540366b0fa89257467497780e78538a992b5865a70d23180dac2aa7d2ef4e03d",
+          "in_supplied_passages": [
+            "B1"
+          ],
+          "in_extracted_text": true,
+          "extracted_start": 4134,
+          "extracted_end": 4222,
+          "extracted_text_hash": "34c596f51c5323771720f9d2b4bc181883532f4274976afa6a2c40871d1163e5",
+          "extracted_normalized_text_hash": "23dccd314635e463c4c6bd7ec59a5bcdabef45189bce7e7e2e1ff674c4eab1c9",
+          "covering_pool_windows": [
+            {
+              "index": 4,
+              "range": [
+                4000,
+                5200
+              ],
+              "score": 0.9765625,
+              "rank": 1,
+              "selected": true
+            }
+          ]
+        }
+      ],
+      "coverage_anchors": [
+        "SQLite ALTER TABLE",
+        "ADD COLUMN",
+        "NOT NULL"
+      ],
+      "coverage_checks": {
+        "checks": [
+          {
+            "passages": [
+              "B1"
+            ],
+            "quote": "No changes are made to table content for renames or column addition without constraints.",
+            "status": "supported"
+          },
+          {
+            "passages": [
+              "B2"
+            ],
+            "quote": "",
+            "status": "missing"
+          },
+          {
+            "passages": [
+              "B2"
+            ],
+            "quote": "",
+            "status": "missing"
+          },
+          {
+            "passages": [
+              "B1"
+            ],
+            "quote": "When adding new columns that have CHECK constraints, or adding generated columns with NOT NULL constraints, or when deleting columns, then all existing data in the table must be either read (to test new constraints against existing rows) or",
+            "status": "supported"
+          }
+        ]
+      },
+      "final_rejection": "unverified or uncovered requirements: R1,R2,audit:not accepted",
+      "in_coverage_pool": true,
+      "read_attempted": true,
+      "branch_document_chars": 15574,
+      "branch_extraction_method": "readability",
+      "branch_extraction_scope": "inferred_article",
+      "supplied_passage_metadata": [
+        {
+          "end": 120,
+          "field": "title",
+          "id": "T",
+          "normalized_text_hash": "2be9fe12faf3ed472134a692331c04a01c8b733d8e9ebfbf1dc1568a5765fa92",
+          "source_url": "https://www.sqlite.org/lang_altertable.html",
+          "start": 0,
+          "text_hash": "2be9fe12faf3ed472134a692331c04a01c8b733d8e9ebfbf1dc1568a5765fa92"
+        },
+        {
+          "end": 300,
+          "field": "snippet",
+          "id": "S",
+          "normalized_text_hash": "6e742f7d0649c49ca5dcf508cef0ed3ad50d23364bdb5075a95a46fcc2dee094",
+          "source_url": "https://www.sqlite.org/lang_altertable.html",
+          "start": 0,
+          "text_hash": "6e742f7d0649c49ca5dcf508cef0ed3ad50d23364bdb5075a95a46fcc2dee094"
+        },
+        {
+          "end": 5200,
+          "field": "body",
+          "id": "B1",
+          "normalized_text_hash": "23dccd314635e463c4c6bd7ec59a5bcdabef45189bce7e7e2e1ff674c4eab1c9",
+          "source_url": "https://www.sqlite.org/lang_altertable.html",
+          "start": 4000,
+          "text_hash": "34c596f51c5323771720f9d2b4bc181883532f4274976afa6a2c40871d1163e5"
+        },
+        {
+          "end": 1200,
+          "field": "body",
+          "id": "B2",
+          "normalized_text_hash": "23dccd314635e463c4c6bd7ec59a5bcdabef45189bce7e7e2e1ff674c4eab1c9",
+          "source_url": "https://www.sqlite.org/lang_altertable.html",
+          "start": 0,
+          "text_hash": "34c596f51c5323771720f9d2b4bc181883532f4274976afa6a2c40871d1163e5"
+        },
+        {
+          "end": 7200,
+          "field": "body",
+          "id": "B3",
+          "normalized_text_hash": "23dccd314635e463c4c6bd7ec59a5bcdabef45189bce7e7e2e1ff674c4eab1c9",
+          "source_url": "https://www.sqlite.org/lang_altertable.html",
+          "start": 6000,
+          "text_hash": "34c596f51c5323771720f9d2b4bc181883532f4274976afa6a2c40871d1163e5"
+        },
+        {
+          "end": 11,
+          "field": "page_title",
+          "id": "H",
+          "normalized_text_hash": "18fe2016fea59dc69f3d1391d957282b50f5f93674e668ed7abfb5703f02f573",
+          "source_url": "https://www.sqlite.org/lang_altertable.html",
+          "start": 0,
+          "text_hash": "18fe2016fea59dc69f3d1391d957282b50f5f93674e668ed7abfb5703f02f573"
+        }
+      ],
+      "audit_target": false,
+      "audit_verdict": null,
+      "reranker_selected_ranges": [
+        [
+          4000,
+          5200
+        ],
+        [
+          0,
+          1200
+        ],
+        [
+          6000,
+          7200
+        ]
+      ]
+    },
+    {
+      "case": "c06",
+      "id": "C005",
+      "query": "Docker build ARG ENV scope multi-stage inheritance persistence",
+      "url": "https://docs.docker.com/build/building/variables",
+      "stage": "fragment_selection",
+      "cause": "Three windows5/6/7 repeat ARGscoping; ENV persistence at~1630chars/window1rank5 omitted. Audit correctly rejected missingENV.",
+      "safe_fix_direction": "Diversify across actual query aspects while retaining highQwen scores and source exact ranges.",
+      "gold_basis": "concrete requested relationship and material conditions in inspected retained source",
+      "support": [
+        {
+          "quote": "Build arguments declared in the global scope of a Dockerfile aren't automatically inherited into the build stages.",
+          "start": 21668,
+          "end": 21782,
+          "source_snapshot": "runs/direct-coverage-2026-10-30/raw-cache/7233cf5961c6fd1224fc2f60491af4374ccfee990ef30bcfa4704869cea15eb7.json",
+          "field": "raw_html_text",
+          "source_normalized_text_hash": "6e084e81b366c2f8b93bd63a47f9b092c05974e257bd31176eaeab8d6b0bbe57",
+          "html_hash": "c4894981990a161cf9c207285564d3fa622f8e168363b60dce9af2b98c6a7ca3",
+          "in_supplied_passages": [
+            "B1"
+          ],
+          "in_extracted_text": true,
+          "extracted_start": 5190,
+          "extracted_end": 5304,
+          "extracted_text_hash": "6ade5ba23e29f4a00a15483be49ab2b3292a0d33be1a2a3009dfb07ef93cd916",
+          "extracted_normalized_text_hash": "28d72fb31629339b9bcef96ce576b357eb1ffcd3ff12f616f05e6c8887a3bc9d",
+          "covering_pool_windows": [
+            {
+              "index": 5,
+              "range": [
+                5000,
+                6200
+              ],
+              "score": 0.9921875,
+              "rank": 1,
+              "selected": true
+            }
+          ]
+        },
+        {
+          "quote": "Once a build argument is declared or consumed in a stage, it's automatically inherited by child stages.",
+          "start": 22497,
+          "end": 22600,
+          "source_snapshot": "runs/direct-coverage-2026-10-30/raw-cache/7233cf5961c6fd1224fc2f60491af4374ccfee990ef30bcfa4704869cea15eb7.json",
+          "field": "raw_html_text",
+          "source_normalized_text_hash": "6e084e81b366c2f8b93bd63a47f9b092c05974e257bd31176eaeab8d6b0bbe57",
+          "html_hash": "c4894981990a161cf9c207285564d3fa622f8e168363b60dce9af2b98c6a7ca3",
+          "in_supplied_passages": [
+            "B1",
+            "B2"
+          ],
+          "in_extracted_text": true,
+          "extracted_start": 6012,
+          "extracted_end": 6115,
+          "extracted_text_hash": "6ade5ba23e29f4a00a15483be49ab2b3292a0d33be1a2a3009dfb07ef93cd916",
+          "extracted_normalized_text_hash": "28d72fb31629339b9bcef96ce576b357eb1ffcd3ff12f616f05e6c8887a3bc9d",
+          "covering_pool_windows": [
+            {
+              "index": 5,
+              "range": [
+                5000,
+                6200
+              ],
+              "score": 0.9921875,
+              "rank": 1,
+              "selected": true
+            },
+            {
+              "index": 6,
+              "range": [
+                6000,
+                7200
+              ],
+              "score": 0.9921875,
+              "rank": 2,
+              "selected": true
+            }
+          ]
+        },
+        {
+          "quote": "Environment variables are passed through to the build execution environment, and persist in containers instantiated from the image.",
+          "start": 18077,
+          "end": 18208,
+          "source_snapshot": "runs/direct-coverage-2026-10-30/raw-cache/7233cf5961c6fd1224fc2f60491af4374ccfee990ef30bcfa4704869cea15eb7.json",
+          "field": "raw_html_text",
+          "source_normalized_text_hash": "6e084e81b366c2f8b93bd63a47f9b092c05974e257bd31176eaeab8d6b0bbe57",
+          "html_hash": "c4894981990a161cf9c207285564d3fa622f8e168363b60dce9af2b98c6a7ca3",
+          "in_supplied_passages": [],
+          "in_extracted_text": true,
+          "extracted_start": 1630,
+          "extracted_end": 1761,
+          "extracted_text_hash": "6ade5ba23e29f4a00a15483be49ab2b3292a0d33be1a2a3009dfb07ef93cd916",
+          "extracted_normalized_text_hash": "28d72fb31629339b9bcef96ce576b357eb1ffcd3ff12f616f05e6c8887a3bc9d",
+          "covering_pool_windows": [
+            {
+              "index": 1,
+              "range": [
+                1000,
+                2200
+              ],
+              "score": 0.9765625,
+              "rank": 5,
+              "selected": false
+            }
+          ]
+        }
+      ],
+      "coverage_anchors": [
+        "ARG ENV scope",
+        "scope multi-stage inheritance",
+        "multi-stage inheritance persistence"
+      ],
+      "coverage_checks": {
+        "checks": [
+          {
+            "passages": [
+              "B1"
+            ],
+            "quote": "Build arguments declared in the global scope of a Dockerfile aren't automatically inherited into the build stages. They're only accessible in the global scope.",
+            "status": "supported"
+          },
+          {
+            "passages": [
+              "B1"
+            ],
+            "quote": "To inherit global build arguments into a stage, you must consume them:",
+            "status": "supported"
+          },
+          {
+            "passages": [
+              "B2"
+            ],
+            "quote": "Once a build argument is declared or consumed in a stage, it's automatically inherited by child stages.",
+            "status": "supported"
+          },
+          {
+            "passages": [
+              "B2"
+            ],
+            "quote": "The following diagram further exemplifies how build argument and environment variable inheritance works for multi-stage builds.",
+            "status": "supported"
+          }
+        ]
+      },
+      "final_rejection": "unverified or uncovered requirements: audit:No evidence on ENV scope or ENV inheritance/persistence across multi-stage builds; only ARG scoping and inheritance are explained.",
+      "in_coverage_pool": true,
+      "read_attempted": true,
+      "branch_document_chars": 25001,
+      "branch_extraction_method": "semantic_main",
+      "branch_extraction_scope": "main",
+      "supplied_passage_metadata": [
+        {
+          "end": 29,
+          "field": "title",
+          "id": "T",
+          "normalized_text_hash": "975cc0a7f7ff7d04953a3347262f44b3b7b47f0fc80f59a9a868b0306b7c9ecc",
+          "source_url": "https://docs.docker.com/build/building/variables",
+          "start": 0,
+          "text_hash": "975cc0a7f7ff7d04953a3347262f44b3b7b47f0fc80f59a9a868b0306b7c9ecc"
+        },
+        {
+          "end": 136,
+          "field": "snippet",
+          "id": "S",
+          "normalized_text_hash": "247a53cf978d386c0b57c014e62b61ffae5fd92a98e5bc275ee7fe814d3d52d3",
+          "source_url": "https://docs.docker.com/build/building/variables",
+          "start": 0,
+          "text_hash": "247a53cf978d386c0b57c014e62b61ffae5fd92a98e5bc275ee7fe814d3d52d3"
+        },
+        {
+          "end": 6200,
+          "field": "body",
+          "id": "B1",
+          "normalized_text_hash": "28d72fb31629339b9bcef96ce576b357eb1ffcd3ff12f616f05e6c8887a3bc9d",
+          "source_url": "https://docs.docker.com/build/building/variables",
+          "start": 5000,
+          "text_hash": "6ade5ba23e29f4a00a15483be49ab2b3292a0d33be1a2a3009dfb07ef93cd916"
+        },
+        {
+          "end": 7200,
+          "field": "body",
+          "id": "B2",
+          "normalized_text_hash": "28d72fb31629339b9bcef96ce576b357eb1ffcd3ff12f616f05e6c8887a3bc9d",
+          "source_url": "https://docs.docker.com/build/building/variables",
+          "start": 6000,
+          "text_hash": "6ade5ba23e29f4a00a15483be49ab2b3292a0d33be1a2a3009dfb07ef93cd916"
+        },
+        {
+          "end": 8200,
+          "field": "body",
+          "id": "B3",
+          "normalized_text_hash": "28d72fb31629339b9bcef96ce576b357eb1ffcd3ff12f616f05e6c8887a3bc9d",
+          "source_url": "https://docs.docker.com/build/building/variables",
+          "start": 7000,
+          "text_hash": "6ade5ba23e29f4a00a15483be49ab2b3292a0d33be1a2a3009dfb07ef93cd916"
+        },
+        {
+          "end": 29,
+          "field": "page_title",
+          "id": "H",
+          "normalized_text_hash": "975cc0a7f7ff7d04953a3347262f44b3b7b47f0fc80f59a9a868b0306b7c9ecc",
+          "source_url": "https://docs.docker.com/build/building/variables",
+          "start": 0,
+          "text_hash": "975cc0a7f7ff7d04953a3347262f44b3b7b47f0fc80f59a9a868b0306b7c9ecc"
+        }
+      ],
+      "audit_target": true,
+      "audit_verdict": {
+        "missing_aspect": "No evidence on ENV scope or ENV inheritance/persistence across multi-stage builds; only ARG scoping and inheritance are explained.",
+        "supported": false
+      },
+      "reranker_selected_ranges": [
+        [
+          5000,
+          6200
+        ],
+        [
+          6000,
+          7200
+        ],
+        [
+          7000,
+          8200
+        ]
+      ]
+    },
+    {
+      "case": "c07",
+      "id": "C011",
+      "query": "CSS flex order visual order keyboard tab order accessibility",
+      "url": "https://github.com/w3c/csswg-drafts/issues/7387",
+      "stage": "fragment_selection_and_coverage",
+      "cause": "Full keyboard/tab-order paragraph begins1281chars/window1rank5, just afterB1;selected0/3/12. Coverage also made phrase anchors CSSflexorder/keyboardtaborder missing.",
+      "safe_fix_direction": "Retain complementary near-top window1; avoid redundant phrase obligations; do not accept newproposal as implemented.",
+      "gold_basis": "concrete requested relationship and material conditions in inspected retained source",
+      "support": [
+        {
+          "quote": "The grid and flexbox specifications detail that reordering caused by these methods is only visual, and note that use of order or grid placement to do logical ordering is non-conforming.",
+          "start": 2706,
+          "end": 2891,
+          "source_snapshot": "runs/direct-coverage-2026-10-30/raw-cache/ae6ee2f1bea2b9b894367083c5e523726954afa167bea07fe210caf275da4ac6.json",
+          "field": "raw_html_text",
+          "source_normalized_text_hash": "2c5deb1164bf0c70119eb9ef1830ca481a5e41afbb3534f7cd4bc58d5246bc11",
+          "html_hash": "44e2d395ec97bd8b80f0e740211957071150e33db55dbe3ab59002c6c567d551",
+          "in_supplied_passages": [
+            "B1"
+          ],
+          "in_extracted_text": true,
+          "extracted_start": 511,
+          "extracted_end": 696,
+          "extracted_text_hash": "b0a85d81c91b94709df9ab281c39aedfcc28186eb922308b87fc100e501da096",
+          "extracted_normalized_text_hash": "850e6769820013e4b9fbfaba1c49811182c8ca23b47cf2b62f95507beffc845a",
+          "covering_pool_windows": [
+            {
+              "index": 0,
+              "range": [
+                0,
+                1200
+              ],
+              "score": 0.9921875,
+              "rank": 1,
+              "selected": true
+            }
+          ]
+        },
+        {
+          "quote": "if the author has reordered content using grid or flexbox, then the tab order of the document for keyboard users who are referencing the visual display can become disconnected, as it follows the document order.",
+          "start": 3476,
+          "end": 3686,
+          "source_snapshot": "runs/direct-coverage-2026-10-30/raw-cache/ae6ee2f1bea2b9b894367083c5e523726954afa167bea07fe210caf275da4ac6.json",
+          "field": "raw_html_text",
+          "source_normalized_text_hash": "2c5deb1164bf0c70119eb9ef1830ca481a5e41afbb3534f7cd4bc58d5246bc11",
+          "html_hash": "44e2d395ec97bd8b80f0e740211957071150e33db55dbe3ab59002c6c567d551",
+          "in_supplied_passages": [],
+          "in_extracted_text": true,
+          "extracted_start": 1281,
+          "extracted_end": 1491,
+          "extracted_text_hash": "b0a85d81c91b94709df9ab281c39aedfcc28186eb922308b87fc100e501da096",
+          "extracted_normalized_text_hash": "850e6769820013e4b9fbfaba1c49811182c8ca23b47cf2b62f95507beffc845a",
+          "covering_pool_windows": [
+            {
+              "index": 1,
+              "range": [
+                1000,
+                2200
+              ],
+              "score": 0.984375,
+              "rank": 5,
+              "selected": false
+            }
+          ]
+        }
+      ],
+      "coverage_anchors": [
+        "CSS flex order",
+        "visual order",
+        "keyboard tab order"
+      ],
+      "coverage_checks": {
+        "checks": [
+          {
+            "passages": [
+              "B1"
+            ],
+            "quote": "The grid and flexbox specifications detail that reordering caused by these methods is only visual",
+            "status": "supported"
+          },
+          {
+            "passages": [
+              "B1"
+            ],
+            "quote": "",
+            "status": "missing"
+          },
+          {
+            "passages": [
+              "B1"
+            ],
+            "quote": "Visual/tab order disconnect for keyboard users",
+            "status": "supported"
+          },
+          {
+            "passages": [
+              "B1"
+            ],
+            "quote": "",
+            "status": "missing"
+          }
+        ]
+      },
+      "final_rejection": "unverified or uncovered requirements: R1,R3,audit:not accepted",
+      "in_coverage_pool": true,
+      "read_attempted": true,
+      "branch_document_chars": 42340,
+      "branch_extraction_method": "semantic_main",
+      "branch_extraction_scope": "main",
+      "supplied_passage_metadata": [
+        {
+          "end": 120,
+          "field": "title",
+          "id": "T",
+          "normalized_text_hash": "54dfa3d228f338790ca3f7156da568fb03aa25a27af2fdcabb8e4fb25d673254",
+          "source_url": "https://github.com/w3c/csswg-drafts/issues/7387",
+          "start": 0,
+          "text_hash": "54dfa3d228f338790ca3f7156da568fb03aa25a27af2fdcabb8e4fb25d673254"
+        },
+        {
+          "end": 213,
+          "field": "snippet",
+          "id": "S",
+          "normalized_text_hash": "3ef11427080cc60211b753ae6aff29b56cc24a890666b1605e7cb34cc76b110a",
+          "source_url": "https://github.com/w3c/csswg-drafts/issues/7387",
+          "start": 0,
+          "text_hash": "3ef11427080cc60211b753ae6aff29b56cc24a890666b1605e7cb34cc76b110a"
+        },
+        {
+          "end": 1200,
+          "field": "body",
+          "id": "B1",
+          "normalized_text_hash": "850e6769820013e4b9fbfaba1c49811182c8ca23b47cf2b62f95507beffc845a",
+          "source_url": "https://github.com/w3c/csswg-drafts/issues/7387",
+          "start": 0,
+          "text_hash": "b0a85d81c91b94709df9ab281c39aedfcc28186eb922308b87fc100e501da096"
+        },
+        {
+          "end": 4204,
+          "field": "body",
+          "id": "B2",
+          "normalized_text_hash": "850e6769820013e4b9fbfaba1c49811182c8ca23b47cf2b62f95507beffc845a",
+          "source_url": "https://github.com/w3c/csswg-drafts/issues/7387",
+          "start": 3000,
+          "text_hash": "b0a85d81c91b94709df9ab281c39aedfcc28186eb922308b87fc100e501da096"
+        },
+        {
+          "end": 13239,
+          "field": "body",
+          "id": "B3",
+          "normalized_text_hash": "850e6769820013e4b9fbfaba1c49811182c8ca23b47cf2b62f95507beffc845a",
+          "source_url": "https://github.com/w3c/csswg-drafts/issues/7387",
+          "start": 12035,
+          "text_hash": "b0a85d81c91b94709df9ab281c39aedfcc28186eb922308b87fc100e501da096"
+        },
+        {
+          "end": 169,
+          "field": "page_title",
+          "id": "H",
+          "normalized_text_hash": "c3533f182f209693b66af8bc1dc9be897584837d2f48280775a18172475edfcc",
+          "source_url": "https://github.com/w3c/csswg-drafts/issues/7387",
+          "start": 0,
+          "text_hash": "c3533f182f209693b66af8bc1dc9be897584837d2f48280775a18172475edfcc"
+        }
+      ],
+      "audit_target": false,
+      "audit_verdict": null,
+      "reranker_selected_ranges": [
+        [
+          0,
+          1200
+        ],
+        [
+          3000,
+          4204
+        ],
+        [
+          12035,
+          13239
+        ]
+      ]
+    },
+    {
+      "case": "c07",
+      "id": "C015",
+      "query": "CSS flex order visual order keyboard tab order accessibility",
+      "url": "https://www.shopify.com/partners/blog/keyboard-accessibility",
+      "stage": "document_selection",
+      "cause": "In coveragepool but no bodyread; snippet ends before fullTabexample, so coverage gaps are justified.",
+      "safe_fix_direction": "Read selection needed; do not fabricate omittedcardtail.",
+      "gold_basis": "concrete requested relationship and material conditions in inspected retained source",
+      "support": [
+        {
+          "quote": "While the order property affects the visual sequence of flex items, it does not update their arrangement in the source code.",
+          "start": 9671,
+          "end": 9795,
+          "source_snapshot": "runs/direct-coverage-2026-10-30/raw-cache/3fa5d11fa2cdfe24cec74d4fd060355d9c7e476d7f4521d179f0ae4cb9571984.json",
+          "field": "raw_html_text",
+          "source_normalized_text_hash": "7654141c45e0f271d5d0ddc1597e7dc80f0906fb751b9723e4b50ff5c33c3e4f",
+          "html_hash": "a99dc9495c8fd7c275831c69799ca05cc5a3dfa384233bb068b689baa9e45131",
+          "in_supplied_passages": [
+            "S"
+          ]
+        },
+        {
+          "quote": "when a user presses the Tab key to navigate between each button, the “Update tags” button will still receive focus before “Update description,” even though they’re displayed in reverse order on the screen.",
+          "start": 9809,
+          "end": 10024,
+          "source_snapshot": "runs/direct-coverage-2026-10-30/raw-cache/3fa5d11fa2cdfe24cec74d4fd060355d9c7e476d7f4521d179f0ae4cb9571984.json",
+          "field": "raw_html_text",
+          "source_normalized_text_hash": "7654141c45e0f271d5d0ddc1597e7dc80f0906fb751b9723e4b50ff5c33c3e4f",
+          "html_hash": "a99dc9495c8fd7c275831c69799ca05cc5a3dfa384233bb068b689baa9e45131",
+          "in_supplied_passages": []
+        }
+      ],
+      "coverage_anchors": [
+        "CSS flex order",
+        "visual order",
+        "keyboard tab order"
+      ],
+      "coverage_checks": {
+        "checks": [
+          {
+            "passages": [
+              "S"
+            ],
+            "quote": "While the order property affects the visual sequence of flex items, it does not update their arrangement in the source code.",
+            "status": "supported"
+          },
+          {
+            "passages": [
+              "S"
+            ],
+            "quote": "",
+            "status": "missing"
+          },
+          {
+            "passages": [
+              "S"
+            ],
+            "quote": "",
+            "status": "missing"
+          },
+          {
+            "passages": [
+              "S"
+            ],
+            "quote": "",
+            "status": "missing"
+          }
+        ]
+      },
+      "final_rejection": "unverified or uncovered requirements: R1,R2,R3,audit:not accepted",
+      "in_coverage_pool": true,
+      "read_attempted": false,
+      "branch_document_chars": null,
+      "branch_extraction_method": null,
+      "branch_extraction_scope": null,
+      "supplied_passage_metadata": [
+        {
+          "end": 120,
+          "field": "title",
+          "id": "T",
+          "normalized_text_hash": "5d32ad0c9c63e1daaa5269d15f6be655f5550af1ea794cd48c933cd1bce54171",
+          "source_url": "https://www.shopify.com/partners/blog/keyboard-accessibility",
+          "start": 0,
+          "text_hash": "5d32ad0c9c63e1daaa5269d15f6be655f5550af1ea794cd48c933cd1bce54171"
+        },
+        {
+          "end": 300,
+          "field": "snippet",
+          "id": "S",
+          "normalized_text_hash": "2a1957fbc69ca2a02614fb5c50b430af601240fca9c93399eae06bd127f665ec",
+          "source_url": "https://www.shopify.com/partners/blog/keyboard-accessibility",
+          "start": 0,
+          "text_hash": "2a1957fbc69ca2a02614fb5c50b430af601240fca9c93399eae06bd127f665ec"
+        }
+      ],
+      "audit_target": false,
+      "audit_verdict": null
+    },
+    {
+      "case": "c07",
+      "id": "C017",
+      "query": "CSS flex order visual order keyboard tab order accessibility",
+      "url": "https://www.useragentman.com/blog/2017/01/28/flex-layout-fail-fixing-firefox-keyboard-accessibility-with-the-css-order-property/",
+      "stage": "fragment_selection_and_coverage",
+      "cause": "SelectedB2 already says tabbingorderDOMnotvisual butR3missing; selectedB3acknowledgements instead of normative standardquote window4rank5. HistoricalFirefoxclaim is not current guarantee.",
+      "safe_fix_direction": "Prefer actual current normative relationship witness; preserve historicalscope and full audit.",
+      "gold_basis": "concrete requested relationship and material conditions in inspected retained source",
+      "support": [
+        {
+          "quote": "it allows developers to make the visual order of elements on the page different than their DOM order.",
+          "start": 1462,
+          "end": 1563,
+          "source_snapshot": "runs/direct-coverage-2026-10-30/raw-cache/268c50bddf31df7290ceb058f65a0e1f265eba7a0f6bf356865eb537f8341653.json",
+          "field": "raw_html_text",
+          "source_normalized_text_hash": "ff540e14bcd8b210783e4cb4f0d45f5239c4b16a93fffac4d801350a80982258",
+          "html_hash": "0abccd447b7156d8d03bdffebd30a44e2c182973a29d884df8d702a7aee41ca4",
+          "in_supplied_passages": [
+            "B1"
+          ],
+          "in_extracted_text": true,
+          "extracted_start": 473,
+          "extracted_end": 574,
+          "extracted_text_hash": "992108c797962a5fef9f2c80137c9d89818592a87e854bf91a4272185690055b",
+          "extracted_normalized_text_hash": "7f7330c17739c98e4eb929b53b8aff71ef4a95837d5965cfac9399f7e78feabb",
+          "covering_pool_windows": [
+            {
+              "index": 0,
+              "range": [
+                0,
+                1207
+              ],
+              "score": 1.0,
+              "rank": 1,
+              "selected": true
+            }
+          ]
+        },
+        {
+          "quote": "The order property does not affect ordering in non-visual media (such as speech). Likewise, order does not affect the default traversal order of sequential navigation modes",
+          "start": 5350,
+          "end": 5522,
+          "source_snapshot": "runs/direct-coverage-2026-10-30/raw-cache/268c50bddf31df7290ceb058f65a0e1f265eba7a0f6bf356865eb537f8341653.json",
+          "field": "raw_html_text",
+          "source_normalized_text_hash": "ff540e14bcd8b210783e4cb4f0d45f5239c4b16a93fffac4d801350a80982258",
+          "html_hash": "0abccd447b7156d8d03bdffebd30a44e2c182973a29d884df8d702a7aee41ca4",
+          "in_supplied_passages": [],
+          "in_extracted_text": true,
+          "extracted_start": 4231,
+          "extracted_end": 4403,
+          "extracted_text_hash": "992108c797962a5fef9f2c80137c9d89818592a87e854bf91a4272185690055b",
+          "extracted_normalized_text_hash": "7f7330c17739c98e4eb929b53b8aff71ef4a95837d5965cfac9399f7e78feabb",
+          "covering_pool_windows": [
+            {
+              "index": 4,
+              "range": [
+                4021,
+                5227
+              ],
+              "score": 0.984375,
+              "rank": 5,
+              "selected": false
+            }
+          ]
+        }
+      ],
+      "coverage_anchors": [
+        "CSS flex order",
+        "visual order",
+        "keyboard tab order"
+      ],
+      "coverage_checks": {
+        "checks": [
+          {
+            "passages": [
+              "B2"
+            ],
+            "quote": "Note the tabbing order is the DOM order, not visual order.",
+            "status": "supported"
+          },
+          {
+            "passages": [
+              "B1"
+            ],
+            "quote": "it allows developers to make the visual order of elements on the page different than their DOM order",
+            "status": "supported"
+          },
+          {
+            "passages": [
+              "B2"
+            ],
+            "quote": "Note the tabbing order is the DOM order, not visual order.",
+            "status": "supported"
+          },
+          {
+            "passages": [
+              "B2"
+            ],
+            "quote": "",
+            "status": "missing"
+          }
+        ]
+      },
+      "final_rejection": "unverified or uncovered requirements: R3,audit:not accepted",
+      "in_coverage_pool": true,
+      "read_attempted": true,
+      "branch_document_chars": 7763,
+      "branch_extraction_method": "semantic_main",
+      "branch_extraction_scope": "main",
+      "supplied_passage_metadata": [
+        {
+          "end": 66,
+          "field": "title",
+          "id": "T",
+          "normalized_text_hash": "3b92ffd3e0bac6a454484c4b630cad7c681ef590ebc25d32d2266811a08d4f93",
+          "source_url": "https://www.useragentman.com/blog/2017/01/28/flex-layout-fail-fixing-firefox-keyboard-accessibility-with-the-css-order-property/",
+          "start": 0,
+          "text_hash": "3b92ffd3e0bac6a454484c4b630cad7c681ef590ebc25d32d2266811a08d4f93"
+        },
+        {
+          "end": 154,
+          "field": "snippet",
+          "id": "S",
+          "normalized_text_hash": "9def5977e04bb39fbcaef08b4f7a66fb1452bc2cb596dfc7368f8fd691ab2838",
+          "source_url": "https://www.useragentman.com/blog/2017/01/28/flex-layout-fail-fixing-firefox-keyboard-accessibility-with-the-css-order-property/",
+          "start": 0,
+          "text_hash": "9def5977e04bb39fbcaef08b4f7a66fb1452bc2cb596dfc7368f8fd691ab2838"
+        },
+        {
+          "end": 1207,
+          "field": "body",
+          "id": "B1",
+          "normalized_text_hash": "7f7330c17739c98e4eb929b53b8aff71ef4a95837d5965cfac9399f7e78feabb",
+          "source_url": "https://www.useragentman.com/blog/2017/01/28/flex-layout-fail-fixing-firefox-keyboard-accessibility-with-the-css-order-property/",
+          "start": 0,
+          "text_hash": "992108c797962a5fef9f2c80137c9d89818592a87e854bf91a4272185690055b"
+        },
+        {
+          "end": 2213,
+          "field": "body",
+          "id": "B2",
+          "normalized_text_hash": "7f7330c17739c98e4eb929b53b8aff71ef4a95837d5965cfac9399f7e78feabb",
+          "source_url": "https://www.useragentman.com/blog/2017/01/28/flex-layout-fail-fixing-firefox-keyboard-accessibility-with-the-css-order-property/",
+          "start": 1007,
+          "text_hash": "992108c797962a5fef9f2c80137c9d89818592a87e854bf91a4272185690055b"
+        },
+        {
+          "end": 6243,
+          "field": "body",
+          "id": "B3",
+          "normalized_text_hash": "7f7330c17739c98e4eb929b53b8aff71ef4a95837d5965cfac9399f7e78feabb",
+          "source_url": "https://www.useragentman.com/blog/2017/01/28/flex-layout-fail-fixing-firefox-keyboard-accessibility-with-the-css-order-property/",
+          "start": 5027,
+          "text_hash": "992108c797962a5fef9f2c80137c9d89818592a87e854bf91a4272185690055b"
+        },
+        {
+          "end": 91,
+          "field": "page_title",
+          "id": "H",
+          "normalized_text_hash": "ffa7f28a84af0b7d97fe41428efc9d74a7ed008f4a6c96e964ff0512175caf62",
+          "source_url": "https://www.useragentman.com/blog/2017/01/28/flex-layout-fail-fixing-firefox-keyboard-accessibility-with-the-css-order-property/",
+          "start": 0,
+          "text_hash": "ffa7f28a84af0b7d97fe41428efc9d74a7ed008f4a6c96e964ff0512175caf62"
+        }
+      ],
+      "audit_target": false,
+      "audit_verdict": null,
+      "reranker_selected_ranges": [
+        [
+          0,
+          1207
+        ],
+        [
+          1007,
+          2213
+        ],
+        [
+          5027,
+          6243
+        ]
+      ]
+    },
+    {
+      "case": "c08",
+      "id": "C019",
+      "query": "HTTP 421 Misdirected Request retry different connection non-idempotent",
+      "url": "https://wheregoes.com/http-status-codes/421/",
+      "stage": "typed_literal_negation",
+      "cause": "Complete normativeSquote supports allfourchecks; onlyblockedliteral non-idempotent, although source says whethermethodidempotentornot. Bodyread not necessary for this card.",
+      "safe_fix_direction": "Only evidencegate type unquoted lowercase non-X as natural predicate; originalR0/audit still mandatory, explicitidentifiers and legacyremainstrict.",
+      "gold_basis": "concrete requested relationship and material conditions in inspected retained source",
+      "support": [
+        {
+          "quote": "Clients receiving a 421 (Misdirected Request) response from a server MAY retry the request — whether the request method is idempotent or not — over a different connection.",
+          "start": 407,
+          "end": 582,
+          "source_snapshot": "runs/direct-coverage-2026-10-30/gold-audit/c08-C019.html",
+          "field": "raw_html_text",
+          "source_normalized_text_hash": "9d9258e5715ec750da6e457fca801801004632befea6608e0b03233389cd1d8c",
+          "html_hash": "e3fbb8cd7a36cc717f1afec476aaf0b5c28d80e280435e8a7d5c304298e3b84a",
+          "in_supplied_passages": [
+            "S"
+          ]
+        }
+      ],
+      "coverage_anchors": [
+        "421 Misdirected Request",
+        "retry different connection",
+        "non-idempotent"
+      ],
+      "coverage_checks": {
+        "checks": [
+          {
+            "passages": [
+              "S"
+            ],
+            "quote": "Clients receiving a 421 (Misdirected Request) response from a server MAY retry the request — whether the request method is idempotent or not — over a different connection.",
+            "status": "supported"
+          },
+          {
+            "passages": [
+              "S"
+            ],
+            "quote": "Clients receiving a 421 (Misdirected Request) response from a server MAY retry the request",
+            "status": "supported"
+          },
+          {
+            "passages": [
+              "S"
+            ],
+            "quote": "MAY retry the request — whether the request method is idempotent or not — over a different connection",
+            "status": "supported"
+          },
+          {
+            "passages": [
+              "S"
+            ],
+            "quote": "whether the request method is idempotent or not",
+            "status": "supported"
+          }
+        ]
+      },
+      "final_rejection": "unverified or uncovered requirements: audit:not accepted,literal:non-idempotent",
+      "in_coverage_pool": true,
+      "read_attempted": false,
+      "branch_document_chars": null,
+      "branch_extraction_method": null,
+      "branch_extraction_scope": null,
+      "supplied_passage_metadata": [
+        {
+          "end": 35,
+          "field": "title",
+          "id": "T",
+          "normalized_text_hash": "8e26fb2141e433176fddfdb856eecc1708c45db6480fd6d903871e4f790c382c",
+          "source_url": "https://wheregoes.com/http-status-codes/421/",
+          "start": 0,
+          "text_hash": "8e26fb2141e433176fddfdb856eecc1708c45db6480fd6d903871e4f790c382c"
+        },
+        {
+          "end": 175,
+          "field": "snippet",
+          "id": "S",
+          "normalized_text_hash": "b3ad734637b878e9a739c400834fb2f9d919a9d853fd3a77c6b8f3d86ee5dc7c",
+          "source_url": "https://wheregoes.com/http-status-codes/421/",
+          "start": 0,
+          "text_hash": "b3ad734637b878e9a739c400834fb2f9d919a9d853fd3a77c6b8f3d86ee5dc7c"
+        }
+      ],
+      "audit_target": false,
+      "audit_verdict": null
+    }
+  ]
+}
