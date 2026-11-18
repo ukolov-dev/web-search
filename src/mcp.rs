@@ -143,7 +143,7 @@ impl WebSearch {
             .map_err(|e| invalid(e.to_string()))?;
         match result {
             Ok(value) if value["status"] == "error" => Ok(CallToolResult::structured_error(value)),
-            Ok(value) => Ok(CallToolResult::structured(value)),
+            Ok(value) => Ok(research_result(value)),
             Err(e) => Ok(failure("research_failed", e.to_string())),
         }
     }
@@ -175,6 +175,56 @@ pub(crate) fn update_host_blocks(
         }
     }
     crate::net::set_blocked_hosts(hosts);
+}
+
+// Links supplement the unchanged structured result; they are not additional evidence.
+fn research_result(value: Value) -> CallToolResult {
+    let mut result = CallToolResult::structured(value);
+    let value = result.structured_content.as_ref().unwrap();
+    if value["status"] == "error" {
+        return CallToolResult::structured_error(value.clone());
+    }
+    let cited: std::collections::HashSet<_> = value["claims"]
+        .as_array()
+        .into_iter()
+        .flatten()
+        .flat_map(|c| c["evidence"].as_array().into_iter().flatten())
+        .filter_map(|q| q["source_id"].as_str())
+        .collect();
+    let mut seen = std::collections::HashSet::new();
+    for source in value["sources"].as_array().into_iter().flatten() {
+        let (Some(id), Some(uri)) = (source["id"].as_str(), source["url"].as_str()) else {
+            continue;
+        };
+        if source["eligible"] != true || !cited.contains(id) || !seen.insert(uri) {
+            continue;
+        }
+        let Ok(url) = crate::net::validate_url(uri) else {
+            continue;
+        };
+        let title: String = source["title"]
+            .as_str()
+            .unwrap_or("")
+            .chars()
+            .filter(|c| !c.is_control())
+            .take(160)
+            .collect();
+        let name = if title.trim().is_empty() {
+            url.host_str().unwrap_or(uri)
+        } else {
+            title.trim()
+        };
+        result
+            .content
+            .push(rmcp::model::ContentBlock::resource_link(
+                rmcp::model::Resource::new(uri, name),
+            ));
+        // Keep the original text even when its own encoding already fills the allowance.
+        if serde_json::to_vec(&result.content).map_or(true, |b| b.len() > 32 * 1024) {
+            result.content.pop();
+        }
+    }
+    result
 }
 
 fn invalid(message: impl Into<String>) -> ErrorData {
@@ -589,6 +639,67 @@ pub async fn research_once(
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn research_links_preserve_payload_and_select_only_cited_public_sources() -> anyhow::Result<()>
+    {
+        let value = json!({"status":"partial","claims":[{"evidence":[{"source_id":"S1"},{"source_id":"S2"},{"source_id":"S3"},{"source_id":"S4"},{"source_id":"S5"},{"source_id":"S6"},{"source_id":"missing"}]}],"sources":[
+            {"id":"S1","eligible":true,"url":"https://example.org/page","title":"  Источник\nодин  "},
+            {"id":"S2","eligible":true,"url":"https://example.org/page","title":"duplicate"},
+            {"id":"S3","eligible":true,"url":"http://127.0.0.1/private"},
+            {"id":"S4","eligible":true,"url":"javascript:alert(1)"},
+            {"id":"S5","eligible":false,"url":"https://example.org/blocked"},
+            {"id":"S6","eligible":true,"url":"https://example.net/other","title":" "},
+            {"id":"uncited","eligible":true,"url":"https://example.org/unused"}
+        ]});
+        let result = research_result(value.clone());
+        assert_eq!(result.structured_content, Some(value.clone()));
+        assert_eq!(
+            serde_json::to_value(&result.content[0])?["text"],
+            value.to_string()
+        );
+        let wire = serde_json::to_value(&result)?;
+        assert_eq!(wire["content"].as_array().unwrap().len(), 3);
+        assert_eq!(wire["content"][1]["type"], "resource_link");
+        assert_eq!(wire["content"][1]["uri"], "https://example.org/page");
+        assert_eq!(wire["content"][1]["name"], "Источникодин");
+        assert_eq!(wire["content"][2]["name"], "example.net");
+        // Exercise the exact SDK wire representation consumed by MCP clients.
+        let decoded: CallToolResult = serde_json::from_value(wire)?;
+        assert_eq!(decoded.structured_content, Some(value));
+        assert!(decoded.content[1].as_resource_link().is_some());
+        Ok(())
+    }
+
+    #[test]
+    fn research_links_respect_empty_errors_and_remaining_content_budget() -> anyhow::Result<()> {
+        for status in ["partial", "error"] {
+            let value = json!({"status":status,"claims":[],"sources":[]});
+            let result = research_result(value.clone());
+            assert_eq!(result.content.len(), 1);
+            assert_eq!(result.structured_content, Some(value));
+            assert_eq!(result.is_error, Some(status == "error"));
+        }
+        let mut value = json!({"status":"partial","claims":[{"evidence":[{"source_id":"S1"}]}],"sources":[{"id":"S1","eligible":true,"url":"https://example.org/","title":"я".repeat(200)}],"answer":""});
+        let short = research_result(value.clone());
+        assert_eq!(
+            short.content[1]
+                .as_resource_link()
+                .unwrap()
+                .name
+                .chars()
+                .count(),
+            160
+        );
+        let base = serde_json::to_vec(&CallToolResult::structured(value.clone()).content)?.len();
+        value["answer"] = json!("x".repeat(32 * 1024 - base));
+        let original = CallToolResult::structured(value.clone());
+        assert_eq!(serde_json::to_vec(&original.content)?.len(), 32 * 1024);
+        let result = research_result(value.clone());
+        assert_eq!(result.content, original.content);
+        assert_eq!(result.structured_content, Some(value));
+        Ok(())
+    }
 
     #[tokio::test]
     async fn research_busy_and_cancelled_requests_do_not_start_network() -> anyhow::Result<()> {

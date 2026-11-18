@@ -498,7 +498,17 @@ async fn stdio_discovery_and_validation() -> Result<()> {
         ("research", json!({"question":"rust"})),
     ] {
         match timeout(Duration::from_secs(5), call(&client, tool, args.clone())).await? {
-            Ok(result) => assert_eq!(result.is_error, Some(true), "accepted {tool}: {args}"),
+            Ok(result) => {
+                assert_eq!(result.is_error, Some(true), "accepted {tool}: {args}");
+                if tool == "research" {
+                    assert!(
+                        result
+                            .content
+                            .iter()
+                            .all(|c| c.as_resource_link().is_none())
+                    );
+                }
+            }
             Err(error) => assert!(
                 matches!(
                     error.downcast_ref::<rmcp::ServiceError>(),
