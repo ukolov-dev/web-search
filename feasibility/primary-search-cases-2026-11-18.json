@@ -1,0 +1,252 @@
+{
+  "schema": "primary-search-cases-v1",
+  "created_utc": "2026-11-18T11:57:26.223240+00:00",
+  "scope": "Full native research, no seeded source URLs, saved facets or answers. Gold references are reviewer-only, never model input. Four newly authored development questions plus two historical controls, not general qualification.",
+  "cases": [
+    {
+      "id": "P01",
+      "cohort": "NEW4",
+      "question": "In Python, is functools.lru_cache thread-safe, and does that guarantee the wrapped function runs only once when two threads miss the cache for the same arguments?",
+      "language": "en",
+      "required_conditions": [
+        {
+          "id": "P01.A",
+          "claim": "The cache data structure remains coherent during concurrent updates (thread-safe cache)."
+        },
+        {
+          "id": "P01.B",
+          "claim": "The wrapped function may run multiple times when another thread calls before the first result has completed and been cached; thread safety does not guarantee single execution."
+        }
+      ],
+      "gold_aspects": [
+        "The cache data structure remains coherent during concurrent updates (thread-safe cache).",
+        "The wrapped function may run multiple times when another thread calls before the first result has completed and been cached; thread safety does not guarantee single execution."
+      ],
+      "reference_urls": [
+        "https://docs.python.org/3/library/functools.html#functools.lru_cache"
+      ],
+      "truth_boundaries": [
+        "Do not confuse coherent cache state with single-flight/call-once execution. No claim all threads execute every time."
+      ]
+    },
+    {
+      "id": "P02",
+      "cohort": "NEW4",
+      "question": "В Rust Vec::retain сохраняет порядок оставшихся элементов? Сколько раз и в каком порядке predicate посещает исходные элементы?",
+      "language": "ru",
+      "required_conditions": [
+        {
+          "id": "P02.A",
+          "claim": "Vec::retain preserves the order of retained elements."
+        },
+        {
+          "id": "P02.B",
+          "claim": "On normal completion the predicate visits each original element exactly once, in original order."
+        }
+      ],
+      "gold_aspects": [
+        "Vec::retain preserves the order of retained elements.",
+        "On normal completion the predicate visits each original element exactly once, in original order."
+      ],
+      "reference_urls": [
+        "https://doc.rust-lang.org/std/vec/struct.Vec.html#method.retain"
+      ],
+      "truth_boundaries": [
+        "Not Vec::swap_remove, dedup or retain_mut. Exactly-once traversal is normal completion; do not extend across panic."
+      ]
+    },
+    {
+      "id": "P03",
+      "cohort": "NEW4",
+      "question": "In PostgreSQL 12, how are non-recursive side-effect-free SELECT CTEs handled by default when referenced once versus more than once, and how do MATERIALIZED and NOT MATERIALIZED change that?",
+      "language": "en",
+      "required_conditions": [
+        {
+          "id": "P03.A",
+          "claim": "For a non-recursive side-effect-free SELECT CTE (no volatile functions), a single parent reference is folded into the parent query by default."
+        },
+        {
+          "id": "P03.B",
+          "claim": "For that eligible CTE, multiple parent references do not cause folding by default; it is evaluated separately."
+        },
+        {
+          "id": "P03.C",
+          "claim": "MATERIALIZED forces separate calculation; NOT MATERIALIZED forces merging into the parent for an eligible CTE, possibly causing duplicate computation."
+        }
+      ],
+      "gold_aspects": [
+        "For a non-recursive side-effect-free SELECT CTE (no volatile functions), a single parent reference is folded into the parent query by default.",
+        "For that eligible CTE, multiple parent references do not cause folding by default; it is evaluated separately.",
+        "MATERIALIZED forces separate calculation; NOT MATERIALIZED forces merging into the parent for an eligible CTE, possibly causing duplicate computation."
+      ],
+      "reference_urls": [
+        "https://www.postgresql.org/docs/12/queries-with.html"
+      ],
+      "truth_boundaries": [
+        "Pinned PostgreSQL12; do not apply pre12 always-materialize behavior. NOT MATERIALIZED is not a universal override for recursive/volatile CTEs; no unconditional performance improvement."
+      ]
+    },
+    {
+      "id": "P04",
+      "cohort": "NEW4",
+      "question": "В SQLite можно ли включить PRAGMA foreign_keys = ON внутри уже начатой многооператорной транзакции? Когда нужно менять этот режим?",
+      "language": "ru",
+      "required_conditions": [
+        {
+          "id": "P04.A",
+          "claim": "Changing PRAGMA foreign_keys inside an active transaction is a no-op: it does not switch enforcement."
+        },
+        {
+          "id": "P04.B",
+          "claim": "Enable or disable foreign-key enforcement only when no BEGIN or SAVEPOINT is pending, outside the active transaction."
+        }
+      ],
+      "gold_aspects": [
+        "Changing PRAGMA foreign_keys inside an active transaction is a no-op: it does not switch enforcement.",
+        "Enable or disable foreign-key enforcement only when no BEGIN or SAVEPOINT is pending, outside the active transaction."
+      ],
+      "reference_urls": [
+        "https://www.sqlite.org/pragma.html#pragma_foreign_keys"
+      ],
+      "truth_boundaries": [
+        "No blanket claim that default is always OFF: compile-time defaults may differ. Do not confuse setting enforcement with declaring REFERENCES or deferred-constraint timing."
+      ]
+    },
+    {
+      "id": "C01",
+      "cohort": "OLD2",
+      "original_case_id": "T01",
+      "question": "According to Python itertools.groupby documentation, does it group equal keys anywhere in the input or only consecutive runs, and how should input be prepared to collect all equal keys together?",
+      "language": "en",
+      "required_conditions": [
+        {
+          "id": "T01.A",
+          "claim": "groupby creates groups for consecutive runs of equal keys; it does not aggregate equal keys globally regardless of input order."
+        },
+        {
+          "id": "T01.B",
+          "claim": "To collect all items of each key together, input should be sorted/grouped on the same key function before groupby; groupby does not perform sorting itself."
+        }
+      ],
+      "gold_aspects": [
+        "groupby creates groups for consecutive runs of equal keys; it does not aggregate equal keys globally regardless of input order.",
+        "To collect all items of each key together, input should be sorted/grouped on the same key function before groupby; groupby does not perform sorting itself."
+      ],
+      "reference_urls": [
+        "https://docs.python.org/3/library/itertools.html#itertools.groupby"
+      ],
+      "truth_boundaries": [
+        "Original gold unchanged. Source_variants from prior oracle experiment are NOT supplied to fullsearch."
+      ]
+    },
+    {
+      "id": "C02",
+      "cohort": "OLD2",
+      "original_case_id": "N04",
+      "question": "В CPython 3.13 free-threaded режим без GIL экспериментальный или стабильный, включён ли по умолчанию и нужен ли отдельный executable?",
+      "language": "ru",
+      "required_conditions": [
+        {
+          "id": "N04.A",
+          "claim": "В CPython3.13 free-threaded режим экспериментальный, не следует переносить статус другой версии."
+        },
+        {
+          "id": "N04.B",
+          "claim": "Режим не включён по умолчанию."
+        },
+        {
+          "id": "N04.C",
+          "claim": "Нужен отдельный executable/free-threaded build, обычно python3.13t; допустим исходный build --disable-gil."
+        }
+      ],
+      "gold_aspects": [
+        "В CPython3.13 free-threaded режим экспериментальный, не следует переносить статус другой версии.",
+        "Режим не включён по умолчанию.",
+        "Нужен отдельный executable/free-threaded build, обычно python3.13t; допустим исходный build --disable-gil."
+      ],
+      "reference_urls": [
+        "https://docs.python.org/3.13/whatsnew/3.13.html"
+      ],
+      "truth_boundaries": [
+        "Original gold unchanged. Source_variants from prior oracle experiment are NOT supplied to fullsearch."
+      ]
+    }
+  ],
+  "denominators": {
+    "NEW4": 9,
+    "OLD2": 5
+  },
+  "old_gold_path": "feasibility/primary-draft-cases-2026-11-18.json",
+  "old_gold_sha256": "d785b9c1db5f9008e2e72c10c0b4816013621b9af0f32c678a1cdb819a3caf2e",
+  "grading_policy": {
+    "conditions": "Each original condition needs final answer coverage and semantically sufficient own returned witness. Judge every new claim independently; exact text alone does not establish truth.",
+    "claim_judgment": "Independently label each new atomicclaim worldtrue/false/unknown, ownsemanticfaithfulness, and questioncoverage. Fingerprints compare semantics across changed IDs; new modelclaimIDs are localonly.",
+    "no_backfill": "Body/Qwencontext not cited by thatclaim cannot repair missingpremise in ownreturnedwitness. Source containscorrectfact does not mean generatedanswercovered it.",
+    "scope": "Timedependentstatus pinned3.13; historical/datequalified truthfulcontext separate from currentquestioncoverage. Timeless APIs not require inventedpublicationdates.",
+    "fixed_denominators": "NEW4 nine conditions and OLD2 five conditions per arm, reported separately; not_run unavailable and empty distinct.",
+    "source_limit": "Actual full native search/read/audit required. One cited body cannot establish required two-document sufficiency. No seeded reference URLs.",
+    "gates": "Gain on NEW4 with no new worldfalse/unknown fingerprints and no loss of previously supported conditions in completed matched cases. Incomplete campaign cannot pass full gate."
+  },
+  "semantic_fingerprints": [
+    {
+      "id": "FP_GROUPBY_UNCONDITIONAL_SORT",
+      "original_examples": [
+        "T01/A4",
+        "H01",
+        "B/H02"
+      ],
+      "meaning": "Sorting claimed mandatory for everyvalidgroupby use, rather than to collect globally equalkeys.",
+      "classification": "false",
+      "positive_control": "Consecutive grouping valid on unsortedinput; samekeysorting/grouping for collectallequalkeys is correct."
+    },
+    {
+      "id": "FP_GROUPBY_GLOBAL_AGGREGATION",
+      "meaning": "groupby aggregates all equalkeys independent of inputorder or sorts internally.",
+      "classification": "false"
+    },
+    {
+      "id": "FP_PY313_CUSTOMBUILD_MANDATORY",
+      "original_examples": [
+        "N04/A1",
+        "P02/A1"
+      ],
+      "meaning": "Pinned3.13 free-threaded functionality unavailable inofficialinstallers or necessarilyrequires usercustombuild.",
+      "classification": "false",
+      "positive_control": "Separate free-threaded executable/build required; optional officialWindows/macOS installers or --disable-gil sourcebuild possible."
+    },
+    {
+      "id": "FP_PY313_STATUS_TIME_TRANSFER",
+      "meaning": "Pinned3.13 feature called stable/currentlybetarelease based on anotherdate/version context.",
+      "classification": "false_or_unknown_depending_actualqualification"
+    },
+    {
+      "id": "UNKNOWN_MACOS_INSTALLER_SCOPE",
+      "original_examples": [
+        "N04/A2",
+        "N04/A3",
+        "P02/A2",
+        "P02/A3"
+      ],
+      "meaning": "macOSinstalleroption/frameworkfacts generalized to allplatformruntime behavior or counted as generalnotenableddefault proof.",
+      "classification": "unknown_scope"
+    }
+  ],
+  "protocol": {
+    "planned_trials": 12,
+    "per_trial": {
+      "generations": 6,
+      "source_reads": 4,
+      "serp": 4,
+      "qwen": 4,
+      "seconds": 180
+    },
+    "total_generation_cap": 72,
+    "model_spacing_seconds": 10,
+    "stop": "First new transport/refusal error; preserve cumulative ledger; no retries or resets.",
+    "arms": [
+      "baseline",
+      "candidate"
+    ],
+    "order": "Root freezes pairwise alternating arm order before live calls; NEW4/OLD2 never pooled."
+  }
+}

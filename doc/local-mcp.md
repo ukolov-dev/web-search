@@ -172,6 +172,8 @@ research не объявляется как инструмент: пока не�
 
 Исправление доступа 30.10: при уже настроенном локальном HTTPS proxy startup принимает `--openrouter-proxy http://127.0.0.1:PORT`. Параметр разрешён только вместе с OpenRouter key-file; требует HTTP loopback endpoint без credentials/path/query/fragment. Он применяется только к модельному клиенту до запроса. DNS/IP/redirect guards публичных страниц и oMLX не меняются. В текущем окружении явный системный маршрут подтвердил DeepSeek и release MCP smoke; прямой маршрут получал Cloudflare403. Детали в OpenRouter-дополнении.
 
+Диагностика отказов OpenRouter с 18.11 сохраняет HTTP-статус, `limit_source` только из фиксированного списка (иначе `unspecified`) и разобранные числовые/HTTP-date `Retry-After` и `X-RateLimit-Reset`. Для числового reset сохраняется `reset_header_numeric` без предположения о единицах; HTTP-date переводится в `reset_at_unix_s`. Сырые сообщения, заголовки и произвольные metadata не возвращаются. Накопление тела ограничено 16 КиБ, ожидание — меньшим из 1 с и половины оставшегося HTTP-бюджета; отдельный транспортный chunk может быть больше лимита накопления. Диагностика не добавляет retry и не доказывает причину отказа, если провайдер не прислал разрешённое поле.
+
 ## Evidence memory: opt-in, 30.10.2026
 
 Default `ranked_search` сохраняет legacy. Исторический этап `request-evidence-v6-context-audit` (последующее текущее поведение описано в начале документа) ввёл под startup-флагом `--evidence-memory`: общий контроль до10 direct/background кандидатов, исходный вопрос R0 и до3 exact query anchors, состояния supported/missing/contradicted/ambiguous с passage IDs, hashes и диапазонами UTF-8 bytes в whitespace-normalized field. До coverage читаются до4 кандидатов; максимум1 слот резервируется для query-overlapping reference URL (docs-host/path), даже с initial irrelevant/boilerplate. URL служит только выбору чтения, не поддержке direct; затем один coverage и skeptical audit всех proposed direct, включая initial SERP-direct. Для каждого supported требования нужна непрерывная цитата16..240 символов из реального passage; core нельзя подтвердить одним заголовком. Некорректная цитата локально становится ambiguous с witness_rejections; неизвестные ID/ссылки и нарушенная schema отвергают batch. Без принятого audit direct понижается до background. Reviewer и audit используют одну модель, не независимую приёмку.
@@ -242,6 +244,10 @@ Core witness, целиком повторяющий фактический page 
 ### Уникальность research witness, 13 ноября
 
 Для текстового chunk_id+quote witness требуется единственное exact совпадение внутри выбранного chunk; неоднозначный повтор удерживается, а пригодные дополнительные citations сохраняются. Explicit RFC ranges продолжают выбирать конкретное вхождение. Это не семантическая гарантия и не новая qualification; [V7 и непройденный no-loss gate](research-quote-binding-2026-11-13.md). Public input/output schemas и budgets не менялись.
+
+### Служебное пояснение audit, 18 ноября
+
+`Check.reason` не определяет истинность утверждения. JSON schema задаёт 1..200 символов; runtime отвергает пустое/пробельное значение и control characters в исходной строке, а длинный валидный reason ограничивает до200 Unicode code points с событием `audit_reason_truncated`. Полный исходный ответ остаётся в явно включённом model capture. Verdicts, собственные цитаты, claim IDs, конфликты и требование двух документов проверяются как прежде. `Conflict.reason` остаётся строгим; эта нормализация не применяется к основаниям конфликта. [Исправления и offline evidence](audit-url-fix-2026-11-18.md).
 
 ### Уточнения research P1, 13 ноября
 

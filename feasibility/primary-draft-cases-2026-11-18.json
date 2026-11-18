@@ -1,0 +1,267 @@
+{
+  "schema": "primary-draft-cases-v1",
+  "created_utc": "2026-11-18T09:45:36.594435+00:00",
+  "cohort": "known_historical_development2_oracle_source",
+  "scope": "Fresh modeldrafts fromsource-native selection thenexistingaudit;2questions/5originalconditions;baselineoldsource vs primaryofficialsource. Not re-auditfrozenclaims, not publicsearch/retrievaltest.",
+  "case_index_path": "runs/primary-draft-2026-11-18/case-index.json",
+  "case_index_sha256": "cb89d7406f61cbb3b7d1f9b020be1edd0b3b2cfa5a51ac1c4c5d2070b42d6e36",
+  "cases": [
+    {
+      "id": "D01",
+      "original_case_id": "T01",
+      "cohort": "known_historical_development2_newdraft",
+      "question": "According to Python itertools.groupby documentation, does it group equal keys anywhere in the input or only consecutive runs, and how should input be prepared to collect all equal keys together?",
+      "language": "en",
+      "original_query": "Python itertools.groupby consecutive groups sorted same key documentation",
+      "gold_aspects": [
+        "groupby creates groups for consecutive runs of equal keys; it does not aggregate equal keys globally regardless of input order.",
+        "To collect all items of each key together, input should be sorted/grouped on the same key function before groupby; groupby does not perform sorting itself."
+      ],
+      "required_conditions": [
+        {
+          "id": "T01.A",
+          "claim": "groupby creates groups for consecutive runs of equal keys; it does not aggregate equal keys globally regardless of input order."
+        },
+        {
+          "id": "T01.B",
+          "claim": "To collect all items of each key together, input should be sorted/grouped on the same key function before groupby; groupby does not perform sorting itself."
+        }
+      ],
+      "original_gold_path": "feasibility/search-five-cases-2026-11-18.json",
+      "original_gold_sha256": "ca5b10d406286e99d80f87a92d6779db06852fa15b1595308d9b31293bfd7542",
+      "reference_urls": [
+        "https://docs.python.org/3/library/itertools.html#itertools.groupby"
+      ],
+      "source_variants": {
+        "baseline": {
+          "url": "https://pynative.com/python-itertools-functools-exercises/",
+          "source_text_sha256": "33a114efe3323711140ef93fff99389ece79b84050400f71122121a7486921f8",
+          "source_native_chars": 71737,
+          "document_version": "521264aaadad5e65b94dba46e76744dcb361ee187c45fb69183c3c1dffbaaf40",
+          "title": "Python Itertools and Functools Exercises: 20 Coding Problems with Solutions",
+          "publication": {
+            "date_status": "valid",
+            "kind": "article",
+            "published_date": "2026-06-12",
+            "witness_count": 2,
+            "witnesses": [
+              {
+                "date": "2026-06-12",
+                "raw": "2026-06-12T07:11:30+00:00",
+                "source": "jsonld.datePublished",
+                "timestamp": "2026-06-12T07:11:30+00:00"
+              },
+              {
+                "date": "2026-06-12",
+                "raw": "2026-06-12T07:11:30+00:00",
+                "source": "meta.article:published_time",
+                "timestamp": "2026-06-12T07:11:30+00:00"
+              }
+            ],
+            "witnesses_limited": false
+          },
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          },
+          "source_artifact": "runs/search-repair-2026-11-18/regression/research/T01/capture/0000-research/document-03.json",
+          "source_artifact_sha256": "33f713c89a038b89f028262f4adb27b5dbfb627989691407ebd8e802f46fac90",
+          "truncated": false,
+          "source_status": "previous_runtime_eligiblebody"
+        },
+        "primary": {
+          "url": "https://docs.python.org/3/library/itertools.html",
+          "final_url": "https://docs.python.org/3/library/itertools.html",
+          "source_text_sha256": "ebd1403107661fc806caf02e6e3dd287e15f1eee21e13f22b975c3a9e26ddbf1",
+          "source_native_chars": 39110,
+          "product_text_hash": "ebd1403107661fc806caf02e6e3dd287e15f1eee21e13f22b975c3a9e26ddbf1",
+          "document_version": null,
+          "title": "itertools — Functions creating iterators for efficient looping — Python 3.15.2 documentation",
+          "publication": {
+            "date_status": "missing",
+            "heading": "itertools — Functions creating iterators for efficient looping¶",
+            "kind": "feed",
+            "publication_witnesses": [],
+            "published_date": null,
+            "source_url": "https://docs.python.org/3/library/itertools.html",
+            "title": "itertools — Functions creating iterators for efficient looping — Python 3.15.2 documentation"
+          },
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": false
+          },
+          "source_artifact": "runs/primary-evidence-2026-11-18/primary-extract/tool-result.json",
+          "source_artifact_sha256": "38377e914b2cdf85ea94ffc3de03e6379a80a3892884bb37b4082848a9fa1ea0",
+          "truncated": false,
+          "source_status": "ok"
+        }
+      }
+    },
+    {
+      "id": "D02",
+      "original_case_id": "N04",
+      "cohort": "known_historical_development2_newdraft",
+      "question": "В CPython 3.13 free-threaded режим без GIL экспериментальный или стабильный, включён ли по умолчанию и нужен ли отдельный executable?",
+      "language": "ru",
+      "original_query": "В CPython 3.13 free-threaded режим без GIL экспериментальный или стабильный, включён ли по умолчанию и нужен ли отдельный executable?",
+      "gold_aspects": [
+        "В CPython3.13 free-threaded режим экспериментальный, не следует переносить статус другой версии.",
+        "Режим не включён по умолчанию.",
+        "Нужен отдельный executable/free-threaded build, обычно python3.13t; допустим исходный build --disable-gil."
+      ],
+      "required_conditions": [
+        {
+          "id": "N04.A",
+          "claim": "В CPython3.13 free-threaded режим экспериментальный, не следует переносить статус другой версии."
+        },
+        {
+          "id": "N04.B",
+          "claim": "Режим не включён по умолчанию."
+        },
+        {
+          "id": "N04.C",
+          "claim": "Нужен отдельный executable/free-threaded build, обычно python3.13t; допустим исходный build --disable-gil."
+        }
+      ],
+      "original_gold_path": "feasibility/search-repair-cases-2026-11-18.json",
+      "original_gold_sha256": "b708a5e7846f43d8c1a1c97f9b7ab5c632141c71eaf389d2b726362cb216f3ec",
+      "reference_urls": [
+        "https://docs.python.org/3.13/whatsnew/3.13.html"
+      ],
+      "source_variants": {
+        "baseline": {
+          "url": "https://realpython.com/python313-free-threading-jit/",
+          "source_text_sha256": "c8e05186df923e9303b55a0b7c6fbe8cc2542c531476bcbb811625c274f2133b",
+          "source_native_chars": 100000,
+          "document_version": "9956819e86e927f82e1b89549222b364a8d7f4f541cc7a741240ecc08f6a958d",
+          "title": "Python 3.13: Free Threading and a JIT Compiler",
+          "publication": {
+            "date_status": "valid",
+            "kind": "article",
+            "published_date": "2024-09-18",
+            "witness_count": 1,
+            "witnesses": [
+              {
+                "date": "2024-09-18",
+                "raw": "2024-09-18T14:00:00+00:00",
+                "source": "jsonld.datePublished",
+                "timestamp": "2024-09-18T14:00:00+00:00"
+              }
+            ],
+            "witnesses_limited": false
+          },
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": true
+          },
+          "source_artifact": "runs/search-repair-2026-11-18/candidate/research/N04/capture/0000-research/document-01.json",
+          "source_artifact_sha256": "372c9d26ac53d7f0dcc3f386955b6003b80c324fac4df51f2ca822f3d4258e8e",
+          "truncated": true,
+          "source_status": "previous_runtime_eligiblebody"
+        },
+        "primary": {
+          "url": "https://docs.python.org/3.13/whatsnew/3.13.html",
+          "final_url": "https://docs.python.org/3.13/whatsnew/3.13.html",
+          "source_text_sha256": "57af1a844f8f443a4217578ce6325cbe47eb529b6dd43a4f7b9dbeb3a87fe6ab",
+          "source_native_chars": 100000,
+          "product_text_hash": "57af1a844f8f443a4217578ce6325cbe47eb529b6dd43a4f7b9dbeb3a87fe6ab",
+          "document_version": null,
+          "title": "What’s New In Python 3.13 — Python 3.13.18 documentation",
+          "publication": {
+            "date_status": "missing",
+            "heading": "What’s New In Python 3.13¶",
+            "kind": "feed",
+            "publication_witnesses": [],
+            "published_date": null,
+            "source_url": "https://docs.python.org/3.13/whatsnew/3.13.html",
+            "title": "What’s New In Python 3.13 — Python 3.13.18 documentation"
+          },
+          "extraction": {
+            "method": "semantic_main",
+            "scope": "main",
+            "truncated": true
+          },
+          "source_artifact": "runs/primary-evidence-2026-11-18/primary-extract/tool-result.json",
+          "source_artifact_sha256": "38377e914b2cdf85ea94ffc3de03e6379a80a3892884bb37b4082848a9fa1ea0",
+          "truncated": true,
+          "source_status": "ok"
+        }
+      }
+    }
+  ],
+  "protocol": {
+    "planned_session_trials": 4,
+    "questions": 2,
+    "source_variants": [
+      "baseline",
+      "primary"
+    ],
+    "source_per_trial": 1,
+    "planned_total_generative_call_cap": 24,
+    "per_trial_generation_cap": 6,
+    "per_trial_http_read_budget": 4,
+    "per_trial_qwen_budget": 4,
+    "per_trial_seconds": 180,
+    "model_spacing_seconds": 10,
+    "source_public_http": 0,
+    "same_model_and_prompt": true,
+    "native_selection": "Existing section_saved_source_pipeline selects from each complete savedsourcebody with same originalquestion. No existingdraftclaim fixed; no modelcalls by reviewer.",
+    "stop": "Stop first refusal/error/rootbudget; no conditionalretry or earlier429campaign continuation."
+  },
+  "semantic_fingerprints": [
+    {
+      "id": "FP_GROUPBY_UNCONDITIONAL_SORT",
+      "original_examples": [
+        "T01/A4",
+        "H01",
+        "B/H02"
+      ],
+      "meaning": "Sorting claimed mandatory for everyvalidgroupby use, rather than to collect globally equalkeys.",
+      "classification": "false",
+      "positive_control": "Consecutive grouping valid on unsortedinput; samekeysorting/grouping for collectallequalkeys is correct."
+    },
+    {
+      "id": "FP_GROUPBY_GLOBAL_AGGREGATION",
+      "meaning": "groupby aggregates all equalkeys independent of inputorder or sorts internally.",
+      "classification": "false"
+    },
+    {
+      "id": "FP_PY313_CUSTOMBUILD_MANDATORY",
+      "original_examples": [
+        "N04/A1",
+        "P02/A1"
+      ],
+      "meaning": "Pinned3.13 free-threaded functionality unavailable inofficialinstallers or necessarilyrequires usercustombuild.",
+      "classification": "false",
+      "positive_control": "Separate free-threaded executable/build required; optional officialWindows/macOS installers or --disable-gil sourcebuild possible."
+    },
+    {
+      "id": "FP_PY313_STATUS_TIME_TRANSFER",
+      "meaning": "Pinned3.13 feature called stable/currentlybetarelease based on anotherdate/version context.",
+      "classification": "false_or_unknown_depending_actualqualification"
+    },
+    {
+      "id": "UNKNOWN_MACOS_INSTALLER_SCOPE",
+      "original_examples": [
+        "N04/A2",
+        "N04/A3",
+        "P02/A2",
+        "P02/A3"
+      ],
+      "meaning": "macOSinstalleroption/frameworkfacts generalized to allplatformruntime behavior or counted as generalnotenableddefault proof.",
+      "classification": "unknown_scope"
+    }
+  ],
+  "grading_policy": {
+    "conditions": "Exactly original5requiredconditions, no relaxation. Each supportedcondition needs semanticallycomplete ownreturnedwitness and answerclaim; title/URL/HTTP200/modelauditverdict alone insufficient.",
+    "claim_judgment": "Independently label each new atomicclaim worldtrue/false/unknown, ownsemanticfaithfulness, and questioncoverage. Fingerprints compare semantics across changed IDs; new modelclaimIDs are localonly.",
+    "no_backfill": "Body/Qwencontext not cited by thatclaim cannot repair missingpremise in ownreturnedwitness. Source containscorrectfact does not mean generatedanswercovered it.",
+    "scope": "Timedependentstatus pinned3.13; historical/datequalified truthfulcontext separate from currentquestioncoverage. Timeless APIs not require inventedpublicationdates.",
+    "fixed_denominators": "Twoquestions/fiveconditions per sourcevariant, sameoriginalquestions; notrun andemptyavailability errors remain explicit, no safe-refusal credit.",
+    "source_limit": "Only1suppliedoracle source pertrial; no two-independent-sourcequalification, no retrievalqualityclaim.",
+    "gates": "No newworldfalse/unknown semanticfingerprint and no loss of previouslysupportedcondition across completedpairedquestions; incompletecampaign not accepted."
+  }
+}

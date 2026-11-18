@@ -1,0 +1,5 @@
+{
+  "reason": "Quote says iterable generally needs to be sorted on same key function; claim adds 'to collect all equal keys together' as purpose, which follows from context but quote alone states sorting requirement.",
+  "source_capture_sha256": "63cfd604331ebc15acd5ec3cbd7cc4d11ad61fc89a380e084fbe1983662b5040",
+  "original_chars": 201
+}

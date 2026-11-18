@@ -985,3 +985,33 @@ async fn live_openrouter_ranked_over_stdio() -> Result<()> {
     client.cancel().await?;
     Ok(())
 }
+
+#[tokio::test]
+async fn research_natural_or_is_not_boolean_dsl_over_stdio() -> Result<()> {
+    let client = client().await?;
+    let value = call(&client, "research", json!({"question":"site:docs.python.org/3.11/library/tomllib.html Must load receive a binary or text file?"})).await?;
+    assert_eq!(
+        value.structured_content.context("structured")?["error"]["code"],
+        "model_unconfigured"
+    );
+    assert!(
+        call(
+            &client,
+            "research",
+            json!({"question":"site:docs.python.org/3.11/library/tomllib.html binary OR text"})
+        )
+        .await
+        .is_err()
+    );
+    assert!(
+        call(
+            &client,
+            "research",
+            json!({"question":"site:docs.python.org/3.11/library/tomllib.html binary | text"})
+        )
+        .await
+        .is_err()
+    );
+    client.cancel().await?;
+    Ok(())
+}

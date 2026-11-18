@@ -1,0 +1,3426 @@
+{
+  "schema": "five-agent-results-v1",
+  "rows": [
+    {
+      "id": "B01",
+      "group": "search",
+      "summary": {
+        "status": "completed",
+        "tool_status": "ok",
+        "elapsed_ms": 1305,
+        "is_error": false,
+        "model_refusal": false
+      },
+      "value": {
+        "cache": {
+          "enabled": true,
+          "errors": 0,
+          "extractions": 0,
+          "hits": 0,
+          "http_reads": 1,
+          "misses": 1,
+          "qwen_calls": 0,
+          "refresh": false,
+          "writes": 1
+        },
+        "discarded_results": 0,
+        "elapsed_ms": 1294,
+        "engine": "seznam",
+        "hops": [
+          "https://search.seznam.cz/?q=Python+copy.copy+shallow+copy+nested+mutable+objects+references+deepcopy+documentation"
+        ],
+        "http_status": 200,
+        "query": "Python copy.copy shallow copy nested mutable objects references deepcopy documentation",
+        "results": [
+          {
+            "position": 1,
+            "snippet": "Source code: Lib/copy.py Assignment statements in Python do not copy objects, they create bindings between a target and an object. For collections that are mutable or contain mutable items, a copy",
+            "title": "copy — Shallow and deep copy operations — Python 3.15.2…",
+            "url": "https://docs.python.org/3/library/copy.html"
+          },
+          {
+            "position": 2,
+            "snippet": "A generic mutable hash table implementation.",
+            "title": "tf.lookup.experimental.MutableHashTable | TensorFlow v2.16.1",
+            "url": "https://www.tensorflow.org/api_docs/python/tf/lookup/experimental/MutableHashTable"
+          },
+          {
+            "position": 3,
+            "snippet": "Copy object and lists in Python. We explain how to avoid the pitfalls by introducing shallow and deep copy",
+            "title": "11. Shallow and Deep Copy | Python Tutorial | python-course.eu",
+            "url": "https://python-course.eu/python-tutorial/shallow-and-deep-copy.php"
+          },
+          {
+            "position": 4,
+            "snippet": "Copy Python lists safely with slicing, list(), copy(), and deepcopy(), and understand shallow copies, nested mutability, aliases, and performance.",
+            "title": "Copy a List in Python: Slicing, copy(), and deepcopy()",
+            "url": "https://www.pythonpool.com/python-copy-list/"
+          },
+          {
+            "position": 5,
+            "snippet": "Copy Module is a set of functions that are related to copying different elements of a list, objects, arrays, etc. It can be used to create shallow copies as well as deep copies.",
+            "title": "Python Copy Module - Python Cheat Sheet",
+            "url": "https://labex.io/pythoncheatsheet/modules/copy-module"
+          },
+          {
+            "position": 6,
+            "snippet": "Provides functionality to create shallow and deep copies of objects in Python.",
+            "title": "copy | Python Standard Library – Real Python",
+            "url": "https://realpython.com/ref/stdlib/copy/"
+          },
+          {
+            "position": 7,
+            "snippet": "MicroPython - a lean and efficient Python implementation for microcontrollers and constrained systems - Releases · micropython/micropython",
+            "title": "Releases · micropython/micropython · GitHub",
+            "url": "https://github.com/micropython/micropython/releases"
+          },
+          {
+            "position": 8,
+            "snippet": "Understand how Python variables reference objects, why assignment is not copying, and how mutability, side effects, shallow copy, and deep copy affect real projects.",
+            "title": "Python References and Mutability: Runtime Behavior Explained",
+            "url": "https://www.zestmindsacademy.com/guides/python-runtime-references-mutability/"
+          },
+          {
+            "position": 9,
+            "snippet": "In Python, a deep copy of a dictionary creates a new dictionary with entirely new key-value pairs, where the values are also deep copies of the originals.",
+            "title": "Python – Deep Copy Dictionary – LivingWithCode",
+            "url": "https://livingwithcode.com/python/dictionary/deep-copy/"
+          },
+          {
+            "position": 10,
+            "snippet": "How to implement scalar functions in Python and use them in user-defined functions (UDFs) in BigQuery.",
+            "title": "Work with user-defined functions in Python | BigQuery | Google…",
+            "url": "https://docs.cloud.google.com/bigquery/docs/user-defined-functions-python"
+          }
+        ],
+        "site_filter": null,
+        "status": "ok",
+        "untrusted_content": true,
+        "warnings": [
+          "Experimental HTML source: relevance is not qualified"
+        ]
+      },
+      "witnesses_verified": 0,
+      "resource_links": 0,
+      "known_cost_usd": 0,
+      "unknown_cost_calls": 0,
+      "result_sha256": "8fc96eddb32598f12b81a14f78520abf0f4eebf033d5a91312fa1dac2902b4c2"
+    },
+    {
+      "id": "B02",
+      "group": "search",
+      "summary": {
+        "status": "completed",
+        "tool_status": "error",
+        "elapsed_ms": 952,
+        "is_error": true,
+        "model_refusal": false
+      },
+      "value": {
+        "cache": {
+          "enabled": true,
+          "errors": 0,
+          "extractions": 0,
+          "hits": 0,
+          "http_reads": 1,
+          "misses": 1,
+          "qwen_calls": 0,
+          "refresh": false,
+          "writes": 0
+        },
+        "elapsed_ms": 931,
+        "engine": "seznam",
+        "error": "source_query_mismatch: all 10 results violate site:docs.python.org/3.11/library/tomllib.html",
+        "error_code": "source_query_mismatch",
+        "hops": [
+          "https://search.seznam.cz/?q=site%3Adocs.python.org%2F3.11%2Flibrary%2Ftomllib.html+Python+3.11+tomllib.load+binary+text+writing+TOML"
+        ],
+        "http_status": 200,
+        "query": "site:docs.python.org/3.11/library/tomllib.html Python 3.11 tomllib.load binary text writing TOML",
+        "results": [],
+        "status": "error"
+      },
+      "witnesses_verified": 0,
+      "resource_links": 0,
+      "known_cost_usd": 0,
+      "unknown_cost_calls": 0,
+      "result_sha256": "64c91ceb465c75ab528d1ed620571886ef3eb5f6648862a6b8fdf5f3142d68ba"
+    },
+    {
+      "id": "F01",
+      "group": "search",
+      "summary": {
+        "status": "completed",
+        "tool_status": "ok",
+        "elapsed_ms": 1298,
+        "is_error": false,
+        "model_refusal": false
+      },
+      "value": {
+        "cache": {
+          "enabled": true,
+          "errors": 0,
+          "extractions": 0,
+          "hits": 0,
+          "http_reads": 1,
+          "misses": 1,
+          "qwen_calls": 0,
+          "refresh": false,
+          "writes": 1
+        },
+        "discarded_results": 0,
+        "elapsed_ms": 1283,
+        "engine": "seznam",
+        "hops": [
+          "https://search.seznam.cz/?q=Rust+1.100.0+November+12+2026+never+type+fallback+editions"
+        ],
+        "http_status": 200,
+        "query": "Rust 1.100.0 November 12 2026 never type fallback editions",
+        "results": [
+          {
+            "position": 1,
+            "snippet": "Rust Versions # Stable: 1.99.1 Beta: 1.100.0 (12 November, 2026, 20 days left) Nightly: 1.101.0 (24 December, 2026, 62 days left) Ongoing Stabilization PRs # Stabilize unchecked nonzero_ops (6 days old) S-waiting-on-author - Status: This is…",
+            "title": "Rust Versions | Rust Changelogs",
+            "url": "https://releases.rs/"
+          },
+          {
+            "position": 2,
+            "snippet": "The Rust team is happy to announce a new version of Rust, 1.100.0. Rust is a programming language empowering everyone to build reliable and efficient software.",
+            "title": "Announcing Rust 1.100.0 | Rust Blog",
+            "url": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/"
+          },
+          {
+            "position": 3,
+            "snippet": "The following list shows the first 100 pages that use this file only. A full list is available.",
+            "title": "File:Blank.png - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/File:Blank.png"
+          },
+          {
+            "position": 4,
+            "snippet": "Pro-Line kolo 1:24, pneu Electron 2.0, disk bílý, H7 (4): Micro-B",
+            "title": "1:24 | Reichard Modelsport",
+            "url": "https://www.reichard.cz/1-24"
+          },
+          {
+            "position": 5,
+            "snippet": "8. 8. 2018119 zhlédnutíUžívejte si videa a hudbu, kterou máte rádi, nahrávejte originální obsah a sdílejte vše s přáteli, rodinou i celým světem na YouTube.",
+            "title": "Roco V100 und Piko Flachwagen beladen mit LKW IFA H6 - YouTube",
+            "url": "https://www.youtube.com/watch?v=fczaVQRjmoU"
+          },
+          {
+            "position": 6,
+            "snippet": "Dimensions: 1.13″ x 0.5″ x 0.13″. One skull.",
+            "title": "Sword Display Stands, Wall Mounts & Blade Care Kits | Michigan…",
+            "url": "https://www.michigansportsoutdoor.com/collections/swords-daggers-replicas/sword-accessories/"
+          },
+          {
+            "position": 7,
+            "snippet": "Před měsícemNOTE: Use the links to edit those that have a relnotes-tracking-issue, and they will be updated when we regenerate the notes periodically (manually). Version 1.100.0 (2026-11-12) Language Stabilize never type Lint against repeated #[.",
+            "title": "Draft release notes for 1.100.0 · Issue #163811 · rust-lang…",
+            "url": "https://github.com/rust-lang/rust/issues/163811"
+          },
+          {
+            "position": 8,
+            "snippet": "1:72 Medieval Stone Fortress (RR) - Zvezda 8510 -",
+            "title": "Zvezda 1:72 Medieval Stone Fortress (RR) 8510",
+            "url": "https://www.peckamodel.cz/32-8510-model-kit-diorama-8510-medieval-stone-fortress-rr-1-72"
+          },
+          {
+            "position": 9,
+            "snippet": "Značka: Porsche Model: Porsche 911 GT3 RS Tribute to Carrera RS 2022 Výrobce: Norev Měřítko: 1:12 Materiál: kovový model - uzavřená karoserie Barva: bílá/zelená/černá celý popis",
+            "title": "Porsche 911 GT3 RS Tribute to Carrera RS 2022 1:12 Norev",
+            "url": "https://www.svetauticek.cz/127535"
+          },
+          {
+            "position": 10,
+            "snippet": "Rust - The only aim in Rust is to survive. Everything wants you to die - the island’s wildlife, other inhabitants, the environment, and other survivors. Do whatever it takes to last another night.",
+            "title": "Steams gemenskap :: Rust",
+            "url": "https://steamcommunity.com/app/252490/allnews/?l=swedish"
+          }
+        ],
+        "site_filter": null,
+        "status": "ok",
+        "untrusted_content": true,
+        "warnings": [
+          "Experimental HTML source: relevance is not qualified"
+        ]
+      },
+      "witnesses_verified": 0,
+      "resource_links": 0,
+      "known_cost_usd": 0,
+      "unknown_cost_calls": 0,
+      "result_sha256": "9bfbeee8bf449ab8ac1a803fef2d1a9d9cddda065aab9c8e6bbf55c9f837e33d"
+    },
+    {
+      "id": "F02",
+      "group": "search",
+      "summary": {
+        "status": "completed",
+        "tool_status": "ok",
+        "elapsed_ms": 1312,
+        "is_error": false,
+        "model_refusal": false
+      },
+      "value": {
+        "cache": {
+          "enabled": true,
+          "errors": 0,
+          "extractions": 0,
+          "hits": 0,
+          "http_reads": 1,
+          "misses": 1,
+          "qwen_calls": 0,
+          "refresh": false,
+          "writes": 1
+        },
+        "discarded_results": 0,
+        "elapsed_ms": 1287,
+        "engine": "seznam",
+        "hops": [
+          "https://search.seznam.cz/?q=Python+3.16.0a2+November+10+2026+production+next+alpha+schedule"
+        ],
+        "http_status": 200,
+        "query": "Python 3.16.0a2 November 10 2026 production next alpha schedule",
+        "results": [
+          {
+            "position": 1,
+            "snippet": "The next alpha, Python 3.16.0a2, is scheduled for November 10, 2026. The full schedule is in PEP 826.",
+            "title": "Python Release Python 3.16.0a1 | Python.org",
+            "url": "https://www.python.org/downloads/release/python-3160a1/"
+          },
+          {
+            "position": 2,
+            "snippet": "Compare the best free open source Python Software at SourceForge. List of free, secure and fast Python Software, projects, software, and downloads.",
+            "title": "Best Open Source Python Software",
+            "url": "https://sourceforge.net/directory/python/"
+          },
+          {
+            "position": 3,
+            "snippet": "This document describes the development and release schedule for Python 3.16.",
+            "title": "PEP 826 – Python 3.16 Release Schedule | peps.python.org",
+            "url": "https://peps.python.org/pep-0826/"
+          },
+          {
+            "position": 4,
+            "snippet": "Describes the Python 3 versions that the App Engine standard environment supports, and how the Python 3 runtime starts your app.",
+            "title": "Python 3 Runtime Environment | App Engine standard environment…",
+            "url": "https://docs.cloud.google.com/appengine/docs/standard/python3/runtime"
+          },
+          {
+            "position": 5,
+            "snippet": "What's new in Python 3.10? or all \"What's new\" documents since 2.0",
+            "title": "3.10.21 Documentation",
+            "url": "https://docs.python.org/3.10/"
+          },
+          {
+            "position": 6,
+            "snippet": "Před měsícemThis is an early developer preview of Python 3.16 What’s new in Python 3.16? There’s plenty still to come in Python 3.16, but its first alpha is ready to try! Python 3.16.0a1 is the first of seven planned alpha releas…",
+            "title": "Python 3.16.0 alpha 1 is now available! - Core Development…",
+            "url": "https://discuss.python.org/t/python-3-16-0-alpha-1-is-now-available/109466"
+          },
+          {
+            "position": 7,
+            "snippet": "23. 3. 2013255 tis. zhlédnutíDavid BeazleySome of the most significant changes in Python 3 are related to metaprogramming. In this tutorial, I'll cover decorators, class decorators, des...",
+            "title": "Python 3 Metaprogramming - YouTube",
+            "url": "https://www.youtube.com/watch?v=sPiWg5jSoZI"
+          },
+          {
+            "position": 8,
+            "snippet": "The first developer preview of Python 3.16 is ready for testing.",
+            "title": "Python Insider",
+            "url": "https://blog.python.org/"
+          },
+          {
+            "position": 9,
+            "snippet": "Python je veľmi obľúbený a rozšírený programovací jazyk. Jeho využite je veľmi široké (vedecké výpočty, tvorba webstránok…). Vzhľadom na jeho jednoduchosť sa tento programovací jazyk využíva na hodinách programovania aj na školách a je…",
+            "title": "Python 3 | Práca s grafikou - Programko",
+            "url": "https://www.programko.sk/kurzy/python-3-kurz-programovania/"
+          },
+          {
+            "position": 10,
+            "snippet": "Python 3 switches the built-in function round() from rounding the way many people learned in school (where when rounding.5, you always round up) to what is called “banker’s rounding” (where you round from.5 to the nearest even number).",
+            "title": "Python versions - Grist Help Center",
+            "url": "https://support.getgrist.com/python/"
+          }
+        ],
+        "site_filter": null,
+        "status": "ok",
+        "untrusted_content": true,
+        "warnings": [
+          "Experimental HTML source: relevance is not qualified"
+        ]
+      },
+      "witnesses_verified": 0,
+      "resource_links": 0,
+      "known_cost_usd": 0,
+      "unknown_cost_calls": 0,
+      "result_sha256": "ba0a898e334da23b4ba54b8c669e55abbe00f8670ce0d7df4bcf019827095a21"
+    },
+    {
+      "id": "R01",
+      "group": "search",
+      "summary": {
+        "status": "completed",
+        "tool_status": "ok",
+        "elapsed_ms": 935,
+        "is_error": false,
+        "model_refusal": false
+      },
+      "value": {
+        "cache": {
+          "enabled": true,
+          "errors": 0,
+          "extractions": 0,
+          "hits": 0,
+          "http_reads": 1,
+          "misses": 1,
+          "qwen_calls": 0,
+          "refresh": false,
+          "writes": 1
+        },
+        "discarded_results": 0,
+        "elapsed_ms": 913,
+        "engine": "seznam",
+        "hops": [
+          "https://search.seznam.cz/?q=%D0%A6%D0%B0%D1%80%D1%81%D0%BA%D0%BE%D0%B5+%D0%A1%D0%B5%D0%BB%D0%BE+%D0%B2%D0%BE%D1%81%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%BD%D0%B0%D1%8F+%D0%AF%D0%BD%D1%82%D0%B0%D1%80%D0%BD%D0%B0%D1%8F+%D0%BA%D0%BE%D0%BC%D0%BD%D0%B0%D1%82%D0%B0+%D0%B4%D0%B0%D1%82%D0%B0+%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%B8%D1%8F+%D1%81%D0%BA%D0%BE%D0%BB%D1%8C%D0%BA%D0%BE+%D1%82%D0%BE%D0%BD%D0%BD+%D1%8F%D0%BD%D1%82%D0%B0%D1%80%D1%8F"
+        ],
+        "http_status": 200,
+        "query": "Царское Село воссозданная Янтарная комната дата открытия сколько тонн янтаря",
+        "results": [
+          {
+            "position": 1,
+            "snippet": "Янтарная комната: история создания, цифры, факты и тайны",
+            "title": "Янтарная комната: история создания, цифры, факты и тайны - РИА…",
+            "url": "https://ria.ru/20100429/227384217.html"
+          },
+          {
+            "position": 2,
+            "snippet": "Ца́рское Село́ — музей-заповедник в Пушкине, включающий в себя дворцово-парковый ансамбль Xviii—XIX веков, бывшую загородную царскую резиденцию, превращённую в музей после национализации в марте 1918 года.",
+            "title": "Царское Село (музей-заповедник) — Википедия",
+            "url": "https://ru.wikipedia.org/wiki/%D0%A6%D0%B0%D1%80%D1%81%D0%BA%D0%BE%D0%B5_%D0%A1%D0%B5%D0%BB%D0%BE_(%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA)"
+          },
+          {
+            "position": 3,
+            "snippet": "Сколько я его знаю, им движет необычайное рвение быть в гуще боевых действий, в местах, где так или иначе отстаиваются интересы России».",
+            "title": "Чеченский рекрутинг. Провал операции «Танцы на Крещатике». Как…",
+            "url": "https://novayagazeta.eu/articles/2026/07/06/chechenskii-rekruting-proval-operatsii-tantsy-na-kreshchatike"
+          },
+          {
+            "position": 4,
+            "snippet": "Она же отказалась от претензий на янтарную панель, передав все права на неё городу Бремену, который и передал её музею-заповеднику «Царское Село». 29 апреля 2000 года министр по делам культуры ФРГ Михаэль Науман передал и.",
+            "title": "Янтарная комната — Википедия",
+            "url": "https://ru.wikipedia.org/wiki/%D0%AF%D0%BD%D1%82%D0%B0%D1%80%D0%BD%D0%B0%D1%8F_%D0%BA%D0%BE%D0%BC%D0%BD%D0%B0%D1%82%D0%B0"
+          },
+          {
+            "position": 5,
+            "snippet": "Царскосельская янтарная мастерская продолжает работать над воссозданием, научной реконструкцией, реставрацией и консервацией культурно-исторических памятников декоративно-прикладного искусства.",
+            "title": "Главная",
+            "url": "http://amberroom.ru/index.php/ru/"
+          },
+          {
+            "position": 6,
+            "snippet": "Я могу об этом рассуждать сколько угодно, рисовать бизнес-планы, защищать их. Вот сделаем мы филиал, - значит что-то есть.",
+            "title": "Кавказский Узел | Таймураз Мамсуров (глава Республики Северная…",
+            "url": "https://www.kavkaz-uzel.eu/articles/168697"
+          },
+          {
+            "position": 7,
+            "snippet": "סיפור אמיתי מהשבוע: מלמד קורס סוכני AI למפתחים בחברה. משתתף בקורס כותב סוכן AI. הסוכן משתמש בקריאות LLM וכלים אחרים בתשלום. לולאה אינסופית עם תנאי עצירה…",
+            "title": "סיפור אמיתי מהשבוע: מלמד קורס סוכני AI…",
+            "url": "https://www.linkedin.com/posts/yoni-krichevsky_%D7%A1%D7%99%D7%A4%D7%95%D7%A8-%D7%90%D7%9E%D7%99%D7%AA%D7%99-%D7%9E%D7%94%D7%A9%D7%91%D7%95%D7%A2-%D7%9E%D7%9C%D7%9E%D7%93-%D7%A7%D7%95%D7%A8%D7%A1-%D7%A1%D7%95%D7%9B%D7%A0%D7%99-ai-%D7%9C%D7%9E%D7%A4%D7%AA%D7%97%D7%99%D7%9D-activity-7463127928143282176-EVar"
+          },
+          {
+            "position": 8,
+            "snippet": "В Tanmaya Praha парный тантрический массаж проходит в приятной и конфиденциальной обстановке, создавая пространство для расслабления, взаимной близости и открытия нового измерения совместных ощущений.",
+            "title": "Тантрические массажи для пар в Праге | Tanmaya студио",
+            "url": "https://www.tantramasaze.com/ru/tantra-massazh-dlya-par"
+          },
+          {
+            "position": 9,
+            "snippet": "I. Дата кургана Аржан и его место в системе культур скифского мира.",
+            "title": "(PDF) Балахванцев А.С. Биметаллический клевец из Бугуруслана и…",
+            "url": "https://www.academia.edu/41220054/%D0%91%D0%B0%D0%BB%D0%B0%D1%85%D0%B2%D0%B0%D0%BD%D1%86%D0%B5%D0%B2_%D0%90_%D0%A1_%D0%91%D0%B8%D0%BC%D0%B5%D1%82%D0%B0%D0%BB%D0%BB%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D0%BB%D0%B5%D0%B2%D0%B5%D1%86_%D0%B8%D0%B7_%D0%91%D1%83%D0%B3%D1%83%D1%80%D1%83%D1%81%D0%BB%D0%B0%D0%BD%D0%B0_%D0%B8_%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC%D0%B0_%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D1%80%D0%B0%D0%BD%D0%BD%D0%B5%D1%81%D0%BA%D0%B8%D1%84%D1%81%D0%BA%D0%BE%D0%B9_%D0%BA%D1%83%D0%BB%D1%8C%D1%82%D1%83%D1%80%D1%8B_%D0%92%D0%BE%D0%B9%D0%BD%D0%B0_%D0%B8_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D0%BB%D0%BE_%D0%B2_%D1%81%D0%BA%D0%B8%D1%84%D0%BE_%D1%81%D0%B0%D1%80%D0%BC%D0%B0%D1%82%D1%81%D0%BA%D0%BE%D0%BC_%D0%BC%D0%B8%D1%80%D0%B5_%D0%A1_%D0%98_%D0%9B%D1%83%D0%BA%D1%8C%D1%8F%D1%88%D0%BA%D0%BE_%D1%80%D0%B5%D0%B4_%D0%A0%D0%BE%D1%81%D1%82%D0%BE%D0%B2_%D0%BD%D0%B0_%D0%94%D0%BE%D0%BD%D1%83_2015_%D0%A1_22_25"
+          },
+          {
+            "position": 10,
+            "snippet": "Зибаев А.В.«Церковная история» Филосторгия и некоторые жанры античной географической литературы // Империя ромеев во времени и пространстве: Центр и Периферия: Тезисы докладов XXI Всероссийской научной сессии византинистов / Под ред.",
+            "title": "(PDF) Зибаев А.В.«Церковная история» Филосторгия и некоторые…",
+            "url": "https://www.academia.edu/33795327/%D0%97%D0%B8%D0%B1%D0%B0%D0%B5%D0%B2_%D0%90_%D0%92_%D0%A6%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F_%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F_%D0%A4%D0%B8%D0%BB%D0%BE%D1%81%D1%82%D0%BE%D1%80%D0%B3%D0%B8%D1%8F_%D0%B8_%D0%BD%D0%B5%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5_%D0%B6%D0%B0%D0%BD%D1%80%D1%8B_%D0%B0%D0%BD%D1%82%D0%B8%D1%87%D0%BD%D0%BE%D0%B9_%D0%B3%D0%B5%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B9_%D0%BB%D0%B8%D1%82%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80%D1%8B_%D0%98%D0%BC%D0%BF%D0%B5%D1%80%D0%B8%D1%8F_%D1%80%D0%BE%D0%BC%D0%B5%D0%B5%D0%B2_%D0%B2%D0%BE_%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%B8_%D0%B8_%D0%BF%D1%80%D0%BE%D1%81%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%B5_%D0%A6%D0%B5%D0%BD%D1%82%D1%80_%D0%B8_%D0%9F%D0%B5%D1%80%D0%B8%D1%84%D0%B5%D1%80%D0%B8%D1%8F_%D0%A2%D0%B5%D0%B7%D0%B8%D1%81%D1%8B_%D0%B4%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4%D0%BE%D0%B2_XXI_%D0%92%D1%81%D0%B5%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%BE%D0%B9_%D0%BD%D0%B0%D1%83%D1%87%D0%BD%D0%BE%D0%B9_%D1%81%D0%B5%D1%81%D1%81%D0%B8%D0%B8_%D0%B2%D0%B8%D0%B7%D0%B0%D0%BD%D1%82%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D0%BE%D0%B2_%D0%9F%D0%BE%D0%B4_%D1%80%D0%B5%D0%B4_%D0%9C_%D0%92_%D0%93%D1%80%D0%B0%D1%86%D0%B8%D0%B0%D0%BD%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%9F_%D0%92_%D0%9A%D1%83%D0%B7%D0%B5%D0%BD%D0%BA%D0%BE%D0%B2%D0%B0_%D0%9C_%D0%91%D0%B5%D0%BB%D0%B3%D0%BE%D1%80%D0%BE%D0%B4_2016_%D0%A1_93_95"
+          }
+        ],
+        "site_filter": null,
+        "status": "ok",
+        "untrusted_content": true,
+        "warnings": [
+          "Experimental HTML source: relevance is not qualified"
+        ]
+      },
+      "witnesses_verified": 0,
+      "resource_links": 0,
+      "known_cost_usd": 0,
+      "unknown_cost_calls": 0,
+      "result_sha256": "8a30e0ae81db2418aa66d5a37d376cce54b994b0e44d40bccd8d5c8baa868989"
+    },
+    {
+      "id": "R02",
+      "group": "search",
+      "summary": {
+        "status": "completed",
+        "tool_status": "ok",
+        "elapsed_ms": 838,
+        "is_error": false,
+        "model_refusal": false
+      },
+      "value": {
+        "cache": {
+          "enabled": true,
+          "errors": 0,
+          "extractions": 0,
+          "hits": 0,
+          "http_reads": 1,
+          "misses": 1,
+          "qwen_calls": 0,
+          "refresh": false,
+          "writes": 1
+        },
+        "discarded_results": 0,
+        "elapsed_ms": 818,
+        "engine": "seznam",
+        "hops": [
+          "https://search.seznam.cz/?q=%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9+%D0%BF%D0%BB%D0%B0%D0%BD%D0%B5%D1%82%D0%B0%D1%80%D0%B8%D0%B9+%D0%BF%D0%B5%D1%80%D0%B2%D1%8B%D0%B9+%D0%BA%D0%B0%D0%BC%D0%B5%D0%BD%D1%8C+%D1%84%D1%83%D0%BD%D0%B4%D0%B0%D0%BC%D0%B5%D0%BD%D1%82+%D0%B0%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B+%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82"
+        ],
+        "http_status": 200,
+        "query": "Московский планетарий первый камень фундамент архитекторы проект",
+        "results": [
+          {
+            "position": 1,
+            "snippet": "Московский планетарий - один из самых больших в мире и самый старый планетарий в России. Расположен в Москве возле новой территории Московского зоопарка, недалеко от Садового кольца.",
+            "title": "В этот день...",
+            "url": "http://moscow.org/calendar/"
+          },
+          {
+            "position": 2,
+            "snippet": "Для молодой амбициозной пары, мечтающей о просторном доме для будущей семьи, мы создали проект двухэтажного жилого дома с гаражом и въездной группой, органично вписанный в живописный участок среди сосен.",
+            "title": "«Березка»",
+            "url": "https://erkerarchitects.com/berezka"
+          },
+          {
+            "position": 3,
+            "snippet": "13 июня 1961 года первый космонавт планеты Ю.А. Гагарин заложил символический камень в фундамент будущего Государственного музея К.Э. Циолковского.",
+            "title": "История музея в лицах, событиях, датах",
+            "url": "https://gmik.ru/istoriya-muzeya-v-litsah-sobyitiyah-datah/"
+          },
+          {
+            "position": 4,
+            "snippet": "Так, проект ленинградского скульптора А. М. Богачёва, набравший наибольшее количество голосов на второй выставке, предполагал некий парафраз Некрополя у Кремлёвской стены с южной стороны крепости: ряд из 36 мемориальных ниш с досками (по…",
+            "title": "Соловецкий камень (Москва) — Википедия",
+            "url": "https://ru.wikipedia.org/wiki/%D0%A1%D0%BE%D0%BB%D0%BE%D0%B2%D0%B5%D1%86%D0%BA%D0%B8%D0%B9_%D0%BA%D0%B0%D0%BC%D0%B5%D0%BD%D1%8C_(%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0)"
+          },
+          {
+            "position": 5,
+            "snippet": "Первый камень в фундамент костела св. Прокопа был положен 30 октября 1898 г. на месте часовни св. Яна Непомуцкого на территории виноградарской усадьбы Райсмонка по случаю 50-летия правления императора Франца Иосифа I (поэтому костел…",
+            "title": "Костел св. Прокопа и его окружение | Praha 3",
+            "url": "https://www.praha3.cz/aktualne-z-trojky/o-praze-3/naucna-stezka-prahy-3/kostel-sv-prokopa-a-okoli/rus"
+          },
+          {
+            "position": 6,
+            "snippet": "В фундамент были замурованы королевская грамота, строительные планы, портрет Людвига II на фарфоре и по одному экземпляру каждой из баварских монет, выпущенных со времени вступления этого монарха на престол.",
+            "title": "Нойшванштайн - сказочный замок Людвига II",
+            "url": "https://www.dw.com/ru/nojsvanstajn-skazocnyj-zamok-bavarskogo-korola-ludviga-ii/a-4850361"
+          },
+          {
+            "position": 7,
+            "snippet": "Балахванцев А.С. Free download available.",
+            "title": "(PDF) Балахванцев А.С. Биметаллический клевец из Бугуруслана и…",
+            "url": "https://www.academia.edu/41220054/%D0%91%D0%B0%D0%BB%D0%B0%D1%85%D0%B2%D0%B0%D0%BD%D1%86%D0%B5%D0%B2_%D0%90_%D0%A1_%D0%91%D0%B8%D0%BC%D0%B5%D1%82%D0%B0%D0%BB%D0%BB%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D0%BB%D0%B5%D0%B2%D0%B5%D1%86_%D0%B8%D0%B7_%D0%91%D1%83%D0%B3%D1%83%D1%80%D1%83%D1%81%D0%BB%D0%B0%D0%BD%D0%B0_%D0%B8_%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC%D0%B0_%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D1%80%D0%B0%D0%BD%D0%BD%D0%B5%D1%81%D0%BA%D0%B8%D1%84%D1%81%D0%BA%D0%BE%D0%B9_%D0%BA%D1%83%D0%BB%D1%8C%D1%82%D1%83%D1%80%D1%8B_%D0%92%D0%BE%D0%B9%D0%BD%D0%B0_%D0%B8_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D0%BB%D0%BE_%D0%B2_%D1%81%D0%BA%D0%B8%D1%84%D0%BE_%D1%81%D0%B0%D1%80%D0%BC%D0%B0%D1%82%D1%81%D0%BA%D0%BE%D0%BC_%D0%BC%D0%B8%D1%80%D0%B5_%D0%A1_%D0%98_%D0%9B%D1%83%D0%BA%D1%8C%D1%8F%D1%88%D0%BA%D0%BE_%D1%80%D0%B5%D0%B4_%D0%A0%D0%BE%D1%81%D1%82%D0%BE%D0%B2_%D0%BD%D0%B0_%D0%94%D0%BE%D0%BD%D1%83_2015_%D0%A1_22_25"
+          },
+          {
+            "position": 8,
+            "snippet": "В статье ставится вопрос о смысле, который вкладывает свт. Димитрий Ростовский в понятие «невежество» в своем сочинении «Розыск раскольнической брынской веры», проповедях и кратких учительных со- чинениях.",
+            "title": "(PDF) \"И лишаются невежеством своим многих благ духовных\".",
+            "url": "https://www.academia.edu/37448466/_%D0%98_%D0%BB%D0%B8%D1%88%D0%B0%D1%8E%D1%82%D1%81%D1%8F_%D0%BD%D0%B5%D0%B2%D0%B5%D0%B6%D0%B5%D1%81%D1%82%D0%B2%D0%BE%D0%BC_%D1%81%D0%B2%D0%BE%D0%B8%D0%BC_%D0%BC%D0%BD%D0%BE%D0%B3%D0%B8%D1%85_%D0%B1%D0%BB%D0%B0%D0%B3_%D0%B4%D1%83%D1%85%D0%BE%D0%B2%D0%BD%D1%8B%D1%85_%D0%9F%D0%BE%D0%BD%D1%8F%D1%82%D0%B8%D0%B5_%D0%BD%D0%B5%D0%B2%D0%B5%D0%B6%D0%B5%D1%81%D1%82%D0%B2%D0%BE_%D0%B2_%D0%A0%D0%BE%D0%B7%D1%8B%D1%81%D0%BA%D0%B5_%D1%80%D0%B0%D1%81%D0%BA%D0%BE%D0%BB%D1%8C%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B8_%D0%B1%D1%80%D1%8B%D0%BD%D1%81%D0%BA%D0%BE%D0%B8_%D0%B2%D0%B5%D1%80%D1%8B_%D0%BF%D1%80%D0%BE%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D1%8F%D1%85_%D0%B8_%D1%83%D1%87%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D1%85_%D1%81%D0%BE%D1%87%D0%B8%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F%D1%85_%D1%81%D0%B2%D1%82_%D0%94%D0%B8%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D1%8F_%D0%A0%D0%BE%D1%81%D1%82%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_The_concept_of_ignorance_in_Inquiry_about_Brynsk_faith_sermons_and_pastoral_works_of_St_Dimitry_of_Rostov"
+          },
+          {
+            "position": 9,
+            "snippet": "Соколовский С.В. Из детства – с приветом. Автоэтнографические этюды // Э Гучинова, Г. Комарова (отв. ред.). Антропология социальных перемен: сб. статей. М.: Росспэн, 2011. С. 701 - 733",
+            "title": "(PDF) Соколовский С.В. Из детства – с приветом…",
+            "url": "https://www.academia.edu/1199000/%D0%A1%D0%BE%D0%BA%D0%BE%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%A1_%D0%92_%D0%98%D0%B7_%D0%B4%D0%B5%D1%82%D1%81%D1%82%D0%B2%D0%B0_%D1%81_%D0%BF%D1%80%D0%B8%D0%B2%D0%B5%D1%82%D0%BE%D0%BC_%D0%90%D0%B2%D1%82%D0%BE%D1%8D%D1%82%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5_%D1%8D%D1%82%D1%8E%D0%B4%D1%8B_%D0%AD_%D0%93%D1%83%D1%87%D0%B8%D0%BD%D0%BE%D0%B2%D0%B0_%D0%93_%D0%9A%D0%BE%D0%BC%D0%B0%D1%80%D0%BE%D0%B2%D0%B0_%D0%BE%D1%82%D0%B2_%D1%80%D0%B5%D0%B4_%D0%90%D0%BD%D1%82%D1%80%D0%BE%D0%BF%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F_%D1%81%D0%BE%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85_%D0%BF%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD_%D1%81%D0%B1_%D1%81%D1%82%D0%B0%D1%82%D0%B5%D0%B9_%D0%9C_%D0%A0%D0%9E%D0%A1%D0%A1%D0%9F%D0%AD%D0%9D_2011_%D0%A1_701_733"
+          },
+          {
+            "position": 10,
+            "snippet": "היום פוטרתי ממאנדיי בתור אנליסט ראשון בצוות הייתי אחראי על הקמת התשתית האנליטית של המוצר שעבדתי בו, הבאתי תובנות ממקומות לא שיגרתיים ופיתחתי ( אוקי…",
+            "title": "היום פוטרתי ממאנדיי בתור אנליסט ראשון…",
+            "url": "https://www.linkedin.com/posts/yarden-ayalon-607a2253_%D7%94%D7%99%D7%95%D7%9D-%D7%A4%D7%95%D7%98%D7%A8%D7%AA%D7%99-%D7%9E%D7%9E%D7%90%D7%A0%D7%93%D7%99%D7%99-%D7%91%D7%AA%D7%95%D7%A8-%D7%90%D7%A0%D7%9C%D7%99%D7%A1%D7%98-%D7%A8%D7%90%D7%A9%D7%95%D7%9F-%D7%91%D7%A6%D7%95%D7%95%D7%AA-activity-7485968324586184706-YGCq"
+          }
+        ],
+        "site_filter": null,
+        "status": "ok",
+        "untrusted_content": true,
+        "warnings": [
+          "Experimental HTML source: relevance is not qualified"
+        ]
+      },
+      "witnesses_verified": 0,
+      "resource_links": 0,
+      "known_cost_usd": 0,
+      "unknown_cost_calls": 0,
+      "result_sha256": "b88edcd6849469c801ae6fcbb0bd67d26929fc89fc4fdff7f1cd820c36c0bad8"
+    },
+    {
+      "id": "T01",
+      "group": "search",
+      "summary": {
+        "status": "completed",
+        "tool_status": "ok",
+        "elapsed_ms": 2156,
+        "is_error": false,
+        "model_refusal": false
+      },
+      "value": {
+        "cache": {
+          "enabled": true,
+          "errors": 0,
+          "extractions": 0,
+          "hits": 0,
+          "http_reads": 1,
+          "misses": 1,
+          "qwen_calls": 0,
+          "refresh": false,
+          "writes": 1
+        },
+        "discarded_results": 0,
+        "elapsed_ms": 1061,
+        "engine": "seznam",
+        "hops": [
+          "https://search.seznam.cz/?q=Python+itertools.groupby+consecutive+groups+sorted+same+key+documentation"
+        ],
+        "http_status": 200,
+        "query": "Python itertools.groupby consecutive groups sorted same key documentation",
+        "results": [
+          {
+            "position": 1,
+            "snippet": "Use Python itertools.groupby correctly by sorting or pre-grouping records, selecting keys, consuming each group, and avoiding iterator surprises.",
+            "title": "itertools.groupby in Python: Group Consecutive Records",
+            "url": "https://www.pythonpool.com/pythons-itertools-groupby/"
+          },
+          {
+            "position": 2,
+            "snippet": "Summary of some of the intermediate-level topics for Python programming - Ujstor/python-intermediate",
+            "title": "GitHub - Ujstor/python-intermediate: Summary of some of the…",
+            "url": "https://github.com/Ujstor/python-intermediate"
+          },
+          {
+            "position": 3,
+            "snippet": "Master Python's itertools module by building practical examples with batched(), pairwise(), groupby(), and more, and learn to think iteratively.",
+            "title": "Python itertools By Example – Real Python",
+            "url": "https://realpython.com/python-itertools/"
+          },
+          {
+            "position": 4,
+            "snippet": "This module implements a number of iterator building blocks inspired by constructs from APL, Haskell, and SML. Each has been recast in a form suitable for Python. The module standardizes a core set.",
+            "title": "itertools — Functions creating iterators for efficient looping…",
+            "url": "https://docs.python.org/3/library/itertools.html"
+          },
+          {
+            "position": 5,
+            "snippet": "Extended itertools port for TypeScript and JavaScript. Provides a huge set of functions for working with iterable collections (including async ones). Latest version: 2.8.0, last published: 3 months ago.",
+            "title": "itertools-ts - npm",
+            "url": "https://www.npmjs.com/package/itertools-ts"
+          },
+          {
+            "position": 6,
+            "snippet": "Return a new sorted list from the items in iterable.",
+            "title": "Python sorted() built-in function - Python Cheat Sheet",
+            "url": "https://labex.io/pythoncheatsheet/builtin/sorted"
+          },
+          {
+            "position": 7,
+            "snippet": "Learn how Python's itertools module lets you build fast, lazy, memory-efficient data pipelines from small composable building blocks — with runnable examples covering count, chain, islice, accumulate, groupby, batched, and more.",
+            "title": "Mastering Python's itertools: Lazy, Memory-Efficient Iteration…",
+            "url": "https://www.pykit.org/mastering-pythons-itertools-lazy-memory-efficient-iteration-done-right/"
+          },
+          {
+            "position": 8,
+            "snippet": "20 hands-on itertools and functools exercises. Practice permutations, combinations, lazy pipelines, memoisation, partial functions, and more — all with detailed solutions.",
+            "title": "20 Python Itertools & Functools Exercises with Solutions…",
+            "url": "https://pynative.com/python-itertools-functools-exercises/"
+          },
+          {
+            "position": 9,
+            "snippet": "The key argument was added alongside cmp in list.sort and the new sorted builtin function; and key was the only way to customise the grouping in itertools.groupby.",
+            "title": "Word Aligned",
+            "url": "https://wordaligned.org/"
+          },
+          {
+            "position": 10,
+            "snippet": "Python Itertools with python, tutorial, tkinter, button, overview, entry, checkbutton, canvas, frame, environment set-up, first python program, basics, data types, operators, etc.",
+            "title": "Python Itertools - Javatpoint",
+            "url": "http://www.asdtiang.org/python-itertools.html"
+          }
+        ],
+        "site_filter": null,
+        "status": "ok",
+        "untrusted_content": true,
+        "warnings": [
+          "Experimental HTML source: relevance is not qualified"
+        ]
+      },
+      "witnesses_verified": 0,
+      "resource_links": 0,
+      "known_cost_usd": 0,
+      "unknown_cost_calls": 0,
+      "result_sha256": "517f6508e1c3c9071efb9454df82d9445c91d2eddccd06122682c3675bca3b8a"
+    },
+    {
+      "id": "T02",
+      "group": "search",
+      "summary": {
+        "status": "completed",
+        "tool_status": "ok",
+        "elapsed_ms": 1026,
+        "is_error": false,
+        "model_refusal": false
+      },
+      "value": {
+        "cache": {
+          "enabled": true,
+          "errors": 0,
+          "extractions": 0,
+          "hits": 0,
+          "http_reads": 1,
+          "misses": 1,
+          "qwen_calls": 0,
+          "refresh": false,
+          "writes": 1
+        },
+        "discarded_results": 0,
+        "elapsed_ms": 1012,
+        "engine": "seznam",
+        "hops": [
+          "https://search.seznam.cz/?q=Python+pathlib+Path.resolve+strict+False+nonexistent+remainder+strict+True+documentation"
+        ],
+        "http_status": 200,
+        "query": "Python pathlib Path.resolve strict False nonexistent remainder strict True documentation",
+        "results": [
+          {
+            "position": 1,
+            "snippet": "Source code: Lib/pathlib/ This module offers classes representing filesystem paths with semantics appropriate for different operating systems. Path classes are divided between pure paths, which pro.",
+            "title": "pathlib — Object-oriented filesystem paths — Python 3.15.2…",
+            "url": "https://docs.python.org/3/library/pathlib.html"
+          },
+          {
+            "position": 2,
+            "snippet": "* converted documentation to Sphinx format: https://www.nltk.org/api/nltk.html",
+            "title": "nltk/ChangeLog at develop · nltk/nltk · GitHub",
+            "url": "https://github.com/nltk/nltk/blob/develop/ChangeLog"
+          },
+          {
+            "position": 3,
+            "snippet": "Python's pathlib module enables you to handle file and folder paths in a modern way. This built-in module provides intuitive semantics that work the same way on different operating systems.",
+            "title": "Python's pathlib Module: Taming the File System – Real Python",
+            "url": "https://realpython.com/python-pathlib/"
+          },
+          {
+            "position": 4,
+            "snippet": "Because the class object and its instances share one type, the class object answers to the instance name: pathlib.Path.__name__ and repr(pathlib.Path) give PosixPath / <class 'PosixPath'>, and pathlib.Path.nonexistent raises type object…",
+            "title": "pathlib module | Pydantic Docs",
+            "url": "https://pydantic.dev/docs/monty/limitations/pathlib/"
+          },
+          {
+            "position": 5,
+            "snippet": "A context manager for use when defining a Python op.",
+            "title": "tf.name_scope | TensorFlow v2.16.1",
+            "url": "https://www.tensorflow.org/api_docs/python/tf/name_scope"
+          },
+          {
+            "position": 6,
+            "snippet": "The pathlib module was added in Python 3.4, offering an object-oriented way to handle file system paths.",
+            "title": "Python Pathlib Module - Python Cheat Sheet",
+            "url": "https://labex.io/pythoncheatsheet/modules/pathlib-module"
+          },
+          {
+            "position": 7,
+            "snippet": "From pathlib import Path from typesafe_sdk import Box, BoxAnswer, Image, TypeSafeClient def locate_dog (client: TypeSafeClient, photo: Path) -> BoxAnswer: result = client.system_one( state = Image(photo), questions = {\"dog\": Box…",
+            "title": "Questions - TypeSafe",
+            "url": "https://docs.typesafe.ai/sdk/python/api/types/questions"
+          },
+          {
+            "position": 8,
+            "snippet": "The pathlib module was added to the standard library in Python 3.4 and is one of the many nice improvements that Python 3 has gained over the past decade.",
+            "title": "pathlib and paths with arbitrary bytes",
+            "url": "https://jod.al/2019/12/10/pathlib-and-paths-with-arbitrary-bytes/"
+          },
+          {
+            "position": 9,
+            "snippet": "Replace os.path with Python's pathlib for elegant, object-oriented path manipulation with intuitive operators and unified file operations.",
+            "title": "No really, Python's pathlib is great | Redowan's Reflections",
+            "url": "https://rednafi.com/python/pathlib/"
+          },
+          {
+            "position": 10,
+            "snippet": "Await M4.async_download('data', group = 'Hourly') df, * _ = M4.load('data', 'Hourly') uids = df['unique_id'].unique() random.seed(0) sample_uids = random.choices(uids, k = 4) df = df[df['unique_id'].isin(sample_uids)].reset_index(drop…",
+            "title": "End to end walkthrough | MLForecast - Nixtla",
+            "url": "https://nixtlaverse.nixtla.io/mlforecast/docs/getting-started/end_to_end_walkthrough.html"
+          }
+        ],
+        "site_filter": null,
+        "status": "ok",
+        "untrusted_content": true,
+        "warnings": [
+          "Experimental HTML source: relevance is not qualified"
+        ]
+      },
+      "witnesses_verified": 0,
+      "resource_links": 0,
+      "known_cost_usd": 0,
+      "unknown_cost_calls": 0,
+      "result_sha256": "ba2069cd87d44bea80e5161e2214a1c2f828a2509d98b5373ef79884bb0fbd55"
+    },
+    {
+      "id": "B01",
+      "group": "research",
+      "summary": {
+        "status": "completed",
+        "tool_status": "partial",
+        "elapsed_ms": 42090,
+        "is_error": false,
+        "model_refusal": false
+      },
+      "value": {
+        "actions": [
+          {
+            "action": "serp",
+            "engine": "seznam",
+            "error": null,
+            "form": 1,
+            "results": 10
+          },
+          {
+            "action": "serp",
+            "engine": "naver",
+            "form": 1,
+            "status": "source_disabled"
+          },
+          {
+            "action": "read",
+            "attempt": 1,
+            "error": "fetch_timeout",
+            "url": "https://docs.python.org/3/library/copy.html"
+          },
+          {
+            "action": "read",
+            "attempt": 2,
+            "error": "fetch_timeout",
+            "url": "https://docs.python.org/3/library/collections.html"
+          },
+          {
+            "action": "serp",
+            "engine": "seznam",
+            "error": null,
+            "form": 2,
+            "results": 10
+          },
+          {
+            "action": "serp",
+            "engine": "naver",
+            "form": 2,
+            "status": "source_disabled"
+          },
+          {
+            "action": "read",
+            "attempt": 3,
+            "eligible": true,
+            "source_id": "S1"
+          },
+          {
+            "action": "qwen",
+            "source_id": "S1",
+            "status": "failed_lexical_fallback"
+          },
+          {
+            "action": "read",
+            "attempt": 4,
+            "eligible": true,
+            "source_id": "S2"
+          },
+          {
+            "action": "retain_claim",
+            "audit_claim": "A1",
+            "draft_claim": "A1",
+            "generation": 3
+          },
+          {
+            "action": "retain_claim",
+            "audit_claim": "A2",
+            "draft_claim": "A2",
+            "generation": 3
+          },
+          {
+            "action": "withhold_claim",
+            "draft_claim": "A3",
+            "generation": 3,
+            "reason": "invalid/duplicate answer text"
+          },
+          {
+            "action": "retain_claim",
+            "audit_claim": "A3",
+            "draft_claim": "A4",
+            "generation": 3
+          },
+          {
+            "action": "repair_claim_text",
+            "generation": 3
+          },
+          {
+            "action": "retain_claim",
+            "audit_claim": "A1",
+            "draft_claim": "A1",
+            "generation": 4
+          },
+          {
+            "action": "retain_claim",
+            "audit_claim": "A2",
+            "draft_claim": "A2",
+            "generation": 4
+          },
+          {
+            "action": "retain_claim",
+            "audit_claim": "A3",
+            "draft_claim": "A3",
+            "generation": 4
+          }
+        ],
+        "answer": "copy.copy() создаёт поверхностную копию объекта. [S2](<https://realpython.com/ref/stdlib/copy/>)\ncopy.deepcopy() создаёт глубокую копию объекта. [S2](<https://realpython.com/ref/stdlib/copy/>)",
+        "budget": {
+          "limits": {
+            "browser": 0,
+            "documents": 4,
+            "forms": 2,
+            "generations": 6,
+            "output_bytes": 32768,
+            "qwen": 4,
+            "seconds": 180,
+            "serp": 4,
+            "source_context_chars": 24000
+          },
+          "remaining": {
+            "documents": 0,
+            "forms": 0,
+            "generations": 1,
+            "milliseconds": 137929,
+            "qwen": 3,
+            "serp": 2
+          },
+          "used": {
+            "documents": 4,
+            "forms": 2,
+            "generations": 5,
+            "qwen": 1,
+            "serp": 2
+          }
+        },
+        "cache": {
+          "enabled": true,
+          "errors": 0,
+          "extractions": 2,
+          "hits": 0,
+          "http_reads": 6,
+          "misses": 9,
+          "qwen_calls": 1,
+          "refresh": false,
+          "writes": 6
+        },
+        "claims": [
+          {
+            "answer_end": 48,
+            "answer_start": 0,
+            "evidence": [
+              {
+                "document_version": "5843d2a55634df782f9df97028b388c573862bef55c52c193ac1f24469570428",
+                "end": 757,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "copy.copy() Function Creates a shallow copy of an object",
+                "source_id": "S2",
+                "start": 701
+              }
+            ],
+            "facets": [
+              0
+            ],
+            "id": "A1",
+            "kind": "fact",
+            "rationale": "",
+            "text": "copy.copy() создаёт поверхностную копию объекта."
+          },
+          {
+            "answer_end": 144,
+            "answer_start": 97,
+            "evidence": [
+              {
+                "document_version": "5843d2a55634df782f9df97028b388c573862bef55c52c193ac1f24469570428",
+                "end": 815,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "copy.deepcopy() Function Creates a deep copy of an object",
+                "source_id": "S2",
+                "start": 758
+              }
+            ],
+            "facets": [
+              2
+            ],
+            "id": "A2",
+            "kind": "fact",
+            "rationale": "",
+            "text": "copy.deepcopy() создаёт глубокую копию объекта."
+          }
+        ],
+        "conflicts": [],
+        "elapsed_ms": 42070,
+        "error": null,
+        "facets": [
+          "Проверить, что именно копирует copy.copy (поверхностная копия) и копирует ли она вложенные изменяемые объекты рекурсивно.",
+          "Проверить, изолирует ли copy.copy вложенные изменяемые объекты от оригинала (ложная предпосылка).",
+          "Определить отличие copy.copy от copy.deepcopy по рекурсивному копированию вложенных объектов."
+        ],
+        "independence": "distinct document bodies; publisher independence not established",
+        "missing": [
+          0,
+          1,
+          2
+        ],
+        "model_calls": [
+          {
+            "elapsed_ms": 1875,
+            "stage": "plan",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 120,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 6.8304e-05,
+              "cost_details": {
+                "upstream_inference_completions_cost": 6e-05,
+                "upstream_inference_cost": 6.8304e-05,
+                "upstream_inference_prompt_cost": 8.304e-06
+              },
+              "is_byok": false,
+              "prompt_tokens": 508,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 384,
+                "video_tokens": 0
+              },
+              "total_tokens": 628
+            }
+          },
+          {
+            "elapsed_ms": 493,
+            "stage": "draft",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 26,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 3.002e-05,
+              "cost_details": {
+                "upstream_inference_completions_cost": 1.3e-05,
+                "upstream_inference_cost": 3.002e-05,
+                "upstream_inference_prompt_cost": 1.702e-05
+              },
+              "is_byok": false,
+              "prompt_tokens": 935,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 640,
+                "video_tokens": 0
+              },
+              "total_tokens": 961
+            }
+          },
+          {
+            "elapsed_ms": 2729,
+            "stage": "draft",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 452,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 0.000350452,
+              "cost_details": {
+                "upstream_inference_completions_cost": 0.000226,
+                "upstream_inference_cost": 0.000350452,
+                "upstream_inference_prompt_cost": 0.000124452
+              },
+              "is_byok": false,
+              "prompt_tokens": 3457,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "video_tokens": 0
+              },
+              "total_tokens": 3909
+            }
+          },
+          {
+            "elapsed_ms": 1831,
+            "stage": "draft_format_repair",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 271,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 0.000261788,
+              "cost_details": {
+                "upstream_inference_completions_cost": 0.0001355,
+                "upstream_inference_cost": 0.000261788,
+                "upstream_inference_prompt_cost": 0.000126288
+              },
+              "is_byok": false,
+              "prompt_tokens": 3508,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "video_tokens": 0
+              },
+              "total_tokens": 3779
+            }
+          },
+          {
+            "elapsed_ms": 1494,
+            "stage": "audit",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 214,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 0.000249544,
+              "cost_details": {
+                "upstream_inference_completions_cost": 0.000107,
+                "upstream_inference_cost": 0.000249544,
+                "upstream_inference_prompt_cost": 0.000142544
+              },
+              "is_byok": false,
+              "prompt_tokens": 4052,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 128,
+                "video_tokens": 0
+              },
+              "total_tokens": 4266
+            }
+          }
+        ],
+        "news_window": null,
+        "offset_unit": "Unicode code points; answer ranges exclude app-added citation suffixes",
+        "output_limited": false,
+        "query_forms": [
+          "site:docs.python.org copy.copy copy.deepcopy shallow deep copy documentation",
+          "Python copy.copy shallow copy documentation nested mutable objects"
+        ],
+        "request_id": "61b79545c1974f6ca940ae6f690ccbd085dfc551766daff52286932588ef269d",
+        "semantic_verification": "experimental separate model audit; not an independent truth guarantee",
+        "sources": [
+          {
+            "cache": {
+              "allowed": true,
+              "checked_at": 1794983512,
+              "etag": "W/\"d9069bb5e968557a999bc5b7d6eb1f4c\"",
+              "expires_at": 1794983512,
+              "fetched_at": 1794983512,
+              "hit": false,
+              "last_modified": null,
+              "request_url": "https://github.com/caolan/copykitten"
+            },
+            "document_version": "7e50a92046f49c29f746aa937fe0bf26f706c52d43821f6555684b18e361f125",
+            "eligibility": "read_body",
+            "eligible": true,
+            "extraction": {
+              "method": "semantic_main",
+              "scope": "main",
+              "truncated": false
+            },
+            "id": "S1",
+            "parent_url": null,
+            "publication": {
+              "date_status": "missing",
+              "kind": "feed",
+              "published_date": null,
+              "witness_count": 0,
+              "witnesses": [],
+              "witnesses_limited": false
+            },
+            "text_hash": "2cd744c6f845cc6b94831187bd56b3de7d0dfc4090ed6fbe7c8ded105ac0537d",
+            "title": "copykitten.js",
+            "url": "https://github.com/caolan/copykitten"
+          },
+          {
+            "cache": {
+              "allowed": true,
+              "checked_at": 1794983513,
+              "etag": null,
+              "expires_at": 1794983813,
+              "fetched_at": 1794983513,
+              "hit": false,
+              "last_modified": null,
+              "request_url": "https://realpython.com/ref/stdlib/copy/"
+            },
+            "document_version": "5843d2a55634df782f9df97028b388c573862bef55c52c193ac1f24469570428",
+            "eligibility": "read_body",
+            "eligible": true,
+            "extraction": {
+              "method": "semantic_main",
+              "scope": "main",
+              "truncated": false
+            },
+            "id": "S2",
+            "parent_url": null,
+            "publication": {
+              "date_status": "missing",
+              "kind": "article",
+              "published_date": null,
+              "witness_count": 0,
+              "witnesses": [],
+              "witnesses_limited": false
+            },
+            "text_hash": "37d0479551096c2aa12e36ce83e99144fad3c5e764ba7cec92b8eb9d4a5da700",
+            "title": "copy",
+            "url": "https://realpython.com/ref/stdlib/copy/"
+          }
+        ],
+        "status": "partial",
+        "stop_reason": "budget_exhausted",
+        "sufficiency": {
+          "audit_completed": true,
+          "cited_distinct_documents": 1,
+          "judge_sufficient": false,
+          "required_distinct_documents": 2
+        },
+        "untrusted_content": true
+      },
+      "witnesses_verified": 2,
+      "resource_links": 1,
+      "known_cost_usd": 0.000960108,
+      "unknown_cost_calls": 0,
+      "result_sha256": "f27d3a2caaa61a080dcb609f9021a6170b1f86367e5a76057f0125d8808e9b0f"
+    },
+    {
+      "id": "B02",
+      "group": "research",
+      "summary": {
+        "status": "runner_error",
+        "error": "Harness RPC rejected: {\"code\": -32602, \"message\": \"invalid_query: OR with site is not supported\"}"
+      },
+      "value": {},
+      "rpc_error": true,
+      "witnesses_verified": 0,
+      "resource_links": 0,
+      "known_cost_usd": 0,
+      "unknown_cost_calls": 0
+    },
+    {
+      "id": "F01",
+      "group": "research",
+      "summary": {
+        "status": "completed",
+        "tool_status": "partial",
+        "elapsed_ms": 14474,
+        "is_error": false,
+        "model_refusal": false
+      },
+      "value": {
+        "actions": [
+          {
+            "action": "serp",
+            "engine": "seznam",
+            "error": null,
+            "form": 1,
+            "results": 10
+          },
+          {
+            "action": "serp",
+            "engine": "naver",
+            "form": 1,
+            "status": "source_disabled"
+          },
+          {
+            "action": "read",
+            "attempt": 1,
+            "eligible": true,
+            "source_id": "S1"
+          },
+          {
+            "action": "qwen",
+            "source_id": "S1",
+            "status": "failed_lexical_fallback"
+          },
+          {
+            "action": "read",
+            "attempt": 2,
+            "eligible": true,
+            "source_id": "S2"
+          },
+          {
+            "action": "retain_claim",
+            "audit_claim": "A1",
+            "draft_claim": "A1",
+            "generation": 2
+          },
+          {
+            "action": "retain_claim",
+            "audit_claim": "A2",
+            "draft_claim": "A2",
+            "generation": 2
+          },
+          {
+            "action": "retain_claim",
+            "audit_claim": "A3",
+            "draft_claim": "A3",
+            "generation": 2
+          },
+          {
+            "action": "serp",
+            "engine": "seznam",
+            "error": null,
+            "form": 2,
+            "results": 10
+          },
+          {
+            "action": "serp",
+            "engine": "naver",
+            "form": 2,
+            "status": "source_disabled"
+          },
+          {
+            "action": "read",
+            "attempt": 3,
+            "eligible": true,
+            "source_id": "S3"
+          },
+          {
+            "action": "read",
+            "attempt": 4,
+            "eligible": true,
+            "source_id": "S4"
+          },
+          {
+            "action": "retain_claim",
+            "audit_claim": "A1",
+            "draft_claim": "A1",
+            "generation": 4
+          },
+          {
+            "action": "retain_claim",
+            "audit_claim": "A2",
+            "draft_claim": "A2",
+            "generation": 4
+          },
+          {
+            "action": "retain_claim",
+            "audit_claim": "A3",
+            "draft_claim": "A3",
+            "generation": 4
+          }
+        ],
+        "answer": "В Rust 1.100.0 never type fallback изменён с () на ! в editions до 2024 (2015, 2018, 2021), как уже было в edition 2024. [S1](<https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/>)\nИзменение fallback в основном незаметно, но может затронуть код в редких случаях, например при игнорировании результата функции с обобщённым параметром. [S1](<https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/>)\nИзменение также может заставить компилятор считать больше кода недостижимым. [S1](<https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/>)",
+        "budget": {
+          "limits": {
+            "browser": 0,
+            "documents": 4,
+            "forms": 2,
+            "generations": 6,
+            "output_bytes": 32768,
+            "qwen": 4,
+            "seconds": 180,
+            "serp": 4,
+            "source_context_chars": 24000
+          },
+          "remaining": {
+            "documents": 0,
+            "forms": 0,
+            "generations": 1,
+            "milliseconds": 165540,
+            "qwen": 3,
+            "serp": 2
+          },
+          "used": {
+            "documents": 4,
+            "forms": 2,
+            "generations": 5,
+            "qwen": 1,
+            "serp": 2
+          }
+        },
+        "cache": {
+          "enabled": true,
+          "errors": 0,
+          "extractions": 4,
+          "hits": 0,
+          "http_reads": 6,
+          "misses": 11,
+          "qwen_calls": 1,
+          "refresh": false,
+          "writes": 10
+        },
+        "claims": [
+          {
+            "answer_end": 120,
+            "answer_start": 0,
+            "evidence": [
+              {
+                "document_version": "37ff9ed6286977969863170f840fe9e4ac7d7fab5f9118a373dd1a701139d19e",
+                "end": 2828,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "This release changes the \"never type fallback\" from () to ! in editions before 2024 (i.e. 2015, 2018, and 2021), similarly to what has already been done in edition 2024.",
+                "source_id": "S1",
+                "start": 2659
+              }
+            ],
+            "facets": [
+              1,
+              2
+            ],
+            "id": "A1",
+            "kind": "fact",
+            "rationale": "",
+            "text": "В Rust 1.100.0 never type fallback изменён с () на ! в editions до 2024 (2015, 2018, 2021), как уже было в edition 2024."
+          },
+          {
+            "answer_end": 333,
+            "answer_start": 181,
+            "evidence": [
+              {
+                "document_version": "37ff9ed6286977969863170f840fe9e4ac7d7fab5f9118a373dd1a701139d19e",
+                "end": 2986,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "This should largely be unnoticeable, but can affect code in some rare cases (for example when ignoring a result of a function returning a generic parameter).",
+                "source_id": "S1",
+                "start": 2829
+              }
+            ],
+            "facets": [
+              1
+            ],
+            "id": "A2",
+            "kind": "fact",
+            "rationale": "",
+            "text": "Изменение fallback в основном незаметно, но может затронуть код в редких случаях, например при игнорировании результата функции с обобщённым параметром."
+          },
+          {
+            "answer_end": 470,
+            "answer_start": 394,
+            "evidence": [
+              {
+                "document_version": "37ff9ed6286977969863170f840fe9e4ac7d7fab5f9118a373dd1a701139d19e",
+                "end": 3070,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "Note that this change might also make the compiler detect more code as unreachable.",
+                "source_id": "S1",
+                "start": 2987
+              }
+            ],
+            "facets": [
+              1
+            ],
+            "id": "A3",
+            "kind": "fact",
+            "rationale": "",
+            "text": "Изменение также может заставить компилятор считать больше кода недостижимым."
+          }
+        ],
+        "conflicts": [],
+        "elapsed_ms": 14459,
+        "error": null,
+        "facets": [
+          "Проверить, существует ли объявление Rust 1.100.0 от 12 ноября 2026 (ложная предпосылка о дате/версии)",
+          "Что изменилось в never type fallback в этом объявлении",
+          "Какие editions затронуты изменением never type fallback"
+        ],
+        "independence": "distinct document bodies; publisher independence not established",
+        "missing": [
+          0
+        ],
+        "model_calls": [
+          {
+            "elapsed_ms": 1915,
+            "stage": "plan",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 101,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 5.8516e-05,
+              "cost_details": {
+                "upstream_inference_completions_cost": 5.05e-05,
+                "upstream_inference_cost": 5.8516e-05,
+                "upstream_inference_prompt_cost": 8.016e-06
+              },
+              "is_byok": false,
+              "prompt_tokens": 500,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 384,
+                "video_tokens": 0
+              },
+              "total_tokens": 601
+            }
+          },
+          {
+            "elapsed_ms": 1360,
+            "stage": "draft",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 326,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 0.000277804,
+              "cost_details": {
+                "upstream_inference_completions_cost": 0.000163,
+                "upstream_inference_cost": 0.000277804,
+                "upstream_inference_prompt_cost": 0.000114804
+              },
+              "is_byok": false,
+              "prompt_tokens": 3189,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "video_tokens": 0
+              },
+              "total_tokens": 3515
+            }
+          },
+          {
+            "elapsed_ms": 2350,
+            "stage": "audit",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 205,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 0.000233252,
+              "cost_details": {
+                "upstream_inference_completions_cost": 0.0001025,
+                "upstream_inference_cost": 0.000233252,
+                "upstream_inference_prompt_cost": 0.000130752
+              },
+              "is_byok": false,
+              "prompt_tokens": 3632,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "video_tokens": 0
+              },
+              "total_tokens": 3837
+            }
+          },
+          {
+            "elapsed_ms": 2048,
+            "stage": "draft",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 334,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 0.000376484,
+              "cost_details": {
+                "upstream_inference_completions_cost": 0.000167,
+                "upstream_inference_cost": 0.000376484,
+                "upstream_inference_prompt_cost": 0.000209484
+              },
+              "is_byok": false,
+              "prompt_tokens": 5819,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "video_tokens": 0
+              },
+              "total_tokens": 6153
+            }
+          },
+          {
+            "elapsed_ms": 1721,
+            "stage": "audit",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 194,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 0.000317932,
+              "cost_details": {
+                "upstream_inference_completions_cost": 9.7e-05,
+                "upstream_inference_cost": 0.000317932,
+                "upstream_inference_prompt_cost": 0.000220932
+              },
+              "is_byok": false,
+              "prompt_tokens": 6137,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "video_tokens": 0
+              },
+              "total_tokens": 6331
+            }
+          }
+        ],
+        "news_window": null,
+        "offset_unit": "Unicode code points; answer ranges exclude app-added citation suffixes",
+        "output_limited": false,
+        "query_forms": [
+          "Rust 1.100.0 release announcement never type fallback editions site:blog.rust-lang.org",
+          "Rust 1.100.0 release date November 12 2026 announcement"
+        ],
+        "request_id": "cbdb72bba7e948d5ec3273ad06b6cd67943362c2cc7f7f0618ec1f965b195ceb",
+        "semantic_verification": "experimental separate model audit; not an independent truth guarantee",
+        "sources": [
+          {
+            "cache": {
+              "allowed": true,
+              "checked_at": 1794983375,
+              "etag": "W/\"6afb15ad-a0ec\"",
+              "expires_at": 1794983510,
+              "fetched_at": 1794983375,
+              "hit": false,
+              "last_modified": "Mon, 16 Nov 2026 14:39:41 GMT",
+              "request_url": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/"
+            },
+            "document_version": "37ff9ed6286977969863170f840fe9e4ac7d7fab5f9118a373dd1a701139d19e",
+            "eligibility": "read_body",
+            "eligible": true,
+            "extraction": {
+              "method": "readability",
+              "scope": "inferred_article",
+              "truncated": false
+            },
+            "id": "S1",
+            "parent_url": null,
+            "publication": {
+              "date_status": "missing",
+              "kind": "unknown",
+              "published_date": null,
+              "witness_count": 0,
+              "witnesses": [],
+              "witnesses_limited": false
+            },
+            "text_hash": "4d37d0afa76797b011055bf115ffedba81604f115a028345e7bd8f7bcada00c7",
+            "title": "Announcing Rust 1.100.0 | Rust Blog",
+            "url": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/"
+          },
+          {
+            "cache": {
+              "allowed": true,
+              "checked_at": 1794983378,
+              "etag": "W/\"6afb15ae-9ca0\"",
+              "expires_at": 1794983978,
+              "fetched_at": 1794983378,
+              "hit": false,
+              "last_modified": "Mon, 16 Nov 2026 14:39:42 GMT",
+              "request_url": "https://blog.rust-lang.org/2025/02/20/Rust-1.85.0/"
+            },
+            "document_version": "9fbb6e03cc3f894610d8af8548857dea29eea8f0a041976ad2e12e3f6a741ec8",
+            "eligibility": "read_body",
+            "eligible": true,
+            "extraction": {
+              "method": "readability",
+              "scope": "inferred_article",
+              "truncated": false
+            },
+            "id": "S2",
+            "parent_url": null,
+            "publication": {
+              "date_status": "missing",
+              "kind": "unknown",
+              "published_date": null,
+              "witness_count": 0,
+              "witnesses": [],
+              "witnesses_limited": false
+            },
+            "text_hash": "d5a7cd05f653396afaa42eca1a52a4d1a6a04007672593f72f7d5e886bccde56",
+            "title": "Announcing Rust 1.85.0 and Rust 2024 | Rust Blog",
+            "url": "https://blog.rust-lang.org/2025/02/20/Rust-1.85.0/"
+          },
+          {
+            "cache": {
+              "allowed": true,
+              "checked_at": 1794983383,
+              "etag": "W/\"6afd24d5-9d90\"",
+              "expires_at": 1794983683,
+              "fetched_at": 1794983383,
+              "hit": false,
+              "last_modified": "Wed, 18 Nov 2026 04:08:53 GMT",
+              "request_url": "https://releases.rs/"
+            },
+            "document_version": "d4d73ce504de3e45d1e6c9c6232a1b24d71dd64cc65f8fbb322ace6d90515fcb",
+            "eligibility": "read_body",
+            "eligible": true,
+            "extraction": {
+              "method": "semantic_main",
+              "scope": "main",
+              "truncated": false
+            },
+            "id": "S3",
+            "parent_url": null,
+            "publication": {
+              "date_status": "missing",
+              "kind": "feed",
+              "published_date": null,
+              "witness_count": 0,
+              "witnesses": [],
+              "witnesses_limited": false
+            },
+            "text_hash": "b22372fafb07b910eda4eeb766fea7d001c0756fa594ad0ec8b73c84cb4792f1",
+            "title": "Rust Versions | Rust Changelogs",
+            "url": "https://releases.rs/"
+          },
+          {
+            "cache": {
+              "allowed": true,
+              "checked_at": 1794983383,
+              "etag": null,
+              "expires_at": 1794983383,
+              "fetched_at": 1794983383,
+              "hit": false,
+              "last_modified": null,
+              "request_url": "https://store.steampowered.com/app/252490/Rust/"
+            },
+            "document_version": "02b88229936deb145099a7145132e1efc3013234f91f444b596afc0568d38761",
+            "eligibility": "read_body",
+            "eligible": true,
+            "extraction": {
+              "method": "semantic_main",
+              "scope": "main",
+              "truncated": false
+            },
+            "id": "S4",
+            "parent_url": null,
+            "publication": {
+              "date_status": "missing",
+              "kind": "unknown",
+              "published_date": null,
+              "witness_count": 0,
+              "witnesses": [],
+              "witnesses_limited": false
+            },
+            "text_hash": "4c0bcdf13cb792997113a8e7d2c65a1603f5a66e14db8e6770cc0e94ff643b70",
+            "title": "Rust on Steam",
+            "url": "https://store.steampowered.com/app/252490/Rust/"
+          }
+        ],
+        "status": "partial",
+        "stop_reason": "budget_exhausted",
+        "sufficiency": {
+          "audit_completed": true,
+          "cited_distinct_documents": 1,
+          "judge_sufficient": false,
+          "required_distinct_documents": 2
+        },
+        "untrusted_content": true
+      },
+      "witnesses_verified": 3,
+      "resource_links": 1,
+      "known_cost_usd": 0.001263988,
+      "unknown_cost_calls": 0,
+      "result_sha256": "d145f73bc088fa346a100d05ef3dcb71819478b5f5e299eec0c7561490c1180e"
+    },
+    {
+      "id": "F02",
+      "group": "research",
+      "summary": {
+        "status": "completed",
+        "tool_status": "partial",
+        "elapsed_ms": 37980,
+        "is_error": false,
+        "model_refusal": false
+      },
+      "value": {
+        "actions": [
+          {
+            "action": "serp",
+            "engine": "seznam",
+            "error": null,
+            "form": 1,
+            "results": 10
+          },
+          {
+            "action": "serp",
+            "engine": "naver",
+            "form": 1,
+            "status": "source_disabled"
+          },
+          {
+            "action": "read",
+            "attempt": 1,
+            "eligible": true,
+            "source_id": "S1"
+          },
+          {
+            "action": "qwen",
+            "source_id": "S1",
+            "status": "failed_lexical_fallback"
+          },
+          {
+            "action": "read",
+            "attempt": 2,
+            "eligible": true,
+            "source_id": "S2"
+          },
+          {
+            "action": "retain_claim",
+            "audit_claim": "A1",
+            "draft_claim": "A1",
+            "generation": 2
+          },
+          {
+            "action": "retain_claim",
+            "audit_claim": "A2",
+            "draft_claim": "A2",
+            "generation": 2
+          },
+          {
+            "action": "retain_claim",
+            "audit_claim": "A3",
+            "draft_claim": "A3",
+            "generation": 2
+          },
+          {
+            "action": "retain_claim",
+            "audit_claim": "A4",
+            "draft_claim": "A4",
+            "generation": 2
+          },
+          {
+            "action": "read",
+            "attempt": 3,
+            "error": "fetch_timeout",
+            "url": "https://www.python.org/downloads/release/python-3150a6/"
+          },
+          {
+            "action": "read",
+            "attempt": 4,
+            "error": "fetch_timeout",
+            "url": "https://www.python.org/downloads/release/python-3120a3/"
+          }
+        ],
+        "answer": "Python 3.16.0a1 has been superseded by Python 3.16.0a2. [S2](<https://www.python.org/downloads/release/python-3160a1/>)\nThe 3.16.0a1 announcement states this preview release is not recommended for production environments. [S2](<https://www.python.org/downloads/release/python-3160a1/>)\nThe next alpha, Python 3.16.0a2, is scheduled for November 10, 2026. [S2](<https://www.python.org/downloads/release/python-3160a1/>)\nThe Python 3.16.0a1 release page lists its release date as Oct. 13, 2026, not November 10, 2026. [S2](<https://www.python.org/downloads/release/python-3160a1/>)",
+        "budget": {
+          "limits": {
+            "browser": 0,
+            "documents": 4,
+            "forms": 2,
+            "generations": 6,
+            "output_bytes": 32768,
+            "qwen": 4,
+            "seconds": 180,
+            "serp": 4,
+            "source_context_chars": 24000
+          },
+          "remaining": {
+            "documents": 0,
+            "forms": 1,
+            "generations": 3,
+            "milliseconds": 142044,
+            "qwen": 3,
+            "serp": 3
+          },
+          "used": {
+            "documents": 4,
+            "forms": 1,
+            "generations": 3,
+            "qwen": 1,
+            "serp": 1
+          }
+        },
+        "cache": {
+          "enabled": true,
+          "errors": 0,
+          "extractions": 2,
+          "hits": 0,
+          "http_reads": 5,
+          "misses": 7,
+          "qwen_calls": 1,
+          "refresh": false,
+          "writes": 3
+        },
+        "claims": [
+          {
+            "answer_end": 55,
+            "answer_start": 0,
+            "evidence": [
+              {
+                "document_version": "99be26af72f04631e7a922734df0ee831e93f17dd3b714f999d5b0920c3829ce",
+                "end": 78,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "Note: Python 3.16.0a1 has been superseded by Python 3.16.0a2.",
+                "source_id": "S2",
+                "start": 17
+              }
+            ],
+            "facets": [
+              1
+            ],
+            "id": "A1",
+            "kind": "fact",
+            "rationale": "",
+            "text": "Python 3.16.0a1 has been superseded by Python 3.16.0a2."
+          },
+          {
+            "answer_end": 221,
+            "answer_start": 120,
+            "evidence": [
+              {
+                "document_version": "99be26af72f04631e7a922734df0ee831e93f17dd3b714f999d5b0920c3829ce",
+                "end": 690,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "Please keep in mind that this is a preview release and its use is not recommended for production environments.",
+                "source_id": "S2",
+                "start": 580
+              }
+            ],
+            "facets": [
+              2
+            ],
+            "id": "A2",
+            "kind": "fact",
+            "rationale": "",
+            "text": "The 3.16.0a1 announcement states this preview release is not recommended for production environments."
+          },
+          {
+            "answer_end": 354,
+            "answer_start": 286,
+            "evidence": [
+              {
+                "document_version": "99be26af72f04631e7a922734df0ee831e93f17dd3b714f999d5b0920c3829ce",
+                "end": 1089,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "The next alpha, Python 3.16.0a2, is scheduled for November 10, 2026.",
+                "source_id": "S2",
+                "start": 1021
+              }
+            ],
+            "facets": [
+              3
+            ],
+            "id": "A3",
+            "kind": "fact",
+            "rationale": "",
+            "text": "The next alpha, Python 3.16.0a2, is scheduled for November 10, 2026."
+          },
+          {
+            "answer_end": 515,
+            "answer_start": 419,
+            "evidence": [
+              {
+                "document_version": "99be26af72f04631e7a922734df0ee831e93f17dd3b714f999d5b0920c3829ce",
+                "end": 107,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "Release date: Oct. 13, 2026",
+                "source_id": "S2",
+                "start": 80
+              }
+            ],
+            "facets": [
+              0
+            ],
+            "id": "A4",
+            "kind": "fact",
+            "rationale": "",
+            "text": "The Python 3.16.0a1 release page lists its release date as Oct. 13, 2026, not November 10, 2026."
+          }
+        ],
+        "conflicts": [],
+        "elapsed_ms": 37955,
+        "error": null,
+        "facets": [
+          "Verify whether an official Python release announcement dated November 10, 2026 exists (false-premise check).",
+          "Status of Python 3.16.0a2 per that announcement.",
+          "Whether it is recommended for production.",
+          "Scheduled date of the next alpha."
+        ],
+        "independence": "distinct document bodies; publisher independence not established",
+        "missing": [],
+        "model_calls": [
+          {
+            "elapsed_ms": 1447,
+            "stage": "plan",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 84,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 5.0376e-05,
+              "cost_details": {
+                "upstream_inference_completions_cost": 4.2e-05,
+                "upstream_inference_cost": 5.0376e-05,
+                "upstream_inference_prompt_cost": 8.376e-06
+              },
+              "is_byok": false,
+              "prompt_tokens": 510,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 384,
+                "video_tokens": 0
+              },
+              "total_tokens": 594
+            }
+          },
+          {
+            "elapsed_ms": 3496,
+            "stage": "draft",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 347,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 0.000307168,
+              "cost_details": {
+                "upstream_inference_completions_cost": 0.0001735,
+                "upstream_inference_cost": 0.000307168,
+                "upstream_inference_prompt_cost": 0.000133668
+              },
+              "is_byok": false,
+              "prompt_tokens": 3713,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "video_tokens": 0
+              },
+              "total_tokens": 4060
+            }
+          },
+          {
+            "elapsed_ms": 1132,
+            "stage": "audit",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 189,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 0.000247896,
+              "cost_details": {
+                "upstream_inference_completions_cost": 9.45e-05,
+                "upstream_inference_cost": 0.000247896,
+                "upstream_inference_prompt_cost": 0.000153396
+              },
+              "is_byok": false,
+              "prompt_tokens": 4261,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "video_tokens": 0
+              },
+              "total_tokens": 4450
+            }
+          }
+        ],
+        "news_window": null,
+        "offset_unit": "Unicode code points; answer ranges exclude app-added citation suffixes",
+        "output_limited": false,
+        "query_forms": [
+          "site:python.org Python 3.16.0a2 release announcement November 2026"
+        ],
+        "request_id": "5d87aecf85523b2445df770a66e7fed56d31be903ac15cbcda6edc8bed295891",
+        "semantic_verification": "experimental separate model audit; not an independent truth guarantee",
+        "sources": [
+          {
+            "cache": {
+              "allowed": false,
+              "checked_at": 1794983392,
+              "etag": null,
+              "expires_at": 1794983392,
+              "fetched_at": 1794983392,
+              "hit": false,
+              "last_modified": null,
+              "request_url": "https://discuss.python.org/tag/release/6"
+            },
+            "document_version": "e47c2840ac761285ce63db8134e6adc3c7184d5c89a9dd058665a3d4865954f2",
+            "eligibility": "read_body",
+            "eligible": true,
+            "extraction": {
+              "method": "semantic_main",
+              "scope": "main",
+              "truncated": false
+            },
+            "id": "S1",
+            "parent_url": null,
+            "publication": {
+              "date_status": "missing",
+              "kind": "feed",
+              "published_date": null,
+              "witness_count": 0,
+              "witnesses": [],
+              "witnesses_limited": false
+            },
+            "text_hash": "e62a3a28d99e9379206dcd2d3288af455dbf65127f8a0ab67d8aebb633261d41",
+            "title": "release",
+            "url": "https://discuss.python.org/tag/release/6"
+          },
+          {
+            "cache": {
+              "allowed": true,
+              "checked_at": 1794983392,
+              "etag": null,
+              "expires_at": 1794983692,
+              "fetched_at": 1794983392,
+              "hit": false,
+              "last_modified": null,
+              "request_url": "https://www.python.org/downloads/release/python-3160a1/"
+            },
+            "document_version": "99be26af72f04631e7a922734df0ee831e93f17dd3b714f999d5b0920c3829ce",
+            "eligibility": "read_body",
+            "eligible": true,
+            "extraction": {
+              "method": "semantic_main",
+              "scope": "main",
+              "truncated": false
+            },
+            "id": "S2",
+            "parent_url": null,
+            "publication": {
+              "date_status": "missing",
+              "kind": "article",
+              "published_date": null,
+              "witness_count": 0,
+              "witnesses": [],
+              "witnesses_limited": false
+            },
+            "text_hash": "cb45e53ea95ae5e507fd72d52ad6426639d7153189521766bf8030029bca1e19",
+            "title": "Python 3.16.0a1",
+            "url": "https://www.python.org/downloads/release/python-3160a1/"
+          }
+        ],
+        "status": "partial",
+        "stop_reason": "no_new_evidence",
+        "sufficiency": {
+          "audit_completed": true,
+          "cited_distinct_documents": 1,
+          "judge_sufficient": false,
+          "required_distinct_documents": 2
+        },
+        "untrusted_content": true
+      },
+      "witnesses_verified": 4,
+      "resource_links": 1,
+      "known_cost_usd": 0.0006054400000000001,
+      "unknown_cost_calls": 0,
+      "result_sha256": "938329fa626f437ffb980f9f17697fa5c56f897cc3d6ba6c6088cf70e73e79b9"
+    },
+    {
+      "id": "R01",
+      "group": "research",
+      "summary": {
+        "status": "completed",
+        "tool_status": "partial",
+        "elapsed_ms": 8609,
+        "is_error": false,
+        "model_refusal": false
+      },
+      "value": {
+        "actions": [
+          {
+            "action": "serp",
+            "engine": "seznam",
+            "error": null,
+            "form": 1,
+            "results": 9
+          },
+          {
+            "action": "serp",
+            "engine": "naver",
+            "form": 1,
+            "status": "source_disabled"
+          },
+          {
+            "action": "read",
+            "attempt": 1,
+            "error": "source_challenge: verification widget; no retry",
+            "url": "https://ria.ru/20100429/227384217.html"
+          },
+          {
+            "action": "read",
+            "attempt": 2,
+            "eligible": true,
+            "source_id": "S1"
+          },
+          {
+            "action": "qwen",
+            "source_id": "S1",
+            "status": "failed_lexical_fallback"
+          },
+          {
+            "action": "retain_claim",
+            "audit_claim": "A1",
+            "draft_claim": "A1",
+            "generation": 2
+          },
+          {
+            "action": "serp",
+            "engine": "seznam",
+            "error": null,
+            "form": 2,
+            "results": 10
+          },
+          {
+            "action": "serp",
+            "engine": "naver",
+            "form": 2,
+            "status": "source_disabled"
+          },
+          {
+            "action": "read",
+            "attempt": 3,
+            "eligible": true,
+            "source_id": "S2"
+          },
+          {
+            "action": "read",
+            "attempt": 4,
+            "eligible": true,
+            "source_id": "S3"
+          }
+        ],
+        "answer": "",
+        "budget": {
+          "limits": {
+            "browser": 0,
+            "documents": 4,
+            "forms": 2,
+            "generations": 6,
+            "output_bytes": 32768,
+            "qwen": 4,
+            "seconds": 180,
+            "serp": 4,
+            "source_context_chars": 24000
+          },
+          "remaining": {
+            "documents": 0,
+            "forms": 0,
+            "generations": 2,
+            "milliseconds": 171415,
+            "qwen": 3,
+            "serp": 2
+          },
+          "used": {
+            "documents": 4,
+            "forms": 2,
+            "generations": 4,
+            "qwen": 1,
+            "serp": 2
+          }
+        },
+        "cache": {
+          "enabled": true,
+          "errors": 0,
+          "extractions": 3,
+          "hits": 0,
+          "http_reads": 6,
+          "misses": 9,
+          "qwen_calls": 1,
+          "refresh": false,
+          "writes": 6
+        },
+        "claims": [],
+        "conflicts": [],
+        "elapsed_ms": 8584,
+        "error": null,
+        "facets": [
+          "Дата открытия воссозданной Янтарной комнаты Екатерининского дворца",
+          "Сколько тонн янтаря потребовалось для восстановления по данным музея «Царское Село»",
+          "Проверить, что данные о тоннах янтаря относятся именно к музею «Царское Село»"
+        ],
+        "independence": "distinct document bodies; publisher independence not established",
+        "missing": [
+          0,
+          1,
+          2
+        ],
+        "model_calls": [
+          {
+            "elapsed_ms": 2166,
+            "stage": "plan",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 106,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 6.1412e-05,
+              "cost_details": {
+                "upstream_inference_completions_cost": 5.3e-05,
+                "upstream_inference_cost": 6.1412e-05,
+                "upstream_inference_prompt_cost": 8.412e-06
+              },
+              "is_byok": false,
+              "prompt_tokens": 511,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 384,
+                "video_tokens": 0
+              },
+              "total_tokens": 617
+            }
+          },
+          {
+            "elapsed_ms": 1341,
+            "stage": "draft",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 141,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 0.000152212,
+              "cost_details": {
+                "upstream_inference_completions_cost": 7.05e-05,
+                "upstream_inference_cost": 0.000152212,
+                "upstream_inference_prompt_cost": 8.1712e-05
+              },
+              "is_byok": false,
+              "prompt_tokens": 2732,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 640,
+                "video_tokens": 0
+              },
+              "total_tokens": 2873
+            }
+          },
+          {
+            "elapsed_ms": 881,
+            "stage": "audit",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 103,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 0.000140068,
+              "cost_details": {
+                "upstream_inference_completions_cost": 5.15e-05,
+                "upstream_inference_cost": 0.000140068,
+                "upstream_inference_prompt_cost": 8.8568e-05
+              },
+              "is_byok": false,
+              "prompt_tokens": 2830,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 512,
+                "video_tokens": 0
+              },
+              "total_tokens": 2933
+            }
+          },
+          {
+            "elapsed_ms": 881,
+            "stage": "draft",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 35,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 0.000168952,
+              "cost_details": {
+                "upstream_inference_completions_cost": 1.75e-05,
+                "upstream_inference_cost": 0.000168952,
+                "upstream_inference_prompt_cost": 0.000151452
+              },
+              "is_byok": false,
+              "prompt_tokens": 4207,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "video_tokens": 0
+              },
+              "total_tokens": 4242
+            }
+          }
+        ],
+        "news_window": null,
+        "offset_unit": "Unicode code points; answer ranges exclude app-added citation suffixes",
+        "output_limited": false,
+        "query_forms": [
+          "Царское Село Янтарная комната открытие дата тонн янтаря восстановление",
+          "Янтарная комната Екатерининского дворца открытие воссозданной 2003"
+        ],
+        "request_id": "5247046deabce0eb3e39f53a3934cbbec0945b754429ae6eb54766cae1ef8729",
+        "semantic_verification": "experimental separate model audit; not an independent truth guarantee",
+        "sources": [
+          {
+            "cache": {
+              "allowed": true,
+              "checked_at": 1794983433,
+              "etag": null,
+              "expires_at": 1794983433,
+              "fetched_at": 1794983433,
+              "hit": false,
+              "last_modified": "Wed, 11 Nov 2026 10:11:06 GMT",
+              "request_url": "https://ru.wikipedia.org/wiki/%D0%A6%D0%B0%D1%80%D1%81%D0%BA%D0%BE%D0%B5_%D0%A1%D0%B5%D0%BB%D0%BE_(%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA)"
+            },
+            "document_version": "3675caeace702b5dade99eee6b97285582e9b35bc5aa4a9eac03c80e8b809b04",
+            "eligibility": "read_body",
+            "eligible": true,
+            "extraction": {
+              "method": "semantic_main",
+              "scope": "main",
+              "truncated": false
+            },
+            "id": "S1",
+            "parent_url": null,
+            "publication": {
+              "date_status": "valid",
+              "kind": "article",
+              "published_date": "2008-06-23",
+              "witness_count": 1,
+              "witnesses": [
+                {
+                  "date": "2008-06-23",
+                  "raw": "2008-06-23T19:23:32Z",
+                  "source": "jsonld.datePublished",
+                  "timestamp": "2008-06-23T19:23:32+00:00"
+                }
+              ],
+              "witnesses_limited": false
+            },
+            "text_hash": "2c4b472bf6b9ab6e6e9d049a17e7fc37988897ae5be02c72222eba86ed2e41aa",
+            "title": "Царское Село (музей-заповедник)",
+            "url": "https://ru.wikipedia.org/wiki/%D0%A6%D0%B0%D1%80%D1%81%D0%BA%D0%BE%D0%B5_%D0%A1%D0%B5%D0%BB%D0%BE_(%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA)"
+          },
+          {
+            "cache": {
+              "allowed": true,
+              "checked_at": 1794983436,
+              "etag": null,
+              "expires_at": 1794983436,
+              "fetched_at": 1794983436,
+              "hit": false,
+              "last_modified": null,
+              "request_url": "http://amberroom.ru/index.php/ru/"
+            },
+            "document_version": "1ca4d3ffa0c872c2ed8f89212cf207650d87e2ae6d6c7ea17123e5efc881a163",
+            "eligibility": "read_body",
+            "eligible": true,
+            "extraction": {
+              "method": "readability",
+              "scope": "inferred_article",
+              "truncated": false
+            },
+            "id": "S2",
+            "parent_url": null,
+            "publication": {
+              "date_status": "missing",
+              "kind": "feed",
+              "published_date": null,
+              "witness_count": 0,
+              "witnesses": [],
+              "witnesses_limited": false
+            },
+            "text_hash": "ef580754f7e4b6d96622b8da87fc643d3a8bf8198db0e0950949fc2c325c0208",
+            "title": "Главная",
+            "url": "http://amberroom.ru/index.php/ru/"
+          },
+          {
+            "cache": {
+              "allowed": false,
+              "checked_at": 1794983437,
+              "etag": null,
+              "expires_at": 1795069837,
+              "fetched_at": 1794983437,
+              "hit": false,
+              "last_modified": null,
+              "request_url": "https://vimeo.com/17521080"
+            },
+            "document_version": "a18b0401df9d48366d9c21b19668bfe632d39f74405d032d29c3b07c030324d9",
+            "eligibility": "read_body",
+            "eligible": true,
+            "extraction": {
+              "method": "semantic_main",
+              "scope": "main",
+              "truncated": false
+            },
+            "id": "S3",
+            "parent_url": null,
+            "publication": {
+              "date_status": "missing",
+              "kind": "unknown",
+              "published_date": null,
+              "witness_count": 0,
+              "witnesses": [],
+              "witnesses_limited": false
+            },
+            "text_hash": "6c8ab4905cc1cb2322a2dca94337c814a02a0bba20ca22fe5a9d69b5de1903a0",
+            "title": "Verify to continue",
+            "url": "https://vimeo.com/17521080"
+          }
+        ],
+        "status": "partial",
+        "stop_reason": "budget_exhausted",
+        "sufficiency": {
+          "audit_completed": false,
+          "cited_distinct_documents": 0,
+          "judge_sufficient": false,
+          "required_distinct_documents": 2
+        },
+        "untrusted_content": true
+      },
+      "witnesses_verified": 0,
+      "resource_links": 0,
+      "known_cost_usd": 0.0005226440000000001,
+      "unknown_cost_calls": 0,
+      "result_sha256": "80c86416cbfce7d0f3d3d1b9cf77af465f4ee1e71f04f2c05c1ad8d0e523565c"
+    },
+    {
+      "id": "R02",
+      "group": "research",
+      "summary": {
+        "status": "completed",
+        "tool_status": "partial",
+        "elapsed_ms": 34756,
+        "is_error": false,
+        "model_refusal": false
+      },
+      "value": {
+        "actions": [
+          {
+            "action": "serp",
+            "engine": "seznam",
+            "error": null,
+            "form": 1,
+            "results": 10
+          },
+          {
+            "action": "serp",
+            "engine": "naver",
+            "form": 1,
+            "status": "source_disabled"
+          },
+          {
+            "action": "read",
+            "attempt": 1,
+            "error": "unsupported_content: probe supports UTF-8 only",
+            "url": "http://moscow.org/calendar/"
+          },
+          {
+            "action": "read",
+            "attempt": 2,
+            "eligible": true,
+            "source_id": "S1"
+          },
+          {
+            "action": "qwen",
+            "source_id": "S1",
+            "status": "failed_lexical_fallback"
+          },
+          {
+            "action": "serp",
+            "engine": "seznam",
+            "error": null,
+            "form": 2,
+            "results": 10
+          },
+          {
+            "action": "serp",
+            "engine": "naver",
+            "form": 2,
+            "status": "source_disabled"
+          },
+          {
+            "action": "read",
+            "attempt": 3,
+            "error": "fetch_timeout",
+            "url": "https://www.linkedin.com/posts/jonathan-raymond-ohayon-4aa90824b_%D7%94%D7%99%D7%95%D7%9D-%D7%A1%D7%99%D7%99%D7%9E%D7%AA%D7%99-%D7%90%D7%AA-%D7%94%D7%91%D7%97%D7%99%D7%A0%D7%94-%D7%94%D7%90%D7%97%D7%A8%D7%95%D7%A0%D7%94-%D7%91%D7%AA%D7%95%D7%90%D7%A8-%D7%99%D7%A6%D7%90%D7%AA%D7%99-activity-7487779198477144064-8vI5"
+          },
+          {
+            "action": "read",
+            "attempt": 4,
+            "error": "fetch_timeout",
+            "url": "https://www.linkedin.com/posts/ebag-bg_%D0%B2%D1%8F%D1%80%D0%B2%D0%B0%D0%BC%D0%B5-%D1%87%D0%B5-%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B0-%D1%85%D1%80%D0%B0%D0%BD%D0%B0-%D1%82%D1%80%D1%8F%D0%B1%D0%B2%D0%B0-%D0%B4%D0%B0-%D0%B4%D0%BE%D1%81%D1%82%D0%B8%D0%B3%D0%B0-activity-7363511512814051332-VnSX"
+          }
+        ],
+        "answer": "",
+        "budget": {
+          "limits": {
+            "browser": 0,
+            "documents": 4,
+            "forms": 2,
+            "generations": 6,
+            "output_bytes": 32768,
+            "qwen": 4,
+            "seconds": 180,
+            "serp": 4,
+            "source_context_chars": 24000
+          },
+          "remaining": {
+            "documents": 0,
+            "forms": 0,
+            "generations": 4,
+            "milliseconds": 145267,
+            "qwen": 3,
+            "serp": 2
+          },
+          "used": {
+            "documents": 4,
+            "forms": 2,
+            "generations": 2,
+            "qwen": 1,
+            "serp": 2
+          }
+        },
+        "cache": {
+          "enabled": true,
+          "errors": 0,
+          "extractions": 1,
+          "hits": 0,
+          "http_reads": 6,
+          "misses": 8,
+          "qwen_calls": 1,
+          "refresh": false,
+          "writes": 4
+        },
+        "claims": [],
+        "conflicts": [],
+        "elapsed_ms": 34732,
+        "error": null,
+        "facets": [
+          "Дата закладки первого камня Московского планетария",
+          "Два архитектора — авторы проекта здания Московского планетария",
+          "Проверка: действительно ли проект здания создали именно два архитектора"
+        ],
+        "independence": "distinct document bodies; publisher independence not established",
+        "missing": [
+          0,
+          1,
+          2
+        ],
+        "model_calls": [
+          {
+            "elapsed_ms": 1609,
+            "stage": "plan",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 76,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 4.5656e-05,
+              "cost_details": {
+                "upstream_inference_completions_cost": 3.8e-05,
+                "upstream_inference_cost": 4.5656e-05,
+                "upstream_inference_prompt_cost": 7.656e-06
+              },
+              "is_byok": false,
+              "prompt_tokens": 490,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 384,
+                "video_tokens": 0
+              },
+              "total_tokens": 566
+            }
+          },
+          {
+            "elapsed_ms": 634,
+            "stage": "draft",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 32,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 9.2672e-05,
+              "cost_details": {
+                "upstream_inference_completions_cost": 1.6e-05,
+                "upstream_inference_cost": 9.2672e-05,
+                "upstream_inference_prompt_cost": 7.6672e-05
+              },
+              "is_byok": false,
+              "prompt_tokens": 2592,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 640,
+                "video_tokens": 0
+              },
+              "total_tokens": 2624
+            }
+          }
+        ],
+        "news_window": null,
+        "offset_unit": "Unicode code points; answer ranges exclude app-added citation suffixes",
+        "output_limited": false,
+        "query_forms": [
+          "Московский планетарий закладка первого камня архитекторы проект здания",
+          "Московский планетарий первый камень дата закладки"
+        ],
+        "request_id": "bd2d31cbbc314912e35107f712a656430c856fafba9642aacdac7f90bd2d04f2",
+        "semantic_verification": "experimental separate model audit; not an independent truth guarantee",
+        "sources": [
+          {
+            "cache": {
+              "allowed": true,
+              "checked_at": 1794983443,
+              "etag": null,
+              "expires_at": 1794983743,
+              "fetched_at": 1794983443,
+              "hit": false,
+              "last_modified": "Tue, 17 Nov 2026 07:25:52 GMT",
+              "request_url": "https://uaetours.ru/dubay-krik-tauer-istoriya-fakty-osobennosti/"
+            },
+            "document_version": "fcbd0a957e4bb7ec4089d1a91a25a81ef111f224392cfc9975677f4885f20f7a",
+            "eligibility": "read_body",
+            "eligible": true,
+            "extraction": {
+              "method": "semantic_main",
+              "scope": "main",
+              "truncated": false
+            },
+            "id": "S1",
+            "parent_url": null,
+            "publication": {
+              "date_status": "valid",
+              "kind": "article",
+              "published_date": "2021-06-19",
+              "witness_count": 1,
+              "witnesses": [
+                {
+                  "date": "2021-06-19",
+                  "raw": "2021-06-19T07:00:42+00:00",
+                  "source": "meta.article:published_time",
+                  "timestamp": "2021-06-19T07:00:42+00:00"
+                }
+              ],
+              "witnesses_limited": false
+            },
+            "text_hash": "39e79615ee9395f62992c4943626191cf735e74f9e086c5d8a9d821d86c074ce",
+            "title": "Дубай Крик Тауэр: история и что со стройкой сейчас",
+            "url": "https://uaetours.ru/dubay-krik-tauer-istoriya-fakty-osobennosti/"
+          }
+        ],
+        "status": "partial",
+        "stop_reason": "no_new_evidence",
+        "sufficiency": {
+          "audit_completed": false,
+          "cited_distinct_documents": 0,
+          "judge_sufficient": false,
+          "required_distinct_documents": 2
+        },
+        "untrusted_content": true
+      },
+      "witnesses_verified": 0,
+      "resource_links": 0,
+      "known_cost_usd": 0.000138328,
+      "unknown_cost_calls": 0,
+      "result_sha256": "8b43d090768c9ce7b16b088dbfc02963eaedd5e08f5b9086cb218f07b8ab70ec"
+    },
+    {
+      "id": "T01",
+      "group": "research",
+      "summary": {
+        "status": "completed",
+        "tool_status": "partial",
+        "elapsed_ms": 26008,
+        "is_error": false,
+        "model_refusal": false
+      },
+      "value": {
+        "actions": [
+          {
+            "action": "serp",
+            "engine": "seznam",
+            "error": null,
+            "form": 1,
+            "results": 10
+          },
+          {
+            "action": "serp",
+            "engine": "naver",
+            "form": 1,
+            "status": "source_disabled"
+          },
+          {
+            "action": "read",
+            "attempt": 1,
+            "error": "fetch_timeout",
+            "url": "https://www.pythonpool.com/pythons-itertools-groupby/"
+          },
+          {
+            "action": "read",
+            "attempt": 2,
+            "eligible": true,
+            "source_id": "S1"
+          },
+          {
+            "action": "qwen",
+            "source_id": "S1",
+            "status": "failed_lexical_fallback"
+          },
+          {
+            "action": "retain_claim",
+            "audit_claim": "A1",
+            "draft_claim": "A1",
+            "generation": 2
+          },
+          {
+            "action": "serp",
+            "engine": "seznam",
+            "error": null,
+            "form": 2,
+            "results": 10
+          },
+          {
+            "action": "serp",
+            "engine": "naver",
+            "form": 2,
+            "status": "source_disabled"
+          },
+          {
+            "action": "read",
+            "attempt": 3,
+            "error": "source_blocked: no retry in this probe",
+            "url": "https://www.npmjs.com/package/itertools-ts"
+          },
+          {
+            "action": "read",
+            "attempt": 4,
+            "eligible": true,
+            "source_id": "S2"
+          },
+          {
+            "action": "retain_claim",
+            "audit_claim": "A1",
+            "draft_claim": "A1",
+            "generation": 4
+          }
+        ],
+        "answer": "The source describes groupby as grouping consecutive elements together based on a given key. [S1](<https://github.com/Ujstor/python-intermediate>)",
+        "budget": {
+          "limits": {
+            "browser": 0,
+            "documents": 4,
+            "forms": 2,
+            "generations": 6,
+            "output_bytes": 32768,
+            "qwen": 4,
+            "seconds": 180,
+            "serp": 4,
+            "source_context_chars": 24000
+          },
+          "remaining": {
+            "documents": 0,
+            "forms": 0,
+            "generations": 1,
+            "milliseconds": 154016,
+            "qwen": 3,
+            "serp": 2
+          },
+          "used": {
+            "documents": 4,
+            "forms": 2,
+            "generations": 5,
+            "qwen": 1,
+            "serp": 2
+          }
+        },
+        "cache": {
+          "enabled": true,
+          "errors": 0,
+          "extractions": 2,
+          "hits": 0,
+          "http_reads": 6,
+          "misses": 9,
+          "qwen_calls": 1,
+          "refresh": false,
+          "writes": 6
+        },
+        "claims": [
+          {
+            "answer_end": 92,
+            "answer_start": 0,
+            "evidence": [
+              {
+                "document_version": "b930ca726828ae4d321704e98aee25c421e1e956951dc9f3d7af0c89e102841b",
+                "end": 21362,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "#groups consecutive elements together based on a given key",
+                "source_id": "S1",
+                "start": 21304
+              }
+            ],
+            "facets": [
+              0
+            ],
+            "id": "A1",
+            "kind": "fact",
+            "rationale": "",
+            "text": "The source describes groupby as grouping consecutive elements together based on a given key."
+          }
+        ],
+        "conflicts": [],
+        "elapsed_ms": 25983,
+        "error": null,
+        "facets": [
+          "Does itertools.groupby group equal keys anywhere in the input or only consecutive runs?",
+          "How should input be prepared so all equal keys are collected together?",
+          "Check false premise: does groupby itself sort or globally group keys?"
+        ],
+        "independence": "distinct document bodies; publisher independence not established",
+        "missing": [
+          0,
+          1,
+          2
+        ],
+        "model_calls": [
+          {
+            "elapsed_ms": 1615,
+            "stage": "plan",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 63,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 3.9516e-05,
+              "cost_details": {
+                "upstream_inference_completions_cost": 3.15e-05,
+                "upstream_inference_cost": 3.9516e-05,
+                "upstream_inference_prompt_cost": 8.016e-06
+              },
+              "is_byok": false,
+              "prompt_tokens": 500,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 384,
+                "video_tokens": 0
+              },
+              "total_tokens": 563
+            }
+          },
+          {
+            "elapsed_ms": 901,
+            "stage": "draft",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 85,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 0.000112332,
+              "cost_details": {
+                "upstream_inference_completions_cost": 4.25e-05,
+                "upstream_inference_cost": 0.000112332,
+                "upstream_inference_prompt_cost": 6.9832e-05
+              },
+              "is_byok": false,
+              "prompt_tokens": 2402,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 640,
+                "video_tokens": 0
+              },
+              "total_tokens": 2487
+            }
+          },
+          {
+            "elapsed_ms": 879,
+            "stage": "audit",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 83,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 0.000116604,
+              "cost_details": {
+                "upstream_inference_completions_cost": 4.15e-05,
+                "upstream_inference_cost": 0.000116604,
+                "upstream_inference_prompt_cost": 7.5104e-05
+              },
+              "is_byok": false,
+              "prompt_tokens": 2456,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 512,
+                "video_tokens": 0
+              },
+              "total_tokens": 2539
+            }
+          },
+          {
+            "elapsed_ms": 1072,
+            "stage": "draft",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 85,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 0.000182432,
+              "cost_details": {
+                "upstream_inference_completions_cost": 4.25e-05,
+                "upstream_inference_cost": 0.000182432,
+                "upstream_inference_prompt_cost": 0.000139932
+              },
+              "is_byok": false,
+              "prompt_tokens": 3887,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "video_tokens": 0
+              },
+              "total_tokens": 3972
+            }
+          },
+          {
+            "elapsed_ms": 686,
+            "stage": "audit",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 80,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 0.0001795,
+              "cost_details": {
+                "upstream_inference_completions_cost": 4e-05,
+                "upstream_inference_cost": 0.0001795,
+                "upstream_inference_prompt_cost": 0.0001395
+              },
+              "is_byok": false,
+              "prompt_tokens": 3875,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "video_tokens": 0
+              },
+              "total_tokens": 3955
+            }
+          }
+        ],
+        "news_window": null,
+        "offset_unit": "Unicode code points; answer ranges exclude app-added citation suffixes",
+        "output_limited": false,
+        "query_forms": [
+          "itertools.groupby documentation consecutive keys sort",
+          "itertools.groupby documentation consecutive keys sort Does itertools.groupby group equal keys anywhere in the input or only consecutive runs?"
+        ],
+        "request_id": "4e405739db1fef442531b5a354a3cc31a3a673784edc0bc2ece91e95b9afb649",
+        "semantic_verification": "experimental separate model audit; not an independent truth guarantee",
+        "sources": [
+          {
+            "cache": {
+              "allowed": true,
+              "checked_at": 1794983297,
+              "etag": "W/\"fd2c6e38f0daaf5f4c4530e44f23eae9\"",
+              "expires_at": 1794983297,
+              "fetched_at": 1794983297,
+              "hit": false,
+              "last_modified": null,
+              "request_url": "https://github.com/Ujstor/python-intermediate"
+            },
+            "document_version": "b930ca726828ae4d321704e98aee25c421e1e956951dc9f3d7af0c89e102841b",
+            "eligibility": "read_body",
+            "eligible": true,
+            "extraction": {
+              "method": "semantic_main",
+              "scope": "main",
+              "truncated": false
+            },
+            "id": "S1",
+            "parent_url": null,
+            "publication": {
+              "date_status": "missing",
+              "kind": "feed",
+              "published_date": null,
+              "witness_count": 0,
+              "witnesses": [],
+              "witnesses_limited": false
+            },
+            "text_hash": "02f5506d5ad6fafe65cfe718b131866cd8e0b68afcab8f5669e81e794b770e4c",
+            "title": "Intermediate Python Programming",
+            "url": "https://github.com/Ujstor/python-intermediate"
+          },
+          {
+            "cache": {
+              "allowed": true,
+              "checked_at": 1794983302,
+              "etag": "W/\"2145f3129945812537497ff3824bcd01\"",
+              "expires_at": 1794983302,
+              "fetched_at": 1794983302,
+              "hit": false,
+              "last_modified": null,
+              "request_url": "https://github.com/rust-itertools/itertools/blob/master/CHANGELOG.md"
+            },
+            "document_version": "b9e16169d0164193fccd4583ce0f8abcb1af163e0899ab690a2b4c2298cbd976",
+            "eligibility": "read_body",
+            "eligible": true,
+            "extraction": {
+              "method": "declared_code_blob",
+              "scope": "file_source",
+              "truncated": false
+            },
+            "id": "S2",
+            "parent_url": null,
+            "publication": {
+              "date_status": "missing",
+              "kind": "feed",
+              "published_date": null,
+              "witness_count": 0,
+              "witnesses": [],
+              "witnesses_limited": false
+            },
+            "text_hash": "40709e2f9a98c26c571b4d472fe60e4083e36dc3ecb95d3130f852834759888c",
+            "title": "itertools/CHANGELOG.md at master · rust-itertools/itertools · GitHub",
+            "url": "https://github.com/rust-itertools/itertools/blob/master/CHANGELOG.md"
+          }
+        ],
+        "status": "partial",
+        "stop_reason": "budget_exhausted",
+        "sufficiency": {
+          "audit_completed": true,
+          "cited_distinct_documents": 1,
+          "judge_sufficient": false,
+          "required_distinct_documents": 2
+        },
+        "untrusted_content": true
+      },
+      "witnesses_verified": 1,
+      "resource_links": 1,
+      "known_cost_usd": 0.000630384,
+      "unknown_cost_calls": 0,
+      "result_sha256": "b03a850b17d8ddb9d5494cf91954533ddb29e523c0fa162896fb541a1e97470d"
+    },
+    {
+      "id": "T02",
+      "group": "research",
+      "summary": {
+        "status": "completed",
+        "tool_status": "error",
+        "elapsed_ms": 64331,
+        "is_error": true,
+        "model_refusal": false
+      },
+      "value": {
+        "actions": [
+          {
+            "action": "serp",
+            "engine": "seznam",
+            "error": null,
+            "form": 1,
+            "results": 10
+          },
+          {
+            "action": "serp",
+            "engine": "naver",
+            "form": 1,
+            "status": "source_disabled"
+          },
+          {
+            "action": "read",
+            "attempt": 1,
+            "error": "fetch_timeout",
+            "url": "https://docs.python.org/3/library/pathlib.html"
+          },
+          {
+            "action": "read",
+            "attempt": 2,
+            "error": "fetch_timeout",
+            "url": "https://docs.python.org/3/library/os.path.html"
+          },
+          {
+            "action": "serp",
+            "engine": "seznam",
+            "error": null,
+            "form": 2,
+            "results": 1
+          },
+          {
+            "action": "serp",
+            "engine": "naver",
+            "form": 2,
+            "status": "source_disabled"
+          },
+          {
+            "action": "read",
+            "attempt": 3,
+            "error": "fetch_timeout",
+            "url": "https://docs.python.org/3.11/library/importlib.resources.html"
+          },
+          {
+            "action": "read",
+            "attempt": 4,
+            "error": "fetch_timeout",
+            "url": "https://docs.python.org/3/library/importlib.resources.html"
+          }
+        ],
+        "answer": "",
+        "budget": {
+          "limits": {
+            "browser": 0,
+            "documents": 4,
+            "forms": 2,
+            "generations": 6,
+            "output_bytes": 32768,
+            "qwen": 4,
+            "seconds": 180,
+            "serp": 4,
+            "source_context_chars": 24000
+          },
+          "remaining": {
+            "documents": 0,
+            "forms": 0,
+            "generations": 4,
+            "milliseconds": 115693,
+            "qwen": 4,
+            "serp": 2
+          },
+          "used": {
+            "documents": 4,
+            "forms": 2,
+            "generations": 2,
+            "qwen": 0,
+            "serp": 2
+          }
+        },
+        "cache": {
+          "enabled": true,
+          "errors": 0,
+          "extractions": 0,
+          "hits": 0,
+          "http_reads": 6,
+          "misses": 6,
+          "qwen_calls": 0,
+          "refresh": false,
+          "writes": 2
+        },
+        "claims": [],
+        "conflicts": [],
+        "elapsed_ms": 64306,
+        "error": null,
+        "facets": [
+          "Path.resolve(strict=False): поведение с несуществующим остатком пути по официальной документации Python",
+          "Path.resolve(strict=True): отличие от strict=False, какие исключения",
+          "Устраняет ли Path.resolve компоненты '..' (нормализация) по документации"
+        ],
+        "independence": "distinct document bodies; publisher independence not established",
+        "missing": [
+          0,
+          1,
+          2
+        ],
+        "model_calls": [
+          {
+            "elapsed_ms": 1807,
+            "stage": "plan",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 85,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 5.0696e-05,
+              "cost_details": {
+                "upstream_inference_completions_cost": 4.25e-05,
+                "upstream_inference_cost": 5.0696e-05,
+                "upstream_inference_prompt_cost": 8.196e-06
+              },
+              "is_byok": false,
+              "prompt_tokens": 505,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 384,
+                "video_tokens": 0
+              },
+              "total_tokens": 590
+            }
+          },
+          {
+            "elapsed_ms": 572,
+            "stage": "draft",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 29,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 3.026e-05,
+              "cost_details": {
+                "upstream_inference_completions_cost": 1.45e-05,
+                "upstream_inference_cost": 3.026e-05,
+                "upstream_inference_prompt_cost": 1.576e-05
+              },
+              "is_byok": false,
+              "prompt_tokens": 900,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 640,
+                "video_tokens": 0
+              },
+              "total_tokens": 929
+            }
+          }
+        ],
+        "news_window": null,
+        "offset_unit": "Unicode code points; answer ranges exclude app-added citation suffixes",
+        "output_limited": false,
+        "query_forms": [
+          "site:docs.python.org pathlib Path.resolve strict documentation",
+          "site:docs.python.org pathlib Path.resolve strict documentation Path.resolve(strict=False): поведение с несуществующим остатком пути по официальной документации Python"
+        ],
+        "request_id": "14bf789720df4d3f0d16800d30390ce4117ba5894031f9f2db5bc14db7aedf43",
+        "semantic_verification": "experimental separate model audit; not an independent truth guarantee",
+        "sources": [],
+        "status": "error",
+        "stop_reason": "sources_unavailable",
+        "sufficiency": {
+          "audit_completed": false,
+          "cited_distinct_documents": 0,
+          "judge_sufficient": false,
+          "required_distinct_documents": 2
+        },
+        "untrusted_content": true
+      },
+      "witnesses_verified": 0,
+      "resource_links": 0,
+      "known_cost_usd": 8.0956e-05,
+      "unknown_cost_calls": 0,
+      "result_sha256": "778497eef370b574bc94df05ab56fa9c0c5456a389d65dc85e9812e9b7697cb0"
+    }
+  ],
+  "source_state_after": {
+    "blocked": {
+      "bing": "excluded from fixed protocol",
+      "ddg": "historical challenge; unqualified in this protocol",
+      "mwmbl": "excluded from fixed protocol",
+      "naver": "source_challenge: verification page; no retry"
+    },
+    "document_blocks": {
+      "devessentials.dev": "source_challenge: verification page; no retry",
+      "eur-lex.europa.eu": "HTTP 202",
+      "hermes-agent.nousresearch.com": "source_blocked: no retry in this probe",
+      "learn.microsoft.com": "source_challenge: verification page; no retry",
+      "parallelworks.com": "source_challenge: verification page; no retry",
+      "redis.io": "source_blocked: no retry in this probe",
+      "ria.ru": "source_challenge: verification widget; no retry",
+      "slice-master.co": "source_blocked: no retry in this probe",
+      "tfl.gov.uk": "source_blocked: no retry in this probe",
+      "www.atlantic.net": "source_blocked: no retry in this probe",
+      "www.ebay.com": "source_blocked: no retry in this probe",
+      "www.eracomp.cz": "source_challenge: verification widget; no retry",
+      "www.ltmuseum.co.uk": "source_blocked: no retry in this probe",
+      "www.mdpi.com": "source_blocked: no retry in this probe",
+      "www.mujrozhlas.cz": "source_blocked: no retry in this probe",
+      "www.npmjs.com": "source_blocked: no retry in this probe",
+      "www.webstaurantstore.com": "source_blocked: no retry in this probe"
+    }
+  },
+  "refusals_preserved": true,
+  "stats": {
+    "search": {
+      "attempts": 8,
+      "known_cost_usd": 0,
+      "p50_ms": 1162.0
+    },
+    "research": {
+      "attempts": 8,
+      "known_cost_usd": 0.004201848,
+      "p50_ms": 34756
+    }
+  }
+}

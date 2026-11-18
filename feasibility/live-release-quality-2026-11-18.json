@@ -1,0 +1,585 @@
+{
+  "schema": "live-release-quality-v1",
+  "reviewer": "/root/primary_search_review",
+  "reviewed_utc": "2026-11-18T13:20:05.417560+00:00",
+  "gate": "FAILED_NO_LOSS",
+  "empirical_completed": true,
+  "cases_sha256": "2263132f4c61df5f9a8cbc65f7181c1f024da1bcb29352ccc509011b0c735438",
+  "metrics": {
+    "NEW4": {
+      "baseline": {
+        "conditions": 2,
+        "required_conditions": 9,
+        "complete_questions": 0,
+        "questions": 4,
+        "final_claims": 6,
+        "false": 1,
+        "unknown_scope": 1
+      },
+      "candidate": {
+        "conditions": 2,
+        "required_conditions": 9,
+        "complete_questions": 1,
+        "questions": 4,
+        "final_claims": 4,
+        "false": 0,
+        "unknown_scope": 1
+      }
+    },
+    "OLD2": {
+      "baseline": {
+        "conditions": 3,
+        "required_conditions": 5,
+        "complete_questions": 1,
+        "questions": 2,
+        "final_claims": 4,
+        "false": 0,
+        "unknown_scope": 0
+      },
+      "candidate": {
+        "conditions": 2,
+        "required_conditions": 5,
+        "complete_questions": 1,
+        "questions": 2,
+        "final_claims": 3,
+        "false": 0,
+        "unknown_scope": 0
+      }
+    }
+  },
+  "rows": [
+    {
+      "case": "C01",
+      "cohort": "OLD2",
+      "arm": "baseline",
+      "conditions": [
+        "T01.A",
+        "T01.B"
+      ],
+      "supported_conditions": 2,
+      "required_conditions": 2,
+      "complete": true,
+      "final_false": 0,
+      "final_unknown": 0,
+      "claims": [
+        {
+          "id": "A1",
+          "text": "groupby generates a new group each time the key value changes, which is why the data usually needs to be sorted using the same key function.",
+          "classification": "true",
+          "fingerprint": null,
+          "own_quote_original_unicode_exact": true,
+          "notes": "Ownquote exact and semantically supports claim."
+        },
+        {
+          "id": "A2",
+          "text": "The documentation states this differs from SQL GROUP BY, which aggregates common elements regardless of input order.",
+          "classification": "true",
+          "fingerprint": null,
+          "own_quote_original_unicode_exact": true,
+          "notes": "Ownquote exact and semantically supports claim."
+        }
+      ],
+      "status": "partial",
+      "stop_reason": "budget_exhausted",
+      "priority_actions": []
+    },
+    {
+      "case": "C01",
+      "cohort": "OLD2",
+      "arm": "candidate",
+      "conditions": [
+        "T01.A",
+        "T01.B"
+      ],
+      "supported_conditions": 2,
+      "required_conditions": 2,
+      "complete": true,
+      "final_false": 0,
+      "final_unknown": 0,
+      "claims": [
+        {
+          "id": "A1",
+          "text": "groupby generates a break or new group every time the value of the key function changes.",
+          "classification": "true",
+          "fingerprint": null,
+          "own_quote_original_unicode_exact": true,
+          "notes": "Ownquote exact and semantically supports claim."
+        },
+        {
+          "id": "A2",
+          "text": "To collect all equal keys together, the iterable generally needs to already be sorted on the same key function.",
+          "classification": "true",
+          "fingerprint": null,
+          "own_quote_original_unicode_exact": true,
+          "notes": "Ownquote exact and semantically supports claim."
+        },
+        {
+          "id": "A3",
+          "text": "This differs from SQL GROUP BY, which aggregates common elements regardless of their input order.",
+          "classification": "true",
+          "fingerprint": null,
+          "own_quote_original_unicode_exact": true,
+          "notes": "Ownquote exact and semantically supports claim."
+        }
+      ],
+      "status": "partial",
+      "stop_reason": "budget_exhausted",
+      "priority_actions": [
+        {
+          "action": "official_priority",
+          "after": [
+            "https://docs.python.org/3/library/itertools.html",
+            "https://www.pythonpool.com/pythons-itertools-groupby/",
+            "https://github.com/Ujstor/python-intermediate",
+            "https://www.npmjs.com/package/itertools-ts"
+          ],
+          "before": [
+            "https://docs.python.org/3/library/itertools.html",
+            "https://www.pythonpool.com/pythons-itertools-groupby/",
+            "https://github.com/Ujstor/python-intermediate",
+            "https://www.npmjs.com/package/itertools-ts"
+          ],
+          "changed": false
+        }
+      ]
+    },
+    {
+      "case": "P01",
+      "cohort": "NEW4",
+      "arm": "baseline",
+      "conditions": [],
+      "supported_conditions": 0,
+      "required_conditions": 2,
+      "complete": false,
+      "final_false": 0,
+      "final_unknown": 0,
+      "claims": [
+        {
+          "id": "A1",
+          "text": "In cachetools, the lock only guards access to the cache object; the wrapped function is called outside the lock to allow concurrent execution, so it must be thread-safe itself.",
+          "classification": "true",
+          "fingerprint": null,
+          "own_quote_original_unicode_exact": true,
+          "notes": "Explicitcachetoolsstatement trueforcachetools, notfunctools; noquestioncoverage."
+        }
+      ],
+      "status": "partial",
+      "stop_reason": "budget_exhausted",
+      "priority_actions": []
+    },
+    {
+      "case": "P01",
+      "cohort": "NEW4",
+      "arm": "candidate",
+      "conditions": [],
+      "supported_conditions": 0,
+      "required_conditions": 2,
+      "complete": false,
+      "final_false": 0,
+      "final_unknown": 0,
+      "claims": [],
+      "status": "partial",
+      "stop_reason": "budget_exhausted",
+      "priority_actions": [
+        {
+          "action": "official_priority",
+          "after": [
+            "https://rednafi.com/python/lru-cache-on-methods/",
+            "https://cachetools.readthedocs.io/en/latest/",
+            "https://github.com/Eric-Canas/ConditionalCache",
+            "https://thecodeforge.io/dsa/lru-cache-implementation/"
+          ],
+          "before": [
+            "https://rednafi.com/python/lru-cache-on-methods/",
+            "https://cachetools.readthedocs.io/en/latest/",
+            "https://github.com/Eric-Canas/ConditionalCache",
+            "https://thecodeforge.io/dsa/lru-cache-implementation/"
+          ],
+          "changed": false
+        },
+        {
+          "action": "official_priority",
+          "after": [
+            "https://thecodeforge.io/dsa/lru-cache-implementation/",
+            "https://death.andgravity.com/lru-cache",
+            "https://pikotutorial.com/python-lru_cache-explained/",
+            "https://app.cacher.io/"
+          ],
+          "before": [
+            "https://thecodeforge.io/dsa/lru-cache-implementation/",
+            "https://death.andgravity.com/lru-cache",
+            "https://pikotutorial.com/python-lru_cache-explained/",
+            "https://app.cacher.io/"
+          ],
+          "changed": false
+        }
+      ]
+    },
+    {
+      "case": "P02",
+      "cohort": "NEW4",
+      "arm": "baseline",
+      "conditions": [
+        "P02.B"
+      ],
+      "supported_conditions": 1,
+      "required_conditions": 2,
+      "complete": false,
+      "final_false": 0,
+      "final_unknown": 0,
+      "claims": [
+        {
+          "id": "A1",
+          "text": "Ложной предпосылки нет: порядок вызовов predicate документирован как исходный, по одному разу на элемент.",
+          "classification": "true",
+          "fingerprint": null,
+          "own_quote_original_unicode_exact": true,
+          "notes": "Ownquote exact and semantically supports claim."
+        }
+      ],
+      "status": "partial",
+      "stop_reason": "budget_exhausted",
+      "priority_actions": []
+    },
+    {
+      "case": "P02",
+      "cohort": "NEW4",
+      "arm": "candidate",
+      "conditions": [],
+      "supported_conditions": 0,
+      "required_conditions": 2,
+      "complete": false,
+      "final_false": 0,
+      "final_unknown": 0,
+      "claims": [
+        {
+          "id": "A1",
+          "text": "Vec::retain удаляет все элементы e, для которых f(&e) возвращает false.",
+          "classification": "true",
+          "fingerprint": null,
+          "own_quote_original_unicode_exact": true,
+          "notes": "Remove-falsecontract true, neitherretained-order norpredicate-order questionanswered."
+        }
+      ],
+      "status": "partial",
+      "stop_reason": "budget_exhausted",
+      "priority_actions": [
+        {
+          "action": "official_priority",
+          "after": [
+            "https://doc.rust-lang.org/std/vec/struct.Vec.html",
+            "https://doc.rust-lang.org/std/vec/",
+            "https://doc.rust-lang.org/nightly/std/vec/",
+            "https://doc.rust-lang.org/std/mem/fn.drop.html"
+          ],
+          "before": [
+            "https://packages.gleam.run/",
+            "https://doc.rust-lang.org/std/vec/struct.Vec.html",
+            "https://web3.okx.com/cs/onchainos/dev-docs/payments/sdk-rust",
+            "https://doc.rust-lang.org/std/vec/"
+          ],
+          "changed": true
+        },
+        {
+          "action": "official_priority",
+          "after": [
+            "https://doc.rust-lang.org/std/vec/struct.Vec.html",
+            "https://doc.rust-lang.org/std/collections/struct.VecDeque.html",
+            "https://doc.rust-lang.org/std/collections/struct.LinkedList.html",
+            "https://doc.rust-lang.org/src/alloc/vec/mod.rs.html"
+          ],
+          "before": [
+            "https://lhz07.com/archives/analyze-the-retain-method-of-Vec",
+            "https://doc.rust-lang.org/std/vec/struct.Vec.html",
+            "https://doc.rust-lang.org/std/collections/struct.VecDeque.html",
+            "https://en.wikipedia.org/wiki/Talk:Commutative_property"
+          ],
+          "changed": true
+        }
+      ]
+    },
+    {
+      "case": "P03",
+      "cohort": "NEW4",
+      "arm": "baseline",
+      "conditions": [],
+      "supported_conditions": 0,
+      "required_conditions": 3,
+      "complete": false,
+      "final_false": 0,
+      "final_unknown": 0,
+      "claims": [],
+      "status": "partial",
+      "stop_reason": "budget_exhausted",
+      "priority_actions": []
+    },
+    {
+      "case": "P03",
+      "cohort": "NEW4",
+      "arm": "candidate",
+      "conditions": [],
+      "supported_conditions": 0,
+      "required_conditions": 3,
+      "complete": false,
+      "final_false": 0,
+      "final_unknown": 0,
+      "claims": [],
+      "status": "partial",
+      "stop_reason": "budget_exhausted",
+      "priority_actions": [
+        {
+          "action": "official_priority",
+          "after": [
+            "https://github.com/pgvector/pgvector",
+            "https://en.wikipedia.org/wiki/PostgreSQL",
+            "https://archive.p2d2.cz/files/postgresql-12.pdf",
+            "https://github.com/cajuncoding/SqlBulkHelpers"
+          ],
+          "before": [
+            "https://github.com/pgvector/pgvector",
+            "https://en.wikipedia.org/wiki/PostgreSQL",
+            "https://archive.p2d2.cz/files/postgresql-12.pdf",
+            "https://github.com/cajuncoding/SqlBulkHelpers"
+          ],
+          "changed": false
+        },
+        {
+          "action": "official_priority",
+          "after": [
+            "https://www.postgresql.org/docs/current/release-18.html",
+            "https://en.wikipedia.org/wiki/PostgreSQL",
+            "https://github.com/tursodatabase/turso/blob/main/postgres/COMPAT.md",
+            "https://async-workflows.com/advanced-query-patterns-and-bulk-data-operations/common-table-expressions-ctes-and-recursive-queries/"
+          ],
+          "before": [
+            "https://en.wikipedia.org/wiki/PostgreSQL",
+            "https://github.com/tursodatabase/turso/blob/main/postgres/COMPAT.md",
+            "https://async-workflows.com/advanced-query-patterns-and-bulk-data-operations/common-table-expressions-ctes-and-recursive-queries/",
+            "https://www.linkedin.com/top-content/technology/database-management-systems/cross-platform-database-compatibility/"
+          ],
+          "changed": true
+        }
+      ]
+    },
+    {
+      "case": "P04",
+      "cohort": "NEW4",
+      "arm": "baseline",
+      "conditions": [
+        "P04.A"
+      ],
+      "supported_conditions": 1,
+      "required_conditions": 2,
+      "complete": false,
+      "final_false": 1,
+      "final_unknown": 1,
+      "claims": [
+        {
+          "id": "A1",
+          "text": "В SQLite нельзя включить или отключить ограничения внешних ключей в середине многооператорной транзакции (когда SQLite не в режиме autocommit).",
+          "classification": "true",
+          "fingerprint": null,
+          "own_quote_original_unicode_exact": true,
+          "notes": "Ownquote exact and semantically supports claim."
+        },
+        {
+          "id": "A2",
+          "text": "Попытка изменить PRAGMA foreign_keys внутри такой транзакции не возвращает ошибку, а просто не имеет эффекта.",
+          "classification": "true",
+          "fingerprint": null,
+          "own_quote_original_unicode_exact": true,
+          "notes": "Ownquote exact and semantically supports claim."
+        },
+        {
+          "id": "A3",
+          "text": "Ограничения внешних ключей по умолчанию отключены и должны включаться отдельно для каждого соединения с базой данных.",
+          "classification": "unknown_scope",
+          "fingerprint": "SQLITE_UNQUALIFIED_DEFAULT_OFF",
+          "own_quote_original_unicode_exact": true,
+          "notes": "TrueforstandarddefaultOFFconfiguration, butunqualifiedclaimomitscompile-timeSQLITE_DEFAULT_FOREIGN_KEYS override. FrozenP04truthboundaryexplicitlyrejectsblanketdefaultstatement; countedunknownscope, notassertedworldfalse."
+        },
+        {
+          "id": "A4",
+          "text": "Если библиотека скомпилирована с поддержкой внешних ключей, приложение всё равно должно включить их во время выполнения командой PRAGMA foreign_keys.",
+          "classification": "false",
+          "fingerprint": "SQLITE_APPLICATION_ENABLE_ALWAYS_REQUIRED",
+          "own_quote_original_unicode_exact": true,
+          "notes": "CompiledforeignkeysupportdoesnotimplyapplicationmustexplicitlyenablewhenbuilddefaultalreadyON. Optionalcompile-timeoverrideinvalidatesuniversalnecessity."
+        }
+      ],
+      "status": "partial",
+      "stop_reason": "budget_exhausted",
+      "priority_actions": []
+    },
+    {
+      "case": "P04",
+      "cohort": "NEW4",
+      "arm": "candidate",
+      "conditions": [
+        "P04.A",
+        "P04.B"
+      ],
+      "supported_conditions": 2,
+      "required_conditions": 2,
+      "complete": true,
+      "final_false": 0,
+      "final_unknown": 1,
+      "claims": [
+        {
+          "id": "A1",
+          "text": "Включить или отключить ограничения внешних ключей в середине многооператорной транзакции невозможно; попытка не возвращает ошибку, а просто не имеет эффекта.",
+          "classification": "true",
+          "fingerprint": null,
+          "own_quote_original_unicode_exact": true,
+          "notes": "Ownquote exact and semantically supports claim."
+        },
+        {
+          "id": "A2",
+          "text": "PRAGMA foreign_keys не действует внутри транзакции: включать или отключать проверку можно только при отсутствии незавершённых BEGIN или SAVEPOINT.",
+          "classification": "true",
+          "fingerprint": null,
+          "own_quote_original_unicode_exact": true,
+          "notes": "Ownquote exact and semantically supports claim."
+        },
+        {
+          "id": "A3",
+          "text": "По умолчанию ограничения внешних ключей отключены, поэтому их нужно включать отдельно для каждого соединения с базой данных.",
+          "classification": "unknown_scope",
+          "fingerprint": "SQLITE_UNQUALIFIED_DEFAULT_OFF",
+          "own_quote_original_unicode_exact": true,
+          "notes": "TrueforstandarddefaultOFFconfiguration, butunqualifiedclaimomitscompile-timeSQLITE_DEFAULT_FOREIGN_KEYS override. FrozenP04truthboundaryexplicitlyrejectsblanketdefaultstatement; countedunknownscope, notassertedworldfalse."
+        }
+      ],
+      "status": "ok",
+      "stop_reason": "evidence_sufficient",
+      "priority_actions": [
+        {
+          "action": "official_priority",
+          "after": [
+            "https://www.sqlite.org/foreignkeys.html",
+            "https://www.sqlite.org/pragma.html",
+            "https://sqlite.org/c3ref/c_fcntl_begin_atomic_write.html",
+            "https://sqlite.org/hctree/doc/hctree/doc/hctree/index.html"
+          ],
+          "before": [
+            "https://www.sqlite.org/foreignkeys.html",
+            "https://github.com/portablesql/psql-sqlite",
+            "https://www.sqlite.org/pragma.html",
+            "https://www.sqlitetutorial.net/sqlite-foreign-key/"
+          ],
+          "changed": true
+        }
+      ]
+    },
+    {
+      "case": "C02",
+      "cohort": "OLD2",
+      "arm": "baseline",
+      "conditions": [
+        "N04.B"
+      ],
+      "supported_conditions": 1,
+      "required_conditions": 3,
+      "complete": false,
+      "final_false": 0,
+      "final_unknown": 0,
+      "claims": [
+        {
+          "id": "A1",
+          "text": "Согласно документации, в Python 3.13 free-threaded сборки могут отключать GIL, но эта возможность недоступна по умолчанию.",
+          "classification": "true",
+          "fingerprint": null,
+          "own_quote_original_unicode_exact": true,
+          "notes": "Ownquote exact and semantically supports claim."
+        },
+        {
+          "id": "A2",
+          "text": "PEP 703 принят steering council; issue #108219 служит верхнеуровневым трекером статуса интеграции.",
+          "classification": "true",
+          "fingerprint": null,
+          "own_quote_original_unicode_exact": true,
+          "notes": "PEP703accepted/integrationtracker truebutnotexperimentalstatus/separateexecutable evidence."
+        }
+      ],
+      "status": "partial",
+      "stop_reason": "budget_exhausted",
+      "priority_actions": []
+    },
+    {
+      "case": "C02",
+      "cohort": "OLD2",
+      "arm": "candidate",
+      "conditions": [],
+      "supported_conditions": 0,
+      "required_conditions": 3,
+      "complete": false,
+      "final_false": 0,
+      "final_unknown": 0,
+      "claims": [],
+      "status": "partial",
+      "stop_reason": "budget_exhausted",
+      "priority_actions": [
+        {
+          "action": "official_priority",
+          "after": [
+            "https://labs.quansight.org/blog/free-threaded-python-rollout",
+            "https://peps.python.org/pep-0703/",
+            "https://github.com/python/cpython/issues/108219",
+            "https://github.com/pyenv/pyenv/blob/master/CHANGELOG.md"
+          ],
+          "before": [
+            "https://labs.quansight.org/blog/free-threaded-python-rollout",
+            "https://peps.python.org/pep-0703/",
+            "https://github.com/python/cpython/issues/108219",
+            "https://github.com/pyenv/pyenv/blob/master/CHANGELOG.md"
+          ],
+          "changed": false
+        },
+        {
+          "action": "official_priority",
+          "after": [
+            "https://peps.python.org/pep-0703/",
+            "https://peps.python.org/pep-0779/",
+            "https://github.com/pyenv/pyenv/blob/master/CHANGELOG.md",
+            "https://discuss.python.org/t/pep-703-making-the-global-interpreter-lock-optional-in-cpython-acceptance/37075"
+          ],
+          "before": [
+            "https://peps.python.org/pep-0703/",
+            "https://peps.python.org/pep-0779/",
+            "https://github.com/pyenv/pyenv/blob/master/CHANGELOG.md",
+            "https://discuss.python.org/t/pep-703-making-the-global-interpreter-lock-optional-in-cpython-acceptance/37075"
+          ],
+          "changed": false
+        }
+      ]
+    }
+  ],
+  "gains": [
+    "P04.B"
+  ],
+  "losses": [
+    "P02.B",
+    "N04.B"
+  ],
+  "new_candidate_false_fingerprints": [],
+  "new_candidate_unknown_fingerprints": [],
+  "own_quote_placements_verified": 17,
+  "paired_questions": 6,
+  "retries": 0,
+  "independence": "Reviewer authoredfrozengold/qualitylabels, noimplementation. No source/model/cargo calls.",
+  "activation": "C01prioritychanges recorded;P01bothfalse,P02bothtrue,P03secondroundtruebutwrongrelease18body,P04true,C02false. Activationdoesnotestablishcausality.",
+  "grading_boundaries": [
+    "P04baselineonlyA/no-opcovered; noexplicitwhen-no-BEGIN/SAVEPOINT answer meansBnotcovered",
+    "BotharmsP04A3defaultOFF treatedunknownscope becausefrozencompile-timeoverrideboundary, evenofficialsourcequoteassertsOFF; trueforstandardbuildbutnotunqualifiedgeneralsetting",
+    "BaselineP04A4mandatoryruntimeenablefalseunderbuildwithdefaultON; candidateomitsit",
+    "P01baselineofftopiccachetools claimworldtruebutquestioncoverage0",
+    "C02PEPacceptancenotexperimentalstatus, notdefaultonlybaselineN04.Bcovered"
+  ],
+  "limits": [
+    "Knownreusedsuite, oneunbalanced-by-availabilityrepeat, notfreshqualification",
+    "Nativefullcontroller includingplanner butnotMCPstdio itself",
+    "Cumulativeledger/sourceavailability andstochasticplanner/SERP/selectionconfoundcausalrankingattribution",
+    "No newcandidateFP/unknownfingerprint doesnotmean allreturnedclaims errorfree; sharedP04unknownscope retained",
+    "Candidate/source-awarefeaturestest-onlymustnotactivatefromfailedgate"
+  ]
+}

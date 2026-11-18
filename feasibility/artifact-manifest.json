@@ -136,6 +136,61 @@
       "path": "feasibility/product-options-followup-corpus-2026-11-16.tar.gz",
       "bytes": 321037,
       "sha256": "963dd1d9504b4cfb0bba91c407816edb81244aec44aa73f54d93f5c0367b2e0f"
+    },
+    {
+      "path": "feasibility/resource-links-live-corpus-2026-11-18.tar.gz",
+      "bytes": 602087,
+      "sha256": "cda23ec45fcb710b9b1598a1cab5813cbea4fd28afb9a9fa3487223b869d1903"
+    },
+    {
+      "path": "feasibility/search-five-corpus-2026-11-18.tar.gz",
+      "bytes": 1489100,
+      "sha256": "51c29712ecdb93daeef07e48e76db7cc1ab392e11e48a97acd6d09dac04f2d51"
+    },
+    {
+      "path": "feasibility/search-repair-corpus-2026-11-18.tar.gz",
+      "bytes": 3313920,
+      "sha256": "261c054b7b4c8a81eced15a74abbbad8e75504fc8ea456f8b7539655beefbf41"
+    },
+    {
+      "path": "feasibility/witness-experiments-corpus-2026-11-18.tar.gz",
+      "bytes": 136028,
+      "sha256": "5183d80aa723fa2463bc3f095a316437b382cc01ff1ee202997598edfea1e1f5"
+    },
+    {
+      "path": "feasibility/scoped-audit-corpus-2026-11-18.tar.gz",
+      "bytes": 146254,
+      "sha256": "1aa690168a52e6878b3e60eb391adf34da448db86b202b7e6de5da66c3ae4c6d"
+    },
+    {
+      "path": "feasibility/primary-evidence-corpus-2026-11-18.tar.gz",
+      "bytes": 462108,
+      "sha256": "b9ec50a76db082ea79805234595b81cbf374574c0f59bc2e83bf75fa1ab6148a"
+    },
+    {
+      "path": "feasibility/primary-draft-corpus-2026-11-18.tar.gz",
+      "bytes": 453429,
+      "sha256": "b368b7e7f32ce4586f451d116cb821877a4d16f0247f3a8e2d09e69c8e03b178"
+    },
+    {
+      "path": "feasibility/primary-search-corpus-2026-11-18.tar.gz",
+      "bytes": 83524,
+      "sha256": "6d12a903dd4593cc4ec00bf103103c33aac765db853cabe3ea5262af600d0f25"
+    },
+    {
+      "path": "feasibility/source-aware-search-corpus-2026-11-18.tar.gz",
+      "bytes": 85341,
+      "sha256": "8f37dbecdc90046479806f0e747079d54c5c8a9878e9832d0cf7f3b95b9b41b6"
+    },
+    {
+      "path": "feasibility/audit-url-fix-corpus-2026-11-18.tar.gz",
+      "bytes": 8843,
+      "sha256": "e8d27e3eadb16d6367c06cdce9af2b9f5253461e08a3bde9c7731681b9cb9832"
+    },
+    {
+      "path": "feasibility/live-release-corpus-2026-11-18.tar.gz",
+      "bytes": 3280634,
+      "sha256": "ed7593648c583ebc6d00287a11ebe3af5313e5b27331e7c9b3804dc536918eb4"
     }
   ]
 }

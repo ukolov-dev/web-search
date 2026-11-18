@@ -62,7 +62,8 @@ pub fn site_filter(query: &str) -> Result<Option<Url>> {
         if inside_quote {
             continue;
         }
-        has_or |= token.eq_ignore_ascii_case("OR") || token == "|";
+        // Only explicit uppercase OR is query DSL; ordinary English "or" is lexical text.
+        has_or |= token == "OR" || token == "|";
         let plain = token.trim_start_matches('(');
         let lower = plain.to_ascii_lowercase();
         ensure!(
@@ -194,6 +195,20 @@ pub(crate) fn navigation_guard(html: &str) -> Result<()> {
     guard
         .select("a[data-e-a='heading'],a[data-nlog-area$='.link'],.e69e8d,script,style,template")
         .remove();
+    // Article headings can quote UI messages; unrelated article nodes must not hide challenge UI.
+    for node in guard.select("title,h1,h2,h3,[role='heading']").iter() {
+        if !node.ancestors(None).filter("article").is_empty() {
+            continue;
+        }
+        let heading = compact(&node.text()).to_lowercase();
+        ensure!(
+            !matches!(
+                heading.as_str(),
+                "verify to continue" | "checking if the site connection is secure"
+            ),
+            "source_challenge: connection verification page; no retry"
+        );
+    }
     let text = guard.select("html").text().to_lowercase();
     ensure!(
         ![
@@ -561,6 +576,46 @@ mod tests {
     }
 
     #[test]
+    fn natural_or_keeps_site_boundary_and_explicit_boolean_is_rejected() {
+        let question = "site:docs.python.org/3.11/library/tomllib.html Must load receive a binary or text file?";
+        let site = site_filter(question).unwrap().unwrap();
+        assert_eq!(site.path(), "/3.11/library/tomllib.html");
+        let input: crate::research::Input =
+            serde_json::from_value(serde_json::json!({"question":question})).unwrap();
+        input.validate().unwrap();
+        for operator in ["OR", "|"] {
+            assert!(
+                site_filter(&format!(
+                    "site:docs.python.org/3.11/library/tomllib.html binary {operator} text"
+                ))
+                .is_err()
+            );
+        }
+        let rows = [
+            "https://docs.python.org/3.11/library/tomllib.html",
+            "https://docs.python.org/3.12/library/tomllib.html",
+            "https://docs.python.org/3.11/library/pathlib.html",
+            "https://evil.example/3.11/library/tomllib.html",
+        ]
+        .into_iter()
+        .enumerate()
+        .map(|(i, url)| SearchResult {
+            title: String::new(),
+            url: url.into(),
+            snippet: String::new(),
+            position: i + 1,
+            result_source: None,
+        })
+        .collect();
+        let kept = filter_site(Some(&site), rows).unwrap();
+        assert_eq!(kept.results.len(), 1);
+        assert_eq!(
+            kept.results[0].url,
+            "https://docs.python.org/3.11/library/tomllib.html"
+        );
+    }
+
+    #[test]
     fn site_syntax_path_boundaries_and_total_mismatch() {
         for query in [
             "site:",
@@ -700,6 +755,30 @@ mod tests {
             )
             .is_err()
         );
+    }
+
+    #[test]
+    fn rejects_connection_verification_ui_but_allows_article_discussion() {
+        let captured = include_str!("../tests/fixtures/research/connection-challenge.html");
+        for html in [
+            captured,
+            "<html><body><h2> Checking if the site connection is secure </h2></body></html>",
+            "<html><body><article></article><h2>Checking if the site connection is secure</h2></body></html>",
+            "<html><head><title>Verify to continue</title></head><body>Please wait.</body></html>",
+        ] {
+            assert_eq!(
+                error_code(&navigation_guard(html).unwrap_err().to_string()),
+                "source_challenge"
+            );
+        }
+        for html in [
+            "<article><h1>Connection verification explained</h1><p>Checking if the site connection is secure is a challenge message.</p></article>",
+            "<html><head><title>Verification guide</title></head><body><article><h1>Security guide</h1><h2>Verify to continue</h2><p>This section explains the UI message.</p></article></body></html>",
+            "<article><h1>What does Verify to continue mean?</h1><p>A guide to verification.</p></article>",
+            "<script>const message = 'Verify to continue';</script><article><h1>Ordinary content</h1></article>",
+        ] {
+            navigation_guard(html).unwrap();
+        }
     }
 
     #[test]

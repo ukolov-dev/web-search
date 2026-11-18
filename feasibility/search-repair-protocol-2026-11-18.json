@@ -1,0 +1,33 @@
+{
+  "schema": "search-repair-protocol-v1",
+  "wrapper_sha256": "e471f6c4a040c786fa4ce9e7227de8ecce7b7559f1cf7d6c0bd9ac5ae80b2d43",
+  "cases": {
+    "baseline": "feasibility/search-repair-cases-2026-11-18.json",
+    "candidate": "feasibility/search-repair-cases-2026-11-18.json",
+    "regression": "feasibility/search-five-cases-2026-11-18.json"
+  },
+  "policy": "NEW4 baseline then candidate research, Qwen healthy for both, separate initiallyempty caches, common monotonic refusal ledger. Old8 candidate repeat separately; historical3/18 not causal comparison due Qwenchange. No model/site retries. No gold sent to runtime. Stop on model refusal or ambiguousrunnererror. No runtime tuning after inference.",
+  "groups": {
+    "baseline": [
+      "research"
+    ],
+    "candidate": [
+      "research"
+    ],
+    "regression": [
+      "research"
+    ]
+  },
+  "limits": {
+    "calls": 16,
+    "per_research": {
+      "forms": 2,
+      "serp": 4,
+      "documents": 4,
+      "qwen": 4,
+      "generations": 6,
+      "seconds": 180
+    }
+  },
+  "scope": "4new source-aware technicalquestions9conditions;8old developmentregressions18conditions separately. No SERP rerun: searchpolicyunchanged exceptexplicitORvalidation alreadyunit/stdioverified. Not original20/two-day/generalqualification."
+}

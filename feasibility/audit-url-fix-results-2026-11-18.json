@@ -1,0 +1,86 @@
+{
+  "schema": 1,
+  "implementation_commit": "e075a93",
+  "bugs": {
+    "audit_reason": {
+      "classification": "FIX_PROVEN",
+      "red_exit": 101,
+      "green_exit": 0,
+      "original_reason_chars": 201,
+      "retained_reason_chars": 200,
+      "raw_audit_sha256": "63cfd604331ebc15acd5ec3cbd7cc4d11ad61fc89a380e084fbe1983662b5040"
+    },
+    "url_exclusions": {
+      "classification": "FIX_PROVEN",
+      "red_exit": 1,
+      "green_exit": 0,
+      "migrated_proven_hosts": {
+        "docs.python.org": {
+          "reason": "fetch_timeout",
+          "urls": [
+            "https://docs.python.org/el/3/glossary.html"
+          ],
+          "evidence": "source-aware-search-results-2026-11-18.json: actual read failure"
+        },
+        "www.pythonpool.com": {
+          "reason": "fetch_timeout in C01 baseline; no retry in this campaign; consult report before any new live probe",
+          "urls": [
+            "https://www.pythonpool.com/pythons-itertools-groupby/"
+          ],
+          "evidence": "primary-search-results-2026-11-18.json: source_failure"
+        }
+      },
+      "document_url_blocks": {
+        "https://docs.python.org/el/3/glossary.html": "fetch_timeout",
+        "https://www.pythonpool.com/pythons-itertools-groupby/": "fetch_timeout in C01 baseline; no retry in this campaign; consult report before any new live probe"
+      },
+      "hard_host_blocks_count": 18,
+      "historical_state_written": false
+    }
+  },
+  "offline_replay": {
+    "claims": 4,
+    "texts": [
+      "itertools.groupby returns consecutive keys and groups from the iterable, so it groups consecutive runs, not equal keys anywhere in the input.",
+      "groupby generates a break or new group every time the value of the key function changes.",
+      "This behavior differs from SQL GROUP BY, which aggregates common elements regardless of their input order.",
+      "To collect all equal keys together, the iterable generally needs to already be sorted on the same key function."
+    ],
+    "status": "partial",
+    "sufficiency": {
+      "audit_completed": true,
+      "cited_distinct_documents": 1,
+      "judge_sufficient": true,
+      "required_distinct_documents": 2
+    },
+    "actions": [
+      {
+        "action": "audit_reason_truncated",
+        "claim_id": "A4",
+        "original_chars": 201,
+        "retained_chars": 200
+      }
+    ],
+    "source_sha_version_and_quote_integrity": "strict existing fixture-restorer validated original documents before replay",
+    "limits": "Reconstructed Session uses existing fixture loader, not fresh search/model/cache/whole-MCP run; counters0/source metadata placeholders are not live evidence."
+  },
+  "checks": {
+    "unit": 202,
+    "stdio": 6,
+    "ignored_unit": 49,
+    "ignored_stdio": 10,
+    "fmt": "passed",
+    "clippy": "passed",
+    "release_build": "passed",
+    "source_driver_selfcheck": "passed",
+    "migration_regression": "passed"
+  },
+  "release_sha256": "d239d71d4ac630fb35234597ecf035974d794e8f7bd9d6f26f7f39d0d21a6b90",
+  "source_http": 0,
+  "model_calls": 0,
+  "qwen_calls": 0,
+  "old_campaigns_resumed": false,
+  "runtime_audit_fix": true,
+  "runtime_source_aware_enabled": false,
+  "published_or_deployed": false
+}

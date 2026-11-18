@@ -1,0 +1,219 @@
+{
+  "schema": "five-agent-cases-v1",
+  "scope": "8new exploratory source-aware questions, not original20/twodayqualification",
+  "cases": [
+    {
+      "id": "T01",
+      "question": "According to Python itertools.groupby documentation, does it group equal keys anywhere in the input or only consecutive runs, and how should input be prepared to collect all equal keys together?",
+      "query": "Python itertools.groupby consecutive groups sorted same key documentation",
+      "language": "en",
+      "gold_aspects": [
+        "groupby creates groups for consecutive runs of equal keys; it does not aggregate equal keys globally regardless of input order.",
+        "To collect all items of each key together, input should be sorted/grouped on the same key function before groupby; groupby does not perform sorting itself."
+      ],
+      "reference_urls": [
+        "https://docs.python.org/3/library/itertools.html#itertools.groupby"
+      ],
+      "primary_quote": [
+        "Make an iterator that returns consecutive keys and groups from the iterable.",
+        "sorted on the same key function."
+      ],
+      "source_date_or_viewed_date": "Viewed 2026-11-18; page header Python 3.15.2 documentation; section itertools.groupby, lines279-280 in browser text.",
+      "evaluation_notes": [
+        "A statement that SQL GROUP BY and itertools.groupby group irrespective of input order is false.",
+        "A correct example without the general consecutive-run rule is not sufficient support for a general claim.",
+        "Do not call sorting mandatory for every possible use: consecutive grouping is valid without prior sorting; sorting is for collecting all equal keys."
+      ],
+      "role": "technical"
+    },
+    {
+      "id": "T02",
+      "question": "По официальной документации Python Path.resolve: что происходит с несуществующим остатком пути при strict=False, чем отличается strict=True и устраняет ли resolve компоненты '..'?",
+      "query": "Python pathlib Path.resolve strict False nonexistent remainder strict True documentation",
+      "language": "ru",
+      "gold_aspects": [
+        "При strict=False путь разрешается настолько далеко, насколько возможно; оставшаяся часть добавляется без проверки её существования.",
+        "При strict=True несуществующий путь приводит к OSError; FileNotFoundError допустим как конкретный подкласс для отсутствующего пути, но не как универсальный тип всех ошибок resolve.",
+        "Path.resolve устраняет компоненты '..' (а также делает путь абсолютным и разрешает симлинки; последние два свойства не обязательные аспекты данного вопроса)."
+      ],
+      "reference_urls": [
+        "https://docs.python.org/3/library/pathlib.html#pathlib.Path.resolve"
+      ],
+      "primary_quote": [
+        "the path is resolved as far as possible",
+        "appended without checking whether it exists.",
+        "OSError is raised.",
+        "components are also eliminated"
+      ],
+      "source_date_or_viewed_date": "Viewed 2026-11-18; page header Python 3.15.2 documentation; section Path.resolve, lines749-767 in browser text.",
+      "evaluation_notes": [
+        "Question does not require symlink-loop behavior; do not add version-dependent universal RuntimeError claims.",
+        "A claim that strict=False proves the returned path exists is false.",
+        "Keep strict mode and missing-path condition attached to the exception claim; general filesystem background does not satisfy it."
+      ],
+      "role": "technical"
+    },
+    {
+      "id": "F01",
+      "question": "В объявлении Rust 1.100.0 от 12 ноября 2026 что изменилось в never type fallback и какие editions это затрагивает?",
+      "query": "Rust 1.100.0 November 12 2026 never type fallback editions",
+      "language": "ru",
+      "gold_aspects": [
+        "Never type fallback changes from unit type () to never type !.",
+        "This change affects pre-2024 editions:2015,2018,2021; edition2024 already had this behavior."
+      ],
+      "reference_urls": [
+        "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/"
+      ],
+      "primary_quote": "This release changes the \"never type fallback\" from `()` to `!` in editions before 2024",
+      "date": "2026-11-12",
+      "source_date_or_viewed_date": {
+        "published": "2026-11-12",
+        "viewed": "2026-11-18"
+      },
+      "gold_notes": [
+        "Must preserve direction ()→!, not reverse.",
+        "Do not claim all editions newly changed;2024 behavior was already in place.",
+        "Requires own quote/context for edition qualification, not mere release title."
+      ],
+      "role": "fresh"
+    },
+    {
+      "id": "F02",
+      "question": "According to the official Python release announcement dated November 10, 2026, what is the status of Python 3.16.0a2, is it recommended for production, and when is the next alpha scheduled?",
+      "query": "Python 3.16.0a2 November 10 2026 production next alpha schedule",
+      "language": "en",
+      "gold_aspects": [
+        "Python3.16.0a2 is an early developer preview / second alpha (not a final stable release).",
+        "The preview is intended for testing and is not recommended for production use.",
+        "The next alpha3.16.0a3 is scheduled for December15,2026; scheduled future event, not already released as ofNovember18."
+      ],
+      "reference_urls": [
+        "https://www.python.org/downloads/release/python-3160a2/",
+        "https://blog.python.org/2026/11/python-3160-alpha-2-is-now-available/"
+      ],
+      "primary_quote": "This preview is intended for testing and is not recommended for production use.",
+      "date": "2026-11-10",
+      "source_date_or_viewed_date": {
+        "published": "2026-11-10",
+        "viewed": "2026-11-18"
+      },
+      "gold_notes": [
+        "Nextalpha date checked in both official releasepage and officialPythonInsider post.",
+        "Do not confuse nextalpha with finalrelease plannedOctober5,2027 or betadateMay4,2027.",
+        "No moving latest question; answer is anchored toNovember10announcement."
+      ],
+      "role": "fresh"
+    },
+    {
+      "id": "R01",
+      "question": "Когда открылась воссозданная Янтарная комната Екатерининского дворца и сколько тонн янтаря потребовалось для её восстановления по данным музея «Царское Село»?",
+      "query": "Царское Село воссозданная Янтарная комната дата открытия сколько тонн янтаря",
+      "language": "ru",
+      "gold_aspects": [
+        {
+          "id": "R01.A",
+          "claim": "Воссозданная Янтарная комната открылась 31 мая 2003 года."
+        },
+        {
+          "id": "R01.B",
+          "claim": "Для восстановления потребовалось шесть тонн янтаря."
+        }
+      ],
+      "reference_urls": [
+        "https://www.tzar.ru/news/1685953408"
+      ],
+      "primary_quote": [
+        "31 мая 2003 года, открылась воссозданная Янтарная комната.",
+        "Возрождение шедевра длилось более двадцати лет и потребовало шесть тонн янтаря."
+      ],
+      "date": {
+        "published": "2023-05-31",
+        "event": "2003-05-31",
+        "viewed": "2026-11-18"
+      },
+      "reference_title": "Двадцать лет назад открылась Янтарная комната",
+      "gold_verification": "Оба факта прочитаны в полном тексте официальной публикации музея; не только в SERP.",
+      "role": "russian"
+    },
+    {
+      "id": "R02",
+      "question": "Когда был заложен первый камень Московского планетария и какие два архитектора создали проект его здания?",
+      "query": "Московский планетарий первый камень фундамент архитекторы проект",
+      "language": "ru",
+      "gold_aspects": [
+        {
+          "id": "R02.A",
+          "claim": "Первый камень в фундамент был заложен 23 сентября 1928 года."
+        },
+        {
+          "id": "R02.B",
+          "claim": "Проект создали Михаил Барщ и Михаил Синявский."
+        }
+      ],
+      "reference_urls": [
+        "https://planetarium-moscow.ru/about/exponats/ekspozitsiya-spiral-vremeni-96"
+      ],
+      "primary_quote": [
+        "23 сентября 1928 года",
+        "по проекту молодых архитекторов Михаила Барща и Михаила Синявского в стиле конструктивизма."
+      ],
+      "date": {
+        "published": null,
+        "event": "1928-09-23",
+        "viewed": "2026-11-18"
+      },
+      "reference_title": "Экспозиция «Спираль времени»",
+      "gold_verification": "Оба факта прочитаны в тексте официальной экспозиции Московского планетария. Последующее повторное открытие завершилось таймаутом; первоначально прочитанный текст сохранён как основание gold.",
+      "role": "russian"
+    },
+    {
+      "id": "B01",
+      "question": "Верно ли, что copy.copy в Python рекурсивно копирует вложенные изменяемые объекты и поэтому изолирует их от оригинала? Чем это отличается от copy.deepcopy?",
+      "query": "Python copy.copy shallow copy nested mutable objects references deepcopy documentation",
+      "language": "ru",
+      "gold_aspects": [
+        "False premise: shallow copy creates a new outer compound object but inserts references to contained original objects, so nested mutable objects can remain shared.",
+        "Deep copy recursively copies contained objects, subject to module/type/custom-copy behavior; do not claim universal isolation of every possible object."
+      ],
+      "reference_urls": [
+        "https://docs.python.org/3.12/library/copy.html"
+      ],
+      "primary_quote": [
+        "A shallow copy constructs a new compound object",
+        "inserts references into it to the objects found in the original."
+      ],
+      "source_date_or_viewed_date": "Viewed2026-11-18, Python3.12.16 docs, pageupdated2026-10-26; shallow/deep distinction lines25-39.",
+      "evaluation_notes": [
+        "Must reject the stated shallow-copy premise explicitly or give an unambiguously contradictory accurate explanation.",
+        "A lone specific list example does not establish the general copy contract without own general-rule evidence.",
+        "No unqualified guarantee that deepcopy copies modules/files/functions or ensures universal isolation."
+      ],
+      "role": "boundaries"
+    },
+    {
+      "id": "B02",
+      "question": "site:docs.python.org/3.11/library/tomllib.html According to Python 3.11 documentation, must tomllib.load receive a binary or text file object, and does tomllib support writing TOML?",
+      "query": "site:docs.python.org/3.11/library/tomllib.html Python 3.11 tomllib.load binary text writing TOML",
+      "language": "en",
+      "gold_aspects": [
+        "tomllib.load first argument must be a readable binary file object, not an arbitrary text file object.",
+        "tomllib does not support writing TOML."
+      ],
+      "reference_urls": [
+        "https://docs.python.org/3.11/library/tomllib.html"
+      ],
+      "primary_quote": [
+        "This module does not support writing TOML.",
+        "The first argument should be a readable and binary file object."
+      ],
+      "source_date_or_viewed_date": "Viewed2026-11-18, Python3.11.18 docs, pageupdated2026-10-26; introduction and load section lines9,20-24.",
+      "evaluation_notes": [
+        "Strict site/path constraint: other versions, blogs, or sibling pathlib docs cannot count as returned admissible primary evidence.",
+        "Public primary exact page was successfully opened before runtime; source mismatch/refusal later is product failure/partial, never license to widen the caller boundary.",
+        "Version is a pinned documentation namespace, not a request for current Python release."
+      ],
+      "role": "boundaries"
+    }
+  ]
+}

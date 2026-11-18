@@ -1,0 +1,1552 @@
+{
+  "schema": "primary-evidence-results-v1",
+  "freeze": {
+    "files": {
+      "scripts/primary-evidence-2026-11-18.py": "03ca308ce7b0f774016bc3b11d8579ce2a9b9572f533ae7be68bd4e4cd28c245",
+      "scripts/primary-evidence-fixture.py": "c3c45e11261d181e6d44b591ccbe24d09237f4f39272b3e74f78a9d3cefd2871",
+      "scripts/scoped-audit-2026-11-18.py": "d14f9dbe68b6314b23fcd416fa4b8131417f962f942ed7c438edd0e489fd8035",
+      "src/research_scope_audit_experiment.rs": "513e3fdb1be90679bf5cb198755d31eba1a6b7305d5b8b2bd2c03145a54b6619",
+      "src/research_tests.rs": "6c7c5095e31596c995e2a4c1ebd9c0334be0437e36dd8c4319c6a455af1090ce",
+      "src/research.rs": "5ef2fdd229989324de95e594074487783bf67f24f5bed9007cd2c6484c7d4751",
+      "feasibility/primary-evidence-cases-2026-11-18.json": "6dc29111834b7fcc638517b8c528e288f6c28431daf83ba842bb546afde0f501",
+      "runs/primary-evidence-2026-11-18/case-index.json": "ea861806aded72cdd4c77f68504491eb009dc5ef1dc27a0021d9d0ccdc9b0ddf",
+      "runs/primary-evidence-2026-11-18/gold-review.json": "2af502a5695c969afeb9091adac0223ee3113aa544361746422db3ea741a2892",
+      "runs/primary-evidence-2026-11-18/primary-extract/tool-result.json": "38377e914b2cdf85ea94ffc3de03e6379a80a3892884bb37b4082848a9fa1ea0",
+      "runs/primary-evidence-2026-11-18/bin/audit-tests": "d84e725853843ba71a590518098fd52bf8ed67c8d52060e806c4df5bb4c2f345",
+      "runs/primary-evidence-2026-11-18/prepared/P01-baseline.json": "7df8f4c0e412d540b469e877304f0cfe864628a45a46e4e9b420a7c6768d4b75",
+      "runs/primary-evidence-2026-11-18/prepared/P01-primary.json": "32498a62ea40d77718d13ce35b4a755c220a266c1531ef5a0b606ccc47e16540",
+      "runs/primary-evidence-2026-11-18/prepared/P01-qwen.json": "021246b47461b9b8bef4a50843106b4a9cba09c19af8b5b61fc62e15f38b815c",
+      "runs/primary-evidence-2026-11-18/prepared/P02-baseline.json": "6f3ea3e282d5945b2fe32874e44209bbe4d929118b3b5c8d270b94d9a01733fc",
+      "runs/primary-evidence-2026-11-18/prepared/P02-primary.json": "25b1a2c962ed1efb151718789165b121257e36508482fd49ff1e6ec4fc6f5d21",
+      "runs/primary-evidence-2026-11-18/prepared/P02-qwen.json": "fe309ff9fe4ba2dc13f15c0ffc033f33105cacd9ac4bb3558f9e7261023f8c3a",
+      "runs/primary-evidence-2026-11-18/prepared/P01-qwen/selected.json": "1989ed13abbf580cf1de37c6cb311bb0aed3c658c8753ce383182561031d99f2",
+      "runs/primary-evidence-2026-11-18/prepared/P02-qwen/selected.json": "88053278bc678951ec03eeb5f3d6222112bf1c7111fbc507633e9ce107ee6ba0"
+    },
+    "order": [
+      {
+        "case": "P01",
+        "replicate": 1,
+        "variant": "baseline"
+      },
+      {
+        "case": "P01",
+        "replicate": 1,
+        "variant": "primary"
+      },
+      {
+        "case": "P02",
+        "replicate": 1,
+        "variant": "primary"
+      },
+      {
+        "case": "P02",
+        "replicate": 1,
+        "variant": "baseline"
+      },
+      {
+        "case": "P01",
+        "replicate": 2,
+        "variant": "primary"
+      },
+      {
+        "case": "P01",
+        "replicate": 2,
+        "variant": "baseline"
+      },
+      {
+        "case": "P02",
+        "replicate": 2,
+        "variant": "baseline"
+      },
+      {
+        "case": "P02",
+        "replicate": 2,
+        "variant": "primary"
+      },
+      {
+        "case": "P01",
+        "replicate": 3,
+        "variant": "baseline"
+      },
+      {
+        "case": "P01",
+        "replicate": 3,
+        "variant": "primary"
+      },
+      {
+        "case": "P02",
+        "replicate": 3,
+        "variant": "primary"
+      },
+      {
+        "case": "P02",
+        "replicate": 3,
+        "variant": "baseline"
+      }
+    ],
+    "model": "deepseek/deepseek-v4.1-flash-1017",
+    "max_calls": 12,
+    "wall_seconds": 600,
+    "policy": "Same original claim/ownquote and generic audit/schema; primary source only rejection context. Three preplanned paired replicates, not conditional retries. First error stops."
+  },
+  "summary": {
+    "planned": 12,
+    "attempts": [
+      {
+        "case": "P01",
+        "replicate": 1,
+        "variant": "baseline",
+        "exit_code": 0,
+        "elapsed_ms": 3362
+      },
+      {
+        "case": "P01",
+        "replicate": 1,
+        "variant": "primary",
+        "exit_code": 0,
+        "elapsed_ms": 2544
+      },
+      {
+        "case": "P02",
+        "replicate": 1,
+        "variant": "primary",
+        "exit_code": 0,
+        "elapsed_ms": 3162
+      },
+      {
+        "case": "P02",
+        "replicate": 1,
+        "variant": "baseline",
+        "exit_code": 0,
+        "elapsed_ms": 2293
+      },
+      {
+        "case": "P01",
+        "replicate": 2,
+        "variant": "primary",
+        "exit_code": 101,
+        "elapsed_ms": 1100,
+        "error": {
+          "http_429": true,
+          "retry": false,
+          "status": "model_call_failed"
+        }
+      }
+    ],
+    "stop": {
+      "reason": "first_failed_attempt_no_retry",
+      "attempt": {
+        "case": "P01",
+        "replicate": 2,
+        "variant": "primary",
+        "exit_code": 101,
+        "elapsed_ms": 1100,
+        "error": {
+          "http_429": true,
+          "retry": false,
+          "status": "model_call_failed"
+        }
+      }
+    },
+    "retries": 0
+  },
+  "rows": [
+    {
+      "attempt": {
+        "case": "P01",
+        "replicate": 1,
+        "variant": "baseline",
+        "exit_code": 0,
+        "elapsed_ms": 3362
+      },
+      "status": "completed",
+      "context_sha256": "57b1e4c16a9a845746eb14d87cd3c6c45f3e38ecad9c5b1ca782abbd86b6a843",
+      "prompt_sha256": "9975fa914e83662cef55c3bb64006beb5ab133a99b058678185565e55cc42422",
+      "schema_sha256": "0ce8b32aa4c3ef8fc497c9fcffdbef08d3ecef16060d6de97f2bcd5d89da10bf",
+      "usage": {
+        "completion_tokens": 171,
+        "completion_tokens_details": {
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 0
+        },
+        "cost": 0.000193068,
+        "cost_details": {
+          "upstream_inference_completions_cost": 8.55e-05,
+          "upstream_inference_cost": 0.000193068,
+          "upstream_inference_prompt_cost": 0.000107568
+        },
+        "is_byok": false,
+        "prompt_tokens": 2988,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "video_tokens": 0
+        },
+        "total_tokens": 3159
+      },
+      "response_model": "deepseek/deepseek-v4.1-flash-1017",
+      "raw_audit": {
+        "checks": [
+          {
+            "id": "A1",
+            "reason": "Exact quote states groupby groups only consecutive identical keys and does not sort.",
+            "verdict": "supported"
+          },
+          {
+            "id": "A2",
+            "reason": "Exact quote states streaming, no look ahead/back, only adjacent same-key elements grouped.",
+            "verdict": "supported"
+          },
+          {
+            "id": "A3",
+            "reason": "Quote says always sort by grouping key with sorted(data, key=...) before groupby; supports collecting equal keys together.",
+            "verdict": "supported"
+          },
+          {
+            "id": "A4",
+            "reason": "Exact quote states intentional and efficient, data must be pre-sorted on grouping key.",
+            "verdict": "supported"
+          }
+        ],
+        "conflicts": [],
+        "missing": [
+          2
+        ],
+        "next": {
+          "facet": 2,
+          "query": "Python itertools.groupby official documentation consecutive keys"
+        },
+        "sufficient": false
+      },
+      "result": {
+        "actions": [],
+        "answer": "groupby() groups only consecutive identical keys; it does not sort the data. [S1](<https://pynative.com/python-itertools-functools-exercises/>)\ngroupby is a streaming operation that does not look ahead or back, so only adjacent elements with the same key are grouped together. [S1](<https://pynative.com/python-itertools-functools-exercises/>)\nTo collect all equal keys together, sort by the grouping key first with sorted(data, key=...) before passing to groupby(). [S1](<https://pynative.com/python-itertools-functools-exercises/>)\nThe consecutive-only grouping is intentional and efficient, but it means the data must be pre-sorted on the grouping key. [S1](<https://pynative.com/python-itertools-functools-exercises/>)",
+        "budget": {
+          "limits": {
+            "browser": 0,
+            "documents": 4,
+            "forms": 2,
+            "generations": 6,
+            "output_bytes": 32768,
+            "qwen": 4,
+            "seconds": 180,
+            "serp": 4,
+            "source_context_chars": 24000
+          },
+          "remaining": {
+            "documents": 4,
+            "forms": 2,
+            "generations": 6,
+            "milliseconds": 177753,
+            "qwen": 4,
+            "serp": 4
+          },
+          "used": {
+            "documents": 0,
+            "forms": 0,
+            "generations": 0,
+            "qwen": 0,
+            "serp": 0
+          }
+        },
+        "claims": [
+          {
+            "answer_end": 76,
+            "answer_start": 0,
+            "evidence": [
+              {
+                "document_version": "521264aaadad5e65b94dba46e76744dcb361ee187c45fb69183c3c1dffbaaf40",
+                "end": 35237,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "Critical rule: groupby() groups only consecutive identical keys – it does not sort the data.",
+                "source_id": "S1",
+                "start": 35145
+              }
+            ],
+            "facets": [
+              0
+            ],
+            "id": "A1",
+            "kind": "fact",
+            "rationale": "",
+            "text": "groupby() groups only consecutive identical keys; it does not sort the data."
+          },
+          {
+            "answer_end": 276,
+            "answer_start": 144,
+            "evidence": [
+              {
+                "document_version": "521264aaadad5e65b94dba46e76744dcb361ee187c45fb69183c3c1dffbaaf40",
+                "end": 36918,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "It is a streaming operation – it does not look ahead or back, so only adjacent elements with the same key are grouped together.",
+                "source_id": "S1",
+                "start": 36791
+              }
+            ],
+            "facets": [
+              0
+            ],
+            "id": "A2",
+            "kind": "fact",
+            "rationale": "",
+            "text": "groupby is a streaming operation that does not look ahead or back, so only adjacent elements with the same key are grouped together."
+          },
+          {
+            "answer_end": 466,
+            "answer_start": 344,
+            "evidence": [
+              {
+                "document_version": "521264aaadad5e65b94dba46e76744dcb361ee187c45fb69183c3c1dffbaaf40",
+                "end": 35331,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "Always sort by the grouping key first with sorted(data, key=...) before passing to groupby().",
+                "source_id": "S1",
+                "start": 35238
+              }
+            ],
+            "facets": [
+              1
+            ],
+            "id": "A3",
+            "kind": "fact",
+            "rationale": "",
+            "text": "To collect all equal keys together, sort by the grouping key first with sorted(data, key=...) before passing to groupby()."
+          },
+          {
+            "answer_end": 655,
+            "answer_start": 534,
+            "evidence": [
+              {
+                "document_version": "521264aaadad5e65b94dba46e76744dcb361ee187c45fb69183c3c1dffbaaf40",
+                "end": 37015,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "This is intentional and efficient, but it means the data must be pre-sorted on the grouping key.",
+                "source_id": "S1",
+                "start": 36919
+              }
+            ],
+            "facets": [
+              1
+            ],
+            "id": "A4",
+            "kind": "fact",
+            "rationale": "",
+            "text": "The consecutive-only grouping is intentional and efficient, but it means the data must be pre-sorted on the grouping key."
+          }
+        ],
+        "conflicts": [],
+        "elapsed_ms": 2246,
+        "error": null,
+        "facets": [
+          "Does itertools.groupby group equal keys anywhere in the input or only consecutive runs?",
+          "How should input be prepared to collect all equal keys together?",
+          "Check false premise: does the documentation actually state this behavior?"
+        ],
+        "independence": "distinct document bodies; publisher independence not established",
+        "missing": [
+          2
+        ],
+        "model_calls": [],
+        "news_window": null,
+        "offset_unit": "Unicode code points; answer ranges exclude app-added citation suffixes",
+        "output_limited": false,
+        "query_forms": [],
+        "request_id": "99ff3893564864b7a627c573194d73ee91d276562f099c38905a1e0bbf51e5ac",
+        "semantic_verification": "experimental separate model audit; not an independent truth guarantee",
+        "sources": [
+          {
+            "cache": null,
+            "document_version": "521264aaadad5e65b94dba46e76744dcb361ee187c45fb69183c3c1dffbaaf40",
+            "eligibility": "read_body",
+            "eligible": true,
+            "extraction": null,
+            "id": "S1",
+            "parent_url": null,
+            "publication": {
+              "date_status": "valid",
+              "kind": "article",
+              "published_date": "2026-06-12",
+              "witness_count": 2,
+              "witnesses": [
+                {
+                  "date": "2026-06-12",
+                  "raw": "2026-06-12T07:11:30+00:00",
+                  "source": "jsonld.datePublished",
+                  "timestamp": "2026-06-12T07:11:30+00:00"
+                },
+                {
+                  "date": "2026-06-12",
+                  "raw": "2026-06-12T07:11:30+00:00",
+                  "source": "meta.article:published_time",
+                  "timestamp": "2026-06-12T07:11:30+00:00"
+                }
+              ],
+              "witnesses_limited": false
+            },
+            "text_hash": "",
+            "title": "Python Itertools and Functools Exercises: 20 Coding Problems with Solutions",
+            "url": "https://pynative.com/python-itertools-functools-exercises/"
+          },
+          {
+            "cache": null,
+            "document_version": "76a16e2e7dc367d40c82c6750c8f9fa3ae47f8c013f3b850d038f26b2aaba48f",
+            "eligibility": "read_body",
+            "eligible": true,
+            "extraction": null,
+            "id": "S2",
+            "parent_url": null,
+            "publication": {
+              "date_status": "missing",
+              "kind": "feed",
+              "published_date": null,
+              "witness_count": 0,
+              "witnesses": [],
+              "witnesses_limited": false
+            },
+            "text_hash": "",
+            "title": "Home",
+            "url": "https://github.com/TheAlgorithms/Python/wiki"
+          }
+        ],
+        "status": "partial",
+        "stop_reason": "component_replay",
+        "sufficiency": {
+          "audit_completed": true,
+          "cited_distinct_documents": 1,
+          "judge_sufficient": false,
+          "required_distinct_documents": 2
+        },
+        "untrusted_content": true
+      },
+      "retained_original_ids": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "applied_audit": {
+        "checks": [
+          {
+            "id": "A1",
+            "reason": "Exact quote states groupby groups only consecutive identical keys and does not sort.",
+            "verdict": "supported"
+          },
+          {
+            "id": "A2",
+            "reason": "Exact quote states streaming, no look ahead/back, only adjacent same-key elements grouped.",
+            "verdict": "supported"
+          },
+          {
+            "id": "A3",
+            "reason": "Quote says always sort by grouping key with sorted(data, key=...) before groupby; supports collecting equal keys together.",
+            "verdict": "supported"
+          },
+          {
+            "id": "A4",
+            "reason": "Exact quote states intentional and efficient, data must be pre-sorted on grouping key.",
+            "verdict": "supported"
+          }
+        ],
+        "conflicts": [],
+        "missing": [
+          2
+        ],
+        "next": {
+          "facet": 2,
+          "query": "Python itertools.groupby official documentation consecutive keys"
+        },
+        "sufficient": false
+      }
+    },
+    {
+      "attempt": {
+        "case": "P01",
+        "replicate": 1,
+        "variant": "primary",
+        "exit_code": 0,
+        "elapsed_ms": 2544
+      },
+      "status": "completed",
+      "context_sha256": "10f0b57e15a5d40f9f6c869d0d026a4407670def80c3f33334e2982ba15375a1",
+      "prompt_sha256": "9975fa914e83662cef55c3bb64006beb5ab133a99b058678185565e55cc42422",
+      "schema_sha256": "0ce8b32aa4c3ef8fc497c9fcffdbef08d3ecef16060d6de97f2bcd5d89da10bf",
+      "usage": {
+        "completion_tokens": 172,
+        "completion_tokens_details": {
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 0
+        },
+        "cost": 0.000172332,
+        "cost_details": {
+          "upstream_inference_completions_cost": 8.6e-05,
+          "upstream_inference_cost": 0.000172332,
+          "upstream_inference_prompt_cost": 8.6332e-05
+        },
+        "is_byok": false,
+        "prompt_tokens": 4247,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 2560,
+          "video_tokens": 0
+        },
+        "total_tokens": 4419
+      },
+      "response_model": "deepseek/deepseek-v4.1-flash-1017",
+      "raw_audit": {
+        "checks": [
+          {
+            "id": "A1",
+            "reason": "Exact quote states groupby groups only consecutive identical keys and does not sort.",
+            "verdict": "supported"
+          },
+          {
+            "id": "A2",
+            "reason": "Exact quote states streaming, no look ahead/back, only adjacent same-key elements grouped.",
+            "verdict": "supported"
+          },
+          {
+            "id": "A3",
+            "reason": "Quote says always sort by grouping key first with sorted(data, key=...) before groupby; supports collecting equal keys together.",
+            "verdict": "supported"
+          },
+          {
+            "id": "A4",
+            "reason": "Quote states intentional and efficient, data must be pre-sorted on grouping key.",
+            "verdict": "supported"
+          }
+        ],
+        "conflicts": [],
+        "missing": [
+          2
+        ],
+        "next": {
+          "facet": 2,
+          "query": "Python itertools.groupby documentation consecutive keys sorted uniq"
+        },
+        "sufficient": false
+      },
+      "result": {
+        "actions": [],
+        "answer": "groupby() groups only consecutive identical keys; it does not sort the data. [S1](<https://pynative.com/python-itertools-functools-exercises/>)\ngroupby is a streaming operation that does not look ahead or back, so only adjacent elements with the same key are grouped together. [S1](<https://pynative.com/python-itertools-functools-exercises/>)\nTo collect all equal keys together, sort by the grouping key first with sorted(data, key=...) before passing to groupby(). [S1](<https://pynative.com/python-itertools-functools-exercises/>)\nThe consecutive-only grouping is intentional and efficient, but it means the data must be pre-sorted on the grouping key. [S1](<https://pynative.com/python-itertools-functools-exercises/>)",
+        "budget": {
+          "limits": {
+            "browser": 0,
+            "documents": 4,
+            "forms": 2,
+            "generations": 6,
+            "output_bytes": 32768,
+            "qwen": 4,
+            "seconds": 180,
+            "serp": 4,
+            "source_context_chars": 24000
+          },
+          "remaining": {
+            "documents": 4,
+            "forms": 2,
+            "generations": 6,
+            "milliseconds": 177479,
+            "qwen": 4,
+            "serp": 4
+          },
+          "used": {
+            "documents": 0,
+            "forms": 0,
+            "generations": 0,
+            "qwen": 0,
+            "serp": 0
+          }
+        },
+        "claims": [
+          {
+            "answer_end": 76,
+            "answer_start": 0,
+            "evidence": [
+              {
+                "document_version": "521264aaadad5e65b94dba46e76744dcb361ee187c45fb69183c3c1dffbaaf40",
+                "end": 35237,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "Critical rule: groupby() groups only consecutive identical keys – it does not sort the data.",
+                "source_id": "S1",
+                "start": 35145
+              }
+            ],
+            "facets": [
+              0
+            ],
+            "id": "A1",
+            "kind": "fact",
+            "rationale": "",
+            "text": "groupby() groups only consecutive identical keys; it does not sort the data."
+          },
+          {
+            "answer_end": 276,
+            "answer_start": 144,
+            "evidence": [
+              {
+                "document_version": "521264aaadad5e65b94dba46e76744dcb361ee187c45fb69183c3c1dffbaaf40",
+                "end": 36918,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "It is a streaming operation – it does not look ahead or back, so only adjacent elements with the same key are grouped together.",
+                "source_id": "S1",
+                "start": 36791
+              }
+            ],
+            "facets": [
+              0
+            ],
+            "id": "A2",
+            "kind": "fact",
+            "rationale": "",
+            "text": "groupby is a streaming operation that does not look ahead or back, so only adjacent elements with the same key are grouped together."
+          },
+          {
+            "answer_end": 466,
+            "answer_start": 344,
+            "evidence": [
+              {
+                "document_version": "521264aaadad5e65b94dba46e76744dcb361ee187c45fb69183c3c1dffbaaf40",
+                "end": 35331,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "Always sort by the grouping key first with sorted(data, key=...) before passing to groupby().",
+                "source_id": "S1",
+                "start": 35238
+              }
+            ],
+            "facets": [
+              1
+            ],
+            "id": "A3",
+            "kind": "fact",
+            "rationale": "",
+            "text": "To collect all equal keys together, sort by the grouping key first with sorted(data, key=...) before passing to groupby()."
+          },
+          {
+            "answer_end": 655,
+            "answer_start": 534,
+            "evidence": [
+              {
+                "document_version": "521264aaadad5e65b94dba46e76744dcb361ee187c45fb69183c3c1dffbaaf40",
+                "end": 37015,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "This is intentional and efficient, but it means the data must be pre-sorted on the grouping key.",
+                "source_id": "S1",
+                "start": 36919
+              }
+            ],
+            "facets": [
+              1
+            ],
+            "id": "A4",
+            "kind": "fact",
+            "rationale": "",
+            "text": "The consecutive-only grouping is intentional and efficient, but it means the data must be pre-sorted on the grouping key."
+          }
+        ],
+        "conflicts": [],
+        "elapsed_ms": 2520,
+        "error": null,
+        "facets": [
+          "Does itertools.groupby group equal keys anywhere in the input or only consecutive runs?",
+          "How should input be prepared to collect all equal keys together?",
+          "Check false premise: does the documentation actually state this behavior?"
+        ],
+        "independence": "distinct document bodies; publisher independence not established",
+        "missing": [
+          2
+        ],
+        "model_calls": [],
+        "news_window": null,
+        "offset_unit": "Unicode code points; answer ranges exclude app-added citation suffixes",
+        "output_limited": false,
+        "query_forms": [],
+        "request_id": "6822451be37b30bdb4e88a94e0a1ff6e4fbe896d750f45dc087fe1e1d567b4f6",
+        "semantic_verification": "experimental separate model audit; not an independent truth guarantee",
+        "sources": [
+          {
+            "cache": null,
+            "document_version": "521264aaadad5e65b94dba46e76744dcb361ee187c45fb69183c3c1dffbaaf40",
+            "eligibility": "read_body",
+            "eligible": true,
+            "extraction": null,
+            "id": "S1",
+            "parent_url": null,
+            "publication": {
+              "date_status": "valid",
+              "kind": "article",
+              "published_date": "2026-06-12",
+              "witness_count": 2,
+              "witnesses": [
+                {
+                  "date": "2026-06-12",
+                  "raw": "2026-06-12T07:11:30+00:00",
+                  "source": "jsonld.datePublished",
+                  "timestamp": "2026-06-12T07:11:30+00:00"
+                },
+                {
+                  "date": "2026-06-12",
+                  "raw": "2026-06-12T07:11:30+00:00",
+                  "source": "meta.article:published_time",
+                  "timestamp": "2026-06-12T07:11:30+00:00"
+                }
+              ],
+              "witnesses_limited": false
+            },
+            "text_hash": "",
+            "title": "Python Itertools and Functools Exercises: 20 Coding Problems with Solutions",
+            "url": "https://pynative.com/python-itertools-functools-exercises/"
+          },
+          {
+            "cache": null,
+            "document_version": "76a16e2e7dc367d40c82c6750c8f9fa3ae47f8c013f3b850d038f26b2aaba48f",
+            "eligibility": "read_body",
+            "eligible": true,
+            "extraction": null,
+            "id": "S2",
+            "parent_url": null,
+            "publication": {
+              "date_status": "missing",
+              "kind": "feed",
+              "published_date": null,
+              "witness_count": 0,
+              "witnesses": [],
+              "witnesses_limited": false
+            },
+            "text_hash": "",
+            "title": "Home",
+            "url": "https://github.com/TheAlgorithms/Python/wiki"
+          },
+          {
+            "cache": null,
+            "document_version": "20866e3bde6e9d2e67e777f31e44f02c818c311cf508895eb04bc5bd176424a4",
+            "eligibility": "read_body",
+            "eligible": true,
+            "extraction": null,
+            "id": "S3",
+            "parent_url": null,
+            "publication": null,
+            "text_hash": "",
+            "title": "itertools — Functions creating iterators for efficient looping — Python 3.15.2 documentation",
+            "url": "https://docs.python.org/3/library/itertools.html"
+          }
+        ],
+        "status": "partial",
+        "stop_reason": "component_replay",
+        "sufficiency": {
+          "audit_completed": true,
+          "cited_distinct_documents": 1,
+          "judge_sufficient": false,
+          "required_distinct_documents": 2
+        },
+        "untrusted_content": true
+      },
+      "retained_original_ids": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "applied_audit": {
+        "checks": [
+          {
+            "id": "A1",
+            "reason": "Exact quote states groupby groups only consecutive identical keys and does not sort.",
+            "verdict": "supported"
+          },
+          {
+            "id": "A2",
+            "reason": "Exact quote states streaming, no look ahead/back, only adjacent same-key elements grouped.",
+            "verdict": "supported"
+          },
+          {
+            "id": "A3",
+            "reason": "Quote says always sort by grouping key first with sorted(data, key=...) before groupby; supports collecting equal keys together.",
+            "verdict": "supported"
+          },
+          {
+            "id": "A4",
+            "reason": "Quote states intentional and efficient, data must be pre-sorted on grouping key.",
+            "verdict": "supported"
+          }
+        ],
+        "conflicts": [],
+        "missing": [
+          2
+        ],
+        "next": {
+          "facet": 2,
+          "query": "Python itertools.groupby documentation consecutive keys sorted uniq"
+        },
+        "sufficient": false
+      }
+    },
+    {
+      "attempt": {
+        "case": "P02",
+        "replicate": 1,
+        "variant": "primary",
+        "exit_code": 0,
+        "elapsed_ms": 3162
+      },
+      "status": "completed",
+      "context_sha256": "53e9becd07aa37c2fc45dab4bb2983cb5add92161e06ceae0cfd1418cb9760ab",
+      "prompt_sha256": "9975fa914e83662cef55c3bb64006beb5ab133a99b058678185565e55cc42422",
+      "schema_sha256": "0ce8b32aa4c3ef8fc497c9fcffdbef08d3ecef16060d6de97f2bcd5d89da10bf",
+      "usage": {
+        "completion_tokens": 184,
+        "completion_tokens_details": {
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 0
+        },
+        "cost": 0.000270056,
+        "cost_details": {
+          "upstream_inference_completions_cost": 9.2e-05,
+          "upstream_inference_cost": 0.000270056,
+          "upstream_inference_prompt_cost": 0.000178056
+        },
+        "is_byok": false,
+        "prompt_tokens": 4946,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "video_tokens": 0
+        },
+        "total_tokens": 5130
+      },
+      "response_model": "deepseek/deepseek-v4.1-flash-1017",
+      "raw_audit": {
+        "checks": [
+          {
+            "id": "A1",
+            "reason": "Цитата прямо подтверждает экспериментальный статус и необходимость собственной сборки для отключения GIL.",
+            "verdict": "supported"
+          },
+          {
+            "id": "A2",
+            "reason": "Цитата подтверждает экспериментальный статус и отсутствие установки по умолчанию, отдельную опцию установки.",
+            "verdict": "supported"
+          },
+          {
+            "id": "A3",
+            "reason": "Цитата прямо подтверждает установку отдельного PythonT.framework рядом с обычным.",
+            "verdict": "supported"
+          },
+          {
+            "id": "A4",
+            "reason": "Цитата подтверждает отсутствие free threading в обычной сборке и ABI с меткой «t».",
+            "verdict": "supported"
+          }
+        ],
+        "conflicts": [],
+        "missing": [],
+        "next": {
+          "facet": 0,
+          "query": ""
+        },
+        "sufficient": true
+      },
+      "result": {
+        "actions": [],
+        "answer": "Free threading вводится как экспериментальная функция и не входит в официальную сборку Python; для отключения GIL нужна собственная сборка. [S1](<https://realpython.com/python313-free-threading-jit/>)\nФункция по-прежнему считается экспериментальной, поэтому её поддержка не устанавливается по умолчанию, а предлагается отдельной опцией установки. [S2](<https://github.com/python/cpython/issues/120098>)\nПри выборе этой опции устанавливается отдельный PythonT.framework рядом с обычным Python.framework. [S2](<https://github.com/python/cpython/issues/120098>)\nОбычная сборка Python не поддерживает free threading, а специальная free-threaded сборка имеет ABI с меткой «t». [S1](<https://realpython.com/python313-free-threading-jit/>)",
+        "budget": {
+          "limits": {
+            "browser": 0,
+            "documents": 4,
+            "forms": 2,
+            "generations": 6,
+            "output_bytes": 32768,
+            "qwen": 4,
+            "seconds": 180,
+            "serp": 4,
+            "source_context_chars": 24000
+          },
+          "remaining": {
+            "documents": 4,
+            "forms": 2,
+            "generations": 6,
+            "milliseconds": 176858,
+            "qwen": 4,
+            "serp": 4
+          },
+          "used": {
+            "documents": 0,
+            "forms": 0,
+            "generations": 0,
+            "qwen": 0,
+            "serp": 0
+          }
+        },
+        "claims": [
+          {
+            "answer_end": 139,
+            "answer_start": 0,
+            "evidence": [
+              {
+                "document_version": "9956819e86e927f82e1b89549222b364a8d7f4f541cc7a741240ecc08f6a958d",
+                "end": 5981,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "Experimental: Free threading is introduced as an experimental feature and isn’t a part of the official Python distribution. You must make a custom Python build to disable the GIL.",
+                "source_id": "S1",
+                "start": 5802
+              }
+            ],
+            "facets": [
+              0,
+              1,
+              2
+            ],
+            "id": "A1",
+            "kind": "fact",
+            "rationale": "",
+            "text": "Free threading вводится как экспериментальная функция и не входит в официальную сборку Python; для отключения GIL нужна собственная сборка."
+          },
+          {
+            "answer_end": 346,
+            "answer_start": 201,
+            "evidence": [
+              {
+                "document_version": "3f8df8939cb879d9c27f9b6c9909ce7ae5eb12b722bd3746410b1842c43fb609",
+                "end": 2786,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "Because this feature is still considered experimental, the support for it is not installed by default. It is packaged as a separate install option, available by clicking the Customize button on the Installation Type step of the installer as described above.",
+                "source_id": "S2",
+                "start": 2529
+              }
+            ],
+            "facets": [
+              0,
+              1,
+              2
+            ],
+            "id": "A2",
+            "kind": "fact",
+            "rationale": "",
+            "text": "Функция по-прежнему считается экспериментальной, поэтому её поддержка не устанавливается по умолчанию, а предлагается отдельной опцией установки."
+          },
+          {
+            "answer_end": 502,
+            "answer_start": 403,
+            "evidence": [
+              {
+                "document_version": "3f8df8939cb879d9c27f9b6c9909ce7ae5eb12b722bd3746410b1842c43fb609",
+                "end": 2915,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "When selected, a separate PythonT.framework will also be installed alongside the normal Python.framework in /Library/Frameworks.",
+                "source_id": "S2",
+                "start": 2787
+              }
+            ],
+            "facets": [
+              2
+            ],
+            "id": "A3",
+            "kind": "fact",
+            "rationale": "",
+            "text": "При выборе этой опции устанавливается отдельный PythonT.framework рядом с обычным Python.framework."
+          },
+          {
+            "answer_end": 671,
+            "answer_start": 559,
+            "evidence": [
+              {
+                "document_version": "9956819e86e927f82e1b89549222b364a8d7f4f541cc7a741240ecc08f6a958d",
+                "end": 6970,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "The vanilla Python build won’t support free threading, while the special free-threaded flavor will have a slightly different Application Binary Interface (ABI) tagged with the letter “t” for threading.",
+                "source_id": "S1",
+                "start": 6769
+              }
+            ],
+            "facets": [
+              2
+            ],
+            "id": "A4",
+            "kind": "fact",
+            "rationale": "",
+            "text": "Обычная сборка Python не поддерживает free threading, а специальная free-threaded сборка имеет ABI с меткой «t»."
+          }
+        ],
+        "conflicts": [],
+        "elapsed_ms": 3141,
+        "error": null,
+        "facets": [
+          "Статус free-threaded режима без GIL в CPython 3.13: экспериментальный или стабильный (PEP 703)",
+          "Включён ли free-threaded режим по умолчанию в CPython 3.13",
+          "Нужен ли отдельный executable/сборка для free-threaded режима в CPython 3.13"
+        ],
+        "independence": "distinct document bodies; publisher independence not established",
+        "missing": [],
+        "model_calls": [],
+        "news_window": null,
+        "offset_unit": "Unicode code points; answer ranges exclude app-added citation suffixes",
+        "output_limited": false,
+        "query_forms": [],
+        "request_id": "eaa0d855fd9d8d632cfe5d15a7033ad091e68a385a0af251f405a0bd4c30dec9",
+        "semantic_verification": "experimental separate model audit; not an independent truth guarantee",
+        "sources": [
+          {
+            "cache": null,
+            "document_version": "9956819e86e927f82e1b89549222b364a8d7f4f541cc7a741240ecc08f6a958d",
+            "eligibility": "read_body",
+            "eligible": true,
+            "extraction": null,
+            "id": "S1",
+            "parent_url": null,
+            "publication": {
+              "date_status": "valid",
+              "kind": "article",
+              "published_date": "2024-09-18",
+              "witness_count": 1,
+              "witnesses": [
+                {
+                  "date": "2024-09-18",
+                  "raw": "2024-09-18T14:00:00+00:00",
+                  "source": "jsonld.datePublished",
+                  "timestamp": "2024-09-18T14:00:00+00:00"
+                }
+              ],
+              "witnesses_limited": false
+            },
+            "text_hash": "",
+            "title": "Python 3.13: Free Threading and a JIT Compiler",
+            "url": "https://realpython.com/python313-free-threading-jit/"
+          },
+          {
+            "cache": null,
+            "document_version": "3f8df8939cb879d9c27f9b6c9909ce7ae5eb12b722bd3746410b1842c43fb609",
+            "eligibility": "read_body",
+            "eligible": true,
+            "extraction": null,
+            "id": "S2",
+            "parent_url": null,
+            "publication": {
+              "date_status": "missing",
+              "kind": "feed",
+              "published_date": null,
+              "witness_count": 0,
+              "witnesses": [],
+              "witnesses_limited": false
+            },
+            "text_hash": "",
+            "title": "Provide downloadable free-threaded macOS builds for Python 3.13 #120098",
+            "url": "https://github.com/python/cpython/issues/120098"
+          },
+          {
+            "cache": null,
+            "document_version": "89976fec01d67dacc3c24e70d5d0bb7c7188047bdae1723fb040629c5729cab2",
+            "eligibility": "read_body",
+            "eligible": true,
+            "extraction": null,
+            "id": "S3",
+            "parent_url": null,
+            "publication": null,
+            "text_hash": "",
+            "title": "What’s New In Python 3.13 — Python 3.13.18 documentation",
+            "url": "https://docs.python.org/3.13/whatsnew/3.13.html"
+          }
+        ],
+        "status": "partial",
+        "stop_reason": "component_replay",
+        "sufficiency": {
+          "audit_completed": true,
+          "cited_distinct_documents": 2,
+          "judge_sufficient": true,
+          "required_distinct_documents": 2
+        },
+        "untrusted_content": true
+      },
+      "retained_original_ids": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "applied_audit": {
+        "checks": [
+          {
+            "id": "A1",
+            "reason": "Цитата прямо подтверждает экспериментальный статус и необходимость собственной сборки для отключения GIL.",
+            "verdict": "supported"
+          },
+          {
+            "id": "A2",
+            "reason": "Цитата подтверждает экспериментальный статус и отсутствие установки по умолчанию, отдельную опцию установки.",
+            "verdict": "supported"
+          },
+          {
+            "id": "A3",
+            "reason": "Цитата прямо подтверждает установку отдельного PythonT.framework рядом с обычным.",
+            "verdict": "supported"
+          },
+          {
+            "id": "A4",
+            "reason": "Цитата подтверждает отсутствие free threading в обычной сборке и ABI с меткой «t».",
+            "verdict": "supported"
+          }
+        ],
+        "conflicts": [],
+        "missing": [],
+        "next": {
+          "facet": 0,
+          "query": ""
+        },
+        "sufficient": true
+      }
+    },
+    {
+      "attempt": {
+        "case": "P02",
+        "replicate": 1,
+        "variant": "baseline",
+        "exit_code": 0,
+        "elapsed_ms": 2293
+      },
+      "status": "completed",
+      "context_sha256": "1a4c4cb6a4e9a8ea7a0b4d12a30b9c4dccf47290d677f70477bad812ef2f628e",
+      "prompt_sha256": "9975fa914e83662cef55c3bb64006beb5ab133a99b058678185565e55cc42422",
+      "schema_sha256": "0ce8b32aa4c3ef8fc497c9fcffdbef08d3ecef16060d6de97f2bcd5d89da10bf",
+      "usage": {
+        "completion_tokens": 182,
+        "completion_tokens_details": {
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 0
+        },
+        "cost": 0.000137568,
+        "cost_details": {
+          "upstream_inference_completions_cost": 9.1e-05,
+          "upstream_inference_cost": 0.000137568,
+          "upstream_inference_prompt_cost": 4.6568e-05
+        },
+        "is_byok": false,
+        "prompt_tokens": 3882,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 0,
+          "cached_tokens": 3584,
+          "video_tokens": 0
+        },
+        "total_tokens": 4064
+      },
+      "response_model": "deepseek/deepseek-v4.1-flash-1017",
+      "raw_audit": {
+        "checks": [
+          {
+            "id": "A1",
+            "reason": "Цитата прямо подтверждает экспериментальный статус и необходимость собственной сборки для отключения GIL.",
+            "verdict": "supported"
+          },
+          {
+            "id": "A2",
+            "reason": "Цитата подтверждает экспериментальный статус и отсутствие установки по умолчанию, отдельную опцию.",
+            "verdict": "supported"
+          },
+          {
+            "id": "A3",
+            "reason": "Цитата прямо подтверждает установку отдельного PythonT.framework рядом с обычным.",
+            "verdict": "supported"
+          },
+          {
+            "id": "A4",
+            "reason": "Цитата подтверждает отсутствие free threading в обычной сборке и ABI с меткой «t».",
+            "verdict": "supported"
+          }
+        ],
+        "conflicts": [],
+        "missing": [],
+        "next": {
+          "facet": 0,
+          "query": ""
+        },
+        "sufficient": true
+      },
+      "result": {
+        "actions": [],
+        "answer": "Free threading вводится как экспериментальная функция и не входит в официальную сборку Python; для отключения GIL нужна собственная сборка. [S1](<https://realpython.com/python313-free-threading-jit/>)\nФункция по-прежнему считается экспериментальной, поэтому её поддержка не устанавливается по умолчанию, а предлагается отдельной опцией установки. [S2](<https://github.com/python/cpython/issues/120098>)\nПри выборе этой опции устанавливается отдельный PythonT.framework рядом с обычным Python.framework. [S2](<https://github.com/python/cpython/issues/120098>)\nОбычная сборка Python не поддерживает free threading, а специальная free-threaded сборка имеет ABI с меткой «t». [S1](<https://realpython.com/python313-free-threading-jit/>)",
+        "budget": {
+          "limits": {
+            "browser": 0,
+            "documents": 4,
+            "forms": 2,
+            "generations": 6,
+            "output_bytes": 32768,
+            "qwen": 4,
+            "seconds": 180,
+            "serp": 4,
+            "source_context_chars": 24000
+          },
+          "remaining": {
+            "documents": 4,
+            "forms": 2,
+            "generations": 6,
+            "milliseconds": 177733,
+            "qwen": 4,
+            "serp": 4
+          },
+          "used": {
+            "documents": 0,
+            "forms": 0,
+            "generations": 0,
+            "qwen": 0,
+            "serp": 0
+          }
+        },
+        "claims": [
+          {
+            "answer_end": 139,
+            "answer_start": 0,
+            "evidence": [
+              {
+                "document_version": "9956819e86e927f82e1b89549222b364a8d7f4f541cc7a741240ecc08f6a958d",
+                "end": 5981,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "Experimental: Free threading is introduced as an experimental feature and isn’t a part of the official Python distribution. You must make a custom Python build to disable the GIL.",
+                "source_id": "S1",
+                "start": 5802
+              }
+            ],
+            "facets": [
+              0,
+              1,
+              2
+            ],
+            "id": "A1",
+            "kind": "fact",
+            "rationale": "",
+            "text": "Free threading вводится как экспериментальная функция и не входит в официальную сборку Python; для отключения GIL нужна собственная сборка."
+          },
+          {
+            "answer_end": 346,
+            "answer_start": 201,
+            "evidence": [
+              {
+                "document_version": "3f8df8939cb879d9c27f9b6c9909ce7ae5eb12b722bd3746410b1842c43fb609",
+                "end": 2786,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "Because this feature is still considered experimental, the support for it is not installed by default. It is packaged as a separate install option, available by clicking the Customize button on the Installation Type step of the installer as described above.",
+                "source_id": "S2",
+                "start": 2529
+              }
+            ],
+            "facets": [
+              0,
+              1,
+              2
+            ],
+            "id": "A2",
+            "kind": "fact",
+            "rationale": "",
+            "text": "Функция по-прежнему считается экспериментальной, поэтому её поддержка не устанавливается по умолчанию, а предлагается отдельной опцией установки."
+          },
+          {
+            "answer_end": 502,
+            "answer_start": 403,
+            "evidence": [
+              {
+                "document_version": "3f8df8939cb879d9c27f9b6c9909ce7ae5eb12b722bd3746410b1842c43fb609",
+                "end": 2915,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "When selected, a separate PythonT.framework will also be installed alongside the normal Python.framework in /Library/Frameworks.",
+                "source_id": "S2",
+                "start": 2787
+              }
+            ],
+            "facets": [
+              2
+            ],
+            "id": "A3",
+            "kind": "fact",
+            "rationale": "",
+            "text": "При выборе этой опции устанавливается отдельный PythonT.framework рядом с обычным Python.framework."
+          },
+          {
+            "answer_end": 671,
+            "answer_start": 559,
+            "evidence": [
+              {
+                "document_version": "9956819e86e927f82e1b89549222b364a8d7f4f541cc7a741240ecc08f6a958d",
+                "end": 6970,
+                "field": "text",
+                "offset_unit": "Unicode code points in original extracted text",
+                "quote": "The vanilla Python build won’t support free threading, while the special free-threaded flavor will have a slightly different Application Binary Interface (ABI) tagged with the letter “t” for threading.",
+                "source_id": "S1",
+                "start": 6769
+              }
+            ],
+            "facets": [
+              2
+            ],
+            "id": "A4",
+            "kind": "fact",
+            "rationale": "",
+            "text": "Обычная сборка Python не поддерживает free threading, а специальная free-threaded сборка имеет ABI с меткой «t»."
+          }
+        ],
+        "conflicts": [],
+        "elapsed_ms": 2266,
+        "error": null,
+        "facets": [
+          "Статус free-threaded режима без GIL в CPython 3.13: экспериментальный или стабильный (PEP 703)",
+          "Включён ли free-threaded режим по умолчанию в CPython 3.13",
+          "Нужен ли отдельный executable/сборка для free-threaded режима в CPython 3.13"
+        ],
+        "independence": "distinct document bodies; publisher independence not established",
+        "missing": [],
+        "model_calls": [],
+        "news_window": null,
+        "offset_unit": "Unicode code points; answer ranges exclude app-added citation suffixes",
+        "output_limited": false,
+        "query_forms": [],
+        "request_id": "fbba359826df18f3149780b138009fb6b96b32d3547ed01a611203469b08285d",
+        "semantic_verification": "experimental separate model audit; not an independent truth guarantee",
+        "sources": [
+          {
+            "cache": null,
+            "document_version": "9956819e86e927f82e1b89549222b364a8d7f4f541cc7a741240ecc08f6a958d",
+            "eligibility": "read_body",
+            "eligible": true,
+            "extraction": null,
+            "id": "S1",
+            "parent_url": null,
+            "publication": {
+              "date_status": "valid",
+              "kind": "article",
+              "published_date": "2024-09-18",
+              "witness_count": 1,
+              "witnesses": [
+                {
+                  "date": "2024-09-18",
+                  "raw": "2024-09-18T14:00:00+00:00",
+                  "source": "jsonld.datePublished",
+                  "timestamp": "2024-09-18T14:00:00+00:00"
+                }
+              ],
+              "witnesses_limited": false
+            },
+            "text_hash": "",
+            "title": "Python 3.13: Free Threading and a JIT Compiler",
+            "url": "https://realpython.com/python313-free-threading-jit/"
+          },
+          {
+            "cache": null,
+            "document_version": "3f8df8939cb879d9c27f9b6c9909ce7ae5eb12b722bd3746410b1842c43fb609",
+            "eligibility": "read_body",
+            "eligible": true,
+            "extraction": null,
+            "id": "S2",
+            "parent_url": null,
+            "publication": {
+              "date_status": "missing",
+              "kind": "feed",
+              "published_date": null,
+              "witness_count": 0,
+              "witnesses": [],
+              "witnesses_limited": false
+            },
+            "text_hash": "",
+            "title": "Provide downloadable free-threaded macOS builds for Python 3.13 #120098",
+            "url": "https://github.com/python/cpython/issues/120098"
+          }
+        ],
+        "status": "partial",
+        "stop_reason": "component_replay",
+        "sufficiency": {
+          "audit_completed": true,
+          "cited_distinct_documents": 2,
+          "judge_sufficient": true,
+          "required_distinct_documents": 2
+        },
+        "untrusted_content": true
+      },
+      "retained_original_ids": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "applied_audit": {
+        "checks": [
+          {
+            "id": "A1",
+            "reason": "Цитата прямо подтверждает экспериментальный статус и необходимость собственной сборки для отключения GIL.",
+            "verdict": "supported"
+          },
+          {
+            "id": "A2",
+            "reason": "Цитата подтверждает экспериментальный статус и отсутствие установки по умолчанию, отдельную опцию.",
+            "verdict": "supported"
+          },
+          {
+            "id": "A3",
+            "reason": "Цитата прямо подтверждает установку отдельного PythonT.framework рядом с обычным.",
+            "verdict": "supported"
+          },
+          {
+            "id": "A4",
+            "reason": "Цитата подтверждает отсутствие free threading в обычной сборке и ABI с меткой «t».",
+            "verdict": "supported"
+          }
+        ],
+        "conflicts": [],
+        "missing": [],
+        "next": {
+          "facet": 0,
+          "query": ""
+        },
+        "sufficient": true
+      }
+    },
+    {
+      "attempt": {
+        "case": "P01",
+        "replicate": 2,
+        "variant": "primary",
+        "exit_code": 101,
+        "elapsed_ms": 1100,
+        "error": {
+          "http_429": true,
+          "retry": false,
+          "status": "model_call_failed"
+        }
+      },
+      "status": "failed",
+      "context_sha256": "10f0b57e15a5d40f9f6c869d0d026a4407670def80c3f33334e2982ba15375a1",
+      "prompt_sha256": "9975fa914e83662cef55c3bb64006beb5ab133a99b058678185565e55cc42422",
+      "schema_sha256": "0ce8b32aa4c3ef8fc497c9fcffdbef08d3ecef16060d6de97f2bcd5d89da10bf",
+      "usage": null
+    }
+  ],
+  "extraction": {
+    "status": "ok",
+    "documents": [
+      {
+        "available_fulltext_url": null,
+        "blocks": 310,
+        "chars": 39110,
+        "content_scope": "main",
+        "coverage": "not_verified",
+        "elapsed_ms": 371,
+        "extraction_method": "semantic_main",
+        "final_url": "https://docs.python.org/3/library/itertools.html",
+        "hops": [
+          "https://docs.python.org/3/library/itertools.html"
+        ],
+        "news": {
+          "date_status": "missing",
+          "heading": "itertools — Functions creating iterators for efficient looping¶",
+          "kind": "feed",
+          "publication_witnesses": [],
+          "published_date": null,
+          "source_url": "https://docs.python.org/3/library/itertools.html",
+          "title": "itertools — Functions creating iterators for efficient looping — Python 3.15.2 documentation"
+        },
+        "page_title": "itertools — Functions creating iterators for efficient looping — Python 3.15.2 documentation",
+        "status": "ok",
+        "text_hash": "ebd1403107661fc806caf02e6e3dd287e15f1eee21e13f22b975c3a9e26ddbf1",
+        "title": "itertools — Functions creating iterators for efficient looping — Python 3.15.2 documentation",
+        "truncated": false,
+        "url": "https://docs.python.org/3/library/itertools.html",
+        "warnings": []
+      },
+      {
+        "available_fulltext_url": null,
+        "blocks": 883,
+        "chars": 100000,
+        "content_scope": "main",
+        "coverage": "not_verified",
+        "elapsed_ms": 1916,
+        "extraction_method": "semantic_main",
+        "final_url": "https://docs.python.org/3.13/whatsnew/3.13.html",
+        "hops": [
+          "https://docs.python.org/3.13/whatsnew/3.13.html"
+        ],
+        "news": {
+          "date_status": "missing",
+          "heading": "What’s New In Python 3.13¶",
+          "kind": "feed",
+          "publication_witnesses": [],
+          "published_date": null,
+          "source_url": "https://docs.python.org/3.13/whatsnew/3.13.html",
+          "title": "What’s New In Python 3.13 — Python 3.13.18 documentation"
+        },
+        "page_title": "What’s New In Python 3.13 — Python 3.13.18 documentation",
+        "status": "ok",
+        "text_hash": "57af1a844f8f443a4217578ce6325cbe47eb529b6dd43a4f7b9dbeb3a87fe6ab",
+        "title": "What’s New In Python 3.13 — Python 3.13.18 documentation",
+        "truncated": true,
+        "url": "https://docs.python.org/3.13/whatsnew/3.13.html",
+        "warnings": []
+      }
+    ]
+  },
+  "source_state_after": {
+    "blocked": {
+      "bing": "excluded from fixed protocol",
+      "ddg": "historical challenge; unqualified in this protocol",
+      "mwmbl": "excluded from fixed protocol",
+      "naver": "source_challenge: verification page; no retry"
+    },
+    "document_blocks": {
+      "devessentials.dev": "source_challenge: verification page; no retry",
+      "eur-lex.europa.eu": "HTTP 202",
+      "hermes-agent.nousresearch.com": "source_blocked: no retry in this probe",
+      "learn.microsoft.com": "source_challenge: verification page; no retry",
+      "parallelworks.com": "source_challenge: verification page; no retry",
+      "redis.io": "source_blocked: no retry in this probe",
+      "ria.ru": "source_challenge: verification widget; no retry",
+      "slice-master.co": "source_blocked: no retry in this probe",
+      "tfl.gov.uk": "source_blocked: no retry in this probe",
+      "vimeo.com": "source_challenge: connection verification page observed in frozen R01; no retry",
+      "www.atlantic.net": "source_blocked: no retry in this probe",
+      "www.ebay.com": "source_blocked: no retry in this probe",
+      "www.eracomp.cz": "source_challenge: verification widget; no retry",
+      "www.ltmuseum.co.uk": "source_blocked: no retry in this probe",
+      "www.mdpi.com": "source_blocked: no retry in this probe",
+      "www.mujrozhlas.cz": "source_blocked: no retry in this probe",
+      "www.npmjs.com": "source_blocked: no retry in this probe",
+      "www.webstaurantstore.com": "source_blocked: no retry in this probe"
+    }
+  },
+  "refusals_preserved": true,
+  "startup": {
+    "utc_before_generative": "2026-11-18T08:36:58.039794+00:00",
+    "requested_model": "deepseek/deepseek-v4.1-flash-1017",
+    "reranker": "Qwen3-Reranker-0.6B-4bit",
+    "settings_mtime_ns": 1794984368654384670,
+    "no_settings_edits": true,
+    "limits": {
+      "generative_calls": 12,
+      "per_audit_tokens": 3072,
+      "per_audit_seconds": 90,
+      "retry": 0
+    },
+    "timing_limit": "Helper committed before localQwen; full source/driver/settings freeze after2localQwen calls, beforegenerative. No input/code tuning afterscores."
+  },
+  "known_cost_usd": 0.000773024,
+  "unknown_usage_attempts": 1,
+  "source_url_reads": 2,
+  "local_qwen_calls": 2,
+  "model_attempts": 5,
+  "model_responses": 4
+}

@@ -1,0 +1,518 @@
+{
+  "schema": "witness-experiments-cases-v1",
+  "created_utc": "2026-11-18T07:29:06.135783+00:00",
+  "scope": "Offline originalsource deterministic experiments only; historicaldevelopment8 and separate syntheticchallenge8, never generalholdout. No liveHTTP/newLLM/Qwen/modelgeneration.",
+  "arms": {
+    "A": "expand(text,start,end) -> status,quote,start,end,reason; original claim unchanged",
+    "B": "extract(text,start,end) -> status,quote,start,end,claim,reason; claim completeoriginalsentence, whitespacecollapse allowed; no freeparaphrase"
+  },
+  "bounds": {
+    "quote_codepoints": 360,
+    "claim_codepoints": 240,
+    "offset_unit": "Unicode codepoints in original source_text",
+    "withhold": "Ambiguous/crosssentence/nonfitting boundaries; no fabricatedfallback"
+  },
+  "scoring_policy": {
+    "fixed_rows": true,
+    "claim_truth": "Evaluate actual resulting claim with original query/time/platform/API scope; Aexpandedquote cannot repair falseclaim. Bcomplete source sentence not automatictruth.",
+    "own_semantic_faithfulness": "Compare meaning to full sourcecontext, bind negation, referents, explicitintro, platform/date. Local exactslice onlyprovenance.",
+    "query_coverage": "Each listed condition must appear in supported outputclaim AND ownquote; quotecoverage alone does not mean claimansweredquestion. Withheld/missing do not count as supported; no hiddenclaimcount denominator reduction.",
+    "cohorts": "Report historicaldevelopment and syntheticchallenge separately. Challengeauthors A/B cannot inspect cases/gold; parent only passes interface contract."
+  },
+  "cases": [
+    {
+      "id": "H01",
+      "cohort": "historical_development",
+      "synthetic": false,
+      "question": "According to Python itertools.groupby documentation, does it group equal keys anywhere in the input or only consecutive runs, and how should input be prepared to collect all equal keys together?",
+      "source_url": "https://pynative.com/python-itertools-functools-exercises/",
+      "source_artifact": "runs/search-repair-2026-11-18/regression/research/T01/tool-result.json",
+      "recorded_case_claim": "T01/A4",
+      "claim_text": "The consecutive-only grouping is intentional and efficient, but it means the data must be pre-sorted on the grouping key.",
+      "witness": {
+        "quote": "This is intentional and efficient, but it means the data must be pre-sorted on the grouping key.",
+        "start": 36919,
+        "end": 37015
+      },
+      "gold": {
+        "baseline_claim_truth": "false",
+        "local_literal_quote_provenance": true,
+        "conditions": [
+          "Consecutive equalkey grouping",
+          "Sorting required only to collect all equal keys globally"
+        ],
+        "semantic_notes": "Unconditional mandatory presorting is false; unsorted consecutive grouping valid.",
+        "truth_basis": "Frozen prior independent primarygold and ownwitness review; exact sentence alone not truthguarantee."
+      },
+      "source_text_sha256": "33a114efe3323711140ef93fff99389ece79b84050400f71122121a7486921f8",
+      "source_text_codepoints": 71737,
+      "input_ref": {
+        "path": "runs/witness-experiments-2026-11-18/inputs.json",
+        "case_id": "H01",
+        "inputs_sha256": "de8adc7961e2e3f0bda5d6bd7178274fa31b5e8a273d72f7d1954e6f52bc79a0"
+      }
+    },
+    {
+      "id": "H02",
+      "cohort": "historical_development",
+      "synthetic": false,
+      "question": "According to Python itertools.groupby documentation, does it group equal keys anywhere in the input or only consecutive runs, and how should input be prepared to collect all equal keys together?",
+      "source_url": "https://pynative.com/python-itertools-functools-exercises/",
+      "source_artifact": "runs/search-repair-2026-11-18/regression/research/T01/tool-result.json",
+      "recorded_case_claim": "T01/A3",
+      "claim_text": "To collect all equal keys together, sort by the grouping key first with sorted(data, key=...) before passing to groupby().",
+      "witness": {
+        "quote": "Always sort by the grouping key first with sorted(data, key=...) before passing to groupby().",
+        "start": 35238,
+        "end": 35331
+      },
+      "gold": {
+        "baseline_claim_truth": "true",
+        "local_literal_quote_provenance": true,
+        "conditions": [
+          "To collect all equal keys together, sort/group by samekey first"
+        ],
+        "semantic_notes": "Conditional all-equal-key collection preparation is correct.",
+        "truth_basis": "Frozen prior independent primarygold and ownwitness review; exact sentence alone not truthguarantee."
+      },
+      "source_text_sha256": "33a114efe3323711140ef93fff99389ece79b84050400f71122121a7486921f8",
+      "source_text_codepoints": 71737,
+      "input_ref": {
+        "path": "runs/witness-experiments-2026-11-18/inputs.json",
+        "case_id": "H02",
+        "inputs_sha256": "de8adc7961e2e3f0bda5d6bd7178274fa31b5e8a273d72f7d1954e6f52bc79a0"
+      }
+    },
+    {
+      "id": "H03",
+      "cohort": "historical_development",
+      "synthetic": false,
+      "question": "В CPython 3.13 free-threaded режим без GIL экспериментальный или стабильный, включён ли по умолчанию и нужен ли отдельный executable?",
+      "source_url": "https://realpython.com/python313-free-threading-jit/",
+      "source_artifact": "runs/search-repair-2026-11-18/candidate/research/N04/tool-result.json",
+      "recorded_case_claim": "N04/A1",
+      "claim_text": "Free threading вводится как экспериментальная функция и не входит в официальную сборку Python; для отключения GIL нужна собственная сборка.",
+      "witness": {
+        "quote": "Experimental: Free threading is introduced as an experimental feature and isn’t a part of the official Python distribution. You must make a custom Python build to disable the GIL.",
+        "start": 5802,
+        "end": 5981
+      },
+      "gold": {
+        "baseline_claim_truth": "false",
+        "local_literal_quote_provenance": true,
+        "conditions": [
+          "3.13 experimental",
+          "Not enabled by default",
+          "Separate free-threaded build/executable; official installer builds available"
+        ],
+        "semantic_notes": "Mandatory custom build and absence of official binaries false for pinned3.13; exact stale thirdparty sentence not truth.",
+        "truth_basis": "Frozen prior independent primarygold and ownwitness review; exact sentence alone not truthguarantee."
+      },
+      "source_text_sha256": "c8e05186df923e9303b55a0b7c6fbe8cc2542c531476bcbb811625c274f2133b",
+      "source_text_codepoints": 100000,
+      "input_ref": {
+        "path": "runs/witness-experiments-2026-11-18/inputs.json",
+        "case_id": "H03",
+        "inputs_sha256": "de8adc7961e2e3f0bda5d6bd7178274fa31b5e8a273d72f7d1954e6f52bc79a0"
+      }
+    },
+    {
+      "id": "H04",
+      "cohort": "historical_development",
+      "synthetic": false,
+      "question": "For SQLite foreign keys, must PRAGMA foreign_keys be set per connection, and what happens if it is changed inside a multi-statement transaction?",
+      "source_url": "https://www.sqlite.org/foreignkeys.html",
+      "source_artifact": "runs/search-repair-2026-11-18/baseline/research/N03/tool-result.json",
+      "recorded_case_claim": "N03/A1",
+      "claim_text": "SQLite foreign key constraints are disabled by default and must be enabled separately for each database connection.",
+      "witness": {
+        "quote": "Foreign key constraints are disabled by default (for backwards compatibility), so must be enabled separately for each database connection.",
+        "start": 10040,
+        "end": 10178
+      },
+      "gold": {
+        "baseline_claim_truth": "unknown_scope",
+        "local_literal_quote_provenance": true,
+        "conditions": [
+          "Perconnection setting",
+          "Do not assume universal compiled default"
+        ],
+        "semantic_notes": "Perconnection correct; unqualified default does not establish allcompileddefaults.",
+        "truth_basis": "Frozen prior independent primarygold and ownwitness review; exact sentence alone not truthguarantee."
+      },
+      "source_text_sha256": "f703ad25cc5ece23e9a9c7710391a25cd6705a3aaa4a82e5c347f061b015b8f4",
+      "source_text_codepoints": 35555,
+      "input_ref": {
+        "path": "runs/witness-experiments-2026-11-18/inputs.json",
+        "case_id": "H04",
+        "inputs_sha256": "de8adc7961e2e3f0bda5d6bd7178274fa31b5e8a273d72f7d1954e6f52bc79a0"
+      }
+    },
+    {
+      "id": "H05",
+      "cohort": "historical_development",
+      "synthetic": false,
+      "question": "For SQLite foreign keys, must PRAGMA foreign_keys be set per connection, and what happens if it is changed inside a multi-statement transaction?",
+      "source_url": "https://www.sqlite.org/foreignkeys.html",
+      "source_artifact": "runs/search-repair-2026-11-18/baseline/research/N03/tool-result.json",
+      "recorded_case_claim": "N03/A2",
+      "claim_text": "It is not possible to enable or disable foreign key constraints in the middle of a multi-statement transaction.",
+      "witness": {
+        "quote": "It is not possible to enable or disable foreign key constraints in the middle of a multi-statement transaction",
+        "start": 11090,
+        "end": 11200
+      },
+      "gold": {
+        "baseline_claim_truth": "true_incomplete",
+        "local_literal_quote_provenance": true,
+        "conditions": [
+          "Changing within multistatement transaction has no effect",
+          "No error is returned"
+        ],
+        "semantic_notes": "Cannot change in transaction true but quote lacks following silentnoeffect sentence.",
+        "truth_basis": "Frozen prior independent primarygold and ownwitness review; exact sentence alone not truthguarantee."
+      },
+      "source_text_sha256": "f703ad25cc5ece23e9a9c7710391a25cd6705a3aaa4a82e5c347f061b015b8f4",
+      "source_text_codepoints": 35555,
+      "input_ref": {
+        "path": "runs/witness-experiments-2026-11-18/inputs.json",
+        "case_id": "H05",
+        "inputs_sha256": "de8adc7961e2e3f0bda5d6bd7178274fa31b5e8a273d72f7d1954e6f52bc79a0"
+      }
+    },
+    {
+      "id": "H06",
+      "cohort": "historical_development",
+      "synthetic": false,
+      "question": "In Rust Option, is the default expression in unwrap_or evaluated even for Some, and how does unwrap_or_else differ?",
+      "source_url": "https://doc.rust-lang.org/std/option/enum.Option.html",
+      "source_artifact": "runs/search-repair-2026-11-18/baseline/research/N01/tool-result.json",
+      "recorded_case_claim": "N01/A1",
+      "claim_text": "Arguments passed to unwrap_or are eagerly evaluated, so the default is evaluated even for Some; unwrap_or_else is lazily evaluated.",
+      "witness": {
+        "quote": "Arguments passed to unwrap_or are eagerly evaluated; if you are passing the result of a function call, it is recommended to use unwrap_or_else, which is lazily evaluated.",
+        "start": 6453,
+        "end": 6623
+      },
+      "gold": {
+        "baseline_claim_truth": "true",
+        "local_literal_quote_provenance": true,
+        "conditions": [
+          "unwrap_or eagerly evaluates default evenSome",
+          "unwrap_or_else fallback lazily executed onlyNone"
+        ],
+        "semantic_notes": "Eagerdefault evenSome and lazyelse distinction valid.",
+        "truth_basis": "Frozen prior independent primarygold and ownwitness review; exact sentence alone not truthguarantee."
+      },
+      "source_text_sha256": "e0930611bfc382d31279acc42f17d189b43388ccb12b1d45b6ee2d2431a9a7c2",
+      "source_text_codepoints": 40541,
+      "input_ref": {
+        "path": "runs/witness-experiments-2026-11-18/inputs.json",
+        "case_id": "H06",
+        "inputs_sha256": "de8adc7961e2e3f0bda5d6bd7178274fa31b5e8a273d72f7d1954e6f52bc79a0"
+      }
+    },
+    {
+      "id": "H07",
+      "cohort": "historical_development",
+      "synthetic": false,
+      "question": "In Rust Option, is the default expression in unwrap_or evaluated even for Some, and how does unwrap_or_else differ?",
+      "source_url": "https://doc.rust-lang.org/std/option/enum.Option.html",
+      "source_artifact": "runs/search-repair-2026-11-18/baseline/research/N01/tool-result.json",
+      "recorded_case_claim": "N01/A2",
+      "claim_text": "unwrap_or_else returns the contained Some value or computes it from a closure.",
+      "witness": {
+        "quote": "Returns the contained Some value or computes it from a closure.",
+        "start": 6831,
+        "end": 6894
+      },
+      "gold": {
+        "baseline_claim_truth": "true",
+        "local_literal_quote_provenance": true,
+        "conditions": [
+          "unwrap_or_else returns Some value or computes fallbackclosure onlyNone"
+        ],
+        "semantic_notes": "Some return versus closure alternative supports lazyfallback; retain Option/method binding.",
+        "truth_basis": "Frozen prior independent primarygold and ownwitness review; exact sentence alone not truthguarantee."
+      },
+      "source_text_sha256": "e0930611bfc382d31279acc42f17d189b43388ccb12b1d45b6ee2d2431a9a7c2",
+      "source_text_codepoints": 40541,
+      "input_ref": {
+        "path": "runs/witness-experiments-2026-11-18/inputs.json",
+        "case_id": "H07",
+        "inputs_sha256": "de8adc7961e2e3f0bda5d6bd7178274fa31b5e8a273d72f7d1954e6f52bc79a0"
+      }
+    },
+    {
+      "id": "H08",
+      "cohort": "historical_development",
+      "synthetic": false,
+      "question": "В объявлении Rust 1.100.0 от 12 ноября 2026 что изменилось в never type fallback и какие editions это затрагивает?",
+      "source_url": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/",
+      "source_artifact": "runs/search-repair-2026-11-18/regression/research/F01/tool-result.json",
+      "recorded_case_claim": "F01/A1",
+      "claim_text": "В Rust 1.100.0 never type fallback изменён с () на ! в editions до 2024 (2015, 2018, 2021), как уже было сделано в edition 2024.",
+      "witness": {
+        "quote": "This release changes the \"never type fallback\" from () to ! in editions before 2024 (i.e. 2015, 2018, and 2021), similarly to what has already been done in edition 2024.",
+        "start": 2659,
+        "end": 2828
+      },
+      "gold": {
+        "baseline_claim_truth": "true",
+        "local_literal_quote_provenance": true,
+        "conditions": [
+          "Fallback changes unit() to never!",
+          "Pre2024 editions2015/2018/2021;2024already"
+        ],
+        "semantic_notes": "Qualified direction and editions fully supported.",
+        "truth_basis": "Frozen prior independent primarygold and ownwitness review; exact sentence alone not truthguarantee."
+      },
+      "source_text_sha256": "4d37d0afa76797b011055bf115ffedba81604f115a028345e7bd8f7bcada00c7",
+      "source_text_codepoints": 13074,
+      "input_ref": {
+        "path": "runs/witness-experiments-2026-11-18/inputs.json",
+        "case_id": "H08",
+        "inputs_sha256": "de8adc7961e2e3f0bda5d6bd7178274fa31b5e8a273d72f7d1954e6f52bc79a0"
+      }
+    },
+    {
+      "id": "C01",
+      "cohort": "synthetic_challenge8",
+      "synthetic": true,
+      "source_kind": "invented API specification; closedworld fixture, not observed web",
+      "question": "Do owned copies share storage?",
+      "claim_text": "Owned copies may share storage with their parent.",
+      "witness": {
+        "quote": "may share storage",
+        "start": 36,
+        "end": 53
+      },
+      "gold": {
+        "baseline_claim_truth": "false",
+        "local_literal_quote_provenance": true,
+        "conditions": [
+          "Owned copies allocate independent storage",
+          "Sharing is limited to borrowed views"
+        ],
+        "semantic_notes": "Bounded explicitintro needed for sourcefidelity; B cannot answer ownedcopyquestion by substituting views sentence without marking querycoverage missing.",
+        "truth_basis": "This synthetic specification defines only fictional API semantics."
+      },
+      "source_text_sha256": "dea884e889bcd0aebb644f473e56732efd419eb1cc0272e526a7271a63d33f0c",
+      "source_text_codepoints": 120,
+      "input_ref": {
+        "path": "runs/witness-experiments-2026-11-18/inputs.json",
+        "case_id": "C01",
+        "inputs_sha256": "de8adc7961e2e3f0bda5d6bd7178274fa31b5e8a273d72f7d1954e6f52bc79a0"
+      }
+    },
+    {
+      "id": "C02",
+      "cohort": "synthetic_challenge8",
+      "synthetic": true,
+      "source_kind": "invented API specification; closedworld fixture, not observed web",
+      "question": "Does setting enforce_keys during a transaction change enforcement or return an error?",
+      "claim_text": "Setting enforce_keys during a transaction has no effect.",
+      "witness": {
+        "quote": "setting enforce_keys does not change enforcement",
+        "start": 30,
+        "end": 78
+      },
+      "gold": {
+        "baseline_claim_truth": "true_incomplete",
+        "local_literal_quote_provenance": true,
+        "conditions": [
+          "Transaction setting has no effect",
+          "No error returned"
+        ],
+        "semantic_notes": "Two separate sentences: first complete sentence cannot alone prove noerror. No nextsentence expansion authorized merely because it helps query.",
+        "truth_basis": "This synthetic specification defines only fictional API semantics."
+      },
+      "source_text_sha256": "2cd6c5716141820dd7e9bdc389e46892d0c9a4ac39bd0244e132f82613a64e83",
+      "source_text_codepoints": 125,
+      "input_ref": {
+        "path": "runs/witness-experiments-2026-11-18/inputs.json",
+        "case_id": "C02",
+        "inputs_sha256": "de8adc7961e2e3f0bda5d6bd7178274fa31b5e8a273d72f7d1954e6f52bc79a0"
+      }
+    },
+    {
+      "id": "C03",
+      "cohort": "synthetic_challenge8",
+      "synthetic": true,
+      "source_kind": "invented API specification; closedworld fixture, not observed web",
+      "question": "Is fast runtime enabled by default on all platforms?",
+      "claim_text": "The fast runtime is not enabled by default on every platform.",
+      "witness": {
+        "quote": "not installed by default",
+        "start": 55,
+        "end": 79
+      },
+      "gold": {
+        "baseline_claim_truth": "unknown_scope",
+        "local_literal_quote_provenance": true,
+        "conditions": [
+          "Evidence limited to macOS installer",
+          "Installation default does not establish every platform runtime setting"
+        ],
+        "semantic_notes": "Explicit boundedintro can restore macOSscope, but fixed Aclaim remains overbroad. B narrower statement faithful yet cannot establish universalruntimeanswer.",
+        "truth_basis": "This synthetic specification defines only fictional API semantics."
+      },
+      "source_text_sha256": "c44afa0ba8e25ba097e3657b440a5238a0641391017d899ec21fee70c6d8049d",
+      "source_text_codepoints": 128,
+      "input_ref": {
+        "path": "runs/witness-experiments-2026-11-18/inputs.json",
+        "case_id": "C03",
+        "inputs_sha256": "de8adc7961e2e3f0bda5d6bd7178274fa31b5e8a273d72f7d1954e6f52bc79a0"
+      }
+    },
+    {
+      "id": "C04",
+      "cohort": "synthetic_challenge8",
+      "synthetic": true,
+      "source_kind": "invented API specification; closedworld fixture, not observed web",
+      "question": "In the October2024 release, must users build the fast executable themselves?",
+      "claim_text": "Users currently must build the fast executable themselves.",
+      "witness": {
+        "quote": "must build the fast executable themselves",
+        "start": 44,
+        "end": 85
+      },
+      "gold": {
+        "baseline_claim_truth": "false",
+        "local_literal_quote_provenance": true,
+        "conditions": [
+          "Octoberrelease officialinstaller includes option",
+          "June beta requirement is historical"
+        ],
+        "semantic_notes": "Afullhistoricalsentence does not repair fixedcurrentclaim. B historicalsentence withintro can be faithfulhistory but not currentanswer; complete stale sentence nottruthguarantee.",
+        "truth_basis": "This synthetic specification defines only fictional API semantics."
+      },
+      "source_text_sha256": "29d27db853013b84dbdc5bb049b067955c7c4ca36ea1d0c27b8839dd4044a919",
+      "source_text_codepoints": 177,
+      "input_ref": {
+        "path": "runs/witness-experiments-2026-11-18/inputs.json",
+        "case_id": "C04",
+        "inputs_sha256": "de8adc7961e2e3f0bda5d6bd7178274fa31b5e8a273d72f7d1954e6f52bc79a0"
+      }
+    },
+    {
+      "id": "C05",
+      "cohort": "synthetic_challenge8",
+      "synthetic": true,
+      "source_kind": "invented API specification; closedworld fixture, not observed web",
+      "question": "Does copy() share mutable child objects?",
+      "claim_text": "The copy() method may share mutable child objects.",
+      "witness": {
+        "quote": "may share mutable child objects",
+        "start": 67,
+        "end": 98
+      },
+      "gold": {
+        "baseline_claim_truth": "false",
+        "local_literal_quote_provenance": true,
+        "conditions": [
+          "copy never shares mutable children",
+          "view may share mutable children"
+        ],
+        "semantic_notes": "Contrastive complete sentence binds bothmethods. Aquoteexpansion reveals contradiction but does not repair claim; Bcomplete sentence can recover answer.",
+        "truth_basis": "This synthetic specification defines only fictional API semantics."
+      },
+      "source_text_sha256": "0861f2bb0a54b0702ddf0c8dad52104beca280115fccc75806b7b54d28c925cf",
+      "source_text_codepoints": 99,
+      "input_ref": {
+        "path": "runs/witness-experiments-2026-11-18/inputs.json",
+        "case_id": "C05",
+        "inputs_sha256": "de8adc7961e2e3f0bda5d6bd7178274fa31b5e8a273d72f7d1954e6f52bc79a0"
+      }
+    },
+    {
+      "id": "C06",
+      "cohort": "synthetic_challenge8",
+      "synthetic": true,
+      "source_kind": "invented API specification; closedworld fixture, not observed web",
+      "question": "Compare eager and lazy Option fallbacks.",
+      "claim_text": "unwrap_or eagerly evaluates its default even for Some.",
+      "witness": {
+        "quote": "eagerly evaluates its default even for Some",
+        "start": 29,
+        "end": 72
+      },
+      "gold": {
+        "baseline_claim_truth": "true_incomplete",
+        "local_literal_quote_provenance": true,
+        "conditions": [
+          "unwrap_or eager evenSome",
+          "unwrap_or_else closure onlyNone"
+        ],
+        "semantic_notes": "Positive complete compound sentence can supply bothconditions in B; Aclaim stays eageronly, querycoverage must remain separate from expandedquote.",
+        "truth_basis": "This synthetic specification defines only fictional API semantics."
+      },
+      "source_text_sha256": "ddf2f1255ec4facfd1c9469974e3f412234270d997860543cebd56d493faa39a",
+      "source_text_codepoints": 132,
+      "input_ref": {
+        "path": "runs/witness-experiments-2026-11-18/inputs.json",
+        "case_id": "C06",
+        "inputs_sha256": "de8adc7961e2e3f0bda5d6bd7178274fa31b5e8a273d72f7d1954e6f52bc79a0"
+      }
+    },
+    {
+      "id": "C07",
+      "cohort": "synthetic_challenge8",
+      "synthetic": true,
+      "source_kind": "invented API specification; closedworld fixture, not observed web",
+      "question": "When does synchronize return?",
+      "claim_text": "synchronize() returns only after every acknowledged write reaches stable storage.",
+      "witness": {
+        "quote": "returns only after every acknowledged write",
+        "start": 442,
+        "end": 485
+      },
+      "gold": {
+        "baseline_claim_truth": "true",
+        "local_literal_quote_provenance": true,
+        "conditions": [
+          "Every acknowledged write reaches stable storage before return"
+        ],
+        "semantic_notes": "Complete sentence exceeds360rawquote and240collapsedclaim; both withhold expected. Withheld is not supportedclaim and notsafe-refusal evidence.",
+        "truth_basis": "This synthetic specification defines only fictional API semantics."
+      },
+      "source_text_sha256": "373db42a3f8d0aa494e076cb74dea70132730013c4d5983a830fb42babbdf054",
+      "source_text_codepoints": 513,
+      "input_ref": {
+        "path": "runs/witness-experiments-2026-11-18/inputs.json",
+        "case_id": "C07",
+        "inputs_sha256": "de8adc7961e2e3f0bda5d6bd7178274fa31b5e8a273d72f7d1954e6f52bc79a0"
+      }
+    },
+    {
+      "id": "C08",
+      "cohort": "synthetic_challenge8",
+      "synthetic": true,
+      "source_kind": "invented API specification; closedworld fixture, not observed web",
+      "question": "С каких концов strip_set удаляет символы и меняет ли середину?",
+      "claim_text": "strip_set(chars) удаляет символы набора с обоих концов строки.",
+      "witness": {
+        "quote": "с обоих концов",
+        "start": 61,
+        "end": 75
+      },
+      "gold": {
+        "baseline_claim_truth": "true_incomplete",
+        "local_literal_quote_provenance": true,
+        "conditions": [
+          "Удаляет только граничные символы набора",
+          "Внутренние символы сохраняет"
+        ],
+        "semantic_notes": "Unicode codepoints with emoji and curlyquotes; no byteoffsets. Complete sentence can support innerpreservation, Aclaim does not answer interiorcondition.",
+        "truth_basis": "This synthetic specification defines only fictional API semantics."
+      },
+      "source_text_sha256": "9ace970cf8387c4250a468052d17151245f75b71a66790debc1f48cd0c44f48a",
+      "source_text_codepoints": 119,
+      "input_ref": {
+        "path": "runs/witness-experiments-2026-11-18/inputs.json",
+        "case_id": "C08",
+        "inputs_sha256": "de8adc7961e2e3f0bda5d6bd7178274fa31b5e8a273d72f7d1954e6f52bc79a0"
+      }
+    }
+  ]
+}

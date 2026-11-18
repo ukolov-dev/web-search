@@ -1,0 +1,1610 @@
+{
+  "schema": "search-repair-quality-v1",
+  "gold_preflight": {
+    "schema": "search-repair-gold-preflight-v1",
+    "reviewer": "/root/search_evaluator",
+    "created_utc": "2026-11-18T06:49:43.021703+00:00",
+    "task_id": "TASK-20261118-094516-001",
+    "cases_path": "feasibility/search-repair-cases-2026-11-18.json",
+    "cases_sha256": "b708a5e7846f43d8c1a1c97f9b7ab5c632141c71eaf389d2b726362cb216f3ec",
+    "verdict": "passed",
+    "status": "PASS_BEFORE_LIVE_INFERENCE",
+    "case_count": 4,
+    "conditions": 9,
+    "method": "Independently opened only provided official primary URLs and read matching sections using web. No product MCP/models called. No gold changes.",
+    "cases": [
+      {
+        "id": "N01",
+        "verdict": "verified_primary",
+        "reference_urls": [
+          "https://doc.rust-lang.org/std/option/enum.Option.html"
+        ],
+        "verified_conditions": 2,
+        "source_lines": "Rust1.100.0 Option docs lines347-369",
+        "assessment": "unwrap_or eager argument evaluation holds even Some; unwrap_or_else computes fallback closure only when None. Distinguish evaluating/constructing closure argument from executing closure body; do not claim every expression supplied to unwrap_or_else is unevaluated."
+      },
+      {
+        "id": "N02",
+        "verdict": "verified_primary",
+        "reference_urls": [
+          "https://docs.python.org/3/library/stdtypes.html#str.strip"
+        ],
+        "verified_conditions": 2,
+        "source_lines": "Python3.15.2 builtintypes str.strip section line1551",
+        "resolved_url": "https://docs.python.org/3/builtins/stdtypes.html",
+        "assessment": "chars is a character set, not literal prefix/suffix. Leading and trailing matching characters removed, not interior characters; stops at first nonmember at each end. Official library URL redirects to builtins path; preserve this legitimate canonicalization, no strict caller path bound in question."
+      },
+      {
+        "id": "N03",
+        "verdict": "verified_primary",
+        "reference_urls": [
+          "https://sqlite.org/foreignkeys.html"
+        ],
+        "verified_conditions": 2,
+        "source_lines": "SQLite foreignkeys section2 lines154-166",
+        "assessment": "Setting is perconnection; avoid universal default assumption. Attempt within multistatement transaction outside autocommit silently has no effect, rather than error or deferred change. No claim that every SQLite compile supports enforcement; source above discusses OMIT flags. No need to require unstated specific compile flag to satisfy question."
+      },
+      {
+        "id": "N04",
+        "verdict": "verified_primary",
+        "reference_urls": [
+          "https://docs.python.org/3.13/whatsnew/3.13.html"
+        ],
+        "verified_conditions": 3,
+        "source_lines": "Python3.13.18 whatsnew3.13 line153",
+        "assessment": "Versionpinned3.13 experimental, disabledbydefault, separate executable commonly3.13t/exe or source --disable-gil. Do not import later version supportstatus. Distinguish installed build availability from default use; no assertion every package universally supplies binary."
+      }
+    ],
+    "evaluation_policy": {
+      "required_conditions": "Score own returned quotes semantically against each frozen condition, preserving negation, scope, API identity and version. Exact quotation alone is not support. Missingcondition differs from false/unknown returnedclaim.",
+      "cohorts": "NEW4 baseline and candidate compared separately; candidate old8 repeat remains separate historicalregression cohort. Never pool denominators or retroactively change gold.",
+      "SERP": "If search used, same strict0/1/2title/snippet/URLrubric and separate primarylanding metric.",
+      "runtime_health": "Root reports oMLX restart and HTTP200 health; not independently verified here and does not itself prove selector health for each livecall. Record actual Qwen statuses separately."
+    },
+    "limits": [
+      "Four source-aware development questions only; all software; twoPython cases; no no-evidence case or safe-refusal denominator",
+      "Not original20/two-day/general qualification",
+      "Primaryread verifies gold, not runtime retrieval or model truth",
+      "N02 official unpinned documentation redirects library→builtins; canonical source remains official",
+      "No codefixes, liveproduct calls or provider/model calls made by reviewer"
+    ]
+  },
+  "guard_review": {
+    "reviewed_base": "5d84b22",
+    "reviewed_commits": [
+      "c3809bcf8438dfec8d9261fb3803f620e1e089f8",
+      "1df1f97e43599d773fdc20d30acd3b52c08c569e"
+    ],
+    "reviewed_head": "1df1f97e43599d773fdc20d30acd3b52c08c569e",
+    "mode": "Independent static code review; no source edits, HTTP, models or full checks.",
+    "summary": "Natural lowercase or now validates with site filtering intact. Connection challenge headings are rejected before research/evidence extraction, but the new heading test cannot distinguish a legitimate article section quoting the exact message from challenge UI.",
+    "findings": [
+      {
+        "id": "G01",
+        "priority": "P2",
+        "group": "must_fix",
+        "commit": "1df1f97",
+        "location": "src/search.rs:199-206",
+        "title": "Точный заголовок раздела статьи блокирует весь источник",
+        "input_html": "<html><head><title>Browser connection troubleshooting</title></head><body><article><h1>Connection troubleshooting</h1><h2>Verify to continue</h2><p>This section explains the browser message and how connection checks work.</p></article></body></html>",
+        "observed_by_code": "navigation_guard selects the article h2, normalizes to verify to continue, and returns source_challenge despite substantial ordinary article content and no verification widget. The same regression occurs with an aria-hidden heading or a hidden template outside the removed template tag.",
+        "baseline_comparison": "5d84b22 guard accepts this HTML: no widget attribute or any legacy forbidden substring. 1df1f97 rejects it solely due to new exact heading match.",
+        "impact": "Research Live.read calls guard before extraction then persists the source_challenge host in document_blocks. Subsequent pages of that host are skipped. Evidence read through rescue::read_document also rejects it; Page.store refuses cache write. A legitimate explanation page therefore becomes a persistent source refusal, beyond losing one passage.",
+        "call_evidence": [
+          "src/research.rs:1811",
+          "src/research.rs:1846-1853",
+          "src/rescue.rs:409",
+          "src/evidence.rs:1197",
+          "src/net.rs:142"
+        ],
+        "smallest_fix_direction": "Require supporting challenge-shell evidence around the exact heading instead of treating every article subsection heading as verification UI. Retain captured challenge rejection. Add a negative fixture with the exact message in an article h2 and a hidden-heading control.",
+        "verification": "Deterministic static path traced through parser and error handling; not executed. No assertion of real-site frequency."
+      }
+    ],
+    "checks": [
+      {
+        "area": "DSL",
+        "result": "No new boundary bypass found. Exact unquoted uppercase OR and standalone | still fail when site exists; lowercase or/Or/oR are intentionally lexical. Quotes and all site validation unchanged. Post-SERP filter_site remains called in main/research/policy and redirect checks remain in research/rescue."
+      },
+      {
+        "area": "Shared guard",
+        "result": "New source_challenge maps through error_code/blocks_source. Research guards before extract_cached, including cache-hit HTML. Evidence uses rescue read guard. Page.store prevents challenge writes but is not itself a document admission check."
+      },
+      {
+        "area": "Tests",
+        "result": "New natural-or unit case and stdio validation cover expected fix; challenge fixture covers actual headings and prose paraphrase negatives. Exact-message article heading negative is absent."
+      }
+    ],
+    "non_regression_limits": [
+      {
+        "case": "site:example.com a (OR b) or a|b",
+        "note": "Whitespace-token parser does not recognize parenthesized/attached operators. This behavior predates both commits and post-filter still enforces site; not reported as introduced defect."
+      },
+      {
+        "case": "Connection heading with punctuation or extra text",
+        "note": "Exact matching is intentionally narrow and does not establish all challenge variants are detected. No live evidence or new browse used."
+      }
+    ],
+    "verdict": "620c5ec addresses G01 and G02 static counterexamples; no remaining blocking static finding in reviewed changes. Live acceptance pending.",
+    "not_checked": [
+      "No offline executable tests were run, avoiding duplicate full checks/build contention.",
+      "No HTTP/model calls, load tests or real-site frequency measurement.",
+      "No runtime source files modified; separately prepared runtime work not reviewed."
+    ],
+    "followup": {
+      "reviewed_commit": "45f5dbb0ea738257903c25237473775a7f473828",
+      "reviewed_worktree_diff": "src/search.rs article-presence heading suppression + exact article h2 negative fixture",
+      "G01": "Original reported article-h2 input now passes by static inspection; targeted64 pass was reported by parent, not independently rerun.",
+      "remaining_guard_risk": {
+        "severity": "P2",
+        "status": "concrete static counterexample; not executed",
+        "input_html": "<html><head><title>Video description</title></head><body><article></article><h1>Verify to continue</h1><h2>Checking if the site connection is secure</h2><p>Please confirm you are human and not a spambot.</p></body></html>",
+        "behavior": "Any article tag anywhere suppresses all body headings, even headings outside article. This HTML retains both captured challenge headings but passes new guard: title differs and body contains no legacy forbidden substring. An empty/hidden article is sufficient, so presence is not proof of substantive article content.",
+        "minimal_direction": "Exclude headings inside substantive article content rather than suppressing all body headings whenever any article exists; keep challenge headings outside an article eligible. Add empty-article + outside-challenge-heading negative-control fixture.",
+        "real_world_limit": "No claim actual frozen R01 contains article; exact captured fixture still rejects. This is an edge-case gap in new heuristic, not demonstrated live regression."
+      },
+      "research_review": {
+        "blocking_findings": [],
+        "confirmed": "release_scope_matches is applied after supported audit verdict and rejected claims reopen missing facets through recomputation. Single target/mismatching title is rejected; comparisons/unversioned questions stay audit decisions. API helper only changes candidate ordering, preserving URL/site admission.",
+        "limits": [
+          "Release binding is title-only and existential across evidence: a matching-title source can coexist with mismatching source; no title version falls back to audit. These limits mean it is not a complete version-proof gate.",
+          "Three-component version grammar is an explicit shortcut; two-component versions and dates intentionally remain audit scope.",
+          "New prompts are unmeasured until separate live run; code review is not quality-gain evidence."
+        ]
+      },
+      "verification": "Static read only; no cargo, HTTP, models or NEW4 gold reads/edits."
+    },
+    "final_guard_review": {
+      "commit": "620c5ec4fec2ca3f127200a5ad785138fea510ad",
+      "method": "Independent static inspection of final hunk; no source edits, cargo, HTTP or models.",
+      "G01_status": "addressed: exact-message article subsection heading has article ancestor and is skipped by added heading-only detection. Existing widget/text rules remain unchanged.",
+      "G02_status": "addressed: empty article sibling is not an ancestor, so outside challenge heading remains checked and rejected.",
+      "test_evidence": "Final diff includes empty-article sibling challenge control and retains legitimate nested article heading control. Parent reported exact named regression 1 passed; previous navigation_guard filter selected0, explicitly not counted as test evidence. Not independently rerun.",
+      "remaining_limits": [
+        "Challenge UI itself wrapped in article remains outside the new heading signal; legacy widget/text signals still apply. This structural heuristic is not comprehensive challenge detection.",
+        "An actual page title exactly matching the two phrases remains blocked even for an explanatory article. No actual affected source established.",
+        "Static review confirms control flow, not live retrieval quality or complete product acceptance."
+      ],
+      "blocking_findings": [],
+      "verdict": "Final guard changes address both concrete reported counterexamples. Ready for formal review of frozen candidate results when available."
+    }
+  },
+  "cohorts": {
+    "baseline_new4": {
+      "schema": "independent-repair-research-review-v1",
+      "reviewer": "/root/search_evaluator",
+      "created_utc": "2026-11-18T06:56:06.655364+00:00",
+      "cohort": "NEW4-baseline",
+      "cases_sha256": "b708a5e7846f43d8c1a1c97f9b7ab5c632141c71eaf389d2b726362cb216f3ec",
+      "cases": [
+        {
+          "id": "N01",
+          "tool_sha256": "e5edbe88d01c03f53be3cc45639b111b61fbc786ebb64b87d9c8a5dca4363a8d",
+          "status": "partial",
+          "stop_reason": "budget_exhausted",
+          "error": null,
+          "conditions": [
+            {
+              "id": "N01.A",
+              "gold": "unwrap_or evaluates its default argument eagerly, including when Option is Some.",
+              "status": "supported",
+              "claim_ids": [
+                "A1"
+              ],
+              "reason": "Own eagerdefault witness supports Some as well."
+            },
+            {
+              "id": "N01.B",
+              "gold": "unwrap_or_else evaluates its fallback lazily, via a closure when None.",
+              "status": "supported",
+              "claim_ids": [
+                "A1",
+                "A2"
+              ],
+              "reason": "Own lazy witness plus Some/closure distinction supports fallback only on None."
+            }
+          ],
+          "supported_conditions": 2,
+          "all_required_supported": true,
+          "returned_claim_judgments": [
+            {
+              "id": "N01/A1",
+              "status": "supported",
+              "reason": "Ownquote supports narrow literalclaim."
+            },
+            {
+              "id": "N01/A2",
+              "status": "supported",
+              "reason": "Ownquote supports narrow literalclaim."
+            },
+            {
+              "id": "N01/A3",
+              "status": "supported",
+              "reason": "Ownquote supports narrow literalclaim."
+            }
+          ],
+          "false_claim_ids": [],
+          "unknown_claim_ids": [],
+          "miss_stage": "none",
+          "diagnosis": "Official Option read and quoted; allrequired supported."
+        },
+        {
+          "id": "N02",
+          "tool_sha256": "f5a088a56ea6fdc30ec681cb73855fd18d5c715f77d451db8a4d610fc4c5b70e",
+          "status": "error",
+          "stop_reason": "model_error",
+          "error": "source_query_mismatch: all 1 results violate site:docs.python.org",
+          "conditions": [
+            {
+              "id": "N02.A",
+              "gold": "chars задаёт набор символов, а не целый префикс или суффикс.",
+              "status": "missing",
+              "claim_ids": [],
+              "reason": "No ownanswer."
+            },
+            {
+              "id": "N02.B",
+              "gold": "Удаление идёт с обоих концов строки, пока встречаются символы из набора.",
+              "status": "missing",
+              "claim_ids": [],
+              "reason": "No ownanswer."
+            }
+          ],
+          "supported_conditions": 0,
+          "all_required_supported": false,
+          "returned_claim_judgments": [],
+          "false_claim_ids": [],
+          "unknown_claim_ids": [],
+          "miss_stage": "retrieval_site_mismatch",
+          "diagnosis": "No finalclaims; actualerror source_query_mismatch all1 violate docs.python.org although stop_reason model_error."
+        },
+        {
+          "id": "N03",
+          "tool_sha256": "e34e30cedb25d5601a39731133803183ee37b47ef03c2f2a89bdd5ae971fef20",
+          "status": "ok",
+          "stop_reason": "evidence_sufficient",
+          "error": null,
+          "conditions": [
+            {
+              "id": "N03.A",
+              "gold": "Enable/configure foreign key enforcement separately on each database connection; do not assume a universal compiled default.",
+              "status": "supported",
+              "claim_ids": [
+                "A1"
+              ],
+              "reason": "Perconnection part supported; unconditional default assertion separately flagged unknownscope, not proof universalcompiledefault."
+            },
+            {
+              "id": "N03.B",
+              "gold": "Changing foreign_keys within an active multi-statement transaction has no effect and does not return an error.",
+              "status": "missing",
+              "claim_ids": [
+                "A2",
+                "A3"
+              ],
+              "reason": "No-op supported but required no-error semantics not explicit in returned witness; quoted impossible alone would also permit rejectionerror."
+            }
+          ],
+          "supported_conditions": 1,
+          "all_required_supported": false,
+          "returned_claim_judgments": [
+            {
+              "id": "N03/A1",
+              "status": "unknown_scope",
+              "reason": "Perconnection supported; default assertion unqualified across SQLitecompile configurations, ownquote omits caveat."
+            },
+            {
+              "id": "N03/A2",
+              "status": "supported",
+              "reason": "Ownquote supports narrow literalclaim."
+            },
+            {
+              "id": "N03/A3",
+              "status": "supported",
+              "reason": "Ownquote supports narrow literalclaim."
+            },
+            {
+              "id": "N03/A4",
+              "status": "supported",
+              "reason": "Ownquote supports narrow literalclaim."
+            }
+          ],
+          "false_claim_ids": [],
+          "unknown_claim_ids": [
+            "N03/A1"
+          ],
+          "miss_stage": "citation_semantic_completeness",
+          "diagnosis": "Required transaction noerror sentence exists in officialgold but not returnedquote. A1default loses compiler/defaultcaveat."
+        },
+        {
+          "id": "N04",
+          "tool_sha256": "7aaaeb734b0fd8cb6dba1c46a3f042ec107f4663f7beb80bb35ec1b028cfc830",
+          "status": "partial",
+          "stop_reason": "budget_exhausted",
+          "error": null,
+          "conditions": [
+            {
+              "id": "N04.A",
+              "gold": "В CPython3.13 free-threaded режим экспериментальный, не следует переносить статус другой версии.",
+              "status": "supported",
+              "claim_ids": [
+                "A2"
+              ],
+              "reason": "Experimental status ownquote explicit."
+            },
+            {
+              "id": "N04.B",
+              "gold": "Режим не включён по умолчанию.",
+              "status": "missing",
+              "claim_ids": [],
+              "reason": "Notinstalledbydefault for particular macOSinstaller is narrower than generic runtime notenabledbydefault."
+            },
+            {
+              "id": "N04.C",
+              "gold": "Нужен отдельный executable/free-threaded build, обычно python3.13t; допустим исходный build --disable-gil.",
+              "status": "missing",
+              "claim_ids": [],
+              "reason": "Separate macOS framework/installoption does not establish required separateexecutable for general CPython3.13."
+            }
+          ],
+          "supported_conditions": 1,
+          "all_required_supported": false,
+          "returned_claim_judgments": [
+            {
+              "id": "N04/A1",
+              "status": "false_in_requested_temporal_context",
+              "reason": "Currently beta-testing text describes Jun2024release preparation, not current3.13status."
+            },
+            {
+              "id": "N04/A2",
+              "status": "supported",
+              "reason": "Ownquote supports narrow literalclaim."
+            },
+            {
+              "id": "N04/A3",
+              "status": "unknown_scope",
+              "reason": "General answer omits quote source explicit macOSinstaller-only limitation."
+            },
+            {
+              "id": "N04/A4",
+              "status": "unknown_scope",
+              "reason": "General answer omits quote source explicit macOSinstaller-only limitation."
+            }
+          ],
+          "false_claim_ids": [
+            "N04/A1"
+          ],
+          "unknown_claim_ids": [
+            "N04/A3",
+            "N04/A4"
+          ],
+          "miss_stage": "source_scope_and_temporal_binding",
+          "diagnosis": "All finalclaims from historical macOSinstallerissue; beta2024scope lost in A1, macOSscope lost A3/A4. Correctofficialwhatsnew notread."
+        }
+      ],
+      "aggregate": {
+        "cases": 4,
+        "required_conditions": 9,
+        "supported_conditions": 4,
+        "all_conditions_supported_cases": 1,
+        "false_in_requested_context_claim_ids": [
+          "N04/A1"
+        ],
+        "unknown_returned_claim_ids": [
+          "N03/A1",
+          "N04/A3",
+          "N04/A4"
+        ],
+        "missing_required_condition_ids": [
+          "N02.A",
+          "N02.B",
+          "N03.B",
+          "N04.B",
+          "N04.C"
+        ],
+        "returned_claims": 11
+      },
+      "quote_provenance_checks": [
+        {
+          "case": "N01",
+          "claim": "A1",
+          "source": "S2",
+          "exact_unicode_slice": true
+        },
+        {
+          "case": "N01",
+          "claim": "A2",
+          "source": "S2",
+          "exact_unicode_slice": true
+        },
+        {
+          "case": "N01",
+          "claim": "A3",
+          "source": "S2",
+          "exact_unicode_slice": true
+        },
+        {
+          "case": "N03",
+          "claim": "A1",
+          "source": "S1",
+          "exact_unicode_slice": true
+        },
+        {
+          "case": "N03",
+          "claim": "A2",
+          "source": "S1",
+          "exact_unicode_slice": true
+        },
+        {
+          "case": "N03",
+          "claim": "A3",
+          "source": "S3",
+          "exact_unicode_slice": true
+        },
+        {
+          "case": "N03",
+          "claim": "A4",
+          "source": "S1",
+          "exact_unicode_slice": true
+        },
+        {
+          "case": "N04",
+          "claim": "A1",
+          "source": "S1",
+          "exact_unicode_slice": true
+        },
+        {
+          "case": "N04",
+          "claim": "A2",
+          "source": "S1",
+          "exact_unicode_slice": true
+        },
+        {
+          "case": "N04",
+          "claim": "A3",
+          "source": "S1",
+          "exact_unicode_slice": true
+        },
+        {
+          "case": "N04",
+          "claim": "A4",
+          "source": "S1",
+          "exact_unicode_slice": true
+        }
+      ],
+      "qwen_actions": [
+        {
+          "case": "N01",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S1",
+          "status": "ok"
+        },
+        {
+          "case": "N01",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S2",
+          "status": "ok"
+        },
+        {
+          "case": "N01",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S3",
+          "status": "ok"
+        },
+        {
+          "case": "N03",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S1",
+          "status": "ok"
+        },
+        {
+          "case": "N03",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S2",
+          "status": "ok"
+        },
+        {
+          "case": "N03",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S3",
+          "status": "ok"
+        },
+        {
+          "case": "N04",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S1",
+          "status": "ok"
+        },
+        {
+          "case": "N04",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S2",
+          "status": "ok"
+        },
+        {
+          "case": "N04",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S3",
+          "status": "ok"
+        },
+        {
+          "case": "N04",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S4",
+          "status": "ok"
+        }
+      ],
+      "protocol_deviation": {
+        "code_freeze": "Candidate final620c5ec frozen before candidate calls; first baseline calls had begun while final staticreview handling article exception. Change prompted by independent static review, not scored outputs. Pairing is exploratory, not preregistered full-policy qualification.",
+        "discarded_tooling_checks": [
+          "shared worktree cargo artifact collision discarded by agent",
+          "root navigation_guard filter selected0tests; corrected exactnamedtest passed"
+        ]
+      },
+      "limits": [
+        "Only NEW4 baseline, no pooling with candidate or old8",
+        "Source-aware software4cases only;9conditions; no no-evidence refusalmetric",
+        "Healthy Qwen measured from actual actions ok, unlike previousold8fallback snapshot",
+        "Requiredconditions and additionalreturnedclaim risk separately assessed; partialcomponent does not close compoundcondition",
+        "No new external/product/model calls by reviewer during scoring"
+      ]
+    },
+    "candidate_new4": {
+      "schema": "independent-repair-research-review-v1",
+      "reviewer": "/root/search_evaluator",
+      "created_utc": "2026-11-18T06:58:34.236360+00:00",
+      "cohort": "NEW4-candidate",
+      "cases_sha256": "b708a5e7846f43d8c1a1c97f9b7ab5c632141c71eaf389d2b726362cb216f3ec",
+      "cases": [
+        {
+          "id": "N01",
+          "tool_sha256": "33b11662e45d3d0dae508626a7f92998337537d0e0fc9d731f8b1e4324d03744",
+          "status": "partial",
+          "stop_reason": "budget_exhausted",
+          "error": null,
+          "conditions": [
+            {
+              "id": "N01.A",
+              "gold": "unwrap_or evaluates its default argument eagerly, including when Option is Some.",
+              "status": "missing",
+              "claim_ids": [],
+              "reason": "Finalanswer empty; baseline ownwitness lost."
+            },
+            {
+              "id": "N01.B",
+              "gold": "unwrap_or_else evaluates its fallback lazily, via a closure when None.",
+              "status": "missing",
+              "claim_ids": [],
+              "reason": "Finalanswer empty; baseline ownwitness lost."
+            }
+          ],
+          "supported_conditions": 0,
+          "all_required_supported": false,
+          "returned_claim_judgments": [],
+          "false_claim_ids": [],
+          "unknown_claim_ids": [],
+          "miss_stage": "fullpath_no_final_evidence",
+          "diagnosis": "Emptyanswer; single stochasticfullpathrun does not establish codecausality."
+        },
+        {
+          "id": "N02",
+          "tool_sha256": "fda496c073ac92923fdc3e6291d70c4013c57227ec58b5364c4562a7bd02900e",
+          "status": "partial",
+          "stop_reason": "budget_exhausted",
+          "error": null,
+          "conditions": [
+            {
+              "id": "N02.A",
+              "gold": "chars задаёт набор символов, а не целый префикс или суффикс.",
+              "status": "supported",
+              "claim_ids": [
+                "A1",
+                "A3"
+              ],
+              "reason": "Ownquote explicitly charset not prefix/suffix."
+            },
+            {
+              "id": "N02.B",
+              "gold": "Удаление идёт с обоих концов строки, пока встречаются символы из набора.",
+              "status": "supported",
+              "claim_ids": [
+                "A2",
+                "A4"
+              ],
+              "reason": "Ownquotes general bothends rule plus characterexample; no evidence interiorremoved."
+            }
+          ],
+          "supported_conditions": 2,
+          "all_required_supported": true,
+          "returned_claim_judgments": [
+            {
+              "id": "N02/A1",
+              "text": "str.strip(chars) удаляет любой из указанных символов, а не целую последовательность-префикс.",
+              "claim_text_sha256": "5d3f6590548a3eb0a76909fe6835cb0023e79877c59a41664ea22c29e53ffa15",
+              "status": "supported",
+              "reason": "Ownquote supports narrow literalclaim."
+            },
+            {
+              "id": "N02/A2",
+              "text": "Передача «ban» в strip удаляет символы b, a и n с обеих сторон, что для «banana» даёт пустую строку.",
+              "claim_text_sha256": "275f897715bcd36b48fb6d5c013168200187007ef9184b89b1f04e42872c8842",
+              "status": "supported",
+              "reason": "Ownquote supports narrow literalclaim."
+            },
+            {
+              "id": "N02/A3",
+              "text": "Аргумент strip не трактуется как префикс или суффикс, а как набор отдельных символов.",
+              "claim_text_sha256": "5afb2f7b3bfe7fa092e79366d02f6981b22d7e26e68f18c9a79374229527e1bb",
+              "status": "supported",
+              "reason": "Ownquote supports narrow literalclaim."
+            },
+            {
+              "id": "N02/A4",
+              "text": "str.strip(chars) удаляет указанные символы с обоих концов строки.",
+              "claim_text_sha256": "c147e3f60dd567271b70c4984c063df08663fe9ff2accca9c2cc6a6297810787",
+              "status": "supported",
+              "reason": "Ownquote supports narrow literalclaim."
+            }
+          ],
+          "false_claim_ids": [],
+          "unknown_claim_ids": [],
+          "miss_stage": "none",
+          "diagnosis": "Recovered2conditions from RealPython ownquotes."
+        },
+        {
+          "id": "N03",
+          "tool_sha256": "ea3cc64c7c46d6a76eeb8f2c060d068e3190f09079e884d7dafcfb517174fc5a",
+          "status": "ok",
+          "stop_reason": "evidence_sufficient",
+          "error": null,
+          "conditions": [
+            {
+              "id": "N03.A",
+              "gold": "Enable/configure foreign key enforcement separately on each database connection; do not assume a universal compiled default.",
+              "status": "supported",
+              "claim_ids": [
+                "A1"
+              ],
+              "reason": "Perconnection supported, extra defaultscopeunknown separately."
+            },
+            {
+              "id": "N03.B",
+              "gold": "Changing foreign_keys within an active multi-statement transaction has no effect and does not return an error.",
+              "status": "missing",
+              "claim_ids": [
+                "A2",
+                "A3"
+              ],
+              "reason": "No-op supported but noerror witness missing."
+            }
+          ],
+          "supported_conditions": 1,
+          "all_required_supported": false,
+          "returned_claim_judgments": [
+            {
+              "id": "N03/A1",
+              "text": "Foreign key constraints are disabled by default and must be enabled separately for each database connection.",
+              "claim_text_sha256": "f79e6d6e0282aad239f4fe35d149823a1ed8df021c8aa3b44393f6c5999c1a64",
+              "status": "unknown_scope",
+              "reason": "Defaultclaim lacks compiledefaultcaveat; perconnectionpart supported."
+            },
+            {
+              "id": "N03/A2",
+              "text": "It is not possible to enable or disable foreign key constraints in the middle of a multi-statement transaction.",
+              "claim_text_sha256": "79f9dcde2ad9f9724945d8368c72521b6788bbc06a4feedda3375d60bd0211d8",
+              "status": "supported",
+              "reason": "Ownquote supports narrow literalclaim."
+            },
+            {
+              "id": "N03/A3",
+              "text": "PRAGMA foreign_keys is a no-op within a transaction; enforcement may only be enabled or disabled when there is no pending BEGIN or SAVEPOINT.",
+              "claim_text_sha256": "bf77f6fd4f94447d1af7a89da93cbd32e58d2b8a4f317921dd9abe6d6062b638",
+              "status": "supported",
+              "reason": "Ownquote supports narrow literalclaim."
+            },
+            {
+              "id": "N03/A4",
+              "text": "An application can use a PRAGMA foreign_keys statement to determine whether foreign keys are currently enabled.",
+              "claim_text_sha256": "b2501b34badeb3f8f67926f18174c1fae871d5cb010dbeb7db48444933dbe9ad",
+              "status": "supported",
+              "reason": "Ownquote supports narrow literalclaim."
+            }
+          ],
+          "false_claim_ids": [],
+          "unknown_claim_ids": [
+            "N03/A1"
+          ],
+          "miss_stage": "citation_semantic_completeness",
+          "diagnosis": "Same semanticresult as baseline."
+        },
+        {
+          "id": "N04",
+          "tool_sha256": "451c6f54714e1026760f977b77edaa9cfc248dba94954cbdb67a71888dea48c4",
+          "status": "ok",
+          "stop_reason": "evidence_sufficient",
+          "error": null,
+          "conditions": [
+            {
+              "id": "N04.A",
+              "gold": "В CPython3.13 free-threaded режим экспериментальный, не следует переносить статус другой версии.",
+              "status": "supported",
+              "claim_ids": [
+                "A1",
+                "A2"
+              ],
+              "reason": "Experimental component supported despite other falsecomponents ofA1."
+            },
+            {
+              "id": "N04.B",
+              "gold": "Режим не включён по умолчанию.",
+              "status": "missing",
+              "claim_ids": [],
+              "reason": "Notinstalledbydefault is macOSinstaller scope; no general enabledbydefault witness."
+            },
+            {
+              "id": "N04.C",
+              "gold": "Нужен отдельный executable/free-threaded build, обычно python3.13t; допустим исходный build --disable-gil.",
+              "status": "supported",
+              "claim_ids": [
+                "A4"
+              ],
+              "reason": "OwnA4 distinguishes vanilla and specialfree-threadedbuild ABI t; supports separatebuildrequirement."
+            }
+          ],
+          "supported_conditions": 2,
+          "all_required_supported": false,
+          "returned_claim_judgments": [
+            {
+              "id": "N04/A1",
+              "text": "Free threading вводится как экспериментальная функция и не входит в официальную сборку Python; для отключения GIL нужна собственная сборка.",
+              "claim_text_sha256": "79624d817fe70d024bc02f4c02e7af3de4c6a3e5ba0a92d1e48d38bf1c936f31",
+              "status": "false_in_requested_temporal_context",
+              "reason": "Mandatory custombuild and notofficialdistribution contradicted by frozen primary3.13official Windows/macOSinstaller availability. Experimental component true; oldsourcequote not currenttruth."
+            },
+            {
+              "id": "N04/A2",
+              "text": "Функция по-прежнему считается экспериментальной, поэтому её поддержка не устанавливается по умолчанию, а предлагается отдельной опцией установки.",
+              "claim_text_sha256": "7cef7df5c266dd58b4d4d497b868f3b549cf31236dc96a9913880e57b76b63b7",
+              "status": "unknown_scope",
+              "reason": "Installeroption/framework quote scoped macOS; answeromits limitation."
+            },
+            {
+              "id": "N04/A3",
+              "text": "При выборе этой опции устанавливается отдельный PythonT.framework рядом с обычным Python.framework.",
+              "claim_text_sha256": "b83308a23f075c2d5dcc0c45cb29313b9e34d9b7a2d1a158cef0694081f7a0a9",
+              "status": "unknown_scope",
+              "reason": "Installeroption/framework quote scoped macOS; answeromits limitation."
+            },
+            {
+              "id": "N04/A4",
+              "text": "Обычная сборка Python не поддерживает free threading, а специальная free-threaded сборка имеет ABI с меткой «t».",
+              "claim_text_sha256": "084747de9027e6ee4e51c00346153dba410f54b4a1cc8665c38d68a4be219f8c",
+              "status": "supported",
+              "reason": "Ownquote supports narrow literalclaim."
+            }
+          ],
+          "false_claim_ids": [
+            "N04/A1"
+          ],
+          "unknown_claim_ids": [
+            "N04/A2",
+            "N04/A3"
+          ],
+          "miss_stage": "temporal_scope_binding",
+          "diagnosis": "A1 repeats outdated custombuildmandatory claim despite official3.13 installers; A2/A3 omit macOSscope."
+        }
+      ],
+      "aggregate": {
+        "cases": 4,
+        "required_conditions": 9,
+        "supported_conditions": 5,
+        "all_conditions_supported_cases": 1,
+        "false_in_requested_context_claim_ids": [
+          "N04/A1"
+        ],
+        "unknown_returned_claim_ids": [
+          "N03/A1",
+          "N04/A2",
+          "N04/A3"
+        ],
+        "missing_required_condition_ids": [
+          "N01.A",
+          "N01.B",
+          "N03.B",
+          "N04.B"
+        ],
+        "returned_claims": 12
+      },
+      "quote_provenance_checks": [
+        {
+          "case": "N02",
+          "claim": "A1",
+          "source": "S2",
+          "exact_unicode_slice": true
+        },
+        {
+          "case": "N02",
+          "claim": "A2",
+          "source": "S2",
+          "exact_unicode_slice": true
+        },
+        {
+          "case": "N02",
+          "claim": "A3",
+          "source": "S2",
+          "exact_unicode_slice": true
+        },
+        {
+          "case": "N02",
+          "claim": "A4",
+          "source": "S2",
+          "exact_unicode_slice": true
+        },
+        {
+          "case": "N03",
+          "claim": "A1",
+          "source": "S1",
+          "exact_unicode_slice": true
+        },
+        {
+          "case": "N03",
+          "claim": "A2",
+          "source": "S1",
+          "exact_unicode_slice": true
+        },
+        {
+          "case": "N03",
+          "claim": "A3",
+          "source": "S3",
+          "exact_unicode_slice": true
+        },
+        {
+          "case": "N03",
+          "claim": "A4",
+          "source": "S1",
+          "exact_unicode_slice": true
+        },
+        {
+          "case": "N04",
+          "claim": "A1",
+          "source": "S1",
+          "exact_unicode_slice": true
+        },
+        {
+          "case": "N04",
+          "claim": "A2",
+          "source": "S2",
+          "exact_unicode_slice": true
+        },
+        {
+          "case": "N04",
+          "claim": "A3",
+          "source": "S2",
+          "exact_unicode_slice": true
+        },
+        {
+          "case": "N04",
+          "claim": "A4",
+          "source": "S1",
+          "exact_unicode_slice": true
+        }
+      ],
+      "qwen_actions": [
+        {
+          "case": "N01",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S1",
+          "status": "ok"
+        },
+        {
+          "case": "N01",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S2",
+          "status": "ok"
+        },
+        {
+          "case": "N01",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S3",
+          "status": "ok"
+        },
+        {
+          "case": "N02",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S1",
+          "status": "ok"
+        },
+        {
+          "case": "N02",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S2",
+          "status": "ok"
+        },
+        {
+          "case": "N02",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S3",
+          "status": "ok"
+        },
+        {
+          "case": "N03",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S1",
+          "status": "ok"
+        },
+        {
+          "case": "N03",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S2",
+          "status": "ok"
+        },
+        {
+          "case": "N03",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S3",
+          "status": "ok"
+        },
+        {
+          "case": "N04",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S1",
+          "status": "ok"
+        },
+        {
+          "case": "N04",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S2",
+          "status": "ok"
+        }
+      ],
+      "protocol_deviation": {
+        "code_freeze": "Candidate final620c5ec frozen before candidate calls; first baseline calls had begun while final staticreview handling article exception. Change prompted by independent static review, not scored outputs. Pairing is exploratory, not preregistered full-policy qualification.",
+        "discarded_tooling_checks": [
+          "shared worktree cargo artifact collision discarded by agent",
+          "root navigation_guard filter selected0tests; corrected exactnamedtest passed"
+        ]
+      },
+      "limits": [
+        "Only NEW4 baseline, no pooling with candidate or old8",
+        "Source-aware software4cases only;9conditions; no no-evidence refusalmetric",
+        "Healthy Qwen measured from actual actions ok, unlike previousold8fallback snapshot",
+        "Requiredconditions and additionalreturnedclaim risk separately assessed; partialcomponent does not close compoundcondition",
+        "No new external/product/model calls by reviewer during scoring"
+      ],
+      "new4_gate": {
+        "verdict": "FAILED",
+        "lost_required_condition_ids": [
+          "N01.A",
+          "N01.B"
+        ],
+        "gained_required_condition_ids": [
+          "N02.A",
+          "N02.B",
+          "N04.C"
+        ],
+        "new_false_claim_content_ids": [
+          "N04/A1"
+        ],
+        "new_unknown_claim_content_ids": [],
+        "note": "IDs reset within eachcall. N04/A1 false in both but candidate asserts different false content: mandatorycustombuild/notofficialdistribution. Unknownscope propositions recur under differentIDs; no newunknowncontent identified. Gate independently fails on N01.A/B losses. Single stochasticcalls, staticguard deviation disclosed; no proof isolated codecausality.",
+        "unknown_content_mapping": {
+          "candidateN03/A1": "baselineN03/A1 defaultscope",
+          "candidateN04/A2": "baselineN04/A3 macOSinstalleroption scope",
+          "candidateN04/A3": "baselineN04/A4 macOSframeworkscope"
+        }
+      }
+    },
+    "regression_old8": {
+      "schema": "independent-repair-research-review-v1",
+      "reviewer": "/root/search_evaluator",
+      "created_utc": "2026-11-18T07:02:35.706819+00:00",
+      "cohort": "OLD8-candidate-regression-repeat",
+      "cases": [
+        {
+          "id": "T01",
+          "attempted": true,
+          "tool_sha256": "8bbc422cc1a9f0846c032e954ba7c96f4eb9c7b55d4284e69ebe28ddb62259c1",
+          "status": "partial",
+          "stop_reason": "budget_exhausted",
+          "error": null,
+          "conditions": [
+            {
+              "id": "T01.A",
+              "gold": "groupby creates groups for consecutive runs of equal keys; it does not aggregate equal keys globally regardless of input order.",
+              "status": "supported",
+              "claim_ids": [
+                "A1",
+                "A2"
+              ]
+            },
+            {
+              "id": "T01.B",
+              "gold": "To collect all items of each key together, input should be sorted/grouped on the same key function before groupby; groupby does not perform sorting itself.",
+              "status": "supported",
+              "claim_ids": [
+                "A3"
+              ]
+            }
+          ],
+          "supported_conditions": 2,
+          "all_required_supported": true,
+          "returned_claim_judgments": [
+            {
+              "id": "T01/A1",
+              "text": "groupby() groups only consecutive identical keys; it does not sort the data.",
+              "claim_text_sha256": "3219f8e96ecf0b06762ded2dc73572be7e0c8d539bf05b4b590625ce14b6d0ff",
+              "status": "supported",
+              "reason": "Ownquote supports narrow fact."
+            },
+            {
+              "id": "T01/A2",
+              "text": "groupby is a streaming operation that does not look ahead or back, so only adjacent elements with the same key are grouped together.",
+              "claim_text_sha256": "f903e3732fe9cfa2c79fba805c9d98bde8083e6d636e00c6af32bc3c37556682",
+              "status": "supported",
+              "reason": "Ownquote supports narrow fact."
+            },
+            {
+              "id": "T01/A3",
+              "text": "To collect all equal keys together, sort by the grouping key first with sorted(data, key=...) before passing to groupby().",
+              "claim_text_sha256": "ce753e35ba724afa5f254faadda1d3265425e7602643baaa12ba8612f9c70ff9",
+              "status": "supported",
+              "reason": "Ownquote supports narrow fact."
+            },
+            {
+              "id": "T01/A4",
+              "text": "The consecutive-only grouping is intentional and efficient, but it means the data must be pre-sorted on the grouping key.",
+              "claim_text_sha256": "e8eec6511abccf7af6d40daedf22f212ba7430d42359252a6c7d93fb6fabdef6",
+              "status": "false_in_requested_scope",
+              "reason": "Unconditional mustpresort is false for legitimate unsorted consecutive grouping; only global equalkeycollection needs preparation, frozennotes explicitlydisallowuniversalrequirement."
+            }
+          ],
+          "false_claim_ids": [
+            "T01/A4"
+          ],
+          "unknown_claim_ids": [],
+          "miss_stage": "none",
+          "diagnosis": "Consecutive grouping and conditional preparation both ownquote supported; extraA4 unconditionalpresortfalse."
+        },
+        {
+          "id": "T02",
+          "attempted": true,
+          "tool_sha256": "90beec941e48329b393d8186b416c01552e9f6b946b1e78258069300f4edad17",
+          "status": "partial",
+          "stop_reason": "budget_exhausted",
+          "error": null,
+          "conditions": [
+            {
+              "id": "T02.A",
+              "gold": "При strict=False путь разрешается настолько далеко, насколько возможно; оставшаяся часть добавляется без проверки её существования.",
+              "status": "supported",
+              "claim_ids": [
+                "A1"
+              ]
+            },
+            {
+              "id": "T02.B",
+              "gold": "При strict=True несуществующий путь приводит к OSError; FileNotFoundError допустим как конкретный подкласс для отсутствующего пути, но не как универсальный тип всех ошибок resolve.",
+              "status": "supported",
+              "claim_ids": [
+                "A1"
+              ]
+            },
+            {
+              "id": "T02.C",
+              "gold": "Path.resolve устраняет компоненты '..' (а также делает путь абсолютным и разрешает симлинки; последние два свойства не обязательные аспекты данного вопроса).",
+              "status": "supported",
+              "claim_ids": [
+                "A2"
+              ]
+            }
+          ],
+          "supported_conditions": 3,
+          "all_required_supported": true,
+          "returned_claim_judgments": [
+            {
+              "id": "T02/A1",
+              "text": "При strict=False путь разрешается настолько, насколько возможно, а оставшаяся часть добавляется без проверки её существования; при strict=True для несуществующего пути или цикла симлинков возбуждается OSError.",
+              "claim_text_sha256": "dbfa8e3b00a8bbf84f63f2e1593b1e622216e2e38cb11f2879c33d274eb8b977",
+              "status": "supported",
+              "reason": "Ownquote supports narrow fact."
+            },
+            {
+              "id": "T02/A2",
+              "text": "Path.resolve устраняет компоненты '..' (документация называет его единственным методом, который это делает).",
+              "claim_text_sha256": "89503591ebe49b0c41da0c3e51aae785f2c17b9935d383b87b6c477693369bf2",
+              "status": "supported",
+              "reason": "Ownquote supports narrow fact."
+            },
+            {
+              "id": "T02/A3",
+              "text": "С версии 3.13 циклы симлинков обрабатываются как прочие ошибки: OSError в strict-режиме и без исключения в non-strict; в предыдущих версиях RuntimeError возбуждался независимо от strict.",
+              "claim_text_sha256": "d06f4d7c8177ccfc0db414fafcdb3c874605b78a09ff09b916dbc6e4ec69179a",
+              "status": "supported",
+              "reason": "Ownquote supports narrow fact."
+            }
+          ],
+          "false_claim_ids": [],
+          "unknown_claim_ids": [],
+          "miss_stage": "none",
+          "diagnosis": "Own officialcurrentPathresolve witnesses cover3conditions; symlinkversion qualification preserved."
+        },
+        {
+          "id": "F01",
+          "attempted": true,
+          "tool_sha256": "15fc0f736969c6aab1eb793c6ea14e47eca548555193eda05f8ed33088788947",
+          "status": "partial",
+          "stop_reason": "budget_exhausted",
+          "error": null,
+          "conditions": [
+            {
+              "id": "F01.A",
+              "gold": "Never type fallback changes from unit type () to never type !.",
+              "status": "supported",
+              "claim_ids": [
+                "A1"
+              ]
+            },
+            {
+              "id": "F01.B",
+              "gold": "This change affects pre-2024 editions:2015,2018,2021; edition2024 already had this behavior.",
+              "status": "supported",
+              "claim_ids": [
+                "A1"
+              ]
+            }
+          ],
+          "supported_conditions": 2,
+          "all_required_supported": true,
+          "returned_claim_judgments": [
+            {
+              "id": "F01/A1",
+              "text": "В Rust 1.100.0 never type fallback изменён с () на ! в editions до 2024 (2015, 2018, 2021), как уже было сделано в edition 2024.",
+              "claim_text_sha256": "8381b0034a6c478a4bede503ed039a522221ced5fb44e8ae4da6038c3527556c",
+              "status": "supported",
+              "reason": "Ownquote supports narrow fact."
+            },
+            {
+              "id": "F01/A2",
+              "text": "Изменение fallback введено как breaking change, необходимое для смены Infallible.",
+              "claim_text_sha256": "f1a4fcabe7425c7f6113dbb5f4e35cc62750d0f53a232fdf7232c48c280d6376",
+              "status": "supported",
+              "reason": "Ownquote supports narrow fact."
+            },
+            {
+              "id": "F01/A3",
+              "text": "Изменение в основном незаметно, но может затронуть код в редких случаях, например при игнорировании результата функции с generic-параметром.",
+              "claim_text_sha256": "146c9856cf08c38025e5097488d6fb8f68893e69b1627297f4ecafdf2ecab1ca",
+              "status": "supported",
+              "reason": "Ownquote supports narrow fact."
+            }
+          ],
+          "false_claim_ids": [],
+          "unknown_claim_ids": [],
+          "miss_stage": "none",
+          "diagnosis": "Ownofficialrelease fullqualifiedfallbackquote supports both."
+        },
+        {
+          "id": "F02",
+          "attempted": true,
+          "tool_sha256": "437527476c1c2f33acf8508814e4a217484c6561e03617b3faf738b1222c9064",
+          "status": "error",
+          "stop_reason": "model_error",
+          "error": "invalid research plan",
+          "conditions": [
+            {
+              "id": "F02.A",
+              "gold": "Python3.16.0a2 is an early developer preview / second alpha (not a final stable release).",
+              "status": "missing",
+              "claim_ids": []
+            },
+            {
+              "id": "F02.B",
+              "gold": "The preview is intended for testing and is not recommended for production use.",
+              "status": "missing",
+              "claim_ids": []
+            },
+            {
+              "id": "F02.C",
+              "gold": "The next alpha3.16.0a3 is scheduled for December15,2026; scheduled future event, not already released as ofNovember18.",
+              "status": "missing",
+              "claim_ids": []
+            }
+          ],
+          "supported_conditions": 0,
+          "all_required_supported": false,
+          "returned_claim_judgments": [],
+          "false_claim_ids": [],
+          "unknown_claim_ids": [],
+          "miss_stage": "planning",
+          "diagnosis": "No finalanswer; invalidresearchplan error, not safeabstention."
+        },
+        {
+          "id": "R01",
+          "attempted": true,
+          "tool_sha256": "1af9b7beb40d827e8f859024d57d29dd08ca104ed6426e6609d04e5adec8246f",
+          "status": "partial",
+          "stop_reason": "budget_exhausted",
+          "error": null,
+          "conditions": [
+            {
+              "id": "R01.A",
+              "gold": "Воссозданная Янтарная комната открылась 31 мая 2003 года.",
+              "status": "missing",
+              "claim_ids": []
+            },
+            {
+              "id": "R01.B",
+              "gold": "Для восстановления потребовалось шесть тонн янтаря.",
+              "status": "missing",
+              "claim_ids": []
+            }
+          ],
+          "supported_conditions": 0,
+          "all_required_supported": false,
+          "returned_claim_judgments": [
+            {
+              "id": "R01/A1",
+              "text": "Воссозданная Янтарная комната была воссоздана в полном объёме в 2003 году к 300-летию Санкт-Петербурга.",
+              "claim_text_sha256": "7ad75349b7345c3aae277798bea8025aa11f6143fab0c79dd69c5f393645b9f8",
+              "status": "supported",
+              "reason": "Ownquote supports narrow fact."
+            },
+            {
+              "id": "R01/A2",
+              "text": "В 2003 году Янтарная комната была восстановлена в полном объёме из калининградского янтаря.",
+              "claim_text_sha256": "769196d326ead66f62c8637831f88f392216ebb1f7d2d477fb4dcd65678918af",
+              "status": "supported",
+              "reason": "Ownquote supports narrow fact."
+            }
+          ],
+          "false_claim_ids": [],
+          "unknown_claim_ids": [],
+          "miss_stage": "precision_and_retrieval",
+          "diagnosis": "Ownquotes support year2003, not exactopeningday31May or six tonnes; two contextualfacts truebut incomplete."
+        },
+        {
+          "id": "R02",
+          "attempted": true,
+          "tool_sha256": "fe08009d93d5bdf5331f3749c5507e63d84d75d17bdb778f722b0fb057332674",
+          "status": "partial",
+          "stop_reason": "no_new_evidence",
+          "error": null,
+          "conditions": [
+            {
+              "id": "R02.A",
+              "gold": "Первый камень в фундамент был заложен 23 сентября 1928 года.",
+              "status": "missing",
+              "claim_ids": []
+            },
+            {
+              "id": "R02.B",
+              "gold": "Проект создали Михаил Барщ и Михаил Синявский.",
+              "status": "missing",
+              "claim_ids": []
+            }
+          ],
+          "supported_conditions": 0,
+          "all_required_supported": false,
+          "returned_claim_judgments": [],
+          "false_claim_ids": [],
+          "unknown_claim_ids": [],
+          "miss_stage": "retrieval",
+          "diagnosis": "Emptyanswer no witnesses."
+        },
+        {
+          "id": "B01",
+          "attempted": true,
+          "tool_sha256": "5538a068816466d1d9902688aa235110384eb8ec5154d355cdc7f005d45af10c",
+          "status": "partial",
+          "stop_reason": "model_error",
+          "error": "OpenRouter HTTP 429 Too Many Requests; provider error details omitted",
+          "conditions": [
+            {
+              "id": "B01.A",
+              "gold": "False premise: shallow copy creates a new outer compound object but inserts references to contained original objects, so nested mutable objects can remain shared.",
+              "status": "missing",
+              "claim_ids": []
+            },
+            {
+              "id": "B01.B",
+              "gold": "Deep copy recursively copies contained objects, subject to module/type/custom-copy behavior; do not claim universal isolation of every possible object.",
+              "status": "missing",
+              "claim_ids": []
+            }
+          ],
+          "supported_conditions": 0,
+          "all_required_supported": false,
+          "returned_claim_judgments": [],
+          "false_claim_ids": [],
+          "unknown_claim_ids": [],
+          "miss_stage": "provider_availability",
+          "diagnosis": "ActualOpenRouterHTTP429; emptyfinalanswer, no retries; not factualrefusal."
+        },
+        {
+          "id": "B02",
+          "attempted": false,
+          "tool_sha256": null,
+          "status": "not_run",
+          "stop_reason": "campaign_stopped_after_provider429",
+          "error": null,
+          "conditions": [
+            {
+              "id": "B02.A",
+              "gold": "tomllib.load first argument must be a readable binary file object, not an arbitrary text file object.",
+              "status": "not_run",
+              "claim_ids": []
+            },
+            {
+              "id": "B02.B",
+              "gold": "tomllib does not support writing TOML.",
+              "status": "not_run",
+              "claim_ids": []
+            }
+          ],
+          "supported_conditions": 0,
+          "all_required_supported": false,
+          "returned_claim_judgments": [],
+          "false_claim_ids": [],
+          "unknown_claim_ids": [],
+          "miss_stage": "not_run_after_provider429",
+          "diagnosis": "No attempt afterstopcondition; no semanticverdict."
+        }
+      ],
+      "aggregate": {
+        "frozen_cases": 8,
+        "attempted_cases": 7,
+        "not_run_cases": [
+          "B02"
+        ],
+        "frozen_required_conditions": 18,
+        "attempted_required_conditions": 16,
+        "supported_conditions": 7,
+        "all_conditions_supported_cases": 3,
+        "returned_claims": 12,
+        "false_in_requested_context_claim_ids": [
+          "T01/A4"
+        ],
+        "unknown_returned_claim_ids": [],
+        "coverage_denominator_note": "7/18 frozenconditions and3/8 complete; conditional7/16 attemptedconditions. B02notrun is not a semanticfailure orsafeabstention.",
+        "availability_cases": [
+          "B01 OpenRouterHTTP429"
+        ],
+        "failed429_usage": "unknown; no fabricatedzero cost"
+      },
+      "comparison_to_historical_old8": {
+        "historical_supported_conditions": 3,
+        "candidate_supported_conditions": 7,
+        "lost_supported_condition_ids": [],
+        "gained_supported_condition_ids": [
+          "T01.B",
+          "T02.A",
+          "T02.B",
+          "T02.C"
+        ],
+        "new_false_claim_content_ids": [
+          "T01/A4"
+        ],
+        "historical_false_not_returned": [
+          "F02/A3"
+        ],
+        "qualification": "No acceptance: newfalseT01/A4, incompletecampaign429, changedQwenhealth and one stochasticrepeat; not pairedcodecausalestimate."
+      },
+      "quote_provenance_checks": [
+        {
+          "case": "T01",
+          "claim": "A1",
+          "source": "S1",
+          "exact_unicode_slice": true
+        },
+        {
+          "case": "T01",
+          "claim": "A2",
+          "source": "S1",
+          "exact_unicode_slice": true
+        },
+        {
+          "case": "T01",
+          "claim": "A3",
+          "source": "S1",
+          "exact_unicode_slice": true
+        },
+        {
+          "case": "T01",
+          "claim": "A4",
+          "source": "S1",
+          "exact_unicode_slice": true
+        },
+        {
+          "case": "T02",
+          "claim": "A1",
+          "source": "S1",
+          "exact_unicode_slice": true
+        },
+        {
+          "case": "T02",
+          "claim": "A2",
+          "source": "S1",
+          "exact_unicode_slice": true
+        },
+        {
+          "case": "T02",
+          "claim": "A3",
+          "source": "S1",
+          "exact_unicode_slice": true
+        },
+        {
+          "case": "F01",
+          "claim": "A1",
+          "source": "S1",
+          "exact_unicode_slice": true
+        },
+        {
+          "case": "F01",
+          "claim": "A2",
+          "source": "S1",
+          "exact_unicode_slice": true
+        },
+        {
+          "case": "F01",
+          "claim": "A3",
+          "source": "S1",
+          "exact_unicode_slice": true
+        },
+        {
+          "case": "R01",
+          "claim": "A1",
+          "source": "S1",
+          "exact_unicode_slice": true
+        },
+        {
+          "case": "R01",
+          "claim": "A2",
+          "source": "S2",
+          "exact_unicode_slice": true
+        }
+      ],
+      "qwen_actions": [
+        {
+          "case": "T01",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S1",
+          "status": "ok"
+        },
+        {
+          "case": "T01",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S2",
+          "status": "ok"
+        },
+        {
+          "case": "T02",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S1",
+          "status": "ok"
+        },
+        {
+          "case": "T02",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S2",
+          "status": "ok"
+        },
+        {
+          "case": "T02",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S3",
+          "status": "ok"
+        },
+        {
+          "case": "F01",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S1",
+          "status": "ok"
+        },
+        {
+          "case": "F01",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S2",
+          "status": "ok"
+        },
+        {
+          "case": "F01",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S3",
+          "status": "ok"
+        },
+        {
+          "case": "F01",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S4",
+          "status": "ok"
+        },
+        {
+          "case": "R01",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S1",
+          "status": "ok"
+        },
+        {
+          "case": "R01",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S2",
+          "status": "ok"
+        },
+        {
+          "case": "R02",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S1",
+          "status": "ok"
+        },
+        {
+          "case": "B01",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S1",
+          "status": "ok"
+        },
+        {
+          "case": "B01",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S2",
+          "status": "ok"
+        },
+        {
+          "case": "B01",
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S3",
+          "status": "ok"
+        }
+      ],
+      "protocol_deviation": {
+        "code_freeze": "Candidate final620c5ec frozen before candidate calls; first baseline calls had begun while final staticreview handling article exception. Change prompted by independent static review, not scored outputs. Pairing is exploratory, not preregistered full-policy qualification.",
+        "discarded_tooling_checks": [
+          "shared worktree cargo artifact collision discarded by agent",
+          "root navigation_guard filter selected0tests; corrected exactnamedtest passed"
+        ]
+      },
+      "limits": [
+        "This cohort is strictly separate from NEW4baseline/candidate",
+        "Originalold8usedlexicalfallback; thisrepeat uses restartedQwen: no isolatedruntimefixcausality",
+        "One-day source-aware exploratory repeat; original20 not changed",
+        "No further calls after429; B02notrun",
+        "Primarytruth and exactquote support separately adjudicated; unknownreturned0 does not mean completeanswers"
+      ]
+    }
+  }
+}

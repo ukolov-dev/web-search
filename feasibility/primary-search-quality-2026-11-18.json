@@ -1,0 +1,92 @@
+{
+  "schema": "primary-search-quality-v1",
+  "reviewer": "/root/primary_search_review",
+  "reviewed_utc": "2026-11-18T12:05:13.415326+00:00",
+  "verdict": "NOT_EVALUABLE",
+  "gate": "NOT_EVALUABLE_INCOMPLETE_ZERO_PAIRS",
+  "independence": "Reviewer authored frozen gold and quality labels, no candidate/runtime code. No reviewer product/model or retry calls.",
+  "cohorts": {
+    "NEW4": {
+      "planned_questions": 4,
+      "conditions_per_arm": 9,
+      "attempted_trials": 0,
+      "completed_pairs": 0,
+      "coverage": null,
+      "false_unknown_gain_loss": null,
+      "reason": "All eight trials not_run; not scored as misses."
+    },
+    "OLD2": {
+      "planned_questions": 2,
+      "conditions_per_arm": 5,
+      "attempted_trials": 1,
+      "completed_pairs": 0,
+      "coverage": null,
+      "false_unknown_gain_loss": null,
+      "reason": "Only C01baseline attempted then fetch_timeout, candidate C01 and both C02 not_run; cannot compare."
+    }
+  },
+  "attempts": [
+    {
+      "case": "C01",
+      "arm": "baseline",
+      "status": "partial",
+      "stop_reason": "model_error",
+      "underlying_failure": "fetch_timeout",
+      "failed_url": "https://www.pythonpool.com/pythons-itertools-groupby/",
+      "answer": "",
+      "final_claims": 0,
+      "audit_completed": false,
+      "semantic_false_unknown_counts_not_comparable": true,
+      "budget_generation_reservations": 2,
+      "actual_generative_posts": 1,
+      "returned_generative_calls": 1,
+      "prevented_model_stages": [
+        "draft"
+      ],
+      "actual_post_evidence": "Only model-01-plan.json exists, returned call usage present. Session.generate reserves count before Backend.generate. Shared persistent halt from failed second read rejects unpolled Saved future via guarded, so no draft POST. Named cancellation test verifies rejected future notpolled. Model error placeholder cost_knownfalse does not represent a second network call.",
+      "known_cost_usd": 4.25e-05,
+      "unknown_usage_posts": 0,
+      "qwen_calls": 1,
+      "serp_calls": 1,
+      "source_read_attempts": 2,
+      "cache_http_reads": 3,
+      "official_document_actually_found_read": "https://docs.python.org/3/library/itertools.html",
+      "source_body_sha256_verified": "ebd1403107661fc806caf02e6e3dd287e15f1eee21e13f22b975c3a9e26ddbf1",
+      "source_chars": 39110,
+      "qwen_native_utf8_ranges_verified": [
+        {
+          "start_utf8": 13124,
+          "end_utf8": 14330,
+          "chars": 1200,
+          "sha256": "da8c08c641389a49647abc517da562edc29db9bc43b8984f6ea4f2275ece21d3"
+        },
+        {
+          "start_utf8": 12120,
+          "end_utf8": 13324,
+          "chars": 1200,
+          "sha256": "cfa6bd1000404fc62af619adab0a205ffd67fc3415d321486616b47b5c550d2d"
+        },
+        {
+          "start_utf8": 28192,
+          "end_utf8": 29407,
+          "chars": 1200,
+          "sha256": "375058c4d28c2d89077b757937a62124a50d835079f1855d37c43815b0dd7605"
+        }
+      ],
+      "official_priority_activated": false
+    }
+  ],
+  "paired_comparisons": 0,
+  "not_run_trials": 11,
+  "retries": 0,
+  "provider_429_observed": false,
+  "refusals_preserved": true,
+  "source_state_after_equals_seed": true,
+  "source_ledger_note": "fetch_timeout is not classified as a permanent source block by native code; unchanged ledger is not permission to retry this stopped campaign.",
+  "limits": [
+    "NativeSession path exercised only baseline control through plan/SERP/firstread/Qwen/secondreadfailure; no answerdraft or audit executed",
+    "Candidate priority never ran, so no effect or absence of effect established",
+    "Empty final answer after error earns no correct-answer or safe-refusal credit",
+    "No fullsearch acceptance, NEW4 recall, product improvement, repeatability or release conclusion"
+  ]
+}
