@@ -1,0 +1,223 @@
+{
+  "schema": "primary-draft-quality-v1",
+  "reviewer": "/root/draft_evaluator",
+  "reviewed_utc": "2026-11-18T10:13:19.456725+00:00",
+  "independence": "No implementation authored; reviewed frozen cases, four source hashes/full saved primary relevant paragraphs, all new raw draft/audit envelopes and final own witnesses. No external HTTP/model/cargo calls.",
+  "cases_sha256": "d785b9c1db5f9008e2e72c10c0b4816013621b9af0f32c678a1cdb819a3caf2e",
+  "rows": [
+    {
+      "case": "D01",
+      "arm": "baseline",
+      "draft_claims": [
+        {
+          "claim_id": "A1",
+          "text": "groupby() groups only consecutive identical keys; it does not sort the data.",
+          "world_judgment": "true",
+          "own_witness_faithfulness": true,
+          "reason": "Consecutive runs and no internal sorting are stated by the own witness.",
+          "final_retained": true,
+          "fingerprint": null
+        },
+        {
+          "claim_id": "A2",
+          "text": "To collect all equal keys together, sort by the grouping key first with sorted(data, key=...) before passing to groupby().",
+          "world_judgment": "true",
+          "own_witness_faithfulness": true,
+          "reason": "Conditional purpose collect-all equal keys avoids unconditional-sort fingerprint; own quote specifies same grouping key and sorted before groupby.",
+          "final_retained": true,
+          "fingerprint": null
+        },
+        {
+          "claim_id": "A3",
+          "text": "groupby is a streaming operation that does not look ahead or back, so only adjacent elements with the same key are grouped together.",
+          "world_judgment": "true",
+          "own_witness_faithfulness": true,
+          "reason": "Accepted only under frozen streaming/no-global-lookahead interpretation, not zero internal one-item read-ahead; adjacent equal-key behavior supported.",
+          "final_retained": true,
+          "fingerprint": null
+        }
+      ],
+      "final_claim_ids": [
+        "A1",
+        "A2",
+        "A3"
+      ],
+      "covered_conditions": [
+        "T01.A",
+        "T01.B"
+      ],
+      "missing_conditions": [],
+      "audit_note": "Audit supports all draft claims; final retains all.",
+      "result_sha256": "8948f87ce15357192fbe56d6bd408bbc757d5ed6c7cae7d7de266cf6dd6e36e5"
+    },
+    {
+      "case": "D01",
+      "arm": "primary",
+      "draft_claims": [
+        {
+          "claim_id": "A1",
+          "text": "itertools.groupby returns consecutive keys and groups from the iterable, so it groups consecutive runs, not equal keys anywhere in the input.",
+          "world_judgment": "true",
+          "own_witness_faithfulness": true,
+          "reason": "Consecutive keys/groups directly supports consecutive-run answer.",
+          "final_retained": true,
+          "fingerprint": null
+        },
+        {
+          "claim_id": "A2",
+          "text": "groupby generates a break or new group every time the value of the key function changes.",
+          "world_judgment": "true",
+          "own_witness_faithfulness": true,
+          "reason": "Key change creates new group, exact own semantic support.",
+          "final_retained": true,
+          "fingerprint": null
+        },
+        {
+          "claim_id": "A3",
+          "text": "To collect all equal keys together, the iterable generally needs to already be sorted on the same key function.",
+          "world_judgment": "true",
+          "own_witness_faithfulness": true,
+          "reason": "Conditional collect-all wording plus generally/same-key sorting preserved; no universal presort requirement.",
+          "final_retained": true,
+          "fingerprint": null
+        },
+        {
+          "claim_id": "A4",
+          "text": "The documentation states this behavior differs from SQL GROUP BY, which aggregates common elements regardless of input order.",
+          "world_judgment": "true",
+          "own_witness_faithfulness": true,
+          "reason": "Own witness explicitly contrasts SQL aggregation independent of input order.",
+          "final_retained": true,
+          "fingerprint": null
+        }
+      ],
+      "final_claim_ids": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "covered_conditions": [
+        "T01.A",
+        "T01.B"
+      ],
+      "missing_conditions": [],
+      "audit_note": "Audit supports all draft claims; final retains all.",
+      "result_sha256": "728829b09284e67722244b630524695307324606fc80c96e151678784ef771df"
+    },
+    {
+      "case": "D02",
+      "arm": "baseline",
+      "draft_claims": [
+        {
+          "claim_id": "A1",
+          "text": "Free threading вводится как экспериментальная функция и не входит в официальную сборку Python; для отключения GIL нужна собственная сборка.",
+          "world_judgment": "false_mixed_compound",
+          "own_witness_faithfulness": true,
+          "reason": "Mixed compound: experimental is correct, but exclusion from official distribution and mandatory custom build are false for released CPython 3.13; official Windows/macOS installers supply optional free-threaded binaries. Source-faithful wording is not world-truth.",
+          "final_retained": false,
+          "fingerprint": "FP_PY313_CUSTOMBUILD_MANDATORY"
+        }
+      ],
+      "final_claim_ids": [],
+      "covered_conditions": [],
+      "missing_conditions": [
+        "N04.A",
+        "N04.B",
+        "N04.C"
+      ],
+      "audit_note": "Old audit removes the whole compound for a default-facet support mismatch; it does not identify the factual mandatory-custom-build error. Experimental subclaim is lost with compound.",
+      "result_sha256": "d8a534de1fe53074b27ccfa27661021b10e9408d06532b6b94b7589254a0591a"
+    },
+    {
+      "case": "D02",
+      "arm": "primary",
+      "draft_claims": [
+        {
+          "claim_id": "A1",
+          "text": "В CPython 3.13 поддержка free-threaded режима без GIL является экспериментальной.",
+          "world_judgment": "true",
+          "own_witness_faithfulness": true,
+          "reason": "Pinned 3.13 official document and own quote establish experimental status.",
+          "final_retained": true,
+          "fingerprint": null
+        },
+        {
+          "claim_id": "A2",
+          "text": "Free-threaded режим не включён по умолчанию.",
+          "world_judgment": "true",
+          "own_witness_faithfulness": true,
+          "reason": "Own quote explicitly says not enabled by default, not platform-installer generalization.",
+          "final_retained": true,
+          "fingerprint": null
+        },
+        {
+          "claim_id": "A3",
+          "text": "Для free-threaded режима нужен отдельный executable, обычно python3.13t или python3.13t.exe.",
+          "world_judgment": "true",
+          "own_witness_faithfulness": true,
+          "reason": "Own quote explicitly requires a separate executable and names python3.13t/python3.13t.exe.",
+          "final_retained": true,
+          "fingerprint": null
+        }
+      ],
+      "final_claim_ids": [
+        "A1",
+        "A2",
+        "A3"
+      ],
+      "covered_conditions": [
+        "N04.A",
+        "N04.B",
+        "N04.C"
+      ],
+      "missing_conditions": [],
+      "audit_note": "Audit supports all draft claims; final retains all.",
+      "result_sha256": "1f4a1820c65ee3eea652082641c1e1674e33105814ece38677d5862e1207e778"
+    }
+  ],
+  "metrics": {
+    "baseline": {
+      "final_conditions": 2,
+      "required_conditions": 5,
+      "complete_questions": 1,
+      "questions": 2,
+      "draft_claims": 4,
+      "draft_false_compound_claims": 1,
+      "draft_unknown_claims": 0,
+      "final_claims": 3,
+      "final_false_claims": 0,
+      "final_unknown_claims": 0
+    },
+    "primary": {
+      "final_conditions": 5,
+      "required_conditions": 5,
+      "complete_questions": 2,
+      "questions": 2,
+      "draft_claims": 7,
+      "draft_false_compound_claims": 0,
+      "draft_unknown_claims": 0,
+      "final_claims": 7,
+      "final_false_claims": 0,
+      "final_unknown_claims": 0
+    },
+    "gained_conditions": [
+      "N04.A",
+      "N04.B",
+      "N04.C"
+    ],
+    "lost_conditions": [],
+    "new_false_fingerprints": [],
+    "new_unknown_fingerprints": [],
+    "final_exact_own_quote_placements": 10
+  },
+  "gate": "PASSED_BOUNDED_TWO_PAIR_COMPONENT_ONLY",
+  "limits": [
+    "Known historical development two questions, five conditions, single repeat and primary-first unbalanced order; no unseen holdout or repeatability proof.",
+    "Oracle original model plan and saved one source; no live retrieval/controller or two-document sufficiency proof.",
+    "CPython source bodies truncated at100000 characters; relevant official paragraph exists before boundary.",
+    "Groupby streaming phrasing accepted under frozen no-global-lookahead scope; literal zero internal look-ahead is not proven.",
+    "All four native result statuses partial because only one cited document; CPython baseline answer empty, not runtime transport error.",
+    "Positive result does not establish general qualification, automatic primary-first MCP readiness or causal fix for historical429."
+  ]
+}

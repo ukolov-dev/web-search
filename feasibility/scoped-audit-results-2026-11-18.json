@@ -1,0 +1,2746 @@
+{
+  "schema": "scope-audit-results-v1",
+  "freeze": {
+    "files": {
+      "scripts/scoped-audit-2026-11-18.py": "d14f9dbe68b6314b23fcd416fa4b8131417f962f942ed7c438edd0e489fd8035",
+      "src/research_scope_audit_experiment.rs": "bb1930d3d4e857e4953e25157be1cb569bd59fe27cf03ab8a6846e1f483b7659",
+      "src/research_tests.rs": "6c7c5095e31596c995e2a4c1ebd9c0334be0437e36dd8c4319c6a455af1090ce",
+      "src/research.rs": "5ef2fdd229989324de95e594074487783bf67f24f5bed9007cd2c6484c7d4751",
+      "feasibility/scoped-audit-cases-2026-11-18.json": "271eb09df047a544ff052b7a72aa994f8de4a54ccaff70a8f67d83a1b65e9cde",
+      "runs/scoped-audit-2026-11-18/inputs.json": "44f18fc0929e7d0611b1b19162423b30ba475be6cdbb28b876c20cb1b5f5c49d",
+      "runs/scoped-audit-2026-11-18/gold-review.json": "b98f974f0b0f1a306ee628e4d3204aaeaeab205b3e2cff2c091a74c1b01bfca6",
+      "runs/scoped-audit-2026-11-18/bin/audit-tests": "b6581999b349b914ae5c4fa8f13f34cb7b5b9fbb33891acd7af500fe63eefce4",
+      "runs/scoped-audit-2026-11-18/prepared/H01.json": "8762cd3291e86127cb073c78c309cc0cf38204c045ac507c0eb07a5e3ffcf6e3",
+      "runs/scoped-audit-2026-11-18/prepared/H02.json": "5a165831a1eb05613be52b40f9214e5f268acb35d3467cab10e7ce0e80ecd4f2",
+      "runs/scoped-audit-2026-11-18/prepared/H03.json": "b0b9ccebce1263e6e07bfcf6233e94bc72085c68b8c1825e149f67e47a5568e2",
+      "runs/scoped-audit-2026-11-18/prepared/H04.json": "f72abeb366ec316ace14ac348f729fd942c3bbd730c0a338e7c782d6cf736962",
+      "runs/scoped-audit-2026-11-18/prepared/H05.json": "9a9133d693ac4c8e8f84a8e5f63a4fcdbc6d77e26db5911571ac59c14a94d548",
+      "runs/scoped-audit-2026-11-18/prepared/H06.json": "f358265bff53f13a369f7c36192a7356dcbcb0a904641e9851aa9be50a29c8c7",
+      "runs/scoped-audit-2026-11-18/prepared/H07.json": "38008b39de76b769e5bcb46029f1217ee9ca898c60cf7450a7892f43d3f9fd3c",
+      "runs/scoped-audit-2026-11-18/prepared/H08.json": "e1e4f8fe8e0f7a7256d44852af1faab3e98c25763be8ac45c2daf7f657e7d120",
+      "runs/scoped-audit-2026-11-18/prepared/S01.json": "87e983a8628e7442939bcb79fce8d1f290f0d8757c18f7110f849021239c6216",
+      "runs/scoped-audit-2026-11-18/prepared/S02.json": "c15d54390c74a29261cc091ffb85daadc1be74152e589fb4f99d362facfa8c5e",
+      "runs/scoped-audit-2026-11-18/prepared/S03.json": "253da4cc6655bd77c902ef527f34052bea87dc4cd1a8443b0ab2469f0406b28a",
+      "runs/scoped-audit-2026-11-18/prepared/S04.json": "5fcec52624661f027900f90f20f1baefb6901f7057e71823565e0771597f80ac",
+      "runs/scoped-audit-2026-11-18/prepared/S05.json": "c84e2e044e72db2c2c6cd012a5002ad79f5e736d9228456a0250d60a8a52002d",
+      "runs/scoped-audit-2026-11-18/prepared/S06.json": "8f4c079fe4573928e8f5e9dc0fbe4da435ce83399c4693df54960caad9f3a577",
+      "runs/scoped-audit-2026-11-18/prepared/S07.json": "785df966e627ff9ba6e4f82521cc53b34b0dcf82c0a0160840e4b9bda50b4ba2",
+      "runs/scoped-audit-2026-11-18/prepared/S08.json": "bf6c6804211061156650042b45e4a6754ad3028a736866ff85f6807c27d341b7"
+    },
+    "order": [
+      "H01",
+      "S01",
+      "H02",
+      "S02",
+      "H03",
+      "S03",
+      "H04",
+      "S04",
+      "H05",
+      "S05",
+      "H06",
+      "S06",
+      "H07",
+      "S07",
+      "H08",
+      "S08"
+    ],
+    "max_calls": 32,
+    "wall_seconds": 600,
+    "model": "deepseek/deepseek-v4.1-flash-1017",
+    "limits": {
+      "source_http": 0,
+      "retries": 0,
+      "per_call_seconds": 90,
+      "max_output_tokens": 3072
+    },
+    "policy": "New authorized campaign; old429campaign not resumed. Stop first failed call. Both arms identical original context, no quote expansion or claim rewrite.",
+    "pre_live_review": "Includes3s pacing in105s childtimeout admission reserve; inputs/prompts/contexts unchanged."
+  },
+  "summary": {
+    "planned": 32,
+    "attempts": [
+      {
+        "case": "H01",
+        "arm": "baseline",
+        "exit_code": 0,
+        "elapsed_ms": 3209
+      },
+      {
+        "case": "H01",
+        "arm": "candidate",
+        "exit_code": 0,
+        "elapsed_ms": 1490
+      },
+      {
+        "case": "S01",
+        "arm": "candidate",
+        "exit_code": 0,
+        "elapsed_ms": 2210
+      },
+      {
+        "case": "S01",
+        "arm": "baseline",
+        "exit_code": 0,
+        "elapsed_ms": 1371
+      },
+      {
+        "case": "H02",
+        "arm": "baseline",
+        "exit_code": 0,
+        "elapsed_ms": 1832
+      },
+      {
+        "case": "H02",
+        "arm": "candidate",
+        "exit_code": 0,
+        "elapsed_ms": 1998
+      },
+      {
+        "case": "S02",
+        "arm": "candidate",
+        "exit_code": 0,
+        "elapsed_ms": 1725
+      },
+      {
+        "case": "S02",
+        "arm": "baseline",
+        "exit_code": 0,
+        "elapsed_ms": 1816
+      },
+      {
+        "case": "H03",
+        "arm": "baseline",
+        "exit_code": 0,
+        "elapsed_ms": 1538
+      },
+      {
+        "case": "H03",
+        "arm": "candidate",
+        "exit_code": 0,
+        "elapsed_ms": 3693
+      },
+      {
+        "case": "S03",
+        "arm": "candidate",
+        "exit_code": 0,
+        "elapsed_ms": 1902
+      },
+      {
+        "case": "S03",
+        "arm": "baseline",
+        "exit_code": 0,
+        "elapsed_ms": 1354
+      },
+      {
+        "case": "H04",
+        "arm": "baseline",
+        "exit_code": 0,
+        "elapsed_ms": 1534
+      },
+      {
+        "case": "H04",
+        "arm": "candidate",
+        "exit_code": 0,
+        "elapsed_ms": 1647
+      },
+      {
+        "case": "S04",
+        "arm": "candidate",
+        "exit_code": 101,
+        "elapsed_ms": 3230,
+        "error": {
+          "status": "invalid_or_failed_audit"
+        }
+      }
+    ],
+    "stop": {
+      "reason": "first_failed_attempt_no_retry",
+      "attempt": {
+        "case": "S04",
+        "arm": "candidate",
+        "exit_code": 101,
+        "elapsed_ms": 3230,
+        "error": {
+          "status": "invalid_or_failed_audit"
+        }
+      }
+    },
+    "source_http_calls": 0,
+    "retries": 0
+  },
+  "rows": [
+    {
+      "id": "H01",
+      "cohort": "historical_development8",
+      "arms": {
+        "baseline": {
+          "attempt": {
+            "case": "H01",
+            "arm": "baseline",
+            "exit_code": 0,
+            "elapsed_ms": 3209
+          },
+          "status": "completed",
+          "context_sha256": "f3f6cdf0ea0406f55bafc8b1c6fd2eeaf28b413f06f3b9043dafc0d98bd56ec3",
+          "call_sha256": "bdd286c497a0a574e04c5ab515373c4dd7ed41f9f6332bc452c49f8eeae819cc",
+          "usage": {
+            "completion_tokens": 84,
+            "completion_tokens_details": {
+              "audio_tokens": 0,
+              "image_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "cost": 0.00011274,
+            "cost_details": {
+              "upstream_inference_completions_cost": 4.2e-05,
+              "upstream_inference_cost": 0.00011274,
+              "upstream_inference_prompt_cost": 7.074e-05
+            },
+            "is_byok": false,
+            "prompt_tokens": 1965,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cache_write_tokens": 0,
+              "cached_tokens": 0,
+              "video_tokens": 0
+            },
+            "total_tokens": 2049
+          },
+          "raw_audit": {
+            "checks": [
+              {
+                "id": "A1",
+                "reason": "Quote supports intentional/efficient and pre-sorting, but not the 'consecutive-only grouping' premise; that comes from other chunks, not this evidence.",
+                "verdict": "unsupported"
+              }
+            ],
+            "conflicts": [],
+            "missing": [
+              0
+            ],
+            "next": {
+              "facet": 0,
+              "query": "itertools.groupby consecutive keys documentation"
+            },
+            "sufficient": false
+          },
+          "adapted_audit": {
+            "checks": [
+              {
+                "id": "A1",
+                "reason": "Quote supports intentional/efficient and pre-sorting, but not the 'consecutive-only grouping' premise; that comes from other chunks, not this evidence.",
+                "verdict": "unsupported"
+              }
+            ],
+            "conflicts": [],
+            "missing": [
+              0
+            ],
+            "next": {
+              "facet": 0,
+              "query": "itertools.groupby consecutive keys documentation"
+            },
+            "sufficient": false
+          },
+          "result": {
+            "actions": [],
+            "answer": "",
+            "budget": {
+              "limits": {
+                "browser": 0,
+                "documents": 4,
+                "forms": 2,
+                "generations": 6,
+                "output_bytes": 32768,
+                "qwen": 4,
+                "seconds": 180,
+                "serp": 4,
+                "source_context_chars": 24000
+              },
+              "remaining": {
+                "documents": 4,
+                "forms": 2,
+                "generations": 6,
+                "milliseconds": 177833,
+                "qwen": 4,
+                "serp": 4
+              },
+              "used": {
+                "documents": 0,
+                "forms": 0,
+                "generations": 0,
+                "qwen": 0,
+                "serp": 0
+              }
+            },
+            "claims": [],
+            "conflicts": [],
+            "elapsed_ms": 2166,
+            "error": null,
+            "facets": [
+              "Support the frozen claim within the original question scope"
+            ],
+            "independence": "distinct document bodies; publisher independence not established",
+            "missing": [
+              0
+            ],
+            "model_calls": [],
+            "news_window": null,
+            "offset_unit": "Unicode code points; answer ranges exclude app-added citation suffixes",
+            "output_limited": false,
+            "query_forms": [],
+            "request_id": "654e9ee3fa4fdad6d60e41f25bce12943d4515318b54b2a42d757d5263b84827",
+            "semantic_verification": "experimental separate model audit; not an independent truth guarantee",
+            "sources": [
+              {
+                "cache": null,
+                "document_version": "521264aaadad5e65b94dba46e76744dcb361ee187c45fb69183c3c1dffbaaf40",
+                "eligibility": "read_body",
+                "eligible": true,
+                "extraction": null,
+                "id": "S1",
+                "parent_url": null,
+                "publication": {
+                  "date_status": "valid",
+                  "kind": "article",
+                  "published_date": "2026-06-12",
+                  "witness_count": 2,
+                  "witnesses": [
+                    {
+                      "date": "2026-06-12",
+                      "raw": "2026-06-12T07:11:30+00:00",
+                      "source": "jsonld.datePublished",
+                      "timestamp": "2026-06-12T07:11:30+00:00"
+                    },
+                    {
+                      "date": "2026-06-12",
+                      "raw": "2026-06-12T07:11:30+00:00",
+                      "source": "meta.article:published_time",
+                      "timestamp": "2026-06-12T07:11:30+00:00"
+                    }
+                  ],
+                  "witnesses_limited": false
+                },
+                "text_hash": "",
+                "title": "Python Itertools and Functools Exercises: 20 Coding Problems with Solutions",
+                "url": "https://pynative.com/python-itertools-functools-exercises/"
+              }
+            ],
+            "status": "partial",
+            "stop_reason": "component_replay",
+            "sufficiency": {
+              "audit_completed": true,
+              "cited_distinct_documents": 0,
+              "judge_sufficient": false,
+              "required_distinct_documents": 2
+            },
+            "untrusted_content": true
+          }
+        },
+        "candidate": {
+          "attempt": {
+            "case": "H01",
+            "arm": "candidate",
+            "exit_code": 0,
+            "elapsed_ms": 1490
+          },
+          "status": "completed",
+          "context_sha256": "f3f6cdf0ea0406f55bafc8b1c6fd2eeaf28b413f06f3b9043dafc0d98bd56ec3",
+          "call_sha256": "e6d182356da8fd8be93a8bad88b18a074ac0e028b1a949e70c07a24eb909a366",
+          "usage": {
+            "completion_tokens": 82,
+            "completion_tokens_details": {
+              "audio_tokens": 0,
+              "image_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "cost": 0.00012056,
+            "cost_details": {
+              "upstream_inference_completions_cost": 4.1e-05,
+              "upstream_inference_cost": 0.00012056,
+              "upstream_inference_prompt_cost": 7.956e-05
+            },
+            "is_byok": false,
+            "prompt_tokens": 2210,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cache_write_tokens": 0,
+              "cached_tokens": 0,
+              "video_tokens": 0
+            },
+            "total_tokens": 2292
+          },
+          "raw_audit": {
+            "checks": [
+              {
+                "conditions": "supported",
+                "id": "A1",
+                "object_version": "supported",
+                "own_quote_support": "supported",
+                "reason": "Quote states consecutive-only grouping is intentional/efficient and requires pre-sorting on grouping key.",
+                "time": "not_applicable"
+              }
+            ],
+            "conflicts": [],
+            "missing": [],
+            "next": {
+              "facet": 0,
+              "query": ""
+            },
+            "sufficient": true
+          },
+          "adapted_audit": {
+            "checks": [
+              {
+                "id": "A1",
+                "reason": "Quote states consecutive-only grouping is intentional/efficient and requires pre-sorting on grouping key.",
+                "verdict": "supported"
+              }
+            ],
+            "conflicts": [],
+            "missing": [],
+            "next": {
+              "facet": 0,
+              "query": ""
+            },
+            "sufficient": true
+          },
+          "result": {
+            "actions": [],
+            "answer": "The consecutive-only grouping is intentional and efficient, but it means the data must be pre-sorted on the grouping key. [S1](<https://pynative.com/python-itertools-functools-exercises/>)",
+            "budget": {
+              "limits": {
+                "browser": 0,
+                "documents": 4,
+                "forms": 2,
+                "generations": 6,
+                "output_bytes": 32768,
+                "qwen": 4,
+                "seconds": 180,
+                "serp": 4,
+                "source_context_chars": 24000
+              },
+              "remaining": {
+                "documents": 4,
+                "forms": 2,
+                "generations": 6,
+                "milliseconds": 178522,
+                "qwen": 4,
+                "serp": 4
+              },
+              "used": {
+                "documents": 0,
+                "forms": 0,
+                "generations": 0,
+                "qwen": 0,
+                "serp": 0
+              }
+            },
+            "claims": [
+              {
+                "answer_end": 121,
+                "answer_start": 0,
+                "evidence": [
+                  {
+                    "document_version": "521264aaadad5e65b94dba46e76744dcb361ee187c45fb69183c3c1dffbaaf40",
+                    "end": 37015,
+                    "field": "text",
+                    "offset_unit": "Unicode code points in original extracted text",
+                    "quote": "This is intentional and efficient, but it means the data must be pre-sorted on the grouping key.",
+                    "source_id": "S1",
+                    "start": 36919
+                  }
+                ],
+                "facets": [
+                  0
+                ],
+                "id": "A1",
+                "kind": "fact",
+                "rationale": "",
+                "text": "The consecutive-only grouping is intentional and efficient, but it means the data must be pre-sorted on the grouping key."
+              }
+            ],
+            "conflicts": [],
+            "elapsed_ms": 1477,
+            "error": null,
+            "facets": [
+              "Support the frozen claim within the original question scope"
+            ],
+            "independence": "distinct document bodies; publisher independence not established",
+            "missing": [],
+            "model_calls": [],
+            "news_window": null,
+            "offset_unit": "Unicode code points; answer ranges exclude app-added citation suffixes",
+            "output_limited": false,
+            "query_forms": [],
+            "request_id": "ad0e8ca33da346843992b93f51b25196ff8a7050f059d414393f3ca77cdbe61a",
+            "semantic_verification": "experimental separate model audit; not an independent truth guarantee",
+            "sources": [
+              {
+                "cache": null,
+                "document_version": "521264aaadad5e65b94dba46e76744dcb361ee187c45fb69183c3c1dffbaaf40",
+                "eligibility": "read_body",
+                "eligible": true,
+                "extraction": null,
+                "id": "S1",
+                "parent_url": null,
+                "publication": {
+                  "date_status": "valid",
+                  "kind": "article",
+                  "published_date": "2026-06-12",
+                  "witness_count": 2,
+                  "witnesses": [
+                    {
+                      "date": "2026-06-12",
+                      "raw": "2026-06-12T07:11:30+00:00",
+                      "source": "jsonld.datePublished",
+                      "timestamp": "2026-06-12T07:11:30+00:00"
+                    },
+                    {
+                      "date": "2026-06-12",
+                      "raw": "2026-06-12T07:11:30+00:00",
+                      "source": "meta.article:published_time",
+                      "timestamp": "2026-06-12T07:11:30+00:00"
+                    }
+                  ],
+                  "witnesses_limited": false
+                },
+                "text_hash": "",
+                "title": "Python Itertools and Functools Exercises: 20 Coding Problems with Solutions",
+                "url": "https://pynative.com/python-itertools-functools-exercises/"
+              }
+            ],
+            "status": "partial",
+            "stop_reason": "component_replay",
+            "sufficiency": {
+              "audit_completed": true,
+              "cited_distinct_documents": 1,
+              "judge_sufficient": true,
+              "required_distinct_documents": 2
+            },
+            "untrusted_content": true
+          }
+        }
+      }
+    },
+    {
+      "id": "H02",
+      "cohort": "historical_development8",
+      "arms": {
+        "baseline": {
+          "attempt": {
+            "case": "H02",
+            "arm": "baseline",
+            "exit_code": 0,
+            "elapsed_ms": 1832
+          },
+          "status": "completed",
+          "context_sha256": "04d5248f73faac6193cf7ad0443b978e8ea644d65358eda5cbfeb79e3f95c414",
+          "call_sha256": "153689c084fb6d85d3238585abc0862dd8177370a49c2bd0cbafabefead2535b",
+          "usage": {
+            "completion_tokens": 63,
+            "completion_tokens_details": {
+              "audio_tokens": 0,
+              "image_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "cost": 8.758e-05,
+            "cost_details": {
+              "upstream_inference_completions_cost": 3.15e-05,
+              "upstream_inference_cost": 8.758e-05,
+              "upstream_inference_prompt_cost": 5.608e-05
+            },
+            "is_byok": false,
+            "prompt_tokens": 2020,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cache_write_tokens": 0,
+              "cached_tokens": 640,
+              "video_tokens": 0
+            },
+            "total_tokens": 2083
+          },
+          "raw_audit": {
+            "checks": [
+              {
+                "id": "A1",
+                "reason": "Quote directly states sorting by grouping key before groupby to collect equal keys; matches claim.",
+                "verdict": "supported"
+              }
+            ],
+            "conflicts": [],
+            "missing": [],
+            "next": {
+              "facet": 0,
+              "query": ""
+            },
+            "sufficient": true
+          },
+          "adapted_audit": {
+            "checks": [
+              {
+                "id": "A1",
+                "reason": "Quote directly states sorting by grouping key before groupby to collect equal keys; matches claim.",
+                "verdict": "supported"
+              }
+            ],
+            "conflicts": [],
+            "missing": [],
+            "next": {
+              "facet": 0,
+              "query": ""
+            },
+            "sufficient": true
+          },
+          "result": {
+            "actions": [],
+            "answer": "To collect all equal keys together, sort by the grouping key first with sorted(data, key=...) before passing to groupby(). [S1](<https://pynative.com/python-itertools-functools-exercises/>)",
+            "budget": {
+              "limits": {
+                "browser": 0,
+                "documents": 4,
+                "forms": 2,
+                "generations": 6,
+                "output_bytes": 32768,
+                "qwen": 4,
+                "seconds": 180,
+                "serp": 4,
+                "source_context_chars": 24000
+              },
+              "remaining": {
+                "documents": 4,
+                "forms": 2,
+                "generations": 6,
+                "milliseconds": 178185,
+                "qwen": 4,
+                "serp": 4
+              },
+              "used": {
+                "documents": 0,
+                "forms": 0,
+                "generations": 0,
+                "qwen": 0,
+                "serp": 0
+              }
+            },
+            "claims": [
+              {
+                "answer_end": 122,
+                "answer_start": 0,
+                "evidence": [
+                  {
+                    "document_version": "521264aaadad5e65b94dba46e76744dcb361ee187c45fb69183c3c1dffbaaf40",
+                    "end": 35331,
+                    "field": "text",
+                    "offset_unit": "Unicode code points in original extracted text",
+                    "quote": "Always sort by the grouping key first with sorted(data, key=...) before passing to groupby().",
+                    "source_id": "S1",
+                    "start": 35238
+                  }
+                ],
+                "facets": [
+                  0
+                ],
+                "id": "A1",
+                "kind": "fact",
+                "rationale": "",
+                "text": "To collect all equal keys together, sort by the grouping key first with sorted(data, key=...) before passing to groupby()."
+              }
+            ],
+            "conflicts": [],
+            "elapsed_ms": 1814,
+            "error": null,
+            "facets": [
+              "Support the frozen claim within the original question scope"
+            ],
+            "independence": "distinct document bodies; publisher independence not established",
+            "missing": [],
+            "model_calls": [],
+            "news_window": null,
+            "offset_unit": "Unicode code points; answer ranges exclude app-added citation suffixes",
+            "output_limited": false,
+            "query_forms": [],
+            "request_id": "816d0654350ad1d7eb0c4596cedf43d8843a11ec339ee1833bc2a56a6c752d68",
+            "semantic_verification": "experimental separate model audit; not an independent truth guarantee",
+            "sources": [
+              {
+                "cache": null,
+                "document_version": "521264aaadad5e65b94dba46e76744dcb361ee187c45fb69183c3c1dffbaaf40",
+                "eligibility": "read_body",
+                "eligible": true,
+                "extraction": null,
+                "id": "S1",
+                "parent_url": null,
+                "publication": {
+                  "date_status": "valid",
+                  "kind": "article",
+                  "published_date": "2026-06-12",
+                  "witness_count": 2,
+                  "witnesses": [
+                    {
+                      "date": "2026-06-12",
+                      "raw": "2026-06-12T07:11:30+00:00",
+                      "source": "jsonld.datePublished",
+                      "timestamp": "2026-06-12T07:11:30+00:00"
+                    },
+                    {
+                      "date": "2026-06-12",
+                      "raw": "2026-06-12T07:11:30+00:00",
+                      "source": "meta.article:published_time",
+                      "timestamp": "2026-06-12T07:11:30+00:00"
+                    }
+                  ],
+                  "witnesses_limited": false
+                },
+                "text_hash": "",
+                "title": "Python Itertools and Functools Exercises: 20 Coding Problems with Solutions",
+                "url": "https://pynative.com/python-itertools-functools-exercises/"
+              }
+            ],
+            "status": "partial",
+            "stop_reason": "component_replay",
+            "sufficiency": {
+              "audit_completed": true,
+              "cited_distinct_documents": 1,
+              "judge_sufficient": true,
+              "required_distinct_documents": 2
+            },
+            "untrusted_content": true
+          }
+        },
+        "candidate": {
+          "attempt": {
+            "case": "H02",
+            "arm": "candidate",
+            "exit_code": 0,
+            "elapsed_ms": 1998
+          },
+          "status": "completed",
+          "context_sha256": "04d5248f73faac6193cf7ad0443b978e8ea644d65358eda5cbfeb79e3f95c414",
+          "call_sha256": "393dc744c22744239d5ccf0a4bd5385e249033123d6a49b52ccfa6a2f550a585",
+          "usage": {
+            "completion_tokens": 108,
+            "completion_tokens_details": {
+              "audio_tokens": 0,
+              "image_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "cost": 0.000112244,
+            "cost_details": {
+              "upstream_inference_completions_cost": 5.4e-05,
+              "upstream_inference_cost": 0.000112244,
+              "upstream_inference_prompt_cost": 5.8244e-05
+            },
+            "is_byok": false,
+            "prompt_tokens": 2265,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cache_write_tokens": 0,
+              "cached_tokens": 896,
+              "video_tokens": 0
+            },
+            "total_tokens": 2373
+          },
+          "raw_audit": {
+            "checks": [
+              {
+                "conditions": "supported",
+                "id": "A1",
+                "object_version": "unsupported",
+                "own_quote_support": "unsupported",
+                "reason": "Quote only says to sort before groupby; it does not establish that this collects all equal keys together, and source is an exercise article, not the itertools.groupby documentation.",
+                "time": "not_applicable"
+              }
+            ],
+            "conflicts": [],
+            "missing": [
+              0
+            ],
+            "next": {
+              "facet": 0,
+              "query": "itertools.groupby documentation consecutive keys sort"
+            },
+            "sufficient": false
+          },
+          "adapted_audit": {
+            "checks": [
+              {
+                "id": "A1",
+                "reason": "Quote only says to sort before groupby; it does not establish that this collects all equal keys together, and source is an exercise article, not the itertools.groupby documentation.",
+                "verdict": "unsupported"
+              }
+            ],
+            "conflicts": [],
+            "missing": [
+              0
+            ],
+            "next": {
+              "facet": 0,
+              "query": "itertools.groupby documentation consecutive keys sort"
+            },
+            "sufficient": false
+          },
+          "result": {
+            "actions": [],
+            "answer": "",
+            "budget": {
+              "limits": {
+                "browser": 0,
+                "documents": 4,
+                "forms": 2,
+                "generations": 6,
+                "output_bytes": 32768,
+                "qwen": 4,
+                "seconds": 180,
+                "serp": 4,
+                "source_context_chars": 24000
+              },
+              "remaining": {
+                "documents": 4,
+                "forms": 2,
+                "generations": 6,
+                "milliseconds": 178024,
+                "qwen": 4,
+                "serp": 4
+              },
+              "used": {
+                "documents": 0,
+                "forms": 0,
+                "generations": 0,
+                "qwen": 0,
+                "serp": 0
+              }
+            },
+            "claims": [],
+            "conflicts": [],
+            "elapsed_ms": 1975,
+            "error": null,
+            "facets": [
+              "Support the frozen claim within the original question scope"
+            ],
+            "independence": "distinct document bodies; publisher independence not established",
+            "missing": [
+              0
+            ],
+            "model_calls": [],
+            "news_window": null,
+            "offset_unit": "Unicode code points; answer ranges exclude app-added citation suffixes",
+            "output_limited": false,
+            "query_forms": [],
+            "request_id": "5d521ee7e10e7669315c7dcf9e674c3cb9a732da78d411de8b14cdfaaf547e1a",
+            "semantic_verification": "experimental separate model audit; not an independent truth guarantee",
+            "sources": [
+              {
+                "cache": null,
+                "document_version": "521264aaadad5e65b94dba46e76744dcb361ee187c45fb69183c3c1dffbaaf40",
+                "eligibility": "read_body",
+                "eligible": true,
+                "extraction": null,
+                "id": "S1",
+                "parent_url": null,
+                "publication": {
+                  "date_status": "valid",
+                  "kind": "article",
+                  "published_date": "2026-06-12",
+                  "witness_count": 2,
+                  "witnesses": [
+                    {
+                      "date": "2026-06-12",
+                      "raw": "2026-06-12T07:11:30+00:00",
+                      "source": "jsonld.datePublished",
+                      "timestamp": "2026-06-12T07:11:30+00:00"
+                    },
+                    {
+                      "date": "2026-06-12",
+                      "raw": "2026-06-12T07:11:30+00:00",
+                      "source": "meta.article:published_time",
+                      "timestamp": "2026-06-12T07:11:30+00:00"
+                    }
+                  ],
+                  "witnesses_limited": false
+                },
+                "text_hash": "",
+                "title": "Python Itertools and Functools Exercises: 20 Coding Problems with Solutions",
+                "url": "https://pynative.com/python-itertools-functools-exercises/"
+              }
+            ],
+            "status": "partial",
+            "stop_reason": "component_replay",
+            "sufficiency": {
+              "audit_completed": true,
+              "cited_distinct_documents": 0,
+              "judge_sufficient": false,
+              "required_distinct_documents": 2
+            },
+            "untrusted_content": true
+          }
+        }
+      }
+    },
+    {
+      "id": "H03",
+      "cohort": "historical_development8",
+      "arms": {
+        "baseline": {
+          "attempt": {
+            "case": "H03",
+            "arm": "baseline",
+            "exit_code": 0,
+            "elapsed_ms": 1538
+          },
+          "status": "completed",
+          "context_sha256": "95a3bf960650c03e583bbe85b478dd05afa9ce93e2a07dce659df0edf29be650",
+          "call_sha256": "0c668ccf471a79846a17a1118de99b1df4112fadfa31a23c43c3efaa0655f650",
+          "usage": {
+            "completion_tokens": 89,
+            "completion_tokens_details": {
+              "audio_tokens": 0,
+              "image_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "cost": 9.4064e-05,
+            "cost_details": {
+              "upstream_inference_completions_cost": 4.45e-05,
+              "upstream_inference_cost": 9.4064e-05,
+              "upstream_inference_prompt_cost": 4.9564e-05
+            },
+            "is_byok": false,
+            "prompt_tokens": 1839,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cache_write_tokens": 0,
+              "cached_tokens": 640,
+              "video_tokens": 0
+            },
+            "total_tokens": 1928
+          },
+          "raw_audit": {
+            "checks": [
+              {
+                "id": "A1",
+                "reason": "Quote supports experimental and not in official distribution, but not that a separate executable is needed; it says custom build.",
+                "verdict": "unsupported"
+              }
+            ],
+            "conflicts": [],
+            "missing": [
+              0
+            ],
+            "next": {
+              "facet": 0,
+              "query": "CPython 3.13 free-threaded build separate executable python3.13t default GIL"
+            },
+            "sufficient": false
+          },
+          "adapted_audit": {
+            "checks": [
+              {
+                "id": "A1",
+                "reason": "Quote supports experimental and not in official distribution, but not that a separate executable is needed; it says custom build.",
+                "verdict": "unsupported"
+              }
+            ],
+            "conflicts": [],
+            "missing": [
+              0
+            ],
+            "next": {
+              "facet": 0,
+              "query": "CPython 3.13 free-threaded build separate executable python3.13t default GIL"
+            },
+            "sufficient": false
+          },
+          "result": {
+            "actions": [],
+            "answer": "",
+            "budget": {
+              "limits": {
+                "browser": 0,
+                "documents": 4,
+                "forms": 2,
+                "generations": 6,
+                "output_bytes": 32768,
+                "qwen": 4,
+                "seconds": 180,
+                "serp": 4,
+                "source_context_chars": 24000
+              },
+              "remaining": {
+                "documents": 4,
+                "forms": 2,
+                "generations": 6,
+                "milliseconds": 178482,
+                "qwen": 4,
+                "serp": 4
+              },
+              "used": {
+                "documents": 0,
+                "forms": 0,
+                "generations": 0,
+                "qwen": 0,
+                "serp": 0
+              }
+            },
+            "claims": [],
+            "conflicts": [],
+            "elapsed_ms": 1517,
+            "error": null,
+            "facets": [
+              "Support the frozen claim within the original question scope"
+            ],
+            "independence": "distinct document bodies; publisher independence not established",
+            "missing": [
+              0
+            ],
+            "model_calls": [],
+            "news_window": null,
+            "offset_unit": "Unicode code points; answer ranges exclude app-added citation suffixes",
+            "output_limited": false,
+            "query_forms": [],
+            "request_id": "79a59fcb5d88fea02b6cc720cfe567d62763dfedb0e78958096dcef59578384c",
+            "semantic_verification": "experimental separate model audit; not an independent truth guarantee",
+            "sources": [
+              {
+                "cache": null,
+                "document_version": "9956819e86e927f82e1b89549222b364a8d7f4f541cc7a741240ecc08f6a958d",
+                "eligibility": "read_body",
+                "eligible": true,
+                "extraction": null,
+                "id": "S1",
+                "parent_url": null,
+                "publication": {
+                  "date_status": "valid",
+                  "kind": "article",
+                  "published_date": "2024-09-18",
+                  "witness_count": 1,
+                  "witnesses": [
+                    {
+                      "date": "2024-09-18",
+                      "raw": "2024-09-18T14:00:00+00:00",
+                      "source": "jsonld.datePublished",
+                      "timestamp": "2024-09-18T14:00:00+00:00"
+                    }
+                  ],
+                  "witnesses_limited": false
+                },
+                "text_hash": "",
+                "title": "Python 3.13: Free Threading and a JIT Compiler",
+                "url": "https://realpython.com/python313-free-threading-jit/"
+              }
+            ],
+            "status": "partial",
+            "stop_reason": "component_replay",
+            "sufficiency": {
+              "audit_completed": true,
+              "cited_distinct_documents": 0,
+              "judge_sufficient": false,
+              "required_distinct_documents": 2
+            },
+            "untrusted_content": true
+          }
+        },
+        "candidate": {
+          "attempt": {
+            "case": "H03",
+            "arm": "candidate",
+            "exit_code": 0,
+            "elapsed_ms": 3693
+          },
+          "status": "completed",
+          "context_sha256": "95a3bf960650c03e583bbe85b478dd05afa9ce93e2a07dce659df0edf29be650",
+          "call_sha256": "df46191386b91da938c5b3bf3b2708952fc1854de9d01304f9756df2ddbc8d80",
+          "usage": {
+            "completion_tokens": 123,
+            "completion_tokens_details": {
+              "audio_tokens": 0,
+              "image_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "cost": 0.000113228,
+            "cost_details": {
+              "upstream_inference_completions_cost": 6.15e-05,
+              "upstream_inference_cost": 0.000113228,
+              "upstream_inference_prompt_cost": 5.1728e-05
+            },
+            "is_byok": false,
+            "prompt_tokens": 2084,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cache_write_tokens": 0,
+              "cached_tokens": 896,
+              "video_tokens": 0
+            },
+            "total_tokens": 2207
+          },
+          "raw_audit": {
+            "checks": [
+              {
+                "conditions": "unsupported",
+                "id": "A1",
+                "object_version": "unsupported",
+                "own_quote_support": "unsupported",
+                "reason": "Quote says experimental and not in official distribution, but does not state a separate executable is needed; claim omits the separate-executable facet and adds 'own build' beyond quote scope.",
+                "time": "unsupported"
+              }
+            ],
+            "conflicts": [],
+            "missing": [
+              0
+            ],
+            "next": {
+              "facet": 0,
+              "query": "CPython 3.13 free-threaded build separate executable python3.13t default GIL experimental"
+            },
+            "sufficient": false
+          },
+          "adapted_audit": {
+            "checks": [
+              {
+                "id": "A1",
+                "reason": "Quote says experimental and not in official distribution, but does not state a separate executable is needed; claim omits the separate-executable facet and adds 'own build' beyond quote scope.",
+                "verdict": "unsupported"
+              }
+            ],
+            "conflicts": [],
+            "missing": [
+              0
+            ],
+            "next": {
+              "facet": 0,
+              "query": "CPython 3.13 free-threaded build separate executable python3.13t default GIL experimental"
+            },
+            "sufficient": false
+          },
+          "result": {
+            "actions": [],
+            "answer": "",
+            "budget": {
+              "limits": {
+                "browser": 0,
+                "documents": 4,
+                "forms": 2,
+                "generations": 6,
+                "output_bytes": 32768,
+                "qwen": 4,
+                "seconds": 180,
+                "serp": 4,
+                "source_context_chars": 24000
+              },
+              "remaining": {
+                "documents": 4,
+                "forms": 2,
+                "generations": 6,
+                "milliseconds": 176323,
+                "qwen": 4,
+                "serp": 4
+              },
+              "used": {
+                "documents": 0,
+                "forms": 0,
+                "generations": 0,
+                "qwen": 0,
+                "serp": 0
+              }
+            },
+            "claims": [],
+            "conflicts": [],
+            "elapsed_ms": 3676,
+            "error": null,
+            "facets": [
+              "Support the frozen claim within the original question scope"
+            ],
+            "independence": "distinct document bodies; publisher independence not established",
+            "missing": [
+              0
+            ],
+            "model_calls": [],
+            "news_window": null,
+            "offset_unit": "Unicode code points; answer ranges exclude app-added citation suffixes",
+            "output_limited": false,
+            "query_forms": [],
+            "request_id": "6fe81088bdd22fadc47ce497f782bdbadcd67f981c00291f8205388495fb2016",
+            "semantic_verification": "experimental separate model audit; not an independent truth guarantee",
+            "sources": [
+              {
+                "cache": null,
+                "document_version": "9956819e86e927f82e1b89549222b364a8d7f4f541cc7a741240ecc08f6a958d",
+                "eligibility": "read_body",
+                "eligible": true,
+                "extraction": null,
+                "id": "S1",
+                "parent_url": null,
+                "publication": {
+                  "date_status": "valid",
+                  "kind": "article",
+                  "published_date": "2024-09-18",
+                  "witness_count": 1,
+                  "witnesses": [
+                    {
+                      "date": "2024-09-18",
+                      "raw": "2024-09-18T14:00:00+00:00",
+                      "source": "jsonld.datePublished",
+                      "timestamp": "2024-09-18T14:00:00+00:00"
+                    }
+                  ],
+                  "witnesses_limited": false
+                },
+                "text_hash": "",
+                "title": "Python 3.13: Free Threading and a JIT Compiler",
+                "url": "https://realpython.com/python313-free-threading-jit/"
+              }
+            ],
+            "status": "partial",
+            "stop_reason": "component_replay",
+            "sufficiency": {
+              "audit_completed": true,
+              "cited_distinct_documents": 0,
+              "judge_sufficient": false,
+              "required_distinct_documents": 2
+            },
+            "untrusted_content": true
+          }
+        }
+      }
+    },
+    {
+      "id": "H04",
+      "cohort": "historical_development8",
+      "arms": {
+        "baseline": {
+          "attempt": {
+            "case": "H04",
+            "arm": "baseline",
+            "exit_code": 0,
+            "elapsed_ms": 1534
+          },
+          "status": "completed",
+          "context_sha256": "8abe0a6a900d47fefa106752dda8d761eb7345a28edb2e6888af292c0948bdb8",
+          "call_sha256": "1db2a5742d62ea80384a9e5330c030de8c4997a4b8526b09c3afd7361e8a2ff1",
+          "usage": {
+            "completion_tokens": 79,
+            "completion_tokens_details": {
+              "audio_tokens": 0,
+              "image_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "cost": 8.7948e-05,
+            "cost_details": {
+              "upstream_inference_completions_cost": 3.95e-05,
+              "upstream_inference_cost": 8.7948e-05,
+              "upstream_inference_prompt_cost": 4.8448e-05
+            },
+            "is_byok": false,
+            "prompt_tokens": 1808,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cache_write_tokens": 0,
+              "cached_tokens": 640,
+              "video_tokens": 0
+            },
+            "total_tokens": 1887
+          },
+          "raw_audit": {
+            "checks": [
+              {
+                "id": "A1",
+                "reason": "S1P1 exactly states foreign keys are disabled by default and must be enabled separately for each connection.",
+                "verdict": "supported"
+              }
+            ],
+            "conflicts": [],
+            "missing": [
+              0
+            ],
+            "next": {
+              "facet": 0,
+              "query": "PRAGMA foreign_keys multi-statement transaction autocommit no effect"
+            },
+            "sufficient": false
+          },
+          "adapted_audit": {
+            "checks": [
+              {
+                "id": "A1",
+                "reason": "S1P1 exactly states foreign keys are disabled by default and must be enabled separately for each connection.",
+                "verdict": "supported"
+              }
+            ],
+            "conflicts": [],
+            "missing": [
+              0
+            ],
+            "next": {
+              "facet": 0,
+              "query": "PRAGMA foreign_keys multi-statement transaction autocommit no effect"
+            },
+            "sufficient": false
+          },
+          "result": {
+            "actions": [],
+            "answer": "SQLite foreign key constraints are disabled by default and must be enabled separately for each database connection. [S1](<https://www.sqlite.org/foreignkeys.html>)",
+            "budget": {
+              "limits": {
+                "browser": 0,
+                "documents": 4,
+                "forms": 2,
+                "generations": 6,
+                "output_bytes": 32768,
+                "qwen": 4,
+                "seconds": 180,
+                "serp": 4,
+                "source_context_chars": 24000
+              },
+              "remaining": {
+                "documents": 4,
+                "forms": 2,
+                "generations": 6,
+                "milliseconds": 178486,
+                "qwen": 4,
+                "serp": 4
+              },
+              "used": {
+                "documents": 0,
+                "forms": 0,
+                "generations": 0,
+                "qwen": 0,
+                "serp": 0
+              }
+            },
+            "claims": [
+              {
+                "answer_end": 115,
+                "answer_start": 0,
+                "evidence": [
+                  {
+                    "document_version": "c7b31e5e67603bc00baa7f734cd36563f03165903f863c32d644bf0b563fb909",
+                    "end": 10178,
+                    "field": "text",
+                    "offset_unit": "Unicode code points in original extracted text",
+                    "quote": "Foreign key constraints are disabled by default (for backwards compatibility), so must be enabled separately for each database connection.",
+                    "source_id": "S1",
+                    "start": 10040
+                  }
+                ],
+                "facets": [
+                  0
+                ],
+                "id": "A1",
+                "kind": "fact",
+                "rationale": "",
+                "text": "SQLite foreign key constraints are disabled by default and must be enabled separately for each database connection."
+              }
+            ],
+            "conflicts": [],
+            "elapsed_ms": 1513,
+            "error": null,
+            "facets": [
+              "Support the frozen claim within the original question scope"
+            ],
+            "independence": "distinct document bodies; publisher independence not established",
+            "missing": [
+              0
+            ],
+            "model_calls": [],
+            "news_window": null,
+            "offset_unit": "Unicode code points; answer ranges exclude app-added citation suffixes",
+            "output_limited": false,
+            "query_forms": [],
+            "request_id": "2bdf66502a385a78841a4cdec86c66e9680bb20600664109b3495b6b9fc4a93b",
+            "semantic_verification": "experimental separate model audit; not an independent truth guarantee",
+            "sources": [
+              {
+                "cache": null,
+                "document_version": "c7b31e5e67603bc00baa7f734cd36563f03165903f863c32d644bf0b563fb909",
+                "eligibility": "read_body",
+                "eligible": true,
+                "extraction": null,
+                "id": "S1",
+                "parent_url": null,
+                "publication": {
+                  "date_status": "missing",
+                  "kind": "feed",
+                  "published_date": null,
+                  "witness_count": 0,
+                  "witnesses": [],
+                  "witnesses_limited": false
+                },
+                "text_hash": "",
+                "title": "SQLite Foreign Key Support",
+                "url": "https://www.sqlite.org/foreignkeys.html"
+              }
+            ],
+            "status": "partial",
+            "stop_reason": "component_replay",
+            "sufficiency": {
+              "audit_completed": true,
+              "cited_distinct_documents": 1,
+              "judge_sufficient": false,
+              "required_distinct_documents": 2
+            },
+            "untrusted_content": true
+          }
+        },
+        "candidate": {
+          "attempt": {
+            "case": "H04",
+            "arm": "candidate",
+            "exit_code": 0,
+            "elapsed_ms": 1647
+          },
+          "status": "completed",
+          "context_sha256": "8abe0a6a900d47fefa106752dda8d761eb7345a28edb2e6888af292c0948bdb8",
+          "call_sha256": "6cfa444617e988cf00d81ec9b0bfdfa73ee9f2edee1e1ce6e25f42f06932bca0",
+          "usage": {
+            "completion_tokens": 94,
+            "completion_tokens_details": {
+              "audio_tokens": 0,
+              "image_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "cost": 9.7612e-05,
+            "cost_details": {
+              "upstream_inference_completions_cost": 4.7e-05,
+              "upstream_inference_cost": 9.7612e-05,
+              "upstream_inference_prompt_cost": 5.0612e-05
+            },
+            "is_byok": false,
+            "prompt_tokens": 2053,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cache_write_tokens": 0,
+              "cached_tokens": 896,
+              "video_tokens": 0
+            },
+            "total_tokens": 2147
+          },
+          "raw_audit": {
+            "checks": [
+              {
+                "conditions": "supported",
+                "id": "A1",
+                "object_version": "supported",
+                "own_quote_support": "supported",
+                "reason": "Quote states FK constraints disabled by default and must be enabled separately for each database connection; matches claim.",
+                "time": "not_applicable"
+              }
+            ],
+            "conflicts": [],
+            "missing": [
+              0
+            ],
+            "next": {
+              "facet": 0,
+              "query": "PRAGMA foreign_keys multi-statement transaction no effect"
+            },
+            "sufficient": false
+          },
+          "adapted_audit": {
+            "checks": [
+              {
+                "id": "A1",
+                "reason": "Quote states FK constraints disabled by default and must be enabled separately for each database connection; matches claim.",
+                "verdict": "supported"
+              }
+            ],
+            "conflicts": [],
+            "missing": [
+              0
+            ],
+            "next": {
+              "facet": 0,
+              "query": "PRAGMA foreign_keys multi-statement transaction no effect"
+            },
+            "sufficient": false
+          },
+          "result": {
+            "actions": [],
+            "answer": "SQLite foreign key constraints are disabled by default and must be enabled separately for each database connection. [S1](<https://www.sqlite.org/foreignkeys.html>)",
+            "budget": {
+              "limits": {
+                "browser": 0,
+                "documents": 4,
+                "forms": 2,
+                "generations": 6,
+                "output_bytes": 32768,
+                "qwen": 4,
+                "seconds": 180,
+                "serp": 4,
+                "source_context_chars": 24000
+              },
+              "remaining": {
+                "documents": 4,
+                "forms": 2,
+                "generations": 6,
+                "milliseconds": 178373,
+                "qwen": 4,
+                "serp": 4
+              },
+              "used": {
+                "documents": 0,
+                "forms": 0,
+                "generations": 0,
+                "qwen": 0,
+                "serp": 0
+              }
+            },
+            "claims": [
+              {
+                "answer_end": 115,
+                "answer_start": 0,
+                "evidence": [
+                  {
+                    "document_version": "c7b31e5e67603bc00baa7f734cd36563f03165903f863c32d644bf0b563fb909",
+                    "end": 10178,
+                    "field": "text",
+                    "offset_unit": "Unicode code points in original extracted text",
+                    "quote": "Foreign key constraints are disabled by default (for backwards compatibility), so must be enabled separately for each database connection.",
+                    "source_id": "S1",
+                    "start": 10040
+                  }
+                ],
+                "facets": [
+                  0
+                ],
+                "id": "A1",
+                "kind": "fact",
+                "rationale": "",
+                "text": "SQLite foreign key constraints are disabled by default and must be enabled separately for each database connection."
+              }
+            ],
+            "conflicts": [],
+            "elapsed_ms": 1626,
+            "error": null,
+            "facets": [
+              "Support the frozen claim within the original question scope"
+            ],
+            "independence": "distinct document bodies; publisher independence not established",
+            "missing": [
+              0
+            ],
+            "model_calls": [],
+            "news_window": null,
+            "offset_unit": "Unicode code points; answer ranges exclude app-added citation suffixes",
+            "output_limited": false,
+            "query_forms": [],
+            "request_id": "03ff1d403c5638d890044ee724e13c48292389da40c94ea1f2fa9ca8d5135bc3",
+            "semantic_verification": "experimental separate model audit; not an independent truth guarantee",
+            "sources": [
+              {
+                "cache": null,
+                "document_version": "c7b31e5e67603bc00baa7f734cd36563f03165903f863c32d644bf0b563fb909",
+                "eligibility": "read_body",
+                "eligible": true,
+                "extraction": null,
+                "id": "S1",
+                "parent_url": null,
+                "publication": {
+                  "date_status": "missing",
+                  "kind": "feed",
+                  "published_date": null,
+                  "witness_count": 0,
+                  "witnesses": [],
+                  "witnesses_limited": false
+                },
+                "text_hash": "",
+                "title": "SQLite Foreign Key Support",
+                "url": "https://www.sqlite.org/foreignkeys.html"
+              }
+            ],
+            "status": "partial",
+            "stop_reason": "component_replay",
+            "sufficiency": {
+              "audit_completed": true,
+              "cited_distinct_documents": 1,
+              "judge_sufficient": false,
+              "required_distinct_documents": 2
+            },
+            "untrusted_content": true
+          }
+        }
+      }
+    },
+    {
+      "id": "H05",
+      "cohort": "historical_development8",
+      "arms": {
+        "baseline": {
+          "status": "not_run"
+        },
+        "candidate": {
+          "status": "not_run"
+        }
+      }
+    },
+    {
+      "id": "H06",
+      "cohort": "historical_development8",
+      "arms": {
+        "baseline": {
+          "status": "not_run"
+        },
+        "candidate": {
+          "status": "not_run"
+        }
+      }
+    },
+    {
+      "id": "H07",
+      "cohort": "historical_development8",
+      "arms": {
+        "baseline": {
+          "status": "not_run"
+        },
+        "candidate": {
+          "status": "not_run"
+        }
+      }
+    },
+    {
+      "id": "H08",
+      "cohort": "historical_development8",
+      "arms": {
+        "baseline": {
+          "status": "not_run"
+        },
+        "candidate": {
+          "status": "not_run"
+        }
+      }
+    },
+    {
+      "id": "S01",
+      "cohort": "new_synthetic_challenge8",
+      "arms": {
+        "baseline": {
+          "attempt": {
+            "case": "S01",
+            "arm": "baseline",
+            "exit_code": 0,
+            "elapsed_ms": 1371
+          },
+          "status": "completed",
+          "context_sha256": "58b9341d6287b6c5f27ac4b3f09172bf118cecf103c7417442d1427d910e8043",
+          "call_sha256": "e64a31f56ac25fd913d5f50a68467a5778ac0896f2a15eaaacf63a806d17a859",
+          "usage": {
+            "completion_tokens": 59,
+            "completion_tokens_details": {
+              "audio_tokens": 0,
+              "image_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "cost": 5.4728e-05,
+            "cost_details": {
+              "upstream_inference_completions_cost": 2.95e-05,
+              "upstream_inference_cost": 5.4728e-05,
+              "upstream_inference_prompt_cost": 2.5228e-05
+            },
+            "is_byok": false,
+            "prompt_tokens": 1163,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cache_write_tokens": 0,
+              "cached_tokens": 640,
+              "video_tokens": 0
+            },
+            "total_tokens": 1222
+          },
+          "raw_audit": {
+            "checks": [
+              {
+                "id": "A1",
+                "reason": "Exact quote directly states Lantern.decode() accepts a byte sequence.",
+                "verdict": "supported"
+              }
+            ],
+            "conflicts": [],
+            "missing": [],
+            "next": {
+              "facet": 0,
+              "query": ""
+            },
+            "sufficient": true
+          },
+          "adapted_audit": {
+            "checks": [
+              {
+                "id": "A1",
+                "reason": "Exact quote directly states Lantern.decode() accepts a byte sequence.",
+                "verdict": "supported"
+              }
+            ],
+            "conflicts": [],
+            "missing": [],
+            "next": {
+              "facet": 0,
+              "query": ""
+            },
+            "sufficient": true
+          },
+          "result": {
+            "actions": [],
+            "answer": "Lantern.decode accepts a byte sequence. [S1](<https://example.org/synthetic/S01>)",
+            "budget": {
+              "limits": {
+                "browser": 0,
+                "documents": 4,
+                "forms": 2,
+                "generations": 6,
+                "output_bytes": 32768,
+                "qwen": 4,
+                "seconds": 180,
+                "serp": 4,
+                "source_context_chars": 24000
+              },
+              "remaining": {
+                "documents": 4,
+                "forms": 2,
+                "generations": 6,
+                "milliseconds": 178650,
+                "qwen": 4,
+                "serp": 4
+              },
+              "used": {
+                "documents": 0,
+                "forms": 0,
+                "generations": 0,
+                "qwen": 0,
+                "serp": 0
+              }
+            },
+            "claims": [
+              {
+                "answer_end": 39,
+                "answer_start": 0,
+                "evidence": [
+                  {
+                    "document_version": "synthetic-11ea0ac8433cc7bf095884e30546448183ff9cbcc732dd12cb7b81b23b30d31f",
+                    "end": 81,
+                    "field": "text",
+                    "offset_unit": "Unicode code points in original extracted text",
+                    "quote": "Lantern.decode() accepts a byte sequence and returns text.",
+                    "source_id": "S1",
+                    "start": 23
+                  }
+                ],
+                "facets": [
+                  0
+                ],
+                "id": "A1",
+                "kind": "fact",
+                "rationale": "",
+                "text": "Lantern.decode accepts a byte sequence."
+              }
+            ],
+            "conflicts": [],
+            "elapsed_ms": 1349,
+            "error": null,
+            "facets": [
+              "Support the frozen claim within the original question scope"
+            ],
+            "independence": "distinct document bodies; publisher independence not established",
+            "missing": [],
+            "model_calls": [],
+            "news_window": null,
+            "offset_unit": "Unicode code points; answer ranges exclude app-added citation suffixes",
+            "output_limited": false,
+            "query_forms": [],
+            "request_id": "161fcda893ea9e49525030dc6e295b6de0bb291d6e8ec70cd6d1a2c5a672e838",
+            "semantic_verification": "experimental separate model audit; not an independent truth guarantee",
+            "sources": [
+              {
+                "cache": null,
+                "document_version": "synthetic-11ea0ac8433cc7bf095884e30546448183ff9cbcc732dd12cb7b81b23b30d31f",
+                "eligibility": "read_body",
+                "eligible": true,
+                "extraction": null,
+                "id": "S1",
+                "parent_url": null,
+                "publication": null,
+                "text_hash": "",
+                "title": "Fictional API specification",
+                "url": "https://example.org/synthetic/S01"
+              }
+            ],
+            "status": "partial",
+            "stop_reason": "component_replay",
+            "sufficiency": {
+              "audit_completed": true,
+              "cited_distinct_documents": 1,
+              "judge_sufficient": true,
+              "required_distinct_documents": 2
+            },
+            "untrusted_content": true
+          }
+        },
+        "candidate": {
+          "attempt": {
+            "case": "S01",
+            "arm": "candidate",
+            "exit_code": 0,
+            "elapsed_ms": 2210
+          },
+          "status": "completed",
+          "context_sha256": "58b9341d6287b6c5f27ac4b3f09172bf118cecf103c7417442d1427d910e8043",
+          "call_sha256": "b5f69c553635496680e9b1ec357f0acd807da884a3c9b8d91933968d46157149",
+          "usage": {
+            "completion_tokens": 81,
+            "completion_tokens_details": {
+              "audio_tokens": 0,
+              "image_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "cost": 6.7892e-05,
+            "cost_details": {
+              "upstream_inference_completions_cost": 4.05e-05,
+              "upstream_inference_cost": 6.7892e-05,
+              "upstream_inference_prompt_cost": 2.7392e-05
+            },
+            "is_byok": false,
+            "prompt_tokens": 1408,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cache_write_tokens": 0,
+              "cached_tokens": 896,
+              "video_tokens": 0
+            },
+            "total_tokens": 1489
+          },
+          "raw_audit": {
+            "checks": [
+              {
+                "conditions": "supported",
+                "id": "A1",
+                "object_version": "supported",
+                "own_quote_support": "supported",
+                "reason": "Exact quote states Lantern.decode() accepts a byte sequence; matches question scope.",
+                "time": "not_applicable"
+              }
+            ],
+            "conflicts": [],
+            "missing": [],
+            "next": {
+              "facet": 0,
+              "query": ""
+            },
+            "sufficient": true
+          },
+          "adapted_audit": {
+            "checks": [
+              {
+                "id": "A1",
+                "reason": "Exact quote states Lantern.decode() accepts a byte sequence; matches question scope.",
+                "verdict": "supported"
+              }
+            ],
+            "conflicts": [],
+            "missing": [],
+            "next": {
+              "facet": 0,
+              "query": ""
+            },
+            "sufficient": true
+          },
+          "result": {
+            "actions": [],
+            "answer": "Lantern.decode accepts a byte sequence. [S1](<https://example.org/synthetic/S01>)",
+            "budget": {
+              "limits": {
+                "browser": 0,
+                "documents": 4,
+                "forms": 2,
+                "generations": 6,
+                "output_bytes": 32768,
+                "qwen": 4,
+                "seconds": 180,
+                "serp": 4,
+                "source_context_chars": 24000
+              },
+              "remaining": {
+                "documents": 4,
+                "forms": 2,
+                "generations": 6,
+                "milliseconds": 177818,
+                "qwen": 4,
+                "serp": 4
+              },
+              "used": {
+                "documents": 0,
+                "forms": 0,
+                "generations": 0,
+                "qwen": 0,
+                "serp": 0
+              }
+            },
+            "claims": [
+              {
+                "answer_end": 39,
+                "answer_start": 0,
+                "evidence": [
+                  {
+                    "document_version": "synthetic-11ea0ac8433cc7bf095884e30546448183ff9cbcc732dd12cb7b81b23b30d31f",
+                    "end": 81,
+                    "field": "text",
+                    "offset_unit": "Unicode code points in original extracted text",
+                    "quote": "Lantern.decode() accepts a byte sequence and returns text.",
+                    "source_id": "S1",
+                    "start": 23
+                  }
+                ],
+                "facets": [
+                  0
+                ],
+                "id": "A1",
+                "kind": "fact",
+                "rationale": "",
+                "text": "Lantern.decode accepts a byte sequence."
+              }
+            ],
+            "conflicts": [],
+            "elapsed_ms": 2181,
+            "error": null,
+            "facets": [
+              "Support the frozen claim within the original question scope"
+            ],
+            "independence": "distinct document bodies; publisher independence not established",
+            "missing": [],
+            "model_calls": [],
+            "news_window": null,
+            "offset_unit": "Unicode code points; answer ranges exclude app-added citation suffixes",
+            "output_limited": false,
+            "query_forms": [],
+            "request_id": "54789f2b4da6808e2c007d21b5d13ded410598282520678a3bd1ea704da1e2c8",
+            "semantic_verification": "experimental separate model audit; not an independent truth guarantee",
+            "sources": [
+              {
+                "cache": null,
+                "document_version": "synthetic-11ea0ac8433cc7bf095884e30546448183ff9cbcc732dd12cb7b81b23b30d31f",
+                "eligibility": "read_body",
+                "eligible": true,
+                "extraction": null,
+                "id": "S1",
+                "parent_url": null,
+                "publication": null,
+                "text_hash": "",
+                "title": "Fictional API specification",
+                "url": "https://example.org/synthetic/S01"
+              }
+            ],
+            "status": "partial",
+            "stop_reason": "component_replay",
+            "sufficiency": {
+              "audit_completed": true,
+              "cited_distinct_documents": 1,
+              "judge_sufficient": true,
+              "required_distinct_documents": 2
+            },
+            "untrusted_content": true
+          }
+        }
+      }
+    },
+    {
+      "id": "S02",
+      "cohort": "new_synthetic_challenge8",
+      "arms": {
+        "baseline": {
+          "attempt": {
+            "case": "S02",
+            "arm": "baseline",
+            "exit_code": 0,
+            "elapsed_ms": 1816
+          },
+          "status": "completed",
+          "context_sha256": "5bcdb5b194ef43e33c46bff92cca7d8fa3bc4a98413e497922662204c288a42e",
+          "call_sha256": "f3b1a8760494383aa19cfc31ccf8d198452bae36cd636dcdc34bd889c1687524",
+          "usage": {
+            "completion_tokens": 79,
+            "completion_tokens_details": {
+              "audio_tokens": 0,
+              "image_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "cost": 6.4548e-05,
+            "cost_details": {
+              "upstream_inference_completions_cost": 3.95e-05,
+              "upstream_inference_cost": 6.4548e-05,
+              "upstream_inference_prompt_cost": 2.5048e-05
+            },
+            "is_byok": false,
+            "prompt_tokens": 1158,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cache_write_tokens": 0,
+              "cached_tokens": 640,
+              "video_tokens": 0
+            },
+            "total_tokens": 1237
+          },
+          "raw_audit": {
+            "checks": [
+              {
+                "id": "A1",
+                "reason": "Evidence says Lantern.encode accepts a byte sequence, but the claim is about Lantern.decode; rejection context also indicates encode accepts text.",
+                "verdict": "unsupported"
+              }
+            ],
+            "conflicts": [],
+            "missing": [
+              0
+            ],
+            "next": {
+              "facet": 0,
+              "query": "Lantern.decode() input parameter specification"
+            },
+            "sufficient": false
+          },
+          "adapted_audit": {
+            "checks": [
+              {
+                "id": "A1",
+                "reason": "Evidence says Lantern.encode accepts a byte sequence, but the claim is about Lantern.decode; rejection context also indicates encode accepts text.",
+                "verdict": "unsupported"
+              }
+            ],
+            "conflicts": [],
+            "missing": [
+              0
+            ],
+            "next": {
+              "facet": 0,
+              "query": "Lantern.decode() input parameter specification"
+            },
+            "sufficient": false
+          },
+          "result": {
+            "actions": [],
+            "answer": "",
+            "budget": {
+              "limits": {
+                "browser": 0,
+                "documents": 4,
+                "forms": 2,
+                "generations": 6,
+                "output_bytes": 32768,
+                "qwen": 4,
+                "seconds": 180,
+                "serp": 4,
+                "source_context_chars": 24000
+              },
+              "remaining": {
+                "documents": 4,
+                "forms": 2,
+                "generations": 6,
+                "milliseconds": 178203,
+                "qwen": 4,
+                "serp": 4
+              },
+              "used": {
+                "documents": 0,
+                "forms": 0,
+                "generations": 0,
+                "qwen": 0,
+                "serp": 0
+              }
+            },
+            "claims": [],
+            "conflicts": [],
+            "elapsed_ms": 1796,
+            "error": null,
+            "facets": [
+              "Support the frozen claim within the original question scope"
+            ],
+            "independence": "distinct document bodies; publisher independence not established",
+            "missing": [
+              0
+            ],
+            "model_calls": [],
+            "news_window": null,
+            "offset_unit": "Unicode code points; answer ranges exclude app-added citation suffixes",
+            "output_limited": false,
+            "query_forms": [],
+            "request_id": "ece02835a7fad8d22872dd1b3b7bb78f928eec8b508e79e9622232db9bb59aa0",
+            "semantic_verification": "experimental separate model audit; not an independent truth guarantee",
+            "sources": [
+              {
+                "cache": null,
+                "document_version": "synthetic-11ea0ac8433cc7bf095884e30546448183ff9cbcc732dd12cb7b81b23b30d31f",
+                "eligibility": "read_body",
+                "eligible": true,
+                "extraction": null,
+                "id": "S1",
+                "parent_url": null,
+                "publication": null,
+                "text_hash": "",
+                "title": "Fictional API specification",
+                "url": "https://example.org/synthetic/S02"
+              }
+            ],
+            "status": "partial",
+            "stop_reason": "component_replay",
+            "sufficiency": {
+              "audit_completed": true,
+              "cited_distinct_documents": 0,
+              "judge_sufficient": false,
+              "required_distinct_documents": 2
+            },
+            "untrusted_content": true
+          }
+        },
+        "candidate": {
+          "attempt": {
+            "case": "S02",
+            "arm": "candidate",
+            "exit_code": 0,
+            "elapsed_ms": 1725
+          },
+          "status": "completed",
+          "context_sha256": "5bcdb5b194ef43e33c46bff92cca7d8fa3bc4a98413e497922662204c288a42e",
+          "call_sha256": "9ed7dcddeb40c933fffbf8bec9484b761c428113785862f0386be5e00ad5d047",
+          "usage": {
+            "completion_tokens": 96,
+            "completion_tokens_details": {
+              "audio_tokens": 0,
+              "image_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "cost": 7.5212e-05,
+            "cost_details": {
+              "upstream_inference_completions_cost": 4.8e-05,
+              "upstream_inference_cost": 7.5212e-05,
+              "upstream_inference_prompt_cost": 2.7212e-05
+            },
+            "is_byok": false,
+            "prompt_tokens": 1403,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cache_write_tokens": 0,
+              "cached_tokens": 896,
+              "video_tokens": 0
+            },
+            "total_tokens": 1499
+          },
+          "raw_audit": {
+            "checks": [
+              {
+                "conditions": "unsupported",
+                "id": "A1",
+                "object_version": "unsupported",
+                "own_quote_support": "unsupported",
+                "reason": "Claim is about Lantern.encode, but question asks about Lantern.decode; quote fragment alone doesn't identify the method.",
+                "time": "not_applicable"
+              }
+            ],
+            "conflicts": [],
+            "missing": [
+              0
+            ],
+            "next": {
+              "facet": 0,
+              "query": "Lantern.decode() accepts input"
+            },
+            "sufficient": false
+          },
+          "adapted_audit": {
+            "checks": [
+              {
+                "id": "A1",
+                "reason": "Claim is about Lantern.encode, but question asks about Lantern.decode; quote fragment alone doesn't identify the method.",
+                "verdict": "unsupported"
+              }
+            ],
+            "conflicts": [],
+            "missing": [
+              0
+            ],
+            "next": {
+              "facet": 0,
+              "query": "Lantern.decode() accepts input"
+            },
+            "sufficient": false
+          },
+          "result": {
+            "actions": [],
+            "answer": "",
+            "budget": {
+              "limits": {
+                "browser": 0,
+                "documents": 4,
+                "forms": 2,
+                "generations": 6,
+                "output_bytes": 32768,
+                "qwen": 4,
+                "seconds": 180,
+                "serp": 4,
+                "source_context_chars": 24000
+              },
+              "remaining": {
+                "documents": 4,
+                "forms": 2,
+                "generations": 6,
+                "milliseconds": 178288,
+                "qwen": 4,
+                "serp": 4
+              },
+              "used": {
+                "documents": 0,
+                "forms": 0,
+                "generations": 0,
+                "qwen": 0,
+                "serp": 0
+              }
+            },
+            "claims": [],
+            "conflicts": [],
+            "elapsed_ms": 1711,
+            "error": null,
+            "facets": [
+              "Support the frozen claim within the original question scope"
+            ],
+            "independence": "distinct document bodies; publisher independence not established",
+            "missing": [
+              0
+            ],
+            "model_calls": [],
+            "news_window": null,
+            "offset_unit": "Unicode code points; answer ranges exclude app-added citation suffixes",
+            "output_limited": false,
+            "query_forms": [],
+            "request_id": "145043ed3d1dfc8c378c6ae8211e3ea57d6f52829d61db54c738f2d3142ffc3b",
+            "semantic_verification": "experimental separate model audit; not an independent truth guarantee",
+            "sources": [
+              {
+                "cache": null,
+                "document_version": "synthetic-11ea0ac8433cc7bf095884e30546448183ff9cbcc732dd12cb7b81b23b30d31f",
+                "eligibility": "read_body",
+                "eligible": true,
+                "extraction": null,
+                "id": "S1",
+                "parent_url": null,
+                "publication": null,
+                "text_hash": "",
+                "title": "Fictional API specification",
+                "url": "https://example.org/synthetic/S02"
+              }
+            ],
+            "status": "partial",
+            "stop_reason": "component_replay",
+            "sufficiency": {
+              "audit_completed": true,
+              "cited_distinct_documents": 0,
+              "judge_sufficient": false,
+              "required_distinct_documents": 2
+            },
+            "untrusted_content": true
+          }
+        }
+      }
+    },
+    {
+      "id": "S03",
+      "cohort": "new_synthetic_challenge8",
+      "arms": {
+        "baseline": {
+          "attempt": {
+            "case": "S03",
+            "arm": "baseline",
+            "exit_code": 0,
+            "elapsed_ms": 1354
+          },
+          "status": "completed",
+          "context_sha256": "77a294a157819394724eef8e5fe1623d6b7095cf97b34e4adfd035032ead8cd7",
+          "call_sha256": "b206af9f0109a4dfa9c79fc6bbfab0d32fa3c574a336621b9e4a9d395753b645",
+          "usage": {
+            "completion_tokens": 70,
+            "completion_tokens_details": {
+              "audio_tokens": 0,
+              "image_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "cost": 6.2028e-05,
+            "cost_details": {
+              "upstream_inference_completions_cost": 3.5e-05,
+              "upstream_inference_cost": 6.2028e-05,
+              "upstream_inference_prompt_cost": 2.7028e-05
+            },
+            "is_byok": false,
+            "prompt_tokens": 1213,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cache_write_tokens": 0,
+              "cached_tokens": 640,
+              "video_tokens": 0
+            },
+            "total_tokens": 1283
+          },
+          "raw_audit": {
+            "checks": [
+              {
+                "id": "A1",
+                "reason": "S1P1 explicitly states Sparrow 2.1 load() accepts UTF-8 bytes only, matching the claim.",
+                "verdict": "supported"
+              }
+            ],
+            "conflicts": [],
+            "missing": [],
+            "next": {
+              "facet": 0,
+              "query": ""
+            },
+            "sufficient": true
+          },
+          "adapted_audit": {
+            "checks": [
+              {
+                "id": "A1",
+                "reason": "S1P1 explicitly states Sparrow 2.1 load() accepts UTF-8 bytes only, matching the claim.",
+                "verdict": "supported"
+              }
+            ],
+            "conflicts": [],
+            "missing": [],
+            "next": {
+              "facet": 0,
+              "query": ""
+            },
+            "sufficient": true
+          },
+          "result": {
+            "actions": [],
+            "answer": "In Sparrow2.1, load accepts UTF-8 bytes only. [S1](<https://example.org/synthetic/S03>)",
+            "budget": {
+              "limits": {
+                "browser": 0,
+                "documents": 4,
+                "forms": 2,
+                "generations": 6,
+                "output_bytes": 32768,
+                "qwen": 4,
+                "seconds": 180,
+                "serp": 4,
+                "source_context_chars": 24000
+              },
+              "remaining": {
+                "documents": 4,
+                "forms": 2,
+                "generations": 6,
+                "milliseconds": 178668,
+                "qwen": 4,
+                "serp": 4
+              },
+              "used": {
+                "documents": 0,
+                "forms": 0,
+                "generations": 0,
+                "qwen": 0,
+                "serp": 0
+              }
+            },
+            "claims": [
+              {
+                "answer_end": 45,
+                "answer_start": 0,
+                "evidence": [
+                  {
+                    "document_version": "synthetic-68b3dc912586f92c16a2dc72961b96fee3a5bc24db5f38ba51b2256e3b213e27",
+                    "end": 65,
+                    "field": "text",
+                    "offset_unit": "Unicode code points in original extracted text",
+                    "quote": "Sparrow 2.1 load() accepts UTF-8 bytes only.",
+                    "source_id": "S1",
+                    "start": 21
+                  }
+                ],
+                "facets": [
+                  0
+                ],
+                "id": "A1",
+                "kind": "fact",
+                "rationale": "",
+                "text": "In Sparrow2.1, load accepts UTF-8 bytes only."
+              }
+            ],
+            "conflicts": [],
+            "elapsed_ms": 1331,
+            "error": null,
+            "facets": [
+              "Support the frozen claim within the original question scope"
+            ],
+            "independence": "distinct document bodies; publisher independence not established",
+            "missing": [],
+            "model_calls": [],
+            "news_window": null,
+            "offset_unit": "Unicode code points; answer ranges exclude app-added citation suffixes",
+            "output_limited": false,
+            "query_forms": [],
+            "request_id": "cb6061dc3ea2ac2bd6d847479a938086a37468435342f1c05f1087a964dc72d8",
+            "semantic_verification": "experimental separate model audit; not an independent truth guarantee",
+            "sources": [
+              {
+                "cache": null,
+                "document_version": "synthetic-68b3dc912586f92c16a2dc72961b96fee3a5bc24db5f38ba51b2256e3b213e27",
+                "eligibility": "read_body",
+                "eligible": true,
+                "extraction": null,
+                "id": "S1",
+                "parent_url": null,
+                "publication": null,
+                "text_hash": "",
+                "title": "Fictional API specification",
+                "url": "https://example.org/synthetic/S03"
+              }
+            ],
+            "status": "partial",
+            "stop_reason": "component_replay",
+            "sufficiency": {
+              "audit_completed": true,
+              "cited_distinct_documents": 1,
+              "judge_sufficient": true,
+              "required_distinct_documents": 2
+            },
+            "untrusted_content": true
+          }
+        },
+        "candidate": {
+          "attempt": {
+            "case": "S03",
+            "arm": "candidate",
+            "exit_code": 0,
+            "elapsed_ms": 1902
+          },
+          "status": "completed",
+          "context_sha256": "77a294a157819394724eef8e5fe1623d6b7095cf97b34e4adfd035032ead8cd7",
+          "call_sha256": "be156f6bcc124e9caf917a30122fb824d1b6ce9680693ba09d6a8d81a009d152",
+          "usage": {
+            "completion_tokens": 85,
+            "completion_tokens_details": {
+              "audio_tokens": 0,
+              "image_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "cost": 7.1692e-05,
+            "cost_details": {
+              "upstream_inference_completions_cost": 4.25e-05,
+              "upstream_inference_cost": 7.1692e-05,
+              "upstream_inference_prompt_cost": 2.9192e-05
+            },
+            "is_byok": false,
+            "prompt_tokens": 1458,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cache_write_tokens": 0,
+              "cached_tokens": 896,
+              "video_tokens": 0
+            },
+            "total_tokens": 1543
+          },
+          "raw_audit": {
+            "checks": [
+              {
+                "conditions": "supported",
+                "id": "A1",
+                "object_version": "supported",
+                "own_quote_support": "supported",
+                "reason": "Quote states Sparrow 2.1 load() accepts UTF-8 bytes only, matching claim scope.",
+                "time": "not_applicable"
+              }
+            ],
+            "conflicts": [],
+            "missing": [],
+            "next": {
+              "facet": 0,
+              "query": ""
+            },
+            "sufficient": true
+          },
+          "adapted_audit": {
+            "checks": [
+              {
+                "id": "A1",
+                "reason": "Quote states Sparrow 2.1 load() accepts UTF-8 bytes only, matching claim scope.",
+                "verdict": "supported"
+              }
+            ],
+            "conflicts": [],
+            "missing": [],
+            "next": {
+              "facet": 0,
+              "query": ""
+            },
+            "sufficient": true
+          },
+          "result": {
+            "actions": [],
+            "answer": "In Sparrow2.1, load accepts UTF-8 bytes only. [S1](<https://example.org/synthetic/S03>)",
+            "budget": {
+              "limits": {
+                "browser": 0,
+                "documents": 4,
+                "forms": 2,
+                "generations": 6,
+                "output_bytes": 32768,
+                "qwen": 4,
+                "seconds": 180,
+                "serp": 4,
+                "source_context_chars": 24000
+              },
+              "remaining": {
+                "documents": 4,
+                "forms": 2,
+                "generations": 6,
+                "milliseconds": 178116,
+                "qwen": 4,
+                "serp": 4
+              },
+              "used": {
+                "documents": 0,
+                "forms": 0,
+                "generations": 0,
+                "qwen": 0,
+                "serp": 0
+              }
+            },
+            "claims": [
+              {
+                "answer_end": 45,
+                "answer_start": 0,
+                "evidence": [
+                  {
+                    "document_version": "synthetic-68b3dc912586f92c16a2dc72961b96fee3a5bc24db5f38ba51b2256e3b213e27",
+                    "end": 65,
+                    "field": "text",
+                    "offset_unit": "Unicode code points in original extracted text",
+                    "quote": "Sparrow 2.1 load() accepts UTF-8 bytes only.",
+                    "source_id": "S1",
+                    "start": 21
+                  }
+                ],
+                "facets": [
+                  0
+                ],
+                "id": "A1",
+                "kind": "fact",
+                "rationale": "",
+                "text": "In Sparrow2.1, load accepts UTF-8 bytes only."
+              }
+            ],
+            "conflicts": [],
+            "elapsed_ms": 1883,
+            "error": null,
+            "facets": [
+              "Support the frozen claim within the original question scope"
+            ],
+            "independence": "distinct document bodies; publisher independence not established",
+            "missing": [],
+            "model_calls": [],
+            "news_window": null,
+            "offset_unit": "Unicode code points; answer ranges exclude app-added citation suffixes",
+            "output_limited": false,
+            "query_forms": [],
+            "request_id": "2e73220cf9535ca3a32a0257499e176b3382a08fe530e334a07e9b51cf050272",
+            "semantic_verification": "experimental separate model audit; not an independent truth guarantee",
+            "sources": [
+              {
+                "cache": null,
+                "document_version": "synthetic-68b3dc912586f92c16a2dc72961b96fee3a5bc24db5f38ba51b2256e3b213e27",
+                "eligibility": "read_body",
+                "eligible": true,
+                "extraction": null,
+                "id": "S1",
+                "parent_url": null,
+                "publication": null,
+                "text_hash": "",
+                "title": "Fictional API specification",
+                "url": "https://example.org/synthetic/S03"
+              }
+            ],
+            "status": "partial",
+            "stop_reason": "component_replay",
+            "sufficiency": {
+              "audit_completed": true,
+              "cited_distinct_documents": 1,
+              "judge_sufficient": true,
+              "required_distinct_documents": 2
+            },
+            "untrusted_content": true
+          }
+        }
+      }
+    },
+    {
+      "id": "S04",
+      "cohort": "new_synthetic_challenge8",
+      "arms": {
+        "baseline": {
+          "status": "not_run"
+        },
+        "candidate": {
+          "attempt": {
+            "case": "S04",
+            "arm": "candidate",
+            "exit_code": 101,
+            "elapsed_ms": 3230,
+            "error": {
+              "status": "invalid_or_failed_audit"
+            }
+          },
+          "status": "invalid_or_failed",
+          "context_sha256": "dcfb7e9cc517530f6a5839dcf86322fc9edecb3194edb866f416a381ee778559",
+          "call_sha256": "491e8054f68bd6a41ca5f888b295bc14974aa627d9696cd6a549f776c54cfabb",
+          "usage": {
+            "completion_tokens": 195,
+            "completion_tokens_details": {
+              "audio_tokens": 0,
+              "image_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "cost": 0.00012626,
+            "cost_details": {
+              "upstream_inference_completions_cost": 9.75e-05,
+              "upstream_inference_cost": 0.00012626,
+              "upstream_inference_prompt_cost": 2.876e-05
+            },
+            "is_byok": false,
+            "prompt_tokens": 1446,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cache_write_tokens": 0,
+              "cached_tokens": 896,
+              "video_tokens": 0
+            },
+            "total_tokens": 1641
+          },
+          "raw_audit": {
+            "checks": [
+              {
+                "conditions": "unsupported",
+                "id": "A1",
+                "object_version": "unsupported",
+                "own_quote_support": "unsupported",
+                "reason": "Quote lacks version scope; rejection context shows 2.1 accepts UTF-8 bytes only, contradicting the claim.",
+                "time": "not_applicable"
+              }
+            ],
+            "conflicts": [
+              {
+                "facet": 0,
+                "left": {
+                  "chunk_id": "S1P1",
+                  "quote": "load() accepts Unicode text only"
+                },
+                "reason": "S1P1 says text only; S1P2 says Sparrow 2.1 load() accepts UTF-8 bytes only.",
+                "right": {
+                  "chunk_id": "S1P2",
+                  "quote": "Versioned reference: Sparrow 2.1 load() accepts UTF-8 bytes only."
+                }
+              }
+            ],
+            "missing": [
+              0
+            ],
+            "next": {
+              "facet": 0,
+              "query": "Sparrow 2.1 load accepts bytes or text versioned reference"
+            },
+            "sufficient": false
+          },
+          "adapted_audit": {
+            "checks": [
+              {
+                "id": "A1",
+                "reason": "Quote lacks version scope; rejection context shows 2.1 accepts UTF-8 bytes only, contradicting the claim.",
+                "verdict": "unsupported"
+              }
+            ],
+            "conflicts": [
+              {
+                "facet": 0,
+                "left": {
+                  "chunk_id": "S1P1",
+                  "quote": "load() accepts Unicode text only"
+                },
+                "reason": "S1P1 says text only; S1P2 says Sparrow 2.1 load() accepts UTF-8 bytes only.",
+                "right": {
+                  "chunk_id": "S1P2",
+                  "quote": "Versioned reference: Sparrow 2.1 load() accepts UTF-8 bytes only."
+                }
+              }
+            ],
+            "missing": [
+              0
+            ],
+            "next": {
+              "facet": 0,
+              "query": "Sparrow 2.1 load accepts bytes or text versioned reference"
+            },
+            "sufficient": false
+          },
+          "failure_log": "\nrunning 1 test\nError: conflict requires two distinct document bodies\ntest research::tests::scope_audit_experiment::scope_saved_audit_experiment ... FAILED\n\nfailures:\n\nfailures:\n    research::tests::scope_audit_experiment::scope_saved_audit_experiment\n\ntest result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 226 filtered out; finished in 3.22s\n\n"
+        }
+      }
+    },
+    {
+      "id": "S05",
+      "cohort": "new_synthetic_challenge8",
+      "arms": {
+        "baseline": {
+          "status": "not_run"
+        },
+        "candidate": {
+          "status": "not_run"
+        }
+      }
+    },
+    {
+      "id": "S06",
+      "cohort": "new_synthetic_challenge8",
+      "arms": {
+        "baseline": {
+          "status": "not_run"
+        },
+        "candidate": {
+          "status": "not_run"
+        }
+      }
+    },
+    {
+      "id": "S07",
+      "cohort": "new_synthetic_challenge8",
+      "arms": {
+        "baseline": {
+          "status": "not_run"
+        },
+        "candidate": {
+          "status": "not_run"
+        }
+      }
+    },
+    {
+      "id": "S08",
+      "cohort": "new_synthetic_challenge8",
+      "arms": {
+        "baseline": {
+          "status": "not_run"
+        },
+        "candidate": {
+          "status": "not_run"
+        }
+      }
+    }
+  ],
+  "stats": {
+    "model_responses": 15,
+    "known_cost_usd": 0.001348336,
+    "unknown_usage_calls": 0,
+    "response_models": [
+      "deepseek/deepseek-v4.1-flash-1017"
+    ],
+    "p50_ms": {
+      "baseline": 1538,
+      "candidate": 1950.0
+    },
+    "completed_pairs": 7
+  },
+  "source_http_calls": 0,
+  "old429_campaign_resumed": false
+}

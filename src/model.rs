@@ -50,6 +50,93 @@ fn evidence_audit_prompt(context: &str) -> String {
     }
 }
 
+const ERROR_BODY_LIMIT: usize = 16 * 1024;
+
+// Never surface provider messages, raw headers or arbitrary metadata strings.
+fn openrouter_error(
+    status: reqwest::StatusCode,
+    headers: &reqwest::header::HeaderMap,
+    body: &[u8],
+) -> String {
+    let parsed = (body.len() <= ERROR_BODY_LIMIT)
+        .then(|| serde_json::from_slice::<Value>(body).ok())
+        .flatten();
+    let source = parsed
+        .as_ref()
+        .and_then(|v| v["error"]["metadata"]["limit_source"].as_str())
+        .filter(|s| {
+            matches!(
+                *s,
+                "openrouter_free_tier_per_minute"
+                    | "upstream_provider_shared_pool"
+                    | "openrouter_in_flight_budget"
+                    | "openrouter_key_limit"
+                    | "openrouter_credits"
+            )
+        })
+        .unwrap_or("unspecified");
+    let mut reason = format!("OpenRouter HTTP {status}; limit_source={source}");
+    for (header, numeric_field, date_field) in [
+        ("retry-after", "retry_after_s", "retry_after_unix"),
+        (
+            "x-ratelimit-reset",
+            "reset_header_numeric",
+            "reset_at_unix_s",
+        ),
+    ] {
+        let Some(raw) = headers.get(header).and_then(|v| v.to_str().ok()) else {
+            continue;
+        };
+        if raw.len() > 64 {
+            continue;
+        }
+        let raw = raw.trim();
+        let parsed = if !raw.is_empty() && raw.bytes().all(|b| b.is_ascii_digit()) {
+            raw.parse::<u64>().ok().map(|n| (numeric_field, n))
+        } else {
+            chrono::DateTime::parse_from_rfc2822(raw)
+                .ok()
+                .and_then(|date| u64::try_from(date.timestamp()).ok())
+                .map(|n| (date_field, n))
+        };
+        if let Some((field, value)) = parsed {
+            reason.push_str(&format!("; {field}={value}"));
+        }
+    }
+    reason
+}
+
+fn diagnostic_wait(remaining: Duration) -> Duration {
+    Duration::from_secs(1).min(remaining / 2)
+}
+
+async fn openrouter_rejection(mut response: reqwest::Response, remaining: Duration) -> String {
+    let status = response.status();
+    let headers = response.headers().clone();
+    let wait = diagnostic_wait(remaining);
+    if wait.is_zero() {
+        return openrouter_error(status, &headers, &[]);
+    }
+    // Reserve time to report the original HTTP status even when its body stalls.
+    let collect = async {
+        let mut body = Vec::new();
+        // Accumulate at most 16 KiB; never drain a rejected large body.
+        loop {
+            match response.chunk().await {
+                Ok(Some(chunk)) if chunk.len() <= ERROR_BODY_LIMIT - body.len() => {
+                    body.extend_from_slice(&chunk);
+                }
+                Ok(None) => return body,
+                _ => return Vec::new(),
+            }
+        }
+    };
+    let body = tokio::time::timeout(wait, collect)
+        .await
+        .unwrap_or_default();
+    openrouter_error(status, &headers, &body)
+}
+
 pub struct Model {
     client: reqwest::Client,
     base: String,
@@ -538,7 +625,9 @@ impl Model {
         if !response.status().is_success() {
             let status = response.status();
             if self.remote {
-                anyhow::bail!("OpenRouter HTTP {status}; provider error details omitted");
+                anyhow::bail!(
+                    openrouter_rejection(response, remaining.saturating_sub(start.elapsed())).await
+                );
             }
             let body: Value = response.json().await.unwrap_or(Value::Null);
             let mut reason: String = body["error"]["message"]
@@ -571,6 +660,131 @@ impl Model {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn openrouter_diagnostics_wait_reserves_deadline() {
+        assert_eq!(diagnostic_wait(Duration::ZERO), Duration::ZERO);
+        assert_eq!(diagnostic_wait(Duration::from_nanos(1)), Duration::ZERO);
+        assert_eq!(
+            diagnostic_wait(Duration::from_millis(200)),
+            Duration::from_millis(100)
+        );
+        assert_eq!(
+            diagnostic_wait(Duration::from_secs(10)),
+            Duration::from_secs(1)
+        );
+    }
+
+    #[tokio::test]
+    async fn openrouter_diagnostics_zero_budget_keeps_status_and_headers() {
+        let response = reqwest::Response::from(
+            axum::http::Response::builder()
+                .status(429)
+                .header("retry-after", "60")
+                .body(r#"{"error":{"metadata":{"limit_source":"openrouter_credits"}}}"#)
+                .unwrap(),
+        );
+        let reason = openrouter_rejection(response, Duration::ZERO).await;
+        assert_eq!(
+            reason,
+            "OpenRouter HTTP 429 Too Many Requests; limit_source=unspecified; retry_after_s=60"
+        );
+    }
+
+    #[test]
+    fn openrouter_diagnostics_allowlist_and_privacy() {
+        let mut headers = reqwest::header::HeaderMap::new();
+        headers.insert("retry-after", "60".parse().unwrap());
+        headers.insert("x-ratelimit-reset", "1795000000".parse().unwrap());
+        headers.insert("authorization", "Bearer SECRET".parse().unwrap());
+        for source in [
+            "openrouter_free_tier_per_minute",
+            "upstream_provider_shared_pool",
+            "openrouter_in_flight_budget",
+            "openrouter_key_limit",
+            "openrouter_credits",
+            "SECRET provider https://private.example",
+        ] {
+            let body = serde_json::to_vec(&json!({"error":{"message":"SECRET email@example.org",
+                "metadata":{"limit_source":source,"provider_name":"PRIVATE", "raw":"SECRET"}},
+                "rate_limit":{"remaining":0}}))
+            .unwrap();
+            let reason = openrouter_error(reqwest::StatusCode::TOO_MANY_REQUESTS, &headers, &body);
+            assert!(reason.starts_with("OpenRouter HTTP 429"));
+            assert!(reason.contains("retry_after_s=60; reset_header_numeric=1795000000"));
+            assert!(
+                !reason.contains("SECRET")
+                    && !reason.contains("PRIVATE")
+                    && !reason.contains("example")
+            );
+            assert!(reason.len() <= 200);
+            assert!(reason.contains(if source.starts_with("SECRET") {
+                "limit_source=unspecified"
+            } else {
+                source
+            }));
+        }
+    }
+
+    #[test]
+    fn openrouter_diagnostics_dates_invalid_and_oversize() {
+        let mut headers = reqwest::header::HeaderMap::new();
+        for header in ["retry-after", "x-ratelimit-reset"] {
+            headers.insert(header, "Wed, 21 Oct 2015 07:28:00 GMT".parse().unwrap());
+        }
+        let reason = openrouter_error(
+            reqwest::StatusCode::SERVICE_UNAVAILABLE,
+            &headers,
+            b"invalid JSON",
+        );
+        assert!(reason.starts_with("OpenRouter HTTP 503"));
+        assert!(reason.contains("retry_after_unix=1445412480; reset_at_unix_s=1445412480"));
+        for raw in ["SECRET", "-1", "1.5", "18446744073709551616", "60; SECRET"] {
+            headers.insert("retry-after", raw.parse().unwrap());
+            headers.insert("x-ratelimit-reset", raw.parse().unwrap());
+            let reason = openrouter_error(reqwest::StatusCode::TOO_MANY_REQUESTS, &headers, b"{}");
+            assert!(reason.ends_with("limit_source=unspecified"));
+        }
+        let body = format!(
+            "{{\"error\":{{\"metadata\":{{\"limit_source\":\"openrouter_credits\"}}}},\"padding\":\"{}\"}}",
+            "x".repeat(ERROR_BODY_LIMIT)
+        );
+        let reason = openrouter_error(
+            reqwest::StatusCode::TOO_MANY_REQUESTS,
+            &headers,
+            body.as_bytes(),
+        );
+        assert!(reason.ends_with("limit_source=unspecified"));
+        let reason = openrouter_error(
+            reqwest::StatusCode::TOO_MANY_REQUESTS,
+            &headers,
+            br#"{"error":{"metadata":{"rate_limit":"openrouter_key_limit"}}}"#,
+        );
+        assert!(reason.ends_with("limit_source=unspecified"));
+    }
+
+    #[tokio::test]
+    async fn openrouter_diagnostics_bounded_in_memory_response() {
+        for body in [
+            r#"{"error":{"metadata":{"limit_source":"openrouter_credits"}}}"#.to_owned(),
+            "x".repeat(ERROR_BODY_LIMIT + 1),
+        ] {
+            let oversized = body.len() > ERROR_BODY_LIMIT;
+            let response = reqwest::Response::from(
+                axum::http::Response::builder()
+                    .status(429)
+                    .body(body)
+                    .unwrap(),
+            );
+            let reason = openrouter_rejection(response, Duration::from_secs(5)).await;
+            assert!(reason.starts_with("OpenRouter HTTP 429"));
+            assert!(reason.ends_with(if oversized {
+                "limit_source=unspecified"
+            } else {
+                "limit_source=openrouter_credits"
+            }));
+        }
+    }
 
     #[test]
     fn news_coverage_guidance_requires_a_trusted_news_window_and_preserves_generic_prompt() {

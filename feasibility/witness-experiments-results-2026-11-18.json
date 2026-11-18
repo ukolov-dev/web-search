@@ -1,0 +1,626 @@
+{
+  "schema": "offline-witness-results-v1",
+  "freeze": {
+    "source_commit": "27f2b5d20aaa8f903c72ae9bc87befd0e699cdef",
+    "files": {
+      "scripts/witness-context-experiment.py": "fd68b3de5652a131063e3203c687ead5877f61ddba0cc19b2151af02929916e8",
+      "scripts/api-extractive-experiment.py": "9e48d1272405df1dda729f36be9ceb5fefb2185b75c463365fa21b21e8ba03ef",
+      "scripts/witness-experiments-2026-11-18.py": "8d0d60859836b46ec2d7aae8ed31692ef3ed7abf54de9ebe9f7f19791e2a959f",
+      "feasibility/witness-experiments-cases-2026-11-18.json": "fc91ad1cd9c1c5e61e30e517123af1dbae06f4dda00d976b9072d7dc13f2e940",
+      "runs/witness-experiments-2026-11-18/inputs.json": "de8adc7961e2e3f0bda5d6bd7178274fa31b5e8a273d72f7d1954e6f52bc79a0",
+      "runs/witness-experiments-2026-11-18/gold-review.json": "c228e9a8b4a0dbee60e841382b0ca270251d376d28ca136481c356f36e199808"
+    },
+    "helpers": {
+      "A": "scripts/witness-context-experiment.py",
+      "B": "scripts/api-extractive-experiment.py"
+    },
+    "runtime_unchanged_since": "aaecc09",
+    "network": false,
+    "models": false,
+    "comparison": "Fixed original witness, not oracle selection; historical_development vs synthetic_challenge8 separate; no language translation."
+  },
+  "rows": [
+    {
+      "id": "H01",
+      "cohort": "historical_development",
+      "baseline": {
+        "claim": "The consecutive-only grouping is intentional and efficient, but it means the data must be pre-sorted on the grouping key.",
+        "evidence": {
+          "quote": "This is intentional and efficient, but it means the data must be pre-sorted on the grouping key.",
+          "start": 36919,
+          "end": 37015
+        }
+      },
+      "arms": {
+        "A": {
+          "emitted": false,
+          "candidate": {
+            "status": "withhold",
+            "reason": "context_unresolved"
+          },
+          "claim": null
+        },
+        "B": {
+          "emitted": true,
+          "candidate": {
+            "status": "ok",
+            "reason": "complete_original_sentence",
+            "claim": "This is intentional and efficient, but it means the data must be pre-sorted on the grouping key.",
+            "quote": "This is intentional and efficient, but it means the data must be pre-sorted on the grouping key.",
+            "start": 36919,
+            "end": 37015
+          },
+          "claim": "This is intentional and efficient, but it means the data must be pre-sorted on the grouping key."
+        }
+      }
+    },
+    {
+      "id": "H02",
+      "cohort": "historical_development",
+      "baseline": {
+        "claim": "To collect all equal keys together, sort by the grouping key first with sorted(data, key=...) before passing to groupby().",
+        "evidence": {
+          "quote": "Always sort by the grouping key first with sorted(data, key=...) before passing to groupby().",
+          "start": 35238,
+          "end": 35331
+        }
+      },
+      "arms": {
+        "A": {
+          "emitted": true,
+          "candidate": {
+            "status": "unchanged",
+            "start": 35238,
+            "end": 35331,
+            "quote": "Always sort by the grouping key first with sorted(data, key=...) before passing to groupby().",
+            "offset_unit": "Unicode code points; end exclusive",
+            "intro_included": false,
+            "semantic_verification": "not_performed"
+          },
+          "claim": "To collect all equal keys together, sort by the grouping key first with sorted(data, key=...) before passing to groupby()."
+        },
+        "B": {
+          "emitted": true,
+          "candidate": {
+            "status": "ok",
+            "reason": "complete_original_sentence",
+            "claim": "Always sort by the grouping key first with sorted(data, key=...) before passing to groupby().",
+            "quote": "Always sort by the grouping key first with sorted(data, key=...) before passing to groupby().",
+            "start": 35238,
+            "end": 35331
+          },
+          "claim": "Always sort by the grouping key first with sorted(data, key=...) before passing to groupby()."
+        }
+      }
+    },
+    {
+      "id": "H03",
+      "cohort": "historical_development",
+      "baseline": {
+        "claim": "Free threading вводится как экспериментальная функция и не входит в официальную сборку Python; для отключения GIL нужна собственная сборка.",
+        "evidence": {
+          "quote": "Experimental: Free threading is introduced as an experimental feature and isn’t a part of the official Python distribution. You must make a custom Python build to disable the GIL.",
+          "start": 5802,
+          "end": 5981
+        }
+      },
+      "arms": {
+        "A": {
+          "emitted": false,
+          "candidate": {
+            "status": "withhold",
+            "reason": "context_over_quote_budget"
+          },
+          "claim": null
+        },
+        "B": {
+          "emitted": false,
+          "candidate": {
+            "status": "withheld",
+            "reason": "no_complete_containing_sentence",
+            "claim": null,
+            "quote": null,
+            "start": null,
+            "end": null
+          },
+          "claim": null
+        }
+      }
+    },
+    {
+      "id": "H04",
+      "cohort": "historical_development",
+      "baseline": {
+        "claim": "SQLite foreign key constraints are disabled by default and must be enabled separately for each database connection.",
+        "evidence": {
+          "quote": "Foreign key constraints are disabled by default (for backwards compatibility), so must be enabled separately for each database connection.",
+          "start": 10040,
+          "end": 10178
+        }
+      },
+      "arms": {
+        "A": {
+          "emitted": true,
+          "candidate": {
+            "status": "unchanged",
+            "start": 10040,
+            "end": 10178,
+            "quote": "Foreign key constraints are disabled by default (for backwards compatibility), so must be enabled separately for each database connection.",
+            "offset_unit": "Unicode code points; end exclusive",
+            "intro_included": false,
+            "semantic_verification": "not_performed"
+          },
+          "claim": "SQLite foreign key constraints are disabled by default and must be enabled separately for each database connection."
+        },
+        "B": {
+          "emitted": true,
+          "candidate": {
+            "status": "ok",
+            "reason": "complete_original_sentence",
+            "claim": "For example: sqlite> PRAGMA foreign_keys = ON; Foreign key constraints are disabled by default (for backwards compatibility), so must be enabled separately for each database connection.",
+            "quote": "For example:\n\nsqlite> PRAGMA foreign_keys = ON;\n\n\nForeign key constraints are disabled by default (for backwards compatibility), so must be enabled separately for each database connection.",
+            "start": 9990,
+            "end": 10178
+          },
+          "claim": "For example: sqlite> PRAGMA foreign_keys = ON; Foreign key constraints are disabled by default (for backwards compatibility), so must be enabled separately for each database connection."
+        }
+      }
+    },
+    {
+      "id": "H05",
+      "cohort": "historical_development",
+      "baseline": {
+        "claim": "It is not possible to enable or disable foreign key constraints in the middle of a multi-statement transaction.",
+        "evidence": {
+          "quote": "It is not possible to enable or disable foreign key constraints in the middle of a multi-statement transaction",
+          "start": 11090,
+          "end": 11200
+        }
+      },
+      "arms": {
+        "A": {
+          "emitted": false,
+          "candidate": {
+            "status": "withhold",
+            "reason": "context_unresolved"
+          },
+          "claim": null
+        },
+        "B": {
+          "emitted": true,
+          "candidate": {
+            "status": "ok",
+            "reason": "complete_original_sentence",
+            "claim": "It is not possible to enable or disable foreign key constraints in the middle of a multi-statement transaction (when SQLite is not in autocommit mode).",
+            "quote": "It is not possible to enable or disable foreign key constraints in the middle of a multi-statement transaction (when SQLite is not in autocommit mode).",
+            "start": 11090,
+            "end": 11241
+          },
+          "claim": "It is not possible to enable or disable foreign key constraints in the middle of a multi-statement transaction (when SQLite is not in autocommit mode)."
+        }
+      }
+    },
+    {
+      "id": "H06",
+      "cohort": "historical_development",
+      "baseline": {
+        "claim": "Arguments passed to unwrap_or are eagerly evaluated, so the default is evaluated even for Some; unwrap_or_else is lazily evaluated.",
+        "evidence": {
+          "quote": "Arguments passed to unwrap_or are eagerly evaluated; if you are passing the result of a function call, it is recommended to use unwrap_or_else, which is lazily evaluated.",
+          "start": 6453,
+          "end": 6623
+        }
+      },
+      "arms": {
+        "A": {
+          "emitted": true,
+          "candidate": {
+            "status": "unchanged",
+            "start": 6453,
+            "end": 6623,
+            "quote": "Arguments passed to unwrap_or are eagerly evaluated; if you are passing the result of a function call, it is recommended to use unwrap_or_else, which is lazily evaluated.",
+            "offset_unit": "Unicode code points; end exclusive",
+            "intro_included": false,
+            "semantic_verification": "not_performed"
+          },
+          "claim": "Arguments passed to unwrap_or are eagerly evaluated, so the default is evaluated even for Some; unwrap_or_else is lazily evaluated."
+        },
+        "B": {
+          "emitted": true,
+          "candidate": {
+            "status": "ok",
+            "reason": "complete_original_sentence",
+            "claim": "Arguments passed to unwrap_or are eagerly evaluated; if you are passing the result of a function call, it is recommended to use unwrap_or_else, which is lazily evaluated.",
+            "quote": "Arguments passed to unwrap_or are eagerly evaluated; if you are passing the result of a function call, it is recommended to use unwrap_or_else, which is lazily evaluated.",
+            "start": 6453,
+            "end": 6623
+          },
+          "claim": "Arguments passed to unwrap_or are eagerly evaluated; if you are passing the result of a function call, it is recommended to use unwrap_or_else, which is lazily evaluated."
+        }
+      }
+    },
+    {
+      "id": "H07",
+      "cohort": "historical_development",
+      "baseline": {
+        "claim": "unwrap_or_else returns the contained Some value or computes it from a closure.",
+        "evidence": {
+          "quote": "Returns the contained Some value or computes it from a closure.",
+          "start": 6831,
+          "end": 6894
+        }
+      },
+      "arms": {
+        "A": {
+          "emitted": true,
+          "candidate": {
+            "status": "unchanged",
+            "start": 6831,
+            "end": 6894,
+            "quote": "Returns the contained Some value or computes it from a closure.",
+            "offset_unit": "Unicode code points; end exclusive",
+            "intro_included": false,
+            "semantic_verification": "not_performed"
+          },
+          "claim": "unwrap_or_else returns the contained Some value or computes it from a closure."
+        },
+        "B": {
+          "emitted": false,
+          "candidate": {
+            "status": "withheld",
+            "reason": "complete_sentence_exceeds_claim_limit",
+            "claim": null,
+            "quote": null,
+            "start": null,
+            "end": null
+          },
+          "claim": null
+        }
+      }
+    },
+    {
+      "id": "H08",
+      "cohort": "historical_development",
+      "baseline": {
+        "claim": "В Rust 1.100.0 never type fallback изменён с () на ! в editions до 2024 (2015, 2018, 2021), как уже было сделано в edition 2024.",
+        "evidence": {
+          "quote": "This release changes the \"never type fallback\" from () to ! in editions before 2024 (i.e. 2015, 2018, and 2021), similarly to what has already been done in edition 2024.",
+          "start": 2659,
+          "end": 2828
+        }
+      },
+      "arms": {
+        "A": {
+          "emitted": false,
+          "candidate": {
+            "status": "withhold",
+            "reason": "context_unresolved"
+          },
+          "claim": null
+        },
+        "B": {
+          "emitted": false,
+          "candidate": {
+            "status": "withheld",
+            "reason": "no_complete_containing_sentence",
+            "claim": null,
+            "quote": null,
+            "start": null,
+            "end": null
+          },
+          "claim": null
+        }
+      }
+    },
+    {
+      "id": "C01",
+      "cohort": "synthetic_challenge8",
+      "baseline": {
+        "claim": "Owned copies may share storage with their parent.",
+        "evidence": {
+          "quote": "may share storage",
+          "start": 36,
+          "end": 53
+        }
+      },
+      "arms": {
+        "A": {
+          "emitted": true,
+          "candidate": {
+            "status": "expanded",
+            "start": 0,
+            "end": 70,
+            "quote": "For borrowed views only:\nThe buffer may share storage with its parent.",
+            "offset_unit": "Unicode code points; end exclusive",
+            "intro_included": false,
+            "semantic_verification": "not_performed"
+          },
+          "claim": "Owned copies may share storage with their parent."
+        },
+        "B": {
+          "emitted": true,
+          "candidate": {
+            "status": "ok",
+            "reason": "complete_original_sentence",
+            "claim": "For borrowed views only: The buffer may share storage with its parent.",
+            "quote": "For borrowed views only:\nThe buffer may share storage with its parent.",
+            "start": 0,
+            "end": 70
+          },
+          "claim": "For borrowed views only: The buffer may share storage with its parent."
+        }
+      }
+    },
+    {
+      "id": "C02",
+      "cohort": "synthetic_challenge8",
+      "baseline": {
+        "claim": "Setting enforce_keys during a transaction has no effect.",
+        "evidence": {
+          "quote": "setting enforce_keys does not change enforcement",
+          "start": 30,
+          "end": 78
+        }
+      },
+      "arms": {
+        "A": {
+          "emitted": true,
+          "candidate": {
+            "status": "expanded",
+            "start": 0,
+            "end": 79,
+            "quote": "During an active transaction, setting enforce_keys does not change enforcement.",
+            "offset_unit": "Unicode code points; end exclusive",
+            "intro_included": false,
+            "semantic_verification": "not_performed"
+          },
+          "claim": "Setting enforce_keys during a transaction has no effect."
+        },
+        "B": {
+          "emitted": true,
+          "candidate": {
+            "status": "ok",
+            "reason": "complete_original_sentence",
+            "claim": "During an active transaction, setting enforce_keys does not change enforcement.",
+            "quote": "During an active transaction, setting enforce_keys does not change enforcement.",
+            "start": 0,
+            "end": 79
+          },
+          "claim": "During an active transaction, setting enforce_keys does not change enforcement."
+        }
+      }
+    },
+    {
+      "id": "C03",
+      "cohort": "synthetic_challenge8",
+      "baseline": {
+        "claim": "The fast runtime is not enabled by default on every platform.",
+        "evidence": {
+          "quote": "not installed by default",
+          "start": 55,
+          "end": 79
+        }
+      },
+      "arms": {
+        "A": {
+          "emitted": true,
+          "candidate": {
+            "status": "expanded",
+            "start": 0,
+            "end": 80,
+            "quote": "On macOS installers only:\nThe optional fast runtime is not installed by default.",
+            "offset_unit": "Unicode code points; end exclusive",
+            "intro_included": false,
+            "semantic_verification": "not_performed"
+          },
+          "claim": "The fast runtime is not enabled by default on every platform."
+        },
+        "B": {
+          "emitted": true,
+          "candidate": {
+            "status": "ok",
+            "reason": "complete_original_sentence",
+            "claim": "On macOS installers only: The optional fast runtime is not installed by default.",
+            "quote": "On macOS installers only:\nThe optional fast runtime is not installed by default.",
+            "start": 0,
+            "end": 80
+          },
+          "claim": "On macOS installers only: The optional fast runtime is not installed by default."
+        }
+      }
+    },
+    {
+      "id": "C04",
+      "cohort": "synthetic_challenge8",
+      "baseline": {
+        "claim": "Users currently must build the fast executable themselves.",
+        "evidence": {
+          "quote": "must build the fast executable themselves",
+          "start": 44,
+          "end": 85
+        }
+      },
+      "arms": {
+        "A": {
+          "emitted": true,
+          "candidate": {
+            "status": "expanded",
+            "start": 0,
+            "end": 86,
+            "quote": "Historical note, June 2024 beta only:\nUsers must build the fast executable themselves.",
+            "offset_unit": "Unicode code points; end exclusive",
+            "intro_included": false,
+            "semantic_verification": "not_performed"
+          },
+          "claim": "Users currently must build the fast executable themselves."
+        },
+        "B": {
+          "emitted": true,
+          "candidate": {
+            "status": "ok",
+            "reason": "complete_original_sentence",
+            "claim": "Historical note, June 2024 beta only: Users must build the fast executable themselves.",
+            "quote": "Historical note, June 2024 beta only:\nUsers must build the fast executable themselves.",
+            "start": 0,
+            "end": 86
+          },
+          "claim": "Historical note, June 2024 beta only: Users must build the fast executable themselves."
+        }
+      }
+    },
+    {
+      "id": "C05",
+      "cohort": "synthetic_challenge8",
+      "baseline": {
+        "claim": "The copy() method may share mutable child objects.",
+        "evidence": {
+          "quote": "may share mutable child objects",
+          "start": 67,
+          "end": 98
+        }
+      },
+      "arms": {
+        "A": {
+          "emitted": true,
+          "candidate": {
+            "status": "expanded",
+            "start": 0,
+            "end": 99,
+            "quote": "The copy() method never shares mutable child objects, while view() may share mutable child objects.",
+            "offset_unit": "Unicode code points; end exclusive",
+            "intro_included": false,
+            "semantic_verification": "not_performed"
+          },
+          "claim": "The copy() method may share mutable child objects."
+        },
+        "B": {
+          "emitted": true,
+          "candidate": {
+            "status": "ok",
+            "reason": "complete_original_sentence",
+            "claim": "The copy() method never shares mutable child objects, while view() may share mutable child objects.",
+            "quote": "The copy() method never shares mutable child objects, while view() may share mutable child objects.",
+            "start": 0,
+            "end": 99
+          },
+          "claim": "The copy() method never shares mutable child objects, while view() may share mutable child objects."
+        }
+      }
+    },
+    {
+      "id": "C06",
+      "cohort": "synthetic_challenge8",
+      "baseline": {
+        "claim": "unwrap_or eagerly evaluates its default even for Some.",
+        "evidence": {
+          "quote": "eagerly evaluates its default even for Some",
+          "start": 29,
+          "end": 72
+        }
+      },
+      "arms": {
+        "A": {
+          "emitted": true,
+          "candidate": {
+            "status": "expanded",
+            "start": 0,
+            "end": 132,
+            "quote": "For Option values:\nunwrap_or eagerly evaluates its default even for Some; unwrap_or_else invokes its fallback closure only for None.",
+            "offset_unit": "Unicode code points; end exclusive",
+            "intro_included": false,
+            "semantic_verification": "not_performed"
+          },
+          "claim": "unwrap_or eagerly evaluates its default even for Some."
+        },
+        "B": {
+          "emitted": true,
+          "candidate": {
+            "status": "ok",
+            "reason": "complete_original_sentence",
+            "claim": "For Option values: unwrap_or eagerly evaluates its default even for Some; unwrap_or_else invokes its fallback closure only for None.",
+            "quote": "For Option values:\nunwrap_or eagerly evaluates its default even for Some; unwrap_or_else invokes its fallback closure only for None.",
+            "start": 0,
+            "end": 132
+          },
+          "claim": "For Option values: unwrap_or eagerly evaluates its default even for Some; unwrap_or_else invokes its fallback closure only for None."
+        }
+      }
+    },
+    {
+      "id": "C07",
+      "cohort": "synthetic_challenge8",
+      "baseline": {
+        "claim": "synchronize() returns only after every acknowledged write reaches stable storage.",
+        "evidence": {
+          "quote": "returns only after every acknowledged write",
+          "start": 442,
+          "end": 485
+        }
+      },
+      "arms": {
+        "A": {
+          "emitted": false,
+          "candidate": {
+            "status": "withhold",
+            "reason": "context_over_quote_budget"
+          },
+          "claim": null
+        },
+        "B": {
+          "emitted": false,
+          "candidate": {
+            "status": "withheld",
+            "reason": "complete_sentence_exceeds_quote_limit",
+            "claim": null,
+            "quote": null,
+            "start": null,
+            "end": null
+          },
+          "claim": null
+        }
+      }
+    },
+    {
+      "id": "C08",
+      "cohort": "synthetic_challenge8",
+      "baseline": {
+        "claim": "strip_set(chars) удаляет символы набора с обоих концов строки.",
+        "evidence": {
+          "quote": "с обоих концов",
+          "start": 61,
+          "end": 75
+        }
+      },
+      "arms": {
+        "A": {
+          "emitted": true,
+          "candidate": {
+            "status": "expanded",
+            "start": 0,
+            "end": 119,
+            "quote": "В строке «ёж🙂» метод strip_set(chars) удаляет символы набора с обоих концов, сохраняя внутренние символы без изменений.",
+            "offset_unit": "Unicode code points; end exclusive",
+            "intro_included": false,
+            "semantic_verification": "not_performed"
+          },
+          "claim": "strip_set(chars) удаляет символы набора с обоих концов строки."
+        },
+        "B": {
+          "emitted": true,
+          "candidate": {
+            "status": "ok",
+            "reason": "complete_original_sentence",
+            "claim": "В строке «ёж🙂» метод strip_set(chars) удаляет символы набора с обоих концов, сохраняя внутренние символы без изменений.",
+            "quote": "В строке «ёж🙂» метод strip_set(chars) удаляет символы набора с обоих концов, сохраняя внутренние символы без изменений.",
+            "start": 0,
+            "end": 119
+          },
+          "claim": "В строке «ёж🙂» метод strip_set(chars) удаляет символы набора с обоих концов, сохраняя внутренние символы без изменений."
+        }
+      }
+    }
+  ],
+  "network_calls": 0,
+  "model_calls": 0,
+  "semantic_scoring": "separate independent review"
+}

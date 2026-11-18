@@ -1,0 +1,150 @@
+{
+  "schema": "source-aware-search-quality-v1",
+  "reviewer": "/root/primary_search_review",
+  "reviewed_utc": "2026-11-18T12:22:44.373342+00:00",
+  "gate": "NOT_EVALUABLE_INCOMPLETE_ZERO_PAIRS",
+  "verdict": "NOT_EVALUABLE",
+  "independence": "Reviewer authored frozen gold/quality, no implementationcode. No new web/product/model/cargo calls.",
+  "cohorts": {
+    "NEW4": {
+      "required_conditions_per_arm": 9,
+      "attempted_trials": 0,
+      "completed_pairs": 0,
+      "final_coverage": null,
+      "gains_losses_false_unknown": null,
+      "reason": "All eight trialarms notrun, no score or misses inferred."
+    },
+    "OLD2": {
+      "required_conditions_per_arm": 5,
+      "attempted_trials": 1,
+      "completed_pairs": 0,
+      "final_coverage": null,
+      "gains_losses_false_unknown": null,
+      "reason": "C01baseline reaches draft/audit but audit validation fails; candidateC01 and bothC02notrun."
+    }
+  },
+  "attempts": [
+    {
+      "case": "C01",
+      "arm": "baseline",
+      "final_claims": 0,
+      "final_answer": "",
+      "audit_completed": false,
+      "error": "audit reason bounds",
+      "failure_kind": "local_audit_schema_bounds_not_provider_refusal",
+      "audit_reason_char_lengths": {
+        "A1": 93,
+        "A2": 37,
+        "A3": 37,
+        "A4": 201
+      },
+      "audit_reason_limit": 200,
+      "raw_draft_claims": [
+        {
+          "id": "A1",
+          "text": "itertools.groupby returns consecutive keys and groups from the iterable, so it groups consecutive runs, not equal keys anywhere in the input.",
+          "world_truth": "true",
+          "own_witness_semantic_support": "supported",
+          "quote_sha256": "fdd7225e46413ca0fc6c114ccc5dedb943f80110e79117723db4228ef40b6a83",
+          "quote_original_unicode_exact": true,
+          "condition_coverage": [
+            "T01.A"
+          ],
+          "notes": "Officialdocument semantics match claim; no globalaggregation inference."
+        },
+        {
+          "id": "A2",
+          "text": "groupby generates a break or new group every time the value of the key function changes.",
+          "world_truth": "true",
+          "own_witness_semantic_support": "supported",
+          "quote_sha256": "7b4a5fa5f8c72260d1888c052e3ea2048e970699c62a61173b65f849d4035f5d",
+          "quote_original_unicode_exact": true,
+          "condition_coverage": [
+            "T01.A"
+          ],
+          "notes": "Officialdocument semantics match claim; no globalaggregation inference."
+        },
+        {
+          "id": "A3",
+          "text": "This behavior differs from SQL GROUP BY, which aggregates common elements regardless of their input order.",
+          "world_truth": "true",
+          "own_witness_semantic_support": "supported",
+          "quote_sha256": "7c192b12411dadcd468d7523d59919613d5531f46488193312e1a3441978d5ad",
+          "quote_original_unicode_exact": true,
+          "condition_coverage": [
+            "T01.A"
+          ],
+          "notes": "Officialdocument semantics match claim; no globalaggregation inference."
+        },
+        {
+          "id": "A4",
+          "text": "To collect all equal keys together, the iterable generally needs to already be sorted on the same key function.",
+          "world_truth": "true",
+          "own_witness_semantic_support": "supported",
+          "quote_sha256": "53227aad4bfffa8549e442e23c307ba8d241f0e3c066439ac9bb9b9915d37983",
+          "quote_original_unicode_exact": true,
+          "condition_coverage": [
+            "T01.B"
+          ],
+          "notes": "Conditional sorting for collecting equal keys, not universalpresort."
+        }
+      ],
+      "raw_draft_covered_conditions": [
+        "T01.A",
+        "T01.B"
+      ],
+      "raw_draft_false_claims": 0,
+      "raw_draft_unknown_claims": 0,
+      "raw_audit_verdicts": "all4supported",
+      "raw_audit_sufficient": true,
+      "raw_audit_invalid_reason": "A4 reason201Unicodechars exceeds200max; no truncation/posthocedit/retryperformed.",
+      "final_condition_credit": 0,
+      "actual_generative_responses": 3,
+      "request_attempt_markers": 3,
+      "generation_budget_slots": 3,
+      "known_cost_usd": 0.000439992,
+      "source_read_attempts": 2,
+      "serp_calls": 1,
+      "qwen_calls": 1,
+      "source_sha256_verified": "ebd1403107661fc806caf02e6e3dd287e15f1eee21e13f22b975c3a9e26ddbf1",
+      "qwen_ranges_verified": [
+        {
+          "start_utf8": 13124,
+          "end_utf8": 14330,
+          "chars": 1200,
+          "sha256": "da8c08c641389a49647abc517da562edc29db9bc43b8984f6ea4f2275ece21d3"
+        },
+        {
+          "start_utf8": 12120,
+          "end_utf8": 13324,
+          "chars": 1200,
+          "sha256": "cfa6bd1000404fc62af619adab0a205ffd67fc3415d321486616b47b5c550d2d"
+        },
+        {
+          "start_utf8": 28192,
+          "end_utf8": 29407,
+          "chars": 1200,
+          "sha256": "375058c4d28c2d89077b757937a62124a50d835079f1855d37c43815b0dd7605"
+        }
+      ],
+      "source_recovery_observed": "SecondreadGreekglossary URL fetch_timeout; source-aware guard recovers, then draft+audit complete3actualmodelresponses.",
+      "official_priority_activated": false
+    }
+  ],
+  "paired_comparisons": 0,
+  "not_run_trials": 11,
+  "retries": 0,
+  "provider_refusal_or_429": false,
+  "source_ledger_seed_preserved": true,
+  "new_host_exclusion": {
+    "docs.python.org": "fetch_timeout"
+  },
+  "broad_exclusion_limit": "A timeout on one Greekglossary URL excludes all docs.python.org under frozenwholehostpolicy, including previouslysuccessfulitertoolspage. Do notclear/retrythiscampaign; URLgranularityisfutureseparateprotocol.",
+  "limits": [
+    "Rawdraft2/2conditions is diagnostics only, not finalanswercredit or acceptedend-to-end result",
+    "Rawall-supported audit is invalidunderlocalbounds, no accepted audit or finalfacts",
+    "No candidateexecuted, NEW4notattempted, no gain/loss/no-newerror conclusions",
+    "Conservativewholehostexclusion limitsfurtherofficialdocavailability; not proofwholehostunavailable",
+    "Oldcampaign remainsseparate; donotpoolorresume"
+  ]
+}

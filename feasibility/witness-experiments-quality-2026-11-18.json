@@ -1,0 +1,1777 @@
+{
+  "assessment": {
+    "schema": "independent-offline-witness-quality-v1",
+    "reviewer": "/root/search_evaluator",
+    "created_utc": "2026-11-18T07:32:37.541568+00:00",
+    "source_commit": "27f2b5d20aaa8f903c72ae9bc87befd0e699cdef",
+    "cases_sha256": "fc91ad1cd9c1c5e61e30e517123af1dbae06f4dda00d976b9072d7dc13f2e940",
+    "inputs_sha256": "de8adc7961e2e3f0bda5d6bd7178274fa31b5e8a273d72f7d1954e6f52bc79a0",
+    "rows": [
+      {
+        "id": "H01",
+        "cohort": "historical_development",
+        "baseline_truth_reference": "false",
+        "condition_count": 2,
+        "arms": {
+          "baseline": {
+            "emitted": true,
+            "claim": "The consecutive-only grouping is intentional and efficient, but it means the data must be pre-sorted on the grouping key.",
+            "status": "false",
+            "own_evidence_complete": false,
+            "own_semantic_faithfulness": "scope_lost",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "Consecutive equalkey grouping",
+                "supported": false
+              },
+              {
+                "index": 1,
+                "condition": "Sorting required only to collect all equal keys globally",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 0,
+            "all_question_conditions_covered": false,
+            "reason": "Unconditional presorting is false; source/context does not make it necessary for all consecutivegrouping.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": null,
+              "claim_is_collapsed_original_quote_B": null
+            }
+          },
+          "A": {
+            "emitted": false,
+            "claim": null,
+            "status": "withheld",
+            "own_evidence_complete": false,
+            "own_semantic_faithfulness": "not_emitted",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "Consecutive equalkey grouping",
+                "supported": false
+              },
+              {
+                "index": 1,
+                "condition": "Sorting required only to collect all equal keys globally",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 0,
+            "all_question_conditions_covered": false,
+            "reason": "context_unresolved",
+            "integrity": null
+          },
+          "B": {
+            "emitted": true,
+            "claim": "This is intentional and efficient, but it means the data must be pre-sorted on the grouping key.",
+            "status": "false",
+            "own_evidence_complete": false,
+            "own_semantic_faithfulness": "unresolved_referent",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "Consecutive equalkey grouping",
+                "supported": false
+              },
+              {
+                "index": 1,
+                "condition": "Sorting required only to collect all equal keys globally",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 0,
+            "all_question_conditions_covered": false,
+            "reason": "Verbatim This lacks bound referent; mandatorypresort stillfalse; source copying not truthproof.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": null,
+              "claim_is_collapsed_original_quote_B": true
+            }
+          }
+        }
+      },
+      {
+        "id": "H02",
+        "cohort": "historical_development",
+        "baseline_truth_reference": "true",
+        "condition_count": 1,
+        "arms": {
+          "baseline": {
+            "emitted": true,
+            "claim": "To collect all equal keys together, sort by the grouping key first with sorted(data, key=...) before passing to groupby().",
+            "status": "supported",
+            "own_evidence_complete": true,
+            "own_semantic_faithfulness": "faithful",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "To collect all equal keys together, sort/group by samekey first",
+                "supported": true
+              }
+            ],
+            "covered_condition_count": 1,
+            "all_question_conditions_covered": true,
+            "reason": "Correctly limits sorting to global equalkeycollection.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": null,
+              "claim_is_collapsed_original_quote_B": null
+            }
+          },
+          "A": {
+            "emitted": true,
+            "claim": "To collect all equal keys together, sort by the grouping key first with sorted(data, key=...) before passing to groupby().",
+            "status": "supported",
+            "own_evidence_complete": true,
+            "own_semantic_faithfulness": "faithful",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "To collect all equal keys together, sort/group by samekey first",
+                "supported": true
+              }
+            ],
+            "covered_condition_count": 1,
+            "all_question_conditions_covered": true,
+            "reason": "Same correct conditionalclaim, samequote.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": true,
+              "claim_is_collapsed_original_quote_B": null
+            }
+          },
+          "B": {
+            "emitted": true,
+            "claim": "Always sort by the grouping key first with sorted(data, key=...) before passing to groupby().",
+            "status": "false",
+            "own_evidence_complete": true,
+            "own_semantic_faithfulness": "literal_source_faithful_but_false_world",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "To collect all equal keys together, sort/group by samekey first",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 0,
+            "all_question_conditions_covered": false,
+            "reason": "Always sort removes conditional collectiongoal; valid unsorted consecutive grouping contradicts blanketrequirement. Exact complete source sentence is itself overbroad, so owncomplete does not imply truth.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": null,
+              "claim_is_collapsed_original_quote_B": true
+            }
+          }
+        }
+      },
+      {
+        "id": "H03",
+        "cohort": "historical_development",
+        "baseline_truth_reference": "false",
+        "condition_count": 3,
+        "arms": {
+          "baseline": {
+            "emitted": true,
+            "claim": "Free threading вводится как экспериментальная функция и не входит в официальную сборку Python; для отключения GIL нужна собственная сборка.",
+            "status": "false",
+            "own_evidence_complete": false,
+            "own_semantic_faithfulness": "historical_scope_lost",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "3.13 experimental",
+                "supported": true
+              },
+              {
+                "index": 1,
+                "condition": "Not enabled by default",
+                "supported": false
+              },
+              {
+                "index": 2,
+                "condition": "Separate free-threaded build/executable; official installer builds available",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 1,
+            "all_question_conditions_covered": false,
+            "reason": "Experimental component true; mandatorycustombuild/notofficialdistribution false for pinned3.13officialinstalleravailability.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": null,
+              "claim_is_collapsed_original_quote_B": null
+            }
+          },
+          "A": {
+            "emitted": false,
+            "claim": null,
+            "status": "withheld",
+            "own_evidence_complete": false,
+            "own_semantic_faithfulness": "not_emitted",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "3.13 experimental",
+                "supported": false
+              },
+              {
+                "index": 1,
+                "condition": "Not enabled by default",
+                "supported": false
+              },
+              {
+                "index": 2,
+                "condition": "Separate free-threaded build/executable; official installer builds available",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 0,
+            "all_question_conditions_covered": false,
+            "reason": "context_over_quote_budget",
+            "integrity": null
+          },
+          "B": {
+            "emitted": false,
+            "claim": null,
+            "status": "withheld",
+            "own_evidence_complete": false,
+            "own_semantic_faithfulness": "not_emitted",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "3.13 experimental",
+                "supported": false
+              },
+              {
+                "index": 1,
+                "condition": "Not enabled by default",
+                "supported": false
+              },
+              {
+                "index": 2,
+                "condition": "Separate free-threaded build/executable; official installer builds available",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 0,
+            "all_question_conditions_covered": false,
+            "reason": "no_complete_containing_sentence",
+            "integrity": null
+          }
+        }
+      },
+      {
+        "id": "H04",
+        "cohort": "historical_development",
+        "baseline_truth_reference": "unknown_scope",
+        "condition_count": 2,
+        "arms": {
+          "baseline": {
+            "emitted": true,
+            "claim": "SQLite foreign key constraints are disabled by default and must be enabled separately for each database connection.",
+            "status": "unknown",
+            "own_evidence_complete": false,
+            "own_semantic_faithfulness": "default_scope_unresolved",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "Perconnection setting",
+                "supported": true
+              },
+              {
+                "index": 1,
+                "condition": "Do not assume universal compiled default",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 1,
+            "all_question_conditions_covered": false,
+            "reason": "Perconnection supported; unqualified defaults not universalcompileguarantee.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": null,
+              "claim_is_collapsed_original_quote_B": null
+            }
+          },
+          "A": {
+            "emitted": true,
+            "claim": "SQLite foreign key constraints are disabled by default and must be enabled separately for each database connection.",
+            "status": "unknown",
+            "own_evidence_complete": false,
+            "own_semantic_faithfulness": "default_scope_unresolved",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "Perconnection setting",
+                "supported": true
+              },
+              {
+                "index": 1,
+                "condition": "Do not assume universal compiled default",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 1,
+            "all_question_conditions_covered": false,
+            "reason": "No caveat added; same defaultscope risk.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": true,
+              "claim_is_collapsed_original_quote_B": null
+            }
+          },
+          "B": {
+            "emitted": true,
+            "claim": "For example: sqlite> PRAGMA foreign_keys = ON; Foreign key constraints are disabled by default (for backwards compatibility), so must be enabled separately for each database connection.",
+            "status": "unknown",
+            "own_evidence_complete": false,
+            "own_semantic_faithfulness": "default_scope_unresolved",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "Perconnection setting",
+                "supported": true
+              },
+              {
+                "index": 1,
+                "condition": "Do not assume universal compiled default",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 1,
+            "all_question_conditions_covered": false,
+            "reason": "Includes shell/example intro as sentence but still drops followingdefaultcaveat; no semanticrepair.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": null,
+              "claim_is_collapsed_original_quote_B": true
+            }
+          }
+        }
+      },
+      {
+        "id": "H05",
+        "cohort": "historical_development",
+        "baseline_truth_reference": "true_incomplete",
+        "condition_count": 2,
+        "arms": {
+          "baseline": {
+            "emitted": true,
+            "claim": "It is not possible to enable or disable foreign key constraints in the middle of a multi-statement transaction.",
+            "status": "supported",
+            "own_evidence_complete": true,
+            "own_semantic_faithfulness": "faithful",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "Changing within multistatement transaction has no effect",
+                "supported": false
+              },
+              {
+                "index": 1,
+                "condition": "No error is returned",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 0,
+            "all_question_conditions_covered": false,
+            "reason": "Cannotchange true; does not explicitly state no-effect/noerror outcome, so frozen compoundquerycoverage incomplete.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": null,
+              "claim_is_collapsed_original_quote_B": null
+            }
+          },
+          "A": {
+            "emitted": false,
+            "claim": null,
+            "status": "withheld",
+            "own_evidence_complete": false,
+            "own_semantic_faithfulness": "not_emitted",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "Changing within multistatement transaction has no effect",
+                "supported": false
+              },
+              {
+                "index": 1,
+                "condition": "No error is returned",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 0,
+            "all_question_conditions_covered": false,
+            "reason": "context_unresolved",
+            "integrity": null
+          },
+          "B": {
+            "emitted": true,
+            "claim": "It is not possible to enable or disable foreign key constraints in the middle of a multi-statement transaction (when SQLite is not in autocommit mode).",
+            "status": "supported",
+            "own_evidence_complete": true,
+            "own_semantic_faithfulness": "faithful",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "Changing within multistatement transaction has no effect",
+                "supported": false
+              },
+              {
+                "index": 1,
+                "condition": "No error is returned",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 0,
+            "all_question_conditions_covered": false,
+            "reason": "Adds notautocommit qualification but still omits next noerror/noeffectsentence.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": null,
+              "claim_is_collapsed_original_quote_B": true
+            }
+          }
+        }
+      },
+      {
+        "id": "H06",
+        "cohort": "historical_development",
+        "baseline_truth_reference": "true",
+        "condition_count": 2,
+        "arms": {
+          "baseline": {
+            "emitted": true,
+            "claim": "Arguments passed to unwrap_or are eagerly evaluated, so the default is evaluated even for Some; unwrap_or_else is lazily evaluated.",
+            "status": "supported",
+            "own_evidence_complete": true,
+            "own_semantic_faithfulness": "faithful",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "unwrap_or eagerly evaluates default evenSome",
+                "supported": true
+              },
+              {
+                "index": 1,
+                "condition": "unwrap_or_else fallback lazily executed onlyNone",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 1,
+            "all_question_conditions_covered": false,
+            "reason": "EagerSome supported; lazylabel alone omits explicit closureonlyNone condition.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": null,
+              "claim_is_collapsed_original_quote_B": null
+            }
+          },
+          "A": {
+            "emitted": true,
+            "claim": "Arguments passed to unwrap_or are eagerly evaluated, so the default is evaluated even for Some; unwrap_or_else is lazily evaluated.",
+            "status": "supported",
+            "own_evidence_complete": true,
+            "own_semantic_faithfulness": "faithful",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "unwrap_or eagerly evaluates default evenSome",
+                "supported": true
+              },
+              {
+                "index": 1,
+                "condition": "unwrap_or_else fallback lazily executed onlyNone",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 1,
+            "all_question_conditions_covered": false,
+            "reason": "Same claim andquote.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": true,
+              "claim_is_collapsed_original_quote_B": null
+            }
+          },
+          "B": {
+            "emitted": true,
+            "claim": "Arguments passed to unwrap_or are eagerly evaluated; if you are passing the result of a function call, it is recommended to use unwrap_or_else, which is lazily evaluated.",
+            "status": "supported",
+            "own_evidence_complete": true,
+            "own_semantic_faithfulness": "faithful",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "unwrap_or eagerly evaluates default evenSome",
+                "supported": true
+              },
+              {
+                "index": 1,
+                "condition": "unwrap_or_else fallback lazily executed onlyNone",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 1,
+            "all_question_conditions_covered": false,
+            "reason": "Complete sentence preserves eager/lazy but does not state fallbackclosureonlyNone.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": null,
+              "claim_is_collapsed_original_quote_B": true
+            }
+          }
+        }
+      },
+      {
+        "id": "H07",
+        "cohort": "historical_development",
+        "baseline_truth_reference": "true",
+        "condition_count": 1,
+        "arms": {
+          "baseline": {
+            "emitted": true,
+            "claim": "unwrap_or_else returns the contained Some value or computes it from a closure.",
+            "status": "supported",
+            "own_evidence_complete": true,
+            "own_semantic_faithfulness": "faithful",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "unwrap_or_else returns Some value or computes fallbackclosure onlyNone",
+                "supported": true
+              }
+            ],
+            "covered_condition_count": 1,
+            "all_question_conditions_covered": true,
+            "reason": "Method binding verified sourceheading; Some-or-closure distinguishes fallbackNone.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": null,
+              "claim_is_collapsed_original_quote_B": null
+            }
+          },
+          "A": {
+            "emitted": true,
+            "claim": "unwrap_or_else returns the contained Some value or computes it from a closure.",
+            "status": "supported",
+            "own_evidence_complete": true,
+            "own_semantic_faithfulness": "faithful",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "unwrap_or_else returns Some value or computes fallbackclosure onlyNone",
+                "supported": true
+              }
+            ],
+            "covered_condition_count": 1,
+            "all_question_conditions_covered": true,
+            "reason": "Same boundmethodclaim; no evidencegain.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": true,
+              "claim_is_collapsed_original_quote_B": null
+            }
+          },
+          "B": {
+            "emitted": false,
+            "claim": null,
+            "status": "withheld",
+            "own_evidence_complete": false,
+            "own_semantic_faithfulness": "not_emitted",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "unwrap_or_else returns Some value or computes fallbackclosure onlyNone",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 0,
+            "all_question_conditions_covered": false,
+            "reason": "complete_sentence_exceeds_claim_limit",
+            "integrity": null
+          }
+        }
+      },
+      {
+        "id": "H08",
+        "cohort": "historical_development",
+        "baseline_truth_reference": "true",
+        "condition_count": 2,
+        "arms": {
+          "baseline": {
+            "emitted": true,
+            "claim": "В Rust 1.100.0 never type fallback изменён с () на ! в editions до 2024 (2015, 2018, 2021), как уже было сделано в edition 2024.",
+            "status": "supported",
+            "own_evidence_complete": true,
+            "own_semantic_faithfulness": "faithful",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "Fallback changes unit() to never!",
+                "supported": true
+              },
+              {
+                "index": 1,
+                "condition": "Pre2024 editions2015/2018/2021;2024already",
+                "supported": true
+              }
+            ],
+            "covered_condition_count": 2,
+            "all_question_conditions_covered": true,
+            "reason": "Ownquote preserves direction and full editionsqualification; botharmswithhold loses positive.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": null,
+              "claim_is_collapsed_original_quote_B": null
+            }
+          },
+          "A": {
+            "emitted": false,
+            "claim": null,
+            "status": "withheld",
+            "own_evidence_complete": false,
+            "own_semantic_faithfulness": "not_emitted",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "Fallback changes unit() to never!",
+                "supported": false
+              },
+              {
+                "index": 1,
+                "condition": "Pre2024 editions2015/2018/2021;2024already",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 0,
+            "all_question_conditions_covered": false,
+            "reason": "context_unresolved",
+            "integrity": null
+          },
+          "B": {
+            "emitted": false,
+            "claim": null,
+            "status": "withheld",
+            "own_evidence_complete": false,
+            "own_semantic_faithfulness": "not_emitted",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "Fallback changes unit() to never!",
+                "supported": false
+              },
+              {
+                "index": 1,
+                "condition": "Pre2024 editions2015/2018/2021;2024already",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 0,
+            "all_question_conditions_covered": false,
+            "reason": "no_complete_containing_sentence",
+            "integrity": null
+          }
+        }
+      },
+      {
+        "id": "C01",
+        "cohort": "synthetic_challenge8",
+        "baseline_truth_reference": "false",
+        "condition_count": 2,
+        "arms": {
+          "baseline": {
+            "emitted": true,
+            "claim": "Owned copies may share storage with their parent.",
+            "status": "false",
+            "own_evidence_complete": false,
+            "own_semantic_faithfulness": "wrong_subject",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "Owned copies allocate independent storage",
+                "supported": false
+              },
+              {
+                "index": 1,
+                "condition": "Sharing is limited to borrowed views",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 0,
+            "all_question_conditions_covered": false,
+            "reason": "Ownedcopies substituted for borrowedview; fixture says ownedindependent.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": null,
+              "claim_is_collapsed_original_quote_B": null
+            }
+          },
+          "A": {
+            "emitted": true,
+            "claim": "Owned copies may share storage with their parent.",
+            "status": "false",
+            "own_evidence_complete": false,
+            "own_semantic_faithfulness": "contradicted_by_expanded_quote",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "Owned copies allocate independent storage",
+                "supported": false
+              },
+              {
+                "index": 1,
+                "condition": "Sharing is limited to borrowed views",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 0,
+            "all_question_conditions_covered": false,
+            "reason": "Expanded borrowedintro exposes contradiction; claim remains wrongownedcopies.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": true,
+              "claim_is_collapsed_original_quote_B": null
+            }
+          },
+          "B": {
+            "emitted": true,
+            "claim": "For borrowed views only: The buffer may share storage with its parent.",
+            "status": "supported",
+            "own_evidence_complete": true,
+            "own_semantic_faithfulness": "faithful",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "Owned copies allocate independent storage",
+                "supported": false
+              },
+              {
+                "index": 1,
+                "condition": "Sharing is limited to borrowed views",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 0,
+            "all_question_conditions_covered": false,
+            "reason": "Borrowedview sentence true but does not answer ownedcopyquestion or explicitly state independentownedstorage.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": null,
+              "claim_is_collapsed_original_quote_B": true
+            }
+          }
+        }
+      },
+      {
+        "id": "C02",
+        "cohort": "synthetic_challenge8",
+        "baseline_truth_reference": "true_incomplete",
+        "condition_count": 2,
+        "arms": {
+          "baseline": {
+            "emitted": true,
+            "claim": "Setting enforce_keys during a transaction has no effect.",
+            "status": "unknown",
+            "own_evidence_complete": false,
+            "own_semantic_faithfulness": "transaction_scope_missing_in_quote",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "Transaction setting has no effect",
+                "supported": false
+              },
+              {
+                "index": 1,
+                "condition": "No error returned",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 0,
+            "all_question_conditions_covered": false,
+            "reason": "Claim true in fixture, originalfragment omits transaction scope; provenance alone insufficient.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": null,
+              "claim_is_collapsed_original_quote_B": null
+            }
+          },
+          "A": {
+            "emitted": true,
+            "claim": "Setting enforce_keys during a transaction has no effect.",
+            "status": "supported",
+            "own_evidence_complete": true,
+            "own_semantic_faithfulness": "faithful",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "Transaction setting has no effect",
+                "supported": true
+              },
+              {
+                "index": 1,
+                "condition": "No error returned",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 1,
+            "all_question_conditions_covered": false,
+            "reason": "Expandedsentence binds transaction; unchangedclaim now own-supported, noerror stillomitted.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": true,
+              "claim_is_collapsed_original_quote_B": null
+            }
+          },
+          "B": {
+            "emitted": true,
+            "claim": "During an active transaction, setting enforce_keys does not change enforcement.",
+            "status": "supported",
+            "own_evidence_complete": true,
+            "own_semantic_faithfulness": "faithful",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "Transaction setting has no effect",
+                "supported": true
+              },
+              {
+                "index": 1,
+                "condition": "No error returned",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 1,
+            "all_question_conditions_covered": false,
+            "reason": "Bound transaction nochange sentence; noerror second sentence omitted.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": null,
+              "claim_is_collapsed_original_quote_B": true
+            }
+          }
+        }
+      },
+      {
+        "id": "C03",
+        "cohort": "synthetic_challenge8",
+        "baseline_truth_reference": "unknown_scope",
+        "condition_count": 2,
+        "arms": {
+          "baseline": {
+            "emitted": true,
+            "claim": "The fast runtime is not enabled by default on every platform.",
+            "status": "unknown",
+            "own_evidence_complete": false,
+            "own_semantic_faithfulness": "platform_and_install_runtime_mismatch",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "Evidence limited to macOS installer",
+                "supported": false
+              },
+              {
+                "index": 1,
+                "condition": "Installation default does not establish every platform runtime setting",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 0,
+            "all_question_conditions_covered": false,
+            "reason": "Fragment installerdefault cannot prove everyplatform enabledstatus.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": null,
+              "claim_is_collapsed_original_quote_B": null
+            }
+          },
+          "A": {
+            "emitted": true,
+            "claim": "The fast runtime is not enabled by default on every platform.",
+            "status": "unknown",
+            "own_evidence_complete": false,
+            "own_semantic_faithfulness": "platform_and_install_runtime_mismatch",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "Evidence limited to macOS installer",
+                "supported": false
+              },
+              {
+                "index": 1,
+                "condition": "Installation default does not establish every platform runtime setting",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 0,
+            "all_question_conditions_covered": false,
+            "reason": "FullmacOSquote still does not support fixeduniversalruntimeclaim.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": true,
+              "claim_is_collapsed_original_quote_B": null
+            }
+          },
+          "B": {
+            "emitted": true,
+            "claim": "On macOS installers only: The optional fast runtime is not installed by default.",
+            "status": "supported",
+            "own_evidence_complete": true,
+            "own_semantic_faithfulness": "faithful",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "Evidence limited to macOS installer",
+                "supported": true
+              },
+              {
+                "index": 1,
+                "condition": "Installation default does not establish every platform runtime setting",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 1,
+            "all_question_conditions_covered": false,
+            "reason": "ScopedmacOSinstallerclaim faithful; cannot answer allplatformsruntime question. Only evidence-limitationcondition covered.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": null,
+              "claim_is_collapsed_original_quote_B": true
+            }
+          }
+        }
+      },
+      {
+        "id": "C04",
+        "cohort": "synthetic_challenge8",
+        "baseline_truth_reference": "false",
+        "condition_count": 2,
+        "arms": {
+          "baseline": {
+            "emitted": true,
+            "claim": "Users currently must build the fast executable themselves.",
+            "status": "false",
+            "own_evidence_complete": false,
+            "own_semantic_faithfulness": "historical_scope_lost",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "Octoberrelease officialinstaller includes option",
+                "supported": false
+              },
+              {
+                "index": 1,
+                "condition": "June beta requirement is historical",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 0,
+            "all_question_conditions_covered": false,
+            "reason": "Currentrequirement contradicts Octoberupdate.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": null,
+              "claim_is_collapsed_original_quote_B": null
+            }
+          },
+          "A": {
+            "emitted": true,
+            "claim": "Users currently must build the fast executable themselves.",
+            "status": "false",
+            "own_evidence_complete": false,
+            "own_semantic_faithfulness": "contradicted_by_historical_intro",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "Octoberrelease officialinstaller includes option",
+                "supported": false
+              },
+              {
+                "index": 1,
+                "condition": "June beta requirement is historical",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 0,
+            "all_question_conditions_covered": false,
+            "reason": "Junehistoricalintro does not repair fixedcurrentclaim.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": true,
+              "claim_is_collapsed_original_quote_B": null
+            }
+          },
+          "B": {
+            "emitted": true,
+            "claim": "Historical note, June 2024 beta only: Users must build the fast executable themselves.",
+            "status": "supported",
+            "own_evidence_complete": true,
+            "own_semantic_faithfulness": "faithful",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "Octoberrelease officialinstaller includes option",
+                "supported": false
+              },
+              {
+                "index": 1,
+                "condition": "June beta requirement is historical",
+                "supported": true
+              }
+            ],
+            "covered_condition_count": 1,
+            "all_question_conditions_covered": false,
+            "reason": "HistoricalJune sentence correct but no Octoberinstalleranswer; only historicalqualification covered.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": null,
+              "claim_is_collapsed_original_quote_B": true
+            }
+          }
+        }
+      },
+      {
+        "id": "C05",
+        "cohort": "synthetic_challenge8",
+        "baseline_truth_reference": "false",
+        "condition_count": 2,
+        "arms": {
+          "baseline": {
+            "emitted": true,
+            "claim": "The copy() method may share mutable child objects.",
+            "status": "false",
+            "own_evidence_complete": false,
+            "own_semantic_faithfulness": "wrong_method_negation",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "copy never shares mutable children",
+                "supported": false
+              },
+              {
+                "index": 1,
+                "condition": "view may share mutable children",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 0,
+            "all_question_conditions_covered": false,
+            "reason": "copy/view swapped.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": null,
+              "claim_is_collapsed_original_quote_B": null
+            }
+          },
+          "A": {
+            "emitted": true,
+            "claim": "The copy() method may share mutable child objects.",
+            "status": "false",
+            "own_evidence_complete": false,
+            "own_semantic_faithfulness": "contradicted_by_expanded_quote",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "copy never shares mutable children",
+                "supported": false
+              },
+              {
+                "index": 1,
+                "condition": "view may share mutable children",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 0,
+            "all_question_conditions_covered": false,
+            "reason": "Fullcontrast disproves fixedcopyclaim.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": true,
+              "claim_is_collapsed_original_quote_B": null
+            }
+          },
+          "B": {
+            "emitted": true,
+            "claim": "The copy() method never shares mutable child objects, while view() may share mutable child objects.",
+            "status": "supported",
+            "own_evidence_complete": true,
+            "own_semantic_faithfulness": "faithful",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "copy never shares mutable children",
+                "supported": true
+              },
+              {
+                "index": 1,
+                "condition": "view may share mutable children",
+                "supported": true
+              }
+            ],
+            "covered_condition_count": 2,
+            "all_question_conditions_covered": true,
+            "reason": "Complete contrast binds copyno/viewmay; bothconditions answered.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": null,
+              "claim_is_collapsed_original_quote_B": true
+            }
+          }
+        }
+      },
+      {
+        "id": "C06",
+        "cohort": "synthetic_challenge8",
+        "baseline_truth_reference": "true_incomplete",
+        "condition_count": 2,
+        "arms": {
+          "baseline": {
+            "emitted": true,
+            "claim": "unwrap_or eagerly evaluates its default even for Some.",
+            "status": "supported",
+            "own_evidence_complete": true,
+            "own_semantic_faithfulness": "faithful",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "unwrap_or eager evenSome",
+                "supported": true
+              },
+              {
+                "index": 1,
+                "condition": "unwrap_or_else closure onlyNone",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 1,
+            "all_question_conditions_covered": false,
+            "reason": "Originalfragment directly proves narrow eagerclaim; lazyquerypart missing.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": null,
+              "claim_is_collapsed_original_quote_B": null
+            }
+          },
+          "A": {
+            "emitted": true,
+            "claim": "unwrap_or eagerly evaluates its default even for Some.",
+            "status": "supported",
+            "own_evidence_complete": true,
+            "own_semantic_faithfulness": "faithful",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "unwrap_or eager evenSome",
+                "supported": true
+              },
+              {
+                "index": 1,
+                "condition": "unwrap_or_else closure onlyNone",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 1,
+            "all_question_conditions_covered": false,
+            "reason": "Quote includes lazyclause but fixedclaim remains eageronly.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": true,
+              "claim_is_collapsed_original_quote_B": null
+            }
+          },
+          "B": {
+            "emitted": true,
+            "claim": "For Option values: unwrap_or eagerly evaluates its default even for Some; unwrap_or_else invokes its fallback closure only for None.",
+            "status": "supported",
+            "own_evidence_complete": true,
+            "own_semantic_faithfulness": "faithful",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "unwrap_or eager evenSome",
+                "supported": true
+              },
+              {
+                "index": 1,
+                "condition": "unwrap_or_else closure onlyNone",
+                "supported": true
+              }
+            ],
+            "covered_condition_count": 2,
+            "all_question_conditions_covered": true,
+            "reason": "Compound originalsentence contains both eagerlySome and lazyonlyNone.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": null,
+              "claim_is_collapsed_original_quote_B": true
+            }
+          }
+        }
+      },
+      {
+        "id": "C07",
+        "cohort": "synthetic_challenge8",
+        "baseline_truth_reference": "true",
+        "condition_count": 1,
+        "arms": {
+          "baseline": {
+            "emitted": true,
+            "claim": "synchronize() returns only after every acknowledged write reaches stable storage.",
+            "status": "unknown",
+            "own_evidence_complete": false,
+            "own_semantic_faithfulness": "predicate_incomplete",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "Every acknowledged write reaches stable storage before return",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 0,
+            "all_question_conditions_covered": false,
+            "reason": "Fixturetrueclaim but fragment omits stable-storage predicate; no fullownsupport. Botharmswithhold duebounds.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": null,
+              "claim_is_collapsed_original_quote_B": null
+            }
+          },
+          "A": {
+            "emitted": false,
+            "claim": null,
+            "status": "withheld",
+            "own_evidence_complete": false,
+            "own_semantic_faithfulness": "not_emitted",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "Every acknowledged write reaches stable storage before return",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 0,
+            "all_question_conditions_covered": false,
+            "reason": "context_over_quote_budget",
+            "integrity": null
+          },
+          "B": {
+            "emitted": false,
+            "claim": null,
+            "status": "withheld",
+            "own_evidence_complete": false,
+            "own_semantic_faithfulness": "not_emitted",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "Every acknowledged write reaches stable storage before return",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 0,
+            "all_question_conditions_covered": false,
+            "reason": "complete_sentence_exceeds_quote_limit",
+            "integrity": null
+          }
+        }
+      },
+      {
+        "id": "C08",
+        "cohort": "synthetic_challenge8",
+        "baseline_truth_reference": "true_incomplete",
+        "condition_count": 2,
+        "arms": {
+          "baseline": {
+            "emitted": true,
+            "claim": "strip_set(chars) удаляет символы набора с обоих концов строки.",
+            "status": "unknown",
+            "own_evidence_complete": false,
+            "own_semantic_faithfulness": "argument_and_method_binding_missing_in_quote",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "Удаляет только граничные символы набора",
+                "supported": false
+              },
+              {
+                "index": 1,
+                "condition": "Внутренние символы сохраняет",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 0,
+            "all_question_conditions_covered": false,
+            "reason": "Claim fixturetrue, tiny fragment only bothends does not identify API/setrule.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": null,
+              "claim_is_collapsed_original_quote_B": null
+            }
+          },
+          "A": {
+            "emitted": true,
+            "claim": "strip_set(chars) удаляет символы набора с обоих концов строки.",
+            "status": "supported",
+            "own_evidence_complete": true,
+            "own_semantic_faithfulness": "faithful",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "Удаляет только граничные символы набора",
+                "supported": true
+              },
+              {
+                "index": 1,
+                "condition": "Внутренние символы сохраняет",
+                "supported": false
+              }
+            ],
+            "covered_condition_count": 1,
+            "all_question_conditions_covered": false,
+            "reason": "FullUnicodequote supports fixedbothendsclaim; interiorcondition absent fromclaim.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": true,
+              "claim_is_collapsed_original_quote_B": null
+            }
+          },
+          "B": {
+            "emitted": true,
+            "claim": "В строке «ёж🙂» метод strip_set(chars) удаляет символы набора с обоих концов, сохраняя внутренние символы без изменений.",
+            "status": "supported",
+            "own_evidence_complete": true,
+            "own_semantic_faithfulness": "faithful",
+            "conditions": [
+              {
+                "index": 0,
+                "condition": "Удаляет только граничные символы набора",
+                "supported": true
+              },
+              {
+                "index": 1,
+                "condition": "Внутренние символы сохраняет",
+                "supported": true
+              }
+            ],
+            "covered_condition_count": 2,
+            "all_question_conditions_covered": true,
+            "reason": "FullUnicodeclaim preserves bothends andinterior; syntheticfixture expectedscope, not empiricalgeneralAPIproof.",
+            "integrity": {
+              "source_slice_exact": true,
+              "contains_original_witness": true,
+              "quote_le360": true,
+              "claim_le240": true,
+              "claim_fixed_A": null,
+              "claim_is_collapsed_original_quote_B": true
+            }
+          }
+        }
+      }
+    ],
+    "aggregate_by_cohort": {
+      "historical_development": {
+        "baseline": {
+          "fixed_rows": 8,
+          "emitted": 8,
+          "withheld": 0,
+          "supported_claims": 5,
+          "false_claim_ids": [
+            "H01",
+            "H03"
+          ],
+          "unknown_claim_ids": [
+            "H04"
+          ],
+          "own_evidence_complete": 5,
+          "covered_conditions": 7,
+          "fixed_conditions": 15,
+          "all_question_conditions_covered": 3
+        },
+        "A": {
+          "fixed_rows": 8,
+          "emitted": 4,
+          "withheld": 4,
+          "supported_claims": 3,
+          "false_claim_ids": [],
+          "unknown_claim_ids": [
+            "H04"
+          ],
+          "own_evidence_complete": 3,
+          "covered_conditions": 4,
+          "fixed_conditions": 15,
+          "all_question_conditions_covered": 2
+        },
+        "B": {
+          "fixed_rows": 8,
+          "emitted": 5,
+          "withheld": 3,
+          "supported_claims": 2,
+          "false_claim_ids": [
+            "H01",
+            "H02"
+          ],
+          "unknown_claim_ids": [
+            "H04"
+          ],
+          "own_evidence_complete": 3,
+          "covered_conditions": 2,
+          "fixed_conditions": 15,
+          "all_question_conditions_covered": 0
+        }
+      },
+      "synthetic_challenge8": {
+        "baseline": {
+          "fixed_rows": 8,
+          "emitted": 8,
+          "withheld": 0,
+          "supported_claims": 1,
+          "false_claim_ids": [
+            "C01",
+            "C04",
+            "C05"
+          ],
+          "unknown_claim_ids": [
+            "C02",
+            "C03",
+            "C07",
+            "C08"
+          ],
+          "own_evidence_complete": 1,
+          "covered_conditions": 1,
+          "fixed_conditions": 15,
+          "all_question_conditions_covered": 0
+        },
+        "A": {
+          "fixed_rows": 8,
+          "emitted": 7,
+          "withheld": 1,
+          "supported_claims": 3,
+          "false_claim_ids": [
+            "C01",
+            "C04",
+            "C05"
+          ],
+          "unknown_claim_ids": [
+            "C03"
+          ],
+          "own_evidence_complete": 3,
+          "covered_conditions": 3,
+          "fixed_conditions": 15,
+          "all_question_conditions_covered": 0
+        },
+        "B": {
+          "fixed_rows": 8,
+          "emitted": 7,
+          "withheld": 1,
+          "supported_claims": 7,
+          "false_claim_ids": [],
+          "unknown_claim_ids": [],
+          "own_evidence_complete": 7,
+          "covered_conditions": 9,
+          "fixed_conditions": 15,
+          "all_question_conditions_covered": 3
+        }
+      }
+    },
+    "comparisons_by_cohort": {
+      "historical_development": {
+        "A": {
+          "lost_supported_claim_ids": [
+            "H05",
+            "H08"
+          ],
+          "new_false_claim_ids": [],
+          "new_unknown_claim_ids": [],
+          "lost_condition_ids": [
+            "H03.1",
+            "H08.1",
+            "H08.2"
+          ],
+          "gained_condition_ids": []
+        },
+        "B": {
+          "lost_supported_claim_ids": [
+            "H02",
+            "H07",
+            "H08"
+          ],
+          "new_false_claim_ids": [
+            "H02"
+          ],
+          "new_unknown_claim_ids": [],
+          "lost_condition_ids": [
+            "H02.1",
+            "H03.1",
+            "H07.1",
+            "H08.1",
+            "H08.2"
+          ],
+          "gained_condition_ids": []
+        }
+      },
+      "synthetic_challenge8": {
+        "A": {
+          "lost_supported_claim_ids": [],
+          "new_false_claim_ids": [],
+          "new_unknown_claim_ids": [],
+          "lost_condition_ids": [],
+          "gained_condition_ids": [
+            "C02.1",
+            "C08.1"
+          ]
+        },
+        "B": {
+          "lost_supported_claim_ids": [],
+          "new_false_claim_ids": [],
+          "new_unknown_claim_ids": [],
+          "lost_condition_ids": [],
+          "gained_condition_ids": [
+            "C02.1",
+            "C03.1",
+            "C04.2",
+            "C05.1",
+            "C05.2",
+            "C06.2",
+            "C08.1",
+            "C08.2"
+          ]
+        }
+      }
+    },
+    "integrity": "All frozenfile/source_texthashes verified; every emitted baseline/A/B quote exactoriginalUnicode slice, contains originalwitness; Aclaims unchanged; Bclaims collapsedoriginalquote; all emittedlimits passed.",
+    "scoring_policy": "All8 rows per cohort fixed; allconditiondenominators fixed. Supportedclaim requires trueandownsupported scopedsemantics. Aexpandedquote cannotrepairfalseclaim. Bfaithfulstatementaboutdifferent subject/time not fullqueryanswer. Missing/withheld separate fromunknownemitted. Existinggold baseline_claim_truth retained separately from evidence-sufficiency verdict.",
+    "findings": [
+      "B introduces false H02 by replacing conditional goodclaim with Alwayssort; B H01 retainsfalse and unresolvedThis.",
+      "B H04 includes example/shellblock as sentence; sourceexactness not clean linguisticboundary guarantee.",
+      "A withholds positive H05/H08 and B withholds positive H07/H08; apparentfalse reduction is partly abstention.",
+      "A on C01/C04/C05 expands contradictory scope/context but leaves fixedfalseclaims unchanged.",
+      "B C01 trueborrowedview statement does not answer ownedcopy; C04 historicalstatement does not answer currentrelease.",
+      "Synthetic8 are constructed APIclauses, not empiricalwebcoverage or broadholdout; H07methodbinding verified from fullsource, C08 intendedclosedworldfixturescope."
+    ],
+    "network_calls": 0,
+    "model_calls": 0,
+    "verdict": "Neither arm qualifies as semantictruthguarantee; historicalB newfalseH02 and positivecoverage losses prohibit acceptance as replacement. Synthetic improvements demonstrate bounded mechanics only."
+  },
+  "gold_review": {
+    "schema": "witness-gold-review-v1",
+    "reviewer": "/root/search_evaluator",
+    "verdict": "frozen_before_implementation_and_run",
+    "created_utc": "2026-11-18T07:29:06.138530+00:00",
+    "cases_path": "feasibility/witness-experiments-cases-2026-11-18.json",
+    "cases_sha256": "fc91ad1cd9c1c5e61e30e517123af1dbae06f4dda00d976b9072d7dc13f2e940",
+    "inputs_path": "runs/witness-experiments-2026-11-18/inputs.json",
+    "inputs_sha256": "de8adc7961e2e3f0bda5d6bd7178274fa31b5e8a273d72f7d1954e6f52bc79a0",
+    "historical_development_rows": 8,
+    "synthetic_challenge_rows": 8,
+    "case_ids": [
+      "H01",
+      "H02",
+      "H03",
+      "H04",
+      "H05",
+      "H06",
+      "H07",
+      "H08",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08"
+    ],
+    "source_integrity": "All16 witnesses exact Unicode slices; historical8 copied complete extracted documenttext into new inputscorpus with originaloffsets. No external/modelcalls.",
+    "limits": [
+      "Historical8 development, not unseenholdout",
+      "Synthetic8 fictional APIclauses, no empiricalwebcoverage",
+      "Worldtruth of historicalsource can be false/stale even whenquoteexact",
+      "Afixedclaim andBsubstitution differ; all16 rowsretained perarm",
+      "Authors must not read challengegold/inputfile before implementationfreeze; timing is processdeclared not cryptographically enforced"
+    ],
+    "policy": {
+      "fixed_rows": true,
+      "claim_truth": "Evaluate actual resulting claim with original query/time/platform/API scope; Aexpandedquote cannot repair falseclaim. Bcomplete source sentence not automatictruth.",
+      "own_semantic_faithfulness": "Compare meaning to full sourcecontext, bind negation, referents, explicitintro, platform/date. Local exactslice onlyprovenance.",
+      "query_coverage": "Each listed condition must appear in supported outputclaim AND ownquote; quotecoverage alone does not mean claimansweredquestion. Withheld/missing do not count as supported; no hiddenclaimcount denominator reduction.",
+      "cohorts": "Report historicaldevelopment and syntheticchallenge separately. Challengeauthors A/B cannot inspect cases/gold; parent only passes interface contract."
+    }
+  },
+  "code_review": {
+    "reviewer": "/root/search_fresh",
+    "source_commit": "27f2b5d20aaa8f903c72ae9bc87befd0e699cdef",
+    "scope": "Independent code/caller/provenance review of offline fixed-witness experiment; semantic scoring delegated separately.",
+    "verdict": "passed_for_test_only_experiment",
+    "productAcceptance": false,
+    "runtimeActivationApproved": false,
+    "findings": [],
+    "verified": [
+      {
+        "area": "Input isolation",
+        "evidence": "Caller imports frozen helpers and invokes only helper(text, witness[start], witness[end]). Neither helper accepts question, claim, gold or case identity. Caller loads gold-bearing metadata only for ID/hash/witness/claim consistency checks; it does not pass gold into transformations. A result claim is always original fixed claim; B claim is whitespace-normalized returned original sentence."
+      },
+      {
+        "area": "Freeze and provenance",
+        "evidence": "Independently recomputed all6 freeze.files SHA256 values, all match. Reproduced all16 armA+armB candidate dictionaries and compared them exactly to frozen results. Historical8 original claims, quote/start/end, source URL, full original text SHA and document_version match prior tool-result sources/evidence. No oracle substitution of a different witness or source occurred."
+      },
+      {
+        "area": "Bounds and output validation",
+        "evidence": "Driver caps fullsource100000codepoints, requires exact original witness, 12..360rawquote and containment; B claim<=240 with whitespace-only normalization. Helpers withhold rather than clip over-budget spans. Input offsets reject bool and outofrange indices. New results use open x and refuse overwrite. A does not rewrite claim; expanded Aquote cannot be counted as repaired claim truth."
+      },
+      {
+        "area": "No runtime or external path",
+        "evidence": "Reviewed imports/body of3scripts: only local files, regex/JSON/importlib and stdout; no network/model/subprocess/browser calls. Imported helper top-level code only defines functions/tests; __main__ blocks not run on import. rg found no experiment references in src/tests/Cargo.toml. git diff aaecc09 -- src tests Cargo.toml Cargo.lock empty. network_calls/model_calls0 in results is consistent with inspected call graph, not merely accepted as a selfreported counter."
+      },
+      {
+        "area": "Cohorts and test execution",
+        "evidence": "All16 fixed rows retained, historical8 and synthetic8 have explicit cohort tags; neither helper ranks/selects rows or receives semantic target. Ran A self-check12passed, B unittest9passed, driver output-validator self-checkpassed. Did not rerun corpus-writing main or alter frozen results."
+      }
+    ],
+    "limitations": [
+      {
+        "id": "L1",
+        "severity": "known_experiment_limit",
+        "description": "Punctuation heuristics do not prove full syntactic/semantic sentence or referent completeness. Independently executed A on text Use e.g. bytes when enabled. with bytes witness: returns quote bytes when enabled., losing Use e.g.; B withholds ambiguous_sentence_boundary. A documents abbreviations unresolved and semantic_verification not_performed. Therefore A status expanded/unchanged must never be renamed complete witness or semantic support."
+      },
+      {
+        "id": "L2",
+        "severity": "known_experiment_limit",
+        "description": "B preserves full punctuation-delimited source clause, not current world truth, requested API/platform/version relevance or query coverage. It can produce old/irrelevant facts verbatim. A fixed claim can stay false even with more contradictory context. Independent semantic evaluator must judge actual resulting claim and original question separately."
+      },
+      {
+        "id": "L3",
+        "severity": "tooling_boundary",
+        "description": "Driver validation uses Python assert, so python -O would disable freeze/range/provenance checks. Review covered normal python3 invocation. Do not treat optimized invocation as equivalent verified harness; no such invocation observed."
+      },
+      {
+        "id": "L4",
+        "severity": "tooling_boundary",
+        "description": "B standalone stdin interface has no source-size cap; boundedness here relies on real caller100000codepoint cap. Helpers are trusted frozen local scripts, not a sandbox for hostile plugins. CLI json.load can read unbounded input before validation; no untrusted-service exposure exists."
+      },
+      {
+        "id": "L5",
+        "severity": "evidence_limit",
+        "description": "Freeze hashes establish current file identity, not cryptographic proof of author blindness or timing. Author inability to read challenge inputs before implementation is process-declared. Source/world truth not reverified online. Historical rows are development material; synthetic fixtures do not measure web retrieval."
+      }
+    ],
+    "recommendation": "Accept harness/code integrity for this offline experiment. Keep evaluator semantics separate and retain all16rows/withholds and cohort denominators. Do not infer product uplift, semantic guarantees or permission to switch runtime from this review.",
+    "mutations": "Only this requested report written; no source/runtime/Router/frozeninputs/results edits.",
+    "external_calls": 0,
+    "model_calls": 0
+  }
+}

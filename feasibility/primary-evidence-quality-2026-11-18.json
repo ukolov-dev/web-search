@@ -1,0 +1,1478 @@
+{
+  "assessment": {
+    "schema": "independent-primary-evidence-quality-v1",
+    "reviewer": "/root/search_evaluator",
+    "created_utc": "2026-11-18T08:38:41.519927+00:00",
+    "cohort": "known_historical_development2_fullbatches",
+    "cases_sha256": "6dc29111834b7fcc638517b8c528e288f6c28431daf83ba842bb546afde0f501",
+    "planned_model_calls": 12,
+    "attempted_model_calls": 5,
+    "completed_provider_responses": 4,
+    "provider429_errors": 1,
+    "not_run_calls": 7,
+    "paired_completed_replicates": 1,
+    "rows": [
+      {
+        "replicate": 1,
+        "batch": "P01",
+        "variant": "baseline",
+        "attempted": true,
+        "status": "completed",
+        "attempt_error": null,
+        "claims": [
+          {
+            "id": "P01/A1",
+            "claim_text": "groupby() groups only consecutive identical keys; it does not sort the data.",
+            "gold": {
+              "world_truth": "supported",
+              "own_semantic_faithfulness": "faithful",
+              "query_coverage_condition_indices": [
+                0
+              ],
+              "reason": "Consecutive grouping and no selfsorting supported."
+            },
+            "raw_verdict": "supported",
+            "raw_reason": "Exact quote states groupby groups only consecutive identical keys and does not sort.",
+            "after_apply_kept": true,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": true,
+            "query_conditions_retained": [
+              0
+            ]
+          },
+          {
+            "id": "P01/A2",
+            "claim_text": "groupby is a streaming operation that does not look ahead or back, so only adjacent elements with the same key are grouped together.",
+            "gold": {
+              "world_truth": "supported",
+              "own_semantic_faithfulness": "faithful_streaming_interpretation",
+              "query_coverage_condition_indices": [
+                0
+              ],
+              "reason": "Streaming adjacentgrouping supported in source. Interpret no lookahead as no global/nonadjacent grouping, not a guarantee of zero internal bufferednextitem reads; literalzeropeek is not established."
+            },
+            "raw_verdict": "supported",
+            "raw_reason": "Exact quote states streaming, no look ahead/back, only adjacent same-key elements grouped.",
+            "after_apply_kept": true,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": true,
+            "query_conditions_retained": [
+              0
+            ]
+          },
+          {
+            "id": "P01/A3",
+            "claim_text": "To collect all equal keys together, sort by the grouping key first with sorted(data, key=...) before passing to groupby().",
+            "gold": {
+              "world_truth": "supported",
+              "own_semantic_faithfulness": "faithful_conditional",
+              "query_coverage_condition_indices": [
+                1
+              ],
+              "reason": "Correct all-equal-keycollection conditionalpreparation; do not strengthen into universalmandatorysorting."
+            },
+            "raw_verdict": "supported",
+            "raw_reason": "Quote says always sort by grouping key with sorted(data, key=...) before groupby; supports collecting equal keys together.",
+            "after_apply_kept": true,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": true,
+            "query_conditions_retained": [
+              1
+            ]
+          },
+          {
+            "id": "P01/A4",
+            "claim_text": "The consecutive-only grouping is intentional and efficient, but it means the data must be pre-sorted on the grouping key.",
+            "gold": {
+              "world_truth": "false",
+              "own_semantic_faithfulness": "scope_lost",
+              "query_coverage_condition_indices": [],
+              "reason": "Consecutive grouping works on unsortedinput; mandatorypresorting is only for all-equal-keycollection, not everyvaliduse. Exactthirdpartyquote does not make it universallytrue."
+            },
+            "raw_verdict": "supported",
+            "raw_reason": "Exact quote states intentional and efficient, data must be pre-sorted on grouping key.",
+            "after_apply_kept": true,
+            "world_false_raw_supported": true,
+            "world_false_after_kept": true,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          }
+        ]
+      },
+      {
+        "replicate": 1,
+        "batch": "P01",
+        "variant": "primary",
+        "attempted": true,
+        "status": "completed",
+        "attempt_error": null,
+        "claims": [
+          {
+            "id": "P01/A1",
+            "claim_text": "groupby() groups only consecutive identical keys; it does not sort the data.",
+            "gold": {
+              "world_truth": "supported",
+              "own_semantic_faithfulness": "faithful",
+              "query_coverage_condition_indices": [
+                0
+              ],
+              "reason": "Consecutive grouping and no selfsorting supported."
+            },
+            "raw_verdict": "supported",
+            "raw_reason": "Exact quote states groupby groups only consecutive identical keys and does not sort.",
+            "after_apply_kept": true,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": true,
+            "query_conditions_retained": [
+              0
+            ]
+          },
+          {
+            "id": "P01/A2",
+            "claim_text": "groupby is a streaming operation that does not look ahead or back, so only adjacent elements with the same key are grouped together.",
+            "gold": {
+              "world_truth": "supported",
+              "own_semantic_faithfulness": "faithful_streaming_interpretation",
+              "query_coverage_condition_indices": [
+                0
+              ],
+              "reason": "Streaming adjacentgrouping supported in source. Interpret no lookahead as no global/nonadjacent grouping, not a guarantee of zero internal bufferednextitem reads; literalzeropeek is not established."
+            },
+            "raw_verdict": "supported",
+            "raw_reason": "Exact quote states streaming, no look ahead/back, only adjacent same-key elements grouped.",
+            "after_apply_kept": true,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": true,
+            "query_conditions_retained": [
+              0
+            ]
+          },
+          {
+            "id": "P01/A3",
+            "claim_text": "To collect all equal keys together, sort by the grouping key first with sorted(data, key=...) before passing to groupby().",
+            "gold": {
+              "world_truth": "supported",
+              "own_semantic_faithfulness": "faithful_conditional",
+              "query_coverage_condition_indices": [
+                1
+              ],
+              "reason": "Correct all-equal-keycollection conditionalpreparation; do not strengthen into universalmandatorysorting."
+            },
+            "raw_verdict": "supported",
+            "raw_reason": "Quote says always sort by grouping key first with sorted(data, key=...) before groupby; supports collecting equal keys together.",
+            "after_apply_kept": true,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": true,
+            "query_conditions_retained": [
+              1
+            ]
+          },
+          {
+            "id": "P01/A4",
+            "claim_text": "The consecutive-only grouping is intentional and efficient, but it means the data must be pre-sorted on the grouping key.",
+            "gold": {
+              "world_truth": "false",
+              "own_semantic_faithfulness": "scope_lost",
+              "query_coverage_condition_indices": [],
+              "reason": "Consecutive grouping works on unsortedinput; mandatorypresorting is only for all-equal-keycollection, not everyvaliduse. Exactthirdpartyquote does not make it universallytrue."
+            },
+            "raw_verdict": "supported",
+            "raw_reason": "Quote states intentional and efficient, data must be pre-sorted on grouping key.",
+            "after_apply_kept": true,
+            "world_false_raw_supported": true,
+            "world_false_after_kept": true,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          }
+        ]
+      },
+      {
+        "replicate": 1,
+        "batch": "P02",
+        "variant": "baseline",
+        "attempted": true,
+        "status": "completed",
+        "attempt_error": null,
+        "claims": [
+          {
+            "id": "P02/A1",
+            "claim_text": "Free threading вводится как экспериментальная функция и не входит в официальную сборку Python; для отключения GIL нужна собственная сборка.",
+            "gold": {
+              "world_truth": "false",
+              "own_semantic_faithfulness": "stale_distribution_scope",
+              "query_coverage_condition_indices": [
+                0
+              ],
+              "reason": "Experimental component true; mandatorycustombuild/noofficialdistribution false for pinned3.13official Windows/macOSinstaller options. Fullconjunctionfalse despite exactstalequote."
+            },
+            "raw_verdict": "supported",
+            "raw_reason": "Цитата прямо подтверждает экспериментальный статус и необходимость собственной сборки для отключения GIL.",
+            "after_apply_kept": true,
+            "world_false_raw_supported": true,
+            "world_false_after_kept": true,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": [
+              0
+            ]
+          },
+          {
+            "id": "P02/A2",
+            "claim_text": "Функция по-прежнему считается экспериментальной, поэтому её поддержка не устанавливается по умолчанию, а предлагается отдельной опцией установки.",
+            "gold": {
+              "world_truth": "unknown",
+              "own_semantic_faithfulness": "macOS_installer_scope_lost",
+              "query_coverage_condition_indices": [
+                0
+              ],
+              "reason": "Experimental component true. Notinstalledbydefault/installoption belongs macOSinstallerissue, not universal runtime enableddefault; wholeclaim lacks platformspecificqualifier."
+            },
+            "raw_verdict": "supported",
+            "raw_reason": "Цитата подтверждает экспериментальный статус и отсутствие установки по умолчанию, отдельную опцию.",
+            "after_apply_kept": true,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": true,
+            "positive_retained": false,
+            "query_conditions_retained": [
+              0
+            ]
+          },
+          {
+            "id": "P02/A3",
+            "claim_text": "При выборе этой опции устанавливается отдельный PythonT.framework рядом с обычным Python.framework.",
+            "gold": {
+              "world_truth": "unknown",
+              "own_semantic_faithfulness": "macOS_installer_scope_lost",
+              "query_coverage_condition_indices": [],
+              "reason": "PythonT.framework and alongsideframework installation true for describedmacOSinstaller, unqualified generalCPythonanswer omits thatscope; framework alone not separateexecutable proof."
+            },
+            "raw_verdict": "supported",
+            "raw_reason": "Цитата прямо подтверждает установку отдельного PythonT.framework рядом с обычным.",
+            "after_apply_kept": true,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": true,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          },
+          {
+            "id": "P02/A4",
+            "claim_text": "Обычная сборка Python не поддерживает free threading, а специальная free-threaded сборка имеет ABI с меткой «t».",
+            "gold": {
+              "world_truth": "supported",
+              "own_semantic_faithfulness": "faithful",
+              "query_coverage_condition_indices": [
+                2
+              ],
+              "reason": "Ownsourcequote explicitly distinguishes vanilla andspecial free-threadedbuild with ABI t; supports separatebuildrequirement."
+            },
+            "raw_verdict": "supported",
+            "raw_reason": "Цитата подтверждает отсутствие free threading в обычной сборке и ABI с меткой «t».",
+            "after_apply_kept": true,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": true,
+            "query_conditions_retained": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "replicate": 1,
+        "batch": "P02",
+        "variant": "primary",
+        "attempted": true,
+        "status": "completed",
+        "attempt_error": null,
+        "claims": [
+          {
+            "id": "P02/A1",
+            "claim_text": "Free threading вводится как экспериментальная функция и не входит в официальную сборку Python; для отключения GIL нужна собственная сборка.",
+            "gold": {
+              "world_truth": "false",
+              "own_semantic_faithfulness": "stale_distribution_scope",
+              "query_coverage_condition_indices": [
+                0
+              ],
+              "reason": "Experimental component true; mandatorycustombuild/noofficialdistribution false for pinned3.13official Windows/macOSinstaller options. Fullconjunctionfalse despite exactstalequote."
+            },
+            "raw_verdict": "supported",
+            "raw_reason": "Цитата прямо подтверждает экспериментальный статус и необходимость собственной сборки для отключения GIL.",
+            "after_apply_kept": true,
+            "world_false_raw_supported": true,
+            "world_false_after_kept": true,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": [
+              0
+            ]
+          },
+          {
+            "id": "P02/A2",
+            "claim_text": "Функция по-прежнему считается экспериментальной, поэтому её поддержка не устанавливается по умолчанию, а предлагается отдельной опцией установки.",
+            "gold": {
+              "world_truth": "unknown",
+              "own_semantic_faithfulness": "macOS_installer_scope_lost",
+              "query_coverage_condition_indices": [
+                0
+              ],
+              "reason": "Experimental component true. Notinstalledbydefault/installoption belongs macOSinstallerissue, not universal runtime enableddefault; wholeclaim lacks platformspecificqualifier."
+            },
+            "raw_verdict": "supported",
+            "raw_reason": "Цитата подтверждает экспериментальный статус и отсутствие установки по умолчанию, отдельную опцию установки.",
+            "after_apply_kept": true,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": true,
+            "positive_retained": false,
+            "query_conditions_retained": [
+              0
+            ]
+          },
+          {
+            "id": "P02/A3",
+            "claim_text": "При выборе этой опции устанавливается отдельный PythonT.framework рядом с обычным Python.framework.",
+            "gold": {
+              "world_truth": "unknown",
+              "own_semantic_faithfulness": "macOS_installer_scope_lost",
+              "query_coverage_condition_indices": [],
+              "reason": "PythonT.framework and alongsideframework installation true for describedmacOSinstaller, unqualified generalCPythonanswer omits thatscope; framework alone not separateexecutable proof."
+            },
+            "raw_verdict": "supported",
+            "raw_reason": "Цитата прямо подтверждает установку отдельного PythonT.framework рядом с обычным.",
+            "after_apply_kept": true,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": true,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          },
+          {
+            "id": "P02/A4",
+            "claim_text": "Обычная сборка Python не поддерживает free threading, а специальная free-threaded сборка имеет ABI с меткой «t».",
+            "gold": {
+              "world_truth": "supported",
+              "own_semantic_faithfulness": "faithful",
+              "query_coverage_condition_indices": [
+                2
+              ],
+              "reason": "Ownsourcequote explicitly distinguishes vanilla andspecial free-threadedbuild with ABI t; supports separatebuildrequirement."
+            },
+            "raw_verdict": "supported",
+            "raw_reason": "Цитата подтверждает отсутствие free threading в обычной сборке и ABI с меткой «t».",
+            "after_apply_kept": true,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": true,
+            "query_conditions_retained": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "replicate": 2,
+        "batch": "P01",
+        "variant": "baseline",
+        "attempted": false,
+        "status": "not_run",
+        "attempt_error": null,
+        "claims": [
+          {
+            "id": "P01/A1",
+            "claim_text": "groupby() groups only consecutive identical keys; it does not sort the data.",
+            "gold": {
+              "world_truth": "supported",
+              "own_semantic_faithfulness": "faithful",
+              "query_coverage_condition_indices": [
+                0
+              ],
+              "reason": "Consecutive grouping and no selfsorting supported."
+            },
+            "raw_verdict": null,
+            "raw_reason": null,
+            "after_apply_kept": null,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          },
+          {
+            "id": "P01/A2",
+            "claim_text": "groupby is a streaming operation that does not look ahead or back, so only adjacent elements with the same key are grouped together.",
+            "gold": {
+              "world_truth": "supported",
+              "own_semantic_faithfulness": "faithful_streaming_interpretation",
+              "query_coverage_condition_indices": [
+                0
+              ],
+              "reason": "Streaming adjacentgrouping supported in source. Interpret no lookahead as no global/nonadjacent grouping, not a guarantee of zero internal bufferednextitem reads; literalzeropeek is not established."
+            },
+            "raw_verdict": null,
+            "raw_reason": null,
+            "after_apply_kept": null,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          },
+          {
+            "id": "P01/A3",
+            "claim_text": "To collect all equal keys together, sort by the grouping key first with sorted(data, key=...) before passing to groupby().",
+            "gold": {
+              "world_truth": "supported",
+              "own_semantic_faithfulness": "faithful_conditional",
+              "query_coverage_condition_indices": [
+                1
+              ],
+              "reason": "Correct all-equal-keycollection conditionalpreparation; do not strengthen into universalmandatorysorting."
+            },
+            "raw_verdict": null,
+            "raw_reason": null,
+            "after_apply_kept": null,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          },
+          {
+            "id": "P01/A4",
+            "claim_text": "The consecutive-only grouping is intentional and efficient, but it means the data must be pre-sorted on the grouping key.",
+            "gold": {
+              "world_truth": "false",
+              "own_semantic_faithfulness": "scope_lost",
+              "query_coverage_condition_indices": [],
+              "reason": "Consecutive grouping works on unsortedinput; mandatorypresorting is only for all-equal-keycollection, not everyvaliduse. Exactthirdpartyquote does not make it universallytrue."
+            },
+            "raw_verdict": null,
+            "raw_reason": null,
+            "after_apply_kept": null,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          }
+        ]
+      },
+      {
+        "replicate": 2,
+        "batch": "P01",
+        "variant": "primary",
+        "attempted": true,
+        "status": "provider429_error",
+        "attempt_error": {
+          "http_429": true,
+          "retry": false,
+          "status": "model_call_failed"
+        },
+        "claims": [
+          {
+            "id": "P01/A1",
+            "claim_text": "groupby() groups only consecutive identical keys; it does not sort the data.",
+            "gold": {
+              "world_truth": "supported",
+              "own_semantic_faithfulness": "faithful",
+              "query_coverage_condition_indices": [
+                0
+              ],
+              "reason": "Consecutive grouping and no selfsorting supported."
+            },
+            "raw_verdict": null,
+            "raw_reason": null,
+            "after_apply_kept": null,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          },
+          {
+            "id": "P01/A2",
+            "claim_text": "groupby is a streaming operation that does not look ahead or back, so only adjacent elements with the same key are grouped together.",
+            "gold": {
+              "world_truth": "supported",
+              "own_semantic_faithfulness": "faithful_streaming_interpretation",
+              "query_coverage_condition_indices": [
+                0
+              ],
+              "reason": "Streaming adjacentgrouping supported in source. Interpret no lookahead as no global/nonadjacent grouping, not a guarantee of zero internal bufferednextitem reads; literalzeropeek is not established."
+            },
+            "raw_verdict": null,
+            "raw_reason": null,
+            "after_apply_kept": null,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          },
+          {
+            "id": "P01/A3",
+            "claim_text": "To collect all equal keys together, sort by the grouping key first with sorted(data, key=...) before passing to groupby().",
+            "gold": {
+              "world_truth": "supported",
+              "own_semantic_faithfulness": "faithful_conditional",
+              "query_coverage_condition_indices": [
+                1
+              ],
+              "reason": "Correct all-equal-keycollection conditionalpreparation; do not strengthen into universalmandatorysorting."
+            },
+            "raw_verdict": null,
+            "raw_reason": null,
+            "after_apply_kept": null,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          },
+          {
+            "id": "P01/A4",
+            "claim_text": "The consecutive-only grouping is intentional and efficient, but it means the data must be pre-sorted on the grouping key.",
+            "gold": {
+              "world_truth": "false",
+              "own_semantic_faithfulness": "scope_lost",
+              "query_coverage_condition_indices": [],
+              "reason": "Consecutive grouping works on unsortedinput; mandatorypresorting is only for all-equal-keycollection, not everyvaliduse. Exactthirdpartyquote does not make it universallytrue."
+            },
+            "raw_verdict": null,
+            "raw_reason": null,
+            "after_apply_kept": null,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          }
+        ]
+      },
+      {
+        "replicate": 2,
+        "batch": "P02",
+        "variant": "baseline",
+        "attempted": false,
+        "status": "not_run",
+        "attempt_error": null,
+        "claims": [
+          {
+            "id": "P02/A1",
+            "claim_text": "Free threading вводится как экспериментальная функция и не входит в официальную сборку Python; для отключения GIL нужна собственная сборка.",
+            "gold": {
+              "world_truth": "false",
+              "own_semantic_faithfulness": "stale_distribution_scope",
+              "query_coverage_condition_indices": [
+                0
+              ],
+              "reason": "Experimental component true; mandatorycustombuild/noofficialdistribution false for pinned3.13official Windows/macOSinstaller options. Fullconjunctionfalse despite exactstalequote."
+            },
+            "raw_verdict": null,
+            "raw_reason": null,
+            "after_apply_kept": null,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          },
+          {
+            "id": "P02/A2",
+            "claim_text": "Функция по-прежнему считается экспериментальной, поэтому её поддержка не устанавливается по умолчанию, а предлагается отдельной опцией установки.",
+            "gold": {
+              "world_truth": "unknown",
+              "own_semantic_faithfulness": "macOS_installer_scope_lost",
+              "query_coverage_condition_indices": [
+                0
+              ],
+              "reason": "Experimental component true. Notinstalledbydefault/installoption belongs macOSinstallerissue, not universal runtime enableddefault; wholeclaim lacks platformspecificqualifier."
+            },
+            "raw_verdict": null,
+            "raw_reason": null,
+            "after_apply_kept": null,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          },
+          {
+            "id": "P02/A3",
+            "claim_text": "При выборе этой опции устанавливается отдельный PythonT.framework рядом с обычным Python.framework.",
+            "gold": {
+              "world_truth": "unknown",
+              "own_semantic_faithfulness": "macOS_installer_scope_lost",
+              "query_coverage_condition_indices": [],
+              "reason": "PythonT.framework and alongsideframework installation true for describedmacOSinstaller, unqualified generalCPythonanswer omits thatscope; framework alone not separateexecutable proof."
+            },
+            "raw_verdict": null,
+            "raw_reason": null,
+            "after_apply_kept": null,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          },
+          {
+            "id": "P02/A4",
+            "claim_text": "Обычная сборка Python не поддерживает free threading, а специальная free-threaded сборка имеет ABI с меткой «t».",
+            "gold": {
+              "world_truth": "supported",
+              "own_semantic_faithfulness": "faithful",
+              "query_coverage_condition_indices": [
+                2
+              ],
+              "reason": "Ownsourcequote explicitly distinguishes vanilla andspecial free-threadedbuild with ABI t; supports separatebuildrequirement."
+            },
+            "raw_verdict": null,
+            "raw_reason": null,
+            "after_apply_kept": null,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          }
+        ]
+      },
+      {
+        "replicate": 2,
+        "batch": "P02",
+        "variant": "primary",
+        "attempted": false,
+        "status": "not_run",
+        "attempt_error": null,
+        "claims": [
+          {
+            "id": "P02/A1",
+            "claim_text": "Free threading вводится как экспериментальная функция и не входит в официальную сборку Python; для отключения GIL нужна собственная сборка.",
+            "gold": {
+              "world_truth": "false",
+              "own_semantic_faithfulness": "stale_distribution_scope",
+              "query_coverage_condition_indices": [
+                0
+              ],
+              "reason": "Experimental component true; mandatorycustombuild/noofficialdistribution false for pinned3.13official Windows/macOSinstaller options. Fullconjunctionfalse despite exactstalequote."
+            },
+            "raw_verdict": null,
+            "raw_reason": null,
+            "after_apply_kept": null,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          },
+          {
+            "id": "P02/A2",
+            "claim_text": "Функция по-прежнему считается экспериментальной, поэтому её поддержка не устанавливается по умолчанию, а предлагается отдельной опцией установки.",
+            "gold": {
+              "world_truth": "unknown",
+              "own_semantic_faithfulness": "macOS_installer_scope_lost",
+              "query_coverage_condition_indices": [
+                0
+              ],
+              "reason": "Experimental component true. Notinstalledbydefault/installoption belongs macOSinstallerissue, not universal runtime enableddefault; wholeclaim lacks platformspecificqualifier."
+            },
+            "raw_verdict": null,
+            "raw_reason": null,
+            "after_apply_kept": null,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          },
+          {
+            "id": "P02/A3",
+            "claim_text": "При выборе этой опции устанавливается отдельный PythonT.framework рядом с обычным Python.framework.",
+            "gold": {
+              "world_truth": "unknown",
+              "own_semantic_faithfulness": "macOS_installer_scope_lost",
+              "query_coverage_condition_indices": [],
+              "reason": "PythonT.framework and alongsideframework installation true for describedmacOSinstaller, unqualified generalCPythonanswer omits thatscope; framework alone not separateexecutable proof."
+            },
+            "raw_verdict": null,
+            "raw_reason": null,
+            "after_apply_kept": null,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          },
+          {
+            "id": "P02/A4",
+            "claim_text": "Обычная сборка Python не поддерживает free threading, а специальная free-threaded сборка имеет ABI с меткой «t».",
+            "gold": {
+              "world_truth": "supported",
+              "own_semantic_faithfulness": "faithful",
+              "query_coverage_condition_indices": [
+                2
+              ],
+              "reason": "Ownsourcequote explicitly distinguishes vanilla andspecial free-threadedbuild with ABI t; supports separatebuildrequirement."
+            },
+            "raw_verdict": null,
+            "raw_reason": null,
+            "after_apply_kept": null,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          }
+        ]
+      },
+      {
+        "replicate": 3,
+        "batch": "P01",
+        "variant": "baseline",
+        "attempted": false,
+        "status": "not_run",
+        "attempt_error": null,
+        "claims": [
+          {
+            "id": "P01/A1",
+            "claim_text": "groupby() groups only consecutive identical keys; it does not sort the data.",
+            "gold": {
+              "world_truth": "supported",
+              "own_semantic_faithfulness": "faithful",
+              "query_coverage_condition_indices": [
+                0
+              ],
+              "reason": "Consecutive grouping and no selfsorting supported."
+            },
+            "raw_verdict": null,
+            "raw_reason": null,
+            "after_apply_kept": null,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          },
+          {
+            "id": "P01/A2",
+            "claim_text": "groupby is a streaming operation that does not look ahead or back, so only adjacent elements with the same key are grouped together.",
+            "gold": {
+              "world_truth": "supported",
+              "own_semantic_faithfulness": "faithful_streaming_interpretation",
+              "query_coverage_condition_indices": [
+                0
+              ],
+              "reason": "Streaming adjacentgrouping supported in source. Interpret no lookahead as no global/nonadjacent grouping, not a guarantee of zero internal bufferednextitem reads; literalzeropeek is not established."
+            },
+            "raw_verdict": null,
+            "raw_reason": null,
+            "after_apply_kept": null,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          },
+          {
+            "id": "P01/A3",
+            "claim_text": "To collect all equal keys together, sort by the grouping key first with sorted(data, key=...) before passing to groupby().",
+            "gold": {
+              "world_truth": "supported",
+              "own_semantic_faithfulness": "faithful_conditional",
+              "query_coverage_condition_indices": [
+                1
+              ],
+              "reason": "Correct all-equal-keycollection conditionalpreparation; do not strengthen into universalmandatorysorting."
+            },
+            "raw_verdict": null,
+            "raw_reason": null,
+            "after_apply_kept": null,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          },
+          {
+            "id": "P01/A4",
+            "claim_text": "The consecutive-only grouping is intentional and efficient, but it means the data must be pre-sorted on the grouping key.",
+            "gold": {
+              "world_truth": "false",
+              "own_semantic_faithfulness": "scope_lost",
+              "query_coverage_condition_indices": [],
+              "reason": "Consecutive grouping works on unsortedinput; mandatorypresorting is only for all-equal-keycollection, not everyvaliduse. Exactthirdpartyquote does not make it universallytrue."
+            },
+            "raw_verdict": null,
+            "raw_reason": null,
+            "after_apply_kept": null,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          }
+        ]
+      },
+      {
+        "replicate": 3,
+        "batch": "P01",
+        "variant": "primary",
+        "attempted": false,
+        "status": "not_run",
+        "attempt_error": null,
+        "claims": [
+          {
+            "id": "P01/A1",
+            "claim_text": "groupby() groups only consecutive identical keys; it does not sort the data.",
+            "gold": {
+              "world_truth": "supported",
+              "own_semantic_faithfulness": "faithful",
+              "query_coverage_condition_indices": [
+                0
+              ],
+              "reason": "Consecutive grouping and no selfsorting supported."
+            },
+            "raw_verdict": null,
+            "raw_reason": null,
+            "after_apply_kept": null,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          },
+          {
+            "id": "P01/A2",
+            "claim_text": "groupby is a streaming operation that does not look ahead or back, so only adjacent elements with the same key are grouped together.",
+            "gold": {
+              "world_truth": "supported",
+              "own_semantic_faithfulness": "faithful_streaming_interpretation",
+              "query_coverage_condition_indices": [
+                0
+              ],
+              "reason": "Streaming adjacentgrouping supported in source. Interpret no lookahead as no global/nonadjacent grouping, not a guarantee of zero internal bufferednextitem reads; literalzeropeek is not established."
+            },
+            "raw_verdict": null,
+            "raw_reason": null,
+            "after_apply_kept": null,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          },
+          {
+            "id": "P01/A3",
+            "claim_text": "To collect all equal keys together, sort by the grouping key first with sorted(data, key=...) before passing to groupby().",
+            "gold": {
+              "world_truth": "supported",
+              "own_semantic_faithfulness": "faithful_conditional",
+              "query_coverage_condition_indices": [
+                1
+              ],
+              "reason": "Correct all-equal-keycollection conditionalpreparation; do not strengthen into universalmandatorysorting."
+            },
+            "raw_verdict": null,
+            "raw_reason": null,
+            "after_apply_kept": null,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          },
+          {
+            "id": "P01/A4",
+            "claim_text": "The consecutive-only grouping is intentional and efficient, but it means the data must be pre-sorted on the grouping key.",
+            "gold": {
+              "world_truth": "false",
+              "own_semantic_faithfulness": "scope_lost",
+              "query_coverage_condition_indices": [],
+              "reason": "Consecutive grouping works on unsortedinput; mandatorypresorting is only for all-equal-keycollection, not everyvaliduse. Exactthirdpartyquote does not make it universallytrue."
+            },
+            "raw_verdict": null,
+            "raw_reason": null,
+            "after_apply_kept": null,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          }
+        ]
+      },
+      {
+        "replicate": 3,
+        "batch": "P02",
+        "variant": "baseline",
+        "attempted": false,
+        "status": "not_run",
+        "attempt_error": null,
+        "claims": [
+          {
+            "id": "P02/A1",
+            "claim_text": "Free threading вводится как экспериментальная функция и не входит в официальную сборку Python; для отключения GIL нужна собственная сборка.",
+            "gold": {
+              "world_truth": "false",
+              "own_semantic_faithfulness": "stale_distribution_scope",
+              "query_coverage_condition_indices": [
+                0
+              ],
+              "reason": "Experimental component true; mandatorycustombuild/noofficialdistribution false for pinned3.13official Windows/macOSinstaller options. Fullconjunctionfalse despite exactstalequote."
+            },
+            "raw_verdict": null,
+            "raw_reason": null,
+            "after_apply_kept": null,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          },
+          {
+            "id": "P02/A2",
+            "claim_text": "Функция по-прежнему считается экспериментальной, поэтому её поддержка не устанавливается по умолчанию, а предлагается отдельной опцией установки.",
+            "gold": {
+              "world_truth": "unknown",
+              "own_semantic_faithfulness": "macOS_installer_scope_lost",
+              "query_coverage_condition_indices": [
+                0
+              ],
+              "reason": "Experimental component true. Notinstalledbydefault/installoption belongs macOSinstallerissue, not universal runtime enableddefault; wholeclaim lacks platformspecificqualifier."
+            },
+            "raw_verdict": null,
+            "raw_reason": null,
+            "after_apply_kept": null,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          },
+          {
+            "id": "P02/A3",
+            "claim_text": "При выборе этой опции устанавливается отдельный PythonT.framework рядом с обычным Python.framework.",
+            "gold": {
+              "world_truth": "unknown",
+              "own_semantic_faithfulness": "macOS_installer_scope_lost",
+              "query_coverage_condition_indices": [],
+              "reason": "PythonT.framework and alongsideframework installation true for describedmacOSinstaller, unqualified generalCPythonanswer omits thatscope; framework alone not separateexecutable proof."
+            },
+            "raw_verdict": null,
+            "raw_reason": null,
+            "after_apply_kept": null,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          },
+          {
+            "id": "P02/A4",
+            "claim_text": "Обычная сборка Python не поддерживает free threading, а специальная free-threaded сборка имеет ABI с меткой «t».",
+            "gold": {
+              "world_truth": "supported",
+              "own_semantic_faithfulness": "faithful",
+              "query_coverage_condition_indices": [
+                2
+              ],
+              "reason": "Ownsourcequote explicitly distinguishes vanilla andspecial free-threadedbuild with ABI t; supports separatebuildrequirement."
+            },
+            "raw_verdict": null,
+            "raw_reason": null,
+            "after_apply_kept": null,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          }
+        ]
+      },
+      {
+        "replicate": 3,
+        "batch": "P02",
+        "variant": "primary",
+        "attempted": false,
+        "status": "not_run",
+        "attempt_error": null,
+        "claims": [
+          {
+            "id": "P02/A1",
+            "claim_text": "Free threading вводится как экспериментальная функция и не входит в официальную сборку Python; для отключения GIL нужна собственная сборка.",
+            "gold": {
+              "world_truth": "false",
+              "own_semantic_faithfulness": "stale_distribution_scope",
+              "query_coverage_condition_indices": [
+                0
+              ],
+              "reason": "Experimental component true; mandatorycustombuild/noofficialdistribution false for pinned3.13official Windows/macOSinstaller options. Fullconjunctionfalse despite exactstalequote."
+            },
+            "raw_verdict": null,
+            "raw_reason": null,
+            "after_apply_kept": null,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          },
+          {
+            "id": "P02/A2",
+            "claim_text": "Функция по-прежнему считается экспериментальной, поэтому её поддержка не устанавливается по умолчанию, а предлагается отдельной опцией установки.",
+            "gold": {
+              "world_truth": "unknown",
+              "own_semantic_faithfulness": "macOS_installer_scope_lost",
+              "query_coverage_condition_indices": [
+                0
+              ],
+              "reason": "Experimental component true. Notinstalledbydefault/installoption belongs macOSinstallerissue, not universal runtime enableddefault; wholeclaim lacks platformspecificqualifier."
+            },
+            "raw_verdict": null,
+            "raw_reason": null,
+            "after_apply_kept": null,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          },
+          {
+            "id": "P02/A3",
+            "claim_text": "При выборе этой опции устанавливается отдельный PythonT.framework рядом с обычным Python.framework.",
+            "gold": {
+              "world_truth": "unknown",
+              "own_semantic_faithfulness": "macOS_installer_scope_lost",
+              "query_coverage_condition_indices": [],
+              "reason": "PythonT.framework and alongsideframework installation true for describedmacOSinstaller, unqualified generalCPythonanswer omits thatscope; framework alone not separateexecutable proof."
+            },
+            "raw_verdict": null,
+            "raw_reason": null,
+            "after_apply_kept": null,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          },
+          {
+            "id": "P02/A4",
+            "claim_text": "Обычная сборка Python не поддерживает free threading, а специальная free-threaded сборка имеет ABI с меткой «t».",
+            "gold": {
+              "world_truth": "supported",
+              "own_semantic_faithfulness": "faithful",
+              "query_coverage_condition_indices": [
+                2
+              ],
+              "reason": "Ownsourcequote explicitly distinguishes vanilla andspecial free-threadedbuild with ABI t; supports separatebuildrequirement."
+            },
+            "raw_verdict": null,
+            "raw_reason": null,
+            "after_apply_kept": null,
+            "world_false_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": []
+          }
+        ]
+      }
+    ],
+    "aggregate_by_variant": {
+      "baseline": {
+        "planned_batches": 6,
+        "attempted_batches": 2,
+        "completed_batches": 2,
+        "not_run_batches": [
+          "r2-P01",
+          "r2-P02",
+          "r3-P01",
+          "r3-P02"
+        ],
+        "availability_error_batches": [],
+        "fixed_claim_rows": 24,
+        "completed_claim_rows": 8,
+        "raw_supported": 8,
+        "kept": 8,
+        "world_false_kept": [
+          "r1-P01/A4",
+          "r1-P02/A1"
+        ],
+        "unknown_kept": [
+          "r1-P02/A2",
+          "r1-P02/A3"
+        ],
+        "frozen_positive_rows": 12,
+        "completed_positive_rows": 4,
+        "positive_retained": 4,
+        "fixed_question_condition_slots": 15,
+        "question_condition_slots_retained": 4
+      },
+      "primary": {
+        "planned_batches": 6,
+        "attempted_batches": 3,
+        "completed_batches": 2,
+        "not_run_batches": [
+          "r2-P02",
+          "r3-P01",
+          "r3-P02"
+        ],
+        "availability_error_batches": [
+          "r2-P01"
+        ],
+        "fixed_claim_rows": 24,
+        "completed_claim_rows": 8,
+        "raw_supported": 8,
+        "kept": 8,
+        "world_false_kept": [
+          "r1-P01/A4",
+          "r1-P02/A1"
+        ],
+        "unknown_kept": [
+          "r1-P02/A2",
+          "r1-P02/A3"
+        ],
+        "frozen_positive_rows": 12,
+        "completed_positive_rows": 4,
+        "positive_retained": 4,
+        "fixed_question_condition_slots": 15,
+        "question_condition_slots_retained": 4
+      }
+    },
+    "paired_replicate_comparisons": [
+      {
+        "replicate": 1,
+        "completed_paired_batches": [
+          "P01",
+          "P02"
+        ],
+        "new_false_kept_ids": [],
+        "new_unknown_kept_ids": [],
+        "positive_loss_ids": [],
+        "removed_false_ids": [],
+        "gate": "PASS_NO_DIFFERENCE_ONLY_COMPLETED_R1",
+        "efficacy": "No falseclaim removed"
+      },
+      {
+        "replicate": 2,
+        "completed_paired_batches": [],
+        "new_false_kept_ids": [],
+        "new_unknown_kept_ids": [],
+        "positive_loss_ids": [],
+        "removed_false_ids": [],
+        "gate": "not_evaluable_incomplete",
+        "efficacy": "not_run_or_error"
+      },
+      {
+        "replicate": 3,
+        "completed_paired_batches": [],
+        "new_false_kept_ids": [],
+        "new_unknown_kept_ids": [],
+        "positive_loss_ids": [],
+        "removed_false_ids": [],
+        "gate": "not_evaluable_incomplete",
+        "efficacy": "not_run_or_error"
+      }
+    ],
+    "known_usage_cost_usd": 0.000773024,
+    "failed429_usage": "unknown; notzero",
+    "stop": {
+      "reason": "first_failed_attempt_no_retry",
+      "attempt": {
+        "case": "P01",
+        "replicate": 2,
+        "variant": "primary",
+        "exit_code": 101,
+        "elapsed_ms": 1100,
+        "error": {
+          "http_429": true,
+          "retry": false,
+          "status": "model_call_failed"
+        }
+      }
+    },
+    "material_content_review": {
+      "path": "runs/primary-evidence-2026-11-18/material-review.json",
+      "sha256": "0fa5ef9e26802b00142bf281fe50a6ca59a03dca84315168c3e224dbfa91bef8",
+      "verdict": "eligibleBoth: actualofficialbodycounterevidence retained inselectedoriginalspans, notHTTP200alone"
+    },
+    "integrity": "Allfreeze hashes verified; all5attemptcontext_text exactlyprepared; prompts/schema identical genericbaseline (SCOPE_ARM baseline for both); claims/ownquotes unchanged. Earlier actualcontext comparison proves only sources+rejection_context differ. No goldsource/manualquote reselect.",
+    "verdict": "INCOMPLETE_NO_OBSERVED_IMPROVEMENT: r1 keeps identical false/unknown claims despite availableofficialcounterevidence; r2 stopped429, r3notrun. Single completedreplicate not generalfailureproof or acceptance.",
+    "diagnosis": [
+      "P01/A4 unconditionalmustsort false retained both r1; positiveA3correctconditional retainedboth.",
+      "P02/A1 stale mandatorycustombuild false retainedboth evenofficialS3saysoptionalWindows/macOSinstallers; modelreasons again treat exactownquote as sufficient.",
+      "P02/A2/A3 scopedmacOSinstaller claims unknown retainedboth; S3rejectioncontext cannot backfill their missing ownscope/qualifications.",
+      "No newFP/unknownkeep/positiveloss in completedr1 pair, but no FP removals and no semanticcoverage improvement. Unexecutedreplicates not countedpassed."
+    ],
+    "limits": [
+      "KnownURLoracleprimaryaddition, not search/retrievaltest; 2knownhistoricaldevelopmentbatches only",
+      "3preplannedreplicates butonly1completed; cannotpool as3successes",
+      "GoldP01/A2 streaminginterpretation only, not zero-bufferedpeek guarantee",
+      "ActualHTTP429 in newcampaign stopped immediately; no retry orcontinuation",
+      "Fixed24claimslots perarm and15queryconditionslots across3replicates; completed8claimslots and5queryconditionslots reported separately",
+      "Worldtruth, sourcefaithfulness, querycoverage and rawverdict/afterapply differ; unknownkept not establishedfact",
+      "No HTTP/LLM calls by independentreviewer; no runtimeedits"
+    ]
+  },
+  "material_review": {
+    "schema": "primary-material-preflight-v1",
+    "reviewer": "/root/search_evaluator",
+    "created_utc": "2026-11-18T08:35:32.755639+00:00",
+    "material_verdict": "eligible_both_batches",
+    "generation_plumbing_status": "PASS: independently parsed actual context_text freshserializedAUDIT. Baseline/primary differ only sources+rejection_context. All6 exactS3text/version/IDs present in actualrejection_context, claims unchanged. Loader offsets omitted fromserializedchunks as expected; checked separately against rawUnicode spans. .context is Sessionloaderinput, not actualmodelpayload.",
+    "cases": [
+      {
+        "id": "P01",
+        "verdict": "material_eligible",
+        "primary_url": "https://docs.python.org/3/library/itertools.html",
+        "extracted_chars": 39110,
+        "truncated": false,
+        "source_text_sha256": "ebd1403107661fc806caf02e6e3dd287e15f1eee21e13f22b975c3a9e26ddbf1",
+        "product_text_hash": "ebd1403107661fc806caf02e6e3dd287e15f1eee21e13f22b975c3a9e26ddbf1",
+        "prepared_file_sha256": "32498a62ea40d77718d13ce35b4a755c220a266c1531ef5a0b606ccc47e16540",
+        "selected_chunks": [
+          {
+            "id": "S3P1",
+            "start": 13000,
+            "end": 14200,
+            "document_version": "20866e3bde6e9d2e67e777f31e44f02c818c311cf508895eb04bc5bd176424a4",
+            "exact_original_unicode_slice": true
+          },
+          {
+            "id": "S3P2",
+            "start": 12000,
+            "end": 13200,
+            "document_version": "20866e3bde6e9d2e67e777f31e44f02c818c311cf508895eb04bc5bd176424a4",
+            "exact_original_unicode_slice": true
+          },
+          {
+            "id": "S3P3",
+            "start": 28000,
+            "end": 29200,
+            "document_version": "20866e3bde6e9d2e67e777f31e44f02c818c311cf508895eb04bc5bd176424a4",
+            "exact_original_unicode_slice": true
+          }
+        ],
+        "body_evidence": "Official groupby contract explicitly consecutive/keychange and generally/usually prior sorting, not unconditional sorting guarantee.",
+        "limit": "P01 chunks include unrelatedrecipes/filterfalse partialtexts but relevantcontractpresent."
+      },
+      {
+        "id": "P02",
+        "verdict": "material_eligible",
+        "primary_url": "https://docs.python.org/3.13/whatsnew/3.13.html",
+        "extracted_chars": 100000,
+        "truncated": true,
+        "source_text_sha256": "57af1a844f8f443a4217578ce6325cbe47eb529b6dd43a4f7b9dbeb3a87fe6ab",
+        "product_text_hash": "57af1a844f8f443a4217578ce6325cbe47eb529b6dd43a4f7b9dbeb3a87fe6ab",
+        "prepared_file_sha256": "25b1a2c962ed1efb151718789165b121257e36508482fd49ff1e6ec4fc6f5d21",
+        "selected_chunks": [
+          {
+            "id": "S3P1",
+            "start": 8000,
+            "end": 9200,
+            "document_version": "89976fec01d67dacc3c24e70d5d0bb7c7188047bdae1723fb040629c5729cab2",
+            "exact_original_unicode_slice": true
+          },
+          {
+            "id": "S3P2",
+            "start": 1000,
+            "end": 2200,
+            "document_version": "89976fec01d67dacc3c24e70d5d0bb7c7188047bdae1723fb040629c5729cab2",
+            "exact_original_unicode_slice": true
+          },
+          {
+            "id": "S3P3",
+            "start": 9000,
+            "end": 10200,
+            "document_version": "89976fec01d67dacc3c24e70d5d0bb7c7188047bdae1723fb040629c5729cab2",
+            "exact_original_unicode_slice": true
+          }
+        ],
+        "body_evidence": "Pinned3.13 official free-threaded section: experimental, disableddefault, distinctexecutable, optional officialWindows/macOSinstallers; mandatorycustombuild contradicted.",
+        "limit": "100k extraction truncated; pertinent free-threaded section present near8k-10k."
+      }
+    ],
+    "method": "Inspected actualextractedbody and source/domain/chunkUnicodeprovenance, not merelyHTTP200. NoHTTP/modelcalls by reviewer. No reselect/handpickedquote or goldchange.",
+    "ownquote_policy": "SourceS3mayreject/disambiguate only; cannotfill missingpremises in frozenownquotes orrepairfalseclaim.",
+    "confirmed_utc": "2026-11-18T08:36:21.431536+00:00"
+  },
+  "gold_review": {
+    "schema": "primary-evidence-gold-review-v1",
+    "reviewer": "/root/search_evaluator",
+    "verdict": "FROZEN_BEFORE_PAIRED_MODEL_CALLS",
+    "created_utc": "2026-11-18T08:28:53.084671+00:00",
+    "cases_sha256": "6dc29111834b7fcc638517b8c528e288f6c28431daf83ba842bb546afde0f501",
+    "case_index_sha256": "ea861806aded72cdd4c77f68504491eb009dc5ef1dc27a0021d9d0ccdc9b0ddf",
+    "batches": 2,
+    "claims": 8,
+    "all_original_quotes_exact_unicode_slices": true,
+    "source_document_versions_verified": true,
+    "limits": [
+      "NoHTTP/modelcalls by reviewer",
+      "Knownhistoricaldevelopment, not unseenholdout or generalqualification",
+      "Worldtruth/ownfaithfulness/querycoverage remain distinct; unknownscope not truefact",
+      "P01/A2 accepted streaming interpretation only, not literalzero internalpeek guarantee",
+      "S3rejectioncontext can rebut/disambiguate only; cannot silently repair originalownquotes or falseclaim",
+      "Threepreplannedreplicates not conditionalretry; providererror stops campaign"
+    ],
+    "prior_gold_refs": [
+      {
+        "path": "runs/search-five-agents-2026-11-18/reviewer/gold-preflight.json",
+        "sha256": "86e7b2eac2d7a8512ddb0d20650db504a5a00ab8be5ff56fd5b2b9789204f3d7"
+      },
+      {
+        "path": "runs/search-repair-2026-11-18/gold-preflight.json",
+        "sha256": "88c72ae989645fe9ae07ccf755970c8a997345a3bc0ac05da44a644cc7f2abbe"
+      }
+    ]
+  },
+  "code_review": {
+    "reviewer": "/root/search_fresh",
+    "stage": "Pre-call additive helper/restorer review; campaigndriver pending",
+    "reviewed_commits": [
+      "7c74d21",
+      "cfe384d"
+    ],
+    "scope": [
+      "src/research_scope_audit_experiment.rs primary_saved_qwen",
+      "scripts/primary-evidence-fixture.py",
+      "real reranker::select/model call path"
+    ],
+    "blocking_findings": [],
+    "verified": [
+      {
+        "area": "Restoration provenance",
+        "evidence": "Independently executed restore on P01actualT01lastmodel04 and P02actualN04lastmodel03: each4claims,2sources; chunks4/6, originalcontext8686/12365characters. Restorer recomputes fulltextSHA and canonical research-extract-v1 version, validates source title/publication/eligible/url against originalresult, uniquechunkplacement and exactownquote globaloffsets/source/version/field. Restored supportQuote strips metadata only after originalproof; no selected_start/ambiguous fallback.",
+        "limits": "Restore requires every mandatory ownquote chunk present in savedrejectioncontext and unique fullsource placement; futurecapturedformats that omit or repeat these failclosed, not generic restoration."
+      },
+      {
+        "area": "Qwen inputs/limits",
+        "evidence": "Ignored cfgtesthelper reads savedfixture, caps100000Unicode and verifies text_hash. Model/reranker receives originalquestion and savedsourcewindows only, no gold/claimlabels. Native select returns atmost3ranges from1200character windows, one localrerank no fallback/retry. Selected output explicitly labels rawUTF8byteoffsets.",
+        "limits": "Nested native trace still labels whitespace-normalized body from historical runtime convention; real returnedranges are bytes of suppliedtext. Driver must validate charboundary and convert bytes to documentUnicodeoffsets using exactly savedbody. 100000charprimaryextract may be truncated; no claim fullpagecoverage."
+      },
+      {
+        "area": "No runtime change",
+        "evidence": "New ignoredtesthelper remains cfgtest module; no productionroute/sourceHTTP added. LocalQwen itself is an explicitlyintended modelcall by root, not performedbyreviewer. Restorer imports stdlib/fileoperations only and no network/modelcalls."
+      }
+    ],
+    "checks_executed": [
+      "python3 scripts/primary-evidence-fixture.py --self-check:2passed",
+      "Local import+restore of2originalbatches:passed; no fileswrittenexceptrequestedreport."
+    ],
+    "pending": [
+      "Formal finalreport/bundle not reviewed yet; no resume/retry this stoppedcampaign."
+    ],
+    "network_calls": 0,
+    "model_calls": 0,
+    "shared_cargo_compilation": false,
+    "verdict": "Knownprimarycontextcomponent verifiedpartial5/12attempts, fourresponses unchangedoutcomes; INCOMPLETE_NO_OBSERVED_IMPROVEMENT. No productqualification.",
+    "final_pre_live_review": {
+      "driver": "scripts/primary-evidence-2026-11-18.py",
+      "freeze_files_verified": 19,
+      "blocking_findings": [],
+      "context_proof": {
+        "P01": {
+          "baseline_chars": 8688,
+          "primary_chars": 13043,
+          "changed_fields": [
+            "sources",
+            "rejection_context"
+          ],
+          "added_chunks": [
+            "S3P1",
+            "S3P2",
+            "S3P3"
+          ]
+        },
+        "P02": {
+          "baseline_chars": 12367,
+          "primary_chars": 16633,
+          "changed_fields": [
+            "sources",
+            "rejection_context"
+          ],
+          "added_chunks": [
+            "S3P1",
+            "S3P2",
+            "S3P3"
+          ]
+        },
+        "verified": "All other modelcontextfields exactly equal including claims/ownquotes/facets/question/budget. Prior sources and rejectionchunks are unchangedprefix. SixS3texts exactslices in savedprimaryoriginalUnicodebody with correctstart/end. Both contextvariants under24000chars."
+      },
+      "audit_comparability": "Driver invokes existing scope_saved_audit_experiment with ARMbaseline forBOTH variants; same actualRULES+AUDIT_PROMPT and Audit schema. No scopedprompt orextractiveclaimreplacement. Only primary evidence context differs; model/deadline3072tokens90s unchanged.",
+      "Qwen_provenance": "prepare uses oneignorednativeQwen percase, sameoriginalquestion+hashcheckedprimarytext; no semanticgold passed. Returnedranges1..3 and byteboundaries decodedstrictUTF8, converted to sourceUnicodecodepoints without modifyingtext. Originalbaseline fixture is strictlastactualaudit restore; S3version is contentaddressedprimary-saved-extract-v1 testversion not claimedlivecache/extractorversion.",
+      "campaign_controls": [
+        "Freeze19SHA includes driver/sharedrunner/restorer/module/research/tests, cases/index/gold/extract, qweninputs/selections,4preparedfixtures andcopiedtestbinary; allverified independently.",
+        "Twelve frozenorder entries exactly2batches×2variants×3preplannedpairedreplicates. Variantorder flips acrossreplicates/cases. These are scheduledreplicates, not conditional retries.",
+        "Driveroneinvoke perentry; sourceHTTPnone. Sharedrunner explicit testonegenerativePOST withcomplete-responsevalidation and no repairloop. First exiterror/missingresult/timeout stopsbothloops via frozenorderloop, summary/stopstored; attemptsmkdir blocksresume.",
+        "Admission600seconds with108reserve and3spacing, runner105timeout; max12checkedexplicitly. No automatic adjustment after outcomes."
+      ],
+      "checks_executed": [
+        "Independently rehashed19freezeitems: allmatch.",
+        "Parsedbothpreparedpairs and recomputed field/prefix/slice invariants: passed.",
+        "python3 scripts/primary-evidence-2026-11-18.py --self-check:passed withoutsource/modelcalls."
+      ],
+      "limits": [
+        "Two knownURLprimarydocuments chosen externally: oraclecounterevidence component, not evidence that productsearch discovers authoritativecounterevidence.",
+        "Secondprimary extraction truncated100000chars; no unobservedtail completenessclaim. Qwen may select irrelevant/missingcounterevidence; independent evaluator must judge selectedmaterial beforecalls.",
+        "Primarybody itself may be historically/currentscoped orpartial; addingS3doesnotguarantee truth orcorrectaudit. Ownquotes remainsecondary, S3onlyrejectioncontext cannot secretlyfill support.",
+        "Pythonassert guards assume ordinarypython3; -O notqualified. Binaryhash integrity notcryptographicproof of exactbuildsource/authorblindness.",
+        "LocalQwenprepare is an intendedmodelcall byroot, not model-free. Review itself madezeroexternal/localmodelcalls; no sharedcargocompile."
+      ],
+      "verdict": "Pre-live implementation/provenance accepted; no blocker pendingselectedcontent semanticcheck by independentevaluator. Not product/runtime acceptance."
+    },
+    "postrun_review": {
+      "status": "INCOMPLETE_NO_OBSERVED_IMPROVEMENT",
+      "attempts": 5,
+      "planned": 12,
+      "provider_responses": 4,
+      "provider429_errors": 1,
+      "not_run_calls": 7,
+      "completed_full_replicates": 1,
+      "completed_case_pairs": 2,
+      "verified": [
+        "All19freezeSHA reverified; no frozen implementation/data change. Exactly5distinctattemptdirs and4rawaudit/resultfiles acrossRUN; no laterattempt afterr2P01primary.",
+        "All5savedinputs invoke ARMbaseline with exactlyidenticalgenericprompt/schema, originalpreparedcontextbytes pervariant; all4rawproviderpayloads match these savedinputs with3072tokens andsameDeepSeek. Baselinevsprimary differences remain onlysources/rejection_context.",
+        "Fourresponses eachkeepall4originalclaims: P01/P02 bothvariants. Rawknownusagecost independentlysummed0.000773024USD. Fifthattempt has http_429true/retryfalse/errorstatusmodel_call_failed, exit101 and noauditorresult. Failed429usage absent/unknown, not zero.",
+        "Exactly2savednativeQwenselections, tracesprovideromlx/modelQwen3-Reranker-0.6B-4bit. OnepriorMCPextract structuredresult contains2okdocuments: itertools39110body andwhatsnew100000body withsecondtruncatedtrue. These are rootperformednewsourcecalls, not reviewerrequests.",
+        "Persistent source-stateJSON equalsseed-ledgerJSON afterextract/campaign; earlierrefusals preserved. No sourceHTTP codepath indriver/modeltrial; only2authorizedprimaryextractdocuments were read during thisexperiment."
+      ],
+      "stop": "Firstactual429 at fifthattempt r2-P01-primary stopscampaign. No retry/continuation; sevenplannedcalls notrun. r2/r3 do not countas successfulorcompletedreplicates.",
+      "quality_crosscheck": {
+        "P01": "Bothvariantskeep positivesA1/A2/A3 andfalseunconditionalmustsortA4.",
+        "P02": "Bothvariantskeep falsemandatorycustombuildA1, unknownscopeA2/A3, positiveA4.",
+        "completed_pair_only": "Eachvariant positives4/4retained, false2kept, unknown2kept. No newfalse/unknown/loss in completedr1, but false removals0 and observedsemanticimprovement0.",
+        "interpretation": "Identicaloutcome on onecompletedreplicate is no observedefficacy, not proofprimarycontextcanneverhelp; twootherreplicatesincomplete."
+      },
+      "provenance_limits": [
+        "StartuprecordedafterlocalQwen2 butbeforegenerativecalls. HelpercommittedbeforelocalQwen; fullfreezeafterQwen captures selectedoutputs. Do not claim allsetup/settings/code frozenbeforeallmodelactivity.",
+        "Two sourceHTTP reads and two localQwen calls are partofthiscampaign. Generativeaudit5attempts/4responses areseparate denominators. No reviewerexternal/modelcalls were made.",
+        "KnownURLprimary addition is oraclecounterevidence component; oldoriginalMCP4reads were notrerun. AddingS3here doesnotproveintegrationfitsold4HTTPbudget: futureintegrationwouldneedreplaceanirrelevantread ratherthanappendafifth.",
+        "old_session result.model_calls/generationcounts0 andemptytext_hash placeholders are not actualruntimeobservability/provenance. Actualcalls fromrunner/rawaudit; fullsourceSHA/version fromfrozenrestoration/primaryextract.",
+        "S3contentaddressedprimary-saved-extract-v1 istestversion, notlivecacheversion. Original100000charprimarytruncation preserved; selectionnotfullpagequalification.",
+        "A read-only diagnostic initially assumed localreranktrace.input; KeyErrorafterallprecedingassertions; inspectedactualtrace model/provider fields subsequently. No additionalcalls or evidenceoverwrites."
+      ],
+      "blocking_reporting_findings": [],
+      "verdict": "Postrun code/protocol/provenance consistent with declaredpartialstop. Candidateefficacy unproven/noobservedimprovement; no runtimeactivationorproductacceptance."
+    }
+  }
+}

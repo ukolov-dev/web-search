@@ -1,0 +1,939 @@
+{
+  "schema": 1,
+  "scope": "oracle_plan_source_newdraft_oldaudit_not_retrieval",
+  "implementation_commit": "7199d1114970b730f6be64a4f2d31ac8bf5a08b5",
+  "freeze_sha256": "49c4419725d90c15849b632f997a78331e96d768a306b54609e76cadfab2fbd3",
+  "freeze": {
+    "files": {
+      "runs/primary-draft-2026-11-18/case-index.json": "cb89d7406f61cbb3b7d1f9b020be1edd0b3b2cfa5a51ac1c4c5d2070b42d6e36",
+      "feasibility/primary-draft-cases-2026-11-18.json": "d785b9c1db5f9008e2e72c10c0b4816013621b9af0f32c678a1cdb819a3caf2e",
+      "runs/primary-draft-2026-11-18/gold-review.json": "e75c70e04c56997e577019310a38573cce07a32d5daa87135ee97fe3c95f8b60",
+      "runs/primary-evidence-2026-11-18/prepared/P01-baseline.json": "7df8f4c0e412d540b469e877304f0cfe864628a45a46e4e9b420a7c6768d4b75",
+      "runs/primary-evidence-2026-11-18/primary-extract/tool-result.json": "38377e914b2cdf85ea94ffc3de03e6379a80a3892884bb37b4082848a9fa1ea0",
+      "runs/primary-draft-2026-11-18/prepared/D01-primary.json": "0b805366b605ede5101e440d3e86bd945c18166899d8425a872a0517499e9099",
+      "runs/search-repair-2026-11-18/regression/research/T01/capture/0000-research/document-03.json": "33f713c89a038b89f028262f4adb27b5dbfb627989691407ebd8e802f46fac90",
+      "runs/primary-draft-2026-11-18/prepared/D01-baseline.json": "1ee15a4b3210fe6c48a9c8c55b07de879c3bb05f685c46b4351984af3a94b6bc",
+      "runs/primary-evidence-2026-11-18/prepared/P02-baseline.json": "6f3ea3e282d5945b2fe32874e44209bbe4d929118b3b5c8d270b94d9a01733fc",
+      "runs/primary-draft-2026-11-18/prepared/D02-primary.json": "168106303446917a6cee3fe12ef7aee591ce1158c9e78957ef59025df76ad831",
+      "runs/search-repair-2026-11-18/candidate/research/N04/capture/0000-research/document-01.json": "372c9d26ac53d7f0dcc3f386955b6003b80c324fac4df51f2ca822f3d4258e8e",
+      "runs/primary-draft-2026-11-18/prepared/D02-baseline.json": "1d3c58948c0db9437766899920d1d6b0ae70468f2fe02723f5b946dbf3407829",
+      "scripts/primary-draft-2026-11-18.py": "5d045976f4e5526e8e954f8620e0f746a55a9f4cb976ba11c895396e66031fc6",
+      "Cargo.toml": "8d675ba8e189e2c3969284d4f3b270becb1dc7d6df3f2e09c45e3f0a6f2a2330",
+      "Cargo.lock": "1c136d608c2c87f0e2df9157c1f127f0eab300b2193ed5d3e2f6dc86ee484bc9",
+      "src/benchmark.rs": "a986628eac97c65ba3b96138f1b24cf52a0807c5b2208ec5abce7a1d4f515500",
+      "src/browser.rs": "4bf08cddf944b6a1f7640b7350d69e88a5d9f93772099ea64f759dceb4ec807b",
+      "src/cache.rs": "550185965e556aea218cfcddeb8ca30d04995c9da9669d1c96ee6637f3dc9687",
+      "src/coverage_replay.rs": "2050a0b807c7942ad2f49ceed450cd5cf0df7f6a5153cb27f50d7bae4dd744e0",
+      "src/discover.rs": "bf23fee3cdf642c9c5e3a45350481779b33d4ea5377d7148e912d905c188f7e0",
+      "src/evidence.rs": "653028a1775e2292ff3138ec702aca07abe66f42eb21b2ceb73ad41812e76acd",
+      "src/evidence_probe.rs": "4be45e9118fc627b53c9a2d819b3a5258cdf97e483eb777789e803ff2d6a7c4c",
+      "src/firecrawl_benchmark.rs": "649385f0b44ba58fdaebc839e9c9264594fa13bce35ee03f550f7517d6b3e2cb",
+      "src/main.rs": "3168ff1486e048c919a627ad1565d9103971c9bb216ebe0c73750e046215d6f6",
+      "src/mcp.rs": "b4cedfe4c486075915bf552f54b7b50edcfcf552070025ed4d2c7e3f0c021b8f",
+      "src/model.rs": "80f0a957e27f5c48bcc8fbdcf9cec1c902a3f683db2b8c9642b0e793a8d44b00",
+      "src/net.rs": "18926f679b1f84eb6cdf593821529b03a24ca57ab5bb4da9f1bd95cbadc58426",
+      "src/news.rs": "cdc4585b56621b3fdc76c3394be9fb18e4fe12a29f67461e113257122e196c0f",
+      "src/news_search.rs": "e9b6acb717e2846a023796df8c0fed1dec1f93c84e6c5edbe04f0e6caebf4808",
+      "src/policy.rs": "131d1be0283b38e218cd5b40428cadf5c1557152d730c3a57b71bb5a2abaf4db",
+      "src/reliability_benchmark.rs": "8e7b1b31a83c4cf95888ef57d9f2325aff955b44fb86768b9221263d803ddc0f",
+      "src/reranker.rs": "116ed9e2231299ef00e0bb5bb828d15da40d28610489585bf95d0ba7f2045fe3",
+      "src/reranker_benchmark.rs": "d2341b43d554121b0c8e79889cdf114a8f6018ac230e52ef2f911c5545e0fe61",
+      "src/rescue.rs": "995883142aea40927bf915f7b5b11c19cb331e4fa4c117125ded54e88c0bffc1",
+      "src/research.rs": "5ef2fdd229989324de95e594074487783bf67f24f5bed9007cd2c6484c7d4751",
+      "src/research_inference_experiment.rs": "3c51c90e214c387be9c12bf921e9899ed44d31bf31c895c63af37b11357ad9ed",
+      "src/research_scope_audit_experiment.rs": "513e3fdb1be90679bf5cb198755d31eba1a6b7305d5b8b2bd2c03145a54b6619",
+      "src/research_section_pipeline_experiment.rs": "5a1f7a06217e09333eff30e35d6dad603ab67b081823d4d9ad1789f05e71cefd",
+      "src/research_tests.rs": "6c7c5095e31596c995e2a4c1ebd9c0334be0437e36dd8c4319c6a455af1090ce",
+      "src/search.rs": "b90b3978adf515b80680b8da85e93b801895dbe61ea369d47ee8144dd2619957",
+      "runs/primary-draft-2026-11-18/bin/primary-draft-tests": "1b6121efcfff54496b76bf2917e7ec2494f0b0726fad6914262e16cd5d59b1c4",
+      "runs/primary-draft-2026-11-18/binary-list.json": "f5ec1d5792fea761080053c7a869a2f068dbd85a67bbd0bab44e00bd699d697f"
+    },
+    "order": [
+      {
+        "case": "D01",
+        "arm": "primary"
+      },
+      {
+        "case": "D02",
+        "arm": "primary"
+      },
+      {
+        "case": "D01",
+        "arm": "baseline"
+      },
+      {
+        "case": "D02",
+        "arm": "baseline"
+      }
+    ],
+    "test": "research::tests::section_pipeline_experiment::primary_saved_draft_audit",
+    "qwen_settings_sha256": "dd6905ad61a4313ab5fe25070bde832582682a1140dd90e3ad6368bd1cc0807d",
+    "model": "deepseek/deepseek-v4.1-flash-1017",
+    "max_trials": 4,
+    "max_generations": 24,
+    "per_trial_generations": 6,
+    "per_trial_session_seconds": 180,
+    "process_timeout_seconds": 200,
+    "pace_seconds": 10,
+    "scope": "Frozen original model facets; known saved full source; new draft and unchanged old audit. No gold or old claims as model input. Not a retrieval test."
+  },
+  "summary": {
+    "planned": 4,
+    "attempts": [
+      {
+        "case": "D01",
+        "arm": "primary",
+        "status": "attempted",
+        "exit_code": 0,
+        "generations": 2,
+        "elapsed_ms": 15168
+      },
+      {
+        "case": "D02",
+        "arm": "primary",
+        "status": "attempted",
+        "exit_code": 0,
+        "generations": 2,
+        "elapsed_ms": 14665
+      },
+      {
+        "case": "D01",
+        "arm": "baseline",
+        "status": "attempted",
+        "exit_code": 0,
+        "generations": 2,
+        "elapsed_ms": 19276
+      },
+      {
+        "case": "D02",
+        "arm": "baseline",
+        "status": "attempted",
+        "exit_code": 0,
+        "generations": 2,
+        "elapsed_ms": 15598
+      }
+    ],
+    "not_run": [],
+    "stop": null,
+    "retries": 0,
+    "recorded_generations": 8,
+    "unrecorded_usage_possible": false
+  },
+  "key_diagnostic": {
+    "utc": "2026-11-18T09:45:08.989626+00:00",
+    "method": "GET",
+    "endpoint": "/api/v1/key",
+    "generative_calls": 0,
+    "raw_response_saved": false,
+    "http_status": 200,
+    "is_free_tier": false,
+    "key_limit_set": true,
+    "key_limit_exhausted": false,
+    "effective_budget_exhausted": false,
+    "rate_field_deprecated": true,
+    "expires_at_present": true
+  },
+  "rows": [
+    {
+      "case": "D01",
+      "arm": "primary",
+      "status": "partial",
+      "stop_reason": "oracle_component_complete",
+      "budget": {
+        "limits": {
+          "browser": 0,
+          "documents": 4,
+          "forms": 2,
+          "generations": 6,
+          "output_bytes": 32768,
+          "qwen": 4,
+          "seconds": 180,
+          "serp": 4,
+          "source_context_chars": 24000
+        },
+        "remaining": {
+          "documents": 3,
+          "forms": 2,
+          "generations": 4,
+          "milliseconds": 164858,
+          "qwen": 3,
+          "serp": 4
+        },
+        "used": {
+          "documents": 1,
+          "forms": 0,
+          "generations": 2,
+          "qwen": 1,
+          "serp": 0
+        }
+      },
+      "answer": "itertools.groupby returns consecutive keys and groups from the iterable, so it groups consecutive runs, not equal keys anywhere in the input. [S1](<https://docs.python.org/3/library/itertools.html>)\ngroupby generates a break or new group every time the value of the key function changes. [S1](<https://docs.python.org/3/library/itertools.html>)\nTo collect all equal keys together, the iterable generally needs to already be sorted on the same key function. [S1](<https://docs.python.org/3/library/itertools.html>)\nThe documentation states this behavior differs from SQL GROUP BY, which aggregates common elements regardless of input order. [S1](<https://docs.python.org/3/library/itertools.html>)",
+      "claims": [
+        {
+          "answer_end": 141,
+          "answer_start": 0,
+          "evidence": [
+            {
+              "document_version": "97fa66f49c74185844d000de7e6f1826dbb7224004a87b3ab008e584a17a5a58",
+              "end": 12810,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "Make an iterator that returns consecutive keys and groups from the iterable.",
+              "source_id": "S1",
+              "start": 12734
+            }
+          ],
+          "facets": [
+            0
+          ],
+          "id": "A1",
+          "kind": "fact",
+          "rationale": "",
+          "text": "itertools.groupby returns consecutive keys and groups from the iterable, so it groups consecutive runs, not equal keys anywhere in the input."
+        },
+        {
+          "answer_end": 287,
+          "answer_start": 199,
+          "evidence": [
+            {
+              "document_version": "97fa66f49c74185844d000de7e6f1826dbb7224004a87b3ab008e584a17a5a58",
+              "end": 13200,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "It generates a break or new group every time the value of the key function changes",
+              "source_id": "S1",
+              "start": 13118
+            }
+          ],
+          "facets": [
+            0
+          ],
+          "id": "A2",
+          "kind": "fact",
+          "rationale": "",
+          "text": "groupby generates a break or new group every time the value of the key function changes."
+        },
+        {
+          "answer_end": 456,
+          "answer_start": 345,
+          "evidence": [
+            {
+              "document_version": "97fa66f49c74185844d000de7e6f1826dbb7224004a87b3ab008e584a17a5a58",
+              "end": 13050,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "Generally, the iterable needs to already be sorted on the same key function.",
+              "source_id": "S1",
+              "start": 12974
+            }
+          ],
+          "facets": [
+            1
+          ],
+          "id": "A3",
+          "kind": "fact",
+          "rationale": "",
+          "text": "To collect all equal keys together, the iterable generally needs to already be sorted on the same key function."
+        },
+        {
+          "answer_end": 639,
+          "answer_start": 514,
+          "evidence": [
+            {
+              "document_version": "97fa66f49c74185844d000de7e6f1826dbb7224004a87b3ab008e584a17a5a58",
+              "end": 13400,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "That behavior differs from SQL’s GROUP BY which aggregates common elements regardless of their input order.",
+              "source_id": "S1",
+              "start": 13293
+            }
+          ],
+          "facets": [
+            2
+          ],
+          "id": "A4",
+          "kind": "fact",
+          "rationale": "",
+          "text": "The documentation states this behavior differs from SQL GROUP BY, which aggregates common elements regardless of input order."
+        }
+      ],
+      "actions": [
+        {
+          "action": "read",
+          "attempt": 1,
+          "eligible": true,
+          "source_id": "S1"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S1",
+          "status": "ok"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A1",
+          "generation": 1
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A2",
+          "draft_claim": "A2",
+          "generation": 1
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A3",
+          "draft_claim": "A3",
+          "generation": 1
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A4",
+          "draft_claim": "A4",
+          "generation": 1
+        }
+      ],
+      "model_calls": [
+        {
+          "elapsed_ms": 3290,
+          "stage": "draft",
+          "status": "returned",
+          "usage": {
+            "completion_tokens": 302,
+            "completion_tokens_details": {
+              "audio_tokens": 0,
+              "image_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "cost": 0.00023074,
+            "cost_details": {
+              "upstream_inference_completions_cost": 0.000151,
+              "upstream_inference_cost": 0.00023074,
+              "upstream_inference_prompt_cost": 7.974e-05
+            },
+            "is_byok": false,
+            "prompt_tokens": 2215,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cache_write_tokens": 0,
+              "cached_tokens": 0,
+              "video_tokens": 0
+            },
+            "total_tokens": 2517
+          }
+        },
+        {
+          "elapsed_ms": 1560,
+          "stage": "audit",
+          "status": "returned",
+          "usage": {
+            "completion_tokens": 155,
+            "completion_tokens_details": {
+              "audio_tokens": 0,
+              "image_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "cost": 0.00017596,
+            "cost_details": {
+              "upstream_inference_completions_cost": 7.75e-05,
+              "upstream_inference_cost": 0.00017596,
+              "upstream_inference_prompt_cost": 9.846e-05
+            },
+            "is_byok": false,
+            "prompt_tokens": 2735,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cache_write_tokens": 0,
+              "cached_tokens": 0,
+              "video_tokens": 0
+            },
+            "total_tokens": 2890
+          }
+        }
+      ],
+      "missing": [],
+      "sufficiency": {
+        "audit_completed": true,
+        "cited_distinct_documents": 1,
+        "judge_sufficient": true,
+        "required_distinct_documents": 2
+      },
+      "elapsed_ms": 15168,
+      "result_sha256": "728829b09284e67722244b630524695307324606fc80c96e151678784ef771df"
+    },
+    {
+      "case": "D02",
+      "arm": "primary",
+      "status": "partial",
+      "stop_reason": "oracle_component_complete",
+      "budget": {
+        "limits": {
+          "browser": 0,
+          "documents": 4,
+          "forms": 2,
+          "generations": 6,
+          "output_bytes": 32768,
+          "qwen": 4,
+          "seconds": 180,
+          "serp": 4,
+          "source_context_chars": 24000
+        },
+        "remaining": {
+          "documents": 3,
+          "forms": 2,
+          "generations": 4,
+          "milliseconds": 165373,
+          "qwen": 3,
+          "serp": 4
+        },
+        "used": {
+          "documents": 1,
+          "forms": 0,
+          "generations": 2,
+          "qwen": 1,
+          "serp": 0
+        }
+      },
+      "answer": "В CPython 3.13 поддержка free-threaded режима без GIL является экспериментальной. [S1](<https://docs.python.org/3.13/whatsnew/3.13.html>)\nFree-threaded режим не включён по умолчанию. [S1](<https://docs.python.org/3.13/whatsnew/3.13.html>)\nДля free-threaded режима нужен отдельный executable, обычно python3.13t или python3.13t.exe. [S1](<https://docs.python.org/3.13/whatsnew/3.13.html>)",
+      "claims": [
+        {
+          "answer_end": 81,
+          "answer_start": 0,
+          "evidence": [
+            {
+              "document_version": "fa9009ab9f281be5c09a395fac94735165621fc2d57229f2792c6e1ae0c4b69f",
+              "end": 8866,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "CPython now has experimental support for running in a free-threaded mode, with the global interpreter lock (GIL) disabled.",
+              "source_id": "S1",
+              "start": 8744
+            }
+          ],
+          "facets": [
+            0
+          ],
+          "id": "A1",
+          "kind": "fact",
+          "rationale": "",
+          "text": "В CPython 3.13 поддержка free-threaded режима без GIL является экспериментальной."
+        },
+        {
+          "answer_end": 182,
+          "answer_start": 138,
+          "evidence": [
+            {
+              "document_version": "fa9009ab9f281be5c09a395fac94735165621fc2d57229f2792c6e1ae0c4b69f",
+              "end": 8939,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "This is an experimental feature and therefore is not enabled by default.",
+              "source_id": "S1",
+              "start": 8867
+            }
+          ],
+          "facets": [
+            1
+          ],
+          "id": "A2",
+          "kind": "fact",
+          "rationale": "",
+          "text": "Free-threaded режим не включён по умолчанию."
+        },
+        {
+          "answer_end": 331,
+          "answer_start": 239,
+          "evidence": [
+            {
+              "document_version": "fa9009ab9f281be5c09a395fac94735165621fc2d57229f2792c6e1ae0c4b69f",
+              "end": 9042,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "The free-threaded mode requires a different executable, usually called python3.13t or python3.13t.exe.",
+              "source_id": "S1",
+              "start": 8940
+            }
+          ],
+          "facets": [
+            2
+          ],
+          "id": "A3",
+          "kind": "fact",
+          "rationale": "",
+          "text": "Для free-threaded режима нужен отдельный executable, обычно python3.13t или python3.13t.exe."
+        }
+      ],
+      "actions": [
+        {
+          "action": "read",
+          "attempt": 1,
+          "eligible": true,
+          "source_id": "S1"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S1",
+          "status": "ok"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A1",
+          "generation": 1
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A2",
+          "draft_claim": "A2",
+          "generation": 1
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A3",
+          "draft_claim": "A3",
+          "generation": 1
+        }
+      ],
+      "model_calls": [
+        {
+          "elapsed_ms": 2099,
+          "stage": "draft",
+          "status": "returned",
+          "usage": {
+            "completion_tokens": 247,
+            "completion_tokens_details": {
+              "audio_tokens": 0,
+              "image_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "cost": 0.000181344,
+            "cost_details": {
+              "upstream_inference_completions_cost": 0.0001235,
+              "upstream_inference_cost": 0.000181344,
+              "upstream_inference_prompt_cost": 5.7844e-05
+            },
+            "is_byok": false,
+            "prompt_tokens": 2069,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cache_write_tokens": 0,
+              "cached_tokens": 640,
+              "video_tokens": 0
+            },
+            "total_tokens": 2316
+          }
+        },
+        {
+          "elapsed_ms": 1266,
+          "stage": "audit",
+          "status": "returned",
+          "usage": {
+            "completion_tokens": 153,
+            "completion_tokens_details": {
+              "audio_tokens": 0,
+              "image_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "cost": 0.000148168,
+            "cost_details": {
+              "upstream_inference_completions_cost": 7.65e-05,
+              "upstream_inference_cost": 0.000148168,
+              "upstream_inference_prompt_cost": 7.1668e-05
+            },
+            "is_byok": false,
+            "prompt_tokens": 2453,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cache_write_tokens": 0,
+              "cached_tokens": 640,
+              "video_tokens": 0
+            },
+            "total_tokens": 2606
+          }
+        }
+      ],
+      "missing": [],
+      "sufficiency": {
+        "audit_completed": true,
+        "cited_distinct_documents": 1,
+        "judge_sufficient": true,
+        "required_distinct_documents": 2
+      },
+      "elapsed_ms": 14665,
+      "result_sha256": "1f4a1820c65ee3eea652082641c1e1674e33105814ece38677d5862e1207e778"
+    },
+    {
+      "case": "D01",
+      "arm": "baseline",
+      "status": "partial",
+      "stop_reason": "oracle_component_complete",
+      "budget": {
+        "limits": {
+          "browser": 0,
+          "documents": 4,
+          "forms": 2,
+          "generations": 6,
+          "output_bytes": 32768,
+          "qwen": 4,
+          "seconds": 180,
+          "serp": 4,
+          "source_context_chars": 24000
+        },
+        "remaining": {
+          "documents": 3,
+          "forms": 2,
+          "generations": 4,
+          "milliseconds": 160763,
+          "qwen": 3,
+          "serp": 4
+        },
+        "used": {
+          "documents": 1,
+          "forms": 0,
+          "generations": 2,
+          "qwen": 1,
+          "serp": 0
+        }
+      },
+      "answer": "groupby() groups only consecutive identical keys; it does not sort the data. [S1](<https://pynative.com/python-itertools-functools-exercises/>)\nTo collect all equal keys together, sort by the grouping key first with sorted(data, key=...) before passing to groupby(). [S1](<https://pynative.com/python-itertools-functools-exercises/>)\ngroupby is a streaming operation that does not look ahead or back, so only adjacent elements with the same key are grouped together. [S1](<https://pynative.com/python-itertools-functools-exercises/>)",
+      "claims": [
+        {
+          "answer_end": 76,
+          "answer_start": 0,
+          "evidence": [
+            {
+              "document_version": "521264aaadad5e65b94dba46e76744dcb361ee187c45fb69183c3c1dffbaaf40",
+              "end": 35237,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "Critical rule: groupby() groups only consecutive identical keys – it does not sort the data.",
+              "source_id": "S1",
+              "start": 35145
+            }
+          ],
+          "facets": [
+            0
+          ],
+          "id": "A1",
+          "kind": "fact",
+          "rationale": "",
+          "text": "groupby() groups only consecutive identical keys; it does not sort the data."
+        },
+        {
+          "answer_end": 266,
+          "answer_start": 144,
+          "evidence": [
+            {
+              "document_version": "521264aaadad5e65b94dba46e76744dcb361ee187c45fb69183c3c1dffbaaf40",
+              "end": 35331,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "Always sort by the grouping key first with sorted(data, key=...) before passing to groupby().",
+              "source_id": "S1",
+              "start": 35238
+            }
+          ],
+          "facets": [
+            1
+          ],
+          "id": "A2",
+          "kind": "fact",
+          "rationale": "",
+          "text": "To collect all equal keys together, sort by the grouping key first with sorted(data, key=...) before passing to groupby()."
+        },
+        {
+          "answer_end": 466,
+          "answer_start": 334,
+          "evidence": [
+            {
+              "document_version": "521264aaadad5e65b94dba46e76744dcb361ee187c45fb69183c3c1dffbaaf40",
+              "end": 36918,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "It is a streaming operation – it does not look ahead or back, so only adjacent elements with the same key are grouped together.",
+              "source_id": "S1",
+              "start": 36791
+            }
+          ],
+          "facets": [
+            0,
+            2
+          ],
+          "id": "A3",
+          "kind": "fact",
+          "rationale": "",
+          "text": "groupby is a streaming operation that does not look ahead or back, so only adjacent elements with the same key are grouped together."
+        }
+      ],
+      "actions": [
+        {
+          "action": "read",
+          "attempt": 1,
+          "eligible": true,
+          "source_id": "S1"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S1",
+          "status": "ok"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A1",
+          "generation": 1
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A2",
+          "draft_claim": "A2",
+          "generation": 1
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A3",
+          "draft_claim": "A3",
+          "generation": 1
+        }
+      ],
+      "model_calls": [
+        {
+          "elapsed_ms": 4916,
+          "stage": "draft",
+          "status": "returned",
+          "usage": {
+            "completion_tokens": 260,
+            "completion_tokens_details": {
+              "audio_tokens": 0,
+              "image_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "cost": 0.000193028,
+            "cost_details": {
+              "upstream_inference_completions_cost": 0.00013,
+              "upstream_inference_cost": 0.000193028,
+              "upstream_inference_prompt_cost": 6.3028e-05
+            },
+            "is_byok": false,
+            "prompt_tokens": 2213,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cache_write_tokens": 0,
+              "cached_tokens": 640,
+              "video_tokens": 0
+            },
+            "total_tokens": 2473
+          }
+        },
+        {
+          "elapsed_ms": 3163,
+          "stage": "audit",
+          "status": "returned",
+          "usage": {
+            "completion_tokens": 144,
+            "completion_tokens_details": {
+              "audio_tokens": 0,
+              "image_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "cost": 0.00014878,
+            "cost_details": {
+              "upstream_inference_completions_cost": 7.2e-05,
+              "upstream_inference_cost": 0.00014878,
+              "upstream_inference_prompt_cost": 7.678e-05
+            },
+            "is_byok": false,
+            "prompt_tokens": 2595,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cache_write_tokens": 0,
+              "cached_tokens": 640,
+              "video_tokens": 0
+            },
+            "total_tokens": 2739
+          }
+        }
+      ],
+      "missing": [],
+      "sufficiency": {
+        "audit_completed": true,
+        "cited_distinct_documents": 1,
+        "judge_sufficient": true,
+        "required_distinct_documents": 2
+      },
+      "elapsed_ms": 19276,
+      "result_sha256": "8948f87ce15357192fbe56d6bd408bbc757d5ed6c7cae7d7de266cf6dd6e36e5"
+    },
+    {
+      "case": "D02",
+      "arm": "baseline",
+      "status": "partial",
+      "stop_reason": "oracle_component_complete",
+      "budget": {
+        "limits": {
+          "browser": 0,
+          "documents": 4,
+          "forms": 2,
+          "generations": 6,
+          "output_bytes": 32768,
+          "qwen": 4,
+          "seconds": 180,
+          "serp": 4,
+          "source_context_chars": 24000
+        },
+        "remaining": {
+          "documents": 3,
+          "forms": 2,
+          "generations": 4,
+          "milliseconds": 164443,
+          "qwen": 3,
+          "serp": 4
+        },
+        "used": {
+          "documents": 1,
+          "forms": 0,
+          "generations": 2,
+          "qwen": 1,
+          "serp": 0
+        }
+      },
+      "answer": "",
+      "claims": [],
+      "actions": [
+        {
+          "action": "read",
+          "attempt": 1,
+          "eligible": true,
+          "source_id": "S1"
+        },
+        {
+          "action": "qwen",
+          "cache_hit": null,
+          "source_id": "S1",
+          "status": "ok"
+        },
+        {
+          "action": "retain_claim",
+          "audit_claim": "A1",
+          "draft_claim": "A1",
+          "generation": 1
+        }
+      ],
+      "model_calls": [
+        {
+          "elapsed_ms": 1787,
+          "stage": "draft",
+          "status": "returned",
+          "usage": {
+            "completion_tokens": 140,
+            "completion_tokens_details": {
+              "audio_tokens": 0,
+              "image_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "cost": 0.00012842,
+            "cost_details": {
+              "upstream_inference_completions_cost": 7e-05,
+              "upstream_inference_cost": 0.00012842,
+              "upstream_inference_prompt_cost": 5.842e-05
+            },
+            "is_byok": false,
+            "prompt_tokens": 2085,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cache_write_tokens": 0,
+              "cached_tokens": 640,
+              "video_tokens": 0
+            },
+            "total_tokens": 2225
+          }
+        },
+        {
+          "elapsed_ms": 1287,
+          "stage": "audit",
+          "status": "returned",
+          "usage": {
+            "completion_tokens": 119,
+            "completion_tokens_details": {
+              "audio_tokens": 0,
+              "image_tokens": 0,
+              "reasoning_tokens": 0
+            },
+            "cost": 0.000121448,
+            "cost_details": {
+              "upstream_inference_completions_cost": 5.95e-05,
+              "upstream_inference_cost": 0.000121448,
+              "upstream_inference_prompt_cost": 6.1948e-05
+            },
+            "is_byok": false,
+            "prompt_tokens": 2183,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cache_write_tokens": 0,
+              "cached_tokens": 640,
+              "video_tokens": 0
+            },
+            "total_tokens": 2302
+          }
+        }
+      ],
+      "missing": [
+        0,
+        1,
+        2
+      ],
+      "sufficiency": {
+        "audit_completed": true,
+        "cited_distinct_documents": 0,
+        "judge_sufficient": false,
+        "required_distinct_documents": 2
+      },
+      "elapsed_ms": 15598,
+      "result_sha256": "d8a534de1fe53074b27ccfa27661021b10e9408d06532b6b94b7589254a0591a"
+    }
+  ],
+  "source_state_after": {
+    "blocked": {
+      "bing": "excluded from fixed protocol",
+      "ddg": "historical challenge; unqualified in this protocol",
+      "mwmbl": "excluded from fixed protocol",
+      "naver": "source_challenge: verification page; no retry"
+    },
+    "document_blocks": {
+      "devessentials.dev": "source_challenge: verification page; no retry",
+      "eur-lex.europa.eu": "HTTP 202",
+      "hermes-agent.nousresearch.com": "source_blocked: no retry in this probe",
+      "learn.microsoft.com": "source_challenge: verification page; no retry",
+      "parallelworks.com": "source_challenge: verification page; no retry",
+      "redis.io": "source_blocked: no retry in this probe",
+      "ria.ru": "source_challenge: verification widget; no retry",
+      "slice-master.co": "source_blocked: no retry in this probe",
+      "tfl.gov.uk": "source_blocked: no retry in this probe",
+      "vimeo.com": "source_challenge: connection verification page observed in frozen R01; no retry",
+      "www.atlantic.net": "source_blocked: no retry in this probe",
+      "www.ebay.com": "source_blocked: no retry in this probe",
+      "www.eracomp.cz": "source_challenge: verification widget; no retry",
+      "www.ltmuseum.co.uk": "source_blocked: no retry in this probe",
+      "www.mdpi.com": "source_blocked: no retry in this probe",
+      "www.mujrozhlas.cz": "source_blocked: no retry in this probe",
+      "www.npmjs.com": "source_blocked: no retry in this probe",
+      "www.webstaurantstore.com": "source_blocked: no retry in this probe"
+    }
+  },
+  "source_http": 0,
+  "source_reads_saved": 4,
+  "local_qwen_calls": 4,
+  "model_attempts": 8,
+  "model_responses": 8,
+  "known_cost_usd": 0.001327888,
+  "unknown_usage_attempts": 0,
+  "release_sha256": "4212552249ee763819007e250a7c1a6c5158045f63c916024823aad8b09867b4",
+  "runtime_primary_first_enabled": false,
+  "production_change": "safe OpenRouter refusal diagnostics only",
+  "release_or_deploy": false
+}

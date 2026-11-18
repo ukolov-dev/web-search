@@ -1,0 +1,1315 @@
+{
+  "assessment": {
+    "schema": "independent-scoped-audit-quality-v1",
+    "reviewer": "/root/search_evaluator",
+    "created_utc": "2026-11-18T07:55:40.960335+00:00",
+    "source_commit": "29be5be",
+    "cases_sha256": "271eb09df047a544ff052b7a72aa994f8de4a54ccaff70a8f67d83a1b65e9cde",
+    "inputs_sha256": "44f18fc0929e7d0611b1b19162423b30ba475be6cdbb28b876c20cb1b5f5c49d",
+    "planned_model_calls": 32,
+    "attempted_model_calls": 15,
+    "provider_responses": 15,
+    "accepted_apply_audit_results": 14,
+    "not_run_model_calls": 17,
+    "stop": {
+      "reason": "first_failed_attempt_no_retry",
+      "attempt": {
+        "case": "S04",
+        "arm": "candidate",
+        "exit_code": 101,
+        "elapsed_ms": 3230,
+        "error": {
+          "status": "invalid_or_failed_audit"
+        }
+      }
+    },
+    "rows": [
+      {
+        "id": "H01",
+        "cohort": "historical_development8",
+        "claim": "The consecutive-only grouping is intentional and efficient, but it means the data must be pre-sorted on the grouping key.",
+        "frozen_gold": {
+          "supported_truth": "false",
+          "own_semantic_faithfulness": "scope_lost",
+          "query_coverage": {
+            "conditions": [
+              "Consecutive equalkey grouping",
+              "Sorting required only to collect all equal keys globally"
+            ],
+            "supported_indices": [],
+            "complete": false
+          },
+          "reason": "Unconditional mandatory presorting is false; unsorted consecutive grouping valid.",
+          "truth_basis": "Prior independently frozen officialprimarygold; narrow ownquote/sourcecontext review. No newonlineverification."
+        },
+        "arms": {
+          "baseline": {
+            "attempted": true,
+            "status": "accepted_application",
+            "raw_verdict": "unsupported",
+            "raw_check": {
+              "id": "A1",
+              "reason": "Quote supports intentional/efficient and pre-sorting, but not the 'consecutive-only grouping' premise; that comes from other chunks, not this evidence.",
+              "verdict": "unsupported"
+            },
+            "after_apply_audit_kept": false,
+            "world_false_raw_supported": false,
+            "unknown_scope_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": [],
+            "coverage_complete_and_kept": false,
+            "attempt_error": null
+          },
+          "candidate": {
+            "attempted": true,
+            "status": "accepted_application",
+            "raw_verdict": "supported",
+            "raw_check": {
+              "conditions": "supported",
+              "id": "A1",
+              "object_version": "supported",
+              "own_quote_support": "supported",
+              "reason": "Quote states consecutive-only grouping is intentional/efficient and requires pre-sorting on grouping key.",
+              "time": "not_applicable"
+            },
+            "after_apply_audit_kept": true,
+            "world_false_raw_supported": true,
+            "unknown_scope_raw_supported": false,
+            "world_false_after_kept": true,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": [],
+            "coverage_complete_and_kept": false,
+            "attempt_error": null
+          }
+        }
+      },
+      {
+        "id": "H02",
+        "cohort": "historical_development8",
+        "claim": "To collect all equal keys together, sort by the grouping key first with sorted(data, key=...) before passing to groupby().",
+        "frozen_gold": {
+          "supported_truth": "supported",
+          "own_semantic_faithfulness": "faithful",
+          "query_coverage": {
+            "conditions": [
+              "To collect all equal keys together, sort/group by samekey first"
+            ],
+            "supported_indices": [
+              0
+            ],
+            "complete": true
+          },
+          "reason": "Conditional all-equal-key collection preparation is correct.",
+          "truth_basis": "Prior independently frozen officialprimarygold; narrow ownquote/sourcecontext review. No newonlineverification."
+        },
+        "arms": {
+          "baseline": {
+            "attempted": true,
+            "status": "accepted_application",
+            "raw_verdict": "supported",
+            "raw_check": {
+              "id": "A1",
+              "reason": "Quote directly states sorting by grouping key before groupby to collect equal keys; matches claim.",
+              "verdict": "supported"
+            },
+            "after_apply_audit_kept": true,
+            "world_false_raw_supported": false,
+            "unknown_scope_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": true,
+            "query_conditions_retained": [
+              0
+            ],
+            "coverage_complete_and_kept": true,
+            "attempt_error": null
+          },
+          "candidate": {
+            "attempted": true,
+            "status": "accepted_application",
+            "raw_verdict": "unsupported",
+            "raw_check": {
+              "conditions": "supported",
+              "id": "A1",
+              "object_version": "unsupported",
+              "own_quote_support": "unsupported",
+              "reason": "Quote only says to sort before groupby; it does not establish that this collects all equal keys together, and source is an exercise article, not the itertools.groupby documentation.",
+              "time": "not_applicable"
+            },
+            "after_apply_audit_kept": false,
+            "world_false_raw_supported": false,
+            "unknown_scope_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": [],
+            "coverage_complete_and_kept": false,
+            "attempt_error": null
+          }
+        }
+      },
+      {
+        "id": "H03",
+        "cohort": "historical_development8",
+        "claim": "Free threading вводится как экспериментальная функция и не входит в официальную сборку Python; для отключения GIL нужна собственная сборка.",
+        "frozen_gold": {
+          "supported_truth": "false",
+          "own_semantic_faithfulness": "historical_scope_lost",
+          "query_coverage": {
+            "conditions": [
+              "3.13 experimental",
+              "Not enabled by default",
+              "Separate free-threaded build/executable; official installer builds available"
+            ],
+            "supported_indices": [
+              0
+            ],
+            "complete": false
+          },
+          "reason": "Mandatory custom build and absence of official binaries false for pinned3.13; exact stale thirdparty sentence not truth.",
+          "truth_basis": "Prior independently frozen officialprimarygold; narrow ownquote/sourcecontext review. No newonlineverification."
+        },
+        "arms": {
+          "baseline": {
+            "attempted": true,
+            "status": "accepted_application",
+            "raw_verdict": "unsupported",
+            "raw_check": {
+              "id": "A1",
+              "reason": "Quote supports experimental and not in official distribution, but not that a separate executable is needed; it says custom build.",
+              "verdict": "unsupported"
+            },
+            "after_apply_audit_kept": false,
+            "world_false_raw_supported": false,
+            "unknown_scope_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": [],
+            "coverage_complete_and_kept": false,
+            "attempt_error": null
+          },
+          "candidate": {
+            "attempted": true,
+            "status": "accepted_application",
+            "raw_verdict": "unsupported",
+            "raw_check": {
+              "conditions": "unsupported",
+              "id": "A1",
+              "object_version": "unsupported",
+              "own_quote_support": "unsupported",
+              "reason": "Quote says experimental and not in official distribution, but does not state a separate executable is needed; claim omits the separate-executable facet and adds 'own build' beyond quote scope.",
+              "time": "unsupported"
+            },
+            "after_apply_audit_kept": false,
+            "world_false_raw_supported": false,
+            "unknown_scope_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": [],
+            "coverage_complete_and_kept": false,
+            "attempt_error": null
+          }
+        }
+      },
+      {
+        "id": "H04",
+        "cohort": "historical_development8",
+        "claim": "SQLite foreign key constraints are disabled by default and must be enabled separately for each database connection.",
+        "frozen_gold": {
+          "supported_truth": "unknown",
+          "own_semantic_faithfulness": "default_scope_unresolved",
+          "query_coverage": {
+            "conditions": [
+              "Perconnection setting",
+              "Do not assume universal compiled default"
+            ],
+            "supported_indices": [
+              0
+            ],
+            "complete": false
+          },
+          "reason": "Perconnection correct; unqualified default does not establish allcompileddefaults.",
+          "truth_basis": "Prior independently frozen officialprimarygold; narrow ownquote/sourcecontext review. No newonlineverification."
+        },
+        "arms": {
+          "baseline": {
+            "attempted": true,
+            "status": "accepted_application",
+            "raw_verdict": "supported",
+            "raw_check": {
+              "id": "A1",
+              "reason": "S1P1 exactly states foreign keys are disabled by default and must be enabled separately for each connection.",
+              "verdict": "supported"
+            },
+            "after_apply_audit_kept": true,
+            "world_false_raw_supported": false,
+            "unknown_scope_raw_supported": true,
+            "world_false_after_kept": false,
+            "unknown_after_kept": true,
+            "positive_retained": false,
+            "query_conditions_retained": [
+              0
+            ],
+            "coverage_complete_and_kept": false,
+            "attempt_error": null
+          },
+          "candidate": {
+            "attempted": true,
+            "status": "accepted_application",
+            "raw_verdict": "supported",
+            "raw_check": {
+              "conditions": "supported",
+              "id": "A1",
+              "object_version": "supported",
+              "own_quote_support": "supported",
+              "reason": "Quote states FK constraints disabled by default and must be enabled separately for each database connection; matches claim.",
+              "time": "not_applicable"
+            },
+            "after_apply_audit_kept": true,
+            "world_false_raw_supported": false,
+            "unknown_scope_raw_supported": true,
+            "world_false_after_kept": false,
+            "unknown_after_kept": true,
+            "positive_retained": false,
+            "query_conditions_retained": [
+              0
+            ],
+            "coverage_complete_and_kept": false,
+            "attempt_error": null
+          }
+        }
+      },
+      {
+        "id": "H05",
+        "cohort": "historical_development8",
+        "claim": "It is not possible to enable or disable foreign key constraints in the middle of a multi-statement transaction.",
+        "frozen_gold": {
+          "supported_truth": "supported",
+          "own_semantic_faithfulness": "faithful",
+          "query_coverage": {
+            "conditions": [
+              "Changing within multistatement transaction has no effect",
+              "No error is returned"
+            ],
+            "supported_indices": [],
+            "complete": false
+          },
+          "reason": "Cannot change in transaction true but quote lacks following silentnoeffect sentence.",
+          "truth_basis": "Prior independently frozen officialprimarygold; narrow ownquote/sourcecontext review. No newonlineverification."
+        },
+        "arms": {
+          "baseline": {
+            "attempted": false,
+            "status": "not_run",
+            "raw_verdict": null,
+            "raw_check": null,
+            "after_apply_audit_kept": null,
+            "world_false_raw_supported": false,
+            "unknown_scope_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": [],
+            "coverage_complete_and_kept": false,
+            "attempt_error": null
+          },
+          "candidate": {
+            "attempted": false,
+            "status": "not_run",
+            "raw_verdict": null,
+            "raw_check": null,
+            "after_apply_audit_kept": null,
+            "world_false_raw_supported": false,
+            "unknown_scope_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": [],
+            "coverage_complete_and_kept": false,
+            "attempt_error": null
+          }
+        }
+      },
+      {
+        "id": "H06",
+        "cohort": "historical_development8",
+        "claim": "Arguments passed to unwrap_or are eagerly evaluated, so the default is evaluated even for Some; unwrap_or_else is lazily evaluated.",
+        "frozen_gold": {
+          "supported_truth": "supported",
+          "own_semantic_faithfulness": "faithful",
+          "query_coverage": {
+            "conditions": [
+              "unwrap_or eagerly evaluates default evenSome",
+              "unwrap_or_else fallback lazily executed onlyNone"
+            ],
+            "supported_indices": [
+              0
+            ],
+            "complete": false
+          },
+          "reason": "Eagerdefault evenSome and lazyelse distinction valid.",
+          "truth_basis": "Prior independently frozen officialprimarygold; narrow ownquote/sourcecontext review. No newonlineverification."
+        },
+        "arms": {
+          "baseline": {
+            "attempted": false,
+            "status": "not_run",
+            "raw_verdict": null,
+            "raw_check": null,
+            "after_apply_audit_kept": null,
+            "world_false_raw_supported": false,
+            "unknown_scope_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": [],
+            "coverage_complete_and_kept": false,
+            "attempt_error": null
+          },
+          "candidate": {
+            "attempted": false,
+            "status": "not_run",
+            "raw_verdict": null,
+            "raw_check": null,
+            "after_apply_audit_kept": null,
+            "world_false_raw_supported": false,
+            "unknown_scope_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": [],
+            "coverage_complete_and_kept": false,
+            "attempt_error": null
+          }
+        }
+      },
+      {
+        "id": "H07",
+        "cohort": "historical_development8",
+        "claim": "unwrap_or_else returns the contained Some value or computes it from a closure.",
+        "frozen_gold": {
+          "supported_truth": "supported",
+          "own_semantic_faithfulness": "faithful",
+          "query_coverage": {
+            "conditions": [
+              "unwrap_or_else returns Some value or computes fallbackclosure onlyNone"
+            ],
+            "supported_indices": [
+              0
+            ],
+            "complete": true
+          },
+          "reason": "Some return versus closure alternative supports lazyfallback; retain Option/method binding.",
+          "truth_basis": "Prior independently frozen officialprimarygold; narrow ownquote/sourcecontext review. No newonlineverification."
+        },
+        "arms": {
+          "baseline": {
+            "attempted": false,
+            "status": "not_run",
+            "raw_verdict": null,
+            "raw_check": null,
+            "after_apply_audit_kept": null,
+            "world_false_raw_supported": false,
+            "unknown_scope_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": [],
+            "coverage_complete_and_kept": false,
+            "attempt_error": null
+          },
+          "candidate": {
+            "attempted": false,
+            "status": "not_run",
+            "raw_verdict": null,
+            "raw_check": null,
+            "after_apply_audit_kept": null,
+            "world_false_raw_supported": false,
+            "unknown_scope_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": [],
+            "coverage_complete_and_kept": false,
+            "attempt_error": null
+          }
+        }
+      },
+      {
+        "id": "H08",
+        "cohort": "historical_development8",
+        "claim": "В Rust 1.100.0 never type fallback изменён с () на ! в editions до 2024 (2015, 2018, 2021), как уже было сделано в edition 2024.",
+        "frozen_gold": {
+          "supported_truth": "supported",
+          "own_semantic_faithfulness": "faithful",
+          "query_coverage": {
+            "conditions": [
+              "Fallback changes unit() to never!",
+              "Pre2024 editions2015/2018/2021;2024already"
+            ],
+            "supported_indices": [
+              0,
+              1
+            ],
+            "complete": true
+          },
+          "reason": "Qualified direction and editions fully supported.",
+          "truth_basis": "Prior independently frozen officialprimarygold; narrow ownquote/sourcecontext review. No newonlineverification."
+        },
+        "arms": {
+          "baseline": {
+            "attempted": false,
+            "status": "not_run",
+            "raw_verdict": null,
+            "raw_check": null,
+            "after_apply_audit_kept": null,
+            "world_false_raw_supported": false,
+            "unknown_scope_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": [],
+            "coverage_complete_and_kept": false,
+            "attempt_error": null
+          },
+          "candidate": {
+            "attempted": false,
+            "status": "not_run",
+            "raw_verdict": null,
+            "raw_check": null,
+            "after_apply_audit_kept": null,
+            "world_false_raw_supported": false,
+            "unknown_scope_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": [],
+            "coverage_complete_and_kept": false,
+            "attempt_error": null
+          }
+        }
+      },
+      {
+        "id": "S01",
+        "cohort": "new_synthetic_challenge8",
+        "claim": "Lantern.decode accepts a byte sequence.",
+        "frozen_gold": {
+          "supported_truth": "supported",
+          "own_semantic_faithfulness": "faithful",
+          "query_coverage": {
+            "conditions": [
+              "Lantern.decode accepts byte sequence"
+            ],
+            "supported_indices": [
+              0
+            ],
+            "complete": true
+          },
+          "reason": "Timeless positive: no date required; methodidentity and input match.",
+          "truth_basis": "New invented specification, not prior challenge, no realworldAPI claim."
+        },
+        "arms": {
+          "baseline": {
+            "attempted": true,
+            "status": "accepted_application",
+            "raw_verdict": "supported",
+            "raw_check": {
+              "id": "A1",
+              "reason": "Exact quote directly states Lantern.decode() accepts a byte sequence.",
+              "verdict": "supported"
+            },
+            "after_apply_audit_kept": true,
+            "world_false_raw_supported": false,
+            "unknown_scope_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": true,
+            "query_conditions_retained": [
+              0
+            ],
+            "coverage_complete_and_kept": true,
+            "attempt_error": null
+          },
+          "candidate": {
+            "attempted": true,
+            "status": "accepted_application",
+            "raw_verdict": "supported",
+            "raw_check": {
+              "conditions": "supported",
+              "id": "A1",
+              "object_version": "supported",
+              "own_quote_support": "supported",
+              "reason": "Exact quote states Lantern.decode() accepts a byte sequence; matches question scope.",
+              "time": "not_applicable"
+            },
+            "after_apply_audit_kept": true,
+            "world_false_raw_supported": false,
+            "unknown_scope_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": true,
+            "query_conditions_retained": [
+              0
+            ],
+            "coverage_complete_and_kept": true,
+            "attempt_error": null
+          }
+        }
+      },
+      {
+        "id": "S02",
+        "cohort": "new_synthetic_challenge8",
+        "claim": "Lantern.encode accepts a byte sequence.",
+        "frozen_gold": {
+          "supported_truth": "false",
+          "own_semantic_faithfulness": "wrong_method",
+          "query_coverage": {
+            "conditions": [
+              "Lantern.decode accepts byte sequence"
+            ],
+            "supported_indices": [],
+            "complete": false
+          },
+          "reason": "Quote belongs decode, not encode; inputdirection swapped. Same fragment provenance does not establish objectidentity.",
+          "truth_basis": "New invented specification, not prior challenge, no realworldAPI claim."
+        },
+        "arms": {
+          "baseline": {
+            "attempted": true,
+            "status": "accepted_application",
+            "raw_verdict": "unsupported",
+            "raw_check": {
+              "id": "A1",
+              "reason": "Evidence says Lantern.encode accepts a byte sequence, but the claim is about Lantern.decode; rejection context also indicates encode accepts text.",
+              "verdict": "unsupported"
+            },
+            "after_apply_audit_kept": false,
+            "world_false_raw_supported": false,
+            "unknown_scope_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": [],
+            "coverage_complete_and_kept": false,
+            "attempt_error": null
+          },
+          "candidate": {
+            "attempted": true,
+            "status": "accepted_application",
+            "raw_verdict": "unsupported",
+            "raw_check": {
+              "conditions": "unsupported",
+              "id": "A1",
+              "object_version": "unsupported",
+              "own_quote_support": "unsupported",
+              "reason": "Claim is about Lantern.encode, but question asks about Lantern.decode; quote fragment alone doesn't identify the method.",
+              "time": "not_applicable"
+            },
+            "after_apply_audit_kept": false,
+            "world_false_raw_supported": false,
+            "unknown_scope_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": [],
+            "coverage_complete_and_kept": false,
+            "attempt_error": null
+          }
+        }
+      },
+      {
+        "id": "S03",
+        "cohort": "new_synthetic_challenge8",
+        "claim": "In Sparrow2.1, load accepts UTF-8 bytes only.",
+        "frozen_gold": {
+          "supported_truth": "supported",
+          "own_semantic_faithfulness": "faithful",
+          "query_coverage": {
+            "conditions": [
+              "Version2.1 accepts UTF8 bytes only"
+            ],
+            "supported_indices": [
+              0
+            ],
+            "complete": true
+          },
+          "reason": "Correct pinnedversion; do not reject simply because version3.0 text is nearby.",
+          "truth_basis": "New invented specification, not prior challenge, no realworldAPI claim."
+        },
+        "arms": {
+          "baseline": {
+            "attempted": true,
+            "status": "accepted_application",
+            "raw_verdict": "supported",
+            "raw_check": {
+              "id": "A1",
+              "reason": "S1P1 explicitly states Sparrow 2.1 load() accepts UTF-8 bytes only, matching the claim.",
+              "verdict": "supported"
+            },
+            "after_apply_audit_kept": true,
+            "world_false_raw_supported": false,
+            "unknown_scope_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": true,
+            "query_conditions_retained": [
+              0
+            ],
+            "coverage_complete_and_kept": true,
+            "attempt_error": null
+          },
+          "candidate": {
+            "attempted": true,
+            "status": "accepted_application",
+            "raw_verdict": "supported",
+            "raw_check": {
+              "conditions": "supported",
+              "id": "A1",
+              "object_version": "supported",
+              "own_quote_support": "supported",
+              "reason": "Quote states Sparrow 2.1 load() accepts UTF-8 bytes only, matching claim scope.",
+              "time": "not_applicable"
+            },
+            "after_apply_audit_kept": true,
+            "world_false_raw_supported": false,
+            "unknown_scope_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": true,
+            "query_conditions_retained": [
+              0
+            ],
+            "coverage_complete_and_kept": true,
+            "attempt_error": null
+          }
+        }
+      },
+      {
+        "id": "S04",
+        "cohort": "new_synthetic_challenge8",
+        "claim": "In Sparrow2.1, load accepts Unicode text only.",
+        "frozen_gold": {
+          "supported_truth": "false",
+          "own_semantic_faithfulness": "wrong_version",
+          "query_coverage": {
+            "conditions": [
+              "Version2.1 accepts UTF8 bytes only"
+            ],
+            "supported_indices": [],
+            "complete": false
+          },
+          "reason": "Exact quote is inside3.0clause; transferring to2.1 contradicts explicitversionboundary.",
+          "truth_basis": "New invented specification, not prior challenge, no realworldAPI claim."
+        },
+        "arms": {
+          "baseline": {
+            "attempted": false,
+            "status": "not_run",
+            "raw_verdict": null,
+            "raw_check": null,
+            "after_apply_audit_kept": null,
+            "world_false_raw_supported": false,
+            "unknown_scope_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": [],
+            "coverage_complete_and_kept": false,
+            "attempt_error": null
+          },
+          "candidate": {
+            "attempted": true,
+            "status": "post_response_validation_error",
+            "raw_verdict": "unsupported",
+            "raw_check": {
+              "conditions": "unsupported",
+              "id": "A1",
+              "object_version": "unsupported",
+              "own_quote_support": "unsupported",
+              "reason": "Quote lacks version scope; rejection context shows 2.1 accepts UTF-8 bytes only, contradicting the claim.",
+              "time": "not_applicable"
+            },
+            "after_apply_audit_kept": null,
+            "world_false_raw_supported": false,
+            "unknown_scope_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": [],
+            "coverage_complete_and_kept": false,
+            "attempt_error": {
+              "status": "invalid_or_failed_audit"
+            }
+          }
+        }
+      },
+      {
+        "id": "S05",
+        "cohort": "new_synthetic_challenge8",
+        "claim": "During the February2024 beta, Nimbus fast mode required a locally built executable.",
+        "frozen_gold": {
+          "supported_truth": "supported",
+          "own_semantic_faithfulness": "faithful_historical_but_not_queryanswer",
+          "query_coverage": {
+            "conditions": [
+              "Stable1.0 offers optional officialinstaller",
+              "Local compilation not required in stable1.0"
+            ],
+            "supported_indices": [],
+            "complete": false
+          },
+          "reason": "Correct explicitly dated historical statement must not be calledfalse merely because queryasks2025. But covers none of currentreleaseconditions.",
+          "truth_basis": "New invented specification, not prior challenge, no realworldAPI claim."
+        },
+        "arms": {
+          "baseline": {
+            "attempted": false,
+            "status": "not_run",
+            "raw_verdict": null,
+            "raw_check": null,
+            "after_apply_audit_kept": null,
+            "world_false_raw_supported": false,
+            "unknown_scope_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": [],
+            "coverage_complete_and_kept": false,
+            "attempt_error": null
+          },
+          "candidate": {
+            "attempted": false,
+            "status": "not_run",
+            "raw_verdict": null,
+            "raw_check": null,
+            "after_apply_audit_kept": null,
+            "world_false_raw_supported": false,
+            "unknown_scope_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": [],
+            "coverage_complete_and_kept": false,
+            "attempt_error": null
+          }
+        }
+      },
+      {
+        "id": "S06",
+        "cohort": "new_synthetic_challenge8",
+        "claim": "Nimbus1.0 currently requires a locally built executable.",
+        "frozen_gold": {
+          "supported_truth": "false",
+          "own_semantic_faithfulness": "historical_now_transfer",
+          "query_coverage": {
+            "conditions": [
+              "Stable1.0 offers optional officialinstaller",
+              "Local compilation not required in stable1.0"
+            ],
+            "supported_indices": [],
+            "complete": false
+          },
+          "reason": "Oldbeta predicate transferred to stablecurrent1.0 despite explicitlaterupdate; exactsubstring is insufficient.",
+          "truth_basis": "New invented specification, not prior challenge, no realworldAPI claim."
+        },
+        "arms": {
+          "baseline": {
+            "attempted": false,
+            "status": "not_run",
+            "raw_verdict": null,
+            "raw_check": null,
+            "after_apply_audit_kept": null,
+            "world_false_raw_supported": false,
+            "unknown_scope_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": [],
+            "coverage_complete_and_kept": false,
+            "attempt_error": null
+          },
+          "candidate": {
+            "attempted": false,
+            "status": "not_run",
+            "raw_verdict": null,
+            "raw_check": null,
+            "after_apply_audit_kept": null,
+            "world_false_raw_supported": false,
+            "unknown_scope_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": [],
+            "coverage_complete_and_kept": false,
+            "attempt_error": null
+          }
+        }
+      },
+      {
+        "id": "S07",
+        "cohort": "new_synthetic_challenge8",
+        "claim": "If durable is true, flush waits for the journal to be persisted before returning.",
+        "frozen_gold": {
+          "supported_truth": "supported",
+          "own_semantic_faithfulness": "faithful_conditional_paraphrase",
+          "query_coverage": {
+            "conditions": [
+              "For durableTrue, journal persistence precedes return"
+            ],
+            "supported_indices": [
+              0
+            ],
+            "complete": true
+          },
+          "reason": "Correct conditional paraphrase; no need exactwording ordate for timelessAPIguarantee.",
+          "truth_basis": "New invented specification, not prior challenge, no realworldAPI claim."
+        },
+        "arms": {
+          "baseline": {
+            "attempted": false,
+            "status": "not_run",
+            "raw_verdict": null,
+            "raw_check": null,
+            "after_apply_audit_kept": null,
+            "world_false_raw_supported": false,
+            "unknown_scope_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": [],
+            "coverage_complete_and_kept": false,
+            "attempt_error": null
+          },
+          "candidate": {
+            "attempted": false,
+            "status": "not_run",
+            "raw_verdict": null,
+            "raw_check": null,
+            "after_apply_audit_kept": null,
+            "world_false_raw_supported": false,
+            "unknown_scope_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": [],
+            "coverage_complete_and_kept": false,
+            "attempt_error": null
+          }
+        }
+      },
+      {
+        "id": "S08",
+        "cohort": "new_synthetic_challenge8",
+        "claim": "For either durable setting, flush always returns only after the journal is persisted.",
+        "frozen_gold": {
+          "supported_truth": "false",
+          "own_semantic_faithfulness": "condition_dropped_modal_strengthened",
+          "query_coverage": {
+            "conditions": [
+              "For durableTrue, journal persistence precedes return"
+            ],
+            "supported_indices": [
+              0
+            ],
+            "complete": true
+          },
+          "reason": "Unconditionalguarantee contradicts Falsebranch; true-subcondition querycoverage does not make wholeclaimtrue.",
+          "truth_basis": "New invented specification, not prior challenge, no realworldAPI claim."
+        },
+        "arms": {
+          "baseline": {
+            "attempted": false,
+            "status": "not_run",
+            "raw_verdict": null,
+            "raw_check": null,
+            "after_apply_audit_kept": null,
+            "world_false_raw_supported": false,
+            "unknown_scope_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": [],
+            "coverage_complete_and_kept": false,
+            "attempt_error": null
+          },
+          "candidate": {
+            "attempted": false,
+            "status": "not_run",
+            "raw_verdict": null,
+            "raw_check": null,
+            "after_apply_audit_kept": null,
+            "world_false_raw_supported": false,
+            "unknown_scope_raw_supported": false,
+            "world_false_after_kept": false,
+            "unknown_after_kept": false,
+            "positive_retained": false,
+            "query_conditions_retained": [],
+            "coverage_complete_and_kept": false,
+            "attempt_error": null
+          }
+        }
+      }
+    ],
+    "aggregate_by_cohort": {
+      "historical_development8": {
+        "baseline": {
+          "fixed_rows": 8,
+          "attempted_rows": 4,
+          "accepted_application_rows": 4,
+          "not_run_ids": [
+            "H05",
+            "H06",
+            "H07",
+            "H08"
+          ],
+          "application_error_ids": [],
+          "raw_supported_ids": [
+            "H02",
+            "H04"
+          ],
+          "after_kept_ids": [
+            "H02",
+            "H04"
+          ],
+          "false_raw_supported_ids": [],
+          "false_after_kept_ids": [],
+          "unknown_raw_supported_ids": [
+            "H04"
+          ],
+          "unknown_after_kept_ids": [
+            "H04"
+          ],
+          "frozen_positive_rows": 5,
+          "attempted_positive_rows": 1,
+          "positive_retained_ids": [
+            "H02"
+          ],
+          "fixed_query_conditions": 15,
+          "query_conditions_retained": 2,
+          "complete_query_answers_kept_ids": [
+            "H02"
+          ]
+        },
+        "candidate": {
+          "fixed_rows": 8,
+          "attempted_rows": 4,
+          "accepted_application_rows": 4,
+          "not_run_ids": [
+            "H05",
+            "H06",
+            "H07",
+            "H08"
+          ],
+          "application_error_ids": [],
+          "raw_supported_ids": [
+            "H01",
+            "H04"
+          ],
+          "after_kept_ids": [
+            "H01",
+            "H04"
+          ],
+          "false_raw_supported_ids": [
+            "H01"
+          ],
+          "false_after_kept_ids": [
+            "H01"
+          ],
+          "unknown_raw_supported_ids": [
+            "H04"
+          ],
+          "unknown_after_kept_ids": [
+            "H04"
+          ],
+          "frozen_positive_rows": 5,
+          "attempted_positive_rows": 1,
+          "positive_retained_ids": [],
+          "fixed_query_conditions": 15,
+          "query_conditions_retained": 1,
+          "complete_query_answers_kept_ids": []
+        }
+      },
+      "new_synthetic_challenge8": {
+        "baseline": {
+          "fixed_rows": 8,
+          "attempted_rows": 3,
+          "accepted_application_rows": 3,
+          "not_run_ids": [
+            "S04",
+            "S05",
+            "S06",
+            "S07",
+            "S08"
+          ],
+          "application_error_ids": [],
+          "raw_supported_ids": [
+            "S01",
+            "S03"
+          ],
+          "after_kept_ids": [
+            "S01",
+            "S03"
+          ],
+          "false_raw_supported_ids": [],
+          "false_after_kept_ids": [],
+          "unknown_raw_supported_ids": [],
+          "unknown_after_kept_ids": [],
+          "frozen_positive_rows": 4,
+          "attempted_positive_rows": 2,
+          "positive_retained_ids": [
+            "S01",
+            "S03"
+          ],
+          "fixed_query_conditions": 10,
+          "query_conditions_retained": 2,
+          "complete_query_answers_kept_ids": [
+            "S01",
+            "S03"
+          ]
+        },
+        "candidate": {
+          "fixed_rows": 8,
+          "attempted_rows": 4,
+          "accepted_application_rows": 3,
+          "not_run_ids": [
+            "S05",
+            "S06",
+            "S07",
+            "S08"
+          ],
+          "application_error_ids": [
+            "S04"
+          ],
+          "raw_supported_ids": [
+            "S01",
+            "S03"
+          ],
+          "after_kept_ids": [
+            "S01",
+            "S03"
+          ],
+          "false_raw_supported_ids": [],
+          "false_after_kept_ids": [],
+          "unknown_raw_supported_ids": [],
+          "unknown_after_kept_ids": [],
+          "frozen_positive_rows": 4,
+          "attempted_positive_rows": 2,
+          "positive_retained_ids": [
+            "S01",
+            "S03"
+          ],
+          "fixed_query_conditions": 10,
+          "query_conditions_retained": 2,
+          "complete_query_answers_kept_ids": [
+            "S01",
+            "S03"
+          ]
+        }
+      }
+    },
+    "paired_comparisons_by_cohort": {
+      "historical_development8": {
+        "paired_accepted_rows": 4,
+        "new_false_kept_ids": [
+          "H01"
+        ],
+        "new_unknown_kept_ids": [],
+        "positive_retention_loss_ids": [
+          "H02"
+        ],
+        "positive_retention_gain_ids": [],
+        "query_condition_losses": [
+          "H02.1"
+        ]
+      },
+      "new_synthetic_challenge8": {
+        "paired_accepted_rows": 3,
+        "new_false_kept_ids": [],
+        "new_unknown_kept_ids": [],
+        "positive_retention_loss_ids": [],
+        "positive_retention_gain_ids": [],
+        "query_condition_losses": []
+      }
+    },
+    "gates": {
+      "no_new_false_and_no_positive_loss": "FAILED",
+      "new_false_kept_ids": [
+        "H01"
+      ],
+      "positive_retention_loss_ids": [
+        "H02"
+      ],
+      "completed_campaign": "NO: stopped first postresponse validationerror at S04candidate; no retry"
+    },
+    "integrity": "Allfreeze hashes passed. All16 prepared contexts <=3chunks <=1200Unicode each, exact originalsourcecontext slices and frozen ownquote preserved. Every15attemptcontext_text equals preparedcontext, both armsidenticaldata; prompt/schema differ bydesign. Syntheticexample.org URLs not fetched.",
+    "diagnosis": [
+      "CandidateH01 structuredaxes allsupported yet falseunconditionalpresorting retained; sourcefalseclaim is not repaired by axisformat.",
+      "CandidateH02 rejects knowncorrect conditionalparaphrase, baselinekeeps; stricter is not automatically better.",
+      "H04 botharms keep unresolved defaultscope: unknown is not confirmedtruth or a repairedfact.",
+      "S04candidate rawverdict unsupported correctly targetswrongversion, but reports conflict between snippets of SAMEdocument. Existingdistinctdocumentconflictguard rejects application. Keep=null, not a successfulapplicationrejection or providerrefusal.",
+      "H03bothreject but reasons mention incomplete wholequestionfacets/separateexecutable rather than reliably diagnosing outdatedmandatorycustombuild; correctdecision alone does not establish robust causalreasoning."
+    ],
+    "limits": [
+      "Only7pairedcases (H4/S3) plusunpairedS04candidate response; remaining17callsnotrun",
+      "Historical8 known developmentcontrols; synthetic8 newconstructedclauses not empiricalwebholdout; cohortsneverpooled",
+      "Positive andcondition denominators fixed8rowspercohort; conditional attempted/applicablecounts separatelyreported",
+      "Rawverdictsupported andafterapply kept are separate; no conversionfailedresponse to safeabstention",
+      "No429 in thisnewcampaign, all15knownproviderusage available; prior429campaign not resumed",
+      "Single stochasticcalls andchangedprompt/schema; no isolatedmechanism causalclaim",
+      "No sourceHTTP or evaluationLLMcalls by reviewer; no runtimefixes or retries"
+    ],
+    "source_http_calls": 0,
+    "reviewer_model_calls": 0
+  },
+  "gold_review": {
+    "schema": "scoped-audit-gold-review-v1",
+    "reviewer": "/root/search_evaluator",
+    "verdict": "FROZEN_BEFORE_MODEL_CALLS",
+    "created_utc": "2026-11-18T07:41:40.157950+00:00",
+    "inputs_sha256": "44f18fc0929e7d0611b1b19162423b30ba475be6cdbb28b876c20cb1b5f5c49d",
+    "cases_sha256": "271eb09df047a544ff052b7a72aa994f8de4a54ccaff70a8f67d83a1b65e9cde",
+    "historical_development_rows": 8,
+    "new_synthetic_challenge_rows": 8,
+    "source_integrity": "All16 originalquotes exactUnicode slices of supplied boundedcontexts; no reselection or quoteextension; allcontextwindows below24k. Allnew8fictionaltexts are new and distinct from previousC01-C08fixtures.",
+    "limits": [
+      "No externalHTTP/LLM in preparation",
+      "Historical8known developmentcontrols not unseen",
+      "New8synthetic object/version/time/conditional pairs not empiricalwebholdout",
+      "S05truebutqueryirrelevant; S08falsebutquerysubconditiontrue axesmustremainseparate",
+      "HistoricalH04defaultclaim unresolvedscope; do not forceunknowninto falseworldwithoutqualification",
+      "Frozen before execution; authorsblindness declared process, not cryptographicproof"
+    ],
+    "policy": {
+      "separate_axes": [
+        "supported_truth",
+        "own_semantic_faithfulness",
+        "query_coverage"
+      ],
+      "truth_not_quote_identity": "Exactquote from false/stale source not truthguarantee; negativeobject/version/time/modal scopes evaluated against full savedcontext and frozenofficialgold.",
+      "querycoverage": "Faithful truthfulstatement can still not answer query. S05 deliberatelypositivehistoricaltruth with currentquerycoverage0; S08falsewholeclaim can contain true querysubcondition.",
+      "fixed_denominators": "16fixedcases;8percohort; skipped/refused remain not_run, never safe-refusal semanticwins; no poolingcohorts.",
+      "stop": "Any provider refusal/429 stops newcampaign; no retry, noold429retry, modelcallbudget max32 and noHTTPsourcefetch.",
+      "author_boundary": "A/Bauthors may see interfacecontract, not challengeinput/gold until implementationcommit."
+    }
+  },
+  "code_review": {
+    "reviewer": "/root/search_fresh",
+    "stage": "pre-call module design review; driver/fixture transform pending",
+    "reviewed_commit": "8977801aa0e57637cf87dea7f729da952f064393 + root uncommitted serde_json::to_value audit serialization fix",
+    "scope": "src/research_scope_audit_experiment.rs and real research_tests/model/research callers; no compilation, external or modelcalls",
+    "findings": [
+      {
+        "id": "SA01",
+        "priority": "P2",
+        "location": "src/research_scope_audit_experiment.rs after save audit.json, before content deserialization",
+        "title": "Validate completion envelope before accepting an audit",
+        "problem": "Model.complete checks HTTP success and absence of body.error only. Experiment directly parses response.choices[0].message.content. A valid audit JSON returned with finish_reason length/content_filter or nonnull refusal/tool_calls can be silently accepted rather than stopping campaign. Content validity alone is not completion validity.",
+        "smallest_fix": "Require one completed choice with finish_reason stop, refusal null/absent and no tool_calls before deserialization; preserve audit.json, return error without retry on failed check. Root driver must stop on nonzero test outcome.",
+        "verification": "Static control-flow trace through model.rs complete/research_call and experiment; no modelcalls. Add local saved-envelope checks, no live probe required."
+      }
+    ],
+    "confirmed": [
+      {
+        "area": "No runtime switch",
+        "evidence": "Only added module is under research.rs cfg(test)->research_tests.rs->scope_audit_experiment. Ignored explicit test requires env; no CLI/MCP runtime route added."
+      },
+      {
+        "area": "No sourceHTTP or retry",
+        "evidence": "old_session uses Fake backend; audit_context/Session.apply_audit are local. Explicit test calls Model.research_call once directly, bypassing Session.generate repair loop. Model.complete sends one POST; research_call does not add retries. Uses same hardcoded DeepSeek, max3072tokens,90seconds for botharms. Prepare returns before reading key or constructing Model."
+      },
+      {
+        "area": "Adapter",
+        "evidence": "unknown/unsupported on any axis rejects; own_quote_support must be supported and cannot be not_applicable. Non-own axes allow not_applicable by prompt contract. Exact IDs set and duplicate count validated before converting to ordinary Audit. apply_audit rechecks IDs/reasons/conflict bounds and recalculates missing after rejection."
+      },
+      {
+        "area": "Context comparability",
+        "evidence": "Botharms send fixture.context_text bytes unchanged; fresh regenerated context is used only for validation/visible sets. question/facets/claims/sources/rejection_context compared; frozenbytes cap24000. Prompt/schema differ by design. Campaign must freeze full fixture.context_text and assert identical SHA perpair in driver; other serializedcontext fields are trusted root fixture inputs."
+      },
+      {
+        "area": "Limits",
+        "evidence": "No source fulltext worldtruth checker. Appended scope prompt changes audit schema only; retain actual claim/evidence, no extractive rewrite. Rejecting unknown is conservative adapterbehavior, not evidence of semantic correctness. Exact evidence can still be stale/false."
+      }
+    ],
+    "pending": [
+      "Formal acceptance bundle not reviewed yet; this update is code/evidence review only."
+    ],
+    "verdict": "Test-only protocol/evidence integrity verified for partial15/32 campaign; semantic candidate gateFAILED, no product/runtime acceptance.",
+    "network_calls": 0,
+    "model_calls": 0,
+    "source_edits": false,
+    "final_pre_live_review": {
+      "SA01": "addressed: common validate_response applied after saving raw audit and before any parsing; finish_reason stop, refusal absent/null/empty, toolcalls absent/null/empty required for botharms. Content/schema/ID failures also return nonzero without repair.",
+      "reviewed_files": [
+        "src/research_scope_audit_experiment.rs",
+        "scripts/scoped-audit-2026-11-18.py",
+        "runs/scoped-audit-2026-11-18/freeze.json",
+        "all16 preparedfixtures+context_text"
+      ],
+      "integrity": "Independently verified all24freezefileSHA including copiedtestbinary; all16question/claim/originalquote globaloffsets preserved in preparedcontext. Historical8 source title/publication/documentversion restored consistently from real URL+fulltextSHA. Preparedcontext within24000characters. Synthetic URL is explicit example.org dummy and never fetched.",
+      "driver_controls": [
+        "Frozen exactbinary and source/fixture hashes verified before anycall. Same fixture.context_text passed byte-for-byte to both arms; prompts/schema intentionally differ.",
+        "Max32admitted attempts;600second admission budget with105reserve and3secondspacing; H/S interleaved and arm order alternates.",
+        "Exactly one subprocess/test perattempt; Rust module exactly one Model.research_call; no repairloop or sourceHTTP.",
+        "Any nonzero exit, timeout, missingresult, error.json stops campaign. stop/summary file precludes continuation; exclusive attempts.mkdir also blocks accidental resume after unexpected Python failure.",
+        "Error/body logs preserved without serializing rawtransport details/credentials. Failedresponseenvelope saved audit.json; no unsupported silent retry."
+      ],
+      "remaining_limits": [
+        "600s is conservative admission control, not an external hardwall. Reservecheck precedes3secondsleep; at pathological105s runner timeout maximum elapsed can exceed wall by about3seconds pluslocaloverhead. Actual Modeltimeout90s gives slack. Not a productlatency guarantee.",
+        "Order alternates byinterleaved index, so historicalcases startbaseline and synthetic startcandidate. Cohorts must remain separate; cannot claim balanced order within eachcohort.",
+        "Context intentionally uses ownquotechunk+up-to1200charactersbefore/after, not full originalsource. This evaluates bounded saved audit, not fullretrievalorworldtruth. Sourcecontext can lack authoritative later updates.",
+        "Freeze currentidentity verified; process timing/blindness and prior discardedcompile/panic checks remain historical evidence, not rerun successes.",
+        "Python assertions disabled by-O; reviewed ordinarypython3 path only. No cargo build/test or external/modelcalls executed by reviewer."
+      ],
+      "blocking_findings": [],
+      "verdict": "Ready for the explicitly authorized bounded saved-material campaign; not product/runtime acceptance."
+    },
+    "postrun_review": {
+      "stage": "Saved code/evidence review after stop; no new external/model/cargo calls",
+      "attempts": 15,
+      "planned_calls": 32,
+      "raw_provider_responses": 15,
+      "successful_apply_audit_results": 14,
+      "complete_pairs": 7,
+      "unpaired_attempt": "S04-candidate",
+      "not_run_calls": 17,
+      "freeze_check": "All24freezeSHA independently reverified after run; frozen implementation/fixtures unchanged.",
+      "raw_checks": [
+        "Exactly15audit.json under entire RUN and15distinct attempted(case,arm) directories; no duplicatepairs or trailingattempt after S04candidate. Summary records15orderedattempts, last exit101; stop.json records same firstfailedattempt.",
+        "Every15raw model request uses exact preparedcontextbytes and max_tokens3072/modeldeepseek-v4.1-flash-1017; provider responses finish_reasonstop. Pair contexts identical. All15successful providerresponses includeusage; summed knowncost0.001348336USD matchescollectedstats.",
+        "14resultfiles correspond to fourteenexit0; S04candidate has rawaudit+adapted audit but noresult. Seven complete appliedpairs: H01,H02,H03,H04,S01,S02,S03.",
+        "Tracked feasibility/scoped-audit-results-2026-11-18.json exactly equals rawcollected.json. Seed stop/no-resume logic from revieweddriver unchanged; no rerun invoked by reviewer."
+      ],
+      "stop_analysis": {
+        "case": "S04-candidate",
+        "provider_status": "Completed valid JSON response; not429/notproviderrefusal",
+        "raw_axis_decision": "own_quote_support/object_version/conditions unsupported",
+        "application_error": "conflict requires two distinct document bodies",
+        "cause": "Returned conflict points to S1P1 and S1P2 from same S1 document/version, violating existing apply_audit independent-document conflict contract.",
+        "correct_interpretation": "Application failed; kept/null is unresolved application result, not a successful rejection, safeabstention or semantic win. Stop immediately and preserve remaining17callsnotrun. No retry performed."
+      },
+      "quality_crosscheck": {
+        "historical_H01": "baseline removed claim; candidate kept knownfalse unconditional presortclaim. Structured axes allsupported do not repair source/worldtruth.",
+        "historical_H02": "baselinekept correctconditionalclaim; candidateremoved it, positive-retentionloss.",
+        "historical_H04": "Botharmskept unresolvedscopeclaim; unknown is not confirmedtruth.",
+        "verdict": "no-new-false/no-positive-loss gateFAILED. Small partial saved-material experiment; not productqualification."
+      },
+      "component_placeholder_warning": {
+        "model_calls": "Session.model_calls=[] and budget.used.generations0 are old_session loader bookkeeping placeholders. Actual externalcall count comes from15runnerattempts/rawrequests/usage, not Sessioncounters.",
+        "source_text_hash": "result.sources[].text_hash empty is loaderplaceholder. FullsourceSHA/provenance checked separately using frozeninputs and originalsource metadata. Do not treat empty hash as verified runtime extraction provenance.",
+        "budgets": "Result180s/MCPbudgetlimits are Session defaults, not actual90s audit call/campaign deadlines. Per-call limits established by inspected Model.research_call and raw3072-token payload; global32cap checked separately.",
+        "general": "No sourceHTTP path in experimentmodule/caller; synthetic URLs never fetched. This is not live MCPretrieval or end-to-end productionpipe evidence."
+      },
+      "residuals": [
+        "Per-snapshot artifacts demonstrate15savedresponses; cannot prove provider-side hidden infrastructure behavior beyond code/requestevidence. No application-level retry loop exists.",
+        "Evaluatorsemanticjudgments remain separate independentassessment; this review confirms cited raw keep/drop/application distinctions and preserves failures.",
+        "No new429 in this campaign; old stopped campaign not resumed. All15rawproviderresponses validenvelope."
+      ],
+      "verdict": "Run followed reviewed stop/call/provenance protocol and honestly failed qualitygate. No codechange/retry to rescue failedS04 permitted within this frozen campaign."
+    }
+  }
+}

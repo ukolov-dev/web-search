@@ -1,0 +1,388 @@
+{
+  "schema": "scoped-audit-cases-v1",
+  "created_utc": "2026-11-18T07:41:40.157425+00:00",
+  "scope": "Offline source material; frozen before bounded new same-model audit campaign. Historicaldevelopment8 and new syntheticchallenge8 separately; not generalqualification.",
+  "inputs_path": "runs/scoped-audit-2026-11-18/inputs.json",
+  "inputs_sha256": "44f18fc0929e7d0611b1b19162423b30ba475be6cdbb28b876c20cb1b5f5c49d",
+  "source_hash_manifest": "Perrow full_source_text_sha256 and source_context_sha256 in inputs; rawfulltexts retained priorwitnesscorpus, newboundedcontexts copied here.",
+  "policy": {
+    "separate_axes": [
+      "supported_truth",
+      "own_semantic_faithfulness",
+      "query_coverage"
+    ],
+    "truth_not_quote_identity": "Exactquote from false/stale source not truthguarantee; negativeobject/version/time/modal scopes evaluated against full savedcontext and frozenofficialgold.",
+    "querycoverage": "Faithful truthfulstatement can still not answer query. S05 deliberatelypositivehistoricaltruth with currentquerycoverage0; S08falsewholeclaim can contain true querysubcondition.",
+    "fixed_denominators": "16fixedcases;8percohort; skipped/refused remain not_run, never safe-refusal semanticwins; no poolingcohorts.",
+    "stop": "Any provider refusal/429 stops newcampaign; no retry, noold429retry, modelcallbudget max32 and noHTTPsourcefetch.",
+    "author_boundary": "A/Bauthors may see interfacecontract, not challengeinput/gold until implementationcommit."
+  },
+  "cases": [
+    {
+      "id": "H01",
+      "cohort": "historical_development8",
+      "synthetic": false,
+      "source_url": "https://pynative.com/python-itertools-functools-exercises/",
+      "original_recorded_case_claim": "T01/A4",
+      "original_inputs_sha256": "de8adc7961e2e3f0bda5d6bd7178274fa31b5e8a273d72f7d1954e6f52bc79a0",
+      "full_source_text_sha256": "33a114efe3323711140ef93fff99389ece79b84050400f71122121a7486921f8",
+      "gold": {
+        "supported_truth": "false",
+        "own_semantic_faithfulness": "scope_lost",
+        "query_coverage": {
+          "conditions": [
+            "Consecutive equalkey grouping",
+            "Sorting required only to collect all equal keys globally"
+          ],
+          "supported_indices": [],
+          "complete": false
+        },
+        "reason": "Unconditional mandatory presorting is false; unsorted consecutive grouping valid.",
+        "truth_basis": "Prior independently frozen officialprimarygold; narrow ownquote/sourcecontext review. No newonlineverification."
+      }
+    },
+    {
+      "id": "H02",
+      "cohort": "historical_development8",
+      "synthetic": false,
+      "source_url": "https://pynative.com/python-itertools-functools-exercises/",
+      "original_recorded_case_claim": "T01/A3",
+      "original_inputs_sha256": "de8adc7961e2e3f0bda5d6bd7178274fa31b5e8a273d72f7d1954e6f52bc79a0",
+      "full_source_text_sha256": "33a114efe3323711140ef93fff99389ece79b84050400f71122121a7486921f8",
+      "gold": {
+        "supported_truth": "supported",
+        "own_semantic_faithfulness": "faithful",
+        "query_coverage": {
+          "conditions": [
+            "To collect all equal keys together, sort/group by samekey first"
+          ],
+          "supported_indices": [
+            0
+          ],
+          "complete": true
+        },
+        "reason": "Conditional all-equal-key collection preparation is correct.",
+        "truth_basis": "Prior independently frozen officialprimarygold; narrow ownquote/sourcecontext review. No newonlineverification."
+      }
+    },
+    {
+      "id": "H03",
+      "cohort": "historical_development8",
+      "synthetic": false,
+      "source_url": "https://realpython.com/python313-free-threading-jit/",
+      "original_recorded_case_claim": "N04/A1",
+      "original_inputs_sha256": "de8adc7961e2e3f0bda5d6bd7178274fa31b5e8a273d72f7d1954e6f52bc79a0",
+      "full_source_text_sha256": "c8e05186df923e9303b55a0b7c6fbe8cc2542c531476bcbb811625c274f2133b",
+      "gold": {
+        "supported_truth": "false",
+        "own_semantic_faithfulness": "historical_scope_lost",
+        "query_coverage": {
+          "conditions": [
+            "3.13 experimental",
+            "Not enabled by default",
+            "Separate free-threaded build/executable; official installer builds available"
+          ],
+          "supported_indices": [
+            0
+          ],
+          "complete": false
+        },
+        "reason": "Mandatory custom build and absence of official binaries false for pinned3.13; exact stale thirdparty sentence not truth.",
+        "truth_basis": "Prior independently frozen officialprimarygold; narrow ownquote/sourcecontext review. No newonlineverification."
+      }
+    },
+    {
+      "id": "H04",
+      "cohort": "historical_development8",
+      "synthetic": false,
+      "source_url": "https://www.sqlite.org/foreignkeys.html",
+      "original_recorded_case_claim": "N03/A1",
+      "original_inputs_sha256": "de8adc7961e2e3f0bda5d6bd7178274fa31b5e8a273d72f7d1954e6f52bc79a0",
+      "full_source_text_sha256": "f703ad25cc5ece23e9a9c7710391a25cd6705a3aaa4a82e5c347f061b015b8f4",
+      "gold": {
+        "supported_truth": "unknown",
+        "own_semantic_faithfulness": "default_scope_unresolved",
+        "query_coverage": {
+          "conditions": [
+            "Perconnection setting",
+            "Do not assume universal compiled default"
+          ],
+          "supported_indices": [
+            0
+          ],
+          "complete": false
+        },
+        "reason": "Perconnection correct; unqualified default does not establish allcompileddefaults.",
+        "truth_basis": "Prior independently frozen officialprimarygold; narrow ownquote/sourcecontext review. No newonlineverification."
+      }
+    },
+    {
+      "id": "H05",
+      "cohort": "historical_development8",
+      "synthetic": false,
+      "source_url": "https://www.sqlite.org/foreignkeys.html",
+      "original_recorded_case_claim": "N03/A2",
+      "original_inputs_sha256": "de8adc7961e2e3f0bda5d6bd7178274fa31b5e8a273d72f7d1954e6f52bc79a0",
+      "full_source_text_sha256": "f703ad25cc5ece23e9a9c7710391a25cd6705a3aaa4a82e5c347f061b015b8f4",
+      "gold": {
+        "supported_truth": "supported",
+        "own_semantic_faithfulness": "faithful",
+        "query_coverage": {
+          "conditions": [
+            "Changing within multistatement transaction has no effect",
+            "No error is returned"
+          ],
+          "supported_indices": [],
+          "complete": false
+        },
+        "reason": "Cannot change in transaction true but quote lacks following silentnoeffect sentence.",
+        "truth_basis": "Prior independently frozen officialprimarygold; narrow ownquote/sourcecontext review. No newonlineverification."
+      }
+    },
+    {
+      "id": "H06",
+      "cohort": "historical_development8",
+      "synthetic": false,
+      "source_url": "https://doc.rust-lang.org/std/option/enum.Option.html",
+      "original_recorded_case_claim": "N01/A1",
+      "original_inputs_sha256": "de8adc7961e2e3f0bda5d6bd7178274fa31b5e8a273d72f7d1954e6f52bc79a0",
+      "full_source_text_sha256": "e0930611bfc382d31279acc42f17d189b43388ccb12b1d45b6ee2d2431a9a7c2",
+      "gold": {
+        "supported_truth": "supported",
+        "own_semantic_faithfulness": "faithful",
+        "query_coverage": {
+          "conditions": [
+            "unwrap_or eagerly evaluates default evenSome",
+            "unwrap_or_else fallback lazily executed onlyNone"
+          ],
+          "supported_indices": [
+            0
+          ],
+          "complete": false
+        },
+        "reason": "Eagerdefault evenSome and lazyelse distinction valid.",
+        "truth_basis": "Prior independently frozen officialprimarygold; narrow ownquote/sourcecontext review. No newonlineverification."
+      }
+    },
+    {
+      "id": "H07",
+      "cohort": "historical_development8",
+      "synthetic": false,
+      "source_url": "https://doc.rust-lang.org/std/option/enum.Option.html",
+      "original_recorded_case_claim": "N01/A2",
+      "original_inputs_sha256": "de8adc7961e2e3f0bda5d6bd7178274fa31b5e8a273d72f7d1954e6f52bc79a0",
+      "full_source_text_sha256": "e0930611bfc382d31279acc42f17d189b43388ccb12b1d45b6ee2d2431a9a7c2",
+      "gold": {
+        "supported_truth": "supported",
+        "own_semantic_faithfulness": "faithful",
+        "query_coverage": {
+          "conditions": [
+            "unwrap_or_else returns Some value or computes fallbackclosure onlyNone"
+          ],
+          "supported_indices": [
+            0
+          ],
+          "complete": true
+        },
+        "reason": "Some return versus closure alternative supports lazyfallback; retain Option/method binding.",
+        "truth_basis": "Prior independently frozen officialprimarygold; narrow ownquote/sourcecontext review. No newonlineverification."
+      }
+    },
+    {
+      "id": "H08",
+      "cohort": "historical_development8",
+      "synthetic": false,
+      "source_url": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/",
+      "original_recorded_case_claim": "F01/A1",
+      "original_inputs_sha256": "de8adc7961e2e3f0bda5d6bd7178274fa31b5e8a273d72f7d1954e6f52bc79a0",
+      "full_source_text_sha256": "4d37d0afa76797b011055bf115ffedba81604f115a028345e7bd8f7bcada00c7",
+      "gold": {
+        "supported_truth": "supported",
+        "own_semantic_faithfulness": "faithful",
+        "query_coverage": {
+          "conditions": [
+            "Fallback changes unit() to never!",
+            "Pre2024 editions2015/2018/2021;2024already"
+          ],
+          "supported_indices": [
+            0,
+            1
+          ],
+          "complete": true
+        },
+        "reason": "Qualified direction and editions fully supported.",
+        "truth_basis": "Prior independently frozen officialprimarygold; narrow ownquote/sourcecontext review. No newonlineverification."
+      }
+    },
+    {
+      "id": "S01",
+      "pair_id": "object",
+      "cohort": "new_synthetic_challenge8",
+      "synthetic": true,
+      "full_source_text_sha256": "11ea0ac8433cc7bf095884e30546448183ff9cbcc732dd12cb7b81b23b30d31f",
+      "gold": {
+        "supported_truth": "supported",
+        "own_semantic_faithfulness": "faithful",
+        "query_coverage": {
+          "conditions": [
+            "Lantern.decode accepts byte sequence"
+          ],
+          "supported_indices": [
+            0
+          ],
+          "complete": true
+        },
+        "reason": "Timeless positive: no date required; methodidentity and input match.",
+        "truth_basis": "New invented specification, not prior challenge, no realworldAPI claim."
+      }
+    },
+    {
+      "id": "S02",
+      "pair_id": "object",
+      "cohort": "new_synthetic_challenge8",
+      "synthetic": true,
+      "full_source_text_sha256": "11ea0ac8433cc7bf095884e30546448183ff9cbcc732dd12cb7b81b23b30d31f",
+      "gold": {
+        "supported_truth": "false",
+        "own_semantic_faithfulness": "wrong_method",
+        "query_coverage": {
+          "conditions": [
+            "Lantern.decode accepts byte sequence"
+          ],
+          "supported_indices": [],
+          "complete": false
+        },
+        "reason": "Quote belongs decode, not encode; inputdirection swapped. Same fragment provenance does not establish objectidentity.",
+        "truth_basis": "New invented specification, not prior challenge, no realworldAPI claim."
+      }
+    },
+    {
+      "id": "S03",
+      "pair_id": "version",
+      "cohort": "new_synthetic_challenge8",
+      "synthetic": true,
+      "full_source_text_sha256": "68b3dc912586f92c16a2dc72961b96fee3a5bc24db5f38ba51b2256e3b213e27",
+      "gold": {
+        "supported_truth": "supported",
+        "own_semantic_faithfulness": "faithful",
+        "query_coverage": {
+          "conditions": [
+            "Version2.1 accepts UTF8 bytes only"
+          ],
+          "supported_indices": [
+            0
+          ],
+          "complete": true
+        },
+        "reason": "Correct pinnedversion; do not reject simply because version3.0 text is nearby.",
+        "truth_basis": "New invented specification, not prior challenge, no realworldAPI claim."
+      }
+    },
+    {
+      "id": "S04",
+      "pair_id": "version",
+      "cohort": "new_synthetic_challenge8",
+      "synthetic": true,
+      "full_source_text_sha256": "68b3dc912586f92c16a2dc72961b96fee3a5bc24db5f38ba51b2256e3b213e27",
+      "gold": {
+        "supported_truth": "false",
+        "own_semantic_faithfulness": "wrong_version",
+        "query_coverage": {
+          "conditions": [
+            "Version2.1 accepts UTF8 bytes only"
+          ],
+          "supported_indices": [],
+          "complete": false
+        },
+        "reason": "Exact quote is inside3.0clause; transferring to2.1 contradicts explicitversionboundary.",
+        "truth_basis": "New invented specification, not prior challenge, no realworldAPI claim."
+      }
+    },
+    {
+      "id": "S05",
+      "pair_id": "time",
+      "cohort": "new_synthetic_challenge8",
+      "synthetic": true,
+      "full_source_text_sha256": "c68e101508f346f5538b26e4f57a7e0ccf6113e1bca644b6a438f46fd957687c",
+      "gold": {
+        "supported_truth": "supported",
+        "own_semantic_faithfulness": "faithful_historical_but_not_queryanswer",
+        "query_coverage": {
+          "conditions": [
+            "Stable1.0 offers optional officialinstaller",
+            "Local compilation not required in stable1.0"
+          ],
+          "supported_indices": [],
+          "complete": false
+        },
+        "reason": "Correct explicitly dated historical statement must not be calledfalse merely because queryasks2025. But covers none of currentreleaseconditions.",
+        "truth_basis": "New invented specification, not prior challenge, no realworldAPI claim."
+      }
+    },
+    {
+      "id": "S06",
+      "pair_id": "time",
+      "cohort": "new_synthetic_challenge8",
+      "synthetic": true,
+      "full_source_text_sha256": "c68e101508f346f5538b26e4f57a7e0ccf6113e1bca644b6a438f46fd957687c",
+      "gold": {
+        "supported_truth": "false",
+        "own_semantic_faithfulness": "historical_now_transfer",
+        "query_coverage": {
+          "conditions": [
+            "Stable1.0 offers optional officialinstaller",
+            "Local compilation not required in stable1.0"
+          ],
+          "supported_indices": [],
+          "complete": false
+        },
+        "reason": "Oldbeta predicate transferred to stablecurrent1.0 despite explicitlaterupdate; exactsubstring is insufficient.",
+        "truth_basis": "New invented specification, not prior challenge, no realworldAPI claim."
+      }
+    },
+    {
+      "id": "S07",
+      "pair_id": "condition_modal",
+      "cohort": "new_synthetic_challenge8",
+      "synthetic": true,
+      "full_source_text_sha256": "99c07f6e7e25e57b0451bbc864d4d51bf7aa58361068ae15cba3ee5cedb23ffc",
+      "gold": {
+        "supported_truth": "supported",
+        "own_semantic_faithfulness": "faithful_conditional_paraphrase",
+        "query_coverage": {
+          "conditions": [
+            "For durableTrue, journal persistence precedes return"
+          ],
+          "supported_indices": [
+            0
+          ],
+          "complete": true
+        },
+        "reason": "Correct conditional paraphrase; no need exactwording ordate for timelessAPIguarantee.",
+        "truth_basis": "New invented specification, not prior challenge, no realworldAPI claim."
+      }
+    },
+    {
+      "id": "S08",
+      "pair_id": "condition_modal",
+      "cohort": "new_synthetic_challenge8",
+      "synthetic": true,
+      "full_source_text_sha256": "99c07f6e7e25e57b0451bbc864d4d51bf7aa58361068ae15cba3ee5cedb23ffc",
+      "gold": {
+        "supported_truth": "false",
+        "own_semantic_faithfulness": "condition_dropped_modal_strengthened",
+        "query_coverage": {
+          "conditions": [
+            "For durableTrue, journal persistence precedes return"
+          ],
+          "supported_indices": [
+            0
+          ],
+          "complete": true
+        },
+        "reason": "Unconditionalguarantee contradicts Falsebranch; true-subcondition querycoverage does not make wholeclaimtrue.",
+        "truth_basis": "New invented specification, not prior challenge, no realworldAPI claim."
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "search-repair-new4-v1",
+  "created": "2026-11-18",
+  "scope": "Four new source-aware development cases, 9 conditions, frozen before live baseline/candidate. Not original20; twoPythonfamiliescases, softwareonly, no no-evidencecase.",
+  "cases": [
+    {
+      "id": "N01",
+      "language": "en",
+      "question": "In Rust Option, is the default expression in unwrap_or evaluated even for Some, and how does unwrap_or_else differ?",
+      "query": "In Rust Option, is the default expression in unwrap_or evaluated even for Some, and how does unwrap_or_else differ?",
+      "gold_aspects": [
+        "unwrap_or evaluates its default argument eagerly, including when Option is Some.",
+        "unwrap_or_else evaluates its fallback lazily, via a closure when None."
+      ],
+      "reference_urls": [
+        "https://doc.rust-lang.org/std/option/enum.Option.html"
+      ],
+      "primary_quote": "Arguments passed to unwrap_or are eagerly evaluated; unwrap_or_else is lazily evaluated."
+    },
+    {
+      "id": "N02",
+      "language": "ru",
+      "question": "В Python str.strip(chars) удаляет целую строку-префикс или набор символов, и с каких концов строки?",
+      "query": "В Python str.strip(chars) удаляет целую строку-префикс или набор символов, и с каких концов строки?",
+      "gold_aspects": [
+        "chars задаёт набор символов, а не целый префикс или суффикс.",
+        "Удаление идёт с обоих концов строки, пока встречаются символы из набора."
+      ],
+      "reference_urls": [
+        "https://docs.python.org/3/library/stdtypes.html#str.strip"
+      ],
+      "primary_quote": "The chars argument is not a prefix or suffix; rather, all combinations of its values are stripped."
+    },
+    {
+      "id": "N03",
+      "language": "en",
+      "question": "For SQLite foreign keys, must PRAGMA foreign_keys be set per connection, and what happens if it is changed inside a multi-statement transaction?",
+      "query": "For SQLite foreign keys, must PRAGMA foreign_keys be set per connection, and what happens if it is changed inside a multi-statement transaction?",
+      "gold_aspects": [
+        "Enable/configure foreign key enforcement separately on each database connection; do not assume a universal compiled default.",
+        "Changing foreign_keys within an active multi-statement transaction has no effect and does not return an error."
+      ],
+      "reference_urls": [
+        "https://sqlite.org/foreignkeys.html"
+      ],
+      "primary_quote": "It is not possible to enable or disable foreign key constraints in the middle of a multi-statement transaction; it simply has no effect."
+    },
+    {
+      "id": "N04",
+      "language": "ru",
+      "question": "В CPython 3.13 free-threaded режим без GIL экспериментальный или стабильный, включён ли по умолчанию и нужен ли отдельный executable?",
+      "query": "В CPython 3.13 free-threaded режим без GIL экспериментальный или стабильный, включён ли по умолчанию и нужен ли отдельный executable?",
+      "gold_aspects": [
+        "В CPython3.13 free-threaded режим экспериментальный, не следует переносить статус другой версии.",
+        "Режим не включён по умолчанию.",
+        "Нужен отдельный executable/free-threaded build, обычно python3.13t; допустим исходный build --disable-gil."
+      ],
+      "reference_urls": [
+        "https://docs.python.org/3.13/whatsnew/3.13.html"
+      ],
+      "primary_quote": "This is an experimental feature and therefore is not enabled by default. The free-threaded mode requires a different executable."
+    }
+  ]
+}

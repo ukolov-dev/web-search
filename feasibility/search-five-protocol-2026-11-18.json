@@ -1,0 +1,21 @@
+{
+  "schema": "five-agent-evaluation-v1",
+  "scope": "Exploratory source-aware8questions,18atomicconditions; fiveagents in2waves due3childslotlimit",
+  "tools": [
+    "search",
+    "research"
+  ],
+  "calls": 16,
+  "source": "Seznam only; allothers historicalexclusions respected",
+  "ordering": "Allsearch8 then research8, twoinitiallyemptygroupcaches, cumulativehostrefusals, eachquestiononce/group",
+  "search": "Agentauthoredshortquery, max_results10. Independent0/1/2relevance; fixedP@5,MRRfirstdirect,hit@10,three-direct-pages diagnostic; not body support",
+  "research": "Originalquestion+languageonly. GoldURLsnotpassed. Independent per-requiredcondition ownreturnedwitnesses; exactfalse/unknownIDs, completed!=correct",
+  "budgets": "research2forms4SERP4reads4Qwen6gen180s24kcontext32KiBstructured; no browser/externalsearchscrapeAPI",
+  "stop": "No sourcechallenge/CAPTCHA/auth/rate retries, no overwrites, modelrefusal/runnererror stop; no runtimechangesmidrun",
+  "limits": [
+    "KnownPythonfamily4cases; freshcasesbothsoftware",
+    "RUsourceplanetarium browsersecondreadtimeout disclosed",
+    "No pure no-evidencecase; safe-refusal not scored",
+    "No original20/twoday/generalqualification"
+  ]
+}

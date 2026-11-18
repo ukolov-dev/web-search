@@ -1,0 +1,473 @@
+{
+  "schema": 1,
+  "scope": "full_native_Session_execute_test_harness_not_MCP_transport",
+  "implementation_commit": "4e9ab74",
+  "freeze_sha256": "d114875209b4ccbd1a77fb3d5e0672b88199a28048bc6a3a68e1f733145ecd80",
+  "freeze": {
+    "files": {
+      "feasibility/primary-search-cases-2026-11-18.json": "2263132f4c61df5f9a8cbc65f7181c1f024da1bcb29352ccc509011b0c735438",
+      "runs/primary-search-2026-11-18/gold-review.json": "2edf4a89d7379ede4b0308f95f058d01cf8d2e2760210b10c9870994820d32d1",
+      "runs/primary-search-2026-11-18/seed-ledger.json": "7b4c2503437c7b1b06e6628d87205535fd4679c170b04e350f09b16224e829b4",
+      "runs/primary-search-2026-11-18/bin/research-tests": "59c409db7cd55af16c0709afcc7240a2b7221010688efc83672ef72105e69850",
+      "scripts/primary-search-2026-11-18.py": "10b9175195b1ef110d61dd544252d4ca7d96e9f505621240fe5359af62d411cc",
+      "Cargo.toml": "8d675ba8e189e2c3969284d4f3b270becb1dc7d6df3f2e09c45e3f0a6f2a2330",
+      "Cargo.lock": "1c136d608c2c87f0e2df9157c1f127f0eab300b2193ed5d3e2f6dc86ee484bc9",
+      "runs/primary-search-2026-11-18/prepared/C01.json": "93a1db961cfc845a21c98a26135967f99e6e81acfc571dbf1dda73d43eabfe69",
+      "runs/primary-search-2026-11-18/prepared/C02.json": "50cab512a8f9572dd0c7b0a635c7aaefe7b5cb65e8d5d525501705ccb2305b37",
+      "runs/primary-search-2026-11-18/prepared/P01.json": "354adebb7987ddfa3b0a854c314ef7536e0c95783016933e4829949fbabd8ae3",
+      "runs/primary-search-2026-11-18/prepared/P02.json": "06567c7528a29fedf04e945d7e57dc87836a342f34286e380f75591b09914ee6",
+      "runs/primary-search-2026-11-18/prepared/P03.json": "f8f0dd30a3a6ae78cc99c2b1971e65ff2d81c3ddaf07e1be0d7cab7eb9ad580e",
+      "runs/primary-search-2026-11-18/prepared/P04.json": "c4cc60c3d1fda4201985ae7ee4099242ae7b14bf2e01741232b086b056f4c21f",
+      "src/benchmark.rs": "a986628eac97c65ba3b96138f1b24cf52a0807c5b2208ec5abce7a1d4f515500",
+      "src/browser.rs": "4bf08cddf944b6a1f7640b7350d69e88a5d9f93772099ea64f759dceb4ec807b",
+      "src/cache.rs": "550185965e556aea218cfcddeb8ca30d04995c9da9669d1c96ee6637f3dc9687",
+      "src/coverage_replay.rs": "2050a0b807c7942ad2f49ceed450cd5cf0df7f6a5153cb27f50d7bae4dd744e0",
+      "src/discover.rs": "bf23fee3cdf642c9c5e3a45350481779b33d4ea5377d7148e912d905c188f7e0",
+      "src/evidence.rs": "653028a1775e2292ff3138ec702aca07abe66f42eb21b2ceb73ad41812e76acd",
+      "src/evidence_probe.rs": "4be45e9118fc627b53c9a2d819b3a5258cdf97e483eb777789e803ff2d6a7c4c",
+      "src/firecrawl_benchmark.rs": "649385f0b44ba58fdaebc839e9c9264594fa13bce35ee03f550f7517d6b3e2cb",
+      "src/main.rs": "3168ff1486e048c919a627ad1565d9103971c9bb216ebe0c73750e046215d6f6",
+      "src/mcp.rs": "b4cedfe4c486075915bf552f54b7b50edcfcf552070025ed4d2c7e3f0c021b8f",
+      "src/model.rs": "80f0a957e27f5c48bcc8fbdcf9cec1c902a3f683db2b8c9642b0e793a8d44b00",
+      "src/net.rs": "18926f679b1f84eb6cdf593821529b03a24ca57ab5bb4da9f1bd95cbadc58426",
+      "src/news.rs": "cdc4585b56621b3fdc76c3394be9fb18e4fe12a29f67461e113257122e196c0f",
+      "src/news_search.rs": "e9b6acb717e2846a023796df8c0fed1dec1f93c84e6c5edbe04f0e6caebf4808",
+      "src/policy.rs": "131d1be0283b38e218cd5b40428cadf5c1557152d730c3a57b71bb5a2abaf4db",
+      "src/reliability_benchmark.rs": "8e7b1b31a83c4cf95888ef57d9f2325aff955b44fb86768b9221263d803ddc0f",
+      "src/reranker.rs": "116ed9e2231299ef00e0bb5bb828d15da40d28610489585bf95d0ba7f2045fe3",
+      "src/reranker_benchmark.rs": "d2341b43d554121b0c8e79889cdf114a8f6018ac230e52ef2f911c5545e0fe61",
+      "src/rescue.rs": "995883142aea40927bf915f7b5b11c19cb331e4fa4c117125ded54e88c0bffc1",
+      "src/research.rs": "72b33d190e28cd1f201bf3a2b82d4273d611be9bb2be800bdb7a27993fb414c3",
+      "src/research_inference_experiment.rs": "3c51c90e214c387be9c12bf921e9899ed44d31bf31c895c63af37b11357ad9ed",
+      "src/research_primary_search_experiment.rs": "0a880f2da195764e836e0098d69fa7c4dd7908973ebae33654da495cbffa3eae",
+      "src/research_scope_audit_experiment.rs": "513e3fdb1be90679bf5cb198755d31eba1a6b7305d5b8b2bd2c03145a54b6619",
+      "src/research_section_pipeline_experiment.rs": "12f37f2fd3cf178a732b089dfa8eb4f21a3ca22150484d7fbc5505639b006dc9",
+      "src/research_tests.rs": "587884e41c2a98352694c460cd66b968f6c88c684f0a7052532f7793534b3131",
+      "src/search.rs": "b90b3978adf515b80680b8da85e93b801895dbe61ea369d47ee8144dd2619957"
+    },
+    "qwen_settings_sha256": "dd6905ad61a4313ab5fe25070bde832582682a1140dd90e3ad6368bd1cc0807d",
+    "order": [
+      [
+        "C01",
+        "baseline"
+      ],
+      [
+        "C01",
+        "candidate"
+      ],
+      [
+        "P01",
+        "candidate"
+      ],
+      [
+        "P01",
+        "baseline"
+      ],
+      [
+        "P02",
+        "baseline"
+      ],
+      [
+        "P02",
+        "candidate"
+      ],
+      [
+        "P03",
+        "candidate"
+      ],
+      [
+        "P03",
+        "baseline"
+      ],
+      [
+        "P04",
+        "baseline"
+      ],
+      [
+        "P04",
+        "candidate"
+      ],
+      [
+        "C02",
+        "candidate"
+      ],
+      [
+        "C02",
+        "baseline"
+      ]
+    ],
+    "model": "deepseek/deepseek-v4.1-flash-1017",
+    "pace_seconds": 10,
+    "limits_per_trial": {
+      "seconds": 180,
+      "generations": 6,
+      "documents": 4,
+      "serp": 4,
+      "qwen": 4
+    },
+    "limits_campaign": {
+      "trials": 12,
+      "generations": 72,
+      "documents": 48,
+      "serp": 48,
+      "qwen": 48
+    },
+    "scope": "Native Session.execute including planner/search/extract/Qwen/draft/audit; no seeded URL/plan/body. Shared guard/pacing for both arms. Only candidate read-order differs. No MCP transport intervention."
+  },
+  "summary": {
+    "planned": 12,
+    "attempts": [
+      {
+        "case": "C01",
+        "arm": "baseline",
+        "exit_code": 101,
+        "status": "partial",
+        "stop_reason": "model_error",
+        "used": {
+          "documents": 2,
+          "forms": 1,
+          "generations": 2,
+          "qwen": 1,
+          "serp": 1
+        },
+        "error": "first_error",
+        "elapsed_ms": 22668
+      }
+    ],
+    "not_run": [
+      [
+        "C01",
+        "candidate"
+      ],
+      [
+        "P01",
+        "candidate"
+      ],
+      [
+        "P01",
+        "baseline"
+      ],
+      [
+        "P02",
+        "baseline"
+      ],
+      [
+        "P02",
+        "candidate"
+      ],
+      [
+        "P03",
+        "candidate"
+      ],
+      [
+        "P03",
+        "baseline"
+      ],
+      [
+        "P04",
+        "baseline"
+      ],
+      [
+        "P04",
+        "candidate"
+      ],
+      [
+        "C02",
+        "candidate"
+      ],
+      [
+        "C02",
+        "baseline"
+      ]
+    ],
+    "stop": "first_error_no_retry",
+    "retries": 0,
+    "recorded_budget_used": {
+      "generations": 2,
+      "documents": 2,
+      "serp": 1,
+      "qwen": 1
+    },
+    "unrecorded_usage_possible": false
+  },
+  "rows": [
+    {
+      "case": "C01",
+      "arm": "baseline",
+      "result": {
+        "actions": [
+          {
+            "action": "serp",
+            "engine": "seznam",
+            "error": null,
+            "form": 1,
+            "results": 10
+          },
+          {
+            "action": "serp",
+            "engine": "naver",
+            "form": 1,
+            "status": "source_disabled"
+          },
+          {
+            "action": "read",
+            "attempt": 1,
+            "eligible": true,
+            "source_id": "S1"
+          },
+          {
+            "action": "qwen",
+            "cache_hit": null,
+            "source_id": "S1",
+            "status": "ok"
+          },
+          {
+            "action": "read",
+            "attempt": 2,
+            "error": "fetch_timeout",
+            "url": "https://www.pythonpool.com/pythons-itertools-groupby/"
+          }
+        ],
+        "answer": "",
+        "budget": {
+          "limits": {
+            "browser": 0,
+            "documents": 4,
+            "forms": 2,
+            "generations": 6,
+            "output_bytes": 32768,
+            "qwen": 4,
+            "seconds": 180,
+            "serp": 4,
+            "source_context_chars": 24000
+          },
+          "remaining": {
+            "documents": 2,
+            "forms": 1,
+            "generations": 4,
+            "milliseconds": 157354,
+            "qwen": 3,
+            "serp": 3
+          },
+          "used": {
+            "documents": 2,
+            "forms": 1,
+            "generations": 2,
+            "qwen": 1,
+            "serp": 1
+          }
+        },
+        "cache": {
+          "enabled": false,
+          "errors": 0,
+          "extractions": 1,
+          "hits": 0,
+          "http_reads": 3,
+          "misses": 0,
+          "qwen_calls": 1,
+          "refresh": false,
+          "writes": 0
+        },
+        "claims": [],
+        "conflicts": [],
+        "elapsed_ms": 22645,
+        "error": "fetch_timeout",
+        "facets": [
+          "Does itertools.groupby group equal keys anywhere in input or only consecutive runs?",
+          "How should input be prepared to collect all equal keys together per docs?"
+        ],
+        "independence": "distinct document bodies; publisher independence not established",
+        "missing": [
+          0,
+          1
+        ],
+        "model_calls": [
+          {
+            "elapsed_ms": 2920,
+            "stage": "plan",
+            "status": "returned",
+            "usage": {
+              "completion_tokens": 49,
+              "completion_tokens_details": {
+                "audio_tokens": 0,
+                "image_tokens": 0,
+                "reasoning_tokens": 0
+              },
+              "cost": 4.25e-05,
+              "cost_details": {
+                "upstream_inference_completions_cost": 2.45e-05,
+                "upstream_inference_cost": 4.25e-05,
+                "upstream_inference_prompt_cost": 1.8e-05
+              },
+              "is_byok": false,
+              "prompt_tokens": 500,
+              "prompt_tokens_details": {
+                "audio_tokens": 0,
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "video_tokens": 0
+              },
+              "total_tokens": 549
+            }
+          },
+          {
+            "cost_known": false,
+            "stage": "draft",
+            "status": "error"
+          }
+        ],
+        "news_window": null,
+        "offset_unit": "Unicode code points; answer ranges exclude app-added citation suffixes",
+        "output_limited": false,
+        "query_forms": [
+          "itertools.groupby documentation consecutive keys sort"
+        ],
+        "request_id": "8566976fbe1a9be041ab0b085fd34e62ecd2b06362883193c6156afef3a5bc77",
+        "semantic_verification": "experimental separate model audit; not an independent truth guarantee",
+        "sources": [
+          {
+            "cache": {
+              "allowed": true,
+              "checked_at": 1795003386,
+              "etag": "\"6afd61fc-2af9a\"",
+              "expires_at": 1795089786,
+              "fetched_at": 1795003386,
+              "hit": false,
+              "last_modified": "Wed, 18 Nov 2026 08:29:48 GMT",
+              "request_url": "https://docs.python.org/3/library/itertools.html"
+            },
+            "document_version": "97fa66f49c74185844d000de7e6f1826dbb7224004a87b3ab008e584a17a5a58",
+            "eligibility": "read_body",
+            "eligible": true,
+            "extraction": {
+              "method": "semantic_main",
+              "scope": "main",
+              "truncated": false
+            },
+            "id": "S1",
+            "parent_url": null,
+            "publication": {
+              "date_status": "missing",
+              "kind": "feed",
+              "published_date": null,
+              "witness_count": 0,
+              "witnesses": [],
+              "witnesses_limited": false
+            },
+            "text_hash": "ebd1403107661fc806caf02e6e3dd287e15f1eee21e13f22b975c3a9e26ddbf1",
+            "title": "itertools — Functions creating iterators for efficient looping¶",
+            "url": "https://docs.python.org/3/library/itertools.html"
+          }
+        ],
+        "status": "partial",
+        "stop_reason": "model_error",
+        "sufficiency": {
+          "audit_completed": false,
+          "cited_distinct_documents": 0,
+          "judge_sufficient": false,
+          "required_distinct_documents": 2
+        },
+        "untrusted_content": true
+      },
+      "experiment": {
+        "arm": "baseline",
+        "halt": "fetch_timeout",
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "oracle_urls": false,
+        "pace_seconds": 10
+      },
+      "result_sha256": "fb17668e7d49ceef1d70125df9079a22dc36354f2d5fb38c4c8bc14870ba1e44"
+    }
+  ],
+  "source_state_after": {
+    "blocked": {
+      "bing": "excluded from fixed protocol",
+      "ddg": "historical challenge; unqualified in this protocol",
+      "mwmbl": "excluded from fixed protocol",
+      "naver": "source_challenge: verification page; no retry"
+    },
+    "document_blocks": {
+      "devessentials.dev": "source_challenge: verification page; no retry",
+      "eur-lex.europa.eu": "HTTP 202",
+      "hermes-agent.nousresearch.com": "source_blocked: no retry in this probe",
+      "learn.microsoft.com": "source_challenge: verification page; no retry",
+      "parallelworks.com": "source_challenge: verification page; no retry",
+      "redis.io": "source_blocked: no retry in this probe",
+      "ria.ru": "source_challenge: verification widget; no retry",
+      "slice-master.co": "source_blocked: no retry in this probe",
+      "tfl.gov.uk": "source_blocked: no retry in this probe",
+      "vimeo.com": "source_challenge: connection verification page observed in frozen R01; no retry",
+      "www.atlantic.net": "source_blocked: no retry in this probe",
+      "www.ebay.com": "source_blocked: no retry in this probe",
+      "www.eracomp.cz": "source_challenge: verification widget; no retry",
+      "www.ltmuseum.co.uk": "source_blocked: no retry in this probe",
+      "www.mdpi.com": "source_blocked: no retry in this probe",
+      "www.mujrozhlas.cz": "source_blocked: no retry in this probe",
+      "www.npmjs.com": "source_blocked: no retry in this probe",
+      "www.webstaurantstore.com": "source_blocked: no retry in this probe"
+    }
+  },
+  "seed_ledger": {
+    "blocked": {
+      "bing": "excluded from fixed protocol",
+      "ddg": "historical challenge; unqualified in this protocol",
+      "mwmbl": "excluded from fixed protocol",
+      "naver": "source_challenge: verification page; no retry"
+    },
+    "document_blocks": {
+      "devessentials.dev": "source_challenge: verification page; no retry",
+      "eur-lex.europa.eu": "HTTP 202",
+      "hermes-agent.nousresearch.com": "source_blocked: no retry in this probe",
+      "learn.microsoft.com": "source_challenge: verification page; no retry",
+      "parallelworks.com": "source_challenge: verification page; no retry",
+      "redis.io": "source_blocked: no retry in this probe",
+      "ria.ru": "source_challenge: verification widget; no retry",
+      "slice-master.co": "source_blocked: no retry in this probe",
+      "tfl.gov.uk": "source_blocked: no retry in this probe",
+      "vimeo.com": "source_challenge: connection verification page observed in frozen R01; no retry",
+      "www.atlantic.net": "source_blocked: no retry in this probe",
+      "www.ebay.com": "source_blocked: no retry in this probe",
+      "www.eracomp.cz": "source_challenge: verification widget; no retry",
+      "www.ltmuseum.co.uk": "source_blocked: no retry in this probe",
+      "www.mdpi.com": "source_blocked: no retry in this probe",
+      "www.mujrozhlas.cz": "source_blocked: no retry in this probe",
+      "www.npmjs.com": "source_blocked: no retry in this probe",
+      "www.webstaurantstore.com": "source_blocked: no retry in this probe"
+    }
+  },
+  "refusals_preserved": true,
+  "model_transport_posts": 1,
+  "model_responses": 1,
+  "model_generation_budget_slots_consumed": 2,
+  "generation_not_sent": [
+    {
+      "stage": "draft",
+      "reason": "Guarded rejected persistent fetch_timeout before polling Saved.generate; Session reserves generation slot first."
+    }
+  ],
+  "known_cost_usd": 4.25e-05,
+  "unknown_transport_usage_attempts": 0,
+  "serp_logical_attempts": 1,
+  "document_read_attempts": 2,
+  "document_http200_captures": 1,
+  "document_fetch_timeout": 1,
+  "local_qwen_calls": 1,
+  "paired_comparisons": 0,
+  "gate": "NOT_EVALUABLE",
+  "source_failure": {
+    "url": "https://www.pythonpool.com/pythons-itertools-groupby/",
+    "reason": "fetch_timeout",
+    "http_status": null,
+    "retry": false,
+    "persistent_host_block_added_by_native": false
+  },
+  "new4_status": "not_run_all8arms",
+  "old2_status": "C01baselineerror_only_3arms_not_run",
+  "runtime_candidate_enabled": false,
+  "release_sha256": "85e24099683f72885f668366bbbbdacba192cf89664e4a88c11b14b1725c5a5c",
+  "release_or_publish": false,
+  "gold_reference_distinct_pages": 4,
+  "campaign_exclusions": {
+    "www.pythonpool.com": "fetch_timeout in C01 baseline; no retry in this campaign; consult report before any new live probe"
+  }
+}

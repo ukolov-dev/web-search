@@ -1045,6 +1045,7 @@ async fn live_backend_uses_reranker_instead_of_generative_model() -> Result<()> 
     });
     let mut blocked = HashMap::new();
     let mut hosts = HashMap::new();
+    let mut url_blocks = HashMap::new();
     let mut live = Live {
         model: &model,
         blocked: &mut blocked,
@@ -1054,6 +1055,8 @@ async fn live_backend_uses_reranker_instead_of_generative_model() -> Result<()> 
         qwen_enabled: true,
         read_sequence: 0,
         serp_sequence: 0,
+        observed_read_urls: Vec::new(),
+        document_url_blocks: &mut url_blocks,
     };
     let (ranges, trace) = tokio::time::timeout(
         Duration::from_secs(5),
@@ -2237,3 +2240,234 @@ mod inference_experiment;
 
 #[path = "research_section_pipeline_experiment.rs"]
 mod section_pipeline_experiment;
+
+#[test]
+fn dotted_api_documentation_candidates_keep_language_and_symbol() {
+    assert!(api_documentation_candidate(
+        "Python pathlib.Path.resolve documentation",
+        "https://docs.python.org/3/library/pathlib.html#pathlib.Path.resolve"
+    ));
+    let question = "According to Python itertools.groupby documentation, what does it group?";
+    assert!(api_documentation_candidate(
+        question,
+        "https://docs.python.org/3/library/itertools.html#itertools.groupby"
+    ));
+    assert!(api_documentation_candidate(
+        question,
+        "https://docs.python.org/3/library/itertools.html"
+    ));
+    for url in [
+        "https://docs.rs/itertools/latest/itertools/",
+        "https://docs.python.org/3/library/itertools.html#itertools.product",
+        "https://docs.python.org/3/library/functools.html",
+    ] {
+        assert!(!api_documentation_candidate(question, url), "{url}");
+    }
+    assert!(!api_documentation_candidate(
+        "Python docs.python.org documentation",
+        "https://docs.python.org/3/library/docs.html"
+    ));
+}
+
+#[test]
+fn release_target_mismatch_cannot_close_facets_after_supported_audit() -> Result<()> {
+    assert_eq!(
+        release_versions("Engine v1.2.3"),
+        HashSet::from(["1.2.3".into()])
+    );
+    assert!(release_versions("2026.11.18 18.11.2026 HTTP/2.0 RFC 9110").is_empty());
+
+    let input: Input = serde_json::from_value(
+        json!({"question":"For Engine 8.2.0b2, is it production ready and when is the next beta?"}),
+    )?;
+    let fixture = json!({"context":{
+        "facets":["production readiness", "next beta"],
+        "sources":[{"id":"S1","url_preview":"https://example.org/release","title":"Engine 8.2.0b1","eligible":true,"publication":null}],
+        "chunks":[{"id":"S1P1","source_id":"S1","document_version":"v1","start":0,"end":100,"text":"This preview is not production ready. The next beta, Engine 8.2.0b2, is scheduled for November 10."}]
+    }});
+    let mut session = old_session(&input, &fixture);
+    let visible = HashSet::from(["S1P1".into()]);
+    let claim = |text: &str, quote: &str, facet| json!({"text":text,"kind":"fact","rationale":"","facets":[facet],"evidence":[{"chunk_id":"S1P1","quote":quote}]});
+    let draft = json!({"claims":[
+        claim("It is not production ready.", "This preview is not production ready.",0),
+        claim("The next beta is scheduled for November 10.", "The next beta, Engine 8.2.0b2, is scheduled for November 10.",1)
+    ],"next":{"facet":0,"query":""}});
+    let judge: Audit = serde_json::from_value(audit(2, &[], true))?;
+    session.apply_audit(
+        serde_json::from_value(draft.clone())?,
+        judge,
+        &visible,
+        &visible,
+    )?;
+    assert!(
+        session.claims.is_empty(),
+        "a stale release title cannot establish the requested release's status or next date"
+    );
+    assert_eq!(session.missing, vec![0, 1]);
+    for question in [
+        "Compare Engine 8.2.0b1 with 8.2.0b2.",
+        "For Engine 8.2, what is the documented preview policy?",
+        "What changed on 2026.11.18 in HTTP/2.0 and RFC 9110?",
+    ] {
+        let other: Input = serde_json::from_value(json!({"question":question}))?;
+        let other_session = old_session(&other, &fixture);
+        let old_draft: Draft = serde_json::from_value(draft.clone())?;
+        assert!(
+            other_session.release_scope_matches(&old_draft.claims[0]),
+            "{question}"
+        );
+    }
+    session.sources[0].title = "Engine release notes".into();
+    let old_draft: Draft = serde_json::from_value(draft.clone())?;
+    assert!(
+        session.release_scope_matches(&old_draft.claims[0]),
+        "an unversioned title is not a mismatch"
+    );
+    session.sources[0].title = "Engine 8.2.0b2".into();
+    session.apply_audit(
+        serde_json::from_value(draft)?,
+        serde_json::from_value(audit(2, &[], true))?,
+        &visible,
+        &visible,
+    )?;
+    assert_eq!(
+        session.claims.len(),
+        2,
+        "matching release remains eligible for semantic audit"
+    );
+    Ok(())
+}
+
+#[path = "research_scope_audit_experiment.rs"]
+mod scope_audit_experiment;
+
+#[path = "research_primary_search_experiment.rs"]
+pub(super) mod primary_search_experiment;
+
+#[tokio::test]
+async fn audit_advisory_reason_overflow_must_not_drop_verified_claims() -> Result<()> {
+    let fixture: Value = serde_json::from_str(include_str!(
+        "../tests/fixtures/research/oversized-audit-reason.json"
+    ))?;
+    for reason in [
+        fixture["reason"].as_str().unwrap().to_owned(),
+        "🧪".repeat(201),
+        " ".repeat(250) + "Explanation",
+    ] {
+        let input = input();
+        let mut session = Session::new(&input, Fake::new(), None);
+        session.plan.facets = vec!["Condition".into()];
+        for i in 1..=2 {
+            session.queue.push_back(Target {
+                url: format!("https://source{i}.example/doc"),
+                parent: None,
+            });
+        }
+        session.read_round().await?;
+        let draft: Draft = serde_json::from_value(
+            json!({"claims":[claim("Подтверждённое условие.",0,&[1,2])],"next":{"facet":0,"query":""}}),
+        )?;
+        let mut raw = audit(1, &[], true);
+        raw["checks"][0]["reason"] = json!(reason);
+        let parsed: Audit = serde_json::from_value(raw.clone())?;
+        let visible = session.chunks.iter().map(|c| c.id.clone()).collect();
+        assert!(session.apply_audit(draft, parsed, &visible, &visible)?.0);
+        assert_eq!(session.claims.len(), 1);
+        assert_eq!(raw["checks"][0]["reason"], reason);
+    }
+    Ok(())
+}
+
+#[tokio::test]
+async fn audit_advisory_guards_and_schema_remain_strict() -> Result<()> {
+    let schema = serde_json::to_value(schemars::schema_for!(Check))?;
+    assert_eq!(schema["properties"]["reason"]["maxLength"], 200);
+    for mode in [
+        "empty",
+        "blank",
+        "late_control",
+        "unknown_id",
+        "invalid_verdict",
+        "bad_quote",
+        "unsupported",
+    ] {
+        let input = input();
+        let mut session = Session::new(&input, Fake::new(), None);
+        session.plan.facets = vec!["Condition".into()];
+        for i in 1..=2 {
+            session.queue.push_back(Target {
+                url: format!("https://source{i}.example/doc"),
+                parent: None,
+            });
+        }
+        session.read_round().await?;
+        let mut draft: Draft = serde_json::from_value(
+            json!({"claims":[claim("Подтверждённое условие.",0,&[1,2])],"next":{"facet":0,"query":""}}),
+        )?;
+        let mut raw = audit(1, &[], true);
+        raw["checks"][0]["reason"] = json!("x".repeat(201));
+        match mode {
+            "empty" => raw["checks"][0]["reason"] = json!(""),
+            "blank" => raw["checks"][0]["reason"] = json!(" ".repeat(201)),
+            "late_control" => raw["checks"][0]["reason"] = json!("x".repeat(201) + "\n"),
+            "unknown_id" => raw["checks"][0]["id"] = json!("A99"),
+            "invalid_verdict" => raw["checks"][0]["verdict"] = json!("probably"),
+            "bad_quote" => {
+                draft.claims[0].evidence[0].quote = "This quote is not in the source.".into()
+            }
+            "unsupported" => raw["checks"][0]["verdict"] = json!("unsupported"),
+            _ => unreachable!(),
+        }
+        let parsed = serde_json::from_value::<Audit>(raw);
+        if mode == "invalid_verdict" {
+            assert!(parsed.is_err());
+            continue;
+        }
+        let visible = session.chunks.iter().map(|c| c.id.clone()).collect();
+        let result = session.apply_audit(draft, parsed?, &visible, &visible);
+        if mode == "unsupported" {
+            assert!(!result?.0);
+            assert!(session.claims.is_empty());
+        } else {
+            assert!(result.is_err(), "{mode}");
+        }
+    }
+    Ok(())
+}
+
+#[test]
+#[ignore = "explicit offline replay of saved source-aware C01 audit; no model or network"]
+fn audit_advisory_saved_201_replay() -> Result<()> {
+    let path = std::path::PathBuf::from(std::env::var("AUDIT_REASON_REPLAY_INPUT")?);
+    let output = std::path::PathBuf::from(std::env::var("AUDIT_REASON_REPLAY_OUTPUT")?);
+    ensure!(!output.exists(), "replay output already exists");
+    let fixture: Value = serde_json::from_slice(&std::fs::read(path)?)?;
+    let input: Input = serde_json::from_value(
+        json!({"question":fixture["context"]["question"],"language":fixture["context"]["language"]}),
+    )?;
+    let mut session = old_session(&input, &fixture);
+    let draft: Draft = serde_json::from_value(fixture["draft"].clone())?;
+    let audit: Audit = serde_json::from_value(fixture["audit"].clone())?;
+    assert_eq!(audit.checks[3].reason.chars().count(), 201);
+    assert_eq!(draft.claims.len(), 4);
+    let (_, visible, conflicts) = session.audit_context(&draft.claims)?;
+    assert!(
+        !session.apply_audit(draft, audit, &visible, &conflicts)?.0,
+        "one document still cannot satisfy two-document gate"
+    );
+    let result = session.result("offline_replay", None);
+    assert_eq!(result["claims"].as_array().unwrap().len(), 4);
+    assert_eq!(result["sufficiency"]["cited_distinct_documents"], 1);
+    assert_eq!(result["sufficiency"]["audit_completed"], true);
+    assert_eq!(result["status"], "partial");
+    assert!(
+        session
+            .actions
+            .iter()
+            .any(|a| a["action"] == "audit_reason_truncated"
+                && a["original_chars"] == 201
+                && a["retained_chars"] == 200)
+    );
+    crate::save(&output, &result)?;
+    Ok(())
+}

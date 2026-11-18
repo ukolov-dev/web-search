@@ -1,0 +1,79 @@
+{
+  "schema": "resource-links-live-verification-v1",
+  "head": "5bea40d47c3b5a5a1e7a407463b7f15852a2bee8",
+  "trials": [
+    {
+      "trial": "trial",
+      "tool_status": "partial",
+      "claims": 0,
+      "resource_links": 0,
+      "witnesses_verified": 0,
+      "link_uris": [],
+      "wire_sha256": "cd4aaafdfd0e077980a59a21d373b6c424e75c07035d87324dbd05acacb0809f",
+      "payload_unchanged": true,
+      "content_bytes": 7840,
+      "used": {
+        "documents": 4,
+        "forms": 2,
+        "generations": 3,
+        "qwen": 1,
+        "serp": 2
+      }
+    },
+    {
+      "trial": "trial-positive",
+      "tool_status": "partial",
+      "claims": 3,
+      "resource_links": 1,
+      "witnesses_verified": 3,
+      "link_uris": [
+        "https://doc.rust-lang.org/std/vec/struct.Vec.html"
+      ],
+      "wire_sha256": "9e871acff30af97148e783acb8e3f78ab6c2def7db99c0afdd5a1880d5b121d6",
+      "payload_unchanged": true,
+      "content_bytes": 11705,
+      "used": {
+        "documents": 4,
+        "forms": 1,
+        "generations": 5,
+        "qwen": 1,
+        "serp": 1
+      }
+    }
+  ],
+  "ci": {
+    "44248807599": "success",
+    "44248800739": "success"
+  },
+  "client_ui": "not_run: inspected available client connections, web-search not connected; no settings changed",
+  "source_state_after": {
+    "blocked": {
+      "bing": "excluded from fixed protocol",
+      "ddg": "historical challenge; unqualified in this protocol",
+      "mwmbl": "excluded from fixed protocol",
+      "naver": "source_challenge: verification page; no retry"
+    },
+    "document_blocks": {
+      "devessentials.dev": "source_challenge: verification page; no retry",
+      "eur-lex.europa.eu": "HTTP 202",
+      "hermes-agent.nousresearch.com": "source_blocked: no retry in this probe",
+      "learn.microsoft.com": "source_challenge: verification page; no retry",
+      "parallelworks.com": "source_challenge: verification page; no retry",
+      "redis.io": "source_blocked: no retry in this probe",
+      "slice-master.co": "source_blocked: no retry in this probe",
+      "tfl.gov.uk": "source_blocked: no retry in this probe",
+      "www.atlantic.net": "source_blocked: no retry in this probe",
+      "www.ebay.com": "source_blocked: no retry in this probe",
+      "www.eracomp.cz": "source_challenge: verification widget; no retry",
+      "www.ltmuseum.co.uk": "source_blocked: no retry in this probe",
+      "www.mdpi.com": "source_blocked: no retry in this probe",
+      "www.mujrozhlas.cz": "source_blocked: no retry in this probe",
+      "www.webstaurantstore.com": "source_blocked: no retry in this probe"
+    }
+  },
+  "limits": [
+    "Two bounded live cases, not truth/retrieval qualification",
+    "Exactquotes mechanically verified; no independent new semantic verdict",
+    "Clientvisualrendering notverified"
+  ]
+}

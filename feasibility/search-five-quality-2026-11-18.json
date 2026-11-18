@@ -1,0 +1,1361 @@
+{
+  "gold_preflight": {
+    "schema": "gold-preflight-v1",
+    "reviewer": "/root/search_evaluator",
+    "created_utc": "2026-11-18T06:26:57.242740+00:00",
+    "status": "PASS_BEFORE_PRODUCT_INFERENCE",
+    "cases_path": "feasibility/search-five-cases-2026-11-18.json",
+    "cases_sha256": "ca5b10d406286e99d80f87a92d6779db06852fa15b1595308d9b31293bfd7542",
+    "case_count": 8,
+    "required_conditions": 18,
+    "cases": [
+      {
+        "id": "T01",
+        "status": "verified_primary",
+        "conditions": 2,
+        "sources": [
+          "https://docs.python.org/3/library/itertools.html#itertools.groupby"
+        ],
+        "review_note": "Consecutive runs; prior sorting is needed only when collecting all equal keys globally. Official itertools current 3.15.2 lines279-280 independently read."
+      },
+      {
+        "id": "T02",
+        "status": "verified_primary",
+        "conditions": 3,
+        "sources": [
+          "https://docs.python.org/3/library/pathlib.html#pathlib.Path.resolve"
+        ],
+        "review_note": "Official pathlib current3.15.2 lines749-767 independently read; strictFalse unchecked remainder, strictTrue OSError, eliminates dotdot; no universal RuntimeError claim."
+      },
+      {
+        "id": "F01",
+        "status": "verified_primary",
+        "conditions": 2,
+        "sources": [
+          "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/"
+        ],
+        "review_note": "Official Rust release2026-11-12 independently read; unit to never fallback applies pre2024 editions."
+      },
+      {
+        "id": "F02",
+        "status": "verified_primary",
+        "conditions": 3,
+        "sources": [
+          "https://www.python.org/downloads/release/python-3160a2/",
+          "https://blog.python.org/2026/11/python-3160-alpha-2-is-now-available/"
+        ],
+        "review_note": "Official Python release2026-11-10 independently read; developer preview, not production, nextalpha scheduled2026-12-15."
+      },
+      {
+        "id": "R01",
+        "status": "verified_primary",
+        "conditions": 2,
+        "sources": [
+          "https://www.tzar.ru/news/1685953408"
+        ],
+        "review_note": "Official museum full text independently read line24, date2023-05-31 line20: opening2003-05-31 and six tonnes."
+      },
+      {
+        "id": "R02",
+        "status": "verified_primary",
+        "conditions": 2,
+        "sources": [
+          "https://planetarium-moscow.ru/about/exponats/ekspozitsiya-spiral-vremeni-96",
+          "https://www.planetarium-moscow.ru/about/history"
+        ],
+        "review_note": "Timed-out original reference was not retried. Independently read separate official history page and official indexed exposition text: firststone1928-09-23; architects Barshch and Sinyavsky. History page gives matching initials; full names independently visible in indexed exposition text."
+      },
+      {
+        "id": "B01",
+        "status": "verified_primary",
+        "conditions": 2,
+        "sources": [
+          "https://docs.python.org/3.12/library/copy.html"
+        ],
+        "review_note": "Official Python3.12 copy docs independently read lines25-40; shallow retains contained refs; deepcopy recursive subject to type/custom exceptions."
+      },
+      {
+        "id": "B02",
+        "status": "verified_primary",
+        "conditions": 2,
+        "sources": [
+          "https://docs.python.org/3.11/library/tomllib.html"
+        ],
+        "review_note": "Official exact Python3.11 tomllib page independently read lines9,23; readable binaryfile and no writing."
+      }
+    ],
+    "evaluation_policy": {
+      "search": "Score every organic result0/1/2 using query subject/site/version/date. Top1 and reciprocal rank use grade2. Fixed P@5 denominator5, missing positions0. Report at least3 unique grade2 pages separately. SERP candidate relevance is distinct from extracted-body evidence.",
+      "research": "Score every frozen required condition using only quotes returned by that call. Own quote must semantically support exact condition and requested version/date/site. World truth and model/audit verdict alone do not establish support. Enumerate false and unknown claim IDs; separate errors and abstentions. Inspect capture to locate retrieval/extraction/selection/citation/audit miss.",
+      "scope_limits": [
+        "8 new source-aware exploratory cases, not original20 or two-day qualification",
+        "Python-heavy5of8; fresh means two software announcements, not broad news",
+        "No truly no-evidence boundary case: no safe-refusal metric denominator",
+        "Gold validation uses independent public primary reads; product inference must start only after this preflight is frozen",
+        "R02 original-page repeat timeout retained; separate official history corroboration does not erase it"
+      ]
+    }
+  },
+  "search": {
+    "schema": "independent-serp-review-v1",
+    "created_utc": "2026-11-18T06:28:36.402470+00:00",
+    "reviewer": "/root/search_evaluator",
+    "scope": "8new source-aware exploratory, not original20/twodayqualification",
+    "policy": "Frozen0/1/2 rubric on returned title/snippet/URL only. At doubt1. Goldpage body knowledge and later research not used to upgrade broad SERP snippets. Grade2 means direct candidate, not proven answer.",
+    "errata": [
+      "Frozenprotocol4Python wording:4Python documentation cases+1Python release=5Pythonproject cases/8. Protocol bytes untouched."
+    ],
+    "cases": [
+      {
+        "id": "T01",
+        "tool_sha256": "517f6508e1c3c9071efb9454df82d9445c91d2eddccd06122682c3675bca3b8a",
+        "status": "ok",
+        "error": null,
+        "results": [
+          {
+            "position": 1,
+            "snippet": "Use Python itertools.groupby correctly by sorting or pre-grouping records, selecting keys, consuming each group, and avoiding iterator surprises.",
+            "title": "itertools.groupby in Python: Group Consecutive Records",
+            "url": "https://www.pythonpool.com/pythons-itertools-groupby/",
+            "grade": 2,
+            "reason": "Exact groupby consecutive records and sorting/pre-grouping snippet."
+          },
+          {
+            "position": 2,
+            "snippet": "Summary of some of the intermediate-level topics for Python programming - Ujstor/python-intermediate",
+            "title": "GitHub - Ujstor/python-intermediate: Summary of some of the…",
+            "url": "https://github.com/Ujstor/python-intermediate",
+            "grade": 1,
+            "reason": "Broad intermediate Python repository."
+          },
+          {
+            "position": 3,
+            "snippet": "Master Python's itertools module by building practical examples with batched(), pairwise(), groupby(), and more, and learn to think iteratively.",
+            "title": "Python itertools By Example – Real Python",
+            "url": "https://realpython.com/python-itertools/",
+            "grade": 1,
+            "reason": "Broad itertools examples, no grouping-order rule visible."
+          },
+          {
+            "position": 4,
+            "snippet": "This module implements a number of iterator building blocks inspired by constructs from APL, Haskell, and SML. Each has been recast in a form suitable for Python. The module standardizes a core set.",
+            "title": "itertools — Functions creating iterators for efficient looping…",
+            "url": "https://docs.python.org/3/library/itertools.html",
+            "grade": 1,
+            "reason": "Official module page is known gold but SERP snippet does not expose groupby contract."
+          },
+          {
+            "position": 5,
+            "snippet": "Extended itertools port for TypeScript and JavaScript. Provides a huge set of functions for working with iterable collections (including async ones). Latest version: 2.8.0, last published: 3 months ago.",
+            "title": "itertools-ts - npm",
+            "url": "https://www.npmjs.com/package/itertools-ts",
+            "grade": 0,
+            "reason": "TypeScript/JavaScript implementation, wrong runtime."
+          },
+          {
+            "position": 6,
+            "snippet": "Return a new sorted list from the items in iterable.",
+            "title": "Python sorted() built-in function - Python Cheat Sheet",
+            "url": "https://labex.io/pythoncheatsheet/builtin/sorted",
+            "grade": 1,
+            "reason": "Sorting background only."
+          },
+          {
+            "position": 7,
+            "snippet": "Learn how Python's itertools module lets you build fast, lazy, memory-efficient data pipelines from small composable building blocks — with runnable examples covering count, chain, islice, accumulate, groupby, batched, and more.",
+            "title": "Mastering Python's itertools: Lazy, Memory-Efficient Iteration…",
+            "url": "https://www.pykit.org/mastering-pythons-itertools-lazy-memory-efficient-iteration-done-right/",
+            "grade": 1,
+            "reason": "Broad itertools pipeline overview."
+          },
+          {
+            "position": 8,
+            "snippet": "20 hands-on itertools and functools exercises. Practice permutations, combinations, lazy pipelines, memoisation, partial functions, and more — all with detailed solutions.",
+            "title": "20 Python Itertools & Functools Exercises with Solutions…",
+            "url": "https://pynative.com/python-itertools-functools-exercises/",
+            "grade": 1,
+            "reason": "Exercises overview, no relevant contract."
+          },
+          {
+            "position": 9,
+            "snippet": "The key argument was added alongside cmp in list.sort and the new sorted builtin function; and key was the only way to customise the grouping in itertools.groupby.",
+            "title": "Word Aligned",
+            "url": "https://wordaligned.org/",
+            "grade": 1,
+            "reason": "Homepage with key-history excerpt, not direct grouping-order contract."
+          },
+          {
+            "position": 10,
+            "snippet": "Python Itertools with python, tutorial, tkinter, button, overview, entry, checkbutton, canvas, frame, environment set-up, first python program, basics, data types, operators, etc.",
+            "title": "Python Itertools - Javatpoint",
+            "url": "http://www.asdtiang.org/python-itertools.html",
+            "grade": 1,
+            "reason": "Broad tutorial/mirror, unclear relevant section."
+          }
+        ],
+        "metrics": {
+          "top1": 1,
+          "mrr": 1.0,
+          "p_at_5": 0.2,
+          "hit_at_10": 1,
+          "unique_direct_pages": 1,
+          "at_least_3_direct_pages": false
+        },
+        "primary_reference_landing": {
+          "found_at_10": true,
+          "positions": [
+            4
+          ],
+          "exact_reference_found_at_10": true
+        }
+      },
+      {
+        "id": "T02",
+        "tool_sha256": "ba2069cd87d44bea80e5161e2214a1c2f828a2509d98b5373ef79884bb0fbd55",
+        "status": "ok",
+        "error": null,
+        "results": [
+          {
+            "position": 1,
+            "snippet": "Source code: Lib/pathlib/ This module offers classes representing filesystem paths with semantics appropriate for different operating systems. Path classes are divided between pure paths, which pro.",
+            "title": "pathlib — Object-oriented filesystem paths — Python 3.15.2…",
+            "url": "https://docs.python.org/3/library/pathlib.html",
+            "grade": 1,
+            "reason": "Official module page but resolve strict/nonexistent behavior not visible in SERP."
+          },
+          {
+            "position": 2,
+            "snippet": "* converted documentation to Sphinx format: https://www.nltk.org/api/nltk.html",
+            "title": "nltk/ChangeLog at develop · nltk/nltk · GitHub",
+            "url": "https://github.com/nltk/nltk/blob/develop/ChangeLog",
+            "grade": 0,
+            "reason": "Unrelated changelog."
+          },
+          {
+            "position": 3,
+            "snippet": "Python's pathlib module enables you to handle file and folder paths in a modern way. This built-in module provides intuitive semantics that work the same way on different operating systems.",
+            "title": "Python's pathlib Module: Taming the File System – Real Python",
+            "url": "https://realpython.com/python-pathlib/",
+            "grade": 1,
+            "reason": "Broad pathlib overview."
+          },
+          {
+            "position": 4,
+            "snippet": "Because the class object and its instances share one type, the class object answers to the instance name: pathlib.Path.__name__ and repr(pathlib.Path) give PosixPath / <class 'PosixPath'>, and pathlib.Path.nonexistent raises type object…",
+            "title": "pathlib module | Pydantic Docs",
+            "url": "https://pydantic.dev/docs/monty/limitations/pathlib/",
+            "grade": 0,
+            "reason": "Different Pydantic implementation limitations, no Python resolve contract."
+          },
+          {
+            "position": 5,
+            "snippet": "A context manager for use when defining a Python op.",
+            "title": "tf.name_scope | TensorFlow v2.16.1",
+            "url": "https://www.tensorflow.org/api_docs/python/tf/name_scope",
+            "grade": 0,
+            "reason": "Unrelated TensorFlow operation."
+          },
+          {
+            "position": 6,
+            "snippet": "The pathlib module was added in Python 3.4, offering an object-oriented way to handle file system paths.",
+            "title": "Python Pathlib Module - Python Cheat Sheet",
+            "url": "https://labex.io/pythoncheatsheet/modules/pathlib-module",
+            "grade": 1,
+            "reason": "Broad pathlib cheatsheet."
+          },
+          {
+            "position": 7,
+            "snippet": "From pathlib import Path from typesafe_sdk import Box, BoxAnswer, Image, TypeSafeClient def locate_dog (client: TypeSafeClient, photo: Path) -> BoxAnswer: result = client.system_one( state = Image(photo), questions = {\"dog\": Box…",
+            "title": "Questions - TypeSafe",
+            "url": "https://docs.typesafe.ai/sdk/python/api/types/questions",
+            "grade": 0,
+            "reason": "Unrelated SDK API."
+          },
+          {
+            "position": 8,
+            "snippet": "The pathlib module was added to the standard library in Python 3.4 and is one of the many nice improvements that Python 3 has gained over the past decade.",
+            "title": "pathlib and paths with arbitrary bytes",
+            "url": "https://jod.al/2019/12/10/pathlib-and-paths-with-arbitrary-bytes/",
+            "grade": 1,
+            "reason": "Filesystem bytes background only."
+          },
+          {
+            "position": 9,
+            "snippet": "Replace os.path with Python's pathlib for elegant, object-oriented path manipulation with intuitive operators and unified file operations.",
+            "title": "No really, Python's pathlib is great | Redowan's Reflections",
+            "url": "https://rednafi.com/python/pathlib/",
+            "grade": 1,
+            "reason": "Broad pathlib overview."
+          },
+          {
+            "position": 10,
+            "snippet": "Await M4.async_download('data', group = 'Hourly') df, * _ = M4.load('data', 'Hourly') uids = df['unique_id'].unique() random.seed(0) sample_uids = random.choices(uids, k = 4) df = df[df['unique_id'].isin(sample_uids)].reset_index(drop…",
+            "title": "End to end walkthrough | MLForecast - Nixtla",
+            "url": "https://nixtlaverse.nixtla.io/mlforecast/docs/getting-started/end_to_end_walkthrough.html",
+            "grade": 0,
+            "reason": "Unrelated forecast walkthrough."
+          }
+        ],
+        "metrics": {
+          "top1": 0,
+          "mrr": 0,
+          "p_at_5": 0.0,
+          "hit_at_10": 0,
+          "unique_direct_pages": 0,
+          "at_least_3_direct_pages": false
+        },
+        "primary_reference_landing": {
+          "found_at_10": true,
+          "positions": [
+            1
+          ],
+          "exact_reference_found_at_10": true
+        }
+      },
+      {
+        "id": "F01",
+        "tool_sha256": "9bfbeee8bf449ab8ac1a803fef2d1a9d9cddda065aab9c8e6bbf55c9f837e33d",
+        "status": "ok",
+        "error": null,
+        "results": [
+          {
+            "position": 1,
+            "snippet": "Rust Versions # Stable: 1.99.1 Beta: 1.100.0 (12 November, 2026, 20 days left) Nightly: 1.101.0 (24 December, 2026, 62 days left) Ongoing Stabilization PRs # Stabilize unchecked nonzero_ops (6 days old) S-waiting-on-author - Status: This is…",
+            "title": "Rust Versions | Rust Changelogs",
+            "url": "https://releases.rs/",
+            "grade": 1,
+            "reason": "Stale listing calls release beta and countdown despite pinned announcement."
+          },
+          {
+            "position": 2,
+            "snippet": "The Rust team is happy to announce a new version of Rust, 1.100.0. Rust is a programming language empowering everyone to build reliable and efficient software.",
+            "title": "Announcing Rust 1.100.0 | Rust Blog",
+            "url": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/",
+            "grade": 2,
+            "reason": "Exact official release/date."
+          },
+          {
+            "position": 3,
+            "snippet": "The following list shows the first 100 pages that use this file only. A full list is available.",
+            "title": "File:Blank.png - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/File:Blank.png",
+            "grade": 0,
+            "reason": "Unrelated image."
+          },
+          {
+            "position": 4,
+            "snippet": "Pro-Line kolo 1:24, pneu Electron 2.0, disk bílý, H7 (4): Micro-B",
+            "title": "1:24 | Reichard Modelsport",
+            "url": "https://www.reichard.cz/1-24",
+            "grade": 0,
+            "reason": "Unrelated model shop."
+          },
+          {
+            "position": 5,
+            "snippet": "8. 8. 2018119 zhlédnutíUžívejte si videa a hudbu, kterou máte rádi, nahrávejte originální obsah a sdílejte vše s přáteli, rodinou i celým světem na YouTube.",
+            "title": "Roco V100 und Piko Flachwagen beladen mit LKW IFA H6 - YouTube",
+            "url": "https://www.youtube.com/watch?v=fczaVQRjmoU",
+            "grade": 0,
+            "reason": "Unrelated model video."
+          },
+          {
+            "position": 6,
+            "snippet": "Dimensions: 1.13″ x 0.5″ x 0.13″. One skull.",
+            "title": "Sword Display Stands, Wall Mounts & Blade Care Kits | Michigan…",
+            "url": "https://www.michigansportsoutdoor.com/collections/swords-daggers-replicas/sword-accessories/",
+            "grade": 0,
+            "reason": "Unrelated sword accessories."
+          },
+          {
+            "position": 7,
+            "snippet": "Před měsícemNOTE: Use the links to edit those that have a relnotes-tracking-issue, and they will be updated when we regenerate the notes periodically (manually). Version 1.100.0 (2026-11-12) Language Stabilize never type Lint against repeated #[.",
+            "title": "Draft release notes for 1.100.0 · Issue #163811 · rust-lang…",
+            "url": "https://github.com/rust-lang/rust/issues/163811",
+            "grade": 1,
+            "reason": "Draft release notes sameversion/date, not exact final announcement fallback detail."
+          },
+          {
+            "position": 8,
+            "snippet": "1:72 Medieval Stone Fortress (RR) - Zvezda 8510 -",
+            "title": "Zvezda 1:72 Medieval Stone Fortress (RR) 8510",
+            "url": "https://www.peckamodel.cz/32-8510-model-kit-diorama-8510-medieval-stone-fortress-rr-1-72",
+            "grade": 0,
+            "reason": "Unrelated model kit."
+          },
+          {
+            "position": 9,
+            "snippet": "Značka: Porsche Model: Porsche 911 GT3 RS Tribute to Carrera RS 2022 Výrobce: Norev Měřítko: 1:12 Materiál: kovový model - uzavřená karoserie Barva: bílá/zelená/černá celý popis",
+            "title": "Porsche 911 GT3 RS Tribute to Carrera RS 2022 1:12 Norev",
+            "url": "https://www.svetauticek.cz/127535",
+            "grade": 0,
+            "reason": "Unrelated car model."
+          },
+          {
+            "position": 10,
+            "snippet": "Rust - The only aim in Rust is to survive. Everything wants you to die - the island’s wildlife, other inhabitants, the environment, and other survivors. Do whatever it takes to last another night.",
+            "title": "Steams gemenskap :: Rust",
+            "url": "https://steamcommunity.com/app/252490/allnews/?l=swedish",
+            "grade": 0,
+            "reason": "Rust game, wrong meaning."
+          }
+        ],
+        "metrics": {
+          "top1": 0,
+          "mrr": 0.5,
+          "p_at_5": 0.2,
+          "hit_at_10": 1,
+          "unique_direct_pages": 1,
+          "at_least_3_direct_pages": false
+        },
+        "primary_reference_landing": {
+          "found_at_10": true,
+          "positions": [
+            2
+          ],
+          "exact_reference_found_at_10": true
+        }
+      },
+      {
+        "id": "F02",
+        "tool_sha256": "ba0a898e334da23b4ba54b8c669e55abbe00f8670ce0d7df4bcf019827095a21",
+        "status": "ok",
+        "error": null,
+        "results": [
+          {
+            "position": 1,
+            "snippet": "The next alpha, Python 3.16.0a2, is scheduled for November 10, 2026. The full schedule is in PEP 826.",
+            "title": "Python Release Python 3.16.0a1 | Python.org",
+            "url": "https://www.python.org/downloads/release/python-3160a1/",
+            "grade": 1,
+            "reason": "Earlier alpha1 announcement, useful background but wrong targetalpha."
+          },
+          {
+            "position": 2,
+            "snippet": "Compare the best free open source Python Software at SourceForge. List of free, secure and fast Python Software, projects, software, and downloads.",
+            "title": "Best Open Source Python Software",
+            "url": "https://sourceforge.net/directory/python/",
+            "grade": 0,
+            "reason": "Generic software directory."
+          },
+          {
+            "position": 3,
+            "snippet": "This document describes the development and release schedule for Python 3.16.",
+            "title": "PEP 826 – Python 3.16 Release Schedule | peps.python.org",
+            "url": "https://peps.python.org/pep-0826/",
+            "grade": 1,
+            "reason": "Official release schedule helps schedule, but alpha2 production/status not shown."
+          },
+          {
+            "position": 4,
+            "snippet": "Describes the Python 3 versions that the App Engine standard environment supports, and how the Python 3 runtime starts your app.",
+            "title": "Python 3 Runtime Environment | App Engine standard environment…",
+            "url": "https://docs.cloud.google.com/appengine/docs/standard/python3/runtime",
+            "grade": 0,
+            "reason": "Different product runtime."
+          },
+          {
+            "position": 5,
+            "snippet": "What's new in Python 3.10? or all \"What's new\" documents since 2.0",
+            "title": "3.10.21 Documentation",
+            "url": "https://docs.python.org/3.10/",
+            "grade": 0,
+            "reason": "Wrong Python version general docs."
+          },
+          {
+            "position": 6,
+            "snippet": "Před měsícemThis is an early developer preview of Python 3.16 What’s new in Python 3.16? There’s plenty still to come in Python 3.16, but its first alpha is ready to try! Python 3.16.0a1 is the first of seven planned alpha releas…",
+            "title": "Python 3.16.0 alpha 1 is now available! - Core Development…",
+            "url": "https://discuss.python.org/t/python-3-16-0-alpha-1-is-now-available/109466",
+            "grade": 1,
+            "reason": "Earlier alpha1 announcement."
+          },
+          {
+            "position": 7,
+            "snippet": "23. 3. 2013255 tis. zhlédnutíDavid BeazleySome of the most significant changes in Python 3 are related to metaprogramming. In this tutorial, I'll cover decorators, class decorators, des...",
+            "title": "Python 3 Metaprogramming - YouTube",
+            "url": "https://www.youtube.com/watch?v=sPiWg5jSoZI",
+            "grade": 0,
+            "reason": "Old metaprogramming video."
+          },
+          {
+            "position": 8,
+            "snippet": "The first developer preview of Python 3.16 is ready for testing.",
+            "title": "Python Insider",
+            "url": "https://blog.python.org/",
+            "grade": 1,
+            "reason": "Blog root with stale firstpreview snippet, no pinned alpha2/date."
+          },
+          {
+            "position": 9,
+            "snippet": "Python je veľmi obľúbený a rozšírený programovací jazyk. Jeho využite je veľmi široké (vedecké výpočty, tvorba webstránok…). Vzhľadom na jeho jednoduchosť sa tento programovací jazyk využíva na hodinách programovania aj na školách a je…",
+            "title": "Python 3 | Práca s grafikou - Programko",
+            "url": "https://www.programko.sk/kurzy/python-3-kurz-programovania/",
+            "grade": 0,
+            "reason": "Generic Python course."
+          },
+          {
+            "position": 10,
+            "snippet": "Python 3 switches the built-in function round() from rounding the way many people learned in school (where when rounding.5, you always round up) to what is called “banker’s rounding” (where you round from.5 to the nearest even number).",
+            "title": "Python versions - Grist Help Center",
+            "url": "https://support.getgrist.com/python/",
+            "grade": 0,
+            "reason": "Different product Python support."
+          }
+        ],
+        "metrics": {
+          "top1": 0,
+          "mrr": 0,
+          "p_at_5": 0.0,
+          "hit_at_10": 0,
+          "unique_direct_pages": 0,
+          "at_least_3_direct_pages": false
+        },
+        "primary_reference_landing": {
+          "found_at_10": false,
+          "positions": [],
+          "exact_reference_found_at_10": false
+        }
+      },
+      {
+        "id": "R01",
+        "tool_sha256": "8a30e0ae81db2418aa66d5a37d376cce54b994b0e44d40bccd8d5c8baa868989",
+        "status": "ok",
+        "error": null,
+        "results": [
+          {
+            "position": 1,
+            "snippet": "Янтарная комната: история создания, цифры, факты и тайны",
+            "title": "Янтарная комната: история создания, цифры, факты и тайны - РИА…",
+            "url": "https://ria.ru/20100429/227384217.html",
+            "grade": 1,
+            "reason": "AmberRoom history but target restoration date/tonnage not visible."
+          },
+          {
+            "position": 2,
+            "snippet": "Ца́рское Село́ — музей-заповедник в Пушкине, включающий в себя дворцово-парковый ансамбль Xviii—XIX веков, бывшую загородную царскую резиденцию, превращённую в музей после национализации в марте 1918 года.",
+            "title": "Царское Село (музей-заповедник) — Википедия",
+            "url": "https://ru.wikipedia.org/wiki/%D0%A6%D0%B0%D1%80%D1%81%D0%BA%D0%BE%D0%B5_%D0%A1%D0%B5%D0%BB%D0%BE_(%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA)",
+            "grade": 1,
+            "reason": "General museum page."
+          },
+          {
+            "position": 3,
+            "snippet": "Сколько я его знаю, им движет необычайное рвение быть в гуще боевых действий, в местах, где так или иначе отстаиваются интересы России».",
+            "title": "Чеченский рекрутинг. Провал операции «Танцы на Крещатике». Как…",
+            "url": "https://novayagazeta.eu/articles/2026/07/06/chechenskii-rekruting-proval-operatsii-tantsy-na-kreshchatike",
+            "grade": 0,
+            "reason": "Unrelated political news."
+          },
+          {
+            "position": 4,
+            "snippet": "Она же отказалась от претензий на янтарную панель, передав все права на неё городу Бремену, который и передал её музею-заповеднику «Царское Село». 29 апреля 2000 года министр по делам культуры ФРГ Михаэль Науман передал и.",
+            "title": "Янтарная комната — Википедия",
+            "url": "https://ru.wikipedia.org/wiki/%D0%AF%D0%BD%D1%82%D0%B0%D1%80%D0%BD%D0%B0%D1%8F_%D0%BA%D0%BE%D0%BC%D0%BD%D0%B0%D1%82%D0%B0",
+            "grade": 1,
+            "reason": "AmberRoom overview but excerpt concerns ownership not restoration date/tonnage."
+          },
+          {
+            "position": 5,
+            "snippet": "Царскосельская янтарная мастерская продолжает работать над воссозданием, научной реконструкцией, реставрацией и консервацией культурно-исторических памятников декоративно-прикладного искусства.",
+            "title": "Главная",
+            "url": "http://amberroom.ru/index.php/ru/",
+            "grade": 1,
+            "reason": "Workshop homepage background, not museum data article."
+          },
+          {
+            "position": 6,
+            "snippet": "Я могу об этом рассуждать сколько угодно, рисовать бизнес-планы, защищать их. Вот сделаем мы филиал, - значит что-то есть.",
+            "title": "Кавказский Узел | Таймураз Мамсуров (глава Республики Северная…",
+            "url": "https://www.kavkaz-uzel.eu/articles/168697",
+            "grade": 0,
+            "reason": "Unrelated political profile."
+          },
+          {
+            "position": 7,
+            "snippet": "סיפור אמיתי מהשבוע: מלמד קורס סוכני AI למפתחים בחברה. משתתף בקורס כותב סוכן AI. הסוכן משתמש בקריאות LLM וכלים אחרים בתשלום. לולאה אינסופית עם תנאי עצירה…",
+            "title": "סיפור אמיתי מהשבוע: מלמד קורס סוכני AI…",
+            "url": "https://www.linkedin.com/posts/yoni-krichevsky_%D7%A1%D7%99%D7%A4%D7%95%D7%A8-%D7%90%D7%9E%D7%99%D7%AA%D7%99-%D7%9E%D7%94%D7%A9%D7%91%D7%95%D7%A2-%D7%9E%D7%9C%D7%9E%D7%93-%D7%A7%D7%95%D7%A8%D7%A1-%D7%A1%D7%95%D7%9B%D7%A0%D7%99-ai-%D7%9C%D7%9E%D7%A4%D7%AA%D7%97%D7%99%D7%9D-activity-7463127928143282176-EVar",
+            "grade": 0,
+            "reason": "Unrelated AI course post."
+          },
+          {
+            "position": 8,
+            "snippet": "В Tanmaya Praha парный тантрический массаж проходит в приятной и конфиденциальной обстановке, создавая пространство для расслабления, взаимной близости и открытия нового измерения совместных ощущений.",
+            "title": "Тантрические массажи для пар в Праге | Tanmaya студио",
+            "url": "https://www.tantramasaze.com/ru/tantra-massazh-dlya-par",
+            "grade": 0,
+            "reason": "Unrelated massage page."
+          },
+          {
+            "position": 9,
+            "snippet": "I. Дата кургана Аржан и его место в системе культур скифского мира.",
+            "title": "(PDF) Балахванцев А.С. Биметаллический клевец из Бугуруслана и…",
+            "url": "https://www.academia.edu/41220054/%D0%91%D0%B0%D0%BB%D0%B0%D1%85%D0%B2%D0%B0%D0%BD%D1%86%D0%B5%D0%B2_%D0%90_%D0%A1_%D0%91%D0%B8%D0%BC%D0%B5%D1%82%D0%B0%D0%BB%D0%BB%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D0%BB%D0%B5%D0%B2%D0%B5%D1%86_%D0%B8%D0%B7_%D0%91%D1%83%D0%B3%D1%83%D1%80%D1%83%D1%81%D0%BB%D0%B0%D0%BD%D0%B0_%D0%B8_%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC%D0%B0_%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D1%80%D0%B0%D0%BD%D0%BD%D0%B5%D1%81%D0%BA%D0%B8%D1%84%D1%81%D0%BA%D0%BE%D0%B9_%D0%BA%D1%83%D0%BB%D1%8C%D1%82%D1%83%D1%80%D1%8B_%D0%92%D0%BE%D0%B9%D0%BD%D0%B0_%D0%B8_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D0%BB%D0%BE_%D0%B2_%D1%81%D0%BA%D0%B8%D1%84%D0%BE_%D1%81%D0%B0%D1%80%D0%BC%D0%B0%D1%82%D1%81%D0%BA%D0%BE%D0%BC_%D0%BC%D0%B8%D1%80%D0%B5_%D0%A1_%D0%98_%D0%9B%D1%83%D0%BA%D1%8C%D1%8F%D1%88%D0%BA%D0%BE_%D1%80%D0%B5%D0%B4_%D0%A0%D0%BE%D1%81%D1%82%D0%BE%D0%B2_%D0%BD%D0%B0_%D0%94%D0%BE%D0%BD%D1%83_2015_%D0%A1_22_25",
+            "grade": 0,
+            "reason": "Unrelated archaeology paper."
+          },
+          {
+            "position": 10,
+            "snippet": "Зибаев А.В.«Церковная история» Филосторгия и некоторые жанры античной географической литературы // Империя ромеев во времени и пространстве: Центр и Периферия: Тезисы докладов XXI Всероссийской научной сессии византинистов / Под ред.",
+            "title": "(PDF) Зибаев А.В.«Церковная история» Филосторгия и некоторые…",
+            "url": "https://www.academia.edu/33795327/%D0%97%D0%B8%D0%B1%D0%B0%D0%B5%D0%B2_%D0%90_%D0%92_%D0%A6%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F_%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F_%D0%A4%D0%B8%D0%BB%D0%BE%D1%81%D1%82%D0%BE%D1%80%D0%B3%D0%B8%D1%8F_%D0%B8_%D0%BD%D0%B5%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5_%D0%B6%D0%B0%D0%BD%D1%80%D1%8B_%D0%B0%D0%BD%D1%82%D0%B8%D1%87%D0%BD%D0%BE%D0%B9_%D0%B3%D0%B5%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B9_%D0%BB%D0%B8%D1%82%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80%D1%8B_%D0%98%D0%BC%D0%BF%D0%B5%D1%80%D0%B8%D1%8F_%D1%80%D0%BE%D0%BC%D0%B5%D0%B5%D0%B2_%D0%B2%D0%BE_%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%B8_%D0%B8_%D0%BF%D1%80%D0%BE%D1%81%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%B5_%D0%A6%D0%B5%D0%BD%D1%82%D1%80_%D0%B8_%D0%9F%D0%B5%D1%80%D0%B8%D1%84%D0%B5%D1%80%D0%B8%D1%8F_%D0%A2%D0%B5%D0%B7%D0%B8%D1%81%D1%8B_%D0%B4%D0%BE%D0%BA%D0%BB%D0%B0%D0%B4%D0%BE%D0%B2_XXI_%D0%92%D1%81%D0%B5%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%BE%D0%B9_%D0%BD%D0%B0%D1%83%D1%87%D0%BD%D0%BE%D0%B9_%D1%81%D0%B5%D1%81%D1%81%D0%B8%D0%B8_%D0%B2%D0%B8%D0%B7%D0%B0%D0%BD%D1%82%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D0%BE%D0%B2_%D0%9F%D0%BE%D0%B4_%D1%80%D0%B5%D0%B4_%D0%9C_%D0%92_%D0%93%D1%80%D0%B0%D1%86%D0%B8%D0%B0%D0%BD%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%9F_%D0%92_%D0%9A%D1%83%D0%B7%D0%B5%D0%BD%D0%BA%D0%BE%D0%B2%D0%B0_%D0%9C_%D0%91%D0%B5%D0%BB%D0%B3%D0%BE%D1%80%D0%BE%D0%B4_2016_%D0%A1_93_95",
+            "grade": 0,
+            "reason": "Unrelated history paper."
+          }
+        ],
+        "metrics": {
+          "top1": 0,
+          "mrr": 0,
+          "p_at_5": 0.0,
+          "hit_at_10": 0,
+          "unique_direct_pages": 0,
+          "at_least_3_direct_pages": false
+        },
+        "primary_reference_landing": {
+          "found_at_10": false,
+          "positions": [],
+          "exact_reference_found_at_10": false
+        }
+      },
+      {
+        "id": "R02",
+        "tool_sha256": "b88edcd6849469c801ae6fcbb0bd67d26929fc89fc4fdff7f1cd820c36c0bad8",
+        "status": "ok",
+        "error": null,
+        "results": [
+          {
+            "position": 1,
+            "snippet": "Московский планетарий - один из самых больших в мире и самый старый планетарий в России. Расположен в Москве возле новой территории Московского зоопарка, недалеко от Садового кольца.",
+            "title": "В этот день...",
+            "url": "http://moscow.org/calendar/",
+            "grade": 1,
+            "reason": "Calendar snippet mentions targetplanetarium but neither foundationdate nor architects."
+          },
+          {
+            "position": 2,
+            "snippet": "Для молодой амбициозной пары, мечтающей о просторном доме для будущей семьи, мы создали проект двухэтажного жилого дома с гаражом и въездной группой, органично вписанный в живописный участок среди сосен.",
+            "title": "«Березка»",
+            "url": "https://erkerarchitects.com/berezka",
+            "grade": 0,
+            "reason": "Different house project."
+          },
+          {
+            "position": 3,
+            "snippet": "13 июня 1961 года первый космонавт планеты Ю.А. Гагарин заложил символический камень в фундамент будущего Государственного музея К.Э. Циолковского.",
+            "title": "История музея в лицах, событиях, датах",
+            "url": "https://gmik.ru/istoriya-muzeya-v-litsah-sobyitiyah-datah/",
+            "grade": 0,
+            "reason": "Different museum and foundationstone."
+          },
+          {
+            "position": 4,
+            "snippet": "Так, проект ленинградского скульптора А. М. Богачёва, набравший наибольшее количество голосов на второй выставке, предполагал некий парафраз Некрополя у Кремлёвской стены с южной стороны крепости: ряд из 36 мемориальных ниш с досками (по…",
+            "title": "Соловецкий камень (Москва) — Википедия",
+            "url": "https://ru.wikipedia.org/wiki/%D0%A1%D0%BE%D0%BB%D0%BE%D0%B2%D0%B5%D1%86%D0%BA%D0%B8%D0%B9_%D0%BA%D0%B0%D0%BC%D0%B5%D0%BD%D1%8C_(%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0)",
+            "grade": 0,
+            "reason": "Different Moscow monument."
+          },
+          {
+            "position": 5,
+            "snippet": "Первый камень в фундамент костела св. Прокопа был положен 30 октября 1898 г. на месте часовни св. Яна Непомуцкого на территории виноградарской усадьбы Райсмонка по случаю 50-летия правления императора Франца Иосифа I (поэтому костел…",
+            "title": "Костел св. Прокопа и его окружение | Praha 3",
+            "url": "https://www.praha3.cz/aktualne-z-trojky/o-praze-3/naucna-stezka-prahy-3/kostel-sv-prokopa-a-okoli/rus",
+            "grade": 0,
+            "reason": "Different church foundationstone."
+          },
+          {
+            "position": 6,
+            "snippet": "В фундамент были замурованы королевская грамота, строительные планы, портрет Людвига II на фарфоре и по одному экземпляру каждой из баварских монет, выпущенных со времени вступления этого монарха на престол.",
+            "title": "Нойшванштайн - сказочный замок Людвига II",
+            "url": "https://www.dw.com/ru/nojsvanstajn-skazocnyj-zamok-bavarskogo-korola-ludviga-ii/a-4850361",
+            "grade": 0,
+            "reason": "Different castle."
+          },
+          {
+            "position": 7,
+            "snippet": "Балахванцев А.С. Free download available.",
+            "title": "(PDF) Балахванцев А.С. Биметаллический клевец из Бугуруслана и…",
+            "url": "https://www.academia.edu/41220054/%D0%91%D0%B0%D0%BB%D0%B0%D1%85%D0%B2%D0%B0%D0%BD%D1%86%D0%B5%D0%B2_%D0%90_%D0%A1_%D0%91%D0%B8%D0%BC%D0%B5%D1%82%D0%B0%D0%BB%D0%BB%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D0%BB%D0%B5%D0%B2%D0%B5%D1%86_%D0%B8%D0%B7_%D0%91%D1%83%D0%B3%D1%83%D1%80%D1%83%D1%81%D0%BB%D0%B0%D0%BD%D0%B0_%D0%B8_%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC%D0%B0_%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D1%80%D0%B0%D0%BD%D0%BD%D0%B5%D1%81%D0%BA%D0%B8%D1%84%D1%81%D0%BA%D0%BE%D0%B9_%D0%BA%D1%83%D0%BB%D1%8C%D1%82%D1%83%D1%80%D1%8B_%D0%92%D0%BE%D0%B9%D0%BD%D0%B0_%D0%B8_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D0%BB%D0%BE_%D0%B2_%D1%81%D0%BA%D0%B8%D1%84%D0%BE_%D1%81%D0%B0%D1%80%D0%BC%D0%B0%D1%82%D1%81%D0%BA%D0%BE%D0%BC_%D0%BC%D0%B8%D1%80%D0%B5_%D0%A1_%D0%98_%D0%9B%D1%83%D0%BA%D1%8C%D1%8F%D1%88%D0%BA%D0%BE_%D1%80%D0%B5%D0%B4_%D0%A0%D0%BE%D1%81%D1%82%D0%BE%D0%B2_%D0%BD%D0%B0_%D0%94%D0%BE%D0%BD%D1%83_2015_%D0%A1_22_25",
+            "grade": 0,
+            "reason": "Unrelated archaeology paper."
+          },
+          {
+            "position": 8,
+            "snippet": "В статье ставится вопрос о смысле, который вкладывает свт. Димитрий Ростовский в понятие «невежество» в своем сочинении «Розыск раскольнической брынской веры», проповедях и кратких учительных со- чинениях.",
+            "title": "(PDF) \"И лишаются невежеством своим многих благ духовных\".",
+            "url": "https://www.academia.edu/37448466/_%D0%98_%D0%BB%D0%B8%D1%88%D0%B0%D1%8E%D1%82%D1%81%D1%8F_%D0%BD%D0%B5%D0%B2%D0%B5%D0%B6%D0%B5%D1%81%D1%82%D0%B2%D0%BE%D0%BC_%D1%81%D0%B2%D0%BE%D0%B8%D0%BC_%D0%BC%D0%BD%D0%BE%D0%B3%D0%B8%D1%85_%D0%B1%D0%BB%D0%B0%D0%B3_%D0%B4%D1%83%D1%85%D0%BE%D0%B2%D0%BD%D1%8B%D1%85_%D0%9F%D0%BE%D0%BD%D1%8F%D1%82%D0%B8%D0%B5_%D0%BD%D0%B5%D0%B2%D0%B5%D0%B6%D0%B5%D1%81%D1%82%D0%B2%D0%BE_%D0%B2_%D0%A0%D0%BE%D0%B7%D1%8B%D1%81%D0%BA%D0%B5_%D1%80%D0%B0%D1%81%D0%BA%D0%BE%D0%BB%D1%8C%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B8_%D0%B1%D1%80%D1%8B%D0%BD%D1%81%D0%BA%D0%BE%D0%B8_%D0%B2%D0%B5%D1%80%D1%8B_%D0%BF%D1%80%D0%BE%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D1%8F%D1%85_%D0%B8_%D1%83%D1%87%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D1%85_%D1%81%D0%BE%D1%87%D0%B8%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F%D1%85_%D1%81%D0%B2%D1%82_%D0%94%D0%B8%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D1%8F_%D0%A0%D0%BE%D1%81%D1%82%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_The_concept_of_ignorance_in_Inquiry_about_Brynsk_faith_sermons_and_pastoral_works_of_St_Dimitry_of_Rostov",
+            "grade": 0,
+            "reason": "Unrelated theology paper."
+          },
+          {
+            "position": 9,
+            "snippet": "Соколовский С.В. Из детства – с приветом. Автоэтнографические этюды // Э Гучинова, Г. Комарова (отв. ред.). Антропология социальных перемен: сб. статей. М.: Росспэн, 2011. С. 701 - 733",
+            "title": "(PDF) Соколовский С.В. Из детства – с приветом…",
+            "url": "https://www.academia.edu/1199000/%D0%A1%D0%BE%D0%BA%D0%BE%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%A1_%D0%92_%D0%98%D0%B7_%D0%B4%D0%B5%D1%82%D1%81%D1%82%D0%B2%D0%B0_%D1%81_%D0%BF%D1%80%D0%B8%D0%B2%D0%B5%D1%82%D0%BE%D0%BC_%D0%90%D0%B2%D1%82%D0%BE%D1%8D%D1%82%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5_%D1%8D%D1%82%D1%8E%D0%B4%D1%8B_%D0%AD_%D0%93%D1%83%D1%87%D0%B8%D0%BD%D0%BE%D0%B2%D0%B0_%D0%93_%D0%9A%D0%BE%D0%BC%D0%B0%D1%80%D0%BE%D0%B2%D0%B0_%D0%BE%D1%82%D0%B2_%D1%80%D0%B5%D0%B4_%D0%90%D0%BD%D1%82%D1%80%D0%BE%D0%BF%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F_%D1%81%D0%BE%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85_%D0%BF%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD_%D1%81%D0%B1_%D1%81%D1%82%D0%B0%D1%82%D0%B5%D0%B9_%D0%9C_%D0%A0%D0%9E%D0%A1%D0%A1%D0%9F%D0%AD%D0%9D_2011_%D0%A1_701_733",
+            "grade": 0,
+            "reason": "Unrelated anthropology paper."
+          },
+          {
+            "position": 10,
+            "snippet": "היום פוטרתי ממאנדיי בתור אנליסט ראשון בצוות הייתי אחראי על הקמת התשתית האנליטית של המוצר שעבדתי בו, הבאתי תובנות ממקומות לא שיגרתיים ופיתחתי ( אוקי…",
+            "title": "היום פוטרתי ממאנדיי בתור אנליסט ראשון…",
+            "url": "https://www.linkedin.com/posts/yarden-ayalon-607a2253_%D7%94%D7%99%D7%95%D7%9D-%D7%A4%D7%95%D7%98%D7%A8%D7%AA%D7%99-%D7%9E%D7%9E%D7%90%D7%A0%D7%93%D7%99%D7%99-%D7%91%D7%AA%D7%95%D7%A8-%D7%90%D7%A0%D7%9C%D7%99%D7%A1%D7%98-%D7%A8%D7%90%D7%A9%D7%95%D7%9F-%D7%91%D7%A6%D7%95%D7%95%D7%AA-activity-7485968324586184706-YGCq",
+            "grade": 0,
+            "reason": "Unrelated analyst social post."
+          }
+        ],
+        "metrics": {
+          "top1": 0,
+          "mrr": 0,
+          "p_at_5": 0.0,
+          "hit_at_10": 0,
+          "unique_direct_pages": 0,
+          "at_least_3_direct_pages": false
+        },
+        "primary_reference_landing": {
+          "found_at_10": false,
+          "positions": [],
+          "exact_reference_found_at_10": false
+        }
+      },
+      {
+        "id": "B01",
+        "tool_sha256": "8fc96eddb32598f12b81a14f78520abf0f4eebf033d5a91312fa1dac2902b4c2",
+        "status": "ok",
+        "error": null,
+        "results": [
+          {
+            "position": 1,
+            "snippet": "Source code: Lib/copy.py Assignment statements in Python do not copy objects, they create bindings between a target and an object. For collections that are mutable or contain mutable items, a copy",
+            "title": "copy — Shallow and deep copy operations — Python 3.15.2…",
+            "url": "https://docs.python.org/3/library/copy.html",
+            "grade": 2,
+            "reason": "Official shallow/deep copy contract exactsubject."
+          },
+          {
+            "position": 2,
+            "snippet": "A generic mutable hash table implementation.",
+            "title": "tf.lookup.experimental.MutableHashTable | TensorFlow v2.16.1",
+            "url": "https://www.tensorflow.org/api_docs/python/tf/lookup/experimental/MutableHashTable",
+            "grade": 0,
+            "reason": "Unrelated TensorFlow hash table."
+          },
+          {
+            "position": 3,
+            "snippet": "Copy object and lists in Python. We explain how to avoid the pitfalls by introducing shallow and deep copy",
+            "title": "11. Shallow and Deep Copy | Python Tutorial | python-course.eu",
+            "url": "https://python-course.eu/python-tutorial/shallow-and-deep-copy.php",
+            "grade": 2,
+            "reason": "Shallow/deep pitfalls exactsubject."
+          },
+          {
+            "position": 4,
+            "snippet": "Copy Python lists safely with slicing, list(), copy(), and deepcopy(), and understand shallow copies, nested mutability, aliases, and performance.",
+            "title": "Copy a List in Python: Slicing, copy(), and deepcopy()",
+            "url": "https://www.pythonpool.com/python-copy-list/",
+            "grade": 2,
+            "reason": "Nested mutability, shallow/deep exactsubject."
+          },
+          {
+            "position": 5,
+            "snippet": "Copy Module is a set of functions that are related to copying different elements of a list, objects, arrays, etc. It can be used to create shallow copies as well as deep copies.",
+            "title": "Python Copy Module - Python Cheat Sheet",
+            "url": "https://labex.io/pythoncheatsheet/modules/copy-module",
+            "grade": 2,
+            "reason": "Shallow/deep module reference exactsubject."
+          },
+          {
+            "position": 6,
+            "snippet": "Provides functionality to create shallow and deep copies of objects in Python.",
+            "title": "copy | Python Standard Library – Real Python",
+            "url": "https://realpython.com/ref/stdlib/copy/",
+            "grade": 2,
+            "reason": "Shallow/deep library reference exactsubject."
+          },
+          {
+            "position": 7,
+            "snippet": "MicroPython - a lean and efficient Python implementation for microcontrollers and constrained systems - Releases · micropython/micropython",
+            "title": "Releases · micropython/micropython · GitHub",
+            "url": "https://github.com/micropython/micropython/releases",
+            "grade": 0,
+            "reason": "Unrelated MicroPython releases."
+          },
+          {
+            "position": 8,
+            "snippet": "Understand how Python variables reference objects, why assignment is not copying, and how mutability, side effects, shallow copy, and deep copy affect real projects.",
+            "title": "Python References and Mutability: Runtime Behavior Explained",
+            "url": "https://www.zestmindsacademy.com/guides/python-runtime-references-mutability/",
+            "grade": 2,
+            "reason": "References/mutability and shallow/deep impact exactsubject."
+          },
+          {
+            "position": 9,
+            "snippet": "In Python, a deep copy of a dictionary creates a new dictionary with entirely new key-value pairs, where the values are also deep copies of the originals.",
+            "title": "Python – Deep Copy Dictionary – LivingWithCode",
+            "url": "https://livingwithcode.com/python/dictionary/deep-copy/",
+            "grade": 2,
+            "reason": "Deep-copy dictionary directly helps deepcopy half of question, not fullanswer proof."
+          },
+          {
+            "position": 10,
+            "snippet": "How to implement scalar functions in Python and use them in user-defined functions (UDFs) in BigQuery.",
+            "title": "Work with user-defined functions in Python | BigQuery | Google…",
+            "url": "https://docs.cloud.google.com/bigquery/docs/user-defined-functions-python",
+            "grade": 0,
+            "reason": "Unrelated BigQuery UDFs."
+          }
+        ],
+        "metrics": {
+          "top1": 1,
+          "mrr": 1.0,
+          "p_at_5": 0.8,
+          "hit_at_10": 1,
+          "unique_direct_pages": 7,
+          "at_least_3_direct_pages": true
+        },
+        "primary_reference_landing": {
+          "found_at_10": true,
+          "positions": [
+            1
+          ],
+          "exact_reference_found_at_10": false,
+          "note": "Official /3/library/copy.html counts as primary landing for unpinned question; exact /3.12 reference absent."
+        }
+      },
+      {
+        "id": "B02",
+        "tool_sha256": "64c91ceb465c75ab528d1ed620571886ef3eb5f6648862a6b8fdf5f3142d68ba",
+        "status": "error",
+        "error": "source_query_mismatch: all 10 results violate site:docs.python.org/3.11/library/tomllib.html",
+        "results": [],
+        "metrics": {
+          "top1": 0,
+          "mrr": 0,
+          "p_at_5": 0.0,
+          "hit_at_10": 0,
+          "unique_direct_pages": 0,
+          "at_least_3_direct_pages": false
+        },
+        "primary_reference_landing": {
+          "found_at_10": false,
+          "positions": [],
+          "exact_reference_found_at_10": false
+        }
+      }
+    ],
+    "aggregate": {
+      "cases": 8,
+      "organic_results": 70,
+      "top1": 0.25,
+      "mrr": 0.3125,
+      "p_at_5": 0.15000000000000002,
+      "hit_at_10": 0.375,
+      "at_least_3_direct_cases": 1,
+      "tool_errors": [
+        "B02"
+      ],
+      "primary_reference_landing_found_at_10": 4,
+      "exact_reference_found_at_10": 3
+    }
+  },
+  "research": {
+    "schema": "independent-research-review-v1",
+    "reviewer": "/root/search_evaluator",
+    "created_utc": "2026-11-18T06:33:47.722020+00:00",
+    "policy": "Gold frozen before inference; requiredconditions scored only from final own returnedquotes. Literal true but wrongtarget claims do not satisfy conditions. Contextual temporal false separated from quoteprovenance. Unknown returnedclaims differ from missingconditions. No model verdict used as truth.",
+    "cases": [
+      {
+        "id": "T01",
+        "artifact": "runs/search-five-agents-2026-11-18/research/T01/tool-result.json",
+        "artifact_sha256": "b03a850b17d8ddb9d5494cf91954533ddb29e523c0fa162896fb541a1e97470d",
+        "status": "partial",
+        "stop_reason": "budget_exhausted",
+        "conditions": [
+          {
+            "id": "T01.A",
+            "gold": "groupby creates groups for consecutive runs of equal keys; it does not aggregate equal keys globally regardless of input order.",
+            "status": "supported",
+            "claim_id": "A1",
+            "reason": "Consecutive key grouping directly supported by own S1 quote."
+          },
+          {
+            "id": "T01.B",
+            "gold": "To collect all items of each key together, input should be sorted/grouped on the same key function before groupby; groupby does not perform sorting itself.",
+            "status": "missing",
+            "claim_id": null,
+            "reason": "No own quote for samekey preparation/sorting or no selfsorting; GitHub extracted body has examples but no general sorting rule."
+          }
+        ],
+        "supported_conditions": 1,
+        "all_required_supported": false,
+        "returned_claim_judgments": [
+          {
+            "id": "T01/A1",
+            "status": "supported_by_own_quote",
+            "reason": "Own exact witness supports literal narrow claim; does not automatically satisfy requested conditions."
+          }
+        ],
+        "false_claim_ids": [],
+        "unknown_claim_ids": [],
+        "miss_stage": "retrieval/selection",
+        "diagnosis": "Official primary was not read. Pythonpool timed out; fallback spent reads on wronglanguage npm and Rust changelog. Domain/API targeting failed; second required contract absent from extracted evidence."
+      },
+      {
+        "id": "T02",
+        "artifact": "runs/search-five-agents-2026-11-18/research/T02/tool-result.json",
+        "artifact_sha256": "778497eef370b574bc94df05ab56fa9c0c5456a389d65dc85e9812e9b7697cb0",
+        "status": "error",
+        "stop_reason": "sources_unavailable",
+        "conditions": [
+          {
+            "id": "T02.A",
+            "gold": "При strict=False путь разрешается настолько далеко, насколько возможно; оставшаяся часть добавляется без проверки её существования.",
+            "status": "missing",
+            "claim_id": null,
+            "reason": "No body or answer."
+          },
+          {
+            "id": "T02.B",
+            "gold": "При strict=True несуществующий путь приводит к OSError; FileNotFoundError допустим как конкретный подкласс для отсутствующего пути, но не как универсальный тип всех ошибок resolve.",
+            "status": "missing",
+            "claim_id": null,
+            "reason": "No body or answer."
+          },
+          {
+            "id": "T02.C",
+            "gold": "Path.resolve устраняет компоненты '..' (а также делает путь абсолютным и разрешает симлинки; последние два свойства не обязательные аспекты данного вопроса).",
+            "status": "missing",
+            "claim_id": null,
+            "reason": "No body or answer."
+          }
+        ],
+        "supported_conditions": 0,
+        "all_required_supported": false,
+        "returned_claim_judgments": [],
+        "false_claim_ids": [],
+        "unknown_claim_ids": [],
+        "miss_stage": "http_availability",
+        "diagnosis": "All4 document reads timedout; official pathlib first candidate was identified correctly. No inference/admission success to evaluate."
+      },
+      {
+        "id": "F01",
+        "artifact": "runs/search-five-agents-2026-11-18/research/F01/tool-result.json",
+        "artifact_sha256": "d145f73bc088fa346a100d05ef3dcb71819478b5f5e299eec0c7561490c1180e",
+        "status": "partial",
+        "stop_reason": "budget_exhausted",
+        "conditions": [
+          {
+            "id": "F01.A",
+            "gold": "Never type fallback changes from unit type () to never type !.",
+            "status": "supported",
+            "claim_id": "A1",
+            "reason": "Own S1 witness gives unit→never direction."
+          },
+          {
+            "id": "F01.B",
+            "gold": "This change affects pre-2024 editions:2015,2018,2021; edition2024 already had this behavior.",
+            "status": "supported",
+            "claim_id": "A1",
+            "reason": "Same own S1 witness gives editions2015/2018/2021 and2024already."
+          }
+        ],
+        "supported_conditions": 2,
+        "all_required_supported": true,
+        "returned_claim_judgments": [
+          {
+            "id": "F01/A1",
+            "status": "supported_by_own_quote",
+            "reason": "Own exact witness supports literal narrow claim; does not automatically satisfy requested conditions."
+          },
+          {
+            "id": "F01/A2",
+            "status": "supported_by_own_quote",
+            "reason": "Own exact witness supports literal narrow claim; does not automatically satisfy requested conditions."
+          },
+          {
+            "id": "F01/A3",
+            "status": "supported_by_own_quote",
+            "reason": "Own exact witness supports literal narrow claim; does not automatically satisfy requested conditions."
+          }
+        ],
+        "false_claim_ids": [],
+        "unknown_claim_ids": [],
+        "miss_stage": "no_required_miss",
+        "diagnosis": "All required conditions supported despite statuspartial from documentdiversity sufficiency. Extra reads included oldrelease and unrelated Rustgame; publication parser reports missingdate for officialrelease."
+      },
+      {
+        "id": "F02",
+        "artifact": "runs/search-five-agents-2026-11-18/research/F02/tool-result.json",
+        "artifact_sha256": "938329fa626f437ffb980f9f17697fa5c56f897cc3d6ba6c6088cf70e73e79b9",
+        "status": "partial",
+        "stop_reason": "no_new_evidence",
+        "conditions": [
+          {
+            "id": "F02.A",
+            "gold": "Python3.16.0a2 is an early developer preview / second alpha (not a final stable release).",
+            "status": "missing",
+            "claim_id": null,
+            "reason": "a2 developerpreview status not supported by own a2 witness."
+          },
+          {
+            "id": "F02.B",
+            "gold": "The preview is intended for testing and is not recommended for production use.",
+            "status": "missing",
+            "claim_id": null,
+            "reason": "Own A2 explicitly describes a1, so cannot establish pinned a2 productionrecommendation."
+          },
+          {
+            "id": "F02.C",
+            "gold": "The next alpha3.16.0a3 is scheduled for December15,2026; scheduled future event, not already released as ofNovember18.",
+            "status": "missing",
+            "claim_id": null,
+            "reason": "Own A3 says nexta2/Nov10 from olda1, not nexta3/Dec15 from a2."
+          }
+        ],
+        "supported_conditions": 0,
+        "all_required_supported": false,
+        "returned_claim_judgments": [
+          {
+            "id": "F02/A1",
+            "status": "supported_by_own_quote",
+            "reason": "Own exact witness supports literal narrow claim; does not automatically satisfy requested conditions."
+          },
+          {
+            "id": "F02/A2",
+            "status": "supported_by_own_quote",
+            "reason": "Own exact witness supports literal narrow claim; does not automatically satisfy requested conditions."
+          },
+          {
+            "id": "F02/A3",
+            "status": "false_in_requested_temporal_context",
+            "reason": "Historical a1 nexta2 schedule rendered without historical scope as nextalpha in answer pinned to a2/Nov10; current next is a3/Dec15."
+          },
+          {
+            "id": "F02/A4",
+            "status": "supported_by_own_quote",
+            "reason": "Own exact witness supports literal narrow claim; does not automatically satisfy requested conditions."
+          }
+        ],
+        "false_claim_ids": [
+          "F02/A3"
+        ],
+        "unknown_claim_ids": [],
+        "miss_stage": "retrieval/entity_version_binding/audit",
+        "diagnosis": "Retrieved official older a1 page; did not follow supersededby link to a2. Source quote exact but targetversion/date mismatch survived draft and audit."
+      },
+      {
+        "id": "R01",
+        "artifact": "runs/search-five-agents-2026-11-18/research/R01/tool-result.json",
+        "artifact_sha256": "80c86416cbfce7d0f3d3d1b9cf77af465f4ee1e71f04f2c05c1ad8d0e523565c",
+        "status": "partial",
+        "stop_reason": "budget_exhausted",
+        "conditions": [
+          {
+            "id": "R01.A",
+            "gold": "Воссозданная Янтарная комната открылась 31 мая 2003 года.",
+            "status": "missing",
+            "claim_id": null,
+            "reason": "No finalanswer or own witness for openingdate."
+          },
+          {
+            "id": "R01.B",
+            "gold": "Для восстановления потребовалось шесть тонн янтаря.",
+            "status": "missing",
+            "claim_id": null,
+            "reason": "No finalanswer or own witness for tonnage."
+          }
+        ],
+        "supported_conditions": 0,
+        "all_required_supported": false,
+        "returned_claim_judgments": [],
+        "false_claim_ids": [],
+        "unknown_claim_ids": [],
+        "miss_stage": "retrieval/admission/draft_relevance",
+        "diagnosis": "RIA blocked by verificationwidget, museumprimary not read. Bodies Wikipedia, workshophomepage and119char Vimeo challenge contain no targetfacts. Initialdraft included unrelated LyonHall opening, finalanswer empty."
+      },
+      {
+        "id": "R02",
+        "artifact": "runs/search-five-agents-2026-11-18/research/R02/tool-result.json",
+        "artifact_sha256": "8b43d090768c9ce7b16b088dbfc02963eaedd5e08f5b9086cb218f07b8ab70ec",
+        "status": "partial",
+        "stop_reason": "no_new_evidence",
+        "conditions": [
+          {
+            "id": "R02.A",
+            "gold": "Первый камень в фундамент был заложен 23 сентября 1928 года.",
+            "status": "missing",
+            "claim_id": null,
+            "reason": "No finalanswer or own witness for firststone."
+          },
+          {
+            "id": "R02.B",
+            "gold": "Проект создали Михаил Барщ и Михаил Синявский.",
+            "status": "missing",
+            "claim_id": null,
+            "reason": "No finalanswer or own witness for architects."
+          }
+        ],
+        "supported_conditions": 0,
+        "all_required_supported": false,
+        "returned_claim_judgments": [],
+        "false_claim_ids": [],
+        "unknown_claim_ids": [],
+        "miss_stage": "retrieval/decoding/relevance",
+        "diagnosis": "First moscow.org page unsupported nonUTF8; only eligiblebody was different Dubai tower. Later reads irrelevant LinkedIn timeouts; officialplanetarium not read."
+      },
+      {
+        "id": "B01",
+        "artifact": "runs/search-five-agents-2026-11-18/research/B01/tool-result.json",
+        "artifact_sha256": "f27d3a2caaa61a080dcb609f9021a6170b1f86367e5a76057f0125d8808e9b0f",
+        "status": "partial",
+        "stop_reason": "budget_exhausted",
+        "conditions": [
+          {
+            "id": "B01.A",
+            "gold": "False premise: shallow copy creates a new outer compound object but inserts references to contained original objects, so nested mutable objects can remain shared.",
+            "status": "missing",
+            "claim_id": null,
+            "reason": "Own shallowcopy label does not explain retained references/shared nestedobjects or explicitly reject falsepremise."
+          },
+          {
+            "id": "B01.B",
+            "gold": "Deep copy recursively copies contained objects, subject to module/type/custom-copy behavior; do not claim universal isolation of every possible object.",
+            "status": "missing",
+            "claim_id": null,
+            "reason": "Own deepcopy label does not establish recursion or type/custombehavior qualifications."
+          }
+        ],
+        "supported_conditions": 0,
+        "all_required_supported": false,
+        "returned_claim_judgments": [
+          {
+            "id": "B01/A1",
+            "status": "supported_by_own_quote",
+            "reason": "Own exact witness supports literal narrow claim; does not automatically satisfy requested conditions."
+          },
+          {
+            "id": "B01/A2",
+            "status": "supported_by_own_quote",
+            "reason": "Own exact witness supports literal narrow claim; does not automatically satisfy requested conditions."
+          }
+        ],
+        "false_claim_ids": [],
+        "unknown_claim_ids": [],
+        "miss_stage": "http_availability/retrieval/semantic_completeness",
+        "diagnosis": "Officialcopy read timedout, then unrelatedcollections timeout and JavaScriptcopykitten. RealPython body provides labels and specificexample; finalclaims omit requested generalcontracts. Audit retained labels as facts but sufficiency correctlypartial."
+      },
+      {
+        "id": "B02",
+        "artifact": "runs/search-five-agents-2026-11-18/research/B02/summary.json",
+        "artifact_sha256": "a1d2b7e2b5883d78f3ddffeb4781268c98594145d67c08e3ec31a1f41b8d0cbc",
+        "status": "rpc_input_error",
+        "stop_reason": "JSONRPC invalid_query",
+        "conditions": [
+          {
+            "id": "B02.A",
+            "gold": "tomllib.load first argument must be a readable binary file object, not an arbitrary text file object.",
+            "status": "missing",
+            "claim_id": null,
+            "reason": "No toolbody execution."
+          },
+          {
+            "id": "B02.B",
+            "gold": "tomllib does not support writing TOML.",
+            "status": "missing",
+            "claim_id": null,
+            "reason": "No toolbody execution."
+          }
+        ],
+        "supported_conditions": 0,
+        "all_required_supported": false,
+        "returned_claim_judgments": [],
+        "false_claim_ids": [],
+        "unknown_claim_ids": [],
+        "miss_stage": "input_validation",
+        "diagnosis": "JSONRPC -32602 invalid_query OR withsite notsupported rejects natural English question before research planning. Distinct from search source_query_mismatch and from safeabstention."
+      }
+    ],
+    "aggregate": {
+      "cases": 8,
+      "required_conditions": 18,
+      "supported_conditions": 3,
+      "all_conditions_supported_cases": 1,
+      "returned_claims": 10,
+      "false_in_requested_context_claim_ids": [
+        "F02/A3"
+      ],
+      "literal_source_contradicted_claim_ids": [],
+      "unknown_returned_claim_ids": [],
+      "missing_required_condition_ids": [
+        "T01.B",
+        "T02.A",
+        "T02.B",
+        "T02.C",
+        "F02.A",
+        "F02.B",
+        "F02.C",
+        "R01.A",
+        "R01.B",
+        "R02.A",
+        "R02.B",
+        "B01.A",
+        "B01.B",
+        "B02.A",
+        "B02.B"
+      ],
+      "safe_refusal_metric": null,
+      "availability_error_cases": [
+        "T02"
+      ],
+      "rpc_validation_error_cases": [
+        "B02"
+      ]
+    },
+    "quote_provenance_checks": [
+      {
+        "case": "T01",
+        "claim": "A1",
+        "source": "S1",
+        "exact_unicode_slice": true
+      },
+      {
+        "case": "F01",
+        "claim": "A1",
+        "source": "S1",
+        "exact_unicode_slice": true
+      },
+      {
+        "case": "F01",
+        "claim": "A2",
+        "source": "S1",
+        "exact_unicode_slice": true
+      },
+      {
+        "case": "F01",
+        "claim": "A3",
+        "source": "S1",
+        "exact_unicode_slice": true
+      },
+      {
+        "case": "F02",
+        "claim": "A1",
+        "source": "S2",
+        "exact_unicode_slice": true
+      },
+      {
+        "case": "F02",
+        "claim": "A2",
+        "source": "S2",
+        "exact_unicode_slice": true
+      },
+      {
+        "case": "F02",
+        "claim": "A3",
+        "source": "S2",
+        "exact_unicode_slice": true
+      },
+      {
+        "case": "F02",
+        "claim": "A4",
+        "source": "S2",
+        "exact_unicode_slice": true
+      },
+      {
+        "case": "B01",
+        "claim": "A1",
+        "source": "S2",
+        "exact_unicode_slice": true
+      },
+      {
+        "case": "B01",
+        "claim": "A2",
+        "source": "S2",
+        "exact_unicode_slice": true
+      }
+    ],
+    "qwen_actions": [
+      {
+        "case": "T01",
+        "action": "qwen",
+        "source_id": "S1",
+        "status": "failed_lexical_fallback"
+      },
+      {
+        "case": "F01",
+        "action": "qwen",
+        "source_id": "S1",
+        "status": "failed_lexical_fallback"
+      },
+      {
+        "case": "F02",
+        "action": "qwen",
+        "source_id": "S1",
+        "status": "failed_lexical_fallback"
+      },
+      {
+        "case": "R01",
+        "action": "qwen",
+        "source_id": "S1",
+        "status": "failed_lexical_fallback"
+      },
+      {
+        "case": "R02",
+        "action": "qwen",
+        "source_id": "S1",
+        "status": "failed_lexical_fallback"
+      },
+      {
+        "case": "B01",
+        "action": "qwen",
+        "source_id": "S1",
+        "status": "failed_lexical_fallback"
+      }
+    ],
+    "runtime_limit": "Every attempted Qwen selector action failed_lexical_fallback. This is degraded lexical snapshot, no healthyQwen quality verdict.",
+    "naming_limit": "provider-refused.json generic driverstopmarker is not evidence of modelauth/providerrefusal.",
+    "priorities": [
+      {
+        "priority": "P0",
+        "issue": "Restore/validate Qwen selection availability before comparing selectorquality",
+        "evidence": "All attempted qwen failed_lexical_fallback; do not alter historical run."
+      },
+      {
+        "priority": "P0",
+        "issue": "Bind version/date/entity to claims through audit",
+        "evidence": "F02/A3 exact oldquote passes provenance but wrongcurrent nextalpha; F02 required0/3."
+      },
+      {
+        "priority": "P1",
+        "issue": "Reference-aware candidate ordering for Python dotted APIs; reject wrongruntime/subject before consuming readbudget",
+        "evidence": "T01 JS/Rust pages; B01 JS library; R02 DubaiTower/LinkedIn. Diagnosis is candidate fix hypothesis, not proven improvement."
+      },
+      {
+        "priority": "P1",
+        "issue": "Improve sourceavailability diagnosis and eligiblebody quality",
+        "evidence": "T02 fourtimeouts; R02 nonUTF8unsupported; R01 Vimeo119char challenge eligible. Keep no-challenge-retry boundary."
+      },
+      {
+        "priority": "P1",
+        "issue": "Separate contractcoverage from labelcoverage and own selectedquote completeness",
+        "evidence": "B01 shallow/deep labels supported but0/2 requested semanticcontracts; T01 only1/2."
+      },
+      {
+        "priority": "P1",
+        "issue": "Parse research naturalquestion separately from searchDSL without weakening site/path boundaries",
+        "evidence": "B02 research rejects English OR withsite beforeexecution; standalone search preserves exactsite and errors on10mismatches."
+      },
+      {
+        "priority": "P2",
+        "issue": "Expose semanticcoverage independent of generic two-document sufficiency",
+        "evidence": "F01 required2/2 from1authoritativebody stillpartial, irrelevantadditionalread wastedbudget."
+      }
+    ],
+    "scope_limits": [
+      "8new source-aware one-run exploratory, not original20/twoday/generalqualification",
+      "FivePythonprojectcases including4docs+1release; freshbothsoftware",
+      "No no-evidencecase, no safe-refusal metric",
+      "Root implementation is not independentreview; this artifact independent agentassessment, not humanjudgment",
+      "No healthyQwen/baselinepairedqualitycomparison"
+    ]
+  }
+}

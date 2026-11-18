@@ -1,0 +1,388 @@
+{
+  "schema": "primary-evidence-cases-v1",
+  "created_utc": "2026-11-18T08:28:53.084361+00:00",
+  "scope": "Knownhistoricaldevelopment2batches/8claims; oracleofficialprimaryrejectioncontext component, NOT retrievaltest/newqualification.",
+  "case_index_path": "runs/primary-evidence-2026-11-18/case-index.json",
+  "case_index_sha256": "ea861806aded72cdd4c77f68504491eb009dc5ef1dc27a0021d9d0ccdc9b0ddf",
+  "protocol": {
+    "replicates": 3,
+    "paired_batches_per_replicate": 2,
+    "arms": [
+      "baseline",
+      "candidate"
+    ],
+    "model_call_cap": 12,
+    "source_http_by_reviewer": 0,
+    "reviewer_model_calls": 0,
+    "factor": "Same originalbatchquestion/facets/claims/ownquotes/sourceversions/genericAUDIT_PROMPT; candidate adds officialS3selectedprimarychunks only to rejectioncontext. Ownquotes not extended/reselected.",
+    "stop": "Stop first anyerror; no conditionalretry; not-run explicit.",
+    "grading": "Perreplicate no-newworldfalsepositive/no-newunknownkeep/no-positive-loss, rawsupport distinct from afterapplykept; originalclaimIDs fixed. Positive-scopeinterpretation limitations explicit.",
+    "oracle": "Known officialURLs supplied externally; no claim of end-to-end sourcefinding improvement.",
+    "source_selection": "Two localQwen selections of originalquestions chosen by root beforeaudit; originalN01eager alreadyselected so no selectorfix asserted."
+  },
+  "cases": [
+    {
+      "id": "P01",
+      "cohort": "known_historical_development2",
+      "original_case": "T01",
+      "original_phase": "regression",
+      "question": "According to Python itertools.groupby documentation, does it group equal keys anywhere in the input or only consecutive runs, and how should input be prepared to collect all equal keys together?",
+      "original_facets": [
+        "Does itertools.groupby group equal keys anywhere in the input or only consecutive runs?",
+        "How should input be prepared to collect all equal keys together?",
+        "Check false premise: does the documentation actually state this behavior?"
+      ],
+      "question_conditions": [
+        "Consecutive equalkeygrouping not globalaggregation",
+        "Prepare by grouping/sorting samekey for all-equal-keycollection"
+      ],
+      "original_last_audit_capture": "runs/search-repair-2026-11-18/regression/research/T01/capture/0000-research/model-04-audit.json",
+      "original_last_audit_capture_sha256": "b5ba9c57b2a52e5c985efdde1dbe7add5d3981df469a4644f6264fb1b9c2037b",
+      "original_user_context_sha256": "31ec3ebf6d19d5b7d049bfecb76969cfe7f77c385487733c6367bb0b6c03c980",
+      "oracle_primary_url": "https://docs.python.org/3/library/itertools.html",
+      "source_refs": [
+        {
+          "id": "S1",
+          "url": "https://pynative.com/python-itertools-functools-exercises/",
+          "document_version": "521264aaadad5e65b94dba46e76744dcb361ee187c45fb69183c3c1dffbaaf40",
+          "full_source_text_sha256": "33a114efe3323711140ef93fff99389ece79b84050400f71122121a7486921f8",
+          "document_artifact": "runs/search-repair-2026-11-18/regression/research/T01/capture/0000-research/document-03.json",
+          "document_artifact_sha256": "33f713c89a038b89f028262f4adb27b5dbfb627989691407ebd8e802f46fac90",
+          "original_publication": {
+            "date_status": "valid",
+            "kind": "article",
+            "published_date": "2026-06-12",
+            "witness_count": 2,
+            "witnesses": [
+              {
+                "date": "2026-06-12",
+                "raw": "2026-06-12T07:11:30+00:00",
+                "source": "jsonld.datePublished",
+                "timestamp": "2026-06-12T07:11:30+00:00"
+              },
+              {
+                "date": "2026-06-12",
+                "raw": "2026-06-12T07:11:30+00:00",
+                "source": "meta.article:published_time",
+                "timestamp": "2026-06-12T07:11:30+00:00"
+              }
+            ],
+            "witnesses_limited": false
+          },
+          "title": "Python Itertools and Functools Exercises: 20 Coding Problems with Solutions"
+        },
+        {
+          "id": "S2",
+          "url": "https://github.com/TheAlgorithms/Python/wiki",
+          "document_version": "76a16e2e7dc367d40c82c6750c8f9fa3ae47f8c013f3b850d038f26b2aaba48f",
+          "full_source_text_sha256": "4d70bf85e610bb0cae4882b36cf42d5467f24a1982cfde4b861c28e6017865c0",
+          "document_artifact": "runs/search-repair-2026-11-18/regression/research/T01/capture/0000-research/document-04.json",
+          "document_artifact_sha256": "dd877696673f68a639338d6dc7a5c5916fa6ab54c7bd29cb490f7be10e1c847a",
+          "original_publication": {
+            "date_status": "missing",
+            "kind": "feed",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "title": "Home"
+        }
+      ],
+      "claims": [
+        {
+          "id": "A1",
+          "claim_text": "groupby() groups only consecutive identical keys; it does not sort the data.",
+          "kind": "fact",
+          "facets": [
+            0
+          ],
+          "own_quotes": [
+            {
+              "chunk_id": "S1P1",
+              "document_version": "521264aaadad5e65b94dba46e76744dcb361ee187c45fb69183c3c1dffbaaf40",
+              "end": 35237,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "Critical rule: groupby() groups only consecutive identical keys – it does not sort the data.",
+              "source_id": "S1",
+              "start": 35145
+            }
+          ],
+          "gold": {
+            "world_truth": "supported",
+            "own_semantic_faithfulness": "faithful",
+            "query_coverage_condition_indices": [
+              0
+            ],
+            "reason": "Consecutive grouping and no selfsorting supported."
+          }
+        },
+        {
+          "id": "A2",
+          "claim_text": "groupby is a streaming operation that does not look ahead or back, so only adjacent elements with the same key are grouped together.",
+          "kind": "fact",
+          "facets": [
+            0
+          ],
+          "own_quotes": [
+            {
+              "chunk_id": "S1P3",
+              "document_version": "521264aaadad5e65b94dba46e76744dcb361ee187c45fb69183c3c1dffbaaf40",
+              "end": 36918,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "It is a streaming operation – it does not look ahead or back, so only adjacent elements with the same key are grouped together.",
+              "source_id": "S1",
+              "start": 36791
+            }
+          ],
+          "gold": {
+            "world_truth": "supported",
+            "own_semantic_faithfulness": "faithful_streaming_interpretation",
+            "query_coverage_condition_indices": [
+              0
+            ],
+            "reason": "Streaming adjacentgrouping supported in source. Interpret no lookahead as no global/nonadjacent grouping, not a guarantee of zero internal bufferednextitem reads; literalzeropeek is not established."
+          }
+        },
+        {
+          "id": "A3",
+          "claim_text": "To collect all equal keys together, sort by the grouping key first with sorted(data, key=...) before passing to groupby().",
+          "kind": "fact",
+          "facets": [
+            1
+          ],
+          "own_quotes": [
+            {
+              "chunk_id": "S1P1",
+              "document_version": "521264aaadad5e65b94dba46e76744dcb361ee187c45fb69183c3c1dffbaaf40",
+              "end": 35331,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "Always sort by the grouping key first with sorted(data, key=...) before passing to groupby().",
+              "source_id": "S1",
+              "start": 35238
+            }
+          ],
+          "gold": {
+            "world_truth": "supported",
+            "own_semantic_faithfulness": "faithful_conditional",
+            "query_coverage_condition_indices": [
+              1
+            ],
+            "reason": "Correct all-equal-keycollection conditionalpreparation; do not strengthen into universalmandatorysorting."
+          }
+        },
+        {
+          "id": "A4",
+          "claim_text": "The consecutive-only grouping is intentional and efficient, but it means the data must be pre-sorted on the grouping key.",
+          "kind": "fact",
+          "facets": [
+            1
+          ],
+          "own_quotes": [
+            {
+              "chunk_id": "S1P3",
+              "document_version": "521264aaadad5e65b94dba46e76744dcb361ee187c45fb69183c3c1dffbaaf40",
+              "end": 37015,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "This is intentional and efficient, but it means the data must be pre-sorted on the grouping key.",
+              "source_id": "S1",
+              "start": 36919
+            }
+          ],
+          "gold": {
+            "world_truth": "false",
+            "own_semantic_faithfulness": "scope_lost",
+            "query_coverage_condition_indices": [],
+            "reason": "Consecutive grouping works on unsortedinput; mandatorypresorting is only for all-equal-keycollection, not everyvaliduse. Exactthirdpartyquote does not make it universallytrue."
+          }
+        }
+      ],
+      "independent_truth_basis": "Prior frozen official-primary independent goldpreflight (search-five and search-repair) before originalruns; not candidate selectedS3chunks or futureauditverdict."
+    },
+    {
+      "id": "P02",
+      "cohort": "known_historical_development2",
+      "original_case": "N04",
+      "original_phase": "candidate",
+      "question": "В CPython 3.13 free-threaded режим без GIL экспериментальный или стабильный, включён ли по умолчанию и нужен ли отдельный executable?",
+      "original_facets": [
+        "Статус free-threaded режима без GIL в CPython 3.13: экспериментальный или стабильный (PEP 703)",
+        "Включён ли free-threaded режим по умолчанию в CPython 3.13",
+        "Нужен ли отдельный executable/сборка для free-threaded режима в CPython 3.13"
+      ],
+      "question_conditions": [
+        "CPython3.13free-threaded experimental",
+        "Not enabledbydefault",
+        "Separatefree-threadedbuild/executable"
+      ],
+      "original_last_audit_capture": "runs/search-repair-2026-11-18/candidate/research/N04/capture/0000-research/model-03-audit.json",
+      "original_last_audit_capture_sha256": "1ae8c117e7657c291804037a3ad79d784a97370e8179f619ece37c72c80a2d5e",
+      "original_user_context_sha256": "06a0879651ec036b30567c1dc3e12c1c2aeb2d425427988b9c9543441b92fc56",
+      "oracle_primary_url": "https://docs.python.org/3.13/whatsnew/3.13.html",
+      "source_refs": [
+        {
+          "id": "S1",
+          "url": "https://realpython.com/python313-free-threading-jit/",
+          "document_version": "9956819e86e927f82e1b89549222b364a8d7f4f541cc7a741240ecc08f6a958d",
+          "full_source_text_sha256": "c8e05186df923e9303b55a0b7c6fbe8cc2542c531476bcbb811625c274f2133b",
+          "document_artifact": "runs/search-repair-2026-11-18/candidate/research/N04/capture/0000-research/document-01.json",
+          "document_artifact_sha256": "372c9d26ac53d7f0dcc3f386955b6003b80c324fac4df51f2ca822f3d4258e8e",
+          "original_publication": {
+            "date_status": "valid",
+            "kind": "article",
+            "published_date": "2024-09-18",
+            "witness_count": 1,
+            "witnesses": [
+              {
+                "date": "2024-09-18",
+                "raw": "2024-09-18T14:00:00+00:00",
+                "source": "jsonld.datePublished",
+                "timestamp": "2024-09-18T14:00:00+00:00"
+              }
+            ],
+            "witnesses_limited": false
+          },
+          "title": "Python 3.13: Free Threading and a JIT Compiler"
+        },
+        {
+          "id": "S2",
+          "url": "https://github.com/python/cpython/issues/120098",
+          "document_version": "3f8df8939cb879d9c27f9b6c9909ce7ae5eb12b722bd3746410b1842c43fb609",
+          "full_source_text_sha256": "2225ab426d117fc22f22b3a686e9a732543f0590a822444634a0c94c401892e6",
+          "document_artifact": "runs/search-repair-2026-11-18/candidate/research/N04/capture/0000-research/document-02.json",
+          "document_artifact_sha256": "9c973d2ac2277d377c83d5fa24d85aad45f74c2c50d9a8fc2bd6f8dd74eb4686",
+          "original_publication": {
+            "date_status": "missing",
+            "kind": "feed",
+            "published_date": null,
+            "witness_count": 0,
+            "witnesses": [],
+            "witnesses_limited": false
+          },
+          "title": "Provide downloadable free-threaded macOS builds for Python 3.13 #120098"
+        }
+      ],
+      "claims": [
+        {
+          "id": "A1",
+          "claim_text": "Free threading вводится как экспериментальная функция и не входит в официальную сборку Python; для отключения GIL нужна собственная сборка.",
+          "kind": "fact",
+          "facets": [
+            0,
+            1,
+            2
+          ],
+          "own_quotes": [
+            {
+              "chunk_id": "S1P1",
+              "document_version": "9956819e86e927f82e1b89549222b364a8d7f4f541cc7a741240ecc08f6a958d",
+              "end": 5981,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "Experimental: Free threading is introduced as an experimental feature and isn’t a part of the official Python distribution. You must make a custom Python build to disable the GIL.",
+              "source_id": "S1",
+              "start": 5802
+            }
+          ],
+          "gold": {
+            "world_truth": "false",
+            "own_semantic_faithfulness": "stale_distribution_scope",
+            "query_coverage_condition_indices": [
+              0
+            ],
+            "reason": "Experimental component true; mandatorycustombuild/noofficialdistribution false for pinned3.13official Windows/macOSinstaller options. Fullconjunctionfalse despite exactstalequote."
+          }
+        },
+        {
+          "id": "A2",
+          "claim_text": "Функция по-прежнему считается экспериментальной, поэтому её поддержка не устанавливается по умолчанию, а предлагается отдельной опцией установки.",
+          "kind": "fact",
+          "facets": [
+            0,
+            1,
+            2
+          ],
+          "own_quotes": [
+            {
+              "chunk_id": "S2P3",
+              "document_version": "3f8df8939cb879d9c27f9b6c9909ce7ae5eb12b722bd3746410b1842c43fb609",
+              "end": 2786,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "Because this feature is still considered experimental, the support for it is not installed by default. It is packaged as a separate install option, available by clicking the Customize button on the Installation Type step of the installer as described above.",
+              "source_id": "S2",
+              "start": 2529
+            }
+          ],
+          "gold": {
+            "world_truth": "unknown",
+            "own_semantic_faithfulness": "macOS_installer_scope_lost",
+            "query_coverage_condition_indices": [
+              0
+            ],
+            "reason": "Experimental component true. Notinstalledbydefault/installoption belongs macOSinstallerissue, not universal runtime enableddefault; wholeclaim lacks platformspecificqualifier."
+          }
+        },
+        {
+          "id": "A3",
+          "claim_text": "При выборе этой опции устанавливается отдельный PythonT.framework рядом с обычным Python.framework.",
+          "kind": "fact",
+          "facets": [
+            2
+          ],
+          "own_quotes": [
+            {
+              "chunk_id": "S2P3",
+              "document_version": "3f8df8939cb879d9c27f9b6c9909ce7ae5eb12b722bd3746410b1842c43fb609",
+              "end": 2915,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "When selected, a separate PythonT.framework will also be installed alongside the normal Python.framework in /Library/Frameworks.",
+              "source_id": "S2",
+              "start": 2787
+            }
+          ],
+          "gold": {
+            "world_truth": "unknown",
+            "own_semantic_faithfulness": "macOS_installer_scope_lost",
+            "query_coverage_condition_indices": [],
+            "reason": "PythonT.framework and alongsideframework installation true for describedmacOSinstaller, unqualified generalCPythonanswer omits thatscope; framework alone not separateexecutable proof."
+          }
+        },
+        {
+          "id": "A4",
+          "claim_text": "Обычная сборка Python не поддерживает free threading, а специальная free-threaded сборка имеет ABI с меткой «t».",
+          "kind": "fact",
+          "facets": [
+            2
+          ],
+          "own_quotes": [
+            {
+              "chunk_id": "S1P3",
+              "document_version": "9956819e86e927f82e1b89549222b364a8d7f4f541cc7a741240ecc08f6a958d",
+              "end": 6970,
+              "field": "text",
+              "offset_unit": "Unicode code points in original extracted text",
+              "quote": "The vanilla Python build won’t support free threading, while the special free-threaded flavor will have a slightly different Application Binary Interface (ABI) tagged with the letter “t” for threading.",
+              "source_id": "S1",
+              "start": 6769
+            }
+          ],
+          "gold": {
+            "world_truth": "supported",
+            "own_semantic_faithfulness": "faithful",
+            "query_coverage_condition_indices": [
+              2
+            ],
+            "reason": "Ownsourcequote explicitly distinguishes vanilla andspecial free-threadedbuild with ABI t; supports separatebuildrequirement."
+          }
+        }
+      ],
+      "independent_truth_basis": "Prior frozen official-primary independent goldpreflight (search-five and search-repair) before originalruns; not candidate selectedS3chunks or futureauditverdict."
+    }
+  ]
+}
